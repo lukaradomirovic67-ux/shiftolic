@@ -107,9 +107,13 @@ Faza 2 — VEČERAS, traži otvoren Designer (uslovna vidljivost se ne vidi kroz
   (podatak se čita iz Trusted kartica na Home; Home footer kod). Projekti van Trusted trake koriste Link polje kartice.
 - Website link upisan: LaSalle (https://www.lasalleagri.com/), Biotech (https://www.biotechinnovationsag.com/),
   i u Link polju njihovih hero kartica.
-- Our Works: novo polje "Slider video" (File, grupa 4 · Show on). Obrisano "Old · Gallery images" (isti fajlovi kao
-  Every project screens) jer kolekcija ima limit od 60 polja. Our Work slider pušta video preko Cover image; slajd traje
-  koliko video. Webflow API ne prima fajl preko linka, pa se MP4 ubacuje ručno u CMS (webflow-assets/ourwork-video/).
+- Our Works: polje "Slider video" (grupa 4 · Show on) je Link polje: upisuje se direktan link na MP4/WebM fajl
+  (ne YouTube/Vimeo stranica). CMS File polje ne prima MP4, pa je File polje zamenjeno Link poljem (slug slider-video-2).
+  Obrisano "Old · Gallery images" (isti fajlovi kao Every project screens) jer kolekcija ima limit od 60 polja.
+  Our Work slider pušta video preko Cover image; slajd traje koliko video. Prazno polje = Cover image 6 s.
 - Our Work slider: Sustain uključen, Veyor isključen. Sustain video dodat 5.11. (sustain-slider.mp4, 1,7 MB).
-- Slider videi Shiftolic, Ballerine, TrakPro, Sustain se do ubacivanja u CMS puštaju sa jsDelivr CDN-a (repo, commit 46bba2e),
-  po slug-u (Our Work footer kod, FALLBACK). Fajl u CMS polju Slider video uvek ima prednost; posle ubacivanja obrisati red u FALLBACK.
+- Slider video linkovi u CMS-u (Shiftolic, Ballerine, TrakPro, Sustain) vode na fajlove u repou preko jsDelivr CDN-a
+  (webflow-assets/ourwork-video/, commit 46bba2e). Nov video: fajl u repo (ili bilo koji direktan MP4 link), link u polje.
+- Povezivanje: skriveni link .ow-hs_video-src u slajdu ima atribut data-video-src vezan za polje Slider video
+  (link binding preko API-ja je padao na Webflow konfliktu). Our Work footer kod čita samo taj atribut; rezervni
+  linkovi (FALLBACK) su obrisani iz koda.
