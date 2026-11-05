@@ -89,7 +89,7 @@ Faza 2 — VEČERAS, traži otvoren Designer (uslovna vidljivost se ne vidi kroz
 4. Objava na staging + snimci case stranice i svih sekcija.
 
 Šta marketing treba da dopuni (nije izmišljano):
-- Biotech, LaSalle: Website link, Card text, Stat 1, Logo color, Case title + tekst studije, SEO.
+- Biotech, LaSalle: Card text, Stat 1, Logo color, Case title + tekst studije, SEO.
 - Hypersonix: Stat 1 je "Soon / Rebuild in progress"; Logo color, studija, SEO.
 - Harper: Filter category, Stat 1, studija, SEO.  Intaker: Stat 1, Logo color, studija, SEO.
 - Placeholder: Card text "3x organic traffic" je isti kod Ballerine, Harper, Intaker, Hypersonix; Ballerine story
@@ -101,3 +101,9 @@ Faza 2 — VEČERAS, traži otvoren Designer (uslovna vidljivost se ne vidi kroz
    brisanje neiskorišćenih polja i kolekcija (posle provere u Designeru).
 2. Spajanja: prevezivanje, prenos podataka, izmene skripti; provera na stagingu (desktop/tablet/telefon).
 3. Kratko uputstvo (srpski) "kako dodati projekat / blog post" + specifikacija slika za dizajnera.
+
+## 5.11.
+- Home hero kartice: vode na case studiju kad projekat ima Case title, inače na sajt klijenta u novom tabu
+  (podatak se čita iz Trusted kartica na Home; Home footer kod). Projekti van Trusted trake koriste Link polje kartice.
+- Website link upisan: LaSalle (https://www.lasalleagri.com/), Biotech (https://www.biotechinnovationsag.com/),
+  i u Link polju njihovih hero kartica.
