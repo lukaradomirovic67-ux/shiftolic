@@ -120,6 +120,6 @@ Faza 2 — VEČERAS, traži otvoren Designer (uslovna vidljivost se ne vidi kroz
 - Jobs: obrisano polje "Apply email". Prijave idu kroz popup formu u Webflow Forms (mejl iz Site settings → Forms);
   kartica Apply now ima fiksni link mailto:hello@nues.agency samo kao rezervu kad se kod ne učita.
 - Integrations stranica (/webflow-integrations): ostaje kao u Figmi (statične kartice, 4 grupe: SaaS 2, Automation 1,
-  E-commerce 2, Form 6). Popravljen logo (bio oštećen PNG; sada asset integration-logo-todoist.png), dugme
-  "See the case studies" sakriveno klasom arrow-link_component.is-hidden dok ne postoje stranice za pojedinačnu integraciju.
+  E-commerce 2, Form 6), dugme "See the case studies" vidljivo kao u Figmi (još nema link). Popravljen logo (bio oštećen
+  PNG; sada asset integration-logo-todoist.png u okviru 145x50, object-fit contain).
   CMS Integrations i Integrations categories vraćeni na staro: samo Salesforce, bez novih polja; kategorije u Draft-u.
