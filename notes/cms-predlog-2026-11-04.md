@@ -117,3 +117,5 @@ Faza 2 — VEČERAS, traži otvoren Designer (uslovna vidljivost se ne vidi kroz
 - Povezivanje: skriveni link .ow-hs_video-src u slajdu ima atribut data-video-src vezan za polje Slider video
   (link binding preko API-ja je padao na Webflow konfliktu). Our Work footer kod čita samo taj atribut; rezervni
   linkovi (FALLBACK) su obrisani iz koda.
+- Jobs: obrisano polje "Apply email". Prijave idu kroz popup formu u Webflow Forms (mejl iz Site settings → Forms);
+  kartica Apply now ima fiksni link mailto:hello@nues.agency samo kao rezervu kad se kod ne učita.
