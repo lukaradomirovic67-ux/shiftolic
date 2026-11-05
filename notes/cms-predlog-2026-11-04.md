@@ -111,3 +111,5 @@ Faza 2 — VEČERAS, traži otvoren Designer (uslovna vidljivost se ne vidi kroz
   Every project screens) jer kolekcija ima limit od 60 polja. Our Work slider pušta video preko Cover image; slajd traje
   koliko video. Webflow API ne prima fajl preko linka, pa se MP4 ubacuje ručno u CMS (webflow-assets/ourwork-video/).
 - Our Work slider: Sustain uključen, Veyor isključen. Sustain video (36 MB) čeka manji export (do ~10 MB).
+- Slider videi Shiftolic, Ballerine, TrakPro se do ubacivanja u CMS puštaju sa jsDelivr CDN-a (repo, commit 12a351f),
+  po slug-u (Our Work footer kod, FALLBACK). Fajl u CMS polju Slider video uvek ima prednost; posle ubacivanja obrisati red u FALLBACK.
