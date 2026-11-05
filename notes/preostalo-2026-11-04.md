@@ -4,9 +4,8 @@ Staging: https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/
 Stavke označene sa (27.10.) su iz revizije od 27.10. i treba ih ponovo proveriti.
 
 ## 1. Čeka tim: sadržaj i odluke
-- [ ] Our Work: slike cele stranice za Veyor, TrakPro, Sustain i LaSalle. U Drive folderu
-      1xmk3hr_krUPmvrzVj_BHH3UxpNnWQ0bz WebP fajlovi su prazni (0 B). Treba JPG širine 1440px, kvalitet ~80,
-      manji od 8 MB. (Hypersonix i Biotech su urađeni 4.11.)
+- [x] Our Work: slike cele stranice za Veyor, TrakPro, Sustain i LaSalle (JPG iz Drive foldera, urađeno 5.11.;
+      Hypersonix i Biotech 4.11.). LaSalle dobio i Cover image.
 - [ ] Our Work: redosled kartica kao u Figmi (Intaker, Ballerine, Shiftolic, Veyor, Harper, Sustain, LaSalle,
       Biotech, Hypersonix, TrakPro). Treba novo CMS polje "Our Work order" (Number) — čeka odobrenje.
       Postojeće number-in-section deli Home.
