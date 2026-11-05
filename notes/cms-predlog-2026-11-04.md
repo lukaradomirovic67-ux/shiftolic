@@ -123,3 +123,20 @@ Faza 2 — VEČERAS, traži otvoren Designer (uslovna vidljivost se ne vidi kroz
   E-commerce 2, Form 6), dugme "See the case studies" vidljivo kao u Figmi (još nema link). Popravljen logo (bio oštećen
   PNG; sada asset integration-logo-todoist.png u okviru 145x50, object-fit contain).
   CMS Integrations i Integrations categories vraćeni na staro: samo Salesforce, bez novih polja; kategorije u Draft-u.
+
+## 5.11. Our Works sređen po sekcijama (za marketing)
+Grupe u editoru, redom unosa: 1 Basics · 2 Logos and images (designer) · 3 Trusted strip · 4 Our Work slider ·
+5 Our Work tabs (+ Story polja, koristi ih i Every project) · 6 Home Every project · 7 Case study page · 8 SEO ·
+"Not used · delete after approval". Svako polje ima help text: gde se vidi, veličina/format, primer, koji prekidač ga traži.
+Preimenovano (polja se i dalje koriste, nisu "Old"): Old · Logo → Every project logo (samo Home Every project),
+Old · Logo grey → Logo grey (Trusted pre hovera + Our Work tabs), Old · Website domain → Website domain (slider traka + galerija).
+Case stranica (Our Works Template) prevezana na nova polja:
+- logo u hero-u i u "next project" karticama: Old · Logo → Logo white (CSS filter ga ionako boji u belo).
+- v2 brojke 1 i 2: Hero stat 1/2 → Stat 1/2. Pravilo: Stat 3 popunjen = Stat 1, Stat 2, Stat 3; prazan = Stat 1, Stat 2, Industry.
+  Ballerine sada prikazuje 16x / 30+ / 0.9s (ranije 6 weeks / +214% / 0.9s iz starih polja).
+- Case title highlight radi i na običnom naslovu (Case title), ne samo na starom Hero title.
+- JSON-LD opis: Intro → Meta description.
+Home (Trusted, Every project) i Our Work stranica nisu dirani.
+Čeka odobrenje za brisanje (10, ništa od novih projekata ih ne koristi): Old · Hero title (samo Ballerine, isti tekst kao
+Case title), Hero stat 1 value/label, Hero stat 2 value/label, Intro, Services delivered, Images, Featured, First featured.
+Pythagora (draft) nema Logo white, pa na svojoj case strani nema logo.
