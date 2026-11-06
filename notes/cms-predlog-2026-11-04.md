@@ -148,3 +148,10 @@ Pythagora (draft) nema Logo white, pa na svojoj case strani nema logo.
 - Više rezolucije nema: na 100% zumu je slika 2,25x gušća od ekrana (retina); na zumu browsera 200-300% se razvlači.
 - Klasa cta-v2_bg: na zahtev vraćena na staro (100% širine ekrana, object-fit cover) posle kratke probe sa fiksnih 1440px.
 - Obrisani neiskorišćeni asseti (uz odobrenje 6.11.): cta-v2-bg-3744w.webp (6ad2867563cbd3529bb75747) i footer-cta-bg-2880w.webp (6aee0bdac0564849751bb442).
+
+## 6.11. Case stranica: "Read next" kartice kao Our Work mreža
+- Kartica (work-card_media) dobila iste slojeve kao Our Work: work-card_bg (Card background), work-card_window > work-card_shot
+  (Full page screenshot), work-card_soon ("Launching soon"); Cover image ostaje rezerva ako nema Card background.
+- Lista: filter Card background is set, redosled Order (isto kao Our Work mreža). Prikazuju se 2 sledeća projekta posle
+  trenutnog po Order-u (posle poslednjeg kreće od početka).
+- Kod šablona: isti CSS (prozor se na hover otvori, sajt se skroluje) i ista skripta (--shot-y / --shot-dur) kao na Our Work.
