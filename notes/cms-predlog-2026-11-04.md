@@ -155,3 +155,22 @@ Pythagora (draft) nema Logo white, pa na svojoj case strani nema logo.
 - Lista: filter Card background is set, redosled Order (isto kao Our Work mreža). Prikazuju se 2 sledeća projekta posle
   trenutnog po Order-u (posle poslednjeg kreće od početka).
 - Kod šablona: isti CSS (prozor se na hover otvori, sajt se skroluje) i ista skripta (--shot-y / --shot-dur) kao na Our Work.
+
+## 6.11. Case stranica: "Services used" i "The team behind this project"
+Redosled na case strani: tekst (rich text) → Services used → Team → Read next. Obe sekcije se same sakriju kad projekat
+nema upisane usluge / tim.
+CMS (odobreno 6.11.):
+- Our Works: obrisano 9 starih polja (grupa "Not used" više ne postoji). Grupa 7 Case study page ima Services used
+  (multi-ref → Services Nues) i Team (multi-ref → Teams).
+- Services Nues: nova polja Card number (01-04), Card color (#A7E0BF, #B7C0FA, #F6C784, #F3A3CF), Service page
+  (/services/...), Card shape (SVG pozadina kartice). Svi 4 servisa popunjeni.
+- Teams: dodati Luka, Pavle, Darko, Mihajlo (slike, uloge i LinkedIn sa About stranice); sada 7 članova.
+- Upisan tim samo za Ballerine (Aleksandar, Luka, Pavle, kao u Figmi) za probu; ostale projekte popunjava marketing.
+Sekcija Services used: "džep" (SVG sa Nues logom) iz kog kartice izlete u lepezu kad sekcija uđe u ekran (jedna po jedna,
+sa malim odskokom). Hover/fokus na karticu je podigne i prikaže naslov i strelicu, ostale se utišaju. Kartica vodi na
+stranicu usluge, dugme "All services" na /services. Na tabletu i mobilnom cela scena se srazmerno smanji.
+Boja broja: CSS po slug-u usluge (Card color polje Webflow ne dozvoljava da se veže na boju teksta preko API-ja).
+Sekcija Team: kartice (slika, ime, uloga) vode na LinkedIn člana u novom tabu.
+Ručni korak u Designeru (API ne može da poveže ugnježdenu listu na multi-ref polje): lista u Services used → Source
+"Services used", lista u Team → Source "Team". Dok se to ne uradi, liste prikazuju celu kolekciju.
+Repo: webflow-assets/case-services/ (4 SVG oblika kartica + džep).
