@@ -142,8 +142,10 @@ Case title), Hero stat 1 value/label, Hero stat 2 value/label, Intro, Services d
 Pythagora (draft) nema Logo white, pa na svojoj case strani nema logo.
 
 ## 6.11. Footer CTA fotografija
-- Slika iz Drive-a (NEB02717.jpg, 4672x7008) isečena isto kao stara (x649 y2533, 3247x2805 u originalu), izvezena na 2880 px
-  (2x za 1440): asset footer-cta-bg-2880w.webp (6aee0bdac0564849751bb442), repo webflow-assets/site-hq/footer-cta-bg-2880w.webp.
+- Slika iz Drive-a (NEB02717.jpg, 4672x7008) isečena isto kao stara (x649 y2533, 3247x2805 u originalu), u punoj rezoluciji
+  isečka 3247 px, WebP q92, blago izoštrena: asset footer-cta-bg-3247w.webp (6aee0d024349838b0dfbcc9c),
+  repo webflow-assets/site-hq/footer-cta-bg-3247w.webp. (Prva verzija 2880 px, asset 6aee0bdac0564849751bb442, više se ne koristi.)
+- Više rezolucije nema: na 100% zumu je slika 2,25x gušća od ekrana (retina); na zumu browsera 200-300% se razvlači.
 - Klasa cta-v2_bg: desktop uvek 1440px širine, centrirano (left 50%, margin-left -720px), pa se na širim ekranima ne uvećava;
   ivice slike pokriva postojeći tamni gradijent (cta-v2_overlay). Tablet i telefon kao ranije (100% širine).
 - Stari asset cta-v2-bg-3744w.webp (6ad2867563cbd3529bb75747) se više ne koristi; nije obrisan.
