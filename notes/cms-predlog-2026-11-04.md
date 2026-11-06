@@ -140,3 +140,10 @@ Home (Trusted, Every project) i Our Work stranica nisu dirani.
 Čeka odobrenje za brisanje (10, ništa od novih projekata ih ne koristi): Old · Hero title (samo Ballerine, isti tekst kao
 Case title), Hero stat 1 value/label, Hero stat 2 value/label, Intro, Services delivered, Images, Featured, First featured.
 Pythagora (draft) nema Logo white, pa na svojoj case strani nema logo.
+
+## 6.11. Footer CTA fotografija
+- Slika iz Drive-a (NEB02717.jpg, 4672x7008) isečena isto kao stara (x649 y2533, 3247x2805 u originalu), izvezena na 2880 px
+  (2x za 1440): asset footer-cta-bg-2880w.webp (6aee0bdac0564849751bb442), repo webflow-assets/site-hq/footer-cta-bg-2880w.webp.
+- Klasa cta-v2_bg: desktop uvek 1440px širine, centrirano (left 50%, margin-left -720px), pa se na širim ekranima ne uvećava;
+  ivice slike pokriva postojeći tamni gradijent (cta-v2_overlay). Tablet i telefon kao ranije (100% širine).
+- Stari asset cta-v2-bg-3744w.webp (6ad2867563cbd3529bb75747) se više ne koristi; nije obrisan.
