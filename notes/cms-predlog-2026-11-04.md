@@ -148,4 +148,4 @@ Pythagora (draft) nema Logo white, pa na svojoj case strani nema logo.
 - Više rezolucije nema: na 100% zumu je slika 2,25x gušća od ekrana (retina); na zumu browsera 200-300% se razvlači.
 - Klasa cta-v2_bg: desktop uvek 1440px širine, centrirano (left 50%, margin-left -720px), pa se na širim ekranima ne uvećava;
   ivice slike pokriva postojeći tamni gradijent (cta-v2_overlay). Tablet i telefon kao ranije (100% širine).
-- Stari asset cta-v2-bg-3744w.webp (6ad2867563cbd3529bb75747) se više ne koristi; nije obrisan.
+- Obrisani neiskorišćeni asseti (uz odobrenje 6.11.): cta-v2-bg-3744w.webp (6ad2867563cbd3529bb75747) i footer-cta-bg-2880w.webp (6aee0bdac0564849751bb442).
