@@ -206,3 +206,11 @@ Repo: webflow-assets/case-services/ (4 SVG oblika kartica + džep).
   (1920px širine, WebP q84; stari su imali ponovljene/isečene sekcije). Koriste se u hover animaciji kartica (Our Work mreža,
   Read next, Resources), Every project i hero-u case strane.
 - Repo: webflow-assets/ourwork-hq/{intaker,shiftolic,trakpro,veyor}-home-full-v2.webp. Stari asseti ostaju u biblioteci.
+
+## 7.11. Teams: nove fotke za sve članove (Figma 7586:6 "Blog Photos")
+- Luka, Pavle, Mihajlo i Darko: polje Image zamenjeno fotkama iz Figme, 2000x2000 PNG sa providnom pozadinom, isti kadar
+  kao Danilo, Aleksandar i Daris (njihove fotke su već bile iz istog Figma okvira, nisu menjane).
+- Figma izvoz preko MCP-a spljošti providnost na belu pozadinu, pa su isečene lokalno: Luka, Pavle i Darko iz originalnih
+  providnih izvora (isti kadar kao u Figmi), Mihajlo (nova fotka) sa uklonjenom belom pozadinom iz Figma rendera.
+- Repo: webflow-assets/team/team-{luka-radomirovic,pavle-stikovic,mihajlo-nikolic,darko-milosevic}.png. Stavke objavljene.
+- Bio za ove četiri osobe je i dalje prazan.
