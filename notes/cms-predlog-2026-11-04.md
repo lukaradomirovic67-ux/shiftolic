@@ -200,3 +200,9 @@ Repo: webflow-assets/case-services/ (4 SVG oblika kartica + džep).
 - Posle slanja: animacija iz nues-careers-apply-popup.html (pismo upada u kovertu, preklop se zatvori, kvačica i zraci,
   zeleni odsjaj na vrhu kartice). careers-apply_done sada pokriva celu karticu (negativna margina), ikonica 150x118.
 - Kopija head koda stranice: webflow-assets/careers/careers-page-head.html.
+
+## 7.11. Nove "Full page screenshot" slike (Drive, Mihajlo)
+- Intaker, Shiftolic, TrakPro, Veyor Digital: polje Full page screenshot zamenjeno novim snimcima celih početnih stranica
+  (1920px širine, WebP q84; stari su imali ponovljene/isečene sekcije). Koriste se u hover animaciji kartica (Our Work mreža,
+  Read next, Resources), Every project i hero-u case strane.
+- Repo: webflow-assets/ourwork-hq/{intaker,shiftolic,trakpro,veyor}-home-full-v2.webp. Stari asseti ostaju u biblioteci.
