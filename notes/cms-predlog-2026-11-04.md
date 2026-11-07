@@ -174,3 +174,15 @@ Sekcija Team: kartice (slika, ime, uloga) vode na LinkedIn člana u novom tabu.
 Ručni korak u Designeru (API ne može da poveže ugnježdenu listu na multi-ref polje): lista u Services used → Source
 "Services used", lista u Team → Source "Team". Dok se to ne uradi, liste prikazuju celu kolekciju.
 Repo: webflow-assets/case-services/ (4 SVG oblika kartica + džep).
+
+## 7.11. Navbar: Resources dropdown po Figmi 8122:32
+- Levo 4 linka: Resources (/resources, novi), Insights (/blog), Careers (/careers), Integrations (sada /webflow-integrations;
+  ranije je vodio na /resources jer stranica integracija tada nije postojala). Opis za Resources je iz Figme
+  ("Explore how Webflow connects", isti kao kod Integrations).
+- Hover (i fokus tastaturom): link postaje bela kartica (radius 16, padding 20), tekst tamnozelen (#082216, opis 60%),
+  ikonica postane tamna i nagne se -5°, desno uđe tamni krug 40px sa strelicom (strelica "proleti" kroz krug kao
+  ostale kružne strelice). Linija iznad kartice se sakrije. Native: hover stil na navbar-resources_link i nova klasa
+  navbar-resources_link-arrow; boje teksta/ikonice i animacije u site footer kodu (blok "Resources dropdown").
+- Ikonice su sada SVG u Embed elementu (klasa navbar-resources_icon) da bi boje glatko prešle na hover;
+  stari asseti nav-icon-*.svg ostaju u biblioteci (nisu obrisani). Kopije: webflow-assets/nav-resources/.
+- Kartice desno ("Ideas become live sites" iz poslednjeg bloga, "We're hiring") nisu menjane, iste su kao u Figmi.
