@@ -226,3 +226,19 @@ Repo: webflow-assets/case-services/ (4 SVG oblika kartica + džep).
 - Popunjeno i objavljeno: Ballerine, Shiftolic, TrakPro, Intaker, Veyor Digital, Sustain Commercial Solar,
   LaSalle Agri, Biotech Innovations, Hypersonix. Stare case slike ostaju u biblioteci.
 - Repo: webflow-assets/case-gallery/case-gallery-<projekat>-{1,2,3}.webp.
+
+## 7.11. Our Works: obrisano 7 polja koja su ponavljala druga (55 → 48 polja, limit je 60)
+- Obrisano (uz odobrenje): Logo grey, Every project logo, Website domain, Story headline, Story text, Quote signature,
+  Every project background. Pre brisanja prevezano 16 elemenata:
+  - Logo grey → Logo white + CSS filter (navy #0C1928, 40%) na klasama case-card_logo.is-default (Trusted na Home i 5
+    stranica usluga), ow-cs_tab-logo (filter: none na .is-light) i ow-cs_logo (Our Work tabovi). Isti izgled kao pre.
+  - Every project logo → Logo white (Home Every project; isti beli logo).
+  - Every project background → Card background (Home Every project; ista slika, razlika 0,6/255).
+  - Story headline / Story text → Stat 1 value / Stat 1 label (Home Every project, Our Work tabovi). Ballerine sada
+    pokazuje 16x / Engagement time growth (ranije +214%), Shiftolic 2 weeks / Delivery time (ranije 14 days).
+  - Website domain → Website link (Our Work adresna traka .ow-browser_host i data-gallery-domain na Home galeriji).
+  - Quote signature → Quote author (case strana .cs-quote_sig).
+- Domen i potpis pravi mala registrovana skripta sajta "NuesCmsDerived" (footer, svi page-ovi): Website link bez
+  https://, www. i kose crte; potpis = ime + inicijal prezimena ("Or Moshkovitz" → "Or M."). Site head je na ~49k od 50k
+  znakova, pa nije menjan. Kopija: webflow-assets/site-code/nues-cms-derived.js.
+- Help tekstovi i opisi grupa ažurirani da pominju polja koja sada pokreću te sekcije.
