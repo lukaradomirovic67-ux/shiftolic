@@ -214,3 +214,15 @@ Repo: webflow-assets/case-services/ (4 SVG oblika kartica + džep).
   providnih izvora (isti kadar kao u Figmi), Mihajlo (nova fotka) sa uklonjenom belom pozadinom iz Figma rendera.
 - Repo: webflow-assets/team/team-{luka-radomirovic,pavle-stikovic,mihajlo-nikolic,darko-milosevic}.png. Stavke objavljene.
 - Bio za ove četiri osobe je i dalje prazan.
+
+## 7.11. Case strana: galerija sa 3 kartice (Drive, Figma 6481:5571)
+- 27 slika iz Drive foldera (9 projekata x 3: laptop, ekrani, telefon), 1041x1560 WebP (3x kartice 347x520).
+  Šest slika veće od 6 MB Drive alat nije mogao da preda, pa su uzete iz istih Figma okvira
+  (strana "Our work single FINAL VERSION"); provereno da se poklapaju sa Drive verzijama.
+- Odobrena polja: novo Image polje "Gallery left" (laptop); "Case image 1" preimenovano u "Gallery middle",
+  "Case image 2" u "Gallery right" (slugovi isti). Sva tri u grupi "7 · Case study page".
+- Leva kartica šablona više nije vezana za Cover image nego za Gallery left.
+- Mobilni: kartice galerije sada 2:3 (bile 4:3), da se mokapi ne seku.
+- Popunjeno i objavljeno: Ballerine, Shiftolic, TrakPro, Intaker, Veyor Digital, Sustain Commercial Solar,
+  LaSalle Agri, Biotech Innovations, Hypersonix. Stare case slike ostaju u biblioteci.
+- Repo: webflow-assets/case-gallery/case-gallery-<projekat>-{1,2,3}.webp.
