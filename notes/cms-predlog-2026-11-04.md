@@ -191,6 +191,8 @@ Repo: webflow-assets/case-services/ (4 SVG oblika kartica + džep).
 - Koverte (Open positions): u mirovanju zatvorene. Novi element careers-job_flap (preklop) u CMS šablonu kartice; zadnji deo
   koverte više nema vrh. Na hover / fokus tastaturom preklop se 3D okrene nagore iza pisma, pa pismo izađe; na izlazu prvo
   pismo uđe, pa se preklop zatvori. Na touch ekranima koverte ostaju otvorene (nema hovera), kao i kartica iz koje je otvoren popup.
+  Preklop je dublji (vrh na ~60% visine koverte, careers-job_flap visina 34.7%) sa mekom senkom na džepu ispod ivica;
+  pri otvaranju se sklopi na visinu otvorenog preklopa iz Figme.
 - Popup: ispod "Send application" sada 25px kao i ostale ivice (forma više ne koristi razmak između redova; header i polja
   imaju donju marginu, pa Webflow-ov nevidljivi element na kraju forme ne pravi prazninu).
 - "Add a note": polje se prvo utiša pa se red sklopi glatko; kartica drži gornju ivicu dok se beleška otvara/zatvara.
