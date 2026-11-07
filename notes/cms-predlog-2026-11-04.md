@@ -186,3 +186,14 @@ Repo: webflow-assets/case-services/ (4 SVG oblika kartica + džep).
 - Ikonice su sada SVG u Embed elementu (klasa navbar-resources_icon) da bi boje glatko prešle na hover;
   stari asseti nav-icon-*.svg ostaju u biblioteci (nisu obrisani). Kopije: webflow-assets/nav-resources/.
 - Kartice desno ("Ideas become live sites" iz poslednjeg bloga, "We're hiring") nisu menjane, iste su kao u Figmi.
+
+## 7.11. Careers: koverte zatvorene do hovera, popup popravke
+- Koverte (Open positions): u mirovanju zatvorene. Novi element careers-job_flap (preklop) u CMS šablonu kartice; zadnji deo
+  koverte više nema vrh. Na hover / fokus tastaturom preklop se 3D okrene nagore iza pisma, pa pismo izađe; na izlazu prvo
+  pismo uđe, pa se preklop zatvori. Na touch ekranima koverte ostaju otvorene (nema hovera), kao i kartica iz koje je otvoren popup.
+- Popup: ispod "Send application" sada 25px kao i ostale ivice (forma više ne koristi razmak između redova; header i polja
+  imaju donju marginu, pa Webflow-ov nevidljivi element na kraju forme ne pravi prazninu).
+- "Add a note": polje se prvo utiša pa se red sklopi glatko; kartica drži gornju ivicu dok se beleška otvara/zatvara.
+- Posle slanja: animacija iz nues-careers-apply-popup.html (pismo upada u kovertu, preklop se zatvori, kvačica i zraci,
+  zeleni odsjaj na vrhu kartice). careers-apply_done sada pokriva celu karticu (negativna margina), ikonica 150x118.
+- Kopija head koda stranice: webflow-assets/careers/careers-page-head.html.
