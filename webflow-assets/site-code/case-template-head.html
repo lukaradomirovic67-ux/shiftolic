@@ -130,38 +130,48 @@
 @media (prefers-reduced-motion:reduce){.work-card_window,.work-card_shot{transition:none}.work-card_component:hover .work-card_shot{transform:none}}
 </style>
 <style>
-/* Sidebar (Figma 6481:5571): Services used + On this page. Team (Figma 8428:1356): round photos with skill pills.
-   Layout is native classes. Colours come from the CMS colour fields bound in the Designer (Main color on the arrow circle,
-   Photo color on the photo circle, Card color on the skill dot); the native class colours are the fallback. */
+/* Sidebar (nues-case-sidebar-scroll.html): Services used + On this page in a rail beside the text. Team (Figma 8428:1356).
+   Layout and sizes are native classes; this adds the states. Colours: service colours by Services slug, circle by Discipline. */
+.cs-body{overflow-x:clip}
 .section_cs-team:not(:has(.cs-team_item)),.cs-used:not(:has(.cs-used_item)){display:none}
-.section_cs-team .w-dyn-empty,.cs-used .w-dyn-empty{display:none}
-/* Services used: hovering a row greys out the others and brings up its arrow circle */
-.cs-used_icon{transition:filter .35s ease}
-.cs-used_row:focus-visible{outline:2px solid #5bd3a9;outline-offset:3px}
-.cs-used_row:focus-visible .cs-used_arrow{opacity:1;transform:scale(1)}
+.section_cs-team .w-dyn-empty,.cs-used .w-dyn-empty,.cs-team_skills-wrap .w-dyn-empty{display:none}
+/* the rail stops at the gallery, rides up with the page and slides out to the right; comes back the same way (script in the footer) */
+.cs-aside_inner.is-away{transform:translateX(var(--off,110vw));pointer-events:none;transition:transform .55s cubic-bezier(.55,0,.75,.2)}
+/* Services used: grey icons and text until hover, then the service colours; each icon moves in its own way */
+.cs-used_item:first-child{border-top:0}
+.cs-used_row{--k1:#e4e2dc;--k2:#d2cfc8;--k3:#bdb9b1;--c1:#d2cfc8;--c2:#8d929c;--c3:#0e1726}
+.cs-used_row[data-svc="design-development"]{--c1:#cfe7d7;--c2:#8cc6a0;--c3:#3f7a55}
+.cs-used_row[data-svc="webflow-development"]{--c1:#d5daf4;--c2:#a9b2ea;--c3:#4e5eab}
+.cs-used_row[data-svc="seo-aeo"]{--c1:#f1e1c8;--c2:#d9b27a;--c3:#a86a1c}
+.cs-used_row[data-svc="growth"]{--c1:#f1d3e4;--c2:#d98ab8;--c3:#a8407f}
+.cs-used_svg{flex:none;display:block;width:30px;height:30px;overflow:visible}
+.cs-used_svg *{transition:fill .45s ease,transform .6s cubic-bezier(.22,1,.36,1),opacity .4s;transform-box:fill-box;transform-origin:center}
+.cs-used_svg .k1{fill:var(--k1)}.cs-used_svg .k2{fill:var(--k2)}.cs-used_svg .k3{fill:var(--k3)}
+.cs-used_icon{filter:grayscale(1);opacity:.5;transition:filter .45s ease,opacity .45s ease}
+.cs-used_row:is(:hover,:focus-visible){color:#0e1726}
+.cs-used_row:is(:hover,:focus-visible) .cs-used_icon{filter:none;opacity:1}
+.cs-used_row:is(:hover,:focus-visible) .k1{fill:var(--c1)}.cs-used_row:is(:hover,:focus-visible) .k2{fill:var(--c2)}.cs-used_row:is(:hover,:focus-visible) .k3{fill:var(--c3)}
+.cs-used_row:is(:hover,:focus-visible) .cs-used_arrow{transform:translateX(3px);color:#fff;background-color:var(--c3);box-shadow:none}
+.cs-used_row[data-svc="design-development"]:hover .k1{transform:scale(1.18)}.cs-used_row[data-svc="design-development"]:hover .k2{transform:scale(1.1);transition-delay:.05s}.cs-used_row[data-svc="design-development"]:hover .k3{transform:scale(.86);transition-delay:.1s}
+.cs-used_row[data-svc="webflow-development"]:hover .k1{transform:rotate(-14deg) translateX(-2px)}.cs-used_row[data-svc="webflow-development"]:hover .k2{transform:rotate(12deg) translateX(2px)}.cs-used_row[data-svc="webflow-development"]:hover .k3{transform:translateY(-2px)}
+.cs-used_row[data-svc="seo-aeo"] .cs-used_svg *{transform-origin:50% 100%}
+.cs-used_row[data-svc="seo-aeo"]:hover .k1{transform:scaleY(1.25)}.cs-used_row[data-svc="seo-aeo"]:hover .k2{transform:scaleY(1.18);transition-delay:.06s}.cs-used_row[data-svc="seo-aeo"]:hover .k3{transform:scaleY(1.1);transition-delay:.12s}
+.cs-used_row[data-svc="growth"]:hover .k1{transform:scale(1.16) rotate(45deg)}.cs-used_row[data-svc="growth"]:hover .k2{transform:scale(1.08);transition-delay:.05s}.cs-used_row[data-svc="growth"]:hover .k3{transform:rotate(90deg);transition-delay:.1s}
+.cs-used_row:focus-visible{outline:2px solid #5bd3a9;outline-offset:3px;border-radius:10px}
 .cs-used_row:is([href="#"],:not([href])) .cs-used_arrow{display:none}
-@media (hover:hover){
-.cs-used_list:has(.cs-used_row:hover) .cs-used_row:not(:hover){opacity:.3}
-.cs-used_list:has(.cs-used_row:hover) .cs-used_row:not(:hover) .cs-used_icon{filter:grayscale(1)}
-.cs-used_row:hover .cs-used_arrow{opacity:1;transform:scale(1)}
-}
-@media (hover:none){.cs-used_arrow{opacity:1;transform:scale(1)}}
-/* On this page: same table of contents as the blog post (dark card, green progress line), built by the script in the page footer */
-[data-icon]{-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center;-webkit-mask-size:contain;mask-size:contain}
-[data-icon="chevron"]{-webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 7.5l5 5 5-5'/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 7.5l5 5 5-5'/%3E%3C/svg%3E")}
-.bp-toc_list{position:relative}
-.bp-toc_body{scrollbar-width:none;-ms-overflow-style:none}
-.bp-toc_body::-webkit-scrollbar{display:none}
-.bp-toc_link{display:block;color:rgba(255,255,255,.4);font-size:20px;line-height:1.4;text-decoration:none;transition:color .25s ease,padding .25s ease}
-.bp-toc_link:hover{color:rgba(255,255,255,.75)}
-.bp-toc_link.is-active{padding-left:10px;color:#fff;font-weight:500}
-.bp-toc_link:focus-visible,.bp-toc_head:focus-visible{outline:2px solid #5bd3a9;outline-offset:3px}
+/* On this page: dark card, the active heading gets the mint line */
+.cs-toc_link:hover{color:rgba(255,255,255,.8)}
+.cs-toc_link.is-active{color:#fff;border-left-color:#5bd3a9}
+.cs-toc_link:focus-visible{outline:2px solid #5bd3a9;outline-offset:2px}
 .cs-block>h2{scroll-margin-top:120px}
-@media (min-width:992px){.bp-toc_body{max-height:max(200px,calc(100vh - 470px))}}
-@media (min-width:992px) and (max-width:1279px){.bp-toc_link{font-size:17px}}
-@media (max-width:991px){.bp-toc_head{cursor:pointer}.bp-toc:not(.is-open){gap:0}.bp-toc:not(.is-open) .bp-toc_body{display:none}.bp-toc.is-open .bp-toc_chev{transform:rotate(180deg)}.bp-toc_link{font-size:18px}.cs-block>h2{scroll-margin-top:90px}}
-@media (max-width:767px){.bp-toc_link{font-size:17px}}
-/* Team: on hover the photo fades out of the colour circle and the LinkedIn mark comes in */
+@media (max-width:991px){.cs-block>h2{scroll-margin-top:90px}}
+/* Team: circle colour from the member's Discipline, pill dot from the service; on hover the photo fades and the LinkedIn mark comes in */
+.cs-team_photo-wrap[data-discipline="development" i]{background-color:#9fb4f2}
+.cs-team_photo-wrap[data-discipline="design" i]{background-color:#5bd3a9}
+.cs-team_photo-wrap[data-discipline="growth" i]{background-color:#f434a3}
+.cs-team_skill[data-svc="webflow-development"] .cs-team_skill-dot{background-color:#9fb4f2}
+.cs-team_skill[data-svc="design-development"] .cs-team_skill-dot{background-color:#5bd3a9}
+.cs-team_skill:is([data-svc="growth"],[data-svc="seo-aeo"]) .cs-team_skill-dot{background-color:#f434a3}
 .cs-team_card:focus-visible{outline:2px solid #5bd3a9;outline-offset:6px;border-radius:12px}
 .cs-team_card:focus-visible .cs-team_photo{opacity:0}
 .cs-team_card:focus-visible .cs-team_linkedin{opacity:1;transform:translate(-50%,-50%) scale(1)}
@@ -171,5 +181,5 @@
 .cs-team_card[href]:not([href="#"]):hover .cs-team_linkedin{opacity:1;transform:translate(-50%,-50%) scale(1)}
 }
 .cs-team_skills-wrap:not(:has(.cs-team_skill-item)){display:none}
-@media (prefers-reduced-motion:reduce){.cs-used_row,.cs-used_arrow,.cs-used_icon,.bp-toc_fill,.bp-toc_link,.cs-team_photo,.cs-team_linkedin{transition:none}}
+@media (prefers-reduced-motion:reduce){.cs-aside_inner,.cs-aside_inner.is-away,.cs-used_row,.cs-used_arrow,.cs-used_icon,.cs-used_svg *,.cs-toc_link,.cs-team_photo,.cs-team_linkedin{transition:none}}
 </style>
