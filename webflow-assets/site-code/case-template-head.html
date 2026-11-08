@@ -165,13 +165,10 @@
 .cs-toc_link:focus-visible{outline:2px solid #5bd3a9;outline-offset:2px}
 .cs-block>h2{scroll-margin-top:120px}
 @media (max-width:991px){.cs-block>h2{scroll-margin-top:90px}}
-/* Team: circle colour from the member's Discipline, pill dot from the service; on hover the photo fades and the LinkedIn mark comes in */
+/* Team: circle colour from the member's Discipline; on hover the photo fades and the LinkedIn mark comes in */
 .cs-team_photo-wrap[data-discipline="development" i]{background-color:#9fb4f2}
 .cs-team_photo-wrap[data-discipline="design" i]{background-color:#5bd3a9}
 .cs-team_photo-wrap[data-discipline="growth" i]{background-color:#f434a3}
-.cs-team_skill[data-svc="webflow-development"] .cs-team_skill-dot{background-color:#9fb4f2}
-.cs-team_skill[data-svc="design-development"] .cs-team_skill-dot{background-color:#5bd3a9}
-.cs-team_skill:is([data-svc="growth"],[data-svc="seo-aeo"]) .cs-team_skill-dot{background-color:#f434a3}
 .cs-team_card:focus-visible{outline:2px solid #5bd3a9;outline-offset:6px;border-radius:12px}
 .cs-team_card:focus-visible .cs-team_photo{opacity:0}
 .cs-team_card:focus-visible .cs-team_linkedin{opacity:1;transform:translate(-50%,-50%) scale(1)}
@@ -180,8 +177,5 @@
 .cs-team_card[href]:not([href="#"]):hover .cs-team_photo{opacity:0;transform:translateX(-50%) scale(1.06)}
 .cs-team_card[href]:not([href="#"]):hover .cs-team_linkedin{opacity:1;transform:translate(-50%,-50%) scale(1)}
 }
-/* pills: each card has all four, the script turns on the ones this person did on this project (Team – Design / Webflow / SEO & AEO / Growth) */
-.cs-team_skill[data-team-role]:not(.is-on){display:none}
-.cs-team_skills:not(:has(.cs-team_skill.is-on)){display:none}
 @media (prefers-reduced-motion:reduce){.cs-aside_inner,.cs-aside_inner.is-away,.cs-used_row,.cs-used_arrow,.cs-used_icon,.cs-used_svg *,.cs-toc_link,.cs-team_photo,.cs-team_linkedin{transition:none}}
 </style>
