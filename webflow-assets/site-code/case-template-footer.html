@@ -200,7 +200,7 @@ schedule();
 <script>
 /* Sidebar (nues-case-sidebar-scroll.html): animated Services used icons, On this page links with scroll spy, and the rail that
    follows the text, stops at the gallery, slides out to the right and comes back after it (desktop only).
-   Team: entries of other projects are dropped (until the list filter is set to the current project), LinkedIn links open in a new tab. */
+   Team: each person's pills come from the project's Team – Design / Webflow / SEO & AEO / Growth fields; LinkedIn links open in a new tab. */
 (function () {
   var d = document, w = window;
   var reduce = !!(w.matchMedia && w.matchMedia('(prefers-reduced-motion: reduce)').matches);
@@ -277,10 +277,18 @@ schedule();
   }
 
   function team() {
-    var here = w.location.pathname.replace(/\/+$/, '').split('/').pop();
+    // who did what on this project: the four hidden lists (Team – Design / Webflow / SEO & AEO / Growth)
+    var sets = $$('[data-team-data] [data-team-role]').map(function (l) {
+      return { role: l.getAttribute('data-team-role'), ids: $$('[data-member]', l).map(function (m) { return (m.getAttribute('data-member') || '').trim(); }).filter(Boolean) };
+    });
+    // lists not yet pointed at their field in the Designer all show the same people: ignore them instead of giving everyone every pill
+    var sig = sets.map(function (s) { return s.ids.slice().sort().join(','); });
+    var unset = sets.length > 1 && sig.every(function (x) { return x === sig[0]; });
+    var roles = {};
+    if (!unset) sets.forEach(function (s) { s.ids.forEach(function (id) { (roles[id] = roles[id] || {})[s.role] = 1; }); });
     $$('.cs-team_item').forEach(function (it) {
-      var a = $('.cs-team_card', it), p = a ? (a.getAttribute('data-project') || '').trim() : '';
-      if (p && here && p !== here) { it.style.display = 'none'; it.classList.remove('cs-team_item'); return; }
+      var a = $('.cs-team_card', it), mine = roles[a ? (a.getAttribute('data-member') || '').trim() : ''] || {};
+      $$('.cs-team_skill[data-team-role]', it).forEach(function (p) { p.classList.toggle('is-on', !!mine[p.getAttribute('data-team-role')]); });
       if (!a) return;
       var h = (a.getAttribute('href') || '').trim();
       if (!h || h === '#') { a.removeAttribute('href'); a.removeAttribute('target'); return; }

@@ -134,7 +134,7 @@
    Layout and sizes are native classes; this adds the states. Colours: service colours by Services slug, circle by Discipline. */
 .cs-body{overflow-x:clip}
 .section_cs-team:not(:has(.cs-team_item)),.cs-used:not(:has(.cs-used_item)){display:none}
-.section_cs-team .w-dyn-empty,.cs-used .w-dyn-empty,.cs-team_skills-wrap .w-dyn-empty{display:none}
+.section_cs-team .w-dyn-empty,.cs-used .w-dyn-empty{display:none}
 /* the rail stops at the gallery, rides up with the page and slides out to the right; comes back the same way (script in the footer) */
 .cs-aside_inner.is-away{transform:translateX(var(--off,110vw));pointer-events:none;transition:transform .55s cubic-bezier(.55,0,.75,.2)}
 /* Services used: grey icons and text until hover, then the service colours; each icon moves in its own way */
@@ -180,6 +180,8 @@
 .cs-team_card[href]:not([href="#"]):hover .cs-team_photo{opacity:0;transform:translateX(-50%) scale(1.06)}
 .cs-team_card[href]:not([href="#"]):hover .cs-team_linkedin{opacity:1;transform:translate(-50%,-50%) scale(1)}
 }
-.cs-team_skills-wrap:not(:has(.cs-team_skill-item)){display:none}
+/* pills: each card has all four, the script turns on the ones this person did on this project (Team – Design / Webflow / SEO & AEO / Growth) */
+.cs-team_skill[data-team-role]:not(.is-on){display:none}
+.cs-team_skills:not(:has(.cs-team_skill.is-on)){display:none}
 @media (prefers-reduced-motion:reduce){.cs-aside_inner,.cs-aside_inner.is-away,.cs-used_row,.cs-used_arrow,.cs-used_icon,.cs-used_svg *,.cs-toc_link,.cs-team_photo,.cs-team_linkedin{transition:none}}
 </style>
