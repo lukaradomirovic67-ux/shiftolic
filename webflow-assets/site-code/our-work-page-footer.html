@@ -373,6 +373,27 @@
     heads.forEach(function (h) { if (h) io.observe(h); });
   }
 
+  /* Work cards for projects without a written case study (empty Case title, bound to data-case) open the client's live site
+     (Website link, bound to data-site) in a new tab instead of an empty case page. Also run on hover/focus/click so cards that
+     Finsweet loads or filters in later get the same link. */
+  function siteLink(a) {
+    if (!a || a.hasAttribute('data-site-link')) return;
+    var site = (a.getAttribute('data-site') || '').trim();
+    if ((a.getAttribute('data-case') || '').trim() || !/^https?:\/\//i.test(site)) return;
+    a.setAttribute('href', site);
+    a.setAttribute('target', '_blank');
+    a.setAttribute('rel', 'noopener');
+    a.setAttribute('data-site-link', '');
+  }
+  function initSiteLinks() {
+    arr(document.querySelectorAll('.work-card_component[data-case]')).forEach(siteLink);
+    ['pointerover', 'focusin', 'click'].forEach(function (t) {
+      document.addEventListener(t, function (e) {
+        siteLink(e.target.closest && e.target.closest('.work-card_component[data-case]'));
+      }, true);
+    });
+  }
+
   /* CMS links: fall back to /our-work/<slug> if the template link did not resolve */
   function fixLinks() {
     arr(document.querySelectorAll('.work-card_component[data-slug], .ow-cs_side[data-slug], .ow-hm_view[data-slug]')).forEach(function (a) {
@@ -403,6 +424,7 @@
   function boot() {
     try { initShots(); } catch (e) { if (window.console) console.warn('ow cards', e); }
     try { fixLinks(); } catch (e) { if (window.console) console.warn('ow links', e); }
+    try { initSiteLinks(); } catch (e) { if (window.console) console.warn('ow site links', e); }
     try { initHero(); } catch (e) { if (window.console) console.warn('ow hero', e); }
     try { initCase(); } catch (e) { if (window.console) console.warn('ow case', e); }
   }
