@@ -1,0 +1,788 @@
+{
+  "exportedAt": "2026-11-10",
+  "siteId": "6aba6bc07d6279b4b561771f",
+  "source": "data_pages_tool query_pages_schema_markup (primary locale)",
+  "pages": [
+    {
+      "id": "6af0fba8d6c33f4679f5ae4a",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": null,
+      "publishedPath": "/case-team",
+      "lastUpdated": "2026-11-08T22:57:24.249Z",
+      "jsonLdSchema": null,
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    },
+    {
+      "id": "6ae0e4a4872d8069c67b0475",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": null,
+      "publishedPath": "/services",
+      "lastUpdated": "2026-11-08T16:26:07.191Z",
+      "jsonLdSchema": null,
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    },
+    {
+      "id": "6ae0d85d4a2c075c26d111c8",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": null,
+      "publishedPath": "/webflow-integrations",
+      "lastUpdated": "2026-11-08T15:54:39.711Z",
+      "jsonLdSchema": null,
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    },
+    {
+      "id": "6adbd9eee7d520aeb28ac97d",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": null,
+      "publishedPath": "/hero-cards",
+      "lastUpdated": "2026-11-05T20:08:25.318Z",
+      "jsonLdSchema": null,
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    },
+    {
+      "id": "6ada1b11e40ddb96b7a870e6",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": null,
+      "publishedPath": "/jobs",
+      "lastUpdated": "2026-10-22T14:22:37.328Z",
+      "jsonLdSchema": null,
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    },
+    {
+      "id": "6ada16efb73db28b0b5cbad8",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": null,
+      "publishedPath": "/careers",
+      "lastUpdated": "2026-11-07T20:16:56.829Z",
+      "jsonLdSchema": null,
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    },
+    {
+      "id": "6ad9125fa551cf984d9bb34a",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": null,
+      "publishedPath": "/services/seo-aeo",
+      "lastUpdated": "2026-11-08T16:26:07.193Z",
+      "jsonLdSchema": null,
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    },
+    {
+      "id": "6ad2500978181edbb22ab367",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": null,
+      "publishedPath": "/pricing",
+      "lastUpdated": "2026-10-28T21:52:26.415Z",
+      "jsonLdSchema": null,
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    },
+    {
+      "id": "6aba6bc07d6279b4b561770f",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": null,
+      "publishedPath": "/faq",
+      "lastUpdated": "2026-09-28T13:29:50.409Z",
+      "jsonLdSchema": null,
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    },
+    {
+      "id": "6aba6bc07d6279b4b561770c",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": null,
+      "publishedPath": "/integrations-category",
+      "lastUpdated": "2026-09-28T13:29:50.385Z",
+      "jsonLdSchema": null,
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    },
+    {
+      "id": "6aba6bc07d6279b4b561770b",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": null,
+      "publishedPath": "/integrations",
+      "lastUpdated": "2026-10-28T21:52:58.355Z",
+      "jsonLdSchema": null,
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    },
+    {
+      "id": "6aba6bc07d6279b4b5617709",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": null,
+      "publishedPath": "/resources",
+      "lastUpdated": "2026-11-08T16:26:27.717Z",
+      "jsonLdSchema": null,
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    },
+    {
+      "id": "6aba6bc07d6279b4b5617708",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": null,
+      "publishedPath": "/insights-categories",
+      "lastUpdated": "2026-09-28T13:29:50.357Z",
+      "jsonLdSchema": null,
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    },
+    {
+      "id": "6aba6bc07d6279b4b5617707",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": null,
+      "publishedPath": "/team",
+      "lastUpdated": "2026-09-28T13:29:50.339Z",
+      "jsonLdSchema": null,
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    },
+    {
+      "id": "6aba6bc07d6279b4b5617706",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": "6aba6bc07d6279b4b5617721",
+      "publishedPath": "/blog",
+      "lastUpdated": "2026-11-08T16:28:09.301Z",
+      "jsonLdSchema": null,
+      "rawJsonLdSchema": "<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BlogPosting\",\n  \"@id\": \"/blog/{{wf {&quot;path&quot;:&quot;slug&quot;,&quot;type&quot;:&quot;PlainText&quot;\\} }}#article\",\n  \"headline\": \"{{wf {&quot;path&quot;:&quot;name&quot;,&quot;type&quot;:&quot;PlainText&quot;\\} }}\",\n  \"description\": \"{{wf {&quot;path&quot;:&quot;meta-description&quot;,&quot;type&quot;:&quot;PlainText&quot;\\} }}\",\n  \"url\": \"/blog/{{wf {&quot;path&quot;:&quot;slug&quot;,&quot;type&quot;:&quot;PlainText&quot;\\} }}\",\n  \"image\": {\n    \"@type\": \"ImageObject\",\n    \"url\": \"{{wf {&quot;path&quot;:&quot;thumbnail-image&quot;,&quot;type&quot;:&quot;ImageRef&quot;\\} }}\"\n  },\n  \"author\": {\n    \"@type\": \"Person\",\n    \"name\": \"{{wf {&quot;path&quot;:&quot;author:name&quot;,&quot;type&quot;:&quot;PlainText&quot;\\} }}\",\n    \"url\": \"/team/{{wf {&quot;path&quot;:&quot;author:slug&quot;,&quot;type&quot;:&quot;PlainText&quot;\\} }}\",\n    \"jobTitle\": \"{{wf {&quot;path&quot;:&quot;author:role&quot;,&quot;type&quot;:&quot;PlainText&quot;\\} }}\",\n    \"description\": \"{{wf {&quot;path&quot;:&quot;author:bio&quot;,&quot;type&quot;:&quot;PlainText&quot;\\} }}\",\n    \"image\": {\n      \"@type\": \"ImageObject\",\n      \"url\": \"{{wf {&quot;path&quot;:&quot;author:image&quot;,&quot;type&quot;:&quot;ImageRef&quot;\\} }}\"\n    },\n    \"sameAs\": [\n      \"{{wf {&quot;path&quot;:&quot;author:linkedin-profile-2&quot;,&quot;type&quot;:&quot;Link&quot;\\} }}\"\n    ]\n  },\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Nues\",\n    \"logo\": {\n      \"@type\": \"ImageObject\",\n      \"url\": \"https://cdn.prod.website-files.com/69b4443f93d293c2336db5b9/69ffd79d11a1a944721ccfa9_navbar-logo.svg\"\n    }\n  },\n  \"datePublished\": \"{{wf {&quot;path&quot;:&quot;published-on&quot;,&quot;type&quot;:&quot;Date&quot;\\} }}\",\n  \"dateModified\": \"{{wf {&quot;path&quot;:&quot;updated-on&quot;,&quot;type&quot;:&quot;Date&quot;\\} }}\",\n  \"inLanguage\": \"en\",\n  \"articleSection\": \"{{wf {&quot;path&quot;:&quot;category:name&quot;,&quot;type&quot;:&quot;PlainText&quot;\\} }}\",\n  \"keywords\": \"AEO, marketing, Webflow, AI search, structured data, schema markup\",\n  \"abstract\": \"{{wf {&quot;path&quot;:&quot;tl-dr&quot;,&quot;type&quot;:&quot;PlainText&quot;\\} }}\"\n}\n</script>",
+      "isInherited": false
+    },
+    {
+      "id": "6aba6bc07d6279b4b5617705",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": null,
+      "publishedPath": "/blog",
+      "lastUpdated": "2026-11-08T16:26:47.735Z",
+      "jsonLdSchema": null,
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    },
+    {
+      "id": "6aba6bc07d6279b4b5617704",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": null,
+      "publishedPath": "/privacy-policy",
+      "lastUpdated": "2026-11-03T21:06:21.100Z",
+      "jsonLdSchema": null,
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    },
+    {
+      "id": "6aba6bc07d6279b4b5617703",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": null,
+      "publishedPath": "/terms-of-service",
+      "lastUpdated": "2026-10-28T21:53:39.152Z",
+      "jsonLdSchema": null,
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    },
+    {
+      "id": "6aba6bc07d6279b4b5617702",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": "6aba6bc07d6279b4b5617721",
+      "publishedPath": "/services/webflow-development",
+      "lastUpdated": "2026-11-08T16:26:07.199Z",
+      "jsonLdSchema": {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Webflow Development - Webflow Development Service",
+        "description": "Pixel-perfect Webflow development from your Figma design. Scalable components, CMS architecture, and clean handoffs. 4-8 week delivery. Starting at $5,000.",
+        "url": "/services/webflow-development",
+        "inLanguage": "en",
+        "mainEntity": {
+          "@type": "Service",
+          "name": "Webflow Development - Webflow Development Service",
+          "description": "Webflow development that respects every detail of your design — components built to scale, pages structured for marketing teams, performance baked in from the start.",
+          "provider": {
+            "@type": "Organization",
+            "name": "NUES"
+          },
+          "serviceType": "Webflow Development",
+          "areaServed": "Worldwide",
+          "offers": {
+            "@type": "Offer",
+            "price": "5000",
+            "priceCurrency": "USD",
+            "description": "Starting price for the Webflow Development service"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Webflow Development Service Process",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Design handover & planning",
+                  "description": "Figma file review, component mapping, build plan, timeline, and pre-build alignment"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Component library build",
+                  "description": "Reusable components, Webflow Variables, style guide, standardized patterns, and component documentation"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Webflow development",
+                  "description": "Pixel-perfect implementation, responsive layouts, interactions & motion, CMS architecture, and edge case handling"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Integrations & QA",
+                  "description": "Custom integrations, CRM & analytics setup, cross-browser testing, device testing, and manual QA"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Launch & handoff",
+                  "description": "Launch coordination, CMS training, documentation, post-launch monitoring, and optional move to the Growth retainer"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    },
+    {
+      "id": "6aba6bc07d6279b4b5617701",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": "6aba6bc07d6279b4b5617721",
+      "publishedPath": "/services/design-development",
+      "lastUpdated": "2026-11-08T16:25:56.629Z",
+      "jsonLdSchema": {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Design & Development - Webflow Design and Development Agency",
+        "description": "Strategy, design, development, SEO, and launch for your new Webflow site. One team, one timeline, from blank canvas to live website.",
+        "url": "/services/design-development",
+        "inLanguage": "en",
+        "mainEntity": {
+          "@type": "Service",
+          "name": "Design & Development - Webflow Design and Development Agency",
+          "description": "Strategy, design, development, SEO, and launch for your new Webflow site. One team, one timeline, from blank canvas to live website.",
+          "provider": {
+            "@type": "Organization",
+            "name": "NUES"
+          },
+          "serviceType": "Webflow Website Design and Development",
+          "areaServed": "Worldwide",
+          "offers": {
+            "@type": "Offer",
+            "price": "8000",
+            "priceCurrency": "USD",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": "8000",
+              "priceCurrency": "USD"
+            },
+            "description": "Design & Development starts at $8,000 and scales with project scope"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Design & Development Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Discovery & Strategy",
+                  "description": "Project goals, market & competitor research, site structure & sitemap, content planning, user journey mapping"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Design & Motion",
+                  "description": "Visual direction, typography, high-fidelity UI, responsive layouts, style guide, micro-interactions, scroll animations, custom illustrations"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Webflow Development",
+                  "description": "Pixel-perfect Webflow build, CMS architecture, custom integrations, cross-browser testing, quality assurance"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "SEO & Launch",
+                  "description": "Technical SEO, schema implementation, Core Web Vitals optimization, redirect mapping for migrations, launch coordination"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Beyond Launch",
+                  "description": "Performance monitoring, iterative updates, optimization recommendations, optional move to the Growth retainer"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    },
+    {
+      "id": "6aba6bc07d6279b4b5617700",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": null,
+      "publishedPath": "/services-nues",
+      "lastUpdated": "2026-11-01T21:30:30.659Z",
+      "jsonLdSchema": null,
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    },
+    {
+      "id": "6aba6bc07d6279b4b56176ff",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": null,
+      "publishedPath": "/our-work",
+      "lastUpdated": "2026-11-08T23:24:52.022Z",
+      "jsonLdSchema": null,
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    },
+    {
+      "id": "6aba6bc07d6279b4b56176fe",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": "6aba6bc07d6279b4b5617721",
+      "publishedPath": "/our-work",
+      "lastUpdated": "2026-11-08T16:08:08.893Z",
+      "jsonLdSchema": {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Webflow Agency Portfolio | Case Studies",
+        "description": "Webflow projects across SaaS, healthcare, AI. See the work, the case studies, and the websites we've shipped for teams across the globe.",
+        "url": "/our-work",
+        "inLanguage": "en",
+        "about": {
+          "@type": "Organization",
+          "name": "Nues",
+          "description": "Webflow agency specializing in SaaS, healthcare, and AI website development"
+        },
+        "hasPart": [
+          {
+            "@type": "CreativeWork",
+            "name": "Ballerine",
+            "description": "AI Technology Industry project with 16x engagement time growth and 30+ pages launched",
+            "url": "/our-work/ballerine",
+            "about": {
+              "@type": "Thing",
+              "name": "AI Technology"
+            }
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "Shiftolic",
+            "description": "Healthcare Industry project delivered in 2 weeks with design and build from scratch",
+            "url": "/our-work/shiftolic",
+            "about": {
+              "@type": "Thing",
+              "name": "Healthcare"
+            }
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "Pythagora",
+            "description": "AI Technology Industry project with 3.4x website traffic growth and scalable CMS",
+            "url": "/our-work/pythagora",
+            "about": {
+              "@type": "Thing",
+              "name": "AI Technology"
+            }
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "Sustain Commercial Solar",
+            "description": "Commercial solar project with 80+ pages launched and 17 CMS collection types",
+            "url": "/our-work/sustain-commercial-solar"
+          }
+        ]
+      },
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    },
+    {
+      "id": "6aba6bc07d6279b4b56176fd",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": "6aba6bc07d6279b4b5617721",
+      "publishedPath": "/services/growth",
+      "lastUpdated": "2026-11-08T16:26:17.577Z",
+      "jsonLdSchema": {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Growth - Webflow Retainer Service",
+        "description": "Webflow maintenance and ongoing growth. New pages, optimizations, integrations, and proactive recommendations on a retainer where hours never expire.",
+        "url": "/services/growth",
+        "inLanguage": "en",
+        "mainEntity": {
+          "@type": "Service",
+          "name": "Growth - Webflow Retainer Service",
+          "description": "Ongoing Webflow development and maintenance retainer. New pages, CMS updates, integrations, performance optimization, and proactive recommendations with hours that never expire.",
+          "provider": {
+            "@type": "Organization",
+            "name": "NUES"
+          },
+          "serviceType": "Webflow Development and Maintenance",
+          "areaServed": "Worldwide",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Growth Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "New Pages & Landing Pages",
+                  "description": "Custom page development and landing page creation"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "CMS Updates",
+                  "description": "Content management system updates and maintenance"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Custom Integrations",
+                  "description": "Third-party integrations and API connections"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Performance Optimization",
+                  "description": "Site speed and performance improvements"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "SEO Monitoring",
+                  "description": "Search engine optimization monitoring and recommendations"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "CMS Training",
+                  "description": "Live sessions and recorded videos for marketing team training"
+                }
+              }
+            ]
+          },
+          "offers": {
+            "@type": "Offer",
+            "description": "Monthly retainer with rollover hours that never expire"
+          }
+        }
+      },
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    },
+    {
+      "id": "6aba6bc07d6279b4b56176f9",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": "6aba6bc07d6279b4b5617721",
+      "publishedPath": "/about",
+      "lastUpdated": "2026-11-08T16:27:59.142Z",
+      "jsonLdSchema": {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About Nues | The Webflow team building it",
+        "url": "/about",
+        "inLanguage": "en",
+        "description": "A Webflow agency built by people who've been at it for a long time. Get to know the team, the work, and the story that brought Nues to where it is today.",
+        "about": {
+          "@type": "Organization",
+          "@id": "#organization",
+          "name": "Nues",
+          "description": "A team that designs, builds, and grows Webflow websites for clients across the globe",
+          "url": "/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://cdn.prod.website-files.com/69b4443f93d293c2336db5b9/69ffd79d11a1a944721ccfa9_navbar-logo.svg"
+          },
+          "employee": [
+            {
+              "@type": "Person",
+              "name": "Danilo Stikovic",
+              "jobTitle": "CEO",
+              "sameAs": "https://www.linkedin.com/in/danilo-s-b3aa7a285/"
+            },
+            {
+              "@type": "Person",
+              "name": "Darko Milosevic",
+              "jobTitle": "COO",
+              "sameAs": "https://www.linkedin.com/in/darko-milosevicc/"
+            },
+            {
+              "@type": "Person",
+              "name": "Aleksandar Dumic",
+              "jobTitle": "CTO",
+              "sameAs": "https://www.linkedin.com/in/aleksandar-dumic-603080318/"
+            },
+            {
+              "@type": "Person",
+              "name": "Pavle Stikovic",
+              "jobTitle": "Designer",
+              "sameAs": "https://www.linkedin.com/in/pavle-stikovic-1466682a3/"
+            },
+            {
+              "@type": "Person",
+              "name": "Luka Radomirovic",
+              "jobTitle": "Developer",
+              "sameAs": "https://www.linkedin.com/in/luka-radomirovic-7015b1372/"
+            },
+            {
+              "@type": "Person",
+              "name": "Mihajlo Nikolic",
+              "jobTitle": "Designer",
+              "sameAs": "https://www.linkedin.com/in/nikolicmihajlo/"
+            },
+            {
+              "@type": "Person",
+              "name": "Daris Henjas",
+              "jobTitle": "Marketing Manager",
+              "sameAs": "https://www.linkedin.com/in/daris-henja%C5%A1-153754407/"
+            }
+          ],
+          "serviceArea": {
+            "@type": "Place",
+            "name": "Global"
+          }
+        }
+      },
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    },
+    {
+      "id": "6aba6bc07d6279b4b56176f8",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": "6aba6bc07d6279b4b5617721",
+      "publishedPath": "/lets-talk",
+      "lastUpdated": "2026-10-28T22:39:05.945Z",
+      "jsonLdSchema": {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Nues | Schedule a Free Strategy Call",
+        "description": "Schedule a free strategy call to see how we can help turn your website from cost centre to growth engine. Book a 30-minute demo today.",
+        "url": "/lets-talk",
+        "inLanguage": "en",
+        "about": {
+          "@type": "Organization",
+          "name": "Nues",
+          "description": "Website development and growth agency specializing in Webflow sites",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://cdn.prod.website-files.com/69b4443f93d293c2336db5b9/69ffd79d11a1a944721ccfa9_navbar-logo.svg"
+          },
+          "url": "/",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Sales",
+            "availableLanguage": "en"
+          }
+        },
+        "mainEntity": {
+          "@type": "Service",
+          "name": "Free Strategy Call",
+          "description": "30-minute consultation to discuss your project and determine fit",
+          "provider": {
+            "@type": "Organization",
+            "name": "Nues"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "description": "The first 30 minutes are on us"
+          }
+        },
+        "review": {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Or Moshkovitz",
+            "jobTitle": "Marketing Director",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Ballerine"
+            }
+          },
+          "reviewBody": "Three competitors asked us who built our site. That tells you everything."
+        }
+      },
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    },
+    {
+      "id": "6aba6bc07d6279b4b56176f3",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": null,
+      "publishedPath": "/404",
+      "lastUpdated": "2026-11-03T19:51:43.008Z",
+      "jsonLdSchema": null,
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    },
+    {
+      "id": "6aba6bc07d6279b4b56176f2",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": null,
+      "publishedPath": "/401",
+      "lastUpdated": "2026-09-28T13:29:50.155Z",
+      "jsonLdSchema": null,
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    },
+    {
+      "id": "6aba6bc07d6279b4b56176f4",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": null,
+      "publishedPath": "/style-guide",
+      "lastUpdated": "2026-11-03T21:05:57.397Z",
+      "jsonLdSchema": null,
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    },
+    {
+      "id": "6aba6bc07d6279b4b56176f1",
+      "siteId": "6aba6bc07d6279b4b561771f",
+      "localeId": "6aba6bc07d6279b4b5617721",
+      "effectiveLocaleId": "6aba6bc07d6279b4b5617721",
+      "publishedPath": "/",
+      "lastUpdated": "2026-11-08T23:26:34.890Z",
+      "jsonLdSchema": {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Nues",
+        "url": "/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://cdn.prod.website-files.com/69b4443f93d293c2336db5b9/69ffd79d11a1a944721ccfa9_navbar-logo.svg"
+        },
+        "description": "A Webflow agency designing and building websites for fast-growing teams. Custom Webflow development, scalable CMS, and performance dialed in from the first line of code.",
+        "slogan": "Design, build, grow. That's NUES.",
+        "sameAs": [],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "Sales",
+          "url": "/lets-talk"
+        },
+        "areaServed": "Worldwide",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Webflow Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Design & Development",
+                "description": "A new website from scratch, end to end. Strategy, design, development, SEO, and launch, all handled by the same team. From blank canvas to live site, on a clear timeline.",
+                "url": "/services/design-development"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Webflow Development",
+                "description": "Webflow development from your existing design. We take what's in your Figma and bring it to life with components built to scale, CMS structures that hold up, and performance dialed in from the first line of code.",
+                "url": "/services/webflow-development"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "SEO & AEO",
+                "description": "Technical SEO, content and AI answer optimisation for Webflow sites. We audit, structure and grow your rankings and AI citations, month after month.",
+                "url": "/services/seo-aeo"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Growth",
+                "description": "An ongoing Webflow team for teams that want their site to keep growing. New pages, optimizations, recommendations, all on a retainer where hours roll over and the work never sits still.",
+                "url": "/services/growth"
+              }
+            }
+          ]
+        }
+      },
+      "rawJsonLdSchema": null,
+      "isInherited": false
+    }
+  ]
+}

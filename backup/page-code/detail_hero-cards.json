@@ -1,0 +1,11 @@
+{
+  "pageId": "6adbd9eee7d520aeb28ac97d",
+  "title": "Hero Cards Template",
+  "slug": "detail_hero-cards",
+  "publishedPath": "/hero-cards",
+  "collectionId": "6adbd9ede7d520aeb28ac93f",
+  "head": "<!-- Hero Cards only feed the Home hero animation; these pages are not meant to be visited -->\n<meta name=\"robots\" content=\"noindex, nofollow\">",
+  "footer": "",
+  "appliedScripts": [],
+  "appliedScriptsNote": "get_page_scripts returned 404 resource_not_found (\"Custom code block not found\"): no registered scripts are applied to this page."
+}

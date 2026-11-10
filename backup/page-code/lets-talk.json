@@ -1,0 +1,11 @@
+{
+  "pageId": "6aba6bc07d6279b4b56176f8",
+  "title": "Let's talk",
+  "slug": "lets-talk",
+  "publishedPath": "/lets-talk",
+  "collectionId": null,
+  "head": "<!-- Nues: code moved here from page embeds. Edit here, not in embeds. -->\n<style>\n.lt-booking .iclosed-widget{width:100%;min-height:620px}\n@media (min-width:992px){.lt-hero .heading-style-h1{font-size:min(80px,5.56vw);white-space:nowrap}}\n@media (min-width:992px) and (max-width:1279px){.lt-hero_inner{grid-column-gap:56px;column-gap:56px}.lt-hero .heading-style-h1{font-size:4.9vw}.lt-hero_content{grid-row-gap:40px;row-gap:40px}.lt-booking{min-width:380px}}\n/* Hero light (lt-hero_glow): on screens wider than 1440px the content is centred, so the light follows it */\n@media (min-width:1441px){.lt-hero_glow{left:calc(50% - 1720px)}}\n</style>",
+  "footer": "<!-- iClosed booking widget (the .iclosed-widget container is a native element on the page) -->\n<script type=\"text/javascript\" src=\"https://app.iclosed.io/assets/widget.js\" async></script>",
+  "appliedScripts": [],
+  "appliedScriptsNote": "get_page_scripts returned 404 resource_not_found (\"Custom code block not found\"): no registered scripts are applied to this page."
+}

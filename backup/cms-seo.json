@@ -1,0 +1,2656 @@
+{
+  "exportedAt": "2026-11-10",
+  "siteId": "6aba6bc07d6279b4b561771f",
+  "source": "data_cms_tool list_collection_items (limit 100, primary locale)",
+  "fieldSelection": "Per item: id, cmsLocaleId, isDraft, isArchived, lastPublished, lastUpdated, name, slug, plus fieldData keys whose slug contains meta/seo/og/thumbnail/main-image/cover/alt (text/image fields only; false positives such as Switch/Number/Reference fields matched via \"blog\" or \"team---seo-aeo\" were dropped), plus every Image/MultiImage field (stored as {fileId,url,alt}, since alt text is SEO-relevant). RichText fields are never stored.",
+  "collections": [
+    {
+      "collectionId": "6aba6bc07d6279b4b561771c",
+      "slug": "our-work",
+      "displayName": "Our Works",
+      "selectedFields": [
+        {
+          "slug": "meta-title",
+          "type": "PlainText"
+        },
+        {
+          "slug": "meta-description",
+          "type": "PlainText"
+        },
+        {
+          "slug": "main-image",
+          "type": "Image"
+        },
+        {
+          "slug": "second-featuerd-image",
+          "type": "Image"
+        },
+        {
+          "slug": "third-featuerd-image",
+          "type": "Image"
+        },
+        {
+          "slug": "logo-with-hover",
+          "type": "Image"
+        },
+        {
+          "slug": "other-images-every-project-section",
+          "type": "MultiImage"
+        },
+        {
+          "slug": "hero-screen-center",
+          "type": "Image"
+        },
+        {
+          "slug": "hero-screen-left",
+          "type": "Image"
+        },
+        {
+          "slug": "hero-screen-right",
+          "type": "Image"
+        },
+        {
+          "slug": "client-icon",
+          "type": "Image"
+        },
+        {
+          "slug": "case-before-image",
+          "type": "Image"
+        },
+        {
+          "slug": "case-after-image",
+          "type": "Image"
+        },
+        {
+          "slug": "logo-with-color",
+          "type": "Image"
+        },
+        {
+          "slug": "card-background",
+          "type": "Image"
+        },
+        {
+          "slug": "gallery-left",
+          "type": "Image"
+        },
+        {
+          "slug": "tabs-background",
+          "type": "Image"
+        }
+      ],
+      "total": 11,
+      "items": [
+        {
+          "id": "6adbbe39ef50e14dcb9e70b3",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-07T21:36:14.727Z",
+          "lastUpdated": "2026-11-07T21:36:14.727Z",
+          "name": "Biotech Innovations",
+          "slug": "biotech-innovations",
+          "fieldData": {
+            "meta-title": null,
+            "meta-description": null,
+            "main-image": {
+              "fileId": "6aebb1ae051ef4f94311ee31",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aebb1ae051ef4f94311ee31_biotech-cover.webp",
+              "alt": "Biotech Innovations home page"
+            },
+            "second-featuerd-image": {
+              "fileId": "6aef994303384eb021627301",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb021627301_case-gallery-biotech-2.webp",
+              "alt": "Biotech Innovations website pages"
+            },
+            "third-featuerd-image": {
+              "fileId": "6aef994303384eb0216272f5",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272f5_case-gallery-biotech-3.webp",
+              "alt": "Biotech Innovations website on mobile"
+            },
+            "logo-with-hover": {
+              "fileId": "6ae50b932cdccd4721716e41",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae50b932cdccd4721716e41_6ae50ae4a2c287885a0531a1_biotech-innovations-logo-white.png",
+              "alt": null
+            },
+            "other-images-every-project-section": null,
+            "hero-screen-center": {
+              "fileId": "6aeb5f8413acac10743cf4ea",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aeb5f8413acac10743cf4ea_biotech-home-full-hq.webp",
+              "alt": "Biotech Innovations home page"
+            },
+            "hero-screen-left": null,
+            "hero-screen-right": null,
+            "client-icon": null,
+            "case-before-image": null,
+            "case-after-image": null,
+            "logo-with-color": null,
+            "card-background": {
+              "fileId": "6aea454412afa8d1c96b1a11",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea454412afa8d1c96b1a11_biotech-card-bg-v2.webp",
+              "alt": ""
+            },
+            "gallery-left": {
+              "fileId": "6aef99b092e91338865f4d31",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef99b092e91338865f4d31_case-gallery-biotech-1.webp",
+              "alt": "Biotech Innovations website on a laptop"
+            },
+            "tabs-background": null
+          }
+        },
+        {
+          "id": "6adbbe39ef50e14dcb9e70b1",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-07T21:36:14.771Z",
+          "lastUpdated": "2026-11-07T21:36:14.771Z",
+          "name": "LaSalle Agri",
+          "slug": "lasalle-agri",
+          "fieldData": {
+            "meta-title": null,
+            "meta-description": null,
+            "main-image": {
+              "fileId": "6aecbadbe512f468a877f7ec",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aecbadbe512f468a877f7ec_lasalle-cover.webp",
+              "alt": "LaSalle Agri home page"
+            },
+            "second-featuerd-image": {
+              "fileId": "6aef994303384eb0216272fe",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272fe_case-gallery-lasalle-2.webp",
+              "alt": "LaSalle Agri website pages"
+            },
+            "third-featuerd-image": {
+              "fileId": "6aef994303384eb0216272f8",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272f8_case-gallery-lasalle-3.webp",
+              "alt": "LaSalle Agri website on mobile"
+            },
+            "logo-with-hover": {
+              "fileId": "6ae50b932cdccd4721716e44",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae50b932cdccd4721716e44_6ae50aeadb09ea7c9bf53d70_lasalle-agri-logo-white.png",
+              "alt": null
+            },
+            "other-images-every-project-section": null,
+            "hero-screen-center": {
+              "fileId": "6aecbadce512f468a877f7fd",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aecbadce512f468a877f7fd_lasalle-home-full-hq.webp",
+              "alt": "LaSalle Agri home page"
+            },
+            "hero-screen-left": null,
+            "hero-screen-right": null,
+            "client-icon": null,
+            "case-before-image": null,
+            "case-after-image": null,
+            "logo-with-color": null,
+            "card-background": {
+              "fileId": "6aea36d35d29ef2052db5df6",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea36d35d29ef2052db5df6_lasalle-card-bg-hq.webp",
+              "alt": ""
+            },
+            "gallery-left": {
+              "fileId": "6aef99b092e91338865f4d3d",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef99b092e91338865f4d3d_case-gallery-lasalle-1.webp",
+              "alt": "LaSalle Agri website on a laptop"
+            },
+            "tabs-background": null
+          }
+        },
+        {
+          "id": "6ace66976b237ad91feb51a0",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-07T21:36:14.713Z",
+          "lastUpdated": "2026-11-07T21:36:14.713Z",
+          "name": "Hypersonix",
+          "slug": "hypersonix",
+          "fieldData": {
+            "meta-title": null,
+            "meta-description": null,
+            "main-image": {
+              "fileId": "6aebb1ae051ef4f94311ee2b",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aebb1ae051ef4f94311ee2b_hypersonix-cover.webp",
+              "alt": "Hypersonix home page"
+            },
+            "second-featuerd-image": {
+              "fileId": "6aef994303384eb0216272e4",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272e4_case-gallery-hypersonix-2.webp",
+              "alt": "Hypersonix website pages"
+            },
+            "third-featuerd-image": {
+              "fileId": "6aef994303384eb0216272f2",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272f2_case-gallery-hypersonix-3.webp",
+              "alt": "Hypersonix website on mobile"
+            },
+            "logo-with-hover": {
+              "fileId": "6aea36d35d29ef2052db5de0",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea36d35d29ef2052db5de0_logo-white-hypersonix.svg",
+              "alt": "Hypersonix"
+            },
+            "other-images-every-project-section": null,
+            "hero-screen-center": {
+              "fileId": "6aeb5f8413acac10743cf4de",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aeb5f8413acac10743cf4de_hypersonix-home-full-hq.webp",
+              "alt": "Hypersonix home page"
+            },
+            "hero-screen-left": null,
+            "hero-screen-right": null,
+            "client-icon": null,
+            "case-before-image": null,
+            "case-after-image": null,
+            "logo-with-color": null,
+            "card-background": {
+              "fileId": "6aea36d15d29ef2052db5d9c",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea36d15d29ef2052db5d9c_hypersonix-card-bg-hq.webp",
+              "alt": ""
+            },
+            "gallery-left": {
+              "fileId": "6aef99b092e91338865f4d46",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef99b092e91338865f4d46_case-gallery-hypersonix-1.webp",
+              "alt": "Hypersonix website on a laptop"
+            },
+            "tabs-background": null
+          }
+        },
+        {
+          "id": "6ace6668eefb4c00ebea1f2f",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-04T22:29:23.028Z",
+          "lastUpdated": "2026-11-04T22:29:02.302Z",
+          "name": "Harper",
+          "slug": "harper",
+          "fieldData": {
+            "meta-title": null,
+            "meta-description": null,
+            "main-image": {
+              "fileId": "6aebb1ae051ef4f94311ee2e",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aebb1ae051ef4f94311ee2e_harper-cover.webp",
+              "alt": "Harper home page"
+            },
+            "second-featuerd-image": null,
+            "third-featuerd-image": null,
+            "logo-with-hover": {
+              "fileId": "6aea36d25d29ef2052db5dc1",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea36d25d29ef2052db5dc1_logo-white-harper.svg",
+              "alt": "Harper"
+            },
+            "other-images-every-project-section": null,
+            "hero-screen-center": {
+              "fileId": "6aea454412afa8d1c96b1a14",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea454412afa8d1c96b1a14_harper-home-full-hq.webp",
+              "alt": "Harper home page"
+            },
+            "hero-screen-left": null,
+            "hero-screen-right": null,
+            "client-icon": null,
+            "case-before-image": null,
+            "case-after-image": null,
+            "logo-with-color": {
+              "fileId": "6ae256831bff15e0e23f7c9d",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae256831bff15e0e23f7c9d_6ae25564f0adf1067904b3f1_logo-color-harper-v2.svg",
+              "alt": "Harper"
+            },
+            "card-background": {
+              "fileId": "6aea454412afa8d1c96b19f9",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea454412afa8d1c96b19f9_harper-card-bg-v2.webp",
+              "alt": ""
+            },
+            "gallery-left": null,
+            "tabs-background": null
+          }
+        },
+        {
+          "id": "6ace660facdd65a7260ff9f7",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-07T21:36:14.790Z",
+          "lastUpdated": "2026-11-07T21:36:14.790Z",
+          "name": "Intaker",
+          "slug": "intaker",
+          "fieldData": {
+            "meta-title": null,
+            "meta-description": null,
+            "main-image": {
+              "fileId": "6aebb1ad051ef4f94311ee27",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aebb1ad051ef4f94311ee27_intaker-cover.webp",
+              "alt": "Intaker home page"
+            },
+            "second-featuerd-image": {
+              "fileId": "6aef994303384eb0216272de",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272de_case-gallery-intaker-2.webp",
+              "alt": "Intaker website pages"
+            },
+            "third-featuerd-image": {
+              "fileId": "6aef994303384eb0216272cf",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272cf_case-gallery-intaker-3.webp",
+              "alt": "Intaker website on mobile"
+            },
+            "logo-with-hover": {
+              "fileId": "6aea36d25d29ef2052db5db8",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea36d25d29ef2052db5db8_logo-white-intaker.svg",
+              "alt": "Intaker"
+            },
+            "other-images-every-project-section": null,
+            "hero-screen-center": {
+              "fileId": "6aef89742367d3f74366ee1d",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef89742367d3f74366ee1d_intaker-home-full-v2.webp",
+              "alt": "Intaker home page"
+            },
+            "hero-screen-left": null,
+            "hero-screen-right": null,
+            "client-icon": null,
+            "case-before-image": {
+              "fileId": "6aea454412afa8d1c96b19f6",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea454412afa8d1c96b19f6_intaker-before.webp",
+              "alt": "Intaker website before the nues rebuild"
+            },
+            "case-after-image": {
+              "fileId": "6aea454412afa8d1c96b19fc",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea454412afa8d1c96b19fc_intaker-after.webp",
+              "alt": "Intaker website after the nues rebuild"
+            },
+            "logo-with-color": null,
+            "card-background": {
+              "fileId": "6aea454412afa8d1c96b19f0",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea454412afa8d1c96b19f0_intaker-card-bg-v2.webp",
+              "alt": ""
+            },
+            "gallery-left": {
+              "fileId": "6aef99b092e91338865f4d37",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef99b092e91338865f4d37_case-gallery-intaker-1.webp",
+              "alt": "Intaker website on a laptop"
+            },
+            "tabs-background": null
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b561798e",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-08T15:18:21.400Z",
+          "lastUpdated": "2026-11-08T15:10:05.542Z",
+          "name": "TrakPro",
+          "slug": "trak-pro",
+          "fieldData": {
+            "meta-title": "TrakPro's site across UK and Ireland | Case Study | Nues",
+            "meta-description": "Designing and building TrakPro's construction payment site across two markets, UK and Ireland, each in its own legal terminology, with a perfect SEO score",
+            "main-image": {
+              "fileId": "6aba6bc07d6279b4b561797e",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b561797e_1.png",
+              "alt": null
+            },
+            "second-featuerd-image": {
+              "fileId": "6aef994303384eb0216272e1",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272e1_case-gallery-trakpro-2.webp",
+              "alt": "TrakPro website pages"
+            },
+            "third-featuerd-image": {
+              "fileId": "6aef994303384eb0216272d8",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272d8_case-gallery-trakpro-3.webp",
+              "alt": "TrakPro website on mobile"
+            },
+            "logo-with-hover": {
+              "fileId": "6aea36d25d29ef2052db5dca",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea36d25d29ef2052db5dca_logo-white-trakpro.svg",
+              "alt": "TrakPro"
+            },
+            "other-images-every-project-section": null,
+            "hero-screen-center": {
+              "fileId": "6aef89732367d3f74366ee07",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef89732367d3f74366ee07_trakpro-home-full-v2.webp",
+              "alt": "TrakPro home page"
+            },
+            "hero-screen-left": null,
+            "hero-screen-right": null,
+            "client-icon": null,
+            "case-before-image": null,
+            "case-after-image": {
+              "fileId": "6af090cdc9e95dfb700f5a90",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af090cdc9e95dfb700f5a90_ow-tabs-after-trakpro.webp",
+              "alt": "New TrakPro website by nues"
+            },
+            "logo-with-color": {
+              "fileId": "6ae256831bff15e0e23f7c8d",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae256831bff15e0e23f7c8d_6ae2555ecaf172cd299736db_logo-color-trakpro-v2.svg",
+              "alt": "TrakPro"
+            },
+            "card-background": {
+              "fileId": "6aea454412afa8d1c96b19ed",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea454412afa8d1c96b19ed_trakpro-card-bg-v2.webp",
+              "alt": ""
+            },
+            "gallery-left": {
+              "fileId": "6aef99b092e91338865f4d43",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef99b092e91338865f4d43_case-gallery-trakpro-1.webp",
+              "alt": "TrakPro website on a laptop"
+            },
+            "tabs-background": {
+              "fileId": "6af090cdc9e95dfb700f5a9c",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af090cdc9e95dfb700f5a9c_ow-tabs-bg-trakpro.webp",
+              "alt": ""
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b561798d",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-08T15:18:21.400Z",
+          "lastUpdated": "2026-11-08T15:10:45.393Z",
+          "name": "Veyor Digital",
+          "slug": "veyor-digital",
+          "fieldData": {
+            "meta-title": "Rebuilding Veyor across 5 markets | Case Study | Nues",
+            "meta-description": "How Nues rebuilt Veyor from the ground up across five markets in one month, migrating 1,000+ CMS items with zero loss of SEO or rankings.",
+            "main-image": {
+              "fileId": "6aba6bc07d6279b4b561789d",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b561789d_case-studie-veyor-main.avif",
+              "alt": null
+            },
+            "second-featuerd-image": {
+              "fileId": "6aef994303384eb021627304",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb021627304_case-gallery-veyor-2.webp",
+              "alt": "Veyor Digital website pages"
+            },
+            "third-featuerd-image": {
+              "fileId": "6aef994303384eb0216272ef",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272ef_case-gallery-veyor-3.webp",
+              "alt": "Veyor Digital website on mobile"
+            },
+            "logo-with-hover": {
+              "fileId": "6aea36d35d29ef2052db5dda",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea36d35d29ef2052db5dda_logo-white-veyor.svg",
+              "alt": "Veyor"
+            },
+            "other-images-every-project-section": null,
+            "hero-screen-center": {
+              "fileId": "6aef89792367d3f74366eedb",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef89792367d3f74366eedb_veyor-home-full-v2.webp",
+              "alt": "Veyor Digital home page"
+            },
+            "hero-screen-left": null,
+            "hero-screen-right": null,
+            "client-icon": null,
+            "case-before-image": {
+              "fileId": "6af090cdc9e95dfb700f5a9f",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af090cdc9e95dfb700f5a9f_ow-tabs-before-veyor.webp",
+              "alt": "Old Veyor website"
+            },
+            "case-after-image": {
+              "fileId": "6af090cfc9e95dfb700f5ba6",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af090cfc9e95dfb700f5ba6_ow-tabs-after-veyor.webp",
+              "alt": "New Veyor website by nues"
+            },
+            "logo-with-color": {
+              "fileId": "6ae256831bff15e0e23f7c94",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae256831bff15e0e23f7c94_6ae2555c8b280442843968fe_logo-color-veyor-v2.svg",
+              "alt": "Veyor"
+            },
+            "card-background": {
+              "fileId": "6aea454412afa8d1c96b1a02",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea454412afa8d1c96b1a02_veyor-card-bg-v2.webp",
+              "alt": ""
+            },
+            "gallery-left": {
+              "fileId": "6aef99b092e91338865f4d34",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef99b092e91338865f4d34_case-gallery-veyor-1.webp",
+              "alt": "Veyor Digital website on a laptop"
+            },
+            "tabs-background": {
+              "fileId": "6af090cdc9e95dfb700f5a99",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af090cdc9e95dfb700f5a99_ow-tabs-bg-veyor.webp",
+              "alt": ""
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b561798c",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-07T21:36:14.806Z",
+          "lastUpdated": "2026-11-07T21:36:14.806Z",
+          "name": "Sustain Commercial Solar",
+          "slug": "sustain-commercial-solar",
+          "fieldData": {
+            "meta-title": "Scaling Sustain Commercial Solar's site | Case study | Nues",
+            "meta-description": "Webflow development for Sustain Commercial Solar, a UK commercial solar leader. 80+ pages, scalable CMS, and a component library designed to keep growing.",
+            "main-image": {
+              "fileId": "6aba6bc07d6279b4b5617879",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b5617879_Slide%2016_9%20-%201.avif",
+              "alt": null
+            },
+            "second-featuerd-image": {
+              "fileId": "6aef994303384eb0216272fb",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272fb_case-gallery-sustain-2.webp",
+              "alt": "Sustain Commercial Solar website pages"
+            },
+            "third-featuerd-image": {
+              "fileId": "6aef994303384eb021627307",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb021627307_case-gallery-sustain-3.webp",
+              "alt": "Sustain Commercial Solar website on mobile"
+            },
+            "logo-with-hover": {
+              "fileId": "6aea36d35d29ef2052db5df9",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea36d35d29ef2052db5df9_logo-white-sustain.svg",
+              "alt": "Sustain Commercial Solar"
+            },
+            "other-images-every-project-section": null,
+            "hero-screen-center": {
+              "fileId": "6aecbadbe512f468a877f7f2",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aecbadbe512f468a877f7f2_sustain-home-full-hq.webp",
+              "alt": "Sustain Commercial Solar home page"
+            },
+            "hero-screen-left": null,
+            "hero-screen-right": null,
+            "client-icon": null,
+            "case-before-image": null,
+            "case-after-image": null,
+            "logo-with-color": {
+              "fileId": "6ae256831bff15e0e23f7ca0",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae256831bff15e0e23f7ca0_6ae255628697454659bfe56a_logo-color-sustain-v2.svg",
+              "alt": "Sustain Commercial Solar"
+            },
+            "card-background": {
+              "fileId": "6aea454412afa8d1c96b1a05",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea454412afa8d1c96b1a05_sustain-card-bg-v2.webp",
+              "alt": ""
+            },
+            "gallery-left": {
+              "fileId": "6aef99b092e91338865f4d3a",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef99b092e91338865f4d3a_case-gallery-sustain-1.webp",
+              "alt": "Sustain Commercial Solar website on a laptop"
+            },
+            "tabs-background": null
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b561798a",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": true,
+          "isArchived": false,
+          "lastPublished": null,
+          "lastUpdated": "2026-10-21T16:23:28.233Z",
+          "name": "Pythagora",
+          "slug": "pythagora",
+          "fieldData": {
+            "meta-title": "Powering Pythagora's website | Case study | Nues",
+            "meta-description": "Custom Webflow development for Pythagora, an AI dev platform trusted by 80,000+ developers. Token sync, custom integrations, and 3.4x traffic growth.",
+            "main-image": {
+              "fileId": "6aba6bc07d6279b4b5617811",
+              "url": "https://cdn.prod.website-files.com/6a0bc2572a345c5cad437d47/6a0ccb0a892bcac5c3ce1407_Frame%2047283.png",
+              "alt": null
+            },
+            "second-featuerd-image": {
+              "fileId": "6aba6bc07d6279b4b5617833",
+              "url": "https://cdn.prod.website-files.com/6a0bc2572a345c5cad437d47/6a0ccb774ca3371bf4530ee8_Frame%2047512.png",
+              "alt": null
+            },
+            "third-featuerd-image": {
+              "fileId": "6aba6bc07d6279b4b5617855",
+              "url": "https://cdn.prod.website-files.com/6a0bc2572a345c5cad437d47/6a0ccb7b9fdbd0e1ffc6a4f4_Frame%2047511.png",
+              "alt": null
+            },
+            "logo-with-hover": null,
+            "other-images-every-project-section": null,
+            "hero-screen-center": null,
+            "hero-screen-left": null,
+            "hero-screen-right": null,
+            "client-icon": null,
+            "case-before-image": null,
+            "case-after-image": null,
+            "logo-with-color": null,
+            "card-background": null,
+            "gallery-left": null,
+            "tabs-background": null
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b561798b",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-08T15:18:21.400Z",
+          "lastUpdated": "2026-11-08T15:10:03.885Z",
+          "name": "Shiftolic",
+          "slug": "shiftolic",
+          "fieldData": {
+            "meta-title": "Shiftolic's web presence in 2 weeks | Case study | Nues",
+            "meta-description": "Designing and building Shiftolic's website from scratch in two weeks. Visual identity, Webflow development, and scalable CMS for a US healthcare marketplace.",
+            "main-image": {
+              "fileId": "6aba6bc07d6279b4b56177bb",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b56177bb_Frame%2047283.avif",
+              "alt": null
+            },
+            "second-featuerd-image": {
+              "fileId": "6aef994303384eb0216272d5",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272d5_case-gallery-shiftolic-2.webp",
+              "alt": "Shiftolic website pages"
+            },
+            "third-featuerd-image": {
+              "fileId": "6aef994303384eb0216272cc",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272cc_case-gallery-shiftolic-3.webp",
+              "alt": "Shiftolic website on mobile"
+            },
+            "logo-with-hover": {
+              "fileId": "6aea36d25d29ef2052db5db0",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea36d25d29ef2052db5db0_logo-white-shiftolic.svg",
+              "alt": "Shiftolic"
+            },
+            "other-images-every-project-section": [
+              {
+                "fileId": "6ae4d093493363ed91d8f87e",
+                "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae4d093493363ed91d8f87e_9dbcf.png",
+                "alt": "Shiftolic website home page"
+              },
+              {
+                "fileId": "6ae4d094493363ed91d8f88c",
+                "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae4d094493363ed91d8f88c_3935b.png",
+                "alt": "Shiftolic website marketplace page"
+              },
+              {
+                "fileId": "6ae4d094493363ed91d8f884",
+                "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae4d094493363ed91d8f884_72e06.png",
+                "alt": "Shiftolic website testimonial page"
+              },
+              {
+                "fileId": "6ae4d094493363ed91d8f889",
+                "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae4d094493363ed91d8f889_4dac9.png",
+                "alt": "Shiftolic website How it works page"
+              }
+            ],
+            "hero-screen-center": {
+              "fileId": "6aef89732367d3f74366ee0e",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef89732367d3f74366ee0e_shiftolic-home-full-v2.webp",
+              "alt": "Shiftolic home page"
+            },
+            "hero-screen-left": null,
+            "hero-screen-right": null,
+            "client-icon": null,
+            "case-before-image": null,
+            "case-after-image": {
+              "fileId": "6aba6bc07d6279b4b56177bb",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b56177bb_Frame%2047283.avif",
+              "alt": null
+            },
+            "logo-with-color": {
+              "fileId": "6ae256831bff15e0e23f7c97",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae256831bff15e0e23f7c97_6ae2551a9c53ce569a4a2d1f_logo-color-shiftolic-v2.svg",
+              "alt": "Shiftolic"
+            },
+            "card-background": {
+              "fileId": "6aea454412afa8d1c96b19f3",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea454412afa8d1c96b19f3_shiftolic-card-bg-v2.webp",
+              "alt": ""
+            },
+            "gallery-left": {
+              "fileId": "6aef99b092e91338865f4d2c",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef99b092e91338865f4d2c_case-gallery-shiftolic-1.webp",
+              "alt": "Shiftolic website on a laptop"
+            },
+            "tabs-background": null
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b5617989",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-08T23:13:01.593Z",
+          "lastUpdated": "2026-11-08T23:07:49.460Z",
+          "name": "Ballerine",
+          "slug": "ballerine",
+          "fieldData": {
+            "meta-title": "Scaling Ballerine's web presence | Case study | Nues",
+            "meta-description": "A 30+ page Webflow build for Ballerine, an AI-powered merchant risk platform. Reusable components, scalable CMS, and 16x increase in engagement time.",
+            "main-image": {
+              "fileId": "6aba6bc07d6279b4b5617741",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b5617741_Frame%2047505.avif",
+              "alt": null
+            },
+            "second-featuerd-image": {
+              "fileId": "6aef994303384eb0216272db",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272db_case-gallery-ballerine-2.webp",
+              "alt": "Ballerine website pages"
+            },
+            "third-featuerd-image": {
+              "fileId": "6aef994303384eb0216272d2",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272d2_case-gallery-ballerine-3.webp",
+              "alt": "Ballerine website on mobile"
+            },
+            "logo-with-hover": {
+              "fileId": "6aea36d35d29ef2052db5dd2",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea36d35d29ef2052db5dd2_logo-white-ballerine.svg",
+              "alt": "Ballerine"
+            },
+            "other-images-every-project-section": [
+              {
+                "fileId": "6ae3873d47e9d174c96a4901",
+                "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae3873d47e9d174c96a4901_de756.png",
+                "alt": "Ballerine website home page"
+              },
+              {
+                "fileId": "6ae3873d47e9d174c96a48fa",
+                "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae3873d47e9d174c96a48fa_80c17.png",
+                "alt": "Ballerine website Platform page"
+              },
+              {
+                "fileId": "6ae3873d47e9d174c96a4904",
+                "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae3873d47e9d174c96a4904_81e11.png",
+                "alt": "Ballerine website Industries page"
+              },
+              {
+                "fileId": "6ae3873e47e9d174c96a490a",
+                "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae3873e47e9d174c96a490a_da89d.png",
+                "alt": "Ballerine website Company page"
+              }
+            ],
+            "hero-screen-center": {
+              "fileId": "6ae8e94f7310179536732403",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae8e94f7310179536732403_ballerine-home-full.webp",
+              "alt": "Ballerine home page"
+            },
+            "hero-screen-left": {
+              "fileId": "6ad251fe572b1d64a33fa72b",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ad251fe572b1d64a33fa72b_cb62a.png",
+              "alt": "Ballerine website section about AI agents for merchant risk teams"
+            },
+            "hero-screen-right": {
+              "fileId": "6ad251ff572b1d64a33fa732",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ad251ff572b1d64a33fa732_4e6fc.png",
+              "alt": "Ballerine website section about managing risk decisions"
+            },
+            "client-icon": {
+              "fileId": "6ad251fe572b1d64a33fa726",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ad251fe572b1d64a33fa726_e0e6a.svg",
+              "alt": "Ballerine"
+            },
+            "case-before-image": {
+              "fileId": "6af090cdc9e95dfb700f5aa2",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af090cdc9e95dfb700f5aa2_ow-tabs-before-ballerine.webp",
+              "alt": "Old Ballerine website"
+            },
+            "case-after-image": {
+              "fileId": "6af090cdc9e95dfb700f5a93",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af090cdc9e95dfb700f5a93_ow-tabs-after-ballerine.webp",
+              "alt": "New Ballerine website by nues"
+            },
+            "logo-with-color": {
+              "fileId": "6ae256831bff15e0e23f7c9a",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae256831bff15e0e23f7c9a_6ae255603583e79c4fc3ee2a_logo-color-ballerine-v2.svg",
+              "alt": "Ballerine"
+            },
+            "card-background": {
+              "fileId": "6aea454412afa8d1c96b19ff",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea454412afa8d1c96b19ff_ballerine-card-bg-v2.webp",
+              "alt": ""
+            },
+            "gallery-left": {
+              "fileId": "6aef99b092e91338865f4d40",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef99b092e91338865f4d40_case-gallery-ballerine-1.webp",
+              "alt": "Ballerine website on a laptop"
+            },
+            "tabs-background": {
+              "fileId": "6af090cdc9e95dfb700f5a96",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af090cdc9e95dfb700f5a96_ow-tabs-bg-ballerine.webp",
+              "alt": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "collectionId": "6aba6bc07d6279b4b5617740",
+      "slug": "services-nues",
+      "displayName": "Services Nues",
+      "selectedFields": [
+        {
+          "slug": "card-shape",
+          "type": "Image"
+        },
+        {
+          "slug": "icon",
+          "type": "Image"
+        }
+      ],
+      "total": 4,
+      "items": [
+        {
+          "id": "6ae266b5a957101c1437d22c",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-08T22:37:03.736Z",
+          "lastUpdated": "2026-11-08T16:43:46.582Z",
+          "name": "SEO & AEO",
+          "slug": "seo-aeo",
+          "fieldData": {
+            "card-shape": {
+              "fileId": "6aee1550fafa4c0555d25037",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aee1550fafa4c0555d25037_case-service-seo-aeo.svg",
+              "alt": "SEO & AEO"
+            },
+            "icon": {
+              "fileId": "6af0a6c21c88469edb357e26",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af0a6c21c88469edb357e26_6af0a6866398f619d0a5154d_case-icon-seo-aeo.svg",
+              "alt": "SEO & AEO"
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b5617991",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-08T22:37:03.736Z",
+          "lastUpdated": "2026-11-08T16:43:46.580Z",
+          "name": "Growth",
+          "slug": "growth",
+          "fieldData": {
+            "card-shape": {
+              "fileId": "6aee1551fafa4c0555d2503e",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aee1551fafa4c0555d2503e_case-service-growth.svg",
+              "alt": "Growth"
+            },
+            "icon": {
+              "fileId": "6af0a6c21c88469edb357e20",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af0a6c21c88469edb357e20_6af0a687f11e821788a73322_case-icon-growth.svg",
+              "alt": "Growth"
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b5617990",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-08T22:37:03.736Z",
+          "lastUpdated": "2026-11-08T16:43:46.573Z",
+          "name": "Design & Development",
+          "slug": "design-development",
+          "fieldData": {
+            "card-shape": {
+              "fileId": "6aee1551fafa4c0555d25041",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aee1551fafa4c0555d25041_case-service-design-development.svg",
+              "alt": "Design & Development"
+            },
+            "icon": {
+              "fileId": "6af0a6c21c88469edb357e23",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af0a6c21c88469edb357e23_6af0a6866398f619d0a51525_case-icon-design-development.svg",
+              "alt": "Design & Development"
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b561798f",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-08T22:37:03.736Z",
+          "lastUpdated": "2026-11-08T16:43:46.519Z",
+          "name": "Webflow Development",
+          "slug": "webflow-development",
+          "fieldData": {
+            "card-shape": {
+              "fileId": "6aee1550fafa4c0555d2503b",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aee1550fafa4c0555d2503b_case-service-webflow-development.svg",
+              "alt": "Webflow Development"
+            },
+            "icon": {
+              "fileId": "6af0a6c21c88469edb357e1d",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af0a6c21c88469edb357e1d_6af0a6866398f619d0a51539_case-icon-webflow-development.svg",
+              "alt": "Webflow Development"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "collectionId": "6aba6bc07d6279b4b5617769",
+      "slug": "blog",
+      "displayName": "Blogs",
+      "selectedFields": [
+        {
+          "slug": "meta-title",
+          "type": "PlainText"
+        },
+        {
+          "slug": "meta-description",
+          "type": "PlainText"
+        },
+        {
+          "slug": "thumbnail-image",
+          "type": "Image"
+        }
+      ],
+      "total": 22,
+      "items": [
+        {
+          "id": "6aba6bc07d6279b4b56179a7",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-09-21T12:44:04.484Z",
+          "name": "Sanity vs Webflow CMS: which one your team actually needs",
+          "slug": "sanity-vs-webflow-cms-which-one-your-team-actually-needs",
+          "fieldData": {
+            "meta-title": "Sanity vs Webflow CMS: which one your team actually needs | Nues",
+            "meta-description": "Sanity vs Webflow CMS, compared honestly. Which one fits your team depends on one thing: where your content actually needs to go. Here's how to choose.",
+            "thumbnail-image": {
+              "fileId": "6aba6bc07d6279b4b5617984",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b5617984_Untitled%20(1).png",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179a6",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-09-22T10:10:57.310Z",
+          "name": "Source by Webflow: what it is and what it means for teams on Webflow",
+          "slug": "source-by-webflow-what-it-is-and-what-it-means-for-teams-on-webflow",
+          "fieldData": {
+            "meta-title": "Source by Webflow: what it is and what it means for teams on Webflow | Nues",
+            "meta-description": "What is Source by Webflow? A new platform where marketing teams and AI agents build on code together, still in preview. Here's what it means for you.",
+            "thumbnail-image": {
+              "fileId": "6aba6bc07d6279b4b5617987",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b5617987_Untitled%20(3).png",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179a5",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": true,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-10-12T17:09:26.581Z",
+          "name": "B2B SaaS SEO in 2026: a strategy guide for marketing leaders",
+          "slug": "b2b-saas-seo-in-2026-a-strategy-guide-for-marketing-leaders",
+          "fieldData": {
+            "meta-title": "B2B SaaS SEO in 2026: a strategy guide | Nues",
+            "meta-description": "A B2B SaaS SEO strategy built for pipeline, not vanity traffic: target buyer intent, build clusters, win AI search, and measure revenue. ",
+            "thumbnail-image": {
+              "fileId": "6aba6bc07d6279b4b5617953",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b5617953_b2b.webp",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179a4",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-09-21T12:43:24.296Z",
+          "name": "AEO tools in 2026: what you actually need to optimize for AI search",
+          "slug": "aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search",
+          "fieldData": {
+            "meta-title": "AEO tools in 2026: what you actually need | Nues",
+            "meta-description": "AEO needs different tools than SEO, but fewer than you think. What each category does, and where to start without overspending. ",
+            "thumbnail-image": {
+              "fileId": "6aba6bc07d6279b4b5617952",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b5617952_fghjk.webp",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179a3",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-09-08T11:12:38.941Z",
+          "name": "AEO vs SEO in 2026: what’s the difference and why it matters",
+          "slug": "aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters",
+          "fieldData": {
+            "meta-title": "AEO vs SEO in 2026: what's the difference? | Nues",
+            "meta-description": "SEO gets you found, AEO gets you quoted. What each one is, how they differ, why you need both, and how to do it on Webflow. ",
+            "thumbnail-image": {
+              "fileId": "6aba6bc07d6279b4b5617951",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b5617951_aeo.webp",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179a2",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-09-08T11:12:38.948Z",
+          "name": "How to improve your website conversion rate in 2026",
+          "slug": "how-to-improve-your-website-conversion-rate-in-2026",
+          "fieldData": {
+            "meta-title": "How to improve your website conversion rate in 2026 | Nues",
+            "meta-description": "Most sites have a conversion problem, not a traffic problem. How to improve website conversion through speed, clarity, forms, trust, and mobile, before testing.",
+            "thumbnail-image": {
+              "fileId": "6aba6bc07d6279b4b561794f",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b561794f_gfds.webp",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179a1",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-08-11T08:49:42.542Z",
+          "name": "SaaS content marketing in 2026: a strategy guide",
+          "slug": "saas-content-marketing-in-2026-a-strategy-guide",
+          "fieldData": {
+            "meta-title": "SaaS content marketing in 2026: a strategy guide | Nues",
+            "meta-description": "A SaaS content marketing strategy built for revenue, not output: start with your ICP, map content to the funnel, build clusters, and measure pipeline.",
+            "thumbnail-image": {
+              "fileId": "6aba6bc07d6279b4b561794e",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b561794e_lkfk.webp",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179a0",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-08-11T08:49:43.029Z",
+          "name": "Webflow forms in 2026: how to turn them into a lead engine",
+          "slug": "webflow-forms-in-2026-how-to-turn-them-into-a-lead-engine",
+          "fieldData": {
+            "meta-title": "Webflow forms in 2026: turn them into a lead engine | Nues",
+            "meta-description": "What Webflow's native forms do well, where they hit limits, when to go third-party, and how to design forms that convert and reach your CRM. ",
+            "thumbnail-image": {
+              "fileId": "6aba6bc07d6279b4b561794b",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b561794b_Untitled.webp",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b561799f",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-08-11T08:49:42.749Z",
+          "name": "Webflow for B2B lead generation: how to turn your site into a pipeline engine",
+          "slug": "webflow-for-b2b-lead-generation-how-to-turn-your-site-into-a-pipeline-engine",
+          "fieldData": {
+            "meta-title": "Webflow for lead generation: build a pipeline | Nues",
+            "meta-description": "How to use Webflow for lead generation: fast landing pages, gated content, forms that convert, and CRM integration. ",
+            "thumbnail-image": {
+              "fileId": "6aba6bc07d6279b4b5617947",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b5617947_image%203.webp",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b561799e",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-09-08T11:12:38.943Z",
+          "name": "How to delete a CMS collection page in Webflow (without breaking your site)",
+          "slug": "how-to-delete-a-cms-collection-page-in-webflow-without-breaking-your-site",
+          "fieldData": {
+            "meta-title": "How to delete a CMS collection page in Webflow | Nues",
+            "meta-description": "How to delete a Webflow CMS collection page without breaking your site or SEO: back up, remove connections, set redirects, and when to unpublish instead.",
+            "thumbnail-image": {
+              "fileId": "6aba6bc07d6279b4b5617946",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b5617946_cms.webp",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b561799d",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-09-21T12:43:24.293Z",
+          "name": "Is Webflow good for ecommerce? An honest answer for 2026",
+          "slug": "is-webflow-good-for-ecommerce-an-honest-answer-for-2026",
+          "fieldData": {
+            "meta-title": "Is Webflow good for ecommerce? An honest 2026 answer | Nues",
+            "meta-description": "Is Webflow good for ecommerce? Yes, for the right kind of store. The honest limits, who it fits, who should look elsewhere, and the hybrid option.",
+            "thumbnail-image": {
+              "fileId": "6aba6bc07d6279b4b561795e",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b561795e_ecom.webp",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b561799c",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-08-11T08:49:42.747Z",
+          "name": "The website redesign process: a step-by-step guide",
+          "slug": "the-website-redesign-process-a-step-by-step-guide",
+          "fieldData": {
+            "meta-title": "Website redesign process: a step-by-step guide | Nues",
+            "meta-description": "A clear, step-by-step website redesign process: how to plan, structure, and run a redesign without losing SEO, time, or your mind.",
+            "thumbnail-image": {
+              "fileId": "6aba6bc07d6279b4b561795c",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b561795c_redesign.webp",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b561799b",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-08-11T08:49:42.564Z",
+          "name": "Webflow templates: how to choose one (and when to go custom)",
+          "slug": "webflow-templates-how-to-choose-one-and-when-to-go-custom",
+          "fieldData": {
+            "meta-title": "Webflow templates: how to choose one | Nues",
+            "meta-description": "How to choose a Webflow template that fits: what to check in the CMS, design, and structure, and when to go custom instead. ",
+            "thumbnail-image": {
+              "fileId": "6aba6bc07d6279b4b5617945",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b5617945_1234.webp",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b561799a",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-09-08T11:12:38.954Z",
+          "name": "Webflow vs Wix in 2026: which one is right for your site",
+          "slug": "webflow-vs-wix-in-2026-which-one-is-right-for-your-site",
+          "fieldData": {
+            "meta-title": "Webflow vs Wix in 2026: which is right for you | Nues",
+            "meta-description": "An honest 2026 comparison of Webflow and Wix, including Wix Studio: where each wins, and how to choose for your site. ",
+            "thumbnail-image": {
+              "fileId": "6aba6bc07d6279b4b5617944",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b5617944_4321.webp",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b5617999",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-09-08T11:12:38.956Z",
+          "name": "Webflow vs Squarespace in 2026: when each one makes sense",
+          "slug": "webflow-vs-squarespace-in-2026-when-each-one-makes-sense",
+          "fieldData": {
+            "meta-title": "Webflow vs Squarespace in 2026: when each makes sense | Nues",
+            "meta-description": "An honest 2026 comparison of Webflow and Squarespace: where each wins, and how to choose based on where your business is. ",
+            "thumbnail-image": {
+              "fileId": "6aba6bc07d6279b4b5617935",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b5617935_321.webp",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b5617998",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-09-08T11:12:38.952Z",
+          "name": "Webflow vs Framer in 2026: which one is right for your site",
+          "slug": "webflow-vs-framer-in-2026-which-one-is-right-for-your-site",
+          "fieldData": {
+            "meta-title": "Webflow vs Framer in 2026: which is right? | Nues",
+            "meta-description": "Webflow vs Framer in 2026: Framer for speed and design, Webflow for content and e-commerce. An honest guide to choosing.",
+            "thumbnail-image": {
+              "fileId": "6aba6bc07d6279b4b561796b",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b561796b_framer.webp",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b5617997",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-08-11T08:49:42.534Z",
+          "name": "Best 15 Webflow apps for marketing teams in 2026",
+          "slug": "best-15-webflow-apps-for-marketing-teams-in-2026",
+          "fieldData": {
+            "meta-title": "Best 15 Webflow apps for marketing teams (2026) | Nues",
+            "meta-description": "The 15 best Webflow apps marketing teams actually use in 2026, grouped by job, with a starter stack by team size. No fluff. ",
+            "thumbnail-image": {
+              "fileId": "6aba6bc07d6279b4b56178b8",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b56178b8_best-15-webflow-3x.webp",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b5617996",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-08-11T09:44:58.264Z",
+          "name": "AEO for marketing teams: what you can do without a developer",
+          "slug": "aeo-for-marketing-teams-what-you-can-do-without-a-developer",
+          "fieldData": {
+            "meta-title": "AEO for marketing teams, no developer needed | Nues",
+            "meta-description": "How marketing teams can do answer engine optimization in Webflow without a developer. A practical AEO guide to getting cited by AI. ",
+            "thumbnail-image": {
+              "fileId": "6aba6bc07d6279b4b5617950",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b5617950_asdftyui.webp",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b5617995",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-09-08T11:12:38.946Z",
+          "name": "Webflow vs WordPress for B2B SaaS in 2026: what’s changed and when each one wins",
+          "slug": "webflow-vs-wordpress-for-b2b-saas-in-2026-whats-changed-and-when-each-one-wins",
+          "fieldData": {
+            "meta-title": "Webflow vs WordPress for B2B SaaS (2026) | Nues",
+            "meta-description": "An honest 2026 comparison of Webflow and WordPress for B2B SaaS: where each wins, what changed, and how to decide. No hype. ",
+            "thumbnail-image": {
+              "fileId": "6aba6bc07d6279b4b5617922",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b5617922_Untitled.webp",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b5617994",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-08-11T08:49:42.673Z",
+          "name": "The signs your current Webflow site is holding your business back",
+          "slug": "the-signs-your-current-webflow-site-is-holding-your-business-back",
+          "fieldData": {
+            "meta-title": "When to redesign your website: 6 signs to watch | Nues",
+            "meta-description": "Six signs it's time to redesign your website, and what each one is costing your marketing team. A practical guide for B2B leaders.",
+            "thumbnail-image": {
+              "fileId": "6aba6bc07d6279b4b56178a1",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b56178a1_the-signs-your-webflow.webp",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b5617993",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-09-08T11:13:26.455Z",
+          "name": "Three Webflow features from 2026 worth paying attention to (and one to skip)",
+          "slug": "three-webflow-features-from-2026-worth-paying-attention-to-and-one-to-skip",
+          "fieldData": {
+            "meta-title": "3 Webflow features worth attention in 2026 | Nues",
+            "meta-description": "A practical look at three Webflow features from 2026 worth using, and one to skip. Written for marketing teams, from real builds. ",
+            "thumbnail-image": {
+              "fileId": "6aba6bc07d6279b4b56178a0",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b56178a0_top-webflow-features-2026-3x.webp",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b5617992",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": true,
+          "isArchived": false,
+          "lastPublished": null,
+          "lastUpdated": "2026-09-22T10:10:31.354Z",
+          "name": "From Guests to Sponsors: Notes from Flow Conf 2026",
+          "slug": "from-guests-to-sponsors-notes-from-flow-conf-2026",
+          "fieldData": {
+            "meta-title": "Notes from Flow Conf 2026 | Nues",
+            "meta-description": "What we took away from Flow Conf 2026: where Webflow, agency growth, and AI-driven search are heading. Notes from the Nues team. ",
+            "thumbnail-image": {
+              "fileId": "6aba6bc07d6279b4b5617954",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b5617954_conf.png",
+              "alt": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "collectionId": "6aba6bc07d6279b4b561778a",
+      "slug": "team",
+      "displayName": "Teams",
+      "selectedFields": [
+        {
+          "slug": "image",
+          "type": "Image"
+        },
+        {
+          "slug": "round-photo",
+          "type": "Image"
+        }
+      ],
+      "total": 7,
+      "items": [
+        {
+          "id": "6aee1564539ee1fdc48b9bea",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-08T23:15:41.752Z",
+          "lastUpdated": "2026-11-08T23:15:33.572Z",
+          "name": "Mihajlo Nikolic",
+          "slug": "mihajlo-nikolic",
+          "fieldData": {
+            "image": {
+              "fileId": "6aef93dbaeef0714dbd05552",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef93dbaeef0714dbd05552_team-mihajlo-nikolic.png",
+              "alt": "Mihajlo Nikolic"
+            },
+            "round-photo": {
+              "fileId": "6af0a6c4dcab934e2bb62b8f",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af0a6c4dcab934e2bb62b8f_6ad68876ecb578a22924ac27_about-team-mihajlo-nikolic.webp",
+              "alt": "Mihajlo Nikolic"
+            }
+          }
+        },
+        {
+          "id": "6aee1564539ee1fdc48b9be8",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-08T23:15:41.752Z",
+          "lastUpdated": "2026-11-08T23:15:33.572Z",
+          "name": "Darko Milosevic",
+          "slug": "darko-milosevic",
+          "fieldData": {
+            "image": {
+              "fileId": "6aef93dcaeef0714dbd055ba",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef93dcaeef0714dbd055ba_team-darko-milosevic.png",
+              "alt": "Darko Milosevic"
+            },
+            "round-photo": {
+              "fileId": "6af0a6c4dcab934e2bb62b8c",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af0a6c4dcab934e2bb62b8c_6ad68875d747f64f4cb98d32_about-team-darko-milosevic.webp",
+              "alt": "Darko Milosevic"
+            }
+          }
+        },
+        {
+          "id": "6aee1564539ee1fdc48b9be6",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-08T22:57:49.637Z",
+          "lastUpdated": "2026-11-08T22:46:15.270Z",
+          "name": "Pavle Stikovic",
+          "slug": "pavle-stikovic",
+          "fieldData": {
+            "image": {
+              "fileId": "6aef93dbaeef0714dbd0558e",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef93dbaeef0714dbd0558e_team-pavle-stikovic.png",
+              "alt": "Pavle Stikovic"
+            },
+            "round-photo": {
+              "fileId": "6af0a6c4dcab934e2bb62b86",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af0a6c4dcab934e2bb62b86_6ad68876d705b3ef803e9dbf_about-team-pavle-stikovic.webp",
+              "alt": "Pavle Stikovic"
+            }
+          }
+        },
+        {
+          "id": "6aee1564539ee1fdc48b9be4",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-08T22:57:49.637Z",
+          "lastUpdated": "2026-11-08T22:46:15.270Z",
+          "name": "Luka Radomirovic",
+          "slug": "luka-radomirovic",
+          "fieldData": {
+            "image": {
+              "fileId": "6aef93dcaeef0714dbd055b6",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef93dcaeef0714dbd055b6_team-luka-radomirovic.png",
+              "alt": "Luka Radomirovic"
+            },
+            "round-photo": {
+              "fileId": "6af0a6c4dcab934e2bb62b80",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af0a6c4dcab934e2bb62b80_6ad68876d705b3ef803e9dd5_about-team-luka-radomirovic.webp",
+              "alt": "Luka Radomirovic"
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179aa",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-08T23:15:41.752Z",
+          "lastUpdated": "2026-11-08T23:15:33.572Z",
+          "name": "Aleksandar Dumic",
+          "slug": "aleksandar-dumic",
+          "fieldData": {
+            "image": {
+              "fileId": "6ae37f3005d1e4dfe3693320",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae37f3005d1e4dfe3693320_aleksandar.png",
+              "alt": null
+            },
+            "round-photo": {
+              "fileId": "6af0a6c4dcab934e2bb62b92",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af0a6c4dcab934e2bb62b92_6ad68875cf6b48152fd28ad6_about-team-aleksandar-dumic.webp",
+              "alt": "Aleksandar Dumic"
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179a9",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-08T23:15:41.752Z",
+          "lastUpdated": "2026-11-08T23:15:33.572Z",
+          "name": "Danilo Stikovic",
+          "slug": "danilo-stikovic",
+          "fieldData": {
+            "image": {
+              "fileId": "6ae37f16fa5948f31afad322",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae37f16fa5948f31afad322_danilo.png",
+              "alt": null
+            },
+            "round-photo": {
+              "fileId": "6af0a6c4dcab934e2bb62b89",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af0a6c4dcab934e2bb62b89_6ad68875be3d851bd7a0bb90_about-team-danilo-stikovic.webp",
+              "alt": "Danilo Stikovic"
+            }
+          }
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179a8",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-08T22:57:49.637Z",
+          "lastUpdated": "2026-11-08T22:46:15.270Z",
+          "name": "Daris Henjas",
+          "slug": "daris-henjas",
+          "fieldData": {
+            "image": {
+              "fileId": "6ae37f8d9ed1d7c1b32a87da",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae37f8d9ed1d7c1b32a87da_daris.png",
+              "alt": null
+            },
+            "round-photo": {
+              "fileId": "6af0a6c4dcab934e2bb62b83",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af0a6c4dcab934e2bb62b83_6ad688767506850986dd8714_about-team-daris-henjas.webp",
+              "alt": "Daris Henjas"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "collectionId": "6aba6bc07d6279b4b56177ba",
+      "slug": "insights-categories",
+      "displayName": "Insights categories",
+      "selectedFields": [],
+      "total": 4,
+      "items": [
+        {
+          "id": "6aba6bc07d6279b4b56179ae",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-06-27T18:04:41.998Z",
+          "name": "SEO & AEO",
+          "slug": "seo-aeo",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179ad",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-06-27T18:04:37.186Z",
+          "name": "Marketing",
+          "slug": "marketing",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179ac",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-06-27T18:04:23.539Z",
+          "name": "All",
+          "slug": "all",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179ab",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-06-27T18:04:29.881Z",
+          "name": "Webflow",
+          "slug": "webflow",
+          "fieldData": {}
+        }
+      ]
+    },
+    {
+      "collectionId": "6aba6bc07d6279b4b56177d6",
+      "slug": "integrations",
+      "displayName": "Integrations",
+      "selectedFields": [
+        {
+          "slug": "meta-title",
+          "type": "PlainText"
+        },
+        {
+          "slug": "meta-description",
+          "type": "PlainText"
+        },
+        {
+          "slug": "thumbnail-image",
+          "type": "Image"
+        },
+        {
+          "slug": "logo-2",
+          "type": "Image"
+        }
+      ],
+      "total": 1,
+      "items": [
+        {
+          "id": "6aba6bc07d6279b4b56179af",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-08T16:28:15.237Z",
+          "lastUpdated": "2026-11-08T15:50:19.596Z",
+          "name": "Webflow Salesforce Integration",
+          "slug": "webflow-salesforce-integration",
+          "fieldData": {
+            "meta-title": null,
+            "meta-description": null,
+            "thumbnail-image": {
+              "fileId": "6aba6bc07d6279b4b56178ce",
+              "url": "https://cdn.prod.website-files.com/6a0bc2572a345c5cad437d47/6a5a21b03b68ba68fd6812bc_Frame%2047456.png",
+              "alt": null
+            },
+            "logo-2": null
+          }
+        }
+      ]
+    },
+    {
+      "collectionId": "6aba6bc07d6279b4b56177ee",
+      "slug": "integrations-category",
+      "displayName": "Integrations categories",
+      "selectedFields": [],
+      "total": 5,
+      "items": [
+        {
+          "id": "6aba6bc07d6279b4b56179b4",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-08T16:28:15.237Z",
+          "lastUpdated": "2026-11-08T15:50:19.354Z",
+          "name": "Form integrations",
+          "slug": "form-integrations",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179b3",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-08T16:28:15.237Z",
+          "lastUpdated": "2026-11-08T15:50:19.353Z",
+          "name": "E-commerce integrations",
+          "slug": "e-commerce-integrations",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179b2",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-08T16:28:15.237Z",
+          "lastUpdated": "2026-11-08T15:50:19.352Z",
+          "name": "Automation integrations",
+          "slug": "automation-integrations",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179b1",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-08T16:28:15.237Z",
+          "lastUpdated": "2026-11-08T15:50:19.351Z",
+          "name": "CRM integrations",
+          "slug": "crm-integrations",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179b0",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-08T16:28:15.237Z",
+          "lastUpdated": "2026-11-08T15:50:19.349Z",
+          "name": "SaaS and product integrations",
+          "slug": "saas-and-product-integrations",
+          "fieldData": {}
+        }
+      ]
+    },
+    {
+      "collectionId": "6aba6bc07d6279b4b5617810",
+      "slug": "faq",
+      "displayName": "Faqs",
+      "selectedFields": [],
+      "total": 62,
+      "items": [
+        {
+          "id": "6aba6bc07d6279b4b56179f2",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-09-21T12:39:58.015Z",
+          "name": "Is Sanity or Webflow cheaper?",
+          "slug": "is-sanity-or-webflow-cheaper",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179f1",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-09-21T12:39:58.014Z",
+          "name": "Is Webflow CMS good enough for a large website?",
+          "slug": "is-webflow-cms-good-enough-for-a-large-website",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179f0",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-09-21T12:39:58.013Z",
+          "name": "Can marketing teams use Sanity without a developer?",
+          "slug": "can-marketing-teams-use-sanity-without-a-developer",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179ef",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-09-21T12:39:58.012Z",
+          "name": "Is Sanity better than Webflow CMS?",
+          "slug": "is-sanity-better-than-webflow-cms",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179ee",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-09-10T15:15:31.940Z",
+          "name": "Why does Source work on code instead of a visual editor?",
+          "slug": "why-does-source-work-on-code-instead-of-a-visual-editor",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179ed",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-09-10T15:15:31.939Z",
+          "name": "Does Source replace the Webflow I already use?",
+          "slug": "does-source-replace-the-webflow-i-already-use",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179ec",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-09-10T15:15:31.938Z",
+          "name": "When will Source be publicly available?",
+          "slug": "when-will-source-be-publicly-available",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179eb",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-09-10T15:15:31.937Z",
+          "name": "What is Source by Webflow?",
+          "slug": "what-is-source-by-webflow",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179ea",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.001Z",
+          "name": "Do I need an agency for B2B SaaS SEO?",
+          "slug": "do-i-need-an-agency-for-b2b-saas-seo",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179e9",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.054Z",
+          "name": "How do you measure SEO for B2B SaaS?",
+          "slug": "how-do-you-measure-seo-for-b2b-saas",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179e8",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.098Z",
+          "name": "What content should a B2B SaaS company prioritize for SEO?",
+          "slug": "what-content-should-a-b2b-saas-company-prioritize-for-seo",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179e7",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.039Z",
+          "name": "What’s the difference between B2B SaaS SEO and regular SEO?",
+          "slug": "whats-the-difference-between-b2b-saas-seo-and-regular-seo",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179e6",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.012Z",
+          "name": "How long does B2B SaaS SEO take to work?",
+          "slug": "how-long-does-b2b-saas-seo-take-to-work",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179e5",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:24.935Z",
+          "name": "What’s the most important AEO tool?",
+          "slug": "whats-the-most-important-aeo-tool",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179e4",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:24.930Z",
+          "name": "How much do AI visibility tracking tools cost?",
+          "slug": "how-much-do-ai-visibility-tracking-tools-cost",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179e3",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:24.921Z",
+          "name": "What are AEO tools, exactly?",
+          "slug": "what-are-aeo-tools-exactly",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179e2",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:24.928Z",
+          "name": "Do you need paid tools for AEO?",
+          "slug": "do-you-need-paid-tools-for-aeo",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179e1",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.117Z",
+          "name": "Is SEO dead because of AI?",
+          "slug": "is-seo-dead-because-of-ai",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179e0",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:24.991Z",
+          "name": "How do you measure AEO?",
+          "slug": "how-do-you-measure-aeo",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179df",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.093Z",
+          "name": "Do I need to do AEO if I already do SEO?",
+          "slug": "do-i-need-to-do-aeo-if-i-already-do-seo",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179de",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.036Z",
+          "name": "Does AEO replace SEO?",
+          "slug": "does-aeo-replace-seo",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179dd",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.107Z",
+          "name": "Do I need a paid AEO tool to get started?",
+          "slug": "do-i-need-a-paid-aeo-tool-to-get-started",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179dc",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:24.909Z",
+          "name": "How long does AEO take to show results?",
+          "slug": "how-long-does-aeo-take-to-show-results",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179db",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.074Z",
+          "name": "What part of AEO actually needs a developer?",
+          "slug": "what-part-of-aeo-actually-needs-a-developer",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179da",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.072Z",
+          "name": "Can a marketing team do AEO without a developer?",
+          "slug": "can-a-marketing-team-do-aeo-without-a-developer",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179d9",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.067Z",
+          "name": "Is conversion about design or copy?",
+          "slug": "is-conversion-about-design-or-copy",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179d8",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.043Z",
+          "name": "How long does it take to improve conversion rates?",
+          "slug": "how-long-does-it-take-to-improve-conversion-rates",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179d7",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:24.987Z",
+          "name": "Do I need A/B testing to improve conversions?",
+          "slug": "do-i-need-a-b-testing-to-improve-conversions",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179d6",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:24.937Z",
+          "name": "How do I calculate my conversion rate?",
+          "slug": "how-do-i-calculate-my-conversion-rate",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179d5",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.077Z",
+          "name": "What is a good website conversion rate?",
+          "slug": "what-is-a-good-website-conversion-rate",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179d4",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:24.939Z",
+          "name": "Are Webflow forms GDPR compliant?",
+          "slug": "are-webflow-forms-gdpr-compliant",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179d3",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:24.973Z",
+          "name": "How many form submissions does Webflow allow?",
+          "slug": "how-many-form-submissions-does-webflow-allow",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179d2",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.065Z",
+          "name": "How do I stop spam on Webflow forms?",
+          "slug": "how-do-i-stop-spam-on-webflow-forms",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179d1",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.070Z",
+          "name": "Can Webflow forms connect to HubSpot?",
+          "slug": "can-webflow-forms-connect-to-hubspot",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179d0",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:24.914Z",
+          "name": "Do Webflow forms support conditional logic?",
+          "slug": "do-webflow-forms-support-conditional-logic",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179cf",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.049Z",
+          "name": "Should I delete or just unpublish my collection page?",
+          "slug": "should-i-delete-or-just-unpublish-my-collection-page",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179ce",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:24.916Z",
+          "name": "How do I delete a collection page without hurting my SEO?",
+          "slug": "how-do-i-delete-a-collection-page-without-hurting-my-seo",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179cd",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:24.932Z",
+          "name": "Why won’t Webflow let me delete my collection?",
+          "slug": "why-wont-webflow-let-me-delete-my-collection",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179cc",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:24.919Z",
+          "name": "Can you undo deleting a CMS collection in Webflow?",
+          "slug": "can-you-undo-deleting-a-cms-collection-in-webflow",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179cb",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:24.925Z",
+          "name": "Does deleting a CMS collection also delete its collection page?",
+          "slug": "does-deleting-a-cms-collection-also-delete-its-collection-page",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179ca",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.019Z",
+          "name": "Can you use Webflow just for the storefront design and Shopify for checkout?",
+          "slug": "can-you-use-webflow-just-for-the-storefront-design-and-shopify-for-checkout",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179c9",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.034Z",
+          "name": "Does Webflow support subscriptions and recurring payments?",
+          "slug": "does-webflow-support-subscriptions-and-recurring-payments",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179c8",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:24.984Z",
+          "name": "Is Webflow or Shopify better for ecommerce?",
+          "slug": "is-webflow-or-shopify-better-for-ecommerce",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179c7",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:24.969Z",
+          "name": "Does Webflow charge transaction fees on ecommerce?",
+          "slug": "does-webflow-charge-transaction-fees-on-ecommerce",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179c6",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.007Z",
+          "name": "How many products can Webflow handle?",
+          "slug": "how-many-products-can-webflow-handle",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179c5",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.051Z",
+          "name": "Is Webflow or Wix better for SEO?",
+          "slug": "is-webflow-or-wix-better-for-seo",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179c4",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:24.912Z",
+          "name": "Is Wix Studio good enough to replace Webflow?",
+          "slug": "is-wix-studio-good-enough-to-replace-webflow",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179c3",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:24.994Z",
+          "name": "Can you migrate from Wix to Webflow?",
+          "slug": "can-you-migrate-from-wix-to-webflow",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179c2",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.142Z",
+          "name": "Which is easier for beginners, Webflow or Wix?",
+          "slug": "which-is-easier-for-beginners-webflow-or-wix",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179c1",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.010Z",
+          "name": "Is Webflow worth it over Squarespace?",
+          "slug": "is-webflow-worth-it-over-squarespace",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179c0",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.004Z",
+          "name": "Is Squarespace or Webflow better for a small online store?",
+          "slug": "is-squarespace-or-webflow-better-for-a-small-online-store",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179bf",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.041Z",
+          "name": "Can you switch from Squarespace to Webflow?",
+          "slug": "can-you-switch-from-squarespace-to-webflow",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179be",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.100Z",
+          "name": "Which is easier for beginners, Webflow or Squarespace?",
+          "slug": "which-is-easier-for-beginners-webflow-or-squarespace",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179bd",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.096Z",
+          "name": "Does Framer work for a SaaS marketing site?",
+          "slug": "does-framer-work-for-a-saas-marketing-site",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179bc",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.103Z",
+          "name": "Is Framer or Webflow better for a portfolio?",
+          "slug": "is-framer-or-webflow-better-for-a-portfolio",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179bb",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:24.907Z",
+          "name": "Which is better for beginners, Webflow or Framer?",
+          "slug": "which-is-better-for-beginners-webflow-or-framer",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179ba",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.046Z",
+          "name": "Can you migrate from Framer to Webflow?",
+          "slug": "can-you-migrate-from-framer-to-webflow",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179b9",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:24.977Z",
+          "name": "Which is easier for beginners, Webflow or WordPress?",
+          "slug": "which-is-easier-for-beginners-webflow-or-wordpress",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179b8",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:24.997Z",
+          "name": "Do you need a developer to run a Webflow site?",
+          "slug": "do-you-need-a-developer-to-run-a-webflow-site",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179b7",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:25.105Z",
+          "name": "Is Webflow or WordPress cheaper for B2B SaaS?",
+          "slug": "is-webflow-or-wordpress-cheaper-for-b2b-saas",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179b6",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:24.980Z",
+          "name": "How long does a WordPress to Webflow migration take?",
+          "slug": "how-long-does-a-wordpress-to-webflow-migration-take",
+          "fieldData": {}
+        },
+        {
+          "id": "6aba6bc07d6279b4b56179b5",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-09-28T15:43:09.036Z",
+          "lastUpdated": "2026-07-27T10:00:24.923Z",
+          "name": "Can you migrate from WordPress to Webflow without losing SEO?",
+          "slug": "can-you-migrate-from-wordpress-to-webflow-without-losing-seo",
+          "fieldData": {}
+        }
+      ]
+    },
+    {
+      "collectionId": "6ada1b11e40ddb96b7a870e0",
+      "slug": "jobs",
+      "displayName": "Jobs",
+      "selectedFields": [],
+      "total": 4,
+      "items": [
+        {
+          "id": "6ada1b3ed7a15edf9d16e2ca",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-10-22T14:25:34.721Z",
+          "lastUpdated": "2026-10-22T14:24:31.929Z",
+          "name": "Junior Webflow Developer",
+          "slug": "junior-webflow-developer",
+          "fieldData": {}
+        },
+        {
+          "id": "6ada1b3ed7a15edf9d16e2c8",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-10-22T14:25:34.721Z",
+          "lastUpdated": "2026-10-22T14:24:31.929Z",
+          "name": "SEO & AEO Specialist",
+          "slug": "seo-aeo-specialist",
+          "fieldData": {}
+        },
+        {
+          "id": "6ada1b3ed7a15edf9d16e2c6",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-10-22T14:25:34.721Z",
+          "lastUpdated": "2026-10-22T14:24:31.929Z",
+          "name": "Product Designer",
+          "slug": "product-designer",
+          "fieldData": {}
+        },
+        {
+          "id": "6ada1b2ae40ddb96b7a8778f",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-10-22T14:25:34.721Z",
+          "lastUpdated": "2026-10-22T14:24:31.928Z",
+          "name": "Senior Webflow Developer",
+          "slug": "senior-webflow-developer",
+          "fieldData": {}
+        }
+      ]
+    },
+    {
+      "collectionId": "6adbd9ede7d520aeb28ac93f",
+      "slug": "hero-cards",
+      "displayName": "Hero Cards",
+      "selectedFields": [
+        {
+          "slug": "logo",
+          "type": "Image"
+        },
+        {
+          "slug": "screenshot",
+          "type": "Image"
+        }
+      ],
+      "total": 9,
+      "items": [
+        {
+          "id": "6adbda3f4b1874d217c69bf7",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-05T17:13:58.238Z",
+          "lastUpdated": "2026-11-05T17:12:56.656Z",
+          "name": "Biotech Innovations",
+          "slug": "biotech-innovations",
+          "fieldData": {
+            "logo": {
+              "fileId": "6adf652a350b40724a638a6c",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6adf652a350b40724a638a6c_6adf64d5ddf03436e2056c9b_hero-card-biotech-innovations-logo.svg",
+              "alt": "Biotech Innovations"
+            },
+            "screenshot": {
+              "fileId": "6ae8e704d213c7c80c455b73",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae8e704d213c7c80c455b73_9.png",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6adbda3f4b1874d217c69bf5",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-05T17:13:58.238Z",
+          "lastUpdated": "2026-11-05T17:12:34.861Z",
+          "name": "LaSalle Agri",
+          "slug": "lasalle-agri",
+          "fieldData": {
+            "logo": {
+              "fileId": "6adf652a350b40724a638a72",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6adf652a350b40724a638a72_6adf64d5da195ad1b9fe56ec_hero-card-lasalle-agri-logo.svg",
+              "alt": "LaSalle Agri"
+            },
+            "screenshot": {
+              "fileId": "6ae8e7118bc21aa90ea1a5f5",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae8e7118bc21aa90ea1a5f5_8.png",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6adbda3f4b1874d217c69bf3",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-02T19:49:53.929Z",
+          "lastUpdated": "2026-11-02T19:41:25.474Z",
+          "name": "Ballerine",
+          "slug": "ballerine",
+          "fieldData": {
+            "logo": {
+              "fileId": "6adf652a350b40724a638a63",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6adf652a350b40724a638a63_6adf64d0c8dffb5e8f9218ef_hero-card-ballerine-logo.svg",
+              "alt": "Ballerine"
+            },
+            "screenshot": {
+              "fileId": "6ae8e71d6dc53ff58c3f14e6",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae8e71d6dc53ff58c3f14e6_5.png",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6adbda3f4b1874d217c69bf1",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-02T19:49:53.929Z",
+          "lastUpdated": "2026-11-02T19:41:25.469Z",
+          "name": "Sustain Commercial Solar",
+          "slug": "sustain-commercial-solar",
+          "fieldData": {
+            "logo": {
+              "fileId": "6adf652a350b40724a638a69",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6adf652a350b40724a638a69_6adf64d3018258e879bff8d3_hero-card-sustain-commercial-solar-logo.svg",
+              "alt": "Sustain Commercial Solar"
+            },
+            "screenshot": {
+              "fileId": "6ae8e728c71ace775b95cb3b",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae8e728c71ace775b95cb3b_7.png",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6adbda3f4b1874d217c69bef",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-02T19:49:53.929Z",
+          "lastUpdated": "2026-11-02T19:41:25.497Z",
+          "name": "Shiftolic",
+          "slug": "shiftolic",
+          "fieldData": {
+            "logo": {
+              "fileId": "6adf6529350b40724a638a37",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6adf6529350b40724a638a37_6adf64d0c8dffb5e8f92192c_hero-card-shiftolic-logo.svg",
+              "alt": "Shiftolic"
+            },
+            "screenshot": {
+              "fileId": "6ae8e7302fc055ee1d93ccd4",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae8e7302fc055ee1d93ccd4_1.png",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6adbda3f4b1874d217c69bed",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-02T19:49:53.929Z",
+          "lastUpdated": "2026-11-02T19:41:25.480Z",
+          "name": "Veyor Digital",
+          "slug": "veyor-digital",
+          "fieldData": {
+            "logo": {
+              "fileId": "6adf652a350b40724a638a4a",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6adf652a350b40724a638a4a_6adf64d206b6b8e2da1acf5e_hero-card-veyor-digital-logo.svg",
+              "alt": "Veyor"
+            },
+            "screenshot": {
+              "fileId": "6ae8e7396dc53ff58c3f1b8c",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae8e7396dc53ff58c3f1b8c_4.png",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6adbda3f4b1874d217c69beb",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-08T16:28:15.237Z",
+          "lastUpdated": "2026-11-08T16:08:27.976Z",
+          "name": "Harper",
+          "slug": "harper",
+          "fieldData": {
+            "logo": {
+              "fileId": "6adf652a350b40724a638a66",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6adf652a350b40724a638a66_6adf64d39f953622df122c5b_hero-card-harper-logo.svg",
+              "alt": "Harper"
+            },
+            "screenshot": {
+              "fileId": "6ae8e7455e6fdcf51947be08",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae8e7455e6fdcf51947be08_6.png",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6adbda3f4b1874d217c69be9",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-08T16:28:15.237Z",
+          "lastUpdated": "2026-11-08T16:08:27.977Z",
+          "name": "Intaker",
+          "slug": "intaker",
+          "fieldData": {
+            "logo": {
+              "fileId": "6adf652a350b40724a638a5d",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6adf652a350b40724a638a5d_6adf64d287914a4d23296de9_hero-card-intaker-logo.svg",
+              "alt": "Intaker"
+            },
+            "screenshot": {
+              "fileId": "6ae8e74e1e37ef01bd224cbb",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae8e74e1e37ef01bd224cbb_3.png",
+              "alt": null
+            }
+          }
+        },
+        {
+          "id": "6adbda16876d6eb13a551ff4",
+          "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+          "isDraft": false,
+          "isArchived": false,
+          "lastPublished": "2026-11-02T19:49:53.929Z",
+          "lastUpdated": "2026-11-02T19:41:25.454Z",
+          "name": "TrakPro",
+          "slug": "trakpro",
+          "fieldData": {
+            "logo": {
+              "fileId": "6adf652a350b40724a638a6f",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6adf652a350b40724a638a6f_6adf64d182915b56c69af099_hero-card-trakpro-logo.svg",
+              "alt": "TrakPro"
+            },
+            "screenshot": {
+              "fileId": "6ae8e757a1ca371fb23b01c5",
+              "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae8e757a1ca371fb23b01c5_2.png",
+              "alt": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "collectionId": "6af0fba8d6c33f4679f5ae44",
+      "slug": "case-team",
+      "displayName": "Case team",
+      "selectedFields": [],
+      "total": 0,
+      "items": []
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "pageId": "6aba6bc07d6279b4b561770b",
+  "title": "Integrations Template",
+  "slug": "detail_integrations",
+  "publishedPath": "/integrations",
+  "collectionId": "6aba6bc07d6279b4b56177d6",
+  "head": "",
+  "footer": "",
+  "appliedScripts": [],
+  "appliedScriptsNote": "get_page_scripts returned 404 resource_not_found (\"Custom code block not found\"): no registered scripts are applied to this page."
+}

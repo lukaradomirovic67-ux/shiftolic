@@ -1,0 +1,11 @@
+{
+  "pageId": "6aba6bc07d6279b4b56176fd",
+  "title": "Growth",
+  "slug": "growth",
+  "publishedPath": "/services/growth",
+  "collectionId": null,
+  "head": "<!-- Results rings live in an embed inside the Service Numbers component; the steps animation lives in an embed at the end of the steps section. -->\n<style>\n/* nues+ theme overrides for the shared Reviews component */\n.reviews_clutch-stars{color:#da2a90}\n.reviews_clutch-arrow{background-color:#c31379;color:#fff}\n.reviews_header h2{color:#66023c}\n</style>",
+  "footer": "",
+  "appliedScripts": [],
+  "appliedScriptsNote": "get_page_scripts returned 404 resource_not_found (\"Custom code block not found\"): no registered scripts are applied to this page."
+}

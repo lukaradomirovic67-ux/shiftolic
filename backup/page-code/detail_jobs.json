@@ -1,0 +1,11 @@
+{
+  "pageId": "6ada1b11e40ddb96b7a870e6",
+  "title": "Jobs Template",
+  "slug": "detail_jobs",
+  "publishedPath": "/jobs",
+  "collectionId": "6ada1b11e40ddb96b7a870e0",
+  "head": "<!-- Jobs have no detail pages: roles live on /careers and apply by email. Keep this template out of search and send visitors to Careers. -->\n<meta name=\"robots\" content=\"noindex, nofollow\">\n<script>location.replace('/careers');</script>",
+  "footer": "",
+  "appliedScripts": [],
+  "appliedScriptsNote": "get_page_scripts returned 404 resource_not_found (\"Custom code block not found\"): no registered scripts are applied to this page."
+}

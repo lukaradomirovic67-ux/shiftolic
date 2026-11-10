@@ -1,0 +1,11 @@
+{
+  "pageId": "6ad9125fa551cf984d9bb34a",
+  "title": "SEO & AEO",
+  "slug": "seo-aeo",
+  "publishedPath": "/services/seo-aeo",
+  "collectionId": null,
+  "head": "<!-- Results rings live in an embed inside the Service Numbers component; the steps animation lives in an embed at the end of the steps section. -->\n<style>\n/* nuesSEO theme overrides for the shared Reviews component */\n.reviews_clutch-stars,.home-clutch_stars{color:#f2c27d}\n.reviews_clutch-arrow,.home-clutch_arrow{background-color:#7a4c17;color:#fff}\n</style>",
+  "footer": "",
+  "appliedScripts": [],
+  "appliedScriptsNote": "get_page_scripts returned 404 resource_not_found (\"Custom code block not found\"): no registered scripts are applied to this page."
+}

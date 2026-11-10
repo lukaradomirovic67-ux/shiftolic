@@ -1,0 +1,2996 @@
+{
+ "mobile /": {
+  "lcpMs": 796,
+  "lcpEl": "img.home-hero_bg-image src=6aea1a28b66bd7ef372a4f06_home-hero-bg-v3-hq-p-1600.webp loading=eager",
+  "lcpUrl": "6aea1a28b66bd7ef372a4f06_home-hero-bg-v3-hq-p-1600.webp",
+  "cls": 0.004,
+  "domContentLoaded": 1217,
+  "load": 1405,
+  "requests": 70,
+  "bytes": 3442217,
+  "byType": {
+   "Document": 75199,
+   "Image": 2500679,
+   "Stylesheet": 180364,
+   "Script": 394488,
+   "Font": 230885,
+   "Fetch": 60602
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    1048812,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae8e94f7310179536732403_ballerine-home-full.webp"
+   ],
+   [
+    604674,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef89732367d3f74366ee0e_shiftolic-home-full-v2.webp"
+   ],
+   [
+    202103,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aea1a2d00be9214c3a866c7_trusted-video-intaker-joseph-hq.webp"
+   ],
+   [
+    190946,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104642,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    95538,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aea1a2b2e775cb8cd895b26_home-hero-bg-light-v3-hq-p-1600.webp"
+   ],
+   [
+    89435,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    89387,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    75199,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/"
+   ],
+   [
+    75052,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae8e704d213c7c80c455b73_9.avif"
+   ],
+   [
+    62804,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617775_aeonik-semibold.otf"
+   ],
+   [
+    62062,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ]
+  ]
+ },
+ "mobile /about": {
+  "lcpMs": 2056,
+  "lcpEl": "h1.heading-style-h1.text-color-white",
+  "lcpUrl": null,
+  "cls": 0.004,
+  "domContentLoaded": 844,
+  "load": 1018,
+  "requests": 43,
+  "bytes": 1841366,
+  "byType": {
+   "Document": 83450,
+   "Image": 893684,
+   "Script": 394642,
+   "Stylesheet": 180204,
+   "Font": 228821,
+   "Fetch": 60565
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    249556,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ad22d959226961e8826084e_about-raw-19.png"
+   ],
+   [
+    190945,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    114612,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ad68876d705b3ef803e9dbf_about-team-pavle-stikovic.webp"
+   ],
+   [
+    104611,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    97166,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aea35b5fea802b88a06d350_about-story-lounge-hq-p-1600.webp"
+   ],
+   [
+    90823,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ad68875be3d851bd7a0bb90_about-team-danilo-stikovic.webp"
+   ],
+   [
+    89331,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    89331,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    83450,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/about"
+   ],
+   [
+    77248,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aea35b96bf89825c698998d_about-story-sofa-hq-p-1600.webp"
+   ],
+   [
+    70957,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ad68875cf6b48152fd28ad6_about-team-aleksandar-dumic.webp"
+   ],
+   [
+    69585,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ad68876d705b3ef803e9dd5_about-team-luka-radomirovic.webp"
+   ]
+  ]
+ },
+ "mobile /services": {
+  "lcpMs": 2040,
+  "lcpEl": "h1.heading-style-h1.text-color-white",
+  "lcpUrl": null,
+  "cls": 0,
+  "domContentLoaded": 859,
+  "load": 1053,
+  "requests": 59,
+  "bytes": 1245266,
+  "byType": {
+   "Document": 79075,
+   "Script": 393856,
+   "Image": 300380,
+   "Stylesheet": 180469,
+   "Font": 230906,
+   "Fetch": 60580
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    202103,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aea1a2d00be9214c3a866c7_trusted-video-intaker-joseph-hq.webp"
+   ],
+   [
+    190945,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104684,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89580,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    89347,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    79075,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/services"
+   ],
+   [
+    62985,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617775_aeonik-semibold.otf"
+   ],
+   [
+    61961,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60580,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ],
+   [
+    60076,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617778_aeonik-regular.otf"
+   ],
+   [
+    31301,
+    "Script",
+    "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6aba6bc07d6279b4b561771f"
+   ],
+   [
+    30158,
+    "Script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/gsap.min.js"
+   ]
+  ]
+ },
+ "mobile /services/design-development": {
+  "lcpMs": 1916,
+  "lcpEl": "h1.heading-style-h1.text-color-white",
+  "lcpUrl": null,
+  "cls": 0,
+  "domContentLoaded": 720,
+  "load": 960,
+  "requests": 50,
+  "bytes": 2285956,
+  "byType": {
+   "Document": 66043,
+   "Stylesheet": 180376,
+   "Image": 1354163,
+   "Script": 393898,
+   "Font": 230887,
+   "Fetch": 60589
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    1048836,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ae913ddcfa35fd973751b67_svc-case-ballerine-home-full.webp"
+   ],
+   [
+    202103,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aea1a2d00be9214c3a866c7_trusted-video-intaker-joseph-hq.webp"
+   ],
+   [
+    190946,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104703,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89435,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    89399,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    66043,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/services/design-development"
+   ],
+   [
+    62804,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617775_aeonik-semibold.otf"
+   ],
+   [
+    62063,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60589,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ],
+   [
+    60135,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617778_aeonik-regular.otf"
+   ],
+   [
+    31301,
+    "Script",
+    "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6aba6bc07d6279b4b561771f"
+   ]
+  ]
+ },
+ "mobile /services/webflow-development": {
+  "lcpMs": 2120,
+  "lcpEl": "h1.heading-style-h1.text-color-white",
+  "lcpUrl": null,
+  "cls": 0,
+  "domContentLoaded": 923,
+  "load": 1344,
+  "requests": 49,
+  "bytes": 2196692,
+  "byType": {
+   "Document": 65975,
+   "Script": 393950,
+   "Stylesheet": 90941,
+   "Image": 1354155,
+   "Font": 231061,
+   "Fetch": 60610
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    1048836,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ae913ddcfa35fd973751b67_svc-case-ballerine-home-full.webp"
+   ],
+   [
+    202103,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aea1a2d00be9214c3a866c7_trusted-video-intaker-joseph-hq.webp"
+   ],
+   [
+    190946,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104716,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89399,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    65975,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/services/webflow-development"
+   ],
+   [
+    62949,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617775_aeonik-semibold.otf"
+   ],
+   [
+    62119,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60610,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ],
+   [
+    60108,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617778_aeonik-regular.otf"
+   ],
+   [
+    31301,
+    "Script",
+    "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6aba6bc07d6279b4b561771f"
+   ],
+   [
+    30205,
+    "Script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/gsap.min.js"
+   ]
+  ]
+ },
+ "mobile /services/seo-aeo": {
+  "lcpMs": 2108,
+  "lcpEl": "h1.heading-style-h1.text-color-white",
+  "lcpUrl": null,
+  "cls": 0,
+  "domContentLoaded": 905,
+  "load": 1063,
+  "requests": 50,
+  "bytes": 2286031,
+  "byType": {
+   "Document": 65895,
+   "Script": 393979,
+   "Image": 1354294,
+   "Stylesheet": 180331,
+   "Font": 230952,
+   "Fetch": 60580
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    1048836,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ae913ddcfa35fd973751b67_svc-case-ballerine-home-full.webp"
+   ],
+   [
+    202103,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aea1a2d00be9214c3a866c7_trusted-video-intaker-joseph-hq.webp"
+   ],
+   [
+    190946,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104587,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89402,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    89387,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    65895,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/services/seo-aeo"
+   ],
+   [
+    62911,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617775_aeonik-semibold.otf"
+   ],
+   [
+    62047,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60580,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ],
+   [
+    60108,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617778_aeonik-regular.otf"
+   ],
+   [
+    31301,
+    "Script",
+    "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6aba6bc07d6279b4b561771f"
+   ]
+  ]
+ },
+ "mobile /services/growth": {
+  "lcpMs": 2000,
+  "lcpEl": "h1.heading-style-h1.text-color-white",
+  "lcpUrl": null,
+  "cls": 0,
+  "domContentLoaded": 832,
+  "load": 1073,
+  "requests": 50,
+  "bytes": 2286101,
+  "byType": {
+   "Document": 66170,
+   "Script": 393894,
+   "Image": 1354308,
+   "Stylesheet": 180248,
+   "Font": 230916,
+   "Fetch": 60565
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    1048836,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ae913ddcfa35fd973751b67_svc-case-ballerine-home-full.webp"
+   ],
+   [
+    202103,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aea1a2d00be9214c3a866c7_trusted-video-intaker-joseph-hq.webp"
+   ],
+   [
+    190945,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104668,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89375,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    89331,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    66170,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/services/growth"
+   ],
+   [
+    62898,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617775_aeonik-semibold.otf"
+   ],
+   [
+    61961,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60565,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ],
+   [
+    60172,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617778_aeonik-regular.otf"
+   ],
+   [
+    31301,
+    "Script",
+    "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6aba6bc07d6279b4b561771f"
+   ]
+  ]
+ },
+ "mobile /our-work": {
+  "lcpMs": 1888,
+  "lcpEl": "h1.heading-style-h1.text-color-white",
+  "lcpUrl": null,
+  "cls": 0,
+  "domContentLoaded": 816,
+  "load": 1688,
+  "requests": 70,
+  "bytes": 3986473,
+  "byType": {
+   "Document": 72414,
+   "Script": 474845,
+   "Stylesheet": 90941,
+   "Image": 3056842,
+   "Font": 230859,
+   "Fetch": 60572,
+   "Media": 0
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N",
+   "net::ERR_ABORTED https://cdn.jsdelivr.net/gh/lukaradomirovic67-ux/shiftolic@46bba2e52827ccfb75b3676df307e642af6d4bf4/",
+   "net::ERR_ABORTED https://cdn.jsdelivr.net/gh/lukaradomirovic67-ux/shiftolic@46bba2e52827ccfb75b3676df307e642af6d4bf4/"
+  ],
+  "top": [
+   [
+    821208,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef89792367d3f74366eedb_veyor-home-full-v2.avif"
+   ],
+   [
+    702426,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef89742367d3f74366ee1d_intaker-home-full-v2.webp"
+   ],
+   [
+    604674,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef89732367d3f74366ee0e_shiftolic-home-full-v2.webp"
+   ],
+   [
+    589926,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef89732367d3f74366ee07_trakpro-home-full-v2.webp"
+   ],
+   [
+    190946,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104623,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    98864,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af090cdc9e95dfb700f5aa2_ow-tabs-before-ballerine.webp"
+   ],
+   [
+    89399,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    72414,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/our-work"
+   ],
+   [
+    62903,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617775_aeonik-semibold.otf"
+   ],
+   [
+    61963,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60572,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ]
+  ]
+ },
+ "mobile /pricing": {
+  "lcpMs": 1956,
+  "lcpEl": "h1.heading-style-h1.text-color-white",
+  "lcpUrl": null,
+  "cls": 0.004,
+  "domContentLoaded": 808,
+  "load": 1003,
+  "requests": 27,
+  "bytes": 879263,
+  "byType": {
+   "Document": 60680,
+   "Script": 394415,
+   "Stylesheet": 180273,
+   "Image": 15197,
+   "Font": 168112,
+   "Fetch": 60586
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    190946,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104587,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89394,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    89337,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    62045,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60680,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/pricing"
+   ],
+   [
+    60586,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ],
+   [
+    60181,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617778_aeonik-regular.otf"
+   ],
+   [
+    31301,
+    "Script",
+    "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6aba6bc07d6279b4b561771f"
+   ],
+   [
+    30157,
+    "Script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/gsap.min.js"
+   ],
+   [
+    30067,
+    "Font",
+    "https://fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwcGFWNOITd.woff2"
+   ],
+   [
+    15819,
+    "Font",
+    "https://fonts.gstatic.com/s/instrumentserif/v5/jizBRFtNs2ka5fXjeivQ4LroWlx-6zUTjnTLgNs.woff2"
+   ]
+  ]
+ },
+ "mobile /lets-talk": {
+  "lcpMs": 1964,
+  "lcpEl": "h1.heading-style-h1.text-color-white",
+  "lcpUrl": null,
+  "cls": 0.004,
+  "domContentLoaded": 808,
+  "load": 994,
+  "requests": 30,
+  "bytes": 979339,
+  "byType": {
+   "Document": 50043,
+   "Script": 397846,
+   "Stylesheet": 180202,
+   "Font": 168084,
+   "Image": 122608,
+   "Fetch": 60556
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    190946,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104656,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89333,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    89327,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    70668,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ae24c050181b30a490883df_footer-office-belgrade-a.avif"
+   ],
+   [
+    62063,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60556,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ],
+   [
+    60135,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617778_aeonik-regular.otf"
+   ],
+   [
+    50043,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/lets-talk"
+   ],
+   [
+    31301,
+    "Script",
+    "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6aba6bc07d6279b4b561771f"
+   ],
+   [
+    30172,
+    "Script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/gsap.min.js"
+   ],
+   [
+    30067,
+    "Font",
+    "https://fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwcGFWNOITd.woff2"
+   ]
+  ]
+ },
+ "mobile /careers": {
+  "lcpMs": 2664,
+  "lcpEl": "span.btn-shift_text",
+  "lcpUrl": null,
+  "cls": 0,
+  "domContentLoaded": 691,
+  "load": 844,
+  "requests": 29,
+  "bytes": 1081218,
+  "byType": {
+   "Document": 82168,
+   "Stylesheet": 180402,
+   "Script": 399591,
+   "Font": 168040,
+   "Image": 190428,
+   "Fetch": 60589
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    190948,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104642,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89430,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    89430,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    82168,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/careers"
+   ],
+   [
+    61971,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60589,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ],
+   [
+    60183,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617778_aeonik-regular.otf"
+   ],
+   [
+    42583,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ada162d0ee61605a79ebe30_careers-hero-photo-1.webp"
+   ],
+   [
+    42021,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ada162e238d60c4cc6e0f7d_careers-hero-photo-2.webp"
+   ],
+   [
+    41391,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ada162eafe3d59f3114e966_careers-hero-photo-3.webp"
+   ],
+   [
+    31301,
+    "Script",
+    "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6aba6bc07d6279b4b561771f"
+   ]
+  ]
+ },
+ "mobile /blog": {
+  "lcpMs": 2112,
+  "lcpEl": "img.image-cover src=6aba6bc07d6279b4b5617984_Untitled%2520(1)-p-1600.avif loading=lazy",
+  "lcpUrl": "6aba6bc07d6279b4b5617984_Untitled%2520(1)-p-1600.avif",
+  "cls": 0,
+  "domContentLoaded": 794,
+  "load": 1007,
+  "requests": 51,
+  "bytes": 1494696,
+  "byType": {
+   "Document": 60565,
+   "Script": 428528,
+   "Stylesheet": 90936,
+   "Font": 168126,
+   "Image": 746541,
+   "Fetch": 0
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    190946,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104669,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89394,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    62860,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae37f16fa5948f31afad322_danilo-p-1600.avif"
+   ],
+   [
+    62060,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60565,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ],
+   [
+    60181,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617778_aeonik-regular.otf"
+   ],
+   [
+    51140,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae37f8d9ed1d7c1b32a87da_daris-p-1600.avif"
+   ],
+   [
+    46148,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b5617953_b2b-p-1600.webp"
+   ],
+   [
+    43662,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae37f3005d1e4dfe3693320_aleksandar-p-1600.avif"
+   ],
+   [
+    40744,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b5617950_asdftyui-p-1600.webp"
+   ],
+   [
+    37288,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b56178b8_best-15-webflow-3x-p-1600.webp"
+   ]
+  ]
+ },
+ "mobile /resources": {
+  "lcpMs": 404,
+  "lcpEl": "h1.heading-style-h1.text-color-white",
+  "lcpUrl": null,
+  "cls": 0,
+  "domContentLoaded": 694,
+  "load": 1288,
+  "requests": 62,
+  "bytes": 4829959,
+  "byType": {
+   "Document": 62138,
+   "Script": 394517,
+   "Stylesheet": 91131,
+   "Font": 168146,
+   "Image": 4053455,
+   "Fetch": 60572
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    821208,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef89792367d3f74366eedb_veyor-home-full-v2.avif"
+   ],
+   [
+    702426,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef89742367d3f74366ee1d_intaker-home-full-v2.webp"
+   ],
+   [
+    604674,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef89732367d3f74366ee0e_shiftolic-home-full-v2.webp"
+   ],
+   [
+    589926,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef89732367d3f74366ee07_trakpro-home-full-v2.webp"
+   ],
+   [
+    525334,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea454412afa8d1c96b1a14_harper-home-full-hq.webp"
+   ],
+   [
+    447590,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aeb5f8413acac10743cf4de_hypersonix-home-full-hq.webp"
+   ],
+   [
+    190946,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104642,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89438,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    62152,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    62138,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/resources"
+   ],
+   [
+    60572,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ]
+  ]
+ },
+ "mobile /webflow-integrations": {
+  "lcpMs": 1820,
+  "lcpEl": "p.hero_subtitle.is-medium",
+  "lcpUrl": null,
+  "cls": 0.004,
+  "domContentLoaded": 754,
+  "load": 1138,
+  "requests": 37,
+  "bytes": 890950,
+  "byType": {
+   "Document": 52036,
+   "Stylesheet": 90937,
+   "Script": 394622,
+   "Image": 124719,
+   "Font": 168056,
+   "Fetch": 60580
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    190945,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104642,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89395,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    66406,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aee0d024349838b0dfbcc9c_footer-cta-bg-3247w-p-1600.webp"
+   ],
+   [
+    62063,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60580,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ],
+   [
+    60108,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617778_aeonik-regular.otf"
+   ],
+   [
+    52036,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/webflow-integrations"
+   ],
+   [
+    31301,
+    "Script",
+    "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6aba6bc07d6279b4b561771f"
+   ],
+   [
+    30210,
+    "Script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/gsap.min.js"
+   ],
+   [
+    30066,
+    "Font",
+    "https://fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwcGFWNOITd.woff2"
+   ],
+   [
+    15819,
+    "Font",
+    "https://fonts.gstatic.com/s/instrumentserif/v5/jizBRFtNs2ka5fXjeivQ4LroWlx-6zUTjnTLgNs.woff2"
+   ]
+  ]
+ },
+ "mobile /privacy-policy": {
+  "lcpMs": 1908,
+  "lcpEl": "p",
+  "lcpUrl": null,
+  "cls": 0,
+  "domContentLoaded": 746,
+  "load": 871,
+  "requests": 24,
+  "bytes": 872558,
+  "byType": {
+   "Document": 49267,
+   "Script": 394481,
+   "Stylesheet": 180510,
+   "Font": 168026,
+   "Image": 19690,
+   "Fetch": 60584
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    190941,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104659,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89569,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    89399,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    61960,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60584,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ],
+   [
+    60181,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617778_aeonik-regular.otf"
+   ],
+   [
+    49267,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/privacy-policy"
+   ],
+   [
+    31301,
+    "Script",
+    "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6aba6bc07d6279b4b561771f"
+   ],
+   [
+    30156,
+    "Script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/gsap.min.js"
+   ],
+   [
+    30066,
+    "Font",
+    "https://fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwcGFWNOITd.woff2"
+   ],
+   [
+    15819,
+    "Font",
+    "https://fonts.gstatic.com/s/instrumentserif/v5/jizBRFtNs2ka5fXjeivQ4LroWlx-6zUTjnTLgNs.woff2"
+   ]
+  ]
+ },
+ "mobile /terms-of-service": {
+  "lcpMs": 1676,
+  "lcpEl": "p",
+  "lcpUrl": null,
+  "cls": 0.004,
+  "domContentLoaded": 509,
+  "load": 881,
+  "requests": 21,
+  "bytes": 772161,
+  "byType": {
+   "Document": 50052,
+   "Script": 394567,
+   "Stylesheet": 90980,
+   "Font": 168028,
+   "Image": 7969,
+   "Fetch": 60565
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    190945,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104684,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89438,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    61963,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60565,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ],
+   [
+    60181,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617778_aeonik-regular.otf"
+   ],
+   [
+    50052,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/terms-of-service"
+   ],
+   [
+    31301,
+    "Script",
+    "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6aba6bc07d6279b4b561771f"
+   ],
+   [
+    30172,
+    "Script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/gsap.min.js"
+   ],
+   [
+    30066,
+    "Font",
+    "https://fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwcGFWNOITd.woff2"
+   ],
+   [
+    15818,
+    "Font",
+    "https://fonts.gstatic.com/s/instrumentserif/v5/jizBRFtNs2ka5fXjeivQ4LroWlx-6zUTjnTLgNs.woff2"
+   ],
+   [
+    14584,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.36b8fb49256177c8.js"
+   ]
+  ]
+ },
+ "mobile /our-work/ballerine": {
+  "lcpMs": 2072,
+  "lcpEl": "h1.heading-style-h1.text-color-white",
+  "lcpUrl": null,
+  "cls": 0.004,
+  "domContentLoaded": 761,
+  "load": 925,
+  "requests": 33,
+  "bytes": 2052705,
+  "byType": {
+   "Document": 65623,
+   "Stylesheet": 180294,
+   "Script": 394478,
+   "Font": 168067,
+   "Image": 1183679,
+   "Fetch": 60564
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    1048812,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae8e94f7310179536732403_ballerine-home-full.webp"
+   ],
+   [
+    190946,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104587,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89421,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    89331,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    65623,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/our-work/ballerine"
+   ],
+   [
+    62047,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60564,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ],
+   [
+    60135,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617778_aeonik-regular.otf"
+   ],
+   [
+    42976,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272db_case-gallery-ballerine-2.avif"
+   ],
+   [
+    32820,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272d2_case-gallery-ballerine-3.avif"
+   ],
+   [
+    31301,
+    "Script",
+    "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6aba6bc07d6279b4b561771f"
+   ]
+  ]
+ },
+ "mobile /blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search": {
+  "lcpMs": 616,
+  "lcpEl": "img.image-cover src=6ad233f9dacde0d3b78c0ec9_insights-hero-bg-p-1600.avif loading=lazy",
+  "lcpUrl": "6ad233f9dacde0d3b78c0ec9_insights-hero-bg-p-1600.avif",
+  "cls": 0.004,
+  "domContentLoaded": 782,
+  "load": 1129,
+  "requests": 25,
+  "bytes": 974055,
+  "byType": {
+   "Document": 79588,
+   "Script": 394514,
+   "Stylesheet": 180371,
+   "Font": 167956,
+   "Image": 91053,
+   "Fetch": 60573
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    190945,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104677,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89430,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    89399,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    79588,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search"
+   ],
+   [
+    61963,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60573,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ],
+   [
+    60108,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617778_aeonik-regular.otf"
+   ],
+   [
+    43662,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae37f3005d1e4dfe3693320_aleksandar-p-1600.avif"
+   ],
+   [
+    36300,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b5617952_fghjk-p-1600.webp"
+   ],
+   [
+    31301,
+    "Script",
+    "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6aba6bc07d6279b4b561771f"
+   ],
+   [
+    30208,
+    "Script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/gsap.min.js"
+   ]
+  ]
+ },
+ "desktop /": {
+  "lcpMs": 2304,
+  "lcpEl": "h1.heading-style-h1.text-color-white",
+  "lcpUrl": null,
+  "cls": 0,
+  "domContentLoaded": 995,
+  "load": 1187,
+  "requests": 74,
+  "bytes": 3454964,
+  "byType": {
+   "Document": 75162,
+   "Script": 395533,
+   "Image": 2506141,
+   "Stylesheet": 180351,
+   "Font": 237204,
+   "Fetch": 60573
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    1048812,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae8e94f7310179536732403_ballerine-home-full.webp"
+   ],
+   [
+    604674,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef89732367d3f74366ee0e_shiftolic-home-full-v2.webp"
+   ],
+   [
+    202103,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aea1a2d00be9214c3a866c7_trusted-video-intaker-joseph-hq.webp"
+   ],
+   [
+    190945,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104687,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    95538,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aea1a2b2e775cb8cd895b26_home-hero-bg-light-v3-hq-p-1600.webp"
+   ],
+   [
+    89437,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    89398,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    75162,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/"
+   ],
+   [
+    75052,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae8e704d213c7c80c455b73_9.avif"
+   ],
+   [
+    62969,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617775_aeonik-semibold.otf"
+   ],
+   [
+    62063,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ]
+  ]
+ },
+ "desktop /about": {
+  "lcpMs": 2008,
+  "lcpEl": "h1.heading-style-h1.text-color-white",
+  "lcpUrl": null,
+  "cls": 0,
+  "domContentLoaded": 785,
+  "load": 957,
+  "requests": 46,
+  "bytes": 2029016,
+  "byType": {
+   "Document": 83472,
+   "Script": 394543,
+   "Stylesheet": 180242,
+   "Image": 1075116,
+   "Font": 235086,
+   "Fetch": 60557
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    249556,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ad22d959226961e8826084e_about-raw-19.png"
+   ],
+   [
+    190946,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    114612,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ad68876d705b3ef803e9dbf_about-team-pavle-stikovic.webp"
+   ],
+   [
+    104587,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    97166,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aea35b5fea802b88a06d350_about-story-lounge-hq-p-1600.webp"
+   ],
+   [
+    90823,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ad68875be3d851bd7a0bb90_about-team-danilo-stikovic.webp"
+   ],
+   [
+    89395,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    89331,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    83472,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/about"
+   ],
+   [
+    82105,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ad688767506850986dd8714_about-team-daris-henjas.webp"
+   ],
+   [
+    77248,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aea35b96bf89825c698998d_about-story-sofa-hq-p-1600.webp"
+   ],
+   [
+    70957,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ad68875cf6b48152fd28ad6_about-team-aleksandar-dumic.webp"
+   ]
+  ]
+ },
+ "desktop /services": {
+  "lcpMs": 1964,
+  "lcpEl": "h1.heading-style-h1.text-color-white",
+  "lcpUrl": null,
+  "cls": 0.002,
+  "domContentLoaded": 792,
+  "load": 960,
+  "requests": 59,
+  "bytes": 1085933,
+  "byType": {
+   "Document": 79075,
+   "Image": 134890,
+   "Script": 393904,
+   "Stylesheet": 180377,
+   "Font": 237130,
+   "Fetch": 60557
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    190946,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104687,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89467,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    89394,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    79075,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/services"
+   ],
+   [
+    62802,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617775_aeonik-semibold.otf"
+   ],
+   [
+    62155,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60557,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ],
+   [
+    60183,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617778_aeonik-regular.otf"
+   ],
+   [
+    36782,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aea1a2d00be9214c3a866c7_trusted-video-intaker-joseph-hq-p-800.webp"
+   ],
+   [
+    31301,
+    "Script",
+    "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6aba6bc07d6279b4b561771f"
+   ],
+   [
+    30211,
+    "Script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/gsap.min.js"
+   ]
+  ]
+ },
+ "desktop /services/design-development": {
+  "lcpMs": 2040,
+  "lcpEl": "h1.heading-style-h1.text-color-white",
+  "lcpUrl": null,
+  "cls": 0.002,
+  "domContentLoaded": 800,
+  "load": 1207,
+  "requests": 51,
+  "bytes": 2483469,
+  "byType": {
+   "Document": 66057,
+   "Script": 393813,
+   "Image": 1635130,
+   "Stylesheet": 90855,
+   "Font": 237042,
+   "Fetch": 60572
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    1048836,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ae913ddcfa35fd973751b67_svc-case-ballerine-home-full.webp"
+   ],
+   [
+    442209,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ae913e9de52550f9c6108c2_svc-case-shiftolic-home-full.webp"
+   ],
+   [
+    190946,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104684,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89339,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    66057,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/services/design-development"
+   ],
+   [
+    62905,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617775_aeonik-semibold.otf"
+   ],
+   [
+    61971,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60572,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ],
+   [
+    60176,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617778_aeonik-regular.otf"
+   ],
+   [
+    36782,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aea1a2d00be9214c3a866c7_trusted-video-intaker-joseph-hq-p-800.webp"
+   ],
+   [
+    31301,
+    "Script",
+    "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6aba6bc07d6279b4b561771f"
+   ]
+  ]
+ },
+ "desktop /services/webflow-development": {
+  "lcpMs": 2108,
+  "lcpEl": "h1.heading-style-h1.text-color-white",
+  "lcpUrl": null,
+  "cls": 0.002,
+  "domContentLoaded": 869,
+  "load": 1190,
+  "requests": 51,
+  "bytes": 2483611,
+  "byType": {
+   "Document": 65944,
+   "Script": 393895,
+   "Image": 1635238,
+   "Stylesheet": 90911,
+   "Font": 237012,
+   "Fetch": 60611
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    1048836,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ae913ddcfa35fd973751b67_svc-case-ballerine-home-full.webp"
+   ],
+   [
+    442209,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ae913e9de52550f9c6108c2_svc-case-shiftolic-home-full.webp"
+   ],
+   [
+    190968,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/?id=G-NNTMD9FV5D&fps=fe"
+   ],
+   [
+    104611,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89395,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    65944,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/services/webflow-development"
+   ],
+   [
+    62898,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617775_aeonik-semibold.otf"
+   ],
+   [
+    61963,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60611,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ],
+   [
+    60161,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617778_aeonik-regular.otf"
+   ],
+   [
+    36782,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aea1a2d00be9214c3a866c7_trusted-video-intaker-joseph-hq-p-800.webp"
+   ],
+   [
+    31301,
+    "Script",
+    "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6aba6bc07d6279b4b561771f"
+   ]
+  ]
+ },
+ "desktop /services/seo-aeo": {
+  "lcpMs": 2208,
+  "lcpEl": "h1.heading-style-h1.text-color-white",
+  "lcpUrl": null,
+  "cls": 0.002,
+  "domContentLoaded": 927,
+  "load": 1285,
+  "requests": 52,
+  "bytes": 2573052,
+  "byType": {
+   "Document": 65893,
+   "Script": 393924,
+   "Image": 1635241,
+   "Stylesheet": 180340,
+   "Font": 237083,
+   "Fetch": 60571
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    1048836,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ae913ddcfa35fd973751b67_svc-case-ballerine-home-full.webp"
+   ],
+   [
+    442209,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ae913e9de52550f9c6108c2_svc-case-shiftolic-home-full.webp"
+   ],
+   [
+    190947,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104687,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89416,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    89408,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    65893,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/services/seo-aeo"
+   ],
+   [
+    62873,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617775_aeonik-semibold.otf"
+   ],
+   [
+    62040,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60571,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ],
+   [
+    60181,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617778_aeonik-regular.otf"
+   ],
+   [
+    36782,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aea1a2d00be9214c3a866c7_trusted-video-intaker-joseph-hq-p-800.webp"
+   ]
+  ]
+ },
+ "desktop /services/growth": {
+  "lcpMs": 2128,
+  "lcpEl": "h1.heading-style-h1.text-color-white",
+  "lcpUrl": null,
+  "cls": 0.002,
+  "domContentLoaded": 858,
+  "load": 1286,
+  "requests": 51,
+  "bytes": 2483651,
+  "byType": {
+   "Document": 66179,
+   "Stylesheet": 90855,
+   "Script": 393683,
+   "Image": 1635248,
+   "Font": 237129,
+   "Fetch": 60557
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    1048836,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ae913ddcfa35fd973751b67_svc-case-ballerine-home-full.webp"
+   ],
+   [
+    442209,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ae913e9de52550f9c6108c2_svc-case-shiftolic-home-full.webp"
+   ],
+   [
+    190946,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104623,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89339,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    66179,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/services/growth"
+   ],
+   [
+    62886,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617775_aeonik-semibold.otf"
+   ],
+   [
+    62071,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60557,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ],
+   [
+    60182,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617778_aeonik-regular.otf"
+   ],
+   [
+    36782,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aea1a2d00be9214c3a866c7_trusted-video-intaker-joseph-hq-p-800.webp"
+   ],
+   [
+    31301,
+    "Script",
+    "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6aba6bc07d6279b4b561771f"
+   ]
+  ]
+ },
+ "desktop /our-work": {
+  "lcpMs": 1484,
+  "lcpEl": "h1.heading-style-h1.text-color-white",
+  "lcpUrl": null,
+  "cls": 0.002,
+  "domContentLoaded": 765,
+  "load": 1286,
+  "requests": 67,
+  "bytes": 3979258,
+  "byType": {
+   "Document": 72407,
+   "Stylesheet": 90903,
+   "Script": 473906,
+   "Font": 236937,
+   "Image": 3044491,
+   "Fetch": 60614,
+   "Media": 0
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N",
+   "net::ERR_ABORTED https://cdn.jsdelivr.net/gh/lukaradomirovic67-ux/shiftolic@46bba2e52827ccfb75b3676df307e642af6d4bf4/",
+   "net::ERR_ABORTED https://cdn.jsdelivr.net/gh/lukaradomirovic67-ux/shiftolic@46bba2e52827ccfb75b3676df307e642af6d4bf4/"
+  ],
+  "top": [
+   [
+    821208,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef89792367d3f74366eedb_veyor-home-full-v2.avif"
+   ],
+   [
+    702426,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef89742367d3f74366ee1d_intaker-home-full-v2.webp"
+   ],
+   [
+    604674,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef89732367d3f74366ee0e_shiftolic-home-full-v2.webp"
+   ],
+   [
+    589926,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef89732367d3f74366ee07_trakpro-home-full-v2.webp"
+   ],
+   [
+    190946,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104623,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    98864,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af090cdc9e95dfb700f5aa2_ow-tabs-before-ballerine.webp"
+   ],
+   [
+    89387,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    72407,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/our-work"
+   ],
+   [
+    62802,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617775_aeonik-semibold.otf"
+   ],
+   [
+    61963,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60614,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ]
+  ]
+ },
+ "desktop /pricing": {
+  "lcpMs": 2000,
+  "lcpEl": "h1.heading-style-h1.text-color-white",
+  "lcpUrl": null,
+  "cls": 0.002,
+  "domContentLoaded": 796,
+  "load": 952,
+  "requests": 29,
+  "bytes": 888827,
+  "byType": {
+   "Document": 60672,
+   "Script": 394504,
+   "Stylesheet": 180542,
+   "Font": 175311,
+   "Image": 17188,
+   "Fetch": 60610
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    190946,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/?id=G-NNTMD9FV5D&fps=fe"
+   ],
+   [
+    104659,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89408,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    89394,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    61953,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60672,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/pricing"
+   ],
+   [
+    60610,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ],
+   [
+    60148,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617778_aeonik-regular.otf"
+   ],
+   [
+    31399,
+    "Font",
+    "https://fonts.gstatic.com/l/font?kit=gyBUhwUxId8gMGYQMKR3pzfaWI_RnOJalrErE8iusq2Kkq6JNBi4zg&skey=70a816dcd17c8a3c&v=v5"
+   ],
+   [
+    31301,
+    "Script",
+    "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6aba6bc07d6279b4b561771f"
+   ],
+   [
+    30172,
+    "Script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/gsap.min.js"
+   ],
+   [
+    21811,
+    "Font",
+    "https://fonts.gstatic.com/s/instrumentserif/v5/jizBRFtNs2ka5fXjeivQ4LroWlx-6zUTjg.woff2"
+   ]
+  ]
+ },
+ "desktop /lets-talk": {
+  "lcpMs": 1920,
+  "lcpEl": "h1.heading-style-h1.text-color-white",
+  "lcpUrl": null,
+  "cls": 0,
+  "domContentLoaded": 760,
+  "load": 903,
+  "requests": 30,
+  "bytes": 985624,
+  "byType": {
+   "Document": 50027,
+   "Script": 397921,
+   "Stylesheet": 180340,
+   "Font": 174249,
+   "Image": 122506,
+   "Fetch": 60581
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    190946,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104642,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89437,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    89387,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    70668,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ae24c050181b30a490883df_footer-office-belgrade-a.avif"
+   ],
+   [
+    62152,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60581,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ],
+   [
+    60108,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617778_aeonik-regular.otf"
+   ],
+   [
+    50027,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/lets-talk"
+   ],
+   [
+    31301,
+    "Script",
+    "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6aba6bc07d6279b4b561771f"
+   ],
+   [
+    30208,
+    "Script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/gsap.min.js"
+   ],
+   [
+    30179,
+    "Font",
+    "https://fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwcGFU.woff2"
+   ]
+  ]
+ },
+ "desktop /careers": {
+  "lcpMs": 1160,
+  "lcpEl": "span.careers-hero_line-text",
+  "lcpUrl": null,
+  "cls": 0,
+  "domContentLoaded": 1141,
+  "load": 1344,
+  "requests": 33,
+  "bytes": 1236624,
+  "byType": {
+   "Document": 82160,
+   "Script": 399682,
+   "Stylesheet": 180330,
+   "Font": 174235,
+   "Image": 339660,
+   "Fetch": 60557
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    190946,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104687,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89420,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    89394,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    82160,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/careers"
+   ],
+   [
+    62065,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60557,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ],
+   [
+    60181,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617778_aeonik-regular.otf"
+   ],
+   [
+    42583,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ada162d0ee61605a79ebe30_careers-hero-photo-1.webp"
+   ],
+   [
+    42117,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ada162eb73db28b0b5c8cdb_careers-hero-photo-5.webp"
+   ],
+   [
+    42021,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ada162e238d60c4cc6e0f7d_careers-hero-photo-2.webp"
+   ],
+   [
+    41391,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ada162eafe3d59f3114e966_careers-hero-photo-3.webp"
+   ]
+  ]
+ },
+ "desktop /blog": {
+  "lcpMs": 2288,
+  "lcpEl": "img.image-cover src=6aba6bc07d6279b4b5617984_Untitled%2520(1)-p-1600.avif loading=lazy",
+  "lcpUrl": "6aba6bc07d6279b4b5617984_Untitled%2520(1)-p-1600.avif",
+  "cls": 0,
+  "domContentLoaded": 920,
+  "load": 1208,
+  "requests": 50,
+  "bytes": 1558373,
+  "byType": {
+   "Document": 60565,
+   "Stylesheet": 90952,
+   "Script": 419667,
+   "Image": 812947,
+   "Font": 174242,
+   "Fetch": 0
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    190946,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104656,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89436,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    66406,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aee0d024349838b0dfbcc9c_footer-cta-bg-3247w-p-1600.webp"
+   ],
+   [
+    62860,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae37f16fa5948f31afad322_danilo-p-1600.avif"
+   ],
+   [
+    62062,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60565,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ],
+   [
+    60190,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617778_aeonik-regular.otf"
+   ],
+   [
+    51140,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae37f8d9ed1d7c1b32a87da_daris-p-1600.avif"
+   ],
+   [
+    46148,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b5617953_b2b-p-1600.webp"
+   ],
+   [
+    43662,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae37f3005d1e4dfe3693320_aleksandar-p-1600.avif"
+   ],
+   [
+    40744,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b5617950_asdftyui-p-1600.webp"
+   ]
+  ]
+ },
+ "desktop /resources": {
+  "lcpMs": 420,
+  "lcpEl": "h1.heading-style-h1.text-color-white",
+  "lcpUrl": null,
+  "cls": 0.002,
+  "domContentLoaded": 800,
+  "load": 2095,
+  "requests": 69,
+  "bytes": 4857774,
+  "byType": {
+   "Document": 62114,
+   "Script": 394561,
+   "Stylesheet": 90944,
+   "Font": 174076,
+   "Image": 4075483,
+   "Fetch": 60596
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    821208,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef89792367d3f74366eedb_veyor-home-full-v2.avif"
+   ],
+   [
+    702426,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef89742367d3f74366ee1d_intaker-home-full-v2.webp"
+   ],
+   [
+    604674,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef89732367d3f74366ee0e_shiftolic-home-full-v2.webp"
+   ],
+   [
+    589926,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef89732367d3f74366ee07_trakpro-home-full-v2.webp"
+   ],
+   [
+    525334,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea454412afa8d1c96b1a14_harper-home-full-hq.webp"
+   ],
+   [
+    447590,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aeb5f8413acac10743cf4de_hypersonix-home-full-hq.webp"
+   ],
+   [
+    190946,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104684,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89428,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    62114,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/resources"
+   ],
+   [
+    61953,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60596,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ]
+  ]
+ },
+ "desktop /webflow-integrations": {
+  "lcpMs": 1804,
+  "lcpEl": "h1.heading-style-h1.text-color-white",
+  "lcpUrl": null,
+  "cls": 0.097,
+  "domContentLoaded": 693,
+  "load": 1139,
+  "requests": 37,
+  "bytes": 919827,
+  "byType": {
+   "Document": 52036,
+   "Script": 394561,
+   "Stylesheet": 180316,
+   "Font": 174243,
+   "Image": 58106,
+   "Fetch": 60565
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    190947,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104642,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89400,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    89400,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    62119,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60565,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ],
+   [
+    60135,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617778_aeonik-regular.otf"
+   ],
+   [
+    52036,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/webflow-integrations"
+   ],
+   [
+    31301,
+    "Script",
+    "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6aba6bc07d6279b4b561771f"
+   ],
+   [
+    30206,
+    "Script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/gsap.min.js"
+   ],
+   [
+    30179,
+    "Font",
+    "https://fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwcGFU.woff2"
+   ],
+   [
+    21810,
+    "Font",
+    "https://fonts.gstatic.com/s/instrumentserif/v5/jizBRFtNs2ka5fXjeivQ4LroWlx-6zUTjg.woff2"
+   ]
+  ]
+ },
+ "desktop /privacy-policy": {
+  "lcpMs": 1796,
+  "lcpEl": "h1.heading-style-h1",
+  "lcpUrl": null,
+  "cls": 0,
+  "domContentLoaded": 757,
+  "load": 761,
+  "requests": 22,
+  "bytes": 867539,
+  "byType": {
+   "Document": 49266,
+   "Script": 395378,
+   "Stylesheet": 180310,
+   "Image": 7867,
+   "Font": 174124,
+   "Fetch": 60594
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    190946,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104669,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89400,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    89394,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    61953,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60594,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ],
+   [
+    60182,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617778_aeonik-regular.otf"
+   ],
+   [
+    49266,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/privacy-policy"
+   ],
+   [
+    32142,
+    "Script",
+    "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6aba6bc07d6279b4b561771f"
+   ],
+   [
+    30179,
+    "Font",
+    "https://fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwcGFU.woff2"
+   ],
+   [
+    30157,
+    "Script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/gsap.min.js"
+   ],
+   [
+    21810,
+    "Font",
+    "https://fonts.gstatic.com/s/instrumentserif/v5/jizBRFtNs2ka5fXjeivQ4LroWlx-6zUTjg.woff2"
+   ]
+  ]
+ },
+ "desktop /terms-of-service": {
+  "lcpMs": 1868,
+  "lcpEl": "p",
+  "lcpUrl": null,
+  "cls": 0,
+  "domContentLoaded": 702,
+  "load": 707,
+  "requests": 22,
+  "bytes": 869059,
+  "byType": {
+   "Document": 50060,
+   "Script": 394601,
+   "Stylesheet": 180449,
+   "Font": 175424,
+   "Image": 7969,
+   "Fetch": 60556
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    190941,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104687,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89430,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    89430,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    62045,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60556,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ],
+   [
+    60181,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617778_aeonik-regular.otf"
+   ],
+   [
+    50060,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/terms-of-service"
+   ],
+   [
+    31387,
+    "Font",
+    "https://fonts.gstatic.com/l/font?kit=gyBUhwUxId8gMGYQMKR3pzfaWI_RnOJalrErE8iusq2Kkq6JNBi4zg&skey=70a816dcd17c8a3c&v=v5"
+   ],
+   [
+    31301,
+    "Script",
+    "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6aba6bc07d6279b4b561771f"
+   ],
+   [
+    30157,
+    "Script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/gsap.min.js"
+   ],
+   [
+    21811,
+    "Font",
+    "https://fonts.gstatic.com/s/instrumentserif/v5/jizBRFtNs2ka5fXjeivQ4LroWlx-6zUTjg.woff2"
+   ]
+  ]
+ },
+ "desktop /our-work/ballerine": {
+  "lcpMs": 2172,
+  "lcpEl": "h1.heading-style-h1.text-color-white",
+  "lcpUrl": null,
+  "cls": 0.021,
+  "domContentLoaded": 838,
+  "load": 1019,
+  "requests": 35,
+  "bytes": 2157655,
+  "byType": {
+   "Document": 65623,
+   "Script": 395290,
+   "Stylesheet": 180283,
+   "Font": 174590,
+   "Image": 1281296,
+   "Fetch": 60573
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    1048812,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae8e94f7310179536732403_ballerine-home-full.webp"
+   ],
+   [
+    190946,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104623,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89430,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    89337,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    65623,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/our-work/ballerine"
+   ],
+   [
+    62359,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60573,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ],
+   [
+    60242,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617778_aeonik-regular.otf"
+   ],
+   [
+    55940,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ad251ff572b1d64a33fa732_4e6fc.avif"
+   ],
+   [
+    42976,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272db_case-gallery-ballerine-2.avif"
+   ],
+   [
+    41569,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ad251fe572b1d64a33fa72b_cb62a.avif"
+   ]
+  ]
+ },
+ "desktop /blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search": {
+  "lcpMs": 1804,
+  "lcpEl": "h1.heading-style-h1.text-color-white",
+  "lcpUrl": null,
+  "cls": 0,
+  "domContentLoaded": 728,
+  "load": 895,
+  "requests": 24,
+  "bytes": 891002,
+  "byType": {
+   "Document": 79594,
+   "Stylesheet": 90954,
+   "Script": 394565,
+   "Font": 174280,
+   "Image": 91053,
+   "Fetch": 60556
+  },
+  "failed": [
+   "net::ERR_ABORTED https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3N"
+  ],
+  "top": [
+   [
+    190946,
+    "Script",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/9i1h7htkfq16NmFiYTZiYzA3ZDYyNzliNGI1NjE3NzFm/O1Vy3bc6tuxzZV_BjiIaYt2vAew"
+   ],
+   [
+    104669,
+    "Script",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/js/webflow.schunk.ec8eafe33b42c4ba.js"
+   ],
+   [
+    89438,
+    "Stylesheet",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/css/nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.shared.17c65aa98.css"
+   ],
+   [
+    79594,
+    "Document",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search"
+   ],
+   [
+    62155,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b561777b_aeonik-medium.otf"
+   ],
+   [
+    60556,
+    "Fetch",
+    "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog"
+   ],
+   [
+    60135,
+    "Font",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6aba6bc07d6279b4b5617778_aeonik-regular.otf"
+   ],
+   [
+    43662,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae37f3005d1e4dfe3693320_aleksandar-p-1600.avif"
+   ],
+   [
+    36300,
+    "Image",
+    "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b5617952_fghjk-p-1600.webp"
+   ],
+   [
+    31301,
+    "Script",
+    "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6aba6bc07d6279b4b561771f"
+   ],
+   [
+    30179,
+    "Font",
+    "https://fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwcGFU.woff2"
+   ],
+   [
+    30158,
+    "Script",
+    "https://cdn.prod.website-files.com/gsap/3.15.0/gsap.min.js"
+   ]
+  ]
+ }
+}

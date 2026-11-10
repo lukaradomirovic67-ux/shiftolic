@@ -1,0 +1,1673 @@
+{
+  "exportedAt": "2026-11-10",
+  "siteId": "6aba6bc07d6279b4b561771f",
+  "source": "data_cms_tool get_collection_details",
+  "collections": [
+    {
+      "id": "6aba6bc07d6279b4b561771c",
+      "displayName": "Our Works",
+      "singularName": "Our Work",
+      "slug": "our-work",
+      "createdOn": "2026-05-19T01:52:23.880Z",
+      "lastUpdated": "2026-11-08T23:25:03.912Z",
+      "fields": [
+        {
+          "id": "b8d2368898ca0fec416a574820f928c7",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "meta-title",
+          "displayName": "Meta title",
+          "helpText": "Title in Google and when the case page is shared, up to 60 characters. Fill for every project with a case study.",
+          "validations": {
+            "singleLine": true
+          }
+        },
+        {
+          "id": "863d5aedf0e3f5220ef618d21ee4c32b",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "meta-description",
+          "displayName": "Meta description",
+          "helpText": "Description in Google and when the page is shared, up to 155 characters. Fill for every project with a case study.",
+          "validations": {
+            "singleLine": true
+          }
+        },
+        {
+          "id": "0e684febf8320a86329aff7541d58407",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "heading",
+          "displayName": "Case title",
+          "helpText": "Case page headline, one sentence. Filled = the project has a case study: Trusted and Home hero cards open /our-work/<slug> and get the info icon.",
+          "validations": {
+            "singleLine": true
+          }
+        },
+        {
+          "id": "45cf295d3653ada119a8eee805b169d3",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Image",
+          "slug": "main-image",
+          "displayName": "Cover image",
+          "helpText": "Top of the client's homepage, landscape, about 1600x1000. Our Work slider picture, case page image and the preview when the page is shared."
+        },
+        {
+          "id": "3100589e984b84627c004d18d7f531ba",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "metric-value-1",
+          "displayName": "Stat 1 value",
+          "helpText": "Main result, short, e.g. 16x, 80+, 2 weeks. Our Work grid, slider and tabs, Home Every project, Resources and next-project cards, first number in the case page hero.",
+          "validations": {
+            "singleLine": true
+          }
+        },
+        {
+          "id": "480af3a824d294c627c45722cdcd4022",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "metric-label-1",
+          "displayName": "Stat 1 label",
+          "helpText": "What Stat 1 means, 2 to 4 words, e.g. Engagement time growth.",
+          "validations": {
+            "singleLine": true
+          }
+        },
+        {
+          "id": "107c680d8cbad136ca24e388b9d4d1e8",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "metric-value-2",
+          "displayName": "Stat 2 value",
+          "helpText": "Second number in the case page hero, e.g. 30+.",
+          "validations": {
+            "singleLine": true
+          }
+        },
+        {
+          "id": "e74e57e4bff13c5e281c886fda02b224",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "metric-label-2",
+          "displayName": "Stat 2 label",
+          "helpText": "What Stat 2 means, e.g. Pages launched.",
+          "validations": {
+            "singleLine": true
+          }
+        },
+        {
+          "id": "83effb11f7986051d03f502f68cad91c",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "industry-2",
+          "displayName": "Industry",
+          "helpText": "Short industry tag, 1 to 3 words, e.g. Legal tech, Fintech, Agriculture. Shown on every card and in the case page hero.",
+          "validations": {
+            "singleLine": true
+          }
+        },
+        {
+          "id": "9151236bded5924b352750742ec8d5ae",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Link",
+          "slug": "website-link",
+          "displayName": "Website link",
+          "helpText": "Full address of the client's live site, e.g. https://www.ballerine.com. 'Visit website' button on the case page; Trusted cards without a case study open it. Its domain (without https:// and www.) shows in the Our Work slider and under the Every project gallery."
+        },
+        {
+          "id": "c7cc47e1a933928bdd3e84e1c9d33351",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "MultiReference",
+          "slug": "services-delivered",
+          "displayName": "Services used",
+          "helpText": "Case page sidebar 'Services used': pick the services we did for this project. Each row opens that service's page.",
+          "validations": {
+            "collectionId": "6aba6bc07d6279b4b5617740"
+          }
+        },
+        {
+          "id": "6cc339d9880daf6fdcf0139a09e49c4e",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "RichText",
+          "slug": "the-background",
+          "displayName": "The Background",
+          "helpText": "Case page: who the client is and where they started. 1 to 2 paragraphs."
+        },
+        {
+          "id": "31bc14339c6b5187f39f3568e85af04d",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "RichText",
+          "slug": "the-challenge",
+          "displayName": "The Challenge",
+          "helpText": "Case page: what had to be solved. 1 to 2 paragraphs."
+        },
+        {
+          "id": "9b351f293f94634e7cd5bcff67d5b1b4",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "RichText",
+          "slug": "the-solution",
+          "displayName": "The Solution",
+          "helpText": "Case page: what we built. Subheadings and lists are fine."
+        },
+        {
+          "id": "16b124e5e2164f6889d0f0e42442a7f4",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "RichText",
+          "slug": "the-result",
+          "displayName": "The Result",
+          "helpText": "Case page: the outcome. 1 to 2 paragraphs."
+        },
+        {
+          "id": "e4ffea757605daabf75486ba63f50b48",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "RichText",
+          "slug": "the-achievement",
+          "displayName": "The Achievement",
+          "helpText": "Case page: key results as a bulleted list."
+        },
+        {
+          "id": "319fac4cbb2d28c53d9bac32da9f1ef9",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Image",
+          "slug": "second-featuerd-image",
+          "displayName": "Gallery middle",
+          "helpText": "Case page gallery, middle card: collage of page screens. Portrait 2:3, 1041x1560 WebP, from the Figma card Frame 47796."
+        },
+        {
+          "id": "67986fbfd6145504f7a75f80c17c9c0f",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Image",
+          "slug": "third-featuerd-image",
+          "displayName": "Gallery right",
+          "helpText": "Case page gallery, right card: phone mockup. Portrait 2:3, 1041x1560 WebP, from the Figma card Frame 47797."
+        },
+        {
+          "id": "84fc07b33b2fbf841472928abc565023",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Image",
+          "slug": "logo-with-hover",
+          "displayName": "Logo white",
+          "helpText": "White logo, SVG with a transparent background, made by the designer. The one logo used everywhere: Trusted cards (shown grey before hover), Home Every project, Our Work grid and tabs, Resources cards and the case page."
+        },
+        {
+          "id": "892e560879fa33f94c813ba77de237ea",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "short-card-text",
+          "displayName": "Card text",
+          "helpText": "One short result line on the Trusted card, about 30 characters, e.g. 3x organic traffic.",
+          "validations": {
+            "singleLine": true
+          }
+        },
+        {
+          "id": "4383f07836916c4f163694451ac1cffa",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Number",
+          "slug": "number-in-section",
+          "displayName": "Order",
+          "helpText": "Position in the Trusted strip, Our Work grid and Resources, lowest first: 1, 2, 3... Use each number once.",
+          "validations": {
+            "format": "integer",
+            "precision": 1,
+            "allowNegative": false
+          }
+        },
+        {
+          "id": "603381ea6d3536bae60e6457fc5e2ebc",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Switch",
+          "slug": "show-in-hero-section",
+          "displayName": "Show in Trusted",
+          "helpText": "On = logo card in the Trusted strip (Home and service pages). Needs Logo white, Card text, Order (the grey logo before hover is made from Logo white). With Case title the card opens the case page, else Website link."
+        },
+        {
+          "id": "22ccc0e90283aad6fe0c412f6e2153ec",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Switch",
+          "slug": "show-in-every-project-section",
+          "displayName": "Show in Every project",
+          "helpText": "On = slide in the Home 'Every project' slider (sorted by Name). Needs Logo white, Card background, Every project screens and page names, Full page screenshot, Stat 1 and Story label."
+        },
+        {
+          "id": "a9225c522b4ce6d358c271128a49038f",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "MultiImage",
+          "slug": "other-images-every-project-section",
+          "displayName": "Every project screens",
+          "helpText": "Screenshots of the client's pages in order (first = Home), about 2400px wide. Shown on the slide and in the gallery popup."
+        },
+        {
+          "id": "790eb1156215cfa146e9d06e929d2230",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "fade-in-text",
+          "displayName": "Story label",
+          "helpText": "One sentence about the project, e.g. How nues rebuilt compliance into a site the marketing team runs alone. Our Work tabs (first third of the words dark, the rest grey) and Home Every project, above Stat 1.",
+          "validations": {
+            "singleLine": true
+          }
+        },
+        {
+          "id": "7a2034a75b882748d5dff5db169df7d5",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "hero-title-highlight",
+          "displayName": "Case title highlight",
+          "helpText": "Optional. Last words of Case title shown in the mint gradient, e.g. now runs on its own. Must match the end of Case title exactly."
+        },
+        {
+          "id": "b2f6eff4dec18ed3bd01191eddde11bc",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "hero-stat-3-value",
+          "displayName": "Stat 3 value",
+          "helpText": "Optional third number in the case page hero, e.g. 0.9s. Empty = Industry is shown in its place."
+        },
+        {
+          "id": "9276abaa36c0d49ca4af723e51fbd7c2",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "hero-stat-3-label",
+          "displayName": "Stat 3 label",
+          "helpText": "What Stat 3 means, e.g. Page load on mobile."
+        },
+        {
+          "id": "6a13b46a2e5784ca062a9f99e29335af",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Image",
+          "slug": "hero-screen-center",
+          "displayName": "Full page screenshot",
+          "helpText": "Whole homepage as one tall image, 1440px wide, JPG/WebP under 8 MB. Cards, Resources, Every project and case page hero. Empty = card shows 'Launching soon'."
+        },
+        {
+          "id": "bd3ded8e2539d179de50f3394cc9931f",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Image",
+          "slug": "hero-screen-left",
+          "displayName": "Case screen left",
+          "helpText": "Optional. Inner page screenshot, about 900px wide, for the left frame of the case page hero. The three frames take turns in the middle."
+        },
+        {
+          "id": "4f96e5592132e6e8b72695c93255978d",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Image",
+          "slug": "hero-screen-right",
+          "displayName": "Case screen right",
+          "helpText": "Optional. Inner page screenshot, about 900px wide, for the right frame of the case page hero."
+        },
+        {
+          "id": "452a7124b09d7efecabb294736123e17",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "quote",
+          "displayName": "Quote",
+          "helpText": "Optional. Client quote without quotation marks. Empty = no quote block on the case page."
+        },
+        {
+          "id": "7f80a4965cb6add8843340fcd4101e2d",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "quote-author",
+          "displayName": "Quote author",
+          "helpText": "Full name of the person quoted, e.g. Or Moshkovitz. The handwritten signature under the quote is made from it (Or M.)."
+        },
+        {
+          "id": "6f16dd53ace3eaaba40eb6182c29e7a7",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "quote-author-role",
+          "displayName": "Quote role",
+          "helpText": "Role and company, e.g. CMO, Ballerine."
+        },
+        {
+          "id": "65b55b54ee94935f950b77463e240baa",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Image",
+          "slug": "client-icon",
+          "displayName": "Client icon",
+          "helpText": "Optional. Square client symbol, at least 128x128, shown above the quote."
+        },
+        {
+          "id": "9988bd66365fab9e61a63cd4794c1690",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Switch",
+          "slug": "ow-hero-slider",
+          "displayName": "Show in Our Work slider",
+          "helpText": "On = slide in the browser slider at the top of Our Work. Needs Cover image, Logo color, Industry, Stat 1 and Website link (the address bar shows it without https:// and www.)."
+        },
+        {
+          "id": "3d042685c02f205c2b15cd61b1ed5bcb",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Switch",
+          "slug": "ow-case-tabs",
+          "displayName": "Show in Our Work tabs",
+          "helpText": "On = tab in 'What they had. What we shipped.' on Our Work (sorted by Name). Needs Logo white, Tabs background, Before and After screenshot, Website link (address bar), Story label and Stat 1."
+        },
+        {
+          "id": "b2e107788291696b334374cee0838d90",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Image",
+          "slug": "case-before-image",
+          "displayName": "Before screenshot",
+          "helpText": "Old site, top of the homepage, cut from the top to 1.75:1 (e.g. 2400x1371 WebP). Left side of the before/after slider in the Our Work tabs."
+        },
+        {
+          "id": "2929c72142d22d2fefd1654daac9df64",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Image",
+          "slug": "case-after-image",
+          "displayName": "After screenshot",
+          "helpText": "New site, same view and the same 1.75:1 shape as Before screenshot, cut from the top. Right side of the before/after slider."
+        },
+        {
+          "id": "60f25d2f19f62a9ad9d11335aa235286",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Option",
+          "slug": "work-category",
+          "displayName": "Filter category",
+          "helpText": "Which filter tab on the Our Work page shows this project. Pick one.",
+          "validations": {
+            "options": [
+              {
+                "name": "SaaS",
+                "id": "5267bee9ab756cf7834fce16707acf01"
+              },
+              {
+                "name": "AI",
+                "id": "ade3eabf3fc55ea3544802b43b1b8e94"
+              },
+              {
+                "name": "Healthcare",
+                "id": "260dd3e0ae4c43c7f04500bf84bd06a4"
+              },
+              {
+                "name": "Commerce",
+                "id": "24c8430ad0632097f053aa94cf908ef3"
+              },
+              {
+                "name": "Industrial",
+                "id": "f797c19bdb4bad28884b5ced85431180"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d6c87eee6aba71c3e4dfb024e46e9a1a",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Image",
+          "slug": "logo-with-color",
+          "displayName": "Logo color",
+          "helpText": "Logo in the client's brand colours, SVG with a transparent background. Shown in the Our Work slider (light background)."
+        },
+        {
+          "id": "aa9387a51edc1a79cd4041e859315788",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "gallery-page-names",
+          "displayName": "Every project page names",
+          "helpText": "Names of the screens above, same order, comma separated, e.g. Home, Platform, Pricing. Captions in the gallery popup."
+        },
+        {
+          "id": "6f3d08dd5a4606e8e43b8f6d1e056d5b",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Image",
+          "slug": "card-background",
+          "displayName": "Card background",
+          "helpText": "16:10, 1600x1000: client colours with their big soft mark. Background of the Our Work grid, Resources and next-project cards and the Home Every project slide. Without it the project is not in the Our Work grid."
+        },
+        {
+          "id": "bf08b49af769121c764a6cc85a5b2d4c",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Link",
+          "slug": "slider-video-2",
+          "displayName": "Slider video",
+          "helpText": "Optional. Direct link to a short muted MP4/WebM loop (2140x1280, under 5 MB), not a YouTube/Vimeo page. Plays over Cover image; empty = Cover image for 6 s."
+        },
+        {
+          "id": "8cbc2760cd47c44219357a84d16f1cd3",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "MultiReference",
+          "slug": "team",
+          "displayName": "Team",
+          "helpText": "Case page 'The team behind this project': pick everyone who worked on it, in the order to show. Each card opens that person's LinkedIn.",
+          "validations": {
+            "collectionId": "6aba6bc07d6279b4b561778a"
+          }
+        },
+        {
+          "id": "03f3ffe2a129c08b3b728a39223eb964",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Image",
+          "slug": "gallery-left",
+          "displayName": "Gallery left",
+          "helpText": "Case page gallery, left card: laptop mockup. Portrait 2:3, 1041x1560 WebP, exported by the designer from the Figma card Frame 47795."
+        },
+        {
+          "id": "eba7db6cda4daaaa23d978913ba0d218",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Image",
+          "slug": "tabs-background",
+          "displayName": "Tabs background",
+          "helpText": "Background behind the before/after window in the Our Work tabs: client colours with soft light stripes, landscape 3:2 from the designer (2400x1600 WebP)."
+        },
+        {
+          "id": "55533b5f560c9be8cebe243082d6e05b",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "MultiReference",
+          "slug": "team---design",
+          "displayName": "Team – Design",
+          "helpText": "Not used for now (skill pills are off on the case page).",
+          "validations": {
+            "collectionId": "6aba6bc07d6279b4b561778a"
+          }
+        },
+        {
+          "id": "c6e6936dcb189446f018a488b53c040a",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "MultiReference",
+          "slug": "team---webflow",
+          "displayName": "Team – Webflow",
+          "helpText": "Not used for now (skill pills are off on the case page).",
+          "validations": {
+            "collectionId": "6aba6bc07d6279b4b561778a"
+          }
+        },
+        {
+          "id": "3d8d059e83e92228257456823fc024eb",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "MultiReference",
+          "slug": "team---seo-aeo",
+          "displayName": "Team – SEO & AEO",
+          "helpText": "Not used for now (skill pills are off on the case page).",
+          "validations": {
+            "collectionId": "6aba6bc07d6279b4b561778a"
+          }
+        },
+        {
+          "id": "a7981aa27a308faf745b799f8d78bd73",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "MultiReference",
+          "slug": "team---growth",
+          "displayName": "Team – Growth",
+          "helpText": "Not used for now (skill pills are off on the case page).",
+          "validations": {
+            "collectionId": "6aba6bc07d6279b4b561778a"
+          }
+        },
+        {
+          "id": "73c9a891db16b886278fd5a3d015d259",
+          "isEditable": true,
+          "isRequired": true,
+          "type": "PlainText",
+          "slug": "name",
+          "displayName": "Name",
+          "helpText": "Client name, e.g. Ballerine. Shown as the project name and used as image alt text everywhere.",
+          "validations": {
+            "maxLength": 256
+          }
+        },
+        {
+          "id": "656e4ffd4b2c473d428b23e55cf54fa3",
+          "isEditable": true,
+          "isRequired": true,
+          "type": "PlainText",
+          "slug": "slug",
+          "displayName": "Slug",
+          "helpText": "Case page address /our-work/<slug>, e.g. ballerine. Lowercase, no spaces. Do not change it once the page is live.",
+          "validations": {
+            "maxLength": 256,
+            "pattern": {},
+            "messages": {
+              "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+              "maxLength": "Must be less than 256 characters"
+            }
+          }
+        }
+      ],
+      "fieldGroups": [
+        {
+          "displayName": "1 · Basics",
+          "fieldIds": [
+            "83effb11f7986051d03f502f68cad91c",
+            "60f25d2f19f62a9ad9d11335aa235286",
+            "9151236bded5924b352750742ec8d5ae",
+            "4383f07836916c4f163694451ac1cffa",
+            "3100589e984b84627c004d18d7f531ba",
+            "480af3a824d294c627c45722cdcd4022"
+          ],
+          "description": "Fill for every project."
+        },
+        {
+          "displayName": "2 · Logos and images (designer)",
+          "fieldIds": [
+            "84fc07b33b2fbf841472928abc565023",
+            "d6c87eee6aba71c3e4dfb024e46e9a1a",
+            "6f3d08dd5a4606e8e43b8f6d1e056d5b",
+            "6a13b46a2e5784ca062a9f99e29335af",
+            "45cf295d3653ada119a8eee805b169d3"
+          ],
+          "description": "Prepared by the designer for every project. Size and format are in each field."
+        },
+        {
+          "displayName": "3 · Trusted strip",
+          "fieldIds": [
+            "603381ea6d3536bae60e6457fc5e2ebc",
+            "892e560879fa33f94c813ba77de237ea"
+          ],
+          "description": "Logo cards on Home and the service pages."
+        },
+        {
+          "displayName": "4 · Our Work slider",
+          "fieldIds": [
+            "9988bd66365fab9e61a63cd4794c1690",
+            "bf08b49af769121c764a6cc85a5b2d4c"
+          ],
+          "description": "Browser slider at the top of the Our Work page."
+        },
+        {
+          "displayName": "5 · Our Work tabs",
+          "fieldIds": [
+            "3d042685c02f205c2b15cd61b1ed5bcb",
+            "eba7db6cda4daaaa23d978913ba0d218",
+            "b2e107788291696b334374cee0838d90",
+            "2929c72142d22d2fefd1654daac9df64",
+            "790eb1156215cfa146e9d06e929d2230"
+          ],
+          "description": "'What they had. What we shipped.' on Our Work. Story label is also used by Home Every project."
+        },
+        {
+          "displayName": "6 · Home Every project",
+          "fieldIds": [
+            "22ccc0e90283aad6fe0c412f6e2153ec",
+            "a9225c522b4ce6d358c271128a49038f",
+            "aa9387a51edc1a79cd4041e859315788"
+          ],
+          "description": "Slider on Home. Also uses Logo white, Card background, Stat 1 and Story label."
+        },
+        {
+          "displayName": "7 · Case study page",
+          "fieldIds": [
+            "0e684febf8320a86329aff7541d58407",
+            "7a2034a75b882748d5dff5db169df7d5",
+            "107c680d8cbad136ca24e388b9d4d1e8",
+            "e74e57e4bff13c5e281c886fda02b224",
+            "b2f6eff4dec18ed3bd01191eddde11bc",
+            "9276abaa36c0d49ca4af723e51fbd7c2",
+            "bd3ded8e2539d179de50f3394cc9931f",
+            "4f96e5592132e6e8b72695c93255978d",
+            "6cc339d9880daf6fdcf0139a09e49c4e",
+            "31bc14339c6b5187f39f3568e85af04d",
+            "9b351f293f94634e7cd5bcff67d5b1b4",
+            "16b124e5e2164f6889d0f0e42442a7f4",
+            "e4ffea757605daabf75486ba63f50b48",
+            "03f3ffe2a129c08b3b728a39223eb964",
+            "319fac4cbb2d28c53d9bac32da9f1ef9",
+            "67986fbfd6145504f7a75f80c17c9c0f",
+            "452a7124b09d7efecabb294736123e17",
+            "7f80a4965cb6add8843340fcd4101e2d",
+            "6f16dd53ace3eaaba40eb6182c29e7a7",
+            "65b55b54ee94935f950b77463e240baa",
+            "c7cc47e1a933928bdd3e84e1c9d33351",
+            "8cbc2760cd47c44219357a84d16f1cd3",
+            "55533b5f560c9be8cebe243082d6e05b",
+            "c6e6936dcb189446f018a488b53c040a",
+            "3d8d059e83e92228257456823fc024eb",
+            "a7981aa27a308faf745b799f8d78bd73"
+          ],
+          "description": "Only when there is a written case study (/our-work/<slug>). Empty fields hide their block."
+        },
+        {
+          "displayName": "8 · SEO",
+          "fieldIds": [
+            "b8d2368898ca0fec416a574820f928c7",
+            "863d5aedf0e3f5220ef618d21ee4c32b"
+          ],
+          "description": "Google results and sharing of the case page."
+        }
+      ]
+    },
+    {
+      "id": "6aba6bc07d6279b4b5617740",
+      "displayName": "Services Nues",
+      "singularName": "Services Nue",
+      "slug": "services-nues",
+      "createdOn": "2026-05-19T02:01:47.691Z",
+      "lastUpdated": "2026-11-08T16:37:26.712Z",
+      "fields": [
+        {
+          "id": "a476fe7e638a8746a86355397801acc9",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "card-number",
+          "displayName": "Card number",
+          "helpText": "Number on the service card, two digits, e.g. 01. Also the order of the cards."
+        },
+        {
+          "id": "620cac6be6a4412c19bd0cd87470b270",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Color",
+          "slug": "card-color",
+          "displayName": "Card color",
+          "helpText": "Light accent colour of this service, used for the card number, e.g. #A7E0BF."
+        },
+        {
+          "id": "3f6c2d3feaaa3a7e56631cfa5448e151",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Link",
+          "slug": "service-page",
+          "displayName": "Service page",
+          "helpText": "Page the card's arrow opens, e.g. /services/design-development."
+        },
+        {
+          "id": "d53fa2c42cfb723ca0df4ff100ec48b6",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Image",
+          "slug": "card-shape",
+          "displayName": "Card shape",
+          "helpText": "Card artwork: the service colours and shape, portrait 295x400 (SVG or 2x image). Made by the designer."
+        },
+        {
+          "id": "220ca0ec67a4b06abf59af64773e6744",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Image",
+          "slug": "icon",
+          "displayName": "Icon",
+          "helpText": "Small service icon shown before the name in Services used on case studies. Square SVG, 32x32."
+        },
+        {
+          "id": "8a04e101d9da8d33920226558ccb0c3b",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Color",
+          "slug": "main-color",
+          "displayName": "Main color",
+          "helpText": "Strong colour of this service, used for the arrow circle in Services used on case studies, e.g. #B7792B."
+        },
+        {
+          "id": "bf97c31011c3d92e5226d2a676ae44ba",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "short-name",
+          "displayName": "Short name",
+          "helpText": "Short label for team skill pills on case studies, e.g. Design, Webflow, SEO & AEO, Growth."
+        },
+        {
+          "id": "45c303fb891d93ea4ed837d8f1453716",
+          "isEditable": true,
+          "isRequired": true,
+          "type": "PlainText",
+          "slug": "name",
+          "displayName": "Name",
+          "validations": {
+            "maxLength": 256
+          }
+        },
+        {
+          "id": "d65b3dec27744156065effc8a8d93a26",
+          "isEditable": true,
+          "isRequired": true,
+          "type": "PlainText",
+          "slug": "slug",
+          "displayName": "Slug",
+          "validations": {
+            "maxLength": 256,
+            "pattern": {},
+            "messages": {
+              "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+              "maxLength": "Must be less than 256 characters"
+            }
+          }
+        }
+      ],
+      "fieldGroups": []
+    },
+    {
+      "id": "6aba6bc07d6279b4b5617769",
+      "displayName": "Blogs",
+      "singularName": "Blog",
+      "slug": "blog",
+      "createdOn": "2026-06-11T17:42:45.201Z",
+      "lastUpdated": "2026-09-28T13:29:52.000Z",
+      "fields": [
+        {
+          "id": "996bfd3898081fd0528e35b225844d0b",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Switch",
+          "slug": "featured-on-blog-main-page-3-max",
+          "displayName": "Featured on blog main page (3 max)"
+        },
+        {
+          "id": "87806b60c836c353a73de6d096e65e13",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Switch",
+          "slug": "featured-on-resources-big-one",
+          "displayName": "Featured on resources (big one)"
+        },
+        {
+          "id": "555581803cfde6a3b8ec18c2bd0cd08b",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Switch",
+          "slug": "featured-on-resources-page-4-max",
+          "displayName": "Featured on resources page (3 max)"
+        },
+        {
+          "id": "cb986d27e20cab69d8e16e08fd6496cb",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "meta-title",
+          "displayName": "Meta title",
+          "helpText": "Meta description",
+          "validations": {
+            "singleLine": true
+          }
+        },
+        {
+          "id": "00ee20de711c6c26cd7082812f8c4a1c",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "meta-description",
+          "displayName": "Meta description",
+          "validations": {
+            "singleLine": true
+          }
+        },
+        {
+          "id": "40d8d9c2df85bf48a17161634906b3b7",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "short-description",
+          "displayName": "Short description",
+          "validations": {
+            "singleLine": true
+          }
+        },
+        {
+          "id": "3e610ff71a502998d7bb119110d6a994",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "DateTime",
+          "slug": "custom-date",
+          "displayName": "Custom date",
+          "helpText": "For Blogs that are older and we can't use real publishing date"
+        },
+        {
+          "id": "3a3803b9cdbff09758d5f50e33c1fd12",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Number",
+          "slug": "read-time",
+          "displayName": "Read time",
+          "validations": {
+            "format": "integer",
+            "precision": 1,
+            "allowNegative": false
+          }
+        },
+        {
+          "id": "80632a301d28ed0c6b7469cdebe52ecc",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Image",
+          "slug": "thumbnail-image",
+          "displayName": "Thumbnail image"
+        },
+        {
+          "id": "eb0b19639841a29eb822db9a29fb65ff",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "tl-dr",
+          "displayName": "TL;DR",
+          "validations": {
+            "singleLine": false
+          }
+        },
+        {
+          "id": "49ae3cf72b526c4c30512cf17cd54221",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "RichText",
+          "slug": "content",
+          "displayName": "Content"
+        },
+        {
+          "id": "d4d2da75dbfd46afba422dbb9740e77f",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Reference",
+          "slug": "author",
+          "displayName": "Author",
+          "validations": {
+            "collectionId": "6aba6bc07d6279b4b561778a"
+          }
+        },
+        {
+          "id": "4277f57bbf1e9b4150f84dbcb78732ac",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Reference",
+          "slug": "category",
+          "displayName": "Category",
+          "validations": {
+            "collectionId": "6aba6bc07d6279b4b56177ba"
+          }
+        },
+        {
+          "id": "fff091ecf0003129f9c751161d0459ac",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "MultiReference",
+          "slug": "faq",
+          "displayName": "FAQ",
+          "validations": {
+            "collectionId": "6aba6bc07d6279b4b5617810"
+          }
+        },
+        {
+          "id": "93cf698ab91376f283c2fcbc08876de7",
+          "isEditable": true,
+          "isRequired": true,
+          "type": "PlainText",
+          "slug": "name",
+          "displayName": "Name",
+          "validations": {
+            "maxLength": 256
+          }
+        },
+        {
+          "id": "669aa49604b486ca379c071adc5dbe4a",
+          "isEditable": true,
+          "isRequired": true,
+          "type": "PlainText",
+          "slug": "slug",
+          "displayName": "Slug",
+          "validations": {
+            "maxLength": 256,
+            "messages": {
+              "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+              "maxLength": "Must be less than 256 characters"
+            }
+          }
+        }
+      ],
+      "fieldGroups": []
+    },
+    {
+      "id": "6aba6bc07d6279b4b561778a",
+      "displayName": "Teams",
+      "singularName": "Team",
+      "slug": "team",
+      "createdOn": "2026-06-11T17:55:49.009Z",
+      "lastUpdated": "2026-11-08T23:15:33.712Z",
+      "fields": [
+        {
+          "id": "fd375431b8b650feb6fa95ba3324d88f",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Image",
+          "slug": "image",
+          "displayName": "Image"
+        },
+        {
+          "id": "06f241b23a99da127b1d9957f8f6e1c0",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "role",
+          "displayName": "Role",
+          "validations": {
+            "singleLine": true
+          }
+        },
+        {
+          "id": "8fabe05a84310f33220b78a696d85e53",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "bio",
+          "displayName": "Bio",
+          "validations": {
+            "singleLine": false
+          }
+        },
+        {
+          "id": "3aa8ef2e8a86f764a89374739bf6332b",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Link",
+          "slug": "linkedin-profile-2",
+          "displayName": "LinkedIn profile"
+        },
+        {
+          "id": "db841a6f10f49b3689568c727a852412",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Image",
+          "slug": "round-photo",
+          "displayName": "Round photo",
+          "helpText": "Cut-out portrait with a transparent background (PNG or WebP), head and shoulders, for the round photo on case studies."
+        },
+        {
+          "id": "85fb9f2d34fac68aa1b88b82cfcf7b0a",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Color",
+          "slug": "photo-color",
+          "displayName": "Photo color",
+          "helpText": "Circle colour by discipline, only three: Development #9FB4F2, Design #5BD3A9, Growth #F434A3. The case page takes it from Discipline."
+        },
+        {
+          "id": "9d3c45eca5015183316e909a52231ab2",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "MultiReference",
+          "slug": "skills",
+          "displayName": "Skills",
+          "helpText": "Not used anymore. What someone did on a project is set per project in the Case team collection (Worked on).",
+          "validations": {
+            "collectionId": "6aba6bc07d6279b4b5617740"
+          }
+        },
+        {
+          "id": "1a8c4d65ef7a9944dc9481f67d9c56d4",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Option",
+          "slug": "discipline",
+          "displayName": "Discipline",
+          "helpText": "Main discipline of this person. Sets the colour of their photo circle on case studies: Development = blue, Design = green, Growth = pink.",
+          "validations": {
+            "options": [
+              {
+                "name": "Development",
+                "id": "2789fe904ee0fb7d938f165877fce2c5"
+              },
+              {
+                "name": "Design",
+                "id": "78d3d584f64caf5c184cb9aa39d7fffa"
+              },
+              {
+                "name": "Growth",
+                "id": "e3523d52eb86c8e23278f89b50895ec3"
+              }
+            ]
+          }
+        },
+        {
+          "id": "073841fd0db4c612201b04c904a5aff5",
+          "isEditable": true,
+          "isRequired": true,
+          "type": "PlainText",
+          "slug": "name",
+          "displayName": "Name",
+          "validations": {
+            "maxLength": 256
+          }
+        },
+        {
+          "id": "b8fec04a634b4a31b5672d72e988ba1f",
+          "isEditable": true,
+          "isRequired": true,
+          "type": "PlainText",
+          "slug": "slug",
+          "displayName": "Slug",
+          "validations": {
+            "maxLength": 256,
+            "pattern": {},
+            "messages": {
+              "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+              "maxLength": "Must be less than 256 characters"
+            }
+          }
+        }
+      ],
+      "fieldGroups": []
+    },
+    {
+      "id": "6aba6bc07d6279b4b56177ba",
+      "displayName": "Insights categories",
+      "singularName": "Insights category",
+      "slug": "insights-categories",
+      "createdOn": "2026-06-11T18:06:38.658Z",
+      "lastUpdated": "2026-09-28T13:29:52.140Z",
+      "fields": [
+        {
+          "id": "a5c6e25248d0b1668d340d1bb5069f98",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Number",
+          "slug": "blog-main-page-order-number",
+          "displayName": "Blog main page order number",
+          "validations": {
+            "format": "integer",
+            "precision": 1,
+            "allowNegative": false
+          }
+        },
+        {
+          "id": "ca13b576548d9993a4dd3d582c95acba",
+          "isEditable": true,
+          "isRequired": true,
+          "type": "PlainText",
+          "slug": "name",
+          "displayName": "Name",
+          "validations": {
+            "maxLength": 256
+          }
+        },
+        {
+          "id": "324b2ab8966a2f996ddaca48b8aa5ad0",
+          "isEditable": true,
+          "isRequired": true,
+          "type": "PlainText",
+          "slug": "slug",
+          "displayName": "Slug",
+          "validations": {
+            "maxLength": 256,
+            "messages": {
+              "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+              "maxLength": "Must be less than 256 characters"
+            }
+          }
+        }
+      ],
+      "fieldGroups": []
+    },
+    {
+      "id": "6aba6bc07d6279b4b56177d6",
+      "displayName": "Integrations",
+      "singularName": "Integration",
+      "slug": "integrations",
+      "createdOn": "2026-07-15T19:14:41.944Z",
+      "lastUpdated": "2026-11-08T15:50:10.670Z",
+      "fields": [
+        {
+          "id": "766cc11afc93aa9521387e1f1d1da7b8",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "short-description",
+          "displayName": "Short description",
+          "validations": {
+            "singleLine": true
+          }
+        },
+        {
+          "id": "996bfd3898081fd0528e35b225844d0b",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Switch",
+          "slug": "featured-on-blog-main-page-3-max",
+          "displayName": "Featured on blog main page (3 max)"
+        },
+        {
+          "id": "87806b60c836c353a73de6d096e65e13",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Switch",
+          "slug": "featured-on-resources-big-one",
+          "displayName": "Featured on resources (big one)"
+        },
+        {
+          "id": "555581803cfde6a3b8ec18c2bd0cd08b",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Switch",
+          "slug": "featured-on-resources-page-4-max",
+          "displayName": "Featured on resources page (3 max)"
+        },
+        {
+          "id": "cb986d27e20cab69d8e16e08fd6496cb",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "meta-title",
+          "displayName": "Meta title",
+          "helpText": "Meta description",
+          "validations": {
+            "singleLine": true
+          }
+        },
+        {
+          "id": "00ee20de711c6c26cd7082812f8c4a1c",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "meta-description",
+          "displayName": "Meta description",
+          "validations": {
+            "singleLine": true
+          }
+        },
+        {
+          "id": "3a3803b9cdbff09758d5f50e33c1fd12",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Number",
+          "slug": "read-time",
+          "displayName": "Read time",
+          "validations": {
+            "format": "integer",
+            "precision": 1,
+            "allowNegative": false
+          }
+        },
+        {
+          "id": "80632a301d28ed0c6b7469cdebe52ecc",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Image",
+          "slug": "thumbnail-image",
+          "displayName": "Thumbnail image"
+        },
+        {
+          "id": "eb0b19639841a29eb822db9a29fb65ff",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "tl-dr",
+          "displayName": "TL;DR",
+          "validations": {
+            "singleLine": false
+          }
+        },
+        {
+          "id": "49ae3cf72b526c4c30512cf17cd54221",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "RichText",
+          "slug": "content",
+          "displayName": "Content"
+        },
+        {
+          "id": "d4d2da75dbfd46afba422dbb9740e77f",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Reference",
+          "slug": "author",
+          "displayName": "Author",
+          "validations": {
+            "collectionId": "6aba6bc07d6279b4b561778a"
+          }
+        },
+        {
+          "id": "da118e4a7f0006e82620bcb8cbf82146",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Reference",
+          "slug": "category-2",
+          "displayName": "Category",
+          "validations": {
+            "collectionId": "6aba6bc07d6279b4b56177ee"
+          }
+        },
+        {
+          "id": "1a7a664f40134e3c75063b4bb776dbe8",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "MultiReference",
+          "slug": "categories",
+          "displayName": "Categories",
+          "helpText": "Groups on the Webflow Integrations page where this card shows. Pick one or more.",
+          "validations": {
+            "collectionId": "6aba6bc07d6279b4b56177ee"
+          }
+        },
+        {
+          "id": "41c36efa9a981fd062744190b07176b3",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Image",
+          "slug": "logo-2",
+          "displayName": "Logo",
+          "helpText": "Colour logo shown on the integration card (SVG or PNG, transparent background). Leave empty to hide the logo."
+        },
+        {
+          "id": "98f6ad45f88e07ff211d4ae76574c603",
+          "isEditable": true,
+          "isRequired": true,
+          "type": "PlainText",
+          "slug": "name",
+          "displayName": "Name",
+          "validations": {
+            "maxLength": 256
+          }
+        },
+        {
+          "id": "c86b59fc23f860d82087479d80b367ca",
+          "isEditable": true,
+          "isRequired": true,
+          "type": "PlainText",
+          "slug": "slug",
+          "displayName": "Slug",
+          "validations": {
+            "maxLength": 256,
+            "pattern": {},
+            "messages": {
+              "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+              "maxLength": "Must be less than 256 characters"
+            }
+          }
+        }
+      ],
+      "fieldGroups": []
+    },
+    {
+      "id": "6aba6bc07d6279b4b56177ee",
+      "displayName": "Integrations categories",
+      "singularName": "Integrations category",
+      "slug": "integrations-category",
+      "createdOn": "2026-07-15T19:16:04.227Z",
+      "lastUpdated": "2026-09-28T13:29:52.175Z",
+      "fields": [
+        {
+          "id": "e72064fcc789d8ea21b0fbd5f77ee9b8",
+          "isEditable": true,
+          "isRequired": true,
+          "type": "PlainText",
+          "slug": "name",
+          "displayName": "Name",
+          "validations": {
+            "maxLength": 256
+          }
+        },
+        {
+          "id": "e673fbca346ddaef7306cb5babc1b833",
+          "isEditable": true,
+          "isRequired": true,
+          "type": "PlainText",
+          "slug": "slug",
+          "displayName": "Slug",
+          "validations": {
+            "maxLength": 256,
+            "messages": {
+              "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+              "maxLength": "Must be less than 256 characters"
+            }
+          }
+        }
+      ],
+      "fieldGroups": []
+    },
+    {
+      "id": "6aba6bc07d6279b4b5617810",
+      "displayName": "Faqs",
+      "singularName": "Faq",
+      "slug": "faq",
+      "createdOn": "2026-07-27T08:10:50.048Z",
+      "lastUpdated": "2026-09-28T13:29:52.191Z",
+      "fields": [
+        {
+          "id": "2e9750013424de22811d38d6b1efcd1c",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "answer",
+          "displayName": "Answer",
+          "validations": {
+            "singleLine": true
+          }
+        },
+        {
+          "id": "90f43416173e607a0f96af270709918f",
+          "isEditable": true,
+          "isRequired": true,
+          "type": "PlainText",
+          "slug": "name",
+          "displayName": "Question",
+          "validations": {
+            "maxLength": 256
+          }
+        },
+        {
+          "id": "a72ac72f0acea471c51da0169ef30484",
+          "isEditable": true,
+          "isRequired": true,
+          "type": "PlainText",
+          "slug": "slug",
+          "displayName": "Slug",
+          "validations": {
+            "maxLength": 256,
+            "messages": {
+              "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+              "maxLength": "Must be less than 256 characters"
+            }
+          }
+        }
+      ],
+      "fieldGroups": []
+    },
+    {
+      "id": "6ada1b11e40ddb96b7a870e0",
+      "displayName": "Jobs",
+      "singularName": "Job",
+      "slug": "jobs",
+      "createdOn": "2026-10-22T14:17:53.167Z",
+      "lastUpdated": "2026-11-05T20:23:38.967Z",
+      "fields": [
+        {
+          "id": "d8f040af78947ab6eda85bed2af0f73c",
+          "isEditable": true,
+          "isRequired": true,
+          "type": "PlainText",
+          "slug": "location",
+          "displayName": "Location",
+          "helpText": "Where and how, e.g. Belgrade or Remote, Full Time"
+        },
+        {
+          "id": "e695f78e1ccf2ca4b6b5cae4aeabd7a9",
+          "isEditable": true,
+          "isRequired": true,
+          "type": "Option",
+          "slug": "category",
+          "displayName": "Category",
+          "helpText": "Used by the filter buttons on the Careers page",
+          "validations": {
+            "options": [
+              {
+                "name": "Development",
+                "id": "e1342d6345f7688c86a98fab74be5d74"
+              },
+              {
+                "name": "Design",
+                "id": "5a2cb9003b0246c1ed53a7d9bd1d9199"
+              },
+              {
+                "name": "Growth",
+                "id": "0eb79bd0438e56a3839268ce4954489f"
+              }
+            ]
+          }
+        },
+        {
+          "id": "135cbcba61cdf557e2738b1a183306a9",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "summary",
+          "displayName": "Summary",
+          "helpText": "One sentence shown on the open envelope (about 70 characters)"
+        },
+        {
+          "id": "8ebd1dc7b529ea54f681d9abcbb6445b",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Number",
+          "slug": "order",
+          "displayName": "Order",
+          "helpText": "Position on the Careers page, lowest first (1, 2, 3...)",
+          "validations": {
+            "format": "integer",
+            "allowNegative": true,
+            "precision": 1
+          }
+        },
+        {
+          "id": "a16c10d8fe93b60b555955f897dc3338",
+          "isEditable": true,
+          "isRequired": true,
+          "type": "PlainText",
+          "slug": "name",
+          "displayName": "Name",
+          "validations": {
+            "maxLength": 256
+          }
+        },
+        {
+          "id": "40e7d87dca2a71d9d5078fce530139fc",
+          "isEditable": true,
+          "isRequired": true,
+          "type": "PlainText",
+          "slug": "slug",
+          "displayName": "Slug",
+          "validations": {
+            "maxLength": 256,
+            "pattern": {},
+            "messages": {
+              "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+              "maxLength": "Must be less than 256 characters"
+            }
+          }
+        }
+      ],
+      "fieldGroups": []
+    },
+    {
+      "id": "6adbd9ede7d520aeb28ac93f",
+      "displayName": "Hero Cards",
+      "singularName": "Hero Card",
+      "slug": "hero-cards",
+      "createdOn": "2026-10-23T22:04:29.584Z",
+      "lastUpdated": "2026-11-02T18:21:45.068Z",
+      "fields": [
+        {
+          "id": "6ac4047035007be312a0e594e0deb6ef",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Link",
+          "slug": "link",
+          "displayName": "Link",
+          "helpText": "Where the card goes when clicked, e.g. /our-work/trakpro"
+        },
+        {
+          "id": "8cdfe735ab9971c8c318683c38c7ada2",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Number",
+          "slug": "order",
+          "displayName": "Order",
+          "helpText": "Lower numbers come first. The cards are spread across the columns in this order.",
+          "validations": {
+            "format": "integer",
+            "allowNegative": true,
+            "precision": 1
+          }
+        },
+        {
+          "id": "00ce66e2342759a7d9f9c75805047958",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Image",
+          "slug": "logo",
+          "displayName": "Logo",
+          "helpText": "White logo (SVG). Sits top left, moves to the centre on hover."
+        },
+        {
+          "id": "7de5803ee6e400917b1399d976b5ff0a",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "Image",
+          "slug": "screenshot",
+          "displayName": "Screenshot",
+          "helpText": "Website screenshot, 750 x 768 px (top of the page). Slides out to the right on hover."
+        },
+        {
+          "id": "7022863c0f6c14c4c8743981436a3bbf",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "colour-top-2",
+          "displayName": "Colour top",
+          "helpText": "Hex code of the card background at the top of the gradient, e.g. #6b58ee"
+        },
+        {
+          "id": "618e66e690312e81c593f5f6ab2b04bf",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "PlainText",
+          "slug": "colour-bottom-2",
+          "displayName": "Colour bottom",
+          "helpText": "Hex code of the card background at the bottom of the gradient, e.g. #281b83"
+        },
+        {
+          "id": "939424e1e186a631566eed0aa93d2f5e",
+          "isEditable": true,
+          "isRequired": true,
+          "type": "PlainText",
+          "slug": "name",
+          "displayName": "Name",
+          "validations": {
+            "maxLength": 256
+          }
+        },
+        {
+          "id": "eafdb3f897e0b05ae41001825535ab96",
+          "isEditable": true,
+          "isRequired": true,
+          "type": "PlainText",
+          "slug": "slug",
+          "displayName": "Slug",
+          "validations": {
+            "maxLength": 256,
+            "pattern": {},
+            "messages": {
+              "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+              "maxLength": "Must be less than 256 characters"
+            }
+          }
+        }
+      ],
+      "fieldGroups": []
+    },
+    {
+      "id": "6af0fba8d6c33f4679f5ae44",
+      "displayName": "Case team",
+      "singularName": "Case team member",
+      "slug": "case-team",
+      "createdOn": "2026-11-08T22:46:00.486Z",
+      "lastUpdated": "2026-11-08T22:46:31.175Z",
+      "fields": [
+        {
+          "id": "886f8fdf005e7215af82d398bdd8c048",
+          "isEditable": true,
+          "isRequired": true,
+          "type": "Reference",
+          "slug": "project",
+          "displayName": "Project",
+          "helpText": "The case study this person worked on.",
+          "validations": {
+            "collectionId": "6aba6bc07d6279b4b561771c"
+          }
+        },
+        {
+          "id": "19f7abcc8c8697e398517880a99f6df1",
+          "isEditable": true,
+          "isRequired": true,
+          "type": "Reference",
+          "slug": "member",
+          "displayName": "Member",
+          "helpText": "The team member. Photo, name, role, colour and LinkedIn come from their Teams entry.",
+          "validations": {
+            "collectionId": "6aba6bc07d6279b4b561778a"
+          }
+        },
+        {
+          "id": "b9977c2e442111fed186938ebfe06162",
+          "isEditable": true,
+          "isRequired": false,
+          "type": "MultiReference",
+          "slug": "worked-on",
+          "displayName": "Worked on",
+          "helpText": "What this person did on THIS project, shown as pills under their photo, e.g. Webflow, or Webflow + Growth.",
+          "validations": {
+            "collectionId": "6aba6bc07d6279b4b5617740"
+          }
+        },
+        {
+          "id": "827c86229ec07448ba058ddfb0e0b4a2",
+          "isEditable": true,
+          "isRequired": true,
+          "type": "PlainText",
+          "slug": "name",
+          "displayName": "Name",
+          "helpText": "Project and person, e.g. Ballerine – Luka Radomirovic. One entry per person per project; the order of entries is the order on the case page.",
+          "validations": {
+            "maxLength": 256
+          }
+        },
+        {
+          "id": "d4e0c854b64c936bcb970d6b90d3ca39",
+          "isEditable": true,
+          "isRequired": true,
+          "type": "PlainText",
+          "slug": "slug",
+          "displayName": "Slug",
+          "validations": {
+            "maxLength": 256,
+            "pattern": {},
+            "messages": {
+              "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+              "maxLength": "Must be less than 256 characters"
+            }
+          }
+        }
+      ],
+      "fieldGroups": []
+    }
+  ]
+}
