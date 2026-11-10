@@ -3,10 +3,17 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 10.11.2026: objava na staging (samo webflow.io, bez pravog domena)
+Objavljene četiri izmene ispod: novi Vimeo snimci, Four ways tabovi, Intaker tab, pravilo za case linkove.
+Provereno na stagingu posle objave:
+- site footer kod na 4 stranice je identičan `webflow-assets/site-code/site-footer.html`;
+- Intaker tab ima sve tri slike i rečenicu;
+- svi case linkovi na Home, Our Work, Ballerine i TrakPro case i Growth vode tačno, nenapisani u novom tabu.
+
 ## 10.11.2026: case linkovi na celom sajtu (zahtev van SEO faza)
 Pravilo: projekat vodi na svoju case stranicu samo ako je case napisan (popunjen „Case title“ u Our Works; sada Ballerine,
 Shiftolic, Sustain, TrakPro, Veyor, plus Pythagora u draftu). Ostali (Intaker, Harper, Hypersonix, LaSalle, Biotech) otvaraju
-svoj sajt („Website link“) u novom tabu; bez Website linka kartica nije link. Nije objavljeno.
+svoj sajt („Website link“) u novom tabu; bez Website linka kartica nije link. Objavljeno na staging 10.11.
 
 | Šta | Gde | Pre | Posle |
 |---|---|---|---|
