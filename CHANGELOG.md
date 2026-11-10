@@ -4,7 +4,9 @@ Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro 
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
 ## 10.11.2026: Webflow Integrations, lista integracija po Figmi 7323:1440 (zahtev van SEO faza)
-Stranica Webflow Integrations (`6ae0d85d4a2c075c26d111c8`). Nije objavljeno.
+Stranica Webflow Integrations (`6ae0d85d4a2c075c26d111c8`). Objavljeno na staging 10.11. Provereno posle objave: 4 grupe (CRM
+sakrivena), opis iz Figme, link vodi na /integrations/webflow-salesforce-integration i ima Glide hover. Ta stranica je i dalje
+404 dok se šablon ne uključi (MANUAL_TASKS 7).
 
 | Šta | Gde | Pre | Posle |
 |---|---|---|---|
