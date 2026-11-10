@@ -1,0 +1,119 @@
+<!-- Nues: code moved here from page embeds. Edit here, not in embeds. -->
+<style>@keyframes heroMarquee{from{transform:translate3d(0,0,0)}to{transform:translate3d(0,-50%,0)}}.hero-cards_component.is-ready .hero-cards_track{animation:heroMarquee var(--hero-speed,40s) linear infinite;will-change:transform}.hero-cards_component.is-ready .hero-cards_track.is-down{animation-direction:reverse}.hero-cards_component:hover .hero-cards_track{animation-play-state:paused}.hero-cards_set{display:flex;flex-direction:column}@media (prefers-reduced-motion: reduce){.hero-cards_component.is-ready .hero-cards_track{animation:none}}
+/* Hero cards: on hover the screenshot slides out to the right, the logo moves to the centre and grows, and the arrow pops up from below.
+   The gradient colours come from the CMS (Colour top / Colour bottom), set by the script in the page footer. */
+.hero-cards_card{background-image:linear-gradient(180deg,var(--hc-top,#1b2a3d) 0%,var(--hc-bottom,#0d1928) 100%);isolation:isolate}
+.hero-cards_card::after{content:"";position:absolute;inset:0;z-index:3;border:1px solid rgba(255,255,255,.14);border-radius:inherit;pointer-events:none}
+@media (hover: hover){.hero-cards_card:hover .hero-cards_shot{transform:translate3d(105%,0,0)}.hero-cards_card:hover .hero-cards_logo{left:50%;top:50%;width:58.37%;transform:translate(-50%,-50%)}.hero-cards_card:hover .hero-cards_arrow{opacity:1;transform:translate(-50%,0) scale(1);transition-delay:.18s}}
+.hero-cards_card:focus-visible{outline:2px solid #5bd3a9;outline-offset:3px}
+.hero-cards_card:focus-visible .hero-cards_shot{transform:translate3d(105%,0,0)}
+.hero-cards_card:focus-visible .hero-cards_logo{left:50%;top:50%;width:58.37%;transform:translate(-50%,-50%)}
+.hero-cards_card:focus-visible .hero-cards_arrow{opacity:1;transform:translate(-50%,0) scale(1)}
+@media (prefers-reduced-motion: reduce){.hero-cards_shot,.hero-cards_logo,.hero-cards_arrow{transition:none}}</style>
+<style>
+/* Hero Clutch badge hover */
+@property --clutch-start { syntax: "<color>"; inherits: false; initial-value: rgba(255,255,255,0.2); }
+.home-hero_clutch { --clutch-start: rgba(255,255,255,0.2); background-image: linear-gradient(180deg, var(--clutch-start) 0%, rgba(255,255,255,0) 100%); transition: --clutch-start 0.3s ease; }
+.home-hero_clutch .home-hero_clutch-icon { transition: background-color 0.3s ease; }
+@media (hover: hover) {
+  .home-hero_clutch:hover { --clutch-start: rgba(255,255,255,0.4); }
+  .home-hero_clutch:hover .home-hero_clutch-icon { background-color: #ffffff; }
+}
+/* 992px - 1279px (no native Webflow breakpoint) */
+@media (min-width: 992px) and (max-width: 1279px) {
+  .section_home-hero .heading-style-h1 { font-size: 4rem; }
+  .home-hero_content { max-width: 56%; }
+  .home-ways_panels { width: 40%; }
+  .home-ways_panel .heading-style-h3 { font-size: 2.5rem; }
+  .home-ways_card-content { padding: 2.5rem; }
+  .home-ways_card-title { font-size: 2.5rem; }
+  .home-projects_info { width: 21.25rem; }
+  .home-projects_tag { flex: none; white-space: nowrap; }
+}
+/* 1441px and up (larger screens, like flowninja.com): the text stays in the centred container while the card columns reach
+   out to 50px from the screen's right edge and grow with the screen. At 1440 both give exactly the design (right 0, 515px). */
+@media (min-width: 1441px) {
+  .home-hero_cards-wrapper { right: calc((100% - 100vw) / 2 + 3.125rem); width: 35.76vw; }
+}
+</style>
+<style>
+/* Four ways (Figma 6758:6402, tab row 7273:1142). The tab row picks the service, the card deck and the details follow.
+   One change: the chosen card is pulled out of the deck to the upper right (still behind the others), turns over the top and is
+   laid on the front while the cards that were in front of it step back one slot; when it lands its arcs and title rise in. The
+   details on the right leave upward and come in line by line, and the underline glides to the tab and fills while that service is
+   shown (then the next one). Only the tab row changes the service: the deck just follows and does not react to clicks.
+   The script is in the page footer. */
+/* tab row (Figma 8545:106): a light segmented bar; the white pill (the old underline, still moved and sized by the script)
+   slides under the current tab. The progress fill stays invisible but keeps running, because autoplay waits for its end. */
+.home-ways_tab{transition:opacity .35s ease}
+.home-ways_tab-icon{transition:filter .35s ease}
+.home-ways_tab:not(.is-active) .home-ways_tab-icon{filter:grayscale(1)}
+@media (hover:hover){.home-ways_tab:not(.is-active):hover{opacity:.6}}
+.home-ways_tab:focus{outline:none}
+.home-ways_tab:focus-visible{outline:2px solid #0d1928;outline-offset:-2px}
+.home-ways_tab-line{transition:transform .6s cubic-bezier(.65,0,.35,1),width .6s cubic-bezier(.65,0,.35,1)}
+.home-ways_tab-fill{transform:scaleX(0)}
+[data-ways].is-auto .home-ways_tab-fill.is-run{animation:ways-fill var(--ways-dur,7000ms) linear forwards}
+[data-ways].is-paused .home-ways_tab-fill{animation-play-state:paused}
+[data-ways].is-still .home-ways_tab-fill{transform:none}
+@keyframes ways-fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media (min-width:992px){.home-ways_tab{padding-left:clamp(1rem,1.67vw,1.5rem);padding-right:clamp(1rem,1.67vw,1.5rem);column-gap:clamp(.625rem,1.04vw,.9375rem)}.home-ways_tab-text{font-size:clamp(1rem,1.53vw,1.375rem)}.home-ways_tab-icon{width:clamp(1.5rem,2.22vw,2rem);height:clamp(1.5rem,2.22vw,2rem)}}
+@media (max-width:991px){.home-ways_tabs{scrollbar-width:none}.home-ways_tabs::-webkit-scrollbar{display:none}.home-ways_tabs[data-more="true"]{-webkit-mask-image:linear-gradient(90deg,#000 78%,transparent);mask-image:linear-gradient(90deg,#000 78%,transparent)}.home-ways_tab:focus-visible{outline-offset:-2px}}
+/* card deck: every slot is a set of numbers, so every move is one smooth transform */
+.home-ways_deck .home-ways_card{--x:0%;--y:0%;--r:0deg;--sx:1;--sy:1;--o:1;transform:translate(var(--x),var(--y)) rotate(var(--r)) scale(var(--sx),var(--sy));opacity:var(--o);transition:transform .8s cubic-bezier(.22,1,.36,1),opacity .5s ease,filter .3s ease;will-change:transform}
+.home-ways_deck .home-ways_card[data-depth="0"]{z-index:40;transition:transform .9s cubic-bezier(.3,1.18,.45,1),opacity .5s ease,filter .3s ease}
+.home-ways_deck .home-ways_card[data-depth="1"]{z-index:30;--x:-5.34%;--y:-2.43%;--r:-2.95deg;--sx:.946;--sy:.982}
+.home-ways_deck .home-ways_card[data-depth="2"]{z-index:20;--x:-11.77%;--y:-4.14%;--r:-6deg;--sx:.869;--sy:.974}
+.home-ways_deck .home-ways_card[data-depth="3"]{z-index:10;--x:-18.78%;--y:-4.1%;--r:-9deg;--sx:.7935;--sy:.99}
+.home-ways_deck .home-ways_card[data-snap]{transition:none!important}
+/* pointing at a tab lights up its card in the deck */
+@media (hover:hover){.home-ways_deck .home-ways_card[data-peek]:not([data-depth="0"]){filter:brightness(1.25)}}
+/* the front card's arcs rise from its bottom edge one after the other (like a sunrise), then its title comes up out of a mask;
+   the cards behind keep both hidden */
+.home-ways_card-icon path{transform-box:fill-box;transform-origin:50% 100%}
+.home-ways_card-icon path:nth-child(2){--a:1}
+.home-ways_card-icon path:nth-child(3){--a:2}
+.home-ways_card .home-ways_card-icon path{transform:translate3d(0,105%,0);transition:none}
+.home-ways_card[data-depth="0"] .home-ways_card-icon path,.home-ways_card[data-leaving] .home-ways_card-icon path{transform:none;transition:transform 1.15s cubic-bezier(.22,1,.36,1) calc(.14s + var(--a,0) * 100ms)}
+.home-ways_card-title .ways-line,.home-ways_panel .ways-line{display:block;overflow:hidden;padding-bottom:.16em;margin-bottom:-.16em}
+.home-ways_card-title .ways-line-in,.home-ways_panel .ways-line-in{display:block}
+.home-ways_card .ways-line-in{transform:translate3d(0,110%,0);transition:none}
+.home-ways_card[data-depth="0"] .ways-line-in,.home-ways_card[data-leaving] .ways-line-in{transform:none;transition:transform .95s cubic-bezier(.22,1,.36,1) calc(.3s + var(--l,0) * 90ms)}
+/* the chosen card keeps both hidden while it flies to the front (data-flying, set by the script) */
+.home-ways_card[data-flying] .home-ways_card-icon path{transform:translate3d(0,105%,0);transition:none}
+.home-ways_card[data-flying] .ways-line-in{transform:translate3d(0,110%,0);transition:none}
+/* before the section scrolls into view the deck lies as one pile, then fans out */
+.home-ways_deck[data-intro] .home-ways_card{--x:0%;--y:0%;--r:0deg;--sx:1;--sy:1}
+.home-ways_deck[data-intro] .home-ways_card .ways-line-in{transform:translate3d(0,110%,0);transition:none}
+.home-ways_deck[data-intro] .home-ways_card .home-ways_card-icon path{transform:translate3d(0,105%,0);transition:none}
+/* details: one panel at a time in the same grid cell; the old one lifts away, the new one comes in piece by piece */
+.home-ways_panels{display:grid}
+.home-ways_panel{grid-area:1/1/2/2;align-self:center}
+.home-ways_panel[data-active="false"],.home-ways_panel[data-active="prep"]{visibility:hidden;pointer-events:none}
+.home-ways_panel[data-active="false"]{transition:visibility 0s linear .4s}
+.home-ways_panel [data-ways-in]{transition:opacity .3s ease,transform .4s cubic-bezier(.4,0,.2,1),filter .3s ease}
+.home-ways_panel[data-active="false"] [data-ways-in]{opacity:0;transform:translate3d(0,-12px,0);filter:blur(4px)}
+.home-ways_panel[data-active="prep"] [data-ways-in]{opacity:0;transform:translate3d(0,18px,0);filter:blur(4px);transition:none}
+.home-ways_panel[data-active="true"] [data-ways-in]{transition:opacity .6s ease,transform .9s cubic-bezier(.22,1,.36,1),filter .6s ease;transition-delay:calc(.3s + var(--i,0) * 60ms)}
+.home-ways_panel .ways-line-in{transition:transform .4s cubic-bezier(.4,0,.2,1)}
+.home-ways_panel[data-active="false"] .ways-line-in{transform:translate3d(0,-105%,0)}
+.home-ways_panel[data-active="prep"] .ways-line-in{transform:translate3d(0,105%,0);transition:none}
+.home-ways_panel[data-active="true"] .ways-line-in{transform:none;transition:transform 1s cubic-bezier(.22,1,.36,1) calc(.22s + var(--l,0) * 90ms)}
+@media (prefers-reduced-motion:reduce){.home-ways_deck .home-ways_card,.home-ways_card-icon path,.ways-line-in,.home-ways_panel,.home-ways_panel [data-ways-in],.home-ways_tab-line,.home-ways_tab,.home-ways_tab-icon{transition:none!important;animation:none!important}}
+</style>
+<style>
+/* Home hero background (nues-home-hero-bg-animation.html; it replaced the earlier background video).
+   home-hero_bg-image is the slats picture; home-hero_bg-light is a brighter copy of it (vignette and 55% strength baked into
+   the file) seen through a soft band (home-hero_bg-band) that rolls down every 11s and then rests. The band moves down while
+   the copy inside it moves up by the same amount, so the copy stays lined up with the picture. Both are transform-only
+   animations: the graphics card does the work and nothing is repainted. Paused while the hero is off screen. */
+.home-hero_bg-band{-webkit-mask-image:linear-gradient(transparent,rgba(0,0,0,.9) 50%,transparent);mask-image:linear-gradient(transparent,rgba(0,0,0,.9) 50%,transparent);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;will-change:transform;animation:hero-bg-band 11s cubic-bezier(.45,0,.55,1) infinite}
+.home-hero_bg-light{will-change:transform;animation:hero-bg-light 11s cubic-bezier(.45,0,.55,1) infinite}
+@keyframes hero-bg-band{0%{transform:translateY(-127.2727%)}60%,100%{transform:translateY(295.4545%)}}
+@keyframes hero-bg-light{0%{transform:translateY(51.8519%)}60%,100%{transform:translateY(-120.3704%)}}
+.home-hero_bg.is-off .home-hero_bg-band,.home-hero_bg.is-off .home-hero_bg-light{animation-play-state:paused}
+@media (prefers-reduced-motion:reduce){.home-hero_bg-band{display:none}}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){var bg=document.querySelector('.home-hero_bg');if(!bg||!('IntersectionObserver' in window))return;new IntersectionObserver(function(e){bg.classList.toggle('is-off',!e[0].isIntersecting);}).observe(bg);});
+</script>
