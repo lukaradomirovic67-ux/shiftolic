@@ -781,3 +781,22 @@ document.addEventListener('DOMContentLoaded', function () {
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
 </script>
+<script>
+/* Case links (site-wide): a project opens its case study only when one is written (Case title filled in Our Works, bound to
+   data-case); otherwise the client's live site (Website link, data-site) in a new tab, or no link at all. Applies to every CMS
+   link that has both attributes; also on hover / focus / tap, so cards that Finsweet re-renders follow it too. */
+(function () {
+  function route(a) {
+    if (!a || !a.hasAttribute('data-site') || (a.getAttribute('data-case') || '').trim()) return;
+    var site = (a.getAttribute('data-site') || '').trim();
+    if (!/^https?:\/\//i.test(site)) { a.removeAttribute('href'); return; }
+    if (a.getAttribute('href') === site) return;
+    a.setAttribute('href', site); a.setAttribute('target', '_blank'); a.setAttribute('rel', 'noopener');
+  }
+  function all() { document.querySelectorAll('a[data-case]').forEach(route); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', all); else all();
+  ['pointerover', 'focusin', 'touchstart', 'click'].forEach(function (t) {
+    document.addEventListener(t, function (e) { route(e.target.closest && e.target.closest('a[data-case]')); }, { capture: true, passive: true });
+  });
+})();
+</script>
