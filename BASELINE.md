@@ -5,10 +5,10 @@ Staging: https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io · Produkcij
 
 ## 0. Kako je mereno i šta nedostaje
 
-- **Lighthouse nije pokrenut.** `npm` ne može da instalira Lighthouse 13.6.0 ni 13.5.0: zavisnost `@puppeteer/browsers@3.2.7`
-  vraća 404 iz npm registra. Po pravilu „dva neuspeha → stop“ nisam dalje pokušavao. Kolone Performance/Accessibility/
-  Best Practices/SEO skor i TBT/INP su zato prazne dok se ne izabere rešenje (vidi QUESTIONS.md, pitanje 1).
-- Umesto toga su težina stranice, broj zahteva, raspodela po tipu, LCP element i CLS izmereni Playwright-om (Chromium,
+- **Lighthouse 13.6.0** (dodato 10.11.): svaka stranica mobilni i desktop × 3 merenja, medijana po Performance skoru. Instaliran uz npm
+  `overrides` (`@puppeteer/browsers` 3.2.6), jer 3.2.7 vraća 404. Sirovi izveštaji: `reports/baseline/lighthouse/` (gzip, bez ugrađenih
+  screenshotova), pregled: `reports/baseline/lighthouse-summary.json`. Rezultati su u odeljku 3a.
+- Pre Lighthouse-a su težina stranice, broj zahteva, raspodela po tipu, LCP element i CLS izmereni Playwright-om (Chromium,
   bez throttlinga, keš isključen). **Bajtovi i LCP element su pouzdani; LCP/CLS u ms su orijentacioni, nisu Lighthouse vrednosti.**
   Sirovi podaci: `reports/baseline/perf-probe.json`.
 - Mreža ovog okruženja blokira: Google Tag Manager, `webflow-files-prod.global.ssl.fastly.net` (Caveat font), cdnjs (three.js na
@@ -109,6 +109,80 @@ Najteži fajlovi (top 10):
 
 Ovo su screenshotovi celih sajtova klijenata, za skrol na hover. Imaju `loading="lazy"`, ali se ipak učitavaju odmah,
 jer su u sliderima i karticama blizu vrha stranice.
+
+## 3a. Lighthouse (mobilni i desktop)
+
+Napomene:
+- SEO je 66 na svim stranicama samo zbog `is-crawlable`: staging namerno zabranjuje indeksiranje. Ostale SEO provere prolaze.
+- Best Practices gubi bodove na „errors in console“. Te greške delom potiču od domena koje ovo okruženje blokira (GTM, fontovi, cdnjs).
+- Rasipanje između merenja je veliko (npr. Home 49/56/83). Zato je uzeta medijana, ali pojedinačne brojke treba čitati sa rezervom.
+
+**Mobilni** (medijana od 3 merenja; Performance svih merenja u zagradi)
+
+| Stranica | Perf | A11y | BP | SEO | LCP | TBT | CLS | FCP | Speed Index | Težina | Zahtevi |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| / | 56 (49/56/83) | 100 | 96 | 66 | 7.2 s | 234 ms | 0.000 | 5.7 s | 6.8 s | 1.246 KB | 66 |
+| /about | 60 (60/60/65) | 100 | 96 | 66 | 7.2 s | 110 ms | 0.000 | 5.6 s | 6.1 s | 1.183 KB | 42 |
+| /services | 60 (59/60/64) | 95 | 96 | 66 | 7.1 s | 111 ms | 0.001 | 5.5 s | 6.2 s | 939 KB | 55 |
+| /services/design-development | 60 (59/60/60) | 95 | 96 | 66 | 7.2 s | 114 ms | 0.001 | 5.6 s | 6.5 s | 923 KB | 50 |
+| /services/webflow-development | 60 (58/60/65) | 95 | 96 | 66 | 7.2 s | 121 ms | 0.000 | 5.6 s | 6.6 s | 923 KB | 50 |
+| /services/seo-aeo | 62 (59/62/63) | 95 | 96 | 66 | 7.3 s | 66 ms | 0.001 | 5.5 s | 5.5 s | 923 KB | 50 |
+| /services/growth | 61 (58/61/65) | 95 | 96 | 66 | 7.2 s | 133 ms | 0.000 | 5.6 s | 5.6 s | 923 KB | 50 |
+| /our-work | 59 (52/59/61) | 90 | 92 | 66 | 8.9 s | 144 ms | 0.011 | 6.1 s | 6.1 s | 1.333 KB | 72 |
+| /pricing | 61 (61/61/63) | 100 | 96 | 66 | 6.8 s | 83 ms | 0.000 | 5.6 s | 6.3 s | 762 KB | 33 |
+| /lets-talk | 63 (61/63/66) | 94 | 96 | 66 | 6.8 s | 49 ms | 0.000 | 5.3 s | 5.3 s | 766 KB | 32 |
+| /careers | 61 (56/61/61) | 98 | 96 | 66 | 7.8 s | 104 ms | 0.000 | 5.4 s | 5.4 s | 936 KB | 33 |
+| /blog | 62 (62/62/62) | 92 | 96 | 66 | 7.2 s | 67 ms | 0.000 | 5.4 s | 5.4 s | 1.009 KB | 55 |
+| /resources | 40 (40/40/65) | 96 | 96 | 66 | 5.4 s | 1550 ms | 0.000 | 5.4 s | 5.4 s | 3.986 KB | 44 |
+| /webflow-integrations | 63 (63/63/67) | 98 | 96 | 66 | 6.6 s | 86 ms | 0.015 | 5.2 s | 5.2 s | 792 KB | 40 |
+| /privacy-policy | 66 (64/66/68) | 97 | 96 | 66 | 5.6 s | 254 ms | 0.003 | 3.8 s | 3.8 s | 746 KB | 25 |
+| /terms-of-service | 66 (64/66/67) | 97 | 96 | 66 | 6.7 s | 237 ms | 0.003 | 3.0 s | 3.6 s | 748 KB | 25 |
+| /our-work/ballerine (šablon Our Works) | 56 (47/56/61) | 95 | 92 | 66 | 12.0 s | 445 ms | 0.009 | 2.9 s | 4.5 s | 1.800 KB | 33 |
+| /blog/aeo-tools-… (šablon Blogs) | 61 (58/61/62) | 98 | 96 | 66 | 7.0 s | 225 ms | 0.003 | 4.5 s | 5.0 s | 810 KB | 39 |
+
+**Desktop** (medijana od 3 merenja; Performance svih merenja u zagradi)
+
+| Stranica | Perf | A11y | BP | SEO | LCP | TBT | CLS | FCP | Speed Index | Težina | Zahtevi |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| / | 85 (85/85/86) | 96 | 96 | 66 | 2.1 s | 10 ms | 0.001 | 1.2 s | 1.6 s | 1.628 KB | 71 |
+| /about | 87 (86/87/89) | 96 | 96 | 66 | 2.0 s | 0 ms | 0.001 | 1.1 s | 1.4 s | 1.294 KB | 42 |
+| /services | 88 (87/88/89) | 91 | 96 | 66 | 1.9 s | 0 ms | 0.002 | 1.2 s | 1.5 s | 939 KB | 56 |
+| /services/design-development | 88 (87/88/89) | 95 | 96 | 66 | 1.9 s | 0 ms | 0.002 | 1.1 s | 1.5 s | 923 KB | 50 |
+| /services/webflow-development | 87 (86/87/87) | 95 | 96 | 66 | 1.9 s | 0 ms | 0.002 | 1.2 s | 1.6 s | 924 KB | 50 |
+| /services/seo-aeo | 88 (86/88/88) | 95 | 96 | 66 | 1.8 s | 0 ms | 0.002 | 1.2 s | 1.6 s | 923 KB | 50 |
+| /services/growth | 87 (86/87/88) | 95 | 96 | 66 | 2.0 s | 0 ms | 0.002 | 1.2 s | 1.5 s | 923 KB | 50 |
+| /our-work | 83 (81/83/83) | 90 | 92 | 66 | 2.4 s | 7 ms | 0.002 | 1.2 s | 1.6 s | 1.668 KB | 68 |
+| /pricing | 87 (86/87/88) | 96 | 96 | 66 | 1.9 s | 0 ms | 0.002 | 1.4 s | 1.4 s | 763 KB | 34 |
+| /lets-talk | 88 (88/88/90) | 90 | 96 | 66 | 1.9 s | 0 ms | 0.001 | 1.3 s | 1.3 s | 860 KB | 36 |
+| /careers | 90 (88/90/91) | 91 | 96 | 66 | 1.6 s | 0 ms | 0.001 | 1.3 s | 1.4 s | 1.080 KB | 37 |
+| /blog | 88 (86/88/88) | 92 | 96 | 66 | 1.8 s | 0 ms | 0.001 | 1.3 s | 1.4 s | 1.434 KB | 53 |
+| /resources | 83 (81/83/87) | 92 | 96 | 66 | 1.1 s | 295 ms | 0.002 | 1.1 s | 1.3 s | 4.640 KB | 48 |
+| /webflow-integrations | 90 (90/90/91) | 95 | 96 | 66 | 1.5 s | 0 ms | 0.001 | 1.3 s | 1.3 s | 792 KB | 40 |
+| /privacy-policy | 90 (90/90/90) | 93 | 96 | 66 | 1.7 s | 0 ms | 0.001 | 1.2 s | 1.2 s | 746 KB | 25 |
+| /terms-of-service | 89 (88/89/90) | 93 | 96 | 66 | 1.6 s | 0 ms | 0.001 | 1.4 s | 1.4 s | 747 KB | 25 |
+| /our-work/ballerine (šablon Our Works) | 80 (74/80/82) | 91 | 92 | 66 | 2.7 s | 45 ms | 0.024 | 1.3 s | 1.5 s | 1.897 KB | 35 |
+| /blog/aeo-tools-… (šablon Blogs) | 88 (82/88/89) | 96 | 96 | 66 | 1.7 s | 0 ms | 0.001 | 1.4 s | 1.4 s | 857 KB | 33 |
+
+**Šta najviše usporava (mobilni, zbir procenjenih ušteda preko 18 stranica):**
+
+| Problem | Stranice | Ušteda | Detalj |
+|---|---|---|---|
+| Render-blocking zahtevi | 18/18 | ~1,5 s po stranici | zajednički Webflow CSS (89 KB preneto, ~1,5 s) i `webfont.js` za Google Fonts (~0,9 s) |
+| Neiskorišćen JavaScript | 18/18 | ~0,9 s, 2,4 MB ukupno | GA/Google tag (79 KB), Webflow chunk (59 KB) |
+| Neiskorišćen CSS | 18/18 | ~0,5 s, 1,4 MB ukupno | jedan zajednički CSS za ceo sajt (565 KB nekompresovano) |
+| Isporuka slika | Home, Our Work, Resources | ~1,7 s po stranici | screenshotovi celih sajtova (0,4–1 MB) |
+| Neminifikovan CSS | 18/18 | ~0,2 s | uključiti minifikaciju u podešavanjima sajta |
+| Glavna nit (TBT) | 11 | | Resources 1,5 s, Ballerine case 0,45 s, Home 0,23 s |
+
+LCP element na Home je hero slika (`home-hero_bg-image`). Već je `loading="eager"` i `fetchpriority="high"`, pa kasni zbog CSS-a i fontova
+koji blokiraju iscrtavanje. Na servisnim stranicama i ostalima LCP je H1 tekst.
+
+**Pristupačnost (padovi na Lighthouse proverama):**
+- `target-size` i `label-content-name-mismatch` padaju na svih 18 stranica (male mete za dodir, aria-label koji se ne poklapa sa vidljivim tekstom);
+- `landmark-one-main` na 13 stranica (nema `<main>`);
+- `color-contrast` na 10;
+- `aria-required-children` na Blog i Our Work;
+- `heading-order` na pravnim stranicama.
 
 ## 4. Top 15 problema po uticaju
 

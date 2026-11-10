@@ -1,0 +1,2526 @@
+{
+ "about|desktop": {
+  "run": "3",
+  "perf": 87,
+  "a11y": 96,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 2000.4975,
+  "tbt": 0,
+  "cls": 0.0005099996590145655,
+  "fcp": 1142.0214999999998,
+  "si": 1355.009796184438,
+  "bytes": 1325552,
+  "requests": 42,
+  "lcpEl": "",
+  "opps": {
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 0,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unminified-javascript": {
+    "title": "Minify JavaScript",
+    "ms": 0,
+    "kb": 3,
+    "display": "Est savings of 3\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 40,
+    "kb": 80,
+    "display": "Est savings of 80\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 80,
+    "kb": 138,
+    "display": "Est savings of 138\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 60\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 500,
+    "kb": 0,
+    "display": "Est savings of 480\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "target-size",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   86,
+   87,
+   89
+  ]
+ },
+ "about|mobile": {
+  "run": "3",
+  "perf": 60,
+  "a11y": 100,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 7160.08035,
+  "tbt": 110,
+  "cls": 0,
+  "fcp": 5621.9886,
+  "si": 6137.271585024206,
+  "bytes": 1211743,
+  "requests": 42,
+  "lcpEl": "",
+  "opps": {
+   "mainthread-work-breakdown": {
+    "title": "Minimize main-thread work",
+    "ms": 100,
+    "kb": 0,
+    "display": "2.4\u00a0s"
+   },
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 200,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unminified-javascript": {
+    "title": "Minify JavaScript",
+    "ms": 0,
+    "kb": 3,
+    "display": "Est savings of 3\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 410,
+    "kb": 79,
+    "display": "Est savings of 79\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 820,
+    "kb": 138,
+    "display": "Est savings of 138\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 50\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 400,
+    "kb": 0,
+    "display": "Est savings of 410\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   60,
+   60,
+   65
+  ]
+ },
+ "blog|desktop": {
+  "run": "1",
+  "perf": 88,
+  "a11y": 92,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 1824.8393752425307,
+  "tbt": 0,
+  "cls": 0.0005099996590145655,
+  "fcp": 1284.4907369952825,
+  "si": 1360.029313316646,
+  "bytes": 1468679,
+  "requests": 53,
+  "lcpEl": "",
+  "opps": {
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 50,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 80,
+    "kb": 87,
+    "display": "Est savings of 87\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 170,
+    "kb": 139,
+    "display": "Est savings of 139\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 60\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 700,
+    "kb": 0,
+    "display": "Est savings of 690\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "aria-required-children",
+   "target-size",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   86,
+   88,
+   88
+  ]
+ },
+ "blog|mobile": {
+  "run": "2",
+  "perf": 62,
+  "a11y": 92,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 7153.316900000003,
+  "tbt": 67,
+  "cls": 0,
+  "fcp": 5445.954200000001,
+  "si": 5445.954200000001,
+  "bytes": 1032942,
+  "requests": 55,
+  "lcpEl": "",
+  "opps": {
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 200,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 600,
+    "kb": 86,
+    "display": "Est savings of 86\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 1000,
+    "kb": 139,
+    "display": "Est savings of 139\u00a0KiB"
+   },
+   "cache-insight": {
+    "title": "Use efficient cache lifetimes",
+    "ms": 200,
+    "kb": 0,
+    "display": "Est savings of 30\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 60\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 2500,
+    "kb": 0,
+    "display": "Est savings of 2,520\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "aria-required-children",
+   "target-size",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   62,
+   62,
+   62
+  ]
+ },
+ "blog__aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search|desktop": {
+  "run": "1",
+  "perf": 88,
+  "a11y": 96,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 1682.7417000000005,
+  "tbt": 0,
+  "cls": 0.0005099996590145655,
+  "fcp": 1383.3629000000005,
+  "si": 1417.439607513591,
+  "bytes": 877106,
+  "requests": 33,
+  "lcpEl": "",
+  "opps": {
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 50,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 100,
+    "kb": 81,
+    "display": "Est savings of 81\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 80,
+    "kb": 139,
+    "display": "Est savings of 139\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 100,
+    "kb": 0,
+    "display": "Est savings of 90\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 700,
+    "kb": 0,
+    "display": "Est savings of 690\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "target-size",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   82,
+   88,
+   89
+  ]
+ },
+ "blog__aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search|mobile": {
+  "run": "1",
+  "perf": 61,
+  "a11y": 98,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 7034.7880000000005,
+  "tbt": 225,
+  "cls": 0.002731603363737979,
+  "fcp": 4507.035500000001,
+  "si": 4963.34990662513,
+  "bytes": 829019,
+  "requests": 39,
+  "lcpEl": "",
+  "opps": {
+   "server-response-time": {
+    "title": "Reduce initial server response time",
+    "ms": 955,
+    "kb": 0,
+    "display": "Root document took 1,060\u00a0ms"
+   },
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 190,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 580,
+    "kb": 87,
+    "display": "Est savings of 87\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 780,
+    "kb": 138,
+    "display": "Est savings of 138\u00a0KiB"
+   },
+   "document-latency-insight": {
+    "title": "Document request latency",
+    "ms": 950,
+    "kb": 0,
+    "display": "Est savings of 960\u00a0ms"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 60\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 2300,
+    "kb": 0,
+    "display": "Est savings of 2,310\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "landmark-one-main",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   58,
+   61,
+   62
+  ]
+ },
+ "careers|desktop": {
+  "run": "3",
+  "perf": 90,
+  "a11y": 91,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 1573.7884999999997,
+  "tbt": 0,
+  "cls": 0.0005099996590145655,
+  "fcp": 1346.8413,
+  "si": 1439.4508918048973,
+  "bytes": 1105964,
+  "requests": 37,
+  "lcpEl": "",
+  "opps": {
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 100,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 100,
+    "kb": 81,
+    "display": "Est savings of 81\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 100,
+    "kb": 139,
+    "display": "Est savings of 139\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 50\u00a0ms"
+   },
+   "image-delivery-insight": {
+    "title": "Improve image delivery",
+    "ms": 200,
+    "kb": 0,
+    "display": "Est savings of 259\u00a0KiB"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 750,
+    "kb": 0,
+    "display": "Est savings of 770\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "color-contrast",
+   "target-size",
+   "landmark-one-main",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   88,
+   90,
+   91
+  ]
+ },
+ "careers|mobile": {
+  "run": "2",
+  "perf": 61,
+  "a11y": 98,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 7788.366100000001,
+  "tbt": 104,
+  "cls": 0,
+  "fcp": 5422.7509,
+  "si": 5422.7509,
+  "bytes": 958610,
+  "requests": 33,
+  "lcpEl": "",
+  "opps": {
+   "mainthread-work-breakdown": {
+    "title": "Minimize main-thread work",
+    "ms": 100,
+    "kb": 0,
+    "display": "3.3\u00a0s"
+   },
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 200,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 590,
+    "kb": 80,
+    "display": "Est savings of 80\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 790,
+    "kb": 139,
+    "display": "Est savings of 139\u00a0KiB"
+   },
+   "cache-insight": {
+    "title": "Use efficient cache lifetimes",
+    "ms": 200,
+    "kb": 0,
+    "display": "Est savings of 2\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 100,
+    "kb": 0,
+    "display": "Est savings of 80\u00a0ms"
+   },
+   "image-delivery-insight": {
+    "title": "Improve image delivery",
+    "ms": 800,
+    "kb": 0,
+    "display": "Est savings of 139\u00a0KiB"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 2400,
+    "kb": 0,
+    "display": "Est savings of 2,380\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "landmark-one-main",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   56,
+   61,
+   61
+  ]
+ },
+ "home|desktop": {
+  "run": "2",
+  "perf": 85,
+  "a11y": 96,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 2124.5538,
+  "tbt": 10.000000000000227,
+  "cls": 0.0005099996590145655,
+  "fcp": 1190.0828999999999,
+  "si": 1633.085543670326,
+  "bytes": 1666830,
+  "requests": 71,
+  "lcpEl": "",
+  "opps": {
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 0,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 100,
+    "kb": 78,
+    "display": "Est savings of 78\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 0,
+    "kb": 138,
+    "display": "Est savings of 138\u00a0KiB"
+   },
+   "cache-insight": {
+    "title": "Use efficient cache lifetimes",
+    "ms": 100,
+    "kb": 0,
+    "display": "Est savings of 187\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 50\u00a0ms"
+   },
+   "image-delivery-insight": {
+    "title": "Improve image delivery",
+    "ms": 150,
+    "kb": 0,
+    "display": "Est savings of 536\u00a0KiB"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 500,
+    "kb": 0,
+    "display": "Est savings of 480\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "target-size",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   85,
+   85,
+   86
+  ]
+ },
+ "home|mobile": {
+  "run": "3",
+  "perf": 56,
+  "a11y": 100,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 7155.217,
+  "tbt": 234,
+  "cls": 0,
+  "fcp": 5676.4495,
+  "si": 6797.26795219061,
+  "bytes": 1275808,
+  "requests": 66,
+  "lcpEl": "",
+  "opps": {
+   "mainthread-work-breakdown": {
+    "title": "Minimize main-thread work",
+    "ms": 250,
+    "kb": 0,
+    "display": "2.8\u00a0s"
+   },
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 200,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 390,
+    "kb": 77,
+    "display": "Est savings of 77\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 990,
+    "kb": 138,
+    "display": "Est savings of 138\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 60\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 600,
+    "kb": 0,
+    "display": "Est savings of 590\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   49,
+   56,
+   83
+  ]
+ },
+ "lets-talk|desktop": {
+  "run": "3",
+  "perf": 88,
+  "a11y": 90,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 1864.7296,
+  "tbt": 0,
+  "cls": 0.0005099996590145655,
+  "fcp": 1263.3756999999998,
+  "si": 1263.3756999999998,
+  "bytes": 880829,
+  "requests": 36,
+  "lcpEl": "",
+  "opps": {
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 0,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 90,
+    "kb": 87,
+    "display": "Est savings of 87\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 170,
+    "kb": 138,
+    "display": "Est savings of 138\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 40\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 600,
+    "kb": 0,
+    "display": "Est savings of 590\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "color-contrast",
+   "target-size",
+   "landmark-one-main",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   88,
+   88,
+   90
+  ]
+ },
+ "lets-talk|mobile": {
+  "run": "2",
+  "perf": 63,
+  "a11y": 94,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 6819.802799999999,
+  "tbt": 49,
+  "cls": 0,
+  "fcp": 5256.188399999999,
+  "si": 5256.188399999999,
+  "bytes": 784513,
+  "requests": 32,
+  "lcpEl": "",
+  "opps": {
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 200,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 590,
+    "kb": 87,
+    "display": "Est savings of 87\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 980,
+    "kb": 138,
+    "display": "Est savings of 138\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 60\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 2400,
+    "kb": 0,
+    "display": "Est savings of 2,380\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "color-contrast",
+   "landmark-one-main",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   61,
+   63,
+   66
+  ]
+ },
+ "our-work|desktop": {
+  "run": "1",
+  "perf": 83,
+  "a11y": 90,
+  "bp": 92,
+  "seo": 66,
+  "lcp": 2353.1670999999997,
+  "tbt": 7,
+  "cls": 0.0024239234541421598,
+  "fcp": 1219.378,
+  "si": 1638.2916184018559,
+  "bytes": 1707894,
+  "requests": 68,
+  "lcpEl": "",
+  "opps": {
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 0,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 90,
+    "kb": 79,
+    "display": "Est savings of 79\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 90,
+    "kb": 136,
+    "display": "Est savings of 136\u00a0KiB"
+   },
+   "cache-insight": {
+    "title": "Use efficient cache lifetimes",
+    "ms": 100,
+    "kb": 0,
+    "display": "Est savings of 116\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 40\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 550,
+    "kb": 0,
+    "display": "Est savings of 530\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "aria-required-children",
+   "target-size",
+   "landmark-one-main",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "image-aspect-ratio",
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   81,
+   83,
+   83
+  ]
+ },
+ "our-work|mobile": {
+  "run": "2",
+  "perf": 59,
+  "a11y": 90,
+  "bp": 92,
+  "seo": 66,
+  "lcp": 8887.255699999996,
+  "tbt": 144.5,
+  "cls": 0.010935601458080195,
+  "fcp": 6054.063,
+  "si": 6054.063,
+  "bytes": 1364635,
+  "requests": 72,
+  "lcpEl": "",
+  "opps": {
+   "mainthread-work-breakdown": {
+    "title": "Minimize main-thread work",
+    "ms": 150,
+    "kb": 0,
+    "display": "2.9\u00a0s"
+   },
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 200,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 780,
+    "kb": 78,
+    "display": "Est savings of 78\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 780,
+    "kb": 136,
+    "display": "Est savings of 136\u00a0KiB"
+   },
+   "cache-insight": {
+    "title": "Use efficient cache lifetimes",
+    "ms": 400,
+    "kb": 0,
+    "display": "Est savings of 142\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 60\u00a0ms"
+   },
+   "image-delivery-insight": {
+    "title": "Improve image delivery",
+    "ms": 600,
+    "kb": 0,
+    "display": "Est savings of 254\u00a0KiB"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 2450,
+    "kb": 0,
+    "display": "Est savings of 2,470\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "aria-required-children",
+   "color-contrast",
+   "landmark-one-main",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "image-aspect-ratio",
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   52,
+   59,
+   61
+  ]
+ },
+ "our-work__ballerine|desktop": {
+  "run": "2",
+  "perf": 80,
+  "a11y": 91,
+  "bp": 92,
+  "seo": 66,
+  "lcp": 2725.5139,
+  "tbt": 45,
+  "cls": 0.024009880127577796,
+  "fcp": 1340.0196999999998,
+  "si": 1468.3564755637403,
+  "bytes": 1942737,
+  "requests": 35,
+  "lcpEl": "",
+  "opps": {
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 50,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 80,
+    "kb": 81,
+    "display": "Est savings of 81\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 170,
+    "kb": 139,
+    "display": "Est savings of 139\u00a0KiB"
+   },
+   "cache-insight": {
+    "title": "Use efficient cache lifetimes",
+    "ms": 350,
+    "kb": 0,
+    "display": "Est savings of 459\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 50\u00a0ms"
+   },
+   "image-delivery-insight": {
+    "title": "Improve image delivery",
+    "ms": 650,
+    "kb": 0,
+    "display": "Est savings of 851\u00a0KiB"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 700,
+    "kb": 0,
+    "display": "Est savings of 700\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "color-contrast",
+   "target-size",
+   "landmark-one-main",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "image-aspect-ratio",
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   74,
+   80,
+   82
+  ]
+ },
+ "our-work__ballerine|mobile": {
+  "run": "1",
+  "perf": 56,
+  "a11y": 95,
+  "bp": 92,
+  "seo": 66,
+  "lcp": 11960.088000000002,
+  "tbt": 445,
+  "cls": 0.00920925307311112,
+  "fcp": 2914.165,
+  "si": 4450.481645118373,
+  "bytes": 1843008,
+  "requests": 33,
+  "lcpEl": "",
+  "opps": {
+   "server-response-time": {
+    "title": "Reduce initial server response time",
+    "ms": 709,
+    "kb": 0,
+    "display": "Root document took 810\u00a0ms"
+   },
+   "mainthread-work-breakdown": {
+    "title": "Minimize main-thread work",
+    "ms": 450,
+    "kb": 0,
+    "display": "2.0\u00a0s"
+   },
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 200,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 390,
+    "kb": 80,
+    "display": "Est savings of 80\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 980,
+    "kb": 139,
+    "display": "Est savings of 139\u00a0KiB"
+   },
+   "cache-insight": {
+    "title": "Use efficient cache lifetimes",
+    "ms": 1950,
+    "kb": 0,
+    "display": "Est savings of 419\u00a0KiB"
+   },
+   "document-latency-insight": {
+    "title": "Document request latency",
+    "ms": 700,
+    "kb": 0,
+    "display": "Est savings of 710\u00a0ms"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 60\u00a0ms"
+   },
+   "image-delivery-insight": {
+    "title": "Improve image delivery",
+    "ms": 3750,
+    "kb": 0,
+    "display": "Est savings of 772\u00a0KiB"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 1350,
+    "kb": 0,
+    "display": "Est savings of 1,350\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "color-contrast",
+   "landmark-one-main",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "image-aspect-ratio",
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   47,
+   56,
+   61
+  ]
+ },
+ "pricing|desktop": {
+  "run": "2",
+  "perf": 87,
+  "a11y": 96,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 1879.3298000000002,
+  "tbt": 0,
+  "cls": 0.0021011143154042143,
+  "fcp": 1403.3331999999998,
+  "si": 1403.570461207234,
+  "bytes": 781311,
+  "requests": 34,
+  "lcpEl": "",
+  "opps": {
+   "server-response-time": {
+    "title": "Initial server response time was short",
+    "ms": 18,
+    "kb": 0,
+    "display": "Root document took 120\u00a0ms"
+   },
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 90,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 90,
+    "kb": 87,
+    "display": "Est savings of 87\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 90,
+    "kb": 139,
+    "display": "Est savings of 139\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 60\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 700,
+    "kb": 0,
+    "display": "Est savings of 690\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "target-size",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   86,
+   87,
+   88
+  ]
+ },
+ "pricing|mobile": {
+  "run": "3",
+  "perf": 61,
+  "a11y": 100,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 6823.030999999998,
+  "tbt": 83,
+  "cls": 0,
+  "fcp": 5644.406,
+  "si": 6338.165972126741,
+  "bytes": 780726,
+  "requests": 33,
+  "lcpEl": "",
+  "opps": {
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 200,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 590,
+    "kb": 87,
+    "display": "Est savings of 87\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 980,
+    "kb": 139,
+    "display": "Est savings of 139\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 100,
+    "kb": 0,
+    "display": "Est savings of 90\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 2450,
+    "kb": 0,
+    "display": "Est savings of 2,470\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   61,
+   61,
+   63
+  ]
+ },
+ "privacy-policy|desktop": {
+  "run": "2",
+  "perf": 90,
+  "a11y": 93,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 1738.1801999999998,
+  "tbt": 0,
+  "cls": 0.0005099996590145655,
+  "fcp": 1228.1466,
+  "si": 1228.1466,
+  "bytes": 764063,
+  "requests": 25,
+  "lcpEl": "",
+  "opps": {
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 0,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 110,
+    "kb": 87,
+    "display": "Est savings of 87\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 110,
+    "kb": 138,
+    "display": "Est savings of 138\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 60\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 600,
+    "kb": 0,
+    "display": "Est savings of 610\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "heading-order",
+   "target-size",
+   "landmark-one-main",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   90,
+   90,
+   90
+  ]
+ },
+ "privacy-policy|mobile": {
+  "run": "1",
+  "perf": 66,
+  "a11y": 97,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 5584.0945999999985,
+  "tbt": 254,
+  "cls": 0.002731603363737979,
+  "fcp": 3846.7459999999996,
+  "si": 3846.7459999999996,
+  "bytes": 763985,
+  "requests": 25,
+  "lcpEl": "",
+  "opps": {
+   "server-response-time": {
+    "title": "Initial server response time was short",
+    "ms": 363,
+    "kb": 0,
+    "display": "Root document took 460\u00a0ms"
+   },
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 200,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 400,
+    "kb": 87,
+    "display": "Est savings of 87\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 800,
+    "kb": 139,
+    "display": "Est savings of 139\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 60\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 2250,
+    "kb": 0,
+    "display": "Est savings of 2,260\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "heading-order",
+   "landmark-one-main",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   64,
+   66,
+   68
+  ]
+ },
+ "resources|desktop": {
+  "run": "1",
+  "perf": 83,
+  "a11y": 92,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 1112.929,
+  "tbt": 294.8832500000001,
+  "cls": 0.0018066075926189559,
+  "fcp": 1112.929,
+  "si": 1298.252693614947,
+  "bytes": 4751297,
+  "requests": 48,
+  "lcpEl": "",
+  "opps": {
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 0,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 70,
+    "kb": 81,
+    "display": "Est savings of 81\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 0,
+    "kb": 138,
+    "display": "Est savings of 138\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 40\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 500,
+    "kb": 0,
+    "display": "Est savings of 520\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "color-contrast",
+   "target-size",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   81,
+   83,
+   87
+  ]
+ },
+ "resources|mobile": {
+  "run": "3",
+  "perf": 40,
+  "a11y": 96,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 5437.2275,
+  "tbt": 1550.23475,
+  "cls": 0,
+  "fcp": 5437.2275,
+  "si": 5437.2275,
+  "bytes": 4081514,
+  "requests": 44,
+  "lcpEl": "",
+  "opps": {
+   "mainthread-work-breakdown": {
+    "title": "Minimize main-thread work",
+    "ms": 1550,
+    "kb": 0,
+    "display": "3.5\u00a0s"
+   },
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 200,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 410,
+    "kb": 81,
+    "display": "Est savings of 81\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 410,
+    "kb": 139,
+    "display": "Est savings of 139\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 60\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 2400,
+    "kb": 0,
+    "display": "Est savings of 2,420\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "color-contrast",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   40,
+   40,
+   65
+  ]
+ },
+ "services|desktop": {
+  "run": "3",
+  "perf": 88,
+  "a11y": 91,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 1919.5121999999997,
+  "tbt": 0,
+  "cls": 0.002293911397285189,
+  "fcp": 1151.8490000000002,
+  "si": 1481.4349948403155,
+  "bytes": 961659,
+  "requests": 56,
+  "lcpEl": "",
+  "opps": {
+   "server-response-time": {
+    "title": "Initial server response time was short",
+    "ms": 2,
+    "kb": 0,
+    "display": "Root document took 100\u00a0ms"
+   },
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 20,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unminified-javascript": {
+    "title": "Minify JavaScript",
+    "ms": 0,
+    "kb": 2,
+    "display": "Est savings of 2\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 90,
+    "kb": 78,
+    "display": "Est savings of 78\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 90,
+    "kb": 137,
+    "display": "Est savings of 137\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 40\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 500,
+    "kb": 0,
+    "display": "Est savings of 510\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "color-contrast",
+   "target-size",
+   "landmark-one-main",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   87,
+   88,
+   89
+  ]
+ },
+ "services|mobile": {
+  "run": "3",
+  "perf": 60,
+  "a11y": 95,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 7149.376750000001,
+  "tbt": 111,
+  "cls": 0.0006765581086657532,
+  "fcp": 5475.720800000001,
+  "si": 6234.133679031094,
+  "bytes": 961102,
+  "requests": 55,
+  "lcpEl": "",
+  "opps": {
+   "mainthread-work-breakdown": {
+    "title": "Minimize main-thread work",
+    "ms": 100,
+    "kb": 0,
+    "display": "2.4\u00a0s"
+   },
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 200,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unminified-javascript": {
+    "title": "Minify JavaScript",
+    "ms": 0,
+    "kb": 2,
+    "display": "Est savings of 2\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 390,
+    "kb": 77,
+    "display": "Est savings of 77\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 790,
+    "kb": 137,
+    "display": "Est savings of 137\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 40\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 400,
+    "kb": 0,
+    "display": "Est savings of 390\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "color-contrast",
+   "landmark-one-main",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   59,
+   60,
+   64
+  ]
+ },
+ "services__design-development|desktop": {
+  "run": "3",
+  "perf": 88,
+  "a11y": 95,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 1861.7060000000001,
+  "tbt": 0,
+  "cls": 0.002223540444304767,
+  "fcp": 1140.9540000000002,
+  "si": 1530.4712437962412,
+  "bytes": 945074,
+  "requests": 50,
+  "lcpEl": "",
+  "opps": {
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 0,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 20,
+    "kb": 79,
+    "display": "Est savings of 79\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 20,
+    "kb": 137,
+    "display": "Est savings of 137\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 40\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 500,
+    "kb": 0,
+    "display": "Est savings of 490\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "target-size",
+   "landmark-one-main",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   87,
+   88,
+   89
+  ]
+ },
+ "services__design-development|mobile": {
+  "run": "2",
+  "perf": 60,
+  "a11y": 95,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 7244.268899999999,
+  "tbt": 114,
+  "cls": 0.0006765581086657532,
+  "fcp": 5592.755300000001,
+  "si": 6471.865181996622,
+  "bytes": 945154,
+  "requests": 50,
+  "lcpEl": "",
+  "opps": {
+   "mainthread-work-breakdown": {
+    "title": "Minimize main-thread work",
+    "ms": 100,
+    "kb": 0,
+    "display": "2.4\u00a0s"
+   },
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 210,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 620,
+    "kb": 78,
+    "display": "Est savings of 78\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 830,
+    "kb": 137,
+    "display": "Est savings of 137\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 60\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 400,
+    "kb": 0,
+    "display": "Est savings of 410\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "color-contrast",
+   "landmark-one-main",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   59,
+   60,
+   60
+  ]
+ },
+ "services__growth|desktop": {
+  "run": "3",
+  "perf": 87,
+  "a11y": 95,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 1952.8423499999994,
+  "tbt": 0,
+  "cls": 0.0022275970517668118,
+  "fcp": 1177.2855,
+  "si": 1500.0228416094537,
+  "bytes": 945344,
+  "requests": 50,
+  "lcpEl": "",
+  "opps": {
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 20,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 90,
+    "kb": 78,
+    "display": "Est savings of 78\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 90,
+    "kb": 136,
+    "display": "Est savings of 136\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 60\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 500,
+    "kb": 0,
+    "display": "Est savings of 520\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "target-size",
+   "landmark-one-main",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   86,
+   87,
+   88
+  ]
+ },
+ "services__growth|mobile": {
+  "run": "3",
+  "perf": 61,
+  "a11y": 95,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 7232.3894500000015,
+  "tbt": 133,
+  "cls": 0,
+  "fcp": 5569.350000000001,
+  "si": 5569.350000000001,
+  "bytes": 945578,
+  "requests": 50,
+  "lcpEl": "",
+  "opps": {
+   "mainthread-work-breakdown": {
+    "title": "Minimize main-thread work",
+    "ms": 150,
+    "kb": 0,
+    "display": "2.6\u00a0s"
+   },
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 200,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 390,
+    "kb": 77,
+    "display": "Est savings of 77\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 980,
+    "kb": 137,
+    "display": "Est savings of 137\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 50\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 400,
+    "kb": 0,
+    "display": "Est savings of 390\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "color-contrast",
+   "landmark-one-main",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   58,
+   61,
+   65
+  ]
+ },
+ "services__seo-aeo|desktop": {
+  "run": "1",
+  "perf": 88,
+  "a11y": 95,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 1845.8457999999998,
+  "tbt": 0,
+  "cls": 0.002223540444304767,
+  "fcp": 1169.8539999999998,
+  "si": 1555.642196865005,
+  "bytes": 945321,
+  "requests": 50,
+  "lcpEl": "",
+  "opps": {
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 0,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 30,
+    "kb": 78,
+    "display": "Est savings of 78\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 20,
+    "kb": 137,
+    "display": "Est savings of 137\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 60\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 550,
+    "kb": 0,
+    "display": "Est savings of 530\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "target-size",
+   "landmark-one-main",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   86,
+   88,
+   88
+  ]
+ },
+ "services__seo-aeo|mobile": {
+  "run": "2",
+  "perf": 62,
+  "a11y": 95,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 7286.337400000001,
+  "tbt": 66,
+  "cls": 0.0006765581086657532,
+  "fcp": 5487.680200000002,
+  "si": 5487.680200000002,
+  "bytes": 944755,
+  "requests": 50,
+  "lcpEl": "",
+  "opps": {
+   "server-response-time": {
+    "title": "Initial server response time was short",
+    "ms": 56,
+    "kb": 0,
+    "display": "Root document took 160\u00a0ms"
+   },
+   "mainthread-work-breakdown": {
+    "title": "Minimize main-thread work",
+    "ms": 50,
+    "kb": 0,
+    "display": "2.4\u00a0s"
+   },
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 200,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 600,
+    "kb": 77,
+    "display": "Est savings of 77\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 1000,
+    "kb": 137,
+    "display": "Est savings of 137\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 100,
+    "kb": 0,
+    "display": "Est savings of 80\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 400,
+    "kb": 0,
+    "display": "Est savings of 400\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "color-contrast",
+   "landmark-one-main",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   59,
+   62,
+   63
+  ]
+ },
+ "services__webflow-development|desktop": {
+  "run": "1",
+  "perf": 87,
+  "a11y": 95,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 1861.6045000000004,
+  "tbt": 0,
+  "cls": 0.002223540444304767,
+  "fcp": 1191.6195,
+  "si": 1591.007671157747,
+  "bytes": 945675,
+  "requests": 50,
+  "lcpEl": "",
+  "opps": {
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 0,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 150,
+    "kb": 79,
+    "display": "Est savings of 79\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 20,
+    "kb": 137,
+    "display": "Est savings of 137\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 60\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 500,
+    "kb": 0,
+    "display": "Est savings of 510\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "target-size",
+   "landmark-one-main",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   86,
+   87,
+   87
+  ]
+ },
+ "services__webflow-development|mobile": {
+  "run": "2",
+  "perf": 60,
+  "a11y": 95,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 7187.562499999999,
+  "tbt": 121,
+  "cls": 0,
+  "fcp": 5611.762499999999,
+  "si": 6589.761404858171,
+  "bytes": 945391,
+  "requests": 50,
+  "lcpEl": "",
+  "opps": {
+   "mainthread-work-breakdown": {
+    "title": "Minimize main-thread work",
+    "ms": 100,
+    "kb": 0,
+    "display": "2.7\u00a0s"
+   },
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 200,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 390,
+    "kb": 77,
+    "display": "Est savings of 77\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 980,
+    "kb": 137,
+    "display": "Est savings of 137\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 70\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 400,
+    "kb": 0,
+    "display": "Est savings of 390\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "color-contrast",
+   "landmark-one-main",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   58,
+   60,
+   65
+  ]
+ },
+ "terms-of-service|desktop": {
+  "run": "1",
+  "perf": 89,
+  "a11y": 93,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 1603.3369914875775,
+  "tbt": 0,
+  "cls": 0.0005099996590145655,
+  "fcp": 1366.091993190062,
+  "si": 1366.091993190062,
+  "bytes": 764701,
+  "requests": 25,
+  "lcpEl": "",
+  "opps": {
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 100,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 100,
+    "kb": 87,
+    "display": "Est savings of 87\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 90,
+    "kb": 138,
+    "display": "Est savings of 138\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 50\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 750,
+    "kb": 0,
+    "display": "Est savings of 770\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "heading-order",
+   "target-size",
+   "landmark-one-main",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   88,
+   89,
+   90
+  ]
+ },
+ "terms-of-service|mobile": {
+  "run": "1",
+  "perf": 66,
+  "a11y": 97,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 6727.0265,
+  "tbt": 237,
+  "cls": 0.002731603363737979,
+  "fcp": 2990.8441000000003,
+  "si": 3648.343001516519,
+  "bytes": 765783,
+  "requests": 25,
+  "lcpEl": "",
+  "opps": {
+   "server-response-time": {
+    "title": "Initial server response time was short",
+    "ms": 325,
+    "kb": 0,
+    "display": "Root document took 430\u00a0ms"
+   },
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 200,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 390,
+    "kb": 87,
+    "display": "Est savings of 87\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 980,
+    "kb": 139,
+    "display": "Est savings of 139\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 100,
+    "kb": 0,
+    "display": "Est savings of 80\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 1450,
+    "kb": 0,
+    "display": "Est savings of 1,450\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "heading-order",
+   "landmark-one-main",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   64,
+   66,
+   67
+  ]
+ },
+ "webflow-integrations|desktop": {
+  "run": "2",
+  "perf": 90,
+  "a11y": 95,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 1531.9309999999998,
+  "tbt": 0,
+  "cls": 0.0005099996590145655,
+  "fcp": 1317.2179999999996,
+  "si": 1317.2179999999996,
+  "bytes": 810738,
+  "requests": 40,
+  "lcpEl": "",
+  "opps": {
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 50,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 80,
+    "kb": 82,
+    "display": "Est savings of 82\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 80,
+    "kb": 139,
+    "display": "Est savings of 139\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 60\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 700,
+    "kb": 0,
+    "display": "Est savings of 690\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "target-size",
+   "landmark-one-main",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   90,
+   90,
+   91
+  ]
+ },
+ "webflow-integrations|mobile": {
+  "run": "3",
+  "perf": 63,
+  "a11y": 98,
+  "bp": 96,
+  "seo": 66,
+  "lcp": 6598.763500000001,
+  "tbt": 86,
+  "cls": 0.01520299710368627,
+  "fcp": 5228.4211000000005,
+  "si": 5228.4211000000005,
+  "bytes": 810574,
+  "requests": 40,
+  "lcpEl": "",
+  "opps": {
+   "unminified-css": {
+    "title": "Minify CSS",
+    "ms": 0,
+    "kb": 16,
+    "display": "Est savings of 16\u00a0KiB"
+   },
+   "unused-css-rules": {
+    "title": "Reduce unused CSS",
+    "ms": 390,
+    "kb": 82,
+    "display": "Est savings of 82\u00a0KiB"
+   },
+   "unused-javascript": {
+    "title": "Reduce unused JavaScript",
+    "ms": 780,
+    "kb": 139,
+    "display": "Est savings of 139\u00a0KiB"
+   },
+   "font-display-insight": {
+    "title": "Font display",
+    "ms": 50,
+    "kb": 0,
+    "display": "Est savings of 60\u00a0ms"
+   },
+   "render-blocking-insight": {
+    "title": "Render-blocking requests",
+    "ms": 2450,
+    "kb": 0,
+    "display": "Est savings of 2,460\u00a0ms"
+   }
+  },
+  "seoFails": [
+   "is-crawlable"
+  ],
+  "a11yFails": [
+   "landmark-one-main",
+   "label-content-name-mismatch"
+  ],
+  "bpFails": [
+   "errors-in-console",
+   "valid-source-maps"
+  ],
+  "perfAll": [
+   63,
+   63,
+   67
+  ]
+ }
+}
