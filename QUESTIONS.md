@@ -30,3 +30,8 @@ Ažurirano: 10.11.2026 (faza 0). Ništa od ovoga ne izmišljam u copy-ju ni u sc
 13. 5 praznih case stranica (Intaker, Harper, Biotech, LaSalle, Hypersonix): popuniti ih, ili ih sakriti
     (noindex + kartice bez linka)?
 14. Blog post „B2B SaaS SEO in 2026“ je u draftu, a stara verzija je živa i 6 postova linkuje na nju. Objaviti ga ili ukloniti?
+
+## Our Work, tab Intaker (10.11.)
+15. Broj za Intaker tab (Stat 1 vrednost i opis, npr. „16x / Engagement time growth“ kod Ballerine). Sada je prazno.
+16. Odobrenje rečenice: „How nues rebuilt Intaker's site around its new AI lead engagement product.“ (moj nacrt).
+17. Strelica na Intaker kartici vodi na /our-work/intaker, a ta case stranica je prazna (vidi pitanje 13).
