@@ -22,5 +22,17 @@ Putanje u meniju proverite u trenutnom Webflow interfejsu. Nazivi se ponekad men
    Plus adrese starog sajta kad stigne spisak (QUESTIONS 8).
 6. **Google Search Console**: verifikacija domena (DNS TXT), slanje sitemap-a. **Bing Webmaster Tools**: uvoz iz GSC-a.
 
+## Sada (van SEO faza)
+7. **Uključiti stranice pojedinačnih integracija** (`/integrations/<slug>`). Šablon „Integrations Template“ postoji i nije draft,
+   ali ga Webflow ne objavljuje (`shouldPublish: false`), pa je /integrations/webflow-salesforce-integration na stagingu 404.
+   Linkovi „See the case studies“ na karticama Webflow Integrations stranice vode tamo. API ovo podešavanje ne menja.
+   Klik-putanja (proverite nazive u trenutnom interfejsu):
+   - Designer → **CMS** panel → kolekcija **Integrations** → ikonica podešavanja (zupčanik) → opcija za collection/template
+     stranice (**Collection pages / Template page**) → uključiti → Save.
+   - Ako tamo nije: **Pages** panel → **CMS Collection pages → Integrations Template** → zupčanik → proveriti da stranica nije
+     isključena iz objave.
+   - Zatim Publish samo na webflow.io i otvoriti /integrations/webflow-salesforce-integration (treba 200, ne 404).
+   Napomena: Salesforce stavka nema napisan sadržaj (polje Content), pa će stranica biti skoro prazna dok se vodič ne napiše.
+
 ## Kasnije faze
 Biće dopunjeno u fazama 1–6 (minifikacija, konverzija asseta, fontovi, sitemap izuzeci po stranici…).
