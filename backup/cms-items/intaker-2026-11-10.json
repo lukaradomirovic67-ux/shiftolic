@@ -1,0 +1,12 @@
+{
+  "note": "Our Works item Intaker (6ace660facdd65a7260ff9f7) before the Our Work tabs change on 10.11.2026. Only the fields that change.",
+  "collection_id": "6aba6bc07d6279b4b561771c",
+  "item_id": "6ace660facdd65a7260ff9f7",
+  "fieldData": {
+    "ow-case-tabs": null,
+    "fade-in-text": null,
+    "tabs-background": null,
+    "case-before-image": {"fileId": "6aea454412afa8d1c96b19f6", "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea454412afa8d1c96b19f6_intaker-before.webp", "alt": "Intaker website before the nues rebuild"},
+    "case-after-image": {"fileId": "6aea454412afa8d1c96b19fc", "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea454412afa8d1c96b19fc_intaker-after.webp", "alt": "Intaker website after the nues rebuild"}
+  }
+}
