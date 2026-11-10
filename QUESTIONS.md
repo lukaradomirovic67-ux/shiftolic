@@ -3,12 +3,7 @@
 Ažurirano: 10.11.2026 (faza 0). Ništa od ovoga ne izmišljam u copy-ju ni u schema markupu.
 
 ## Za nastavak merenja
-1. **Lighthouse**: npm ne može da instalira Lighthouse 13.6.0 ni 13.5.0, jer zavisnost `@puppeteer/browsers@3.2.7` vraća 404.
-   Opcije:
-   - (a) instaliram ga uz npm `overrides` koji tu zavisnost vezuje za prethodnu verziju. Ona služi samo za preuzimanje
-     browsera, a mi koristimo već instalirani Chromium. Preporuka.
-   - (b) dozvolite `www.googleapis.com`, pa koristim PageSpeed Insights API (Lighthouse na Google serverima, plus CrUX).
-   - (c) vi pokrenete Lighthouse lokalno, a ja obradim rezultate.
+1. ~~**Lighthouse**~~ rešeno 10.11.: instaliran uz npm `overrides` (`@puppeteer/browsers` 3.2.6). Baseline je u BASELINE.md, odeljak 3a.
 2. **Mreža za merenje**: zahtev da se dozvole GTM, Webflow font CDN (fastly), cdnjs, iClosed, Cloudflare Turnstile i
    googleapis je odbijen. Ako ostaje tako, merim bez tih skripti i to beležim. Stvarni rezultati će biti lošiji.
 
