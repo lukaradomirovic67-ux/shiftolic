@@ -47,7 +47,8 @@ Rezime automatske provere:
 - [x] (popravljeno 11.11., čeka objavu) Hamburger dugme je 24×18 px. Treba ga povećati na bar 44×44 (površina za prst), na svih 47 stranica.
 - [ ] Blog paginacija: „2“ i „3“ su beli tekst na svetlosivoj podlozi (15% navy) i izgledaju kao isključeni.
 - [ ] „Copy link“ na 21 blog postu je link sa `#` umesto dugmeta (pristupačnost).
-- [ ] Tabela „Side by side“ (Services) na tabletu i telefonu nema znak da se skroluje u stranu.
+- [x] (preuređeno 11.11., čeka objavu) Tabela „Side by side“ (Services) na tabletu i telefonu nema znak da se skroluje u stranu.
+      Sada je prekidač sa 4 usluge i jedna kartica za izabranu uslugu (vidi CHANGELOG).
 - [ ] 5 praznih case stranica: noindex + preusmerenje (kad odobriš).
 - [ ] Bolje slike koje čekaju otvoren Webflow Designer (MCP app). Fajlovi su spremni:
   - About fotografija i ilustracija u navbaru;

@@ -1,0 +1,505 @@
+<!-- Nues: Services page code. Edit here, not in embeds. -->
+<script>
+(function(){
+  function ready(fn){ if(document.readyState!=='loading'){ fn(); } else { document.addEventListener('DOMContentLoaded', fn); } }
+  ready(function(){
+    /* Hero: the four services take turns every few seconds; hovering or tapping a corner picks that service and stops the turns */
+    (function(){
+      var hero = document.querySelector('[data-svc-hero]');
+      if (!hero) { return; }
+      var corners = [].slice.call(hero.querySelectorAll('.svc-hero_corner[data-service]'));
+      var bgs = [].slice.call(hero.querySelectorAll('.svc-hero_bg'));
+      var sub = hero.querySelector('.svc-hero_sub');
+      if (corners.length < 2) { return; }
+      var themes = ['is-theme-build', 'is-theme-seo', 'is-theme-plus'];
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var DUR = 4200, cur = 0, auto = !reduce, inView = true, timer = null, bgTimer = null;
+      corners.forEach(function(c, i){ if (c.classList.contains('is-active')) { cur = i; } });
+      var bgFor = function(k){ for (var i = 0; i < bgs.length; i++) { if (bgs[i].classList.contains('is-' + k)) { return bgs[i]; } } return null; };
+      var swapText = function(t){
+        if (!sub || !t || sub.textContent === t) { return; }
+        if (reduce || !sub.animate) { sub.textContent = t; return; }
+        var out = sub.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 200, fill: 'forwards' });
+        out.onfinish = function(){ sub.textContent = t; out.cancel(); sub.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 260 }); };
+      };
+      var take = function(i){
+        if (i === cur) { return; }
+        var prev = corners[cur], next = corners[i], k = next.getAttribute('data-service');
+        cur = i;
+        corners.forEach(function(c){ c.classList.toggle('is-active', c === next); });
+        themes.forEach(function(t){ hero.classList.toggle(t, t === 'is-theme-' + k); });
+        var pb = bgFor(prev.getAttribute('data-service')), nb = bgFor(k);
+        clearTimeout(bgTimer);
+        bgs.forEach(function(b){ b.classList.remove('is-was'); if (b !== nb) { b.classList.remove('is-on'); } });
+        if (pb && pb !== nb) { pb.classList.add('is-was'); }
+        if (nb) { nb.classList.remove('is-on'); void nb.offsetWidth; nb.classList.add('is-on'); }
+        bgTimer = setTimeout(function(){ if (pb) { pb.classList.remove('is-was'); } }, 900);
+        swapText(next.getAttribute('data-text'));
+      };
+      var tick = function(){
+        clearTimeout(timer);
+        if (!auto || !inView || document.hidden) { return; }
+        timer = setTimeout(function(){ take((cur + 1) % corners.length); tick(); }, DUR);
+      };
+      var pick = function(i){ auto = false; clearTimeout(timer); take(i); };
+      var hit = function(e){
+        if (e.target.closest && e.target.closest('a, button')) { return -1; }
+        for (var j = 0; j < corners.length; j++) {
+          var r = corners[j].getBoundingClientRect();
+          if (e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom) { return j; }
+        }
+        return -1;
+      };
+      /* Corners are shortcuts: hovering one shows that service, clicking it opens the service page (its address comes from the service's Explore button in the tour below) */
+      var hrefFor = function(k){ var a = document.querySelector('.services-tabs_panel[data-theme="' + k + '"] .svc-btn[href]'); return a ? a.getAttribute('href') : ''; };
+      var onPoint = function(e){ var j = hit(e); hero.classList.toggle('is-pointing', j >= 0); if (j >= 0 && j !== cur) { pick(j); } };
+      hero.addEventListener('mousemove', onPoint);
+      hero.addEventListener('mouseleave', function(){ hero.classList.remove('is-pointing'); });
+      hero.addEventListener('click', function(e){
+        var j = hit(e);
+        if (j < 0) { return; }
+        var url = hrefFor(corners[j].getAttribute('data-service'));
+        if (url) { window.location.href = url; } else { pick(j); }
+      });
+      document.addEventListener('visibilitychange', tick);
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function(entries){ inView = entries[0].isIntersecting; tick(); }, { threshold: 0.2 }).observe(hero);
+      }
+      var start = bgFor(corners[cur].getAttribute('data-service'));
+      if (start) { start.classList.add('is-on'); }
+      hero.classList.add('is-ready');
+      swapText(corners[cur].getAttribute('data-text'));
+      setTimeout(tick, reduce ? 0 : 1400);
+    })();
+
+    /* Side by side: the dark card follows the column under the pointer, keyboard focus or a tap */
+    (function(){
+      var table = document.querySelector('[data-services-compare]');
+      if (!table) { return; }
+      var hl = table.querySelector('.services-compare_highlight');
+      var cols = [].slice.call(table.querySelectorAll('.services-compare_col'));
+      if (!hl || !cols.length) { return; }
+      var labels = [].slice.call(table.querySelectorAll('.services-compare_label')).map(function(l){ return l.textContent.trim(); });
+      var themes = ['is-launch', 'is-build', 'is-seo', 'is-plus'], cur = -1, PAD = 10, shownTimer = null;
+      /* screen readers hear each cell with its row, e.g. "Timeline: 6 to 8 weeks" */
+      cols.forEach(function(c){
+        var name = c.querySelector('.services-compare_name');
+        c.setAttribute('role', 'group');
+        if (name) { c.setAttribute('aria-label', name.textContent.trim()); }
+        [].forEach.call(c.querySelectorAll('.services-compare_cell'), function(cell, i){
+          var v = cell.textContent.trim(), sr = document.createElement('span');
+          sr.className = 'text-reveal_sr';
+          sr.textContent = (labels[i] || '') + ': ' + (v === '' ? 'included' : v === '—' ? 'not included' : v);
+          [].forEach.call(cell.childNodes, function(n){ if (n.nodeType === 1) { n.setAttribute('aria-hidden', 'true'); } else if (n.nodeType === 3 && n.textContent.trim()) { var s = document.createElement('span'); s.setAttribute('aria-hidden', 'true'); s.textContent = n.textContent; cell.replaceChild(s, n); } });
+          cell.insertBefore(sr, cell.firstChild);
+        });
+      });
+      /* a white copy of the table rides inside the card and moves the opposite way, so the white text shows exactly where the card is */
+      var ghost = document.createElement('div'), copy = table.cloneNode(true);
+      ghost.className = 'services-compare_ghost';
+      ghost.setAttribute('aria-hidden', 'true');
+      copy.removeAttribute('data-services-compare');
+      copy.removeAttribute('id');
+      [].forEach.call(copy.querySelectorAll('.services-compare_highlight, .text-reveal_sr'), function(n){ n.parentNode.removeChild(n); });
+      [].forEach.call(copy.querySelectorAll('[id]'), function(n){ n.removeAttribute('id'); });
+      [].forEach.call(copy.querySelectorAll('a'), function(n){ n.setAttribute('tabindex', '-1'); });
+      [].forEach.call(copy.querySelectorAll('[role], [aria-label], [data-reveal]'), function(n){ n.removeAttribute('role'); n.removeAttribute('aria-label'); n.removeAttribute('data-reveal'); });
+      ghost.appendChild(copy);
+      hl.appendChild(ghost);
+      ghost.inert = true;
+      var copies = [].slice.call(copy.querySelectorAll('.services-compare_col'));
+      cols.forEach(function(c, i){
+        var l = c.querySelector('.services-compare_link'), g = copies[i] && copies[i].querySelector('.services-compare_link');
+        if (!l || !g) { return; }
+        l.addEventListener('focus', function(){ g.classList.add('is-focus'); });
+        l.addEventListener('blur', function(){ g.classList.remove('is-focus'); });
+        l.addEventListener('mouseenter', function(){ g.classList.add('is-hover'); });
+        l.addEventListener('mouseleave', function(){ g.classList.remove('is-hover'); });
+      });
+      /* tablet and phone: the switch above the table picks the service with the same set() as hover / tap on desktop, and each cell
+         carries its row name (data-label) for the card layout */
+      cols.forEach(function(c){ [].forEach.call(c.querySelectorAll('.services-compare_cell'), function(cell, i){ cell.setAttribute('data-label', labels[i] || ''); }); });
+      var sw = document.querySelector('.services-compare_switch');
+      var pills = sw ? [].slice.call(sw.querySelectorAll('.services-compare_pill')) : [];
+      var syncPills = function(){
+        pills.forEach(function(p, j){ var on = j === cur; p.classList.toggle('is-active', on); p.setAttribute('aria-selected', on ? 'true' : 'false'); p.tabIndex = on ? 0 : -1; });
+      };
+      pills.forEach(function(p, i){
+        if (!cols[i]) { p.style.display = 'none'; return; }
+        p.addEventListener('click', function(){ set(i); });
+        p.addEventListener('keydown', function(e){
+          var d = e.key === 'ArrowRight' || e.key === 'ArrowDown' ? 1 : e.key === 'ArrowLeft' || e.key === 'ArrowUp' ? -1 : 0;
+          if (d) { e.preventDefault(); var n = (i + d + cols.length) % cols.length; set(n); pills[n].focus(); }
+          else if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); set(i); }
+        });
+      });
+      var place = function(instant){
+        var c = cols[cur];
+        if (!c) { return; }
+        var x = c.offsetLeft - PAD;
+        if (instant) { hl.style.transition = 'none'; ghost.style.transition = 'none'; }
+        copy.style.width = table.offsetWidth + 'px';
+        hl.style.transform = 'translate3d(' + x + 'px,0,0)';
+        hl.style.width = (c.offsetWidth + PAD * 2) + 'px';
+        ghost.style.transform = 'translate3d(' + (-x) + 'px,0,0)';
+        if (instant) { void hl.offsetWidth; hl.style.transition = ''; ghost.style.transition = ''; }
+      };
+      var set = function(i, instant){
+        if (i === cur) { return; }
+        var prev = cur;
+        cur = i;
+        cols.forEach(function(c, j){ c.classList.toggle('is-active', j === i); });
+        [].forEach.call(copy.querySelectorAll('.services-compare_link.is-hover'), function(g){ g.classList.remove('is-hover'); });
+        copies.forEach(function(c, j){ c.classList.toggle('is-shown', j === i || (j === prev && !instant)); });
+        clearTimeout(shownTimer);
+        shownTimer = setTimeout(function(){ copies.forEach(function(c, j){ c.classList.toggle('is-shown', j === cur); }); }, 600);
+        var th = 'is-' + (cols[i].getAttribute('data-theme') || 'launch');
+        themes.forEach(function(t){ hl.classList.toggle(t, t === th); });
+        place(instant);
+        syncPills();
+      };
+      cols.forEach(function(c, i){
+        c.addEventListener('mouseenter', function(){ set(i); });
+        c.addEventListener('focusin', function(){ set(i); });
+        c.addEventListener('click', function(){ set(i); });
+      });
+      set(0, true);
+      /* tablet and phone: a sideways swipe on the card goes to the next or previous service (only while the switch is shown) */
+      var x0 = null, y0 = 0;
+      table.addEventListener('touchstart', function(e){ x0 = sw && sw.offsetParent ? e.touches[0].clientX : null; y0 = e.touches[0].clientY; }, { passive: true });
+      table.addEventListener('touchend', function(e){
+        if (x0 === null) { return; }
+        var dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+        x0 = null;
+        if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) { set((cur + (dx < 0 ? 1 : -1) + cols.length) % cols.length); }
+      }, { passive: true });
+      window.addEventListener('resize', function(){ place(true); });
+      window.addEventListener('load', function(){ place(true); });
+      if (document.fonts && document.fonts.ready) { document.fonts.ready.then(function(){ place(true); }); }
+    })();
+
+    /* Not sure what you need? (Ask Nues): a visitor's need types itself into the prompt bar, Nues thinks, then the answer streams in word by word,
+       the service as a chip and the one number that matters counting up. The four services take turns until a suggestion is tapped.
+       Content lives in the Designer on the four Explore links: data-ask (the question), data-answer ([s] = the service chip, {from|to|prefix|suffix} = the number),
+       data-name, data-ink, data-tint. The "Try" sentences are the suggestion links; the chip icons are the hidden images in services-ask_icons. */
+    (function(){
+      var root = document.querySelector('[data-services-ask]');
+      if (!root) { return; }
+      var bar = root.querySelector('.services-ask_bar'), q = root.querySelector('.services-ask_query'), send = root.querySelector('.services-ask_send');
+      var who = root.querySelector('.services-ask_who'), st = root.querySelector('.services-ask_status'), tx = root.querySelector('.services-ask_text');
+      var fu = root.querySelector('.services-ask_follow');
+      var exs = [].slice.call(root.querySelectorAll('.services-ask_explore[data-service]'));
+      var sgs = [].slice.call(root.querySelectorAll('.services-ask_suggestion[data-service]'));
+      if (!bar || !q || !tx || !who || !fu || !exs.length) { return; }
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var icons = {};
+      [].forEach.call(root.querySelectorAll('.services-ask_icon[data-service]'), function(im){ icons[im.getAttribute('data-service')] = im; });
+      var D = exs.map(function(a){
+        return { k: a.getAttribute('data-service'), ask: a.getAttribute('data-ask') || '', ans: a.getAttribute('data-answer') || '', name: a.getAttribute('data-name') || '',
+          ink: a.getAttribute('data-ink') || '#2e8059', tint: a.getAttribute('data-tint') || '#ddf1e6' };
+      });
+      var inkOf = {};
+      var tintOf = {};
+      D.forEach(function(d){ inkOf[d.k] = d.ink; tintOf[d.k] = d.tint; });
+      var ARROW_UP = '<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13V3M3.5 7.5L8 3l4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      var ARROW = '<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8h11M9 3.5L13.5 8 9 12.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      if (send && !send.querySelector('svg')) { send.innerHTML = ARROW_UP; }
+      /* two arrows in the circle so the hover can pass one through it (see the page head) */
+      exs.forEach(function(a){ var i = a.querySelector('.services-ask_explore-icon'); if (i && !i.querySelector('svg')) { i.innerHTML = '<span class="services-ask_arrow">' + ARROW + '</span><span class="services-ask_arrow is-next">' + ARROW + '</span>'; } });
+      /* the suggestions are links without an address in Webflow: make them buttons for keyboards and screen readers, each in its service colour */
+      sgs.forEach(function(b){
+        b.setAttribute('role', 'button');
+        b.setAttribute('tabindex', '0');
+        b.style.setProperty('--sc', inkOf[b.getAttribute('data-service')] || '#101927');
+        b.style.setProperty('--st', tintOf[b.getAttribute('data-service')] || '#eceef1');
+        b.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); b.click(); } });
+      });
+
+      var T = [], cur = -1, auto = !reduce, started = false, inView = false, waiting = false, held = false;
+      var later = function(f, ms){ T.push(setTimeout(f, reduce ? 0 : ms)); };
+      var clear = function(){ T.forEach(clearTimeout); T = []; };
+      var el = function(tag, cls, text){ var e = document.createElement(tag); if (cls) { e.className = cls; } if (text !== undefined) { e.textContent = text; } return e; };
+      var caret = function(){ return el('span', 'services-ask_caret'); };
+      var typed = function(s){ q.textContent = ''; if (s) { q.appendChild(el('span', 'is-typed', s)); } };
+
+      /* the answer as two lines of word spans: line one ends with the service chip, line two holds the rest and the number */
+      var build = function(d){
+        var l1 = el('span', 'services-ask_l1'), l2 = el('span', 'services-ask_l2'), line = l1, nw = 0;
+        d.ans.split(/(\[s\][.,]?|\{[^}]*\})/).forEach(function(p){
+          if (!p) { return; }
+          if (p.indexOf('[s]') === 0) {
+            line.appendChild(document.createElement('br'));
+            var w = el('span', 'services-ask_w is-chip'), chip = el('span', 'services-ask_chip');
+            if (icons[d.k]) { var ic = el('img', 'services-ask_chip-icon'); ic.src = icons[d.k].currentSrc || icons[d.k].src; ic.alt = ''; chip.appendChild(ic); }
+            chip.appendChild(document.createTextNode(d.name));
+            w.appendChild(chip); line.appendChild(w);
+            line = l2;
+            return;
+          }
+          if (p.charAt(0) === '{') {
+            var a = p.slice(1, -1).split('|'), wn = el('span', 'services-ask_w'), num = el('span', 'services-ask_num'), v = el('span', '', (a[2] || '') + a[0]);
+            v.setAttribute('data-from', a[0]); v.setAttribute('data-to', a[1]); v.setAttribute('data-prefix', a[2] || '');
+            num.appendChild(v);
+            if (a[3]) { num.appendChild(document.createTextNode((a[3].charAt(0) === '%' ? '' : ' ') + a[3])); }
+            wn.appendChild(num); line.appendChild(wn);
+            return;
+          }
+          p.split(/(\s+)/).forEach(function(s){
+            if (s.trim()) { line.appendChild(el('span', 'services-ask_w' + (line === l1 && nw < 3 ? ' is-soft' : ''), s)); nw += 1; }
+            else if (s && line.childNodes.length) { line.appendChild(document.createTextNode(' ')); }
+          });
+        });
+        var f = document.createDocumentFragment();
+        f.appendChild(l1); f.appendChild(l2);
+        return f;
+      };
+      var count = function(num){
+        var v = num.firstChild, from = +v.getAttribute('data-from'), to = +v.getAttribute('data-to'), pre = v.getAttribute('data-prefix') || '';
+        num.classList.add('is-on');
+        if (reduce || !window.requestAnimationFrame) { v.textContent = pre + to; return; }
+        var t0 = performance.now();
+        (function step(now){ var k = Math.min(1, (now - t0) / 1200); k = 1 - Math.pow(1 - k, 3); v.textContent = pre + Math.round(from + (to - from) * k); if (k < 1) { requestAnimationFrame(step); } })(t0);
+      };
+      var followups = function(i){
+        exs.forEach(function(a, j){ a.classList.toggle('is-current', j === i); });
+        sgs.forEach(function(b){ b.classList.toggle('is-current', b.getAttribute('data-service') === D[i].k); });
+        fu.classList.add('is-on');
+      };
+      var next = function(){
+        if (!auto) { return; }
+        if (!inView || document.hidden || held) { waiting = true; return; }
+        ask((cur + 1) % D.length);
+      };
+      /* one round: type the question, send, think, stream the answer */
+      var ask = function(i, manual){
+        clear();
+        if (manual) { auto = false; }
+        waiting = false; started = true; cur = i;
+        var d = D[i];
+        root.style.setProperty('--ask-ink', d.ink);
+        root.style.setProperty('--ask-tint', d.tint);
+        root.setAttribute('data-active', d.k);
+        fu.classList.remove('is-on'); who.classList.remove('is-on'); tx.textContent = ''; bar.classList.remove('is-ready');
+        var t = 200;
+        if (!reduce) {
+          typed(''); q.appendChild(caret()); bar.classList.add('is-focus');
+          for (var c = 1; c <= d.ask.length; c++) {
+            (function(c){ later(function(){ typed(d.ask.slice(0, c)); q.appendChild(caret()); if (c === d.ask.length) { bar.classList.add('is-ready'); } }, t); })(c);
+            t += 34 + Math.random() * 34;
+          }
+          t += 450;
+          later(function(){ if (send) { send.classList.add('is-hit'); } }, t);
+          later(function(){ if (send) { send.classList.remove('is-hit'); } bar.classList.remove('is-focus', 'is-ready'); typed(d.ask); }, t + 160);
+          t += 380;
+          later(function(){ who.classList.add('is-on'); if (st) { st.classList.add('is-thinking'); st.textContent = 'Thinking'; } }, t);
+          t += 900;
+        } else {
+          typed(d.ask);
+        }
+        later(function(){
+          if (st) { st.classList.remove('is-thinking'); st.textContent = 'Nues'; }
+          who.classList.add('is-on');
+          tx.appendChild(build(d));
+          var dot = el('span', 'services-ask_dot');
+          tx.lastChild.appendChild(dot);
+          var ws = [].slice.call(tx.querySelectorAll('.services-ask_w')), step = reduce ? 0 : 70;
+          ws.forEach(function(w, j){
+            T.push(setTimeout(function(){
+              w.classList.add('is-on');
+              var n = w.querySelector('.services-ask_num');
+              if (n) { count(n); }
+              if (j === ws.length - 1 && dot.parentNode) { dot.parentNode.removeChild(dot); }
+            }, j * step));
+          });
+          T.push(setTimeout(function(){ followups(i); }, step ? ws.length * step + 300 : 0));
+          T.push(setTimeout(next, ws.length * step + 6200));
+        }, t);
+      };
+      sgs.forEach(function(b){
+        b.addEventListener('click', function(e){
+          e.preventDefault();
+          var k = b.getAttribute('data-service');
+          for (var j = 0; j < D.length; j++) { if (D[j].k === k) { ask(j, true); return; } }
+        });
+      });
+
+      /* before the first round: the empty prompt bar */
+      tx.textContent = '';
+      typed(''); q.appendChild(document.createTextNode('We need')); q.appendChild(caret());
+      root.classList.add('is-ready');
+      var resume = function(){
+        if (!started) { ask(0); return; }
+        if (waiting) { ask((cur + 1) % D.length); }
+      };
+      /* while the pointer or keyboard focus is on the links under the answer, the next round waits, so a link never disappears under the pointer */
+      var hold = function(on){ held = on; if (!on && waiting) { T.push(setTimeout(function(){ if (!held && inView && !document.hidden) { resume(); } }, 700)); } };
+      fu.addEventListener('mouseenter', function(){ hold(true); });
+      fu.addEventListener('mouseleave', function(){ hold(false); });
+      fu.addEventListener('focusin', function(){ hold(true); });
+      fu.addEventListener('focusout', function(e){ if (!fu.contains(e.relatedTarget)) { hold(false); } });
+      document.addEventListener('visibilitychange', function(){ if (!document.hidden && inView) { resume(); } });
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function(entries){
+          inView = entries[0].isIntersecting;
+          if (inView) { resume(); }
+        }, { threshold: 0.35 }).observe(root);
+      } else { inView = true; ask(0); }
+    })();
+
+    /* Four services. Desktop: the stage pins and scrolling steps through the four services (Nues_services.html tour).
+       Tablet, phone and reduced motion: tabs that autoplay, with click and keyboard. Each change plays the transition set in the page head. */
+    var stage = document.querySelector('[data-services-tabs]');
+    if (!stage) { return; }
+    var wrap = stage.parentElement && stage.parentElement.classList.contains('services-tabs_scroll') ? stage.parentElement : null;
+    var tabs = [].slice.call(stage.querySelectorAll('.services-tabs_tab'));
+    var panels = [].slice.call(stage.querySelectorAll('.services-tabs_panel'));
+    var bgs = [].slice.call(stage.querySelectorAll('.services-tabs_bg'));
+    var menu = stage.querySelector('.services-tabs_menu');
+    if (!tabs.length || tabs.length !== panels.length) { return; }
+    var themes = ['is-build', 'is-seo', 'is-plus'];
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var wide = window.matchMedia ? window.matchMedia('(min-width: 992px) and (min-height: 720px)') : null;
+    var DUR = 7000, n = tabs.length, cur = -1, timer = null, started = 0, remaining = DUR, leaveTimer = null;
+    var auto = !reduce, inView = false, focused = false, scrollMode = false, near = false, ticking = false;
+
+    if (menu) { menu.setAttribute('role', 'tablist'); menu.setAttribute('aria-label', 'Services'); }
+    tabs.forEach(function(t, i){
+      var tid = 'svs-tab-' + i, pid = 'svs-panel-' + i;
+      t.id = tid; t.setAttribute('role', 'tab'); t.setAttribute('aria-controls', pid);
+      panels[i].id = pid; panels[i].setAttribute('role', 'tabpanel'); panels[i].setAttribute('aria-labelledby', tid);
+    });
+    stage.style.setProperty('--svs-dur', DUR + 'ms');
+    /* titles: each line in its own mask; list rows numbered for the stagger */
+    panels.forEach(function(p){
+      var t = p.querySelector('.services-tabs_title');
+      if (t && !t.querySelector('.svt-line')) {
+        var lines = [[]];
+        [].slice.call(t.childNodes).forEach(function(nd){ if (nd.nodeName === 'BR') { lines.push([]); } else { lines[lines.length - 1].push(nd); } });
+        t.textContent = '';
+        lines.forEach(function(nodes, l){
+          var o = document.createElement('span'), inn = document.createElement('span');
+          o.className = 'svt-line'; inn.className = 'svt-in'; inn.style.setProperty('--l', l);
+          nodes.forEach(function(nd){ inn.appendChild(nd); });
+          o.appendChild(inn); t.appendChild(o);
+        });
+      }
+      [].forEach.call(p.querySelectorAll('.services-tabs_item'), function(it, i){ it.style.setProperty('--i', i); });
+    });
+    /* the gliding pill in the tab bar */
+    var glider = null, gfill = null;
+    if (menu) {
+      glider = document.createElement('span'); glider.className = 'services-tabs_glider'; glider.setAttribute('aria-hidden', 'true');
+      gfill = document.createElement('span'); gfill.className = 'services-tabs_glider-fill'; glider.appendChild(gfill);
+      menu.insertBefore(glider, menu.firstChild); menu.classList.add('has-glider');
+    }
+    var glide = function(instant){
+      if (!glider || cur < 0) { return; }
+      var t = tabs[cur];
+      if (instant) { glider.style.transition = 'none'; }
+      glider.style.transform = 'translate3d(' + t.offsetLeft + 'px,' + t.offsetTop + 'px,0)';
+      glider.style.width = t.offsetWidth + 'px'; glider.style.height = t.offsetHeight + 'px';
+      if (instant) { void glider.offsetWidth; glider.style.transition = ''; }
+    };
+    var go = function(i, instant, dir){
+      if (i === cur) { return; }
+      var prev = cur;
+      cur = i;
+      /* direction first, then a style flush, so the new service starts on the right side */
+      stage.classList.toggle('is-back', !instant && (dir ? dir < 0 : i < prev));
+      void stage.offsetWidth;
+      var th = 'is-' + (panels[i].getAttribute('data-theme') || 'launch');
+      themes.forEach(function(c){ stage.classList.toggle(c, c === th); });
+      tabs.forEach(function(t, j){ var on = j === i; t.classList.toggle('is-active', on); t.setAttribute('aria-selected', on ? 'true' : 'false'); t.setAttribute('tabindex', on ? '0' : '-1'); });
+      panels.forEach(function(p, j){ p.classList.toggle('is-current', j === i); p.classList.toggle('is-leaving', j === prev && !instant); p.setAttribute('aria-hidden', j === i ? 'false' : 'true'); });
+      bgs.forEach(function(b){ var on = b.classList.contains(th); b.classList.toggle('is-current', on); b.classList.toggle('is-leaving', !on && prev > -1 && !instant && b.classList.contains('is-' + (panels[prev].getAttribute('data-theme') || 'launch'))); });
+      clearTimeout(leaveTimer);
+      leaveTimer = setTimeout(function(){ panels.concat(bgs).forEach(function(el){ el.classList.remove('is-leaving'); }); }, 1000);
+      glide(instant);
+      if (glider && !scrollMode) { glider.classList.remove('is-playing'); void glider.offsetWidth; glider.classList.add('is-playing'); }
+    };
+
+    /* Tabs mode: autoplay that keeps running on hover; paused off screen and while a tab has keyboard focus */
+    var running = function(){ return !scrollMode && auto && inView && !focused && !document.hidden; };
+    var stop = function(){ if (timer) { clearTimeout(timer); timer = null; } };
+    var schedule = function(){
+      stop();
+      stage.classList.toggle('is-paused', !running());
+      if (!running()) { return; }
+      started = Date.now();
+      timer = setTimeout(function(){ remaining = DUR; go((cur + 1) % n, false, 1); schedule(); }, remaining);
+    };
+    var pause = function(){
+      if (timer) { remaining = Math.max(0, remaining - (Date.now() - started)); }
+      stop();
+      stage.classList.add('is-paused');
+    };
+    var select = function(i, focus){ remaining = DUR; go(i); if (focus) { tabs[i].focus(); } schedule(); };
+
+    /* Scroll mode: the pinned stage is split into four steps; the pill fills as you scroll through a step */
+    var span = function(){ return Math.max(1, wrap.offsetHeight - window.innerHeight); };
+    var onScroll = function(){
+      ticking = false;
+      if (!scrollMode || !near) { return; }
+      var p = Math.min(1, Math.max(0, -wrap.getBoundingClientRect().top / span())) * n;
+      var i = Math.min(n - 1, Math.floor(p)), q = Math.min(1, p - i);
+      stage.style.setProperty('--svs-p', q.toFixed(3));
+      if (gfill) { gfill.style.setProperty('--svs-fill', q.toFixed(3)); }
+      go(i);
+    };
+    var request = function(){ if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } };
+    var goTo = function(i){
+      var top = wrap.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({ top: top + span() * ((i + 0.08) / n), behavior: reduce ? 'auto' : 'smooth' });
+    };
+
+    var setMode = function(){
+      var want = !!(wrap && wide && wide.matches && !reduce);
+      if (want === scrollMode && stage.classList.contains('is-ready')) { glide(true); return; }
+      scrollMode = want;
+      if (wrap) { wrap.classList.toggle('is-scroll', want); }
+      stage.classList.toggle('is-scroll', want);
+      stage.classList.toggle('is-auto', !want && auto);
+      if (gfill) { gfill.style.removeProperty('--svs-fill'); }
+      if (want) { stop(); stage.classList.remove('is-paused'); onScroll(); }
+      else { schedule(); }
+      glide(true);
+    };
+
+    tabs.forEach(function(t, i){
+      t.addEventListener('click', function(){ if (scrollMode) { goTo(i); } else { select(i, false); } });
+      t.addEventListener('keydown', function(e){
+        var j = null, k = e.key;
+        if (k === 'ArrowRight' || k === 'ArrowDown') { j = (i + 1) % n; }
+        else if (k === 'ArrowLeft' || k === 'ArrowUp') { j = (i - 1 + n) % n; }
+        else if (k === 'Home') { j = 0; }
+        else if (k === 'End') { j = n - 1; }
+        else if (k === 'Enter' || k === ' ' || k === 'Spacebar') { e.preventDefault(); if (scrollMode) { goTo(i); } else { select(i, false); } return; }
+        if (j !== null) { e.preventDefault(); if (scrollMode) { goTo(j); tabs[j].focus(); } else { select(j, true); } }
+      });
+    });
+    stage.addEventListener('focusin', function(e){
+      var was = focused;
+      try { focused = e.target.matches(':focus-visible'); } catch (err) { focused = true; }
+      if (scrollMode) { return; }
+      if (focused) { pause(); } else if (was) { schedule(); }
+    });
+    stage.addEventListener('focusout', function(e){ if (!stage.contains(e.relatedTarget) && focused) { focused = false; schedule(); } });
+    document.addEventListener('visibilitychange', function(){ if (document.hidden) { pause(); } else { schedule(); } });
+    window.addEventListener('scroll', request, { passive: true });
+    window.addEventListener('resize', function(){ setMode(); request(); });
+    if (wide) { if (wide.addEventListener) { wide.addEventListener('change', setMode); } else if (wide.addListener) { wide.addListener(setMode); } }
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ inView = e.isIntersecting; if (inView) { schedule(); } else { pause(); } });
+      }, { threshold: 0.3 }).observe(stage);
+      new IntersectionObserver(function(entries){ near = entries[0].isIntersecting; request(); }, { rootMargin: '200px 0px' }).observe(wrap || stage);
+    } else { inView = true; near = true; }
+
+    go(0, true);
+    stage.classList.add('is-paused');
+    setMode();
+    stage.classList.add('is-ready');
+    if (document.fonts && document.fonts.ready) { document.fonts.ready.then(function(){ glide(true); }); }
+  });
+})();
+</script>

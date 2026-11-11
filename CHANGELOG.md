@@ -3,6 +3,31 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 11.11.2026: Services, „Side by side“ na tabletu i telefonu postaje kartica
+Stranica Services (`6ae0e4a4872d8069c67b0475`), sekcija `#compare`. Nije objavljeno. Desktop je nepromenjen.
+
+Pre: na ≤991 px cela tabela (1080 / 890 px) skrolovala se u stranu, bez znaka da ima još.
+Posle: iznad tabele je prekidač sa 4 usluge (2×2 na telefonu, 4 u redu na tabletu). Ispod je samo izabrana usluga, kao jedna
+tamna kartica u boji usluge. Svaki red ima naziv levo i vrednost desno, a na dnu je Explore link. Prevlačenje kartice levo ili
+desno menja uslugu.
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Nov element (native) ispred `.services-compare_scroll` | — | `services-compare_switch` (role tablist) sa 4 `services-compare_pill` (ikonica iz biblioteke + tekst); prva ima combo `is-active` |
+| Nove klase (native) | — | `services-compare_switch` (desktop display none, tablet grid 4 kolone, telefon 2 kolone), `services-compare_pill` (+ `is-active`: bela pozadina), `services-compare_pill-icon`, `services-compare_pill-text` |
+| `.services-compare_component`, row gap | tablet 64px, telefon 48px | 32px (tablet i telefon) |
+| Page head kod, red sa `@media (max-width:991px){.services-compare_scroll{scrollbar-width:thin}…}` | stari stil za skrolovanje | raspored kartice za ≤991 px (kolona `is-active`, boje po usluzi, `data-label` kroz `::before`), ≤479 px manji razmaci |
+| Page footer kod, skripta „Side by side“ | — | prekidač poziva isti `set()` kao hover na desktopu, strelice na tastaturi, `data-label` na ćelijama, swipe na kartici |
+
+Rezervna kopija koda pre izmene: `backup/page-code/2026-11-11/services.json`. Nov kod: `webflow-assets/site-code/services-page-head.html` i `services-page-footer.html` (posle upload-a je pročitan iz Webflow-a i identičan je).
+Lokalni test (staging HTML sa novim kodom) na 390 / 820 / 1440 px:
+- klik, strelice i swipe menjaju uslugu, a vertikalno skrolovanje ne menja;
+- `aria-selected` prati izabranu uslugu;
+- ništa nije šire od ekrana;
+- na desktopu je prekidač sakriven, a hover radi kao pre.
+
+Snimci: `notes/previews/services-compare-phone-390.png`, `…-phone-390-growth.png`, `…-tablet-820.png`.
+
 ## 11.11.2026: hamburger dugme, površina za dodir 44×44 (tablet i telefon)
 Navbar komponenta, stil `navbar2_menu-button`, breakpoint medium (važi za tablet i telefon). Nije objavljeno.
 
