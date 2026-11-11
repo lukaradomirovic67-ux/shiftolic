@@ -3,8 +3,17 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 11.11.2026: objava na staging (webflow.io, bez custom domena)
+Objavljene 4 izmene ispod: Side by side, širina na telefonu, Pricing oznake, hamburger. Provera na staging-u posle objave:
+- Services: prekidač radi na 390 i 820 px, ikonice se učitavaju;
+- širina na telefonu je 0 px viška na /services, /services/growth i /our-work (ranije 191 px);
+- hamburger je 44×44;
+- Pricing na 820 px nema preklapanja oznaka.
+
+Kod embeda Service Numbers sa staging-a sačuvan je u `webflow-assets/site-code/service-numbers-embed.html`.
+
 ## 11.11.2026: Services, „Side by side“ na tabletu i telefonu postaje kartica
-Stranica Services (`6ae0e4a4872d8069c67b0475`), sekcija `#compare`. Nije objavljeno. Desktop je nepromenjen.
+Stranica Services (`6ae0e4a4872d8069c67b0475`), sekcija `#compare`. Objavljeno na staging 11.11. Desktop je nepromenjen.
 
 Pre: na ≤991 px cela tabela (1080 / 890 px) skrolovala se u stranu, bez znaka da ima još.
 Posle: iznad tabele je prekidač sa 4 usluge (2×2 na telefonu, 4 u redu na tabletu). Ispod je samo izabrana usluga, kao jedna

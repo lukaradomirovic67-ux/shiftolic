@@ -1,0 +1,148 @@
+<!-- Results rings for the Service Numbers component. Everything this section needs lives here; colours follow the component variant. -->
+<style>
+/* Results rings. Colours come from the "Service theme" variables (svc-ring-*), so the component variant picks them. */
+[data-svc-rings]{--nr-c1:var(--_service-theme---svc-ring-c1,#12E39B);--nr-c2:var(--_service-theme---svc-ring-c2,#A9EED0);--nr-soft:var(--_service-theme---svc-ring-soft,#A9EED0);--nr-glow:var(--_service-theme---svc-ring-glow,rgba(18,227,155,.16));--nr-ease:cubic-bezier(.22,1,.36,1);overflow-x:clip;overflow-y:visible}
+/* The heading scrolls in like any section; then the rings stage pins to the screen (sticky) while the empty scroll room
+   under it (.svc-container::after) drives the animation. The heading is not pinned, so the rings get the whole screen
+   and reach the Figma size (600px rings in a 1000px graphic at 1440). */
+[data-svc-rings] .svc-container{position:relative;display:flex;flex-direction:column;align-items:center;grid-row-gap:2.5rem}
+[data-svc-rings] .svc-container::after{content:"";display:block;flex:none;width:1px;height:320vh}
+[data-svc-rings] .svc-num_stage{position:sticky;top:0;width:100%;height:100vh;height:100svh;max-width:none;aspect-ratio:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:5.5rem;padding-bottom:1.5rem;box-sizing:border-box}
+[data-svc-rings].nr-on .svc-num_stats{display:none}
+.nr-box{position:relative;width:min(980px,100%,calc((100vh - 7rem) * 1000 / 680));width:min(980px,100%,calc((100svh - 7rem) * 1000 / 680));aspect-ratio:1000/680;container-type:inline-size}
+/* The drawing is cropped to the rings and labels (viewBox 60 60 1000 680). Glow sits right behind the logo: the ring centre (400,400)
+   is 34% / 50% of .nr-box; it is sized from the box so it stays centred and in proportion at every screen size. */
+.nr-box::before{content:"";position:absolute;left:34%;top:50%;width:126%;height:185.3%;border-radius:50%;pointer-events:none;transform:translate(-50%,-50%) scale(calc(.6 + var(--p,0) * .5));opacity:calc(.25 + var(--p,0) * .75);background:radial-gradient(50% 50% at 50% 50%,var(--nr-glow) 0%,transparent 70%)}
+.nr-box svg{position:absolute;left:0;top:0;width:100%;height:100%;overflow:visible}
+.nr-track{fill:none;stroke:var(--nr-soft);stroke-opacity:.08;transform-origin:400px 400px;transform:scale(.6) rotate(-40deg);opacity:0;transition:transform 1.3s var(--nr-ease),opacity .8s ease}
+.nr-arc{fill:none;stroke-linecap:round}
+.nr-lead{fill:none;stroke:var(--nr-soft);stroke-opacity:.5;stroke-width:1}
+.nr-orbit{fill:none;stroke:var(--nr-soft);stroke-opacity:.2;stroke-dasharray:2 10;transform-origin:400px 400px;opacity:0;transition:opacity 1.2s ease .6s;animation:nr-spin 80s linear infinite}
+@keyframes nr-spin{to{transform:rotate(360deg)}}
+.nr-mark .ol{fill:none;stroke:var(--nr-c2);stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}
+/* Once the outline is fully drawn, drop the dash so the start corner joins cleanly (no notch where the draw begins and ends) */
+.nr-mark.full .ol{stroke-dasharray:none}
+.nr-mark .fl{opacity:.1;transition:opacity .9s ease}
+.nr-mark.full .fl{opacity:1}
+.nr-half{transition:transform 1.1s var(--nr-ease),opacity .6s ease}
+.nr-h1{transform:translate(-60px,40px);opacity:0}
+.nr-h2{transform:translate(60px,-40px);opacity:0}
+.nr-pulse{fill:none;stroke:var(--nr-c1);stroke-width:1.5;opacity:0;transform-origin:400px 400px}
+.nr-mark.full~.nr-pulse{animation:nr-pulse 2.8s var(--nr-ease) infinite}
+@keyframes nr-pulse{0%{opacity:.6;transform:scale(.55)}100%{opacity:0;transform:scale(1.15)}}
+.nr-glint{fill:none;stroke:#fff;stroke-width:2.4;stroke-linecap:round;opacity:0}
+.nr-box.ready .nr-track{transform:none;opacity:1}
+.nr-box.ready .nr-orbit{opacity:1}
+.nr-box.ready .nr-h1,.nr-box.ready .nr-h2{transform:none;opacity:1;transition-delay:.35s}
+.nr-box.ready .nr-glint{animation:nr-glint 1.2s var(--nr-ease) 1.25s forwards}
+@keyframes nr-glint{0%{opacity:0;stroke-dashoffset:1}30%{opacity:.9}100%{opacity:0;stroke-dashoffset:-1}}
+.nr-lab{position:absolute;left:77.6%;transform:translate(14px,-50%);opacity:0;transition:opacity .5s ease,transform .7s var(--nr-ease);display:flex;flex-direction:column;grid-row-gap:.5em;white-space:nowrap}
+.nr-lab.in{opacity:1;transform:translate(0,-50%)}
+.nr-lab .svc-num_value{font-size:clamp(22px,3.3cqw,32px);font-variant-numeric:tabular-nums}
+.nr-lab .svc-num_label{font-size:clamp(13px,2cqw,20px)}
+.nr-list{display:none}
+@media (max-width:767px){
+.nr-box::before{left:50%;width:200%;height:200%}
+[data-svc-rings] .svc-container{grid-row-gap:1.5rem}
+[data-svc-rings] .svc-num_stage{grid-row-gap:1.5rem;padding-top:5rem}
+.nr-box{width:min(100%,calc(100vh - 360px),420px);width:min(100%,calc(100svh - 360px),420px);aspect-ratio:1/1}
+.nr-lab,.nr-lead,.nr-end{display:none}
+.nr-list{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem 1rem;width:100%;max-width:420px;margin:0;padding:0;list-style:none}
+.nr-list li{opacity:.25;transform:translateY(8px);transition:opacity .5s ease,transform .7s var(--nr-ease)}
+.nr-list li.in{opacity:1;transform:none}
+.nr-list .svc-num_value{display:flex;align-items:center;gap:8px;font-size:28px}
+.nr-list .svc-num_value i{width:8px;height:8px;border-radius:50%;flex:none}
+.nr-list .svc-num_label{margin-top:6px;padding-left:16px;font-size:13px}
+}
+@media (prefers-reduced-motion:reduce){[data-svc-rings] .svc-container::after{display:none}[data-svc-rings] .svc-num_stage{position:relative;height:auto;padding-top:0}.nr-orbit{animation:none}}
+</style>
+<script>
+/* Results rings: scroll-driven rings drawn into .svc-num_stage from the native stat blocks */
+(function(){
+var me=document.currentScript, sec=(me&&me.closest('[data-svc-rings]'))||document.querySelector('[data-svc-rings]'); if(!sec||sec.hasAttribute('data-nr-ready')) return; sec.setAttribute('data-nr-ready','');
+if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded',init); } else { init(); }
+function init(){
+var root=sec.querySelector('.svc-num_stage'); if(!root) return; root.insertAdjacentHTML('afterbegin','<div class="nr-box"><svg viewBox="60 60 1000 680" aria-hidden="true" focusable="false"></svg></div><ul class="nr-list" aria-hidden="true"></ul>'); var box=root.querySelector('.nr-box'), svg=box.querySelector('svg'), list=root.querySelector('.nr-list'), pin=sec.querySelector('.padding-global'), cont=sec.querySelector('.svc-container');
+/* colours: Service theme variables of the active variant, with the Launch values as fallback */
+var cs=getComputedStyle(sec); function tv(n,f){var x=cs.getPropertyValue('--_service-theme---'+n).trim(); return x||f;}
+var COL=[tv('svc-ring-1','#12E39B'),tv('svc-ring-2','#A9EED0'),tv('svc-ring-3','#5FC496'),tv('svc-ring-4','#FBFAF7')], R=[300,266,232,198], Y=[130,290,450,592], TICK=tv('svc-dark','#082216'), MK=[tv('svc-ring-mark-1','#DFFFEF'),tv('svc-ring-mark-2','#A9EED0'),tv('svc-ring-mark-3','#12E39B')];
+/* numbers and labels come from the Webflow stat blocks, so they stay editable in the Designer */
+var M=[].slice.call(sec.querySelectorAll('.svc-num_stat')).slice(0,4).map(function(el,i){
+var v=el.querySelector('.svc-num_value'), l=el.querySelector('.svc-num_label');
+return {n:v?v.textContent.trim():'',lb:l?l.textContent.trim():'',col:COL[i],r:R[i],y:Y[i]};
+});
+if(!M.length) return;
+sec.classList.add('nr-on');
+var CX=400,CY=400,W=14,LX=820,s='';
+s+='<circle class="nr-orbit" cx="400" cy="400" r="336"/>';
+M.forEach(function(m,i){
+var end=Math.asin((m.y-CY)/m.r), endDeg=end*180/Math.PI;
+m.f=((-90-endDeg)%360+360)%360/360; m.C=2*Math.PI*m.r; m.tx=CX+m.r*Math.cos(end); m.L=LX-m.tx;
+s+='<circle class="nr-track" cx="400" cy="400" r="'+m.r+'" stroke-width="'+W+'"/>';
+s+='<circle class="nr-arc" cx="400" cy="400" r="'+m.r+'" stroke="'+m.col+'" stroke-width="'+W+'" stroke-dasharray="'+m.C.toFixed(1)+'" stroke-dashoffset="'+m.C.toFixed(1)+'" transform="translate(800 0) scale(-1 1) rotate(-90 400 400)"/>';
+s+='<path class="nr-lead" d="M'+m.tx.toFixed(1)+' '+m.y+'H'+LX+'" style="stroke-dasharray:'+m.L.toFixed(1)+';stroke-dashoffset:'+m.L.toFixed(1)+'"/>';
+s+='<g class="nr-tick" opacity="0"><circle cx="'+m.tx.toFixed(1)+'" cy="'+m.y+'" r="7" fill="'+TICK+'" stroke="'+m.col+'" stroke-width="2"/><circle class="nr-end" cx="'+LX+'" cy="'+m.y+'" r="3" fill="'+m.col+'"/></g>';
+});
+var P1='M0 0L66.7 66.7H46A13 13 0 0 0 33 79.7V100H9A9 9 0 0 1 0 91Z', P2='M66.7 0H91A9 9 0 0 1 100 9V100L66.7 66.7Z', gid='nr-mg-'+Math.random().toString(36).slice(2,7);
+s+='<defs><linearGradient id="'+gid+'" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="'+MK[0]+'"/><stop offset=".55" stop-color="'+MK[1]+'"/><stop offset="1" stop-color="'+MK[2]+'"/></linearGradient></defs>';
+s+='<g class="nr-mark" transform="translate(330 330) scale(1.4)">'+
+'<g class="nr-half nr-h1"><path class="fl" fill="url(#'+gid+')" d="'+P1+'"/><path class="ol" d="'+P1+'" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></g>'+
+'<g class="nr-half nr-h2"><path class="fl" fill="url(#'+gid+')" d="'+P2+'"/><path class="ol" d="'+P2+'" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></g>'+
+'<path class="nr-glint" d="M0 0L66.7 66.7" pathLength="1" stroke-dasharray=".18 1" stroke-dashoffset="1"/></g>';
+s+='<circle class="nr-pulse" cx="400" cy="400" r="150"/>';
+svg.innerHTML=s;
+var arcs=svg.querySelectorAll('.nr-arc'), leads=svg.querySelectorAll('.nr-lead'), ticks=svg.querySelectorAll('.nr-tick'), labs=[], lis=[];
+function esc(t){var d=document.createElement('div');d.textContent=t;return d.innerHTML;}
+M.forEach(function(m){
+var d=document.createElement('div'); d.className='nr-lab'; d.style.top=((m.y-60)/680*100)+'%';
+d.innerHTML='<div class="svc-num_value">'+esc(m.n)+'</div><div class="svc-num_label">'+esc(m.lb)+'</div>';
+box.appendChild(d); labs.push(d);
+var li=document.createElement('li');
+li.innerHTML='<div class="svc-num_value"><i style="background:'+m.col+'"></i>'+esc(m.n)+'</div><div class="svc-num_label">'+esc(m.lb)+'</div>';
+list.appendChild(li); lis.push(li);
+});
+var mob=matchMedia('(max-width:767px)');
+function fit(){ svg.setAttribute('viewBox',mob.matches?'56 56 688 688':'60 60 1000 680'); }
+fit(); if(mob.addEventListener) mob.addEventListener('change',fit); else mob.addListener(fit);
+var io=new IntersectionObserver(function(e){ if(e[0].isIntersecting){ box.classList.add('ready'); io.disconnect(); } },{threshold:.25});
+io.observe(box);
+var mark=svg.querySelector('.nr-mark'), ol=svg.querySelectorAll('.nr-mark .ol');
+function ease(t){return t<0?0:t>1?1:1-Math.pow(1-t,3);}
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function progress(){
+if(reduce) return 1;
+if(cont&&getComputedStyle(root).position==='sticky'){
+/* the stage sits right above the scroll room (::after), so its unpinned top is worked out from the container's bottom;
+   progress runs from the moment it pins (top reaches 0) to when the scroll room below it is used up */
+var cc=getComputedStyle(cont), room=(parseFloat(getComputedStyle(cont,'::after').height)||0)+(parseFloat(cc.rowGap)||0); if(room<1) return 1;
+var top=cont.getBoundingClientRect().bottom-(parseFloat(cc.paddingBottom)||0)-room-root.offsetHeight;
+return Math.min(1,Math.max(0,-top/room));
+}
+var b=box.getBoundingClientRect();
+return Math.min(1,Math.max(0,(innerHeight*.9-b.top)/(innerHeight*.5+b.height)));
+}
+function frame(){
+var p=progress();
+pin.style.setProperty('--p',p.toFixed(4));
+M.forEach(function(m,i){
+var t=(p-.05-i*.22)/.22, draw=ease(t/.72), lt=ease((t-.62)/.38);
+arcs[i].setAttribute('stroke-dashoffset',(m.C*(1-m.f*draw)).toFixed(1));
+leads[i].style.strokeDashoffset=(m.L*(1-lt)).toFixed(1);
+ticks[i].setAttribute('opacity',draw>.98?1:0);
+labs[i].classList.toggle('in',lt>.6);
+lis[i].classList.toggle('in',draw>.9);
+});
+var lp=Math.min(1,Math.max(0,(p-.05)/.88));
+ol[0].setAttribute('stroke-dashoffset',(1-Math.min(1,lp*2)).toFixed(4));
+ol[1].setAttribute('stroke-dashoffset',(1-Math.max(0,lp*2-1)).toFixed(4));
+ol[0].style.opacity=lp>.002?1:0; ol[1].style.opacity=lp>.5?1:0;
+mark.classList.toggle('full',lp>=.995);
+}
+/* only animate while the section is on screen */
+var on=false, raf=0;
+function loop(){ frame(); raf=on?requestAnimationFrame(loop):0; }
+new IntersectionObserver(function(e){ on=e[0].isIntersecting; if(on&&!raf) raf=requestAnimationFrame(loop); },{rootMargin:'100px 0px'}).observe(sec);
+frame();
+}
+})();
+</script>
