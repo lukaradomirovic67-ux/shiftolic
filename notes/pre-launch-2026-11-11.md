@@ -41,7 +41,7 @@ Rezime automatske provere:
 8. **Nijedna statična stranica (16) nema OG sliku.** Link podeljen na LinkedIn ili Slack nema sliku.
 
 ## 2. Šta popravljam ja (greške)
-- [ ] Telefon, širina stranice (Services, 4 servisne, Our Work), vidi 1.2.
+- [x] Telefon, širina stranice (Services, 4 servisne, Our Work), vidi 1.2. Popravljeno 11.11. (čeka objavu).
 - [ ] Pricing na tabletu (820): oznake ispod slidera se preklapaju („Design & Development“ / „Webflow Development“),
       a prva je odsečena levo.
 - [ ] Hamburger dugme je 24×18 px. Treba ga povećati na bar 44×44 (površina za prst), na svih 47 stranica.
