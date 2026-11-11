@@ -3,6 +3,24 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 11.11.2026: sitne greške pre lansiranja (blog, Our Work, pravne stranice)
+Nije objavljeno. Kopije koda pre izmene su u `backup/page-code/2026-11-11/` (blog, detail_blog). Pravne stranice su pre izmene imale samo `<meta name="robots" content="noindex">`.
+
+| Gde | Pre | Posle | Zašto |
+|---|---|---|---|
+| Blog (`6aba6bc07d6279b4b5617705`), page head, `.ins-page_num` | `color:#fff` na 15% navy (kontrast 1,4:1) | `color:rgba(13,25,40,.7)`, na hover `#0d1928` (kontrast oko 5,6:1) | brojevi „2“, „3“ su izgledali isključeno. U Figmi (5506:15416) su takođe beli, pa je ovo najmanja izmena: pozadina ista, menja se samo boja broja |
+| Blog post šablon (`6aba6bc07d6279b4b5617706`), page footer, `share()` | „Copy link“ je `<a href="#" role="button">`, Space ne radi | bez `href`, `role=button`, `tabindex=0`, Enter i Space kopiraju link | pravo dugme za tastaturu i čitače ekrana; izgled isti |
+| Our Work, stil `ow-cs_tab-logo` (native), `filter` | `… contrast(138%) opacity(40%)` uz `opacity: .4` (dvostruko, oko 16%) | `… contrast(138%)` (ostaje samo `opacity: .4`) | neaktivni logoi u tabovima (Intaker, Veyor) su bili skoro nevidljivi. Sada su rgb(166,170,175), Figma 8420:1075 rgb(158,163,169) |
+| Privacy (`…7704`) i Terms (`…7703`), page head | tačka u listi na donjoj liniji teksta, 5,6 px | `.legal-rich_text li{background-position:.08em .86em;background-size:.32em .32em}`, tačka na sredini reda, 6,1 px | kao u Figmi 6894:7515; provereno na 1440 / 820 / 390 |
+
+Provereno, bez izmene:
+- veliki navodnik iza Clutch bedža u recenzijama je tako i u Figmi (6663:4401);
+- tačke u listama na blogu su već 10 px i na sredini reda;
+- naslov istaknutog posta preko „VS“ grafike: raspored je kao u Figmi, a problem je u naslovnoj slici (Figma koristi fotografiju). Predlog je u porukama, bez izmene;
+- sitni logoi LaSalle, Sustain i Hypersonix: treba bolji fajl loga, ne CSS. Ide u listu slika.
+
+Lokalni testovi: „Copy link“ (Space i klik kopiraju, adresa bez `#`), tačke na tri širine. Snimak: `notes/previews/legal-bullets-1440.png`.
+
 ## 11.11.2026: objava na staging (webflow.io, bez custom domena)
 Objavljene 4 izmene ispod: Side by side, širina na telefonu, Pricing oznake, hamburger. Provera na staging-u posle objave:
 - Services: prekidač radi na 390 i 820 px, ikonice se učitavaju;
