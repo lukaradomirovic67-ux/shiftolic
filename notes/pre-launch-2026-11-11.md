@@ -44,7 +44,7 @@ Rezime automatske provere:
 - [x] Telefon, širina stranice (Services, 4 servisne, Our Work), vidi 1.2. Popravljeno 11.11. (čeka objavu).
 - [x] (popravljeno 11.11., čeka objavu) Pricing na tabletu (820): oznake ispod slidera se preklapaju („Design & Development“ / „Webflow Development“),
       a prva je odsečena levo.
-- [ ] Hamburger dugme je 24×18 px. Treba ga povećati na bar 44×44 (površina za prst), na svih 47 stranica.
+- [x] (popravljeno 11.11., čeka objavu) Hamburger dugme je 24×18 px. Treba ga povećati na bar 44×44 (površina za prst), na svih 47 stranica.
 - [ ] Blog paginacija: „2“ i „3“ su beli tekst na svetlosivoj podlozi (15% navy) i izgledaju kao isključeni.
 - [ ] „Copy link“ na 21 blog postu je link sa `#` umesto dugmeta (pristupačnost).
 - [ ] Tabela „Side by side“ (Services) na tabletu i telefonu nema znak da se skroluje u stranu.

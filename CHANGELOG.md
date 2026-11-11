@@ -3,6 +3,19 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 11.11.2026: hamburger dugme, površina za dodir 44×44 (tablet i telefon)
+Navbar komponenta, stil `navbar2_menu-button`, breakpoint medium (važi za tablet i telefon). Nije objavljeno.
+
+| Svojstvo | Pre | Posle |
+|---|---|---|
+| padding | 0 (dugme = ikonica 24×18 px) | 13px 10px (dugme 44×44 px) |
+| margin | 0 | -13px -10px (ikonica ostaje na istom mestu, navbar iste visine) |
+
+Lokalni test na 390 i 820 px:
+- dugme 24×18 → 44×44;
+- položaj ikonice i visina navbara (57 px) su isti;
+- dodir 7 px levo od ikonice sada otvara meni.
+
 ## 11.11.2026: Pricing, oznake ispod slidera na tabletu
 Na 768–991 px prva oznaka („Design & Development“) bila je odsečena levo i preklapala se sa drugom. Telefon je već imao
 ispravku, a tablet nije. Nije objavljeno.
