@@ -3,6 +3,16 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 12.11.2026: Resources hero, početni broj Insights usklađen sa CMS-om (objavljeno na staging)
+Brojeve u hero-u skripta računa iz skrivenih CMS lista (objavljeni blogovi i Our Works). U samom HTML-u (pre skripte, za Google i Designer) je za Insights stajalo „20“.
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Resources, `res-hero_stat-value` u statu Insights | `81030941-…7e2` sa tekstom „20“ (API ne menja tekst u Block elementu) | nov element `e2d365bd-…5d22`, ista klasa i `data-res-count="insight"`, tekst „21“; stari je uklonjen |
+
+Provereno na staging-u posle objave: HTML insight=21, case=10; posle skripte isto; u CMS listama 21 i 10 stavki.
+Kad se objavi novi post, skripta i dalje sama upisuje tačan broj, a početni broj u Designer-u treba povremeno uskladiti.
+
 ## 12.11.2026 (veče): objava na staging (webflow.io)
 Pre objave sam integraciju (Salesforce) i 5 kategorija skinuo sa staging-a (unpublish). Provereno na staging-u:
 - /webflow-integrations, /integrations/webflow-salesforce-integration i /integrations-category/crm-integrations vraćaju 404;
