@@ -15,16 +15,13 @@
 
 <!-- Nues: Our Work page code. Layout and default states are native classes (visible in the Designer); this block only adds runtime states. -->
 <style>
-/* Hero slider (static slides built in the Designer): all four show in the Designer; once JS runs, only the active one shows */
+/* Hero slider: the Designer shows the first CMS item; once JS runs, only the active item shows */
 .ow-slider.is-ready .ow-hs_item:not(.is-active){opacity:0;z-index:0;pointer-events:none}
 .ow-slider.is-ready .ow-hm_item:not(.is-active),.ow-slider.is-ready .ow-hh_item:not(.is-active){display:none}
 .ow-slider.is-ready .ow-hs_bar:first-child{background-color:rgba(13,25,40,.2)}
 .ow-hs_bar:focus-visible{outline:2px solid #5bd3a9;outline-offset:6px}
-/* Slide video fades in over the Cover image once it plays. It is a Webflow Background Video (class ow-hs_video) or a video the script
-   makes from the slide's data-video-src. isolation keeps Webflow's video (z-index -100) inside its box; Webflow's own pause button
-   is hidden, the bars and keyboard focus control the slider. */
-.ow-hs_video{transition:opacity .5s ease;pointer-events:none;isolation:isolate}
-.ow-hs_video .w-background-video--control{display:none}
+/* Slider video (CMS Slider video) fades in over the Cover image once it plays */
+.ow-hs_video{transition:opacity .5s ease;pointer-events:none}
 .ow-hs_video.is-on{opacity:1}
 .ow-browser_caret{animation:owBlink 1.1s steps(1) infinite}
 @keyframes owBlink{50%{opacity:0}}

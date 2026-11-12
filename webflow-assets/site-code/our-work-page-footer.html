@@ -12,7 +12,7 @@
 @media (max-width:767px){.ow-cs_compare.is-drag .ow-cs_knob{width:34px;height:48px;margin:-24px 0 0 -17px}}
 @media (prefers-reduced-motion:reduce){.ow-cs_knob,.ow-cs_chev,.ow-cs_label{transition:none}}
 </style>
-<!-- Nues: Our Work page code. The hero slider is built in the Designer (static); tabs and cards are CMS Collection List items. This script only switches the active one. -->
+<!-- Nues: Our Work page code. Every slide, bar, tab and card is a CMS Collection List item; this script only switches the active one. -->
 <script>
 (function () {
   var reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
@@ -55,10 +55,11 @@
   try { prepFilters(); } catch (e) { if (window.console) console.warn('ow filters', e); }
   loadFinsweet();
 
-  /* Hero: slides, bars, domain and meta are four static lists in the Designer, in the same order, so they line up by index.
-     A slide plays its video muted over its Cover image: a Webflow Background Video inside the slide (class ow-hs_video), or else a
-     direct MP4/WebM URL in the slide's data-video-src. That slide lasts as long as the video and its bar follows the video. Without
-     a video, or if the video cannot play (blocked, failed, too slow to start), the slide shows the Cover image for 6 seconds. */
+  /* Hero: slides, bars, domain and meta are four CMS lists with the same filter, so they line up by index.
+     A slide with a Slider video (CMS link field with a direct MP4/WebM URL, bound to the data-video-src attribute of the hidden
+     .ow-hs_video-src link in the slide) plays it muted over
+     its Cover image: that slide lasts as long as the video and its bar follows the video. Without a video, or if the video
+     cannot play (blocked, failed, too slow to start), the slide shows the Cover image for 6 seconds as before. */
   function initHero() {
     var slider = document.querySelector('.ow-slider');
     if (!slider) return;
@@ -73,39 +74,28 @@
     if (n < 2 && prog) prog.style.visibility = 'hidden';
     var idx = 0, DUR = 6000, WAIT = 4000, elapsed = 0, wait = 0, last = null, kbFocus = false, inView = true;
     var vids = slides.map(function (s) {
+      var a = s.querySelector('.ow-hs_video-src');
+      var src = a ? (a.getAttribute('data-video-src') || '').trim() : '';
+      if (!/^https?:\/\//i.test(src)) src = '';
+      if (reduce || !src) return null;
       var box = s.querySelector('.ow-hs_slide') || s;
       var img = box.querySelector('.ow-hs_img');
-      var v = box.querySelector('video'), wrap = v ? (v.closest('.ow-hs_video') || v) : null, src = '';
-      if (!v) {
-        src = (box.getAttribute('data-video-src') || '').trim();
-        if (!/^https?:\/\//i.test(src)) src = '';
-      }
-      // the slider decides when a Background Video plays: no autoplay
-      if (v) { v.removeAttribute('autoplay'); v.autoplay = false; try { v.pause(); } catch (e) {} }
-      if (reduce || (!v && !src)) return null;
-      if (!v) {
-        v = document.createElement('video');
-        v.className = 'ow-hs_video';
-        v.preload = 'none';
-        v.setAttribute('data-src', src);
-        if (img && !noImg(img)) v.poster = img.currentSrc || img.src;
-        box.insertBefore(v, img ? img.nextSibling : box.firstChild);
-        wrap = v;
-      }
-      v.muted = true; v.defaultMuted = true; v.playsInline = true; v.loop = n < 2;
+      var v = document.createElement('video');
+      v.className = 'ow-hs_video';
+      v.muted = true; v.defaultMuted = true; v.playsInline = true; v.loop = n < 2; v.preload = 'none';
       v.setAttribute('muted', ''); v.setAttribute('playsinline', ''); v.setAttribute('aria-hidden', 'true');
-      var st = { el: v, wrap: wrap, bad: false, pending: false };
-      v.addEventListener('playing', function () { if (!st.bad) wrap.classList.add('is-on'); });
+      v.setAttribute('data-src', src);
+      if (img && !noImg(img)) v.poster = img.currentSrc || img.src;
+      box.insertBefore(v, img ? img.nextSibling : box.firstChild);
+      var st = { el: v, bad: false, pending: false };
+      v.addEventListener('playing', function () { if (!st.bad) v.classList.add('is-on'); });
       v.addEventListener('error', function () { drop(st); });
       return st;
     });
-    function drop(st) { st.bad = true; st.wrap.classList.remove('is-on'); try { st.el.pause(); } catch (e) {} }
+    function drop(st) { st.bad = true; st.el.classList.remove('is-on'); try { st.el.pause(); } catch (e) {} }
     function load(i) {
       var st = vids[i];
-      if (!st || st.bad) return;
-      var src = st.el.getAttribute('data-src');
-      if (src && !st.el.getAttribute('src')) st.el.src = src;
-      st.el.preload = 'auto';
+      if (st && !st.bad && !st.el.getAttribute('src')) { st.el.preload = 'auto'; st.el.src = st.el.getAttribute('data-src'); }
     }
     function render() {
       slides.forEach(function (s, i) {
@@ -138,8 +128,6 @@
       var run = !reduce && !kbFocus && inView && !document.hidden;
       var dt = last === null ? 0 : Math.min(t - last, 100);
       last = run ? t : null;
-      // only the active slide's video runs (Webflow's own script may start a Background Video on its own)
-      vids.forEach(function (o, i) { if (o && i !== idx && !o.el.paused) o.el.pause(); });
       var st = vids[idx];
       if (st && !st.bad) {
         var v = st.el;

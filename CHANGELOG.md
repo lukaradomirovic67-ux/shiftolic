@@ -3,6 +3,26 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 12.11.2026: Our Work hero slider vraćen na CMS (objavljeno na staging)
+Po tvom zahtevu („stani aj ipak da budu cms“). Poništava izmenu ispod („slider bez CMS-a“). Izgled i ponašanje su isti kao pre nje.
+
+| Gde | Pre (statična verzija) | Posle (vraćeno) |
+|---|---|---|
+| Our Work (`6aba6bc07d6279b4b56176fe`), slider na vrhu | 4 statične liste (TrakPro, Sustain, Shiftolic, Ballerine) sa tekstom upisanim u Designer-u | ponovo 4 CMS liste iz Our Works, filter „Show in Our Work slider“ = On, sort po Name opadajuće: adrese (`ow-hh`), slajdovi (`ow-hs`), trake (`ow-hs-bars`) i logo sa oblašću i linkom (`ow-hm`). Sve je vezano za CMS polja kao ranije: Cover image, Logo color, Industry, Stat 1, Website link, Slug, Case title |
+| Video u slajdu | Background Video ili `data-video-src` na slajdu | skriveni `.ow-hs_video-src` u slajdu, atribut `data-video-src` vezan za CMS polje „Slider video“ (kao ranije) |
+| Our Work, page head i footer | statična verzija | vraćeni bajt po bajt iz `backup/page-code/2026-11-12/our-work-head.html` i `our-work-footer.html` |
+| CMS Our Works, objašnjenja polja „Show in Our Work slider“, „Slider video“, „Logo color“ | „više se ne koriste“ | vraćena originalna objašnjenja |
+
+`webflow-assets/site-code/our-work-page-head.html` i `our-work-page-footer.html` su ponovo originalne verzije.
+4 naslovne slike koje sam dodao za statičnu verziju (`ow-slider-trakpro/sustain/shiftolic/ballerine.avif`) se više nigde ne koriste. Nisu obrisane, čekam tvoju potvrdu.
+
+Provereno na staging-u (1440 i 390):
+- head i footer u objavljenom HTML-u su identični backup fajlovima;
+- 4 slajda, adrese bez https:// i www., logoi u boji, „View project“ vodi na /our-work/<slug>;
+- videi (zamenjeni probnim WebM-om, jer test pregledač nema H.264) se puštaju, klik na traku menja slajd;
+- nema JS grešaka (u konzoli su samo blokirani spoljni servisi test okruženja).
+Napomena: „View project“ u sirovom HTML-u ima `href="#"`, a skripta ga u pregledaču menja u /our-work/<slug>. Tako je bilo i pre (isto važi za karticu u sekciji „What they had“). Ide na listu za SEO fazu.
+
 ## 12.11.2026: Our Work hero slider bez CMS-a, pripremljen za videe u Webflow-u (objavljeno na staging)
 Po tvom zahtevu („napravi ovu sekciju da ne bude cms i tako ubaci video snimke“). Izgled je isti kao do sada.
 
