@@ -10,7 +10,10 @@ Po tvom zahtevu („da se tekst u faq-u componenti moze menjati u zavisnosti od 
 |---|---|---|
 | Komponenta Service FAQ (`5896a28a-03e8-6426-c47f-4bc3a414ebeb`), 5 instanci: Services, Design & Development, Webflow Development, SEO & AEO, Growth | jedini property Variant; naslov, 6 pitanja i 6 odgovora upisani u komponentu, isti na svih 5 stranica | 13 novih tekstualnih property-ja: Heading (grupa Heading, Enter = novi red) i Question 1–6 / Answer 1–6 (grupe FAQ 1–FAQ 6). H2, `svc-faq_q-text` i `svc-faq_a-text` su vezani za njih. Variant je ostao |
 
-Šta nije property: red „Something else on your mind? Ask it on the call“ (isti na svim stranicama) i broj pitanja (uvek 6). FAQ na Pricing i Webflow Integrations nije ova komponenta, pa se tamo tekst menja direktno na stranici.
+Dopuna istog dana, po tvom zahtevu („dodaj i prekidace“): 6 prekidača **Show FAQ 1–6** (u grupama FAQ 1–FAQ 6, podrazumevano uključeni), vezanih za vidljivost svakog `svc-faq_item`. Isključeno pitanje se uopšte ne pojavljuje u HTML-u stranice.
+Test na staging-u: na Growth sam privremeno isključio FAQ 6 → stranica je imala 5 pitanja, otvaranje je radilo i nije bilo JS grešaka, a SEO & AEO je i dalje imao 6. Posle testa je prekidač vraćen na podrazumevanu vrednost i sajt ponovo objavljen. CSS ne zavisi od prvog/poslednjeg pitanja (gornja ivica je na listi, donja na svakom pitanju), pa izgled ostaje ispravan sa manje pitanja.
+
+Šta nije property: red „Something else on your mind? Ask it on the call“ (isti na svim stranicama). FAQ na Pricing i Webflow Integrations nije ova komponenta, pa se tamo tekst menja direktno na stranici.
 Backup komponente pre izmene: `backup/components/service-faq-2026-11-12.json`.
 
 Provereno na staging-u (objava 23:20 UTC): na svih 5 stranica naslov (sa prelomom reda), pitanja i odgovori su identični kao pre izmene, a `data-svc-faq` atributi su ostali; klik na pitanje i dalje otvara odgovor, bez JS grešaka.
