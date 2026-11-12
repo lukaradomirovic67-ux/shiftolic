@@ -111,6 +111,6 @@ Rezime automatske provere:
   - nema canonical-a, sitemap-a ni OG slika;
   - 5 case stranica nema title (sada noindex + preusmerenje, 12.11.);
   - „View project“ u Our Work slideru i kartica u „What they had“ imaju `href="#"` u HTML-u (pravi link dobijaju tek skriptom);
-  - pomoćne CMS šablon stranice su javne (Hero Cards, Case team, Jobs);
+  - pomoćne CMS šablon stranice su javne: Hero Cards ima stavke, pa i javne adrese /hero-cards/… (Case team i Jobs su sada prazne, ali šabloni ostaju);
   - Review/Rating schema na Let's talk koju Google ignoriše (QUESTIONS 11);
   - za mapu ključnih reči trebaju mi odgovori iz QUESTIONS 3–6 i 9–10.
