@@ -14,7 +14,7 @@ Po tvom zahtevu („stani aj ipak da budu cms“). Poništava izmenu ispod („s
 | CMS Our Works, objašnjenja polja „Show in Our Work slider“, „Slider video“, „Logo color“ | „više se ne koriste“ | vraćena originalna objašnjenja |
 
 `webflow-assets/site-code/our-work-page-head.html` i `our-work-page-footer.html` su ponovo originalne verzije.
-4 naslovne slike koje sam dodao za statičnu verziju (`ow-slider-trakpro/sustain/shiftolic/ballerine.avif`) se više nigde ne koriste. Nisu obrisane, čekam tvoju potvrdu.
+4 naslovne slike koje sam dodao za statičnu verziju (`ow-slider-trakpro/sustain/shiftolic/ballerine.avif`, ID `6af63e8bee2922a92fa42d7b`, `6af63e8d5eeab28b8fb68410`, `6af63e8f536bacf6900a8d79`, `6af63e908719bf715ca01ca9`) obrisane su iz Assets po tvojoj potvrdi. Pre brisanja sam proverio da ih Our Work na staging-u nigde ne koristi. Izvorne slike su i dalje u CMS polju Cover image.
 
 Provereno na staging-u (1440 i 390):
 - head i footer u objavljenom HTML-u su identični backup fajlovima;
