@@ -18,16 +18,17 @@ Stavke označene sa (27.10.) su iz revizije od 27.10. i treba ih ponovo proverit
   - Pricing cene SEO & AEO i Growth "[$X,XXX]/month"
   - Recenzije: Shiftolic/Harper/Veyor koriste citat Ballerine-a; na servisnim stranicama 4 od 5 slajdova isti citat
   - Let's talk: 2. slajd testimonijala pripisan Or Moshkovitz
-  - Home Services panel: "+214% / Timeline" (Figma "6 to 8 weeks / Kickoff to launch")
+  - (rešeno, provereno 12.11.) Home Services panel: "+214% / Timeline" (Figma "6 to 8 weeks / Kickoff to launch")
   - Hypersonix metrika "Soon / Rebuild in progress"
 - [ ] Koraci na nuesLaunch / nuesBuild / nues+ / nuesSEO odstupaju od Figme — odluka koji tekst važi (27.10.).
-- [ ] Linkovi (27.10.): Service Cases strelice vode na /our-work umesto na case stranice; hiring kartica
+- [x] Linkovi (27.10.): Service Cases strelice vode na /our-work umesto na case stranice; hiring kartica
       "Book a Call" -> /lets-talk (možda /careers); Home Crew srednja kartica "See all services" bez linka.
+      (provereno 12.11.: Service Cases vode na /our-work/<slug>, „See all services“ na /services, „Book a call“ svuda na /lets-talk)
 
 ## 2. Tehnički (radim ja)
 - [ ] Resources stranica po Figmi 7670:106; linkovi "Integrations" i breadcrumb "Resources" i dalje vode na staru verziju.
 - [ ] Webflow Integrations stranica po Figmi 7319:484.
-- [ ] Blog: avatari autora.
+- [x] Blog: avatari autora. (provereno 12.11.: na /blog su prave fotografije autora)
 - [ ] Zamena slika boljim verzijama iz Drive foldera 1-UqCWAmyFEtaCDTP4ESeKaOFu_ohH4mq.
 - [ ] Ubacivanje kad je Webflow Designer otvoren (MCP app); fajlovi su spremni u webflow-assets/site-hq/ (spisak u scratchpad drive2/PENDING.md):
       About fotografija; navbar ilustracija; Shiftolic ekran u Service Cases; beli logoi Intaker i Ballerine
