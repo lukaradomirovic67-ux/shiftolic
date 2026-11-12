@@ -30,7 +30,7 @@ Rezime automatske provere:
    - Predlog: noindex i preusmerenje na sajt klijenta, bez vizuelne promene. Čeka tvoje „da“.
 4. **Integrations:** linkovi „See the case studies“ vode na 404, dok se ne uključi šablon stranica integracija
    (MANUAL_TASKS 7). U CMS-u postoji samo Salesforce, bez loga i bez napisanog vodiča.
-5. **Videi u Our Work slideru dolaze iz GitHub repoa preko jsDelivr-a.**
+5. **(rešeno 12.11.) Videi u Our Work slideru dolaze iz GitHub repoa preko jsDelivr-a.** Sada su na Webflow-u (vidi CHANGELOG 12.11.).
    - Rade samo dok je repo javan, a u testu su se dva videa (Sustain, TrakPro) prekinula pri učitavanju.
    - Pre lansiranja ih treba prebaciti na Vimeo ili Webflow.
 6. **Infrastruktura za lansiranje nije spremna:**
@@ -109,6 +109,8 @@ Rezime automatske provere:
 - Site head kod ima 49.223 od 50.000 znakova. Prvo ga treba smanjiti, inače nema mesta ni za šta novo.
 - SEO:
   - nema canonical-a, sitemap-a ni OG slika;
-  - 5 case stranica nema title;
+  - 5 case stranica nema title (sada noindex + preusmerenje, 12.11.);
+  - „View project“ u Our Work slideru i kartica u „What they had“ imaju `href="#"` u HTML-u (pravi link dobijaju tek skriptom);
+  - pomoćne CMS šablon stranice su javne (Hero Cards, Case team, Jobs);
   - Review/Rating schema na Let's talk koju Google ignoriše (QUESTIONS 11);
   - za mapu ključnih reči trebaju mi odgovori iz QUESTIONS 3–6 i 9–10.
