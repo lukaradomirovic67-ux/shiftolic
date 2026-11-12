@@ -23,7 +23,7 @@ Putanje u meniju proverite u trenutnom Webflow interfejsu. Nazivi se ponekad men
 6. **Google Search Console**: verifikacija domena (DNS TXT), slanje sitemap-a. **Bing Webmaster Tools**: uvoz iz GSC-a.
 
 ## Sada (van SEO faza)
-7. **Uključiti stranice pojedinačnih integracija** (`/integrations/<slug>`). Šablon „Integrations Template“ postoji i nije draft,
+7. **[ODLOŽENO 12.11.: integracije su u draftu dok se ne napišu]** **Uključiti stranice pojedinačnih integracija** (`/integrations/<slug>`). Šablon „Integrations Template“ postoji i nije draft,
    ali ga Webflow ne objavljuje (`shouldPublish: false`), pa je /integrations/webflow-salesforce-integration na stagingu 404.
    Linkovi „See the case studies“ na karticama Webflow Integrations stranice vode tamo. API ovo podešavanje ne menja.
    Klik-putanja (proverite nazive u trenutnom interfejsu):

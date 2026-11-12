@@ -1,0 +1,11 @@
+{
+ "note": "Stanje pre stavljanja u draft (12.11.2026). Integrations (6aba6bc07d6279b4b56177d6) i Integrations categories (6aba6bc07d6279b4b56177ee). Sve stavke su bile isDraft=false, objavljene.",
+ "integrations": [{"id": "6aba6bc07d6279b4b56179af", "name": "Webflow Salesforce Integration", "slug": "webflow-salesforce-integration", "isDraft": false, "lastPublished": "2026-11-10T19:28:52.350Z", "categories": ["6aba6bc07d6279b4b56179b0","6aba6bc07d6279b4b56179b1","6aba6bc07d6279b4b56179b2","6aba6bc07d6279b4b56179b3","6aba6bc07d6279b4b56179b4"]}],
+ "categories": [
+  {"id": "6aba6bc07d6279b4b56179b4", "name": "Form integrations", "slug": "form-integrations", "isDraft": false},
+  {"id": "6aba6bc07d6279b4b56179b3", "name": "E-commerce integrations", "slug": "e-commerce-integrations", "isDraft": false},
+  {"id": "6aba6bc07d6279b4b56179b2", "name": "Automation integrations", "slug": "automation-integrations", "isDraft": false},
+  {"id": "6aba6bc07d6279b4b56179b1", "name": "CRM integrations", "slug": "crm-integrations", "isDraft": false},
+  {"id": "6aba6bc07d6279b4b56179b0", "name": "SaaS and product integrations", "slug": "saas-and-product-integrations", "isDraft": false}
+ ]
+}

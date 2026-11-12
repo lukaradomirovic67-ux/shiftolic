@@ -78,11 +78,11 @@ Rezime automatske provere:
 **Odluke**
 - [ ] 5 praznih case-ova: napisati ih ili sakriti od Google-a (moj predlog, 1.3).
 - [ ] Blog „B2B SaaS SEO in 2026“: nova verzija je u draftu, stara je živa i 6 postova linkuje na nju. Objaviti novu ili ukloniti?
-- [ ] Resources: stranica je sada po Figmi 7670:106, a i dalje ima noindex. Skinuti ga?
+- [x] (12.11.) Resources: noindex skinut. Integracije su sakrivene na Resources i u navbaru; stranica Integrations je u draftu i ima noindex, a CMS integracija je u draftu dok se ne napiše.
 - [ ] Our Work:
   - redosled kartica kao u Figmi (traži novo CMS polje „Our Work order“, čeka odobrenje);
   - prvi slajd hero slidera Intaker (treba glavna slika, logo u boji i metrika).
-- [ ] Careers hero: dugme „Back to home“ vodi na početnu. Možda treba „See open roles“?
+- [x] (12.11.) Careers hero: dugme je sada „See open roles“ i vodi na pozicije (#open-roles).
 - [ ] Baner za kolačiće (GA4) za EU posetioce.
 - [ ] Obrisati praznu kolekciju „Case team“ u CMS-u; brisanje ostavljam vama. Čišćenje Style Managera radi tim.
 

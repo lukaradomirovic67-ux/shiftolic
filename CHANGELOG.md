@@ -3,6 +3,22 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 12.11.2026: Resources indeksirana, integracije sakrivene do pisanja, Careers dugme
+Po tvojoj odluci. Nije objavljeno.
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Resources (`6aba6bc07d6279b4b5617709`), page head | prvi red `<meta name="robots" content="noindex">` | red uklonjen (ostala tri `<style>` bloka su nepromenjena) |
+| Resources, hero | 3 broja (Insights, Case studies, Integrations) i 8 kartica sa logoima integracija | sakriveno (visibility off): broj „15 Integrations“ (`81030941-…7f4`), razdelnik ispred njega (`…7ee`), 8 kartica `data-res-card="integration"` (`…7f8`, `7fb`, `7fe`, `801`, `805`, `808`, `80b`, `80e`) |
+| Resources, sekcija „Integrations“ (`#integrations`, `ccd50ea3-…a070`) | vidljiva, sa linkom „See all integrations“ | sakrivena (visibility off) |
+| Navbar komponenta, Resources dropdown, link „Integrations“ (`41235d66-…53d5`) | vidljiv, vodi na /webflow-integrations | sakriven, da nijedan link ne vodi na stranicu u draftu |
+| Webflow Integrations (`6ae0d85d4a2c075c26d111c8`) | objavljena, indeksirana | page head počinje sa `<meta name="robots" content="noindex">` i stranica je **draft** |
+| CMS Integrations (1 stavka, Salesforce) i Integrations categories (5) | isDraft false, objavljene | isDraft true. Kopija stanja: `backup/cms-items/integrations-2026-11-12.json`. Pri sledećoj objavi ih skidam sa staging-a (unpublish), jer Webflow inače drži objavljenu verziju |
+| Careers (`6ada16efb73db28b0b5cbad8`), hero dugme (`aa620b12-…b5b6`) | „Back to home ↗“, link na Home | „See open roles ↗“, link na sekciju sa pozicijama (`section_careers-jobs`, dobila id `open-roles`). Strelica je ponovo dodata sa postojećom klasom `button_icon` |
+
+Sakriveno je preko „visibility“, ništa nije obrisano. Kad integracije budu napisane, uključi elemente i stavke, a stranici skini draft i noindex.
+Lokalni test Resources bez ovih elemenata (1440 i 390): hero radi sa dva broja, kartice se pune blogovima i case studijama, bez JS grešaka i bez širenja.
+
 ## 12.11.2026: objava na staging (webflow.io, bez custom domena)
 Objavljeno je pet izmena: logoi na Resources, paginacija na blogu, „Copy link“, tabovi na Our Work i tačke u pravnim listama. Proverio sam ih na staging-u posle objave:
 - Resources: svih 8 logoa u hero karticama su SVG i učitavaju se;
