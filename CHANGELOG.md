@@ -3,6 +3,23 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 12.11.2026: Careers, koverta u praznom stanju se otvara kao kartice pozicija (objavljeno na staging)
+Po tvom zahtevu („da i ovo ima animaciju kao i kada imamo pozicije“). Koverta je sada zatvorena, a otvara se na prelaz mišem i na fokus tastaturom: preklop se podigne, pa izađe pismo. Kad skloniš miša, zatvara se. Na telefonu i tabletu je otvorena, kao i kartice pozicija.
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Style Manager, combo na `careers-job_card` | `is-open` | preimenovan u `is-empty` (isti stilovi: max 645px, centrirana, ≤767 odnos 645/450, ≤479 kvadrat) |
+| Careers, page head, blok „Empty state“ | 5 pravila koja drže kovertu stalno otvorenom (`.careers-job_card.is-open …`) | uklonjena; koverta koristi ista pravila kao kartice pozicija. Razmak iznad liste, sakriveni filteri i „Don't see your role?“ ostaju |
+
+Kopija head koda pre izmene: `backup/page-code/2026-11-12/careers-head-empty-open.html`. Nova verzija: `webflow-assets/site-code/careers-page-head.html`.
+Provereno na staging-u:
+- head kod je isti kao lokalni fajl;
+- desktop: zatvorena koverta (pismo unutra, tekst sakriven), na prelaz mišem se pismo podigne do 100px ispod naslova, kao u Figmi; kad se miš skloni, koverta se zatvori;
+- od koverte do dugmeta je 100px;
+- klik otvara prijavu „Open application“;
+- telefon: koverta je otvorena, bez širenja;
+- nema JS grešaka.
+
 ## 12.11.2026: Careers, prazno stanje za pozicije (Figma 8664:32) i brisanje pozicija iz CMS-a (objavljeno na staging)
 Po tvom zahtevu. Od sada svaku izmenu odmah objavljujem na staging (webflow.io), po tvojoj odluci 12.11.
 

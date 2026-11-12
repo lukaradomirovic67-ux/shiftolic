@@ -66,15 +66,11 @@
 .careers-jobs_item.is-in{animation:careersFade .45s ease both}
 @keyframes careersFade{from{opacity:0;transform:translateY(12px)}}
 .careers-jobs_empty p{margin:0}
-/* Empty state (Figma 8664:32): when the Jobs collection has no items, the list's Empty State shows one envelope, already open,
-   with the open application on the letter (careers-job_card is-open). The filters and "Don't see your role?" hide; the button stays.
-   The list's top margin is the room the raised letter needs: 10.7% of the envelope's height (43px at full size). The envelope
-   gets taller on small screens (native combo: 645/450 up to 767px, square up to 479px), so the share of its width changes. */
-.careers-job_card.is-open .careers-job_flap{transform:rotateX(180deg) scaleY(0.558);z-index:1;background-color:#121c2b;transition:none}
-.careers-job_card.is-open .careers-job_pocket{background-color:#192539}
-.careers-job_card.is-open .careers-job_pocket::before{opacity:0;transition:none}
-.careers-job_card.is-open .careers-job_letter{transform:translateY(-45.4%)}
-.careers-job_card.is-open .careers-job_letter-content{opacity:1}
+/* Empty state (Figma 8664:32): when the Jobs collection has no items, the list's Empty State shows one envelope with the open
+   application on the letter (careers-job_card is-empty). It opens on hover like the job cards (open on touch screens). The filters
+   and "Don't see your role?" hide; the button stays. The list's top margin is the room the raised letter needs: 10.7% of the
+   envelope's height (43px at full size). The envelope gets taller on small screens (native combo: 645/450 up to 767px, square up
+   to 479px), so the share of its width changes. */
 .careers-jobs_list:has(>.careers-jobs_empty){margin-top:min(2.6875rem,6.67%)}
 @media (max-width:767px){.careers-jobs_list:has(>.careers-jobs_empty){margin-top:min(3rem,7.47%)}}
 @media (max-width:479px){.careers-jobs_list:has(>.careers-jobs_empty){margin-top:10.7%}}
