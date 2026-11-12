@@ -50,13 +50,8 @@ Rezime automatske provere:
 - [x] (preuređeno 11.11., objavljeno na staging) Tabela „Side by side“ (Services) na tabletu i telefonu nema znak da se skroluje u stranu.
       Sada je prekidač sa 4 usluge i jedna kartica za izabranu uslugu (vidi CHANGELOG).
 - [ ] 5 praznih case stranica: noindex + preusmerenje (kad odobriš).
-- [ ] Bolje slike koje čekaju otvoren Webflow Designer (MCP app). Fajlovi su spremni:
-  - About fotografija i ilustracija u navbaru;
-  - Shiftolic ekran u Service Cases;
-  - beli logoi Intaker i Ballerine u video karticama;
-  - logoi i ikone integracija na Resources;
-  - Todoist logo na Integrations.
-  Treba samo da otvoriš Designer sa MCP aplikacijom.
+- [x] (12.11.) Bolje slike koje su čekale Designer: zamenjeno 8 logoa u Resources hero (SVG); ostale su već bile dovoljno oštre
+      ili se više ne koriste (vidi CHANGELOG 12.11.). Ostaju sitni logoi LaSalle, Sustain i Hypersonix (treba bolji fajl).
 - [x] Sitnice sa QA 8.11. (ponovo provereno 11.11.):
   - navodnik iza Clutch bedža: tako je u Figmi, ostaje;
   - sitni logoi LaSalle, Sustain i Hypersonix: treba bolji fajl loga (ide uz slike);

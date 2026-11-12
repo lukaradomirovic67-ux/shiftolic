@@ -3,6 +3,23 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 12.11.2026: slike koje su čekale Designer (MCP app)
+Designer je bio otvoren, pa sam prošao listu iz `notes/pre-launch-2026-11-11.md`. Pre svake zamene sam izmerio prikazanu veličinu i rezoluciju trenutne slike. Nije objavljeno.
+
+| Element | Pre | Posle |
+|---|---|---|
+| Resources (`6aba6bc07d6279b4b5617709`), 8 logoa u hero karticama (`res-hero_card-logo`: Discord, Zapier, Calendly, Airtable, Slack, Stripe, Shopify, Make) | AVIF raster, 300–436 px za prikaz od 129–155 px | SVG iz `webflow-assets/site-hq/integ/` (nova sredstva `6af62093…`, `6af62095…`, `6af62096…`, `6af62098…`, `6af62099…`, `6af6209b…`, `6af6209c…`, `6af620a3…`), uz alt tekst. Izgled je isti, provereno uporedo |
+
+Bez zamene, jer je trenutna slika već dovoljno oštra (rezolucija / prikaz):
+- About fotografija: 1400 px / 445 px (3×);
+- ilustracija u navbaru: 610 px / 100 px;
+- Shiftolic ekran u Service Cases: 1440 px / 506 px. Zamenjen je ranije, pri prepravci Service Cases;
+- beli logoi Intaker i Ballerine u video karticama: 428 px / 86–147 px;
+- Resources pločice i Stripe logo: SVG su već ubačeni ranije;
+- Todoist logo na Webflow Integrations: kartice sada uzimaju logo iz CMS-a, pa se stara slika više ne koristi.
+
+Stara sredstva nisu obrisana (brisanje samo uz tvoje odobrenje).
+
 ## 11.11.2026: sitne greške pre lansiranja (blog, Our Work, pravne stranice)
 Nije objavljeno. Kopije koda pre izmene su u `backup/page-code/2026-11-11/` (blog, detail_blog). Pravne stranice su pre izmene imale samo `<meta name="robots" content="noindex">`.
 
