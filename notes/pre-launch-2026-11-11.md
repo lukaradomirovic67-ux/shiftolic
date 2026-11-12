@@ -79,6 +79,7 @@ Rezime automatske provere:
 - [x] (12.11.) 5 praznih case-ova sakriveni od Google-a (noindex + preusmerenje); kad se napišu, rade sami.
       Odluka 12.11.: ostaje samo skripta. Webflow prekidač „Sitemap indexing“ na stavkama se ne koristi; rizik je mali (vidi CHANGELOG 12.11.).
 - [ ] Blog „B2B SaaS SEO in 2026“: nova verzija je u draftu, stara je živa i 6 postova linkuje na nju. Objaviti novu ili ukloniti?
+      12.11.: preskočeno do kraja, po tvojoj odluci.
 - [x] (12.11.) Resources: noindex skinut. Integracije su sakrivene na Resources i u navbaru; stranica Integrations je u draftu i ima noindex, a CMS integracija je u draftu dok se ne napiše.
 - [ ] Our Work:
   - redosled kartica kao u Figmi (traži novo CMS polje „Our Work order“, čeka odobrenje);
