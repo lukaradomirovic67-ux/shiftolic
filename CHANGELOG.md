@@ -3,6 +3,31 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 12.11.2026: Our Work hero slider bez CMS-a, pripremljen za videe u Webflow-u (objavljeno na staging)
+Po tvom zahtevu („napravi ovu sekciju da ne bude cms i tako ubaci video snimke“). Izgled je isti kao do sada.
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Our Work (`6aba6bc07d6279b4b56176fe`), slider na vrhu | 4 CMS liste filtrirane poljem „Show in Our Work slider“: adrese (`ow-hh_wrap`), slajdovi (`ow-hs_wrap`), trake (`ow-hs-bars_wrap`) i logo sa linkom (`ow-hm_wrap`). Video je dolazio iz polja „Slider video“ (jsDelivr) | iste 4 liste kao obični elementi, sa istim klasama: TrakPro, Sustain, Shiftolic, Ballerine, istim redom. Tekstovi, brojevi, oblasti i linkovi („View project“ → /our-work/<slug>) su upisani u Designer-u. CMS liste su obrisane |
+| Slike slajdova i logoi | iz CMS polja Cover image i Logo color | Webflow asseti: 4 nove naslovne slike (`ow-slider-*.avif`), logoi su postojeći asseti `logo-color-*-v2.svg`. Upload je tim logoima privremeno promenio ime; vraćena su originalna imena, a alt tekst je ime klijenta |
+| Video | skripta je pravila `<video>` iz CMS linka | skripta prvo traži Webflow „Background Video“ u slajdu (klasa `ow-hs_video`), a ako ga nema, koristi link iz atributa `data-video-src` na slajdu (sadašnji jsDelivr linkovi, privremeno) |
+| Our Work, page head | — | `.ow-hs_video` dobija `isolation:isolate`, a Webflow-ovo dugme za pauzu u Background Video elementu je sakriveno, jer slider kontrolišu trake. Komentari su usklađeni |
+| Our Work, page footer (skripta slidera) | čita `.ow-hs_video-src` iz CMS-a | čita Background Video ili `data-video-src`. Gasi autoplay, pa se pušta samo video aktivnog slajda. Ostalo je isto: slajd traje koliko video, traka prati video, bez videa 6 sekundi. Komentari su usklađeni |
+| CMS Our Works | — | u objašnjenje polja „Show in Our Work slider“, „Slider video“ i „Logo color“ upisano je da se više ne koriste. Polja nisu brisana |
+
+Kopija koda pre izmene: `backup/page-code/2026-11-12/our-work-head.html` i `our-work-footer.html`. Nova verzija: `webflow-assets/site-code/our-work-page-head.html` i `our-work-page-footer.html`.
+Lokalni test, sa probnim WebM videom u obe varijante (Background Video i `data-video-src`):
+- video se pušta preko slike, traka prati video, a na kraju videa prelazi se na sledeći slajd;
+- klik na traku menja slajd;
+- pušta se samo aktivni video, a Webflow-ovo dugme za pauzu je skriveno;
+- nema JS grešaka.
+Provereno na staging-u (1440 i 390):
+- head i footer kod su isti kao lokalni fajlovi i nema više CMS lista u slideru;
+- adresa, oblast, link i slika se menjaju zajedno sa slajdom, video se pušta;
+- nema JS grešaka ni širenja.
+
+Sledeći korak (ručno, Webflow ne dozvoljava upload videa preko API-ja): u svaki slajd ubaciti Background Video i u njega odgovarajući video. Posle toga dodajem klasu, uklanjam `data-video-src` (jsDelivr) i objavljujem.
+
 ## 12.11.2026: 5 case stranica bez napisanog case-a: noindex i preusmerenje na sajt klijenta (objavljeno na staging)
 Po tvom zahtevu, kako sam predložio na pre-launch listi (1.3). Bez vizuelne promene na sajtu.
 

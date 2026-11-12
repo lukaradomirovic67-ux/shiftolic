@@ -1,0 +1,144 @@
+<style>
+/* Primenjuje se samo na desktop (992px i veće) */
+@media (min-width: 992px) {
+  .w-dyn-item:nth-child(odd) .grid-featured-work {
+    grid-template-columns: 1.55fr 1fr;
+  }
+  .w-dyn-item:nth-child(odd) .grid-featured-work .text-holder-featured {
+    order: 2;
+  }
+  .w-dyn-item:nth-child(odd) .grid-featured-work .images-work-featured-holder {
+    order: 1;
+  }
+}
+</style>
+
+<!-- Nues: Our Work page code. Layout and default states are native classes (visible in the Designer); this block only adds runtime states. -->
+<style>
+/* Hero slider: the Designer shows the first CMS item; once JS runs, only the active item shows */
+.ow-slider.is-ready .ow-hs_item:not(.is-active){opacity:0;z-index:0;pointer-events:none}
+.ow-slider.is-ready .ow-hm_item:not(.is-active),.ow-slider.is-ready .ow-hh_item:not(.is-active){display:none}
+.ow-slider.is-ready .ow-hs_bar:first-child{background-color:rgba(13,25,40,.2)}
+.ow-hs_bar:focus-visible{outline:2px solid #5bd3a9;outline-offset:6px}
+/* Slider video (CMS Slider video) fades in over the Cover image once it plays */
+.ow-hs_video{transition:opacity .5s ease;pointer-events:none}
+.ow-hs_video.is-on{opacity:1}
+.ow-browser_caret{animation:owBlink 1.1s steps(1) infinite}
+@keyframes owBlink{50%{opacity:0}}
+.ow-live-dot:after{content:"";position:absolute;inset:0;border-radius:50%;background:rgba(91,211,169,.35);animation:owPulse 2s ease-out infinite}
+@keyframes owPulse{0%{transform:scale(.4);opacity:.9}100%{transform:scale(1.5);opacity:0}}
+/* Arrow buttons: same hover as Home (circle fills mint, arrow turns white) */
+.ow-arrow-circle svg circle{transition:fill .3s,stroke .3s,stroke-opacity .3s}
+.ow-arrow-circle svg path{transition:stroke .3s}
+.ow-hm_view:focus-visible .ow-arrow-circle svg circle,.ow-link-arrow:focus-visible .ow-arrow-circle svg circle{fill:#5bd3a9;stroke:#5bd3a9;stroke-opacity:1}
+.ow-hm_view:focus-visible .ow-arrow-circle svg path,.ow-link-arrow:focus-visible .ow-arrow-circle svg path{stroke:#fff}
+@media (hover:hover){.ow-hm_view:hover .ow-arrow-circle svg circle,.ow-link-arrow:hover .ow-arrow-circle svg circle{fill:#5bd3a9;stroke:#5bd3a9;stroke-opacity:1}.ow-hm_view:hover .ow-arrow-circle svg path,.ow-link-arrow:hover .ow-arrow-circle svg path{stroke:#fff}}
+.ow-cs_go:hover{transform:none}
+.ow-cs_go svg circle{transition:fill .3s,stroke .3s,stroke-opacity .3s}
+.ow-cs_go svg path{transition:stroke .3s}
+/* Case card: the whole card is the link to the case study, so hovering anywhere on it fills the arrow circle */
+.ow-cs_side:focus-visible .ow-cs_go svg circle{fill:#5bd3a9;stroke:#5bd3a9;stroke-opacity:1}
+.ow-cs_side:focus-visible .ow-cs_go svg path{stroke:#fff}
+@media (hover:hover){.ow-cs_side:hover .ow-cs_go svg circle{fill:#5bd3a9;stroke:#5bd3a9;stroke-opacity:1}.ow-cs_side:hover .ow-cs_go svg path{stroke:#fff}}
+/* Case tabs: active tab swaps to the light logo */
+.ow-case.is-ready .ow-cs_item:not(.is-active){display:none}
+.ow-case.is-ready .ow-cs_item.is-active{animation:owFade .5s ease both}
+@keyframes owFade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.ow-cs_tab:hover .ow-cs_tab-logo{opacity:.75}
+.ow-cs_tab.is-active .ow-cs_tab-logo{display:none}
+.ow-cs_tab.is-active .ow-cs_tab-logo.is-light{display:block;opacity:1}
+.ow-cs_tab:focus-visible{outline:2px solid #5bd3a9;outline-offset:2px}
+.ow-cs_compare img{pointer-events:none;-webkit-user-drag:none}
+.ow-cs_compare.no-before{cursor:default}
+.ow-cs_compare.no-before .ow-cs_before,.ow-cs_compare.no-before .ow-cs_handle{display:none}
+.ow-cs_range{position:absolute;left:0;bottom:0;width:1px;height:1px;margin:0;opacity:0;pointer-events:none}
+.ow-cs_compare.is-focus .ow-cs_knob{outline:2px solid #5bd3a9;outline-offset:3px;border-radius:50%}
+.ow-cs_knob svg{filter:drop-shadow(0 6px 14px rgba(13,25,40,.18))}
+/* Case heading: faint text, then full navy writes over it letter by letter (same effect as Home and About) */
+.ow-cs_char{color:rgba(13,25,40,.4);transition:color .3s ease}
+.is-revealed .ow-cs_char{color:inherit}
+/* Work grid: Finsweet filter + pagination (fs-list) */
+.ow-filter:has(.ow-filter_input:focus-visible),.ow-pager_btn:focus-visible,.ow-pager_arrow:focus-visible{outline:2px solid #5bd3a9;outline-offset:3px}
+.ow-pager_btn.w--current{background-color:#fff;color:#0d1928}
+.ow-pager:not(:has(.w-pagination-previous)):not(:has(.w-pagination-next)){display:none}
+.ow-numbers_ring-m{-webkit-mask-image:radial-gradient(closest-side,#000 84%,transparent 100%);mask-image:radial-gradient(closest-side,#000 84%,transparent 100%)}
+@media (min-width:992px) and (max-width:1279px){.ow-cs_side{width:340px}.ow-cs_big{font-size:42px}.ow-stat_value{font-size:32px}.ow-stat_label{font-size:17px}.ow-hs_metric{left:auto;top:auto;right:-20px;bottom:7%}}
+@media (prefers-reduced-motion:reduce){.ow-hs_video{display:none}.ow-browser_caret,.ow-live-dot:after{animation:none}.ow-hs_item{transition:none}.ow-case.is-ready .ow-cs_item.is-active{animation:none}.ow-cs_char{transition:none}}
+</style>
+<style>
+/* Numbers: scroll-driven results rings (same animation as the service pages), drawn from the native .ow-stat blocks */
+[data-ow-rings]{--nr-c1:#FFFFFF;--nr-c2:#FFFFFF;--nr-soft:#E9EEF2;--nr-glow:rgba(255,255,255,.24);--nr-ease:cubic-bezier(.22,1,.36,1);overflow-x:clip;overflow-y:visible}
+/* The heading scrolls in like any section; then the rings stage pins to the screen (sticky) while the empty scroll room
+   under it (.ow-numbers_inner::after) drives the animation. The heading is not pinned, so the rings get the whole screen
+   and reach the Figma size (600px rings in a 1000px graphic at 1440). */
+[data-ow-rings] .ow-numbers_inner{position:relative;display:flex;flex-direction:column;align-items:center;grid-row-gap:2.5rem}
+[data-ow-rings] .ow-numbers_inner::after{content:"";display:block;flex:none;width:1px;height:320vh}
+[data-ow-rings] .ow-numbers_viz{position:sticky;top:0;width:100%;height:100vh;height:100svh;max-width:none;aspect-ratio:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:5.5rem;padding-bottom:1.5rem;box-sizing:border-box}
+[data-ow-rings].nr-on .ow-numbers_ring,[data-ow-rings].nr-on .ow-numbers_ring-m,[data-ow-rings].nr-on .ow-numbers_viz>.ow-stat{display:none}
+.nr-box{position:relative;width:min(980px,100%,calc((100vh - 7rem) * 1000 / 680));width:min(980px,100%,calc((100svh - 7rem) * 1000 / 680));aspect-ratio:1000/680;container-type:inline-size}
+/* The drawing is cropped to the rings and labels (viewBox 60 60 1000 680). Glow sits right behind the logo: the ring centre (400,400)
+   is 34% / 50% of .nr-box; it is sized from the box so it stays centred and in proportion at every screen size. */
+.nr-box::before{content:"";position:absolute;left:34%;top:50%;width:126%;height:185.3%;border-radius:50%;pointer-events:none;transform:translate(-50%,-50%) scale(calc(.6 + var(--p,0) * .5));opacity:calc(.25 + var(--p,0) * .75);background:radial-gradient(50% 50% at 50% 50%,var(--nr-glow) 0%,transparent 70%)}
+.nr-box svg{position:absolute;left:0;top:0;width:100%;height:100%;overflow:visible}
+.nr-track{fill:none;stroke:var(--nr-soft);stroke-opacity:.08;transform-origin:400px 400px;transform:scale(.6) rotate(-40deg);opacity:0;transition:transform 1.3s var(--nr-ease),opacity .8s ease}
+.nr-arc{fill:none;stroke-linecap:round}
+.nr-lead{fill:none;stroke:var(--nr-soft);stroke-opacity:.5;stroke-width:1}
+.nr-orbit{fill:none;stroke:var(--nr-soft);stroke-opacity:.2;stroke-dasharray:2 10;transform-origin:400px 400px;opacity:0;transition:opacity 1.2s ease .6s;animation:nr-spin 80s linear infinite}
+@keyframes nr-spin{to{transform:rotate(360deg)}}
+.nr-mark .ol{fill:none;stroke:var(--nr-c2);stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}
+/* Once the outline is fully drawn, drop the dash so the start corner joins cleanly (no notch where the draw begins and ends) */
+.nr-mark.full .ol{stroke-dasharray:none}
+.nr-mark .fl{opacity:.1;transition:opacity .9s ease}
+.nr-mark.full .fl{opacity:1}
+.nr-half{transition:transform 1.1s var(--nr-ease),opacity .6s ease}
+.nr-h1{transform:translate(-60px,40px);opacity:0}
+.nr-h2{transform:translate(60px,-40px);opacity:0}
+.nr-pulse{fill:none;stroke:var(--nr-c1);stroke-width:1.5;opacity:0;transform-origin:400px 400px}
+.nr-mark.full~.nr-pulse{animation:nr-pulse 2.8s var(--nr-ease) infinite}
+@keyframes nr-pulse{0%{opacity:.6;transform:scale(.55)}100%{opacity:0;transform:scale(1.15)}}
+.nr-glint{fill:none;stroke:#fff;stroke-width:2.4;stroke-linecap:round;opacity:0}
+.nr-box.ready .nr-track{transform:none;opacity:1}
+.nr-box.ready .nr-orbit{opacity:1}
+.nr-box.ready .nr-h1,.nr-box.ready .nr-h2{transform:none;opacity:1;transition-delay:.35s}
+.nr-box.ready .nr-glint{animation:nr-glint 1.2s var(--nr-ease) 1.25s forwards}
+@keyframes nr-glint{0%{opacity:0;stroke-dashoffset:1}30%{opacity:.9}100%{opacity:0;stroke-dashoffset:-1}}
+.nr-lab{position:absolute;left:77.6%;transform:translate(14px,-50%);opacity:0;transition:opacity .5s ease,transform .7s var(--nr-ease);display:flex;flex-direction:column;grid-row-gap:.5em;white-space:nowrap}
+.nr-lab.in{opacity:1;transform:translate(0,-50%)}
+.nr-lab .ow-stat_value{font-size:clamp(22px,3.3cqw,32px);font-variant-numeric:tabular-nums}
+.nr-lab .ow-stat_label{font-size:clamp(13px,2cqw,20px)}
+.nr-list{display:none}
+@media (max-width:767px){
+.nr-box::before{left:50%;width:200%;height:200%}
+[data-ow-rings] .ow-numbers_inner{grid-row-gap:1.5rem}
+[data-ow-rings] .ow-numbers_viz{grid-row-gap:1.5rem;padding-top:5rem}
+.nr-box{width:min(100%,calc(100vh - 360px),420px);width:min(100%,calc(100svh - 360px),420px);aspect-ratio:1/1}
+.nr-lab,.nr-lead,.nr-end{display:none}
+.nr-list{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem 1rem;width:100%;max-width:420px;margin:0;padding:0;list-style:none}
+.nr-list li{opacity:.25;transform:translateY(8px);transition:opacity .5s ease,transform .7s var(--nr-ease)}
+.nr-list li.in{opacity:1;transform:none}
+.nr-list .ow-stat_value{display:flex;align-items:center;gap:8px;font-size:28px}
+.nr-list .ow-stat_value i{width:8px;height:8px;border-radius:50%;flex:none}
+.nr-list .ow-stat_label{margin-top:6px;padding-left:16px;font-size:13px}
+}
+@media (prefers-reduced-motion:reduce){[data-ow-rings] .ow-numbers_inner::after{display:none}[data-ow-rings] .ow-numbers_viz{position:relative;height:auto;padding-top:0}.nr-orbit{animation:none}}
+[data-ow-rings] .nr-track{stroke:#0d1928;stroke-opacity:1}
+[data-ow-rings] .nr-lead{stroke-opacity:.65}
+[data-ow-rings] .nr-orbit{display:none}
+[data-ow-rings] .nr-lab .ow-stat_value,[data-ow-rings] .nr-list .ow-stat_value{font-variant-numeric:tabular-nums}
+.ow-numbers[data-ow-rings]{overflow-x:clip;overflow-y:visible}
+/* Figma 6386:3795: the rings are white and greys (outer to inner #fff, #adb1b6, #d8d9dc, #a0a5ab) on a soft grey light that fades out past the outer ring */
+[data-ow-rings] .nr-box::before{background:radial-gradient(50% 50% at 50% 50%,rgba(255,255,255,.24) 0%,rgba(255,255,255,.2) 30%,rgba(255,255,255,.135) 40%,rgba(255,255,255,.105) 43%,rgba(255,255,255,.067) 48.5%,rgba(255,255,255,.03) 57%,rgba(255,255,255,0) 68%)}
+</style>
+<style>
+/* Work card thumbnail (nues-work-grid): Card background + the site (Hero screen center) as a window rising from the bottom edge.
+   Hover opens the window to the full preview and scrolls the homepage. No screenshot = 'Launching soon'. No Card background = old Main Image card. */
+.work-card_media{container-type:inline-size}
+.work-card_window{border-radius:1.95cqw 1.95cqw 0 0;box-shadow:0 0 0 1px rgba(16,25,39,.06),0 2.4cqw 6cqw -2cqw rgba(16,25,39,.28);transition:left .75s cubic-bezier(.22,1,.36,1),right .75s cubic-bezier(.22,1,.36,1),top .75s cubic-bezier(.22,1,.36,1),bottom .75s cubic-bezier(.22,1,.36,1),border-radius .75s cubic-bezier(.22,1,.36,1)}
+.work-card_shot{transition:transform .9s cubic-bezier(.22,1,.36,1)}
+@media (hover:hover){.work-card_component:hover .work-card_window{left:0;right:0;top:0;bottom:0;border-radius:0}
+/* the site scrolls at an even pace whatever its length (--shot-y / --shot-dur from the script: about 500px a second, 3 to 12s); a short screenshot stays put; leaving glides back up */
+.work-card_component:hover .work-card_shot{transform:translateY(var(--shot-y,min(0px,calc(-100% + 62.5cqw))));transition:transform var(--shot-dur,4s) cubic-bezier(.45,0,.55,1) .35s}}
+.work-card_bg.w-dyn-bind-empty,.work-card_window:has(.work-card_shot.w-dyn-bind-empty),.work-card_media:has(.work-card_shot:not(.w-dyn-bind-empty)) .work-card_soon,
+.work-card_media:has(.work-card_bg.w-dyn-bind-empty) :is(.work-card_window,.work-card_soon),.work-card_media:has(.work-card_bg:not(.w-dyn-bind-empty)) .work-card_img{display:none}
+@media (prefers-reduced-motion:reduce){.work-card_window,.work-card_shot{transition:none}.work-card_component:hover .work-card_shot{transform:none}}
+</style>
