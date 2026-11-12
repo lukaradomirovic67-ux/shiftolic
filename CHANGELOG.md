@@ -3,6 +3,18 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 12.11.2026: Resources hero, Case studies broji samo napisane case studije
+Po tvojoj odluci („daj samo broj ovih koji imaju da se čitaju“). Ranije je broj bio „10“, tj. sve stavke Our Works. Sada broji samo stavke koje imaju popunjen „Case title“ (napisan case): TrakPro, Veyor, Sustain, Shiftolic i Ballerine, ukupno 5. Pythagora ima Case title, ali je u draftu, pa se ne broji.
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Resources, skrivena CMS lista za broj case studija, Collection Item (`69db27ac-…a251`) | bez atributa | atribut `data-res-written`, povezan na polje Our Works „Case title“ (`heading`) |
+| Resources, `res-hero_stat-value` u statu Case studies | `81030941-…7e9` sa tekstom „10“ | nov element `0ba4b88e-…9133`, ista klasa i `data-res-count="case"`, tekst „5“; stari je uklonjen |
+| Resources, page footer, skripta hero-a (red za broj) | `n=src.querySelectorAll('.w-dyn-item').length` | za `case` broji samo stavke sa nepraznim `data-res-written`; Insights se broji kao i do sada. Komentar iznad skripte to opisuje |
+
+Kopija footer koda pre izmene: `backup/page-code/2026-11-12/resources-footer.html`. Nova verzija: `webflow-assets/site-code/resources-page-footer.html`.
+Kad se napiše novi case (popuni se Case title i objavi), skripta ga sama ubraja; početni broj u Designer-u treba uskladiti ručno.
+
 ## 12.11.2026: Resources hero, početni broj Insights usklađen sa CMS-om (objavljeno na staging)
 Brojeve u hero-u skripta računa iz skrivenih CMS lista (objavljeni blogovi i Our Works). U samom HTML-u (pre skripte, za Google i Designer) je za Insights stajalo „20“.
 
