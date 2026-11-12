@@ -3,6 +3,13 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 12.11.2026 (veče): objava na staging (webflow.io)
+Pre objave sam integraciju (Salesforce) i 5 kategorija skinuo sa staging-a (unpublish). Provereno na staging-u:
+- /webflow-integrations, /integrations/webflow-salesforce-integration i /integrations-category/crm-integrations vraćaju 404;
+- Resources (1440 i 390): nema meta robots, hero ima dva broja (21 Insights, 10 Case studies), nema kartica ni sekcije integracija, nema linkova ka integracijama, bez JS grešaka i bez širenja;
+- navbar Resources dropdown: Resources, Insights, Careers (bez Integrations);
+- Careers: dugme „See open roles ↗“ vodi na #open-roles, a posle klika je sekcija na vrhu ekrana.
+
 ## 12.11.2026: Resources indeksirana, integracije sakrivene do pisanja, Careers dugme
 Po tvojoj odluci. Nije objavljeno.
 
