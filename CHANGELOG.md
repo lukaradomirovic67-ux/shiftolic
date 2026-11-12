@@ -3,7 +3,7 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
-## 12.11.2026: Resources hero, Case studies broji samo napisane case studije
+## 12.11.2026: Resources hero, Case studies broji samo napisane case studije (objavljeno na staging)
 Po tvojoj odluci („daj samo broj ovih koji imaju da se čitaju“). Ranije je broj bio „10“, tj. sve stavke Our Works. Sada broji samo stavke koje imaju popunjen „Case title“ (napisan case): TrakPro, Veyor, Sustain, Shiftolic i Ballerine, ukupno 5. Pythagora ima Case title, ali je u draftu, pa se ne broji.
 
 | Gde | Pre | Posle |
@@ -14,6 +14,8 @@ Po tvojoj odluci („daj samo broj ovih koji imaju da se čitaju“). Ranije je 
 
 Kopija footer koda pre izmene: `backup/page-code/2026-11-12/resources-footer.html`. Nova verzija: `webflow-assets/site-code/resources-page-footer.html`.
 Kad se napiše novi case (popuni se Case title i objavi), skripta ga sama ubraja; početni broj u Designer-u treba uskladiti ručno.
+
+Objavljeno na staging (webflow.io) 12.11. Provereno posle objave, na 1440 i 390: u HTML-u case=5 i insight=21, posle skripte „21 Insights | 5 Case studies“. Od 10 stavki u listi, 5 ima Case title (TrakPro, Veyor, Sustain, Shiftolic, Ballerine). Footer kod na staging-u je isti kao lokalni fajl. Nema JS grešaka ni širenja.
 
 ## 12.11.2026: Resources hero, početni broj Insights usklađen sa CMS-om (objavljeno na staging)
 Brojeve u hero-u skripta računa iz skrivenih CMS lista (objavljeni blogovi i Our Works). U samom HTML-u (pre skripte, za Google i Designer) je za Insights stajalo „20“.
