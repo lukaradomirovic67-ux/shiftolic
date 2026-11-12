@@ -3,6 +3,27 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 12.11.2026: 5 case stranica bez napisanog case-a: noindex i preusmerenje na sajt klijenta (objavljeno na staging)
+Po tvom zahtevu, kako sam predložio na pre-launch listi (1.3). Bez vizuelne promene na sajtu.
+
+Stranice /our-work/biotech-innovations, lasalle-agri, hypersonix, harper i intaker nemaju Case title ni tekst. Do sada su bile javne, bez title-a, opisa i H1.
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Our Works Template (`6aba6bc07d6279b4b56176ff`), page head, na vrhu | nema | skripta sa CMS poljima Case title (`heading`) i Website link (`website-link`): ako je Case title prazan, stranica dobija `<meta name="robots" content="noindex">` i odmah šalje posetioca na sajt klijenta (`location.replace`, bez unosa u istoriju pregledača). Ako nema linka, šalje na /our-work. Ostatak head koda je nepromenjen |
+
+Čim se nekom projektu popuni Case title, stranica radi normalno, bez ikakve druge izmene.
+Kartice na sajtu za ovih 5 projekata već vode na sajt klijenta: skripta menja link u pregledaču, a u sirovom HTML-u href i dalje pokazuje na case stranicu. Zato je preusmerenje važno i za Google.
+Webflow-ovo 301 preusmerenje ovde ne radi, jer stranica postoji dok je stavka objavljena. Draft bi sklonio ove projekte iz svih lista na sajtu.
+
+Kopija head koda pre izmene: `backup/page-code/2026-11-12/our-works-template-head.html`. Nova verzija: `webflow-assets/site-code/our-works-template-head.html`.
+Provereno na staging-u:
+- u HTML-u svih 5 praznih stranica stoji `t=""` i tačan link sajta;
+- u pregledaču svaka od njih završi na sajtu klijenta (biotechinnovationsag.com, lasalleagri.com, hypersonix.com.au, harperinsure.com, intaker.com);
+- 5 napisanih (TrakPro, Veyor, Sustain, Shiftolic, Ballerine) ostaju na svojoj stranici, bez noindex-a i sa svojim H1;
+- apostrof u naslovu („TrakPro's“) Webflow upisuje kao `&#39;`, pa ne kvari skriptu.
+Kad se pri lansiranju uključi automatski sitemap, ovih 5 adresa će biti u njemu. Google će ih videti kao noindex i preusmerenje i neće ih indeksirati.
+
 ## 12.11.2026: Careers, koverta u praznom stanju se otvara kao kartice pozicija (objavljeno na staging)
 Po tvom zahtevu („da i ovo ima animaciju kao i kada imamo pozicije“). Koverta je sada zatvorena, a otvara se na prelaz mišem i na fokus tastaturom: preklop se podigne, pa izađe pismo. Kad skloniš miša, zatvara se. Na telefonu i tabletu je otvorena, kao i kartice pozicija.
 

@@ -49,7 +49,7 @@ Rezime automatske provere:
 - [x] (11.11., objavljeno na staging 12.11.) „Copy link“ na 21 blog postu je link sa `#` umesto dugmeta (pristupačnost).
 - [x] (preuređeno 11.11., objavljeno na staging) Tabela „Side by side“ (Services) na tabletu i telefonu nema znak da se skroluje u stranu.
       Sada je prekidač sa 4 usluge i jedna kartica za izabranu uslugu (vidi CHANGELOG).
-- [ ] 5 praznih case stranica: noindex + preusmerenje (kad odobriš).
+- [x] (12.11., objavljeno na staging) 5 praznih case stranica: noindex + preusmerenje na sajt klijenta dok je Case title prazan.
 - [x] (12.11.) Bolje slike koje su čekale Designer: zamenjeno 8 logoa u Resources hero (SVG); ostale su već bile dovoljno oštre
       ili se više ne koriste (vidi CHANGELOG 12.11.). Ostaju sitni logoi LaSalle, Sustain i Hypersonix (treba bolji fajl).
 - [x] Sitnice sa QA 8.11. (ponovo provereno 11.11.):
@@ -76,7 +76,7 @@ Rezime automatske provere:
       Iznad FAQ sekcija stoji naslov „Trusted by ambitious teams across six industries“; tako je i u Figmi, ali se ne slaže sa FAQ-om.
 
 **Odluke**
-- [ ] 5 praznih case-ova: napisati ih ili sakriti od Google-a (moj predlog, 1.3).
+- [x] (12.11.) 5 praznih case-ova sakriveni od Google-a (noindex + preusmerenje); kad se napišu, rade sami.
 - [ ] Blog „B2B SaaS SEO in 2026“: nova verzija je u draftu, stara je živa i 6 postova linkuje na nju. Objaviti novu ili ukloniti?
 - [x] (12.11.) Resources: noindex skinut. Integracije su sakrivene na Resources i u navbaru; stranica Integrations je u draftu i ima noindex, a CMS integracija je u draftu dok se ne napiše.
 - [ ] Our Work:

@@ -1,0 +1,188 @@
+<!-- Projects without a written case study (Case title empty) have no case page yet: search engines skip it (noindex) and
+     visitors go straight on to the client's live site, where every card for these projects already links. Fill Case title and
+     the page works as usual. -->
+<script>(function(){var t="{{wf {&quot;path&quot;:&quot;heading&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",u="{{wf {&quot;path&quot;:&quot;website-link&quot;,&quot;type&quot;:&quot;Link&quot;\} }}";
+if(t.replace(/\s|&nbsp;/g,''))return;
+var m=document.createElement('meta');m.name='robots';m.content='noindex';document.head.appendChild(m);
+location.replace(/^https?:\/\//i.test(u)?u:'/our-work');})();</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{wf {&quot;path&quot;:&quot;heading&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
+  "description": "{{wf {&quot;path&quot;:&quot;meta-description&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
+  "url": "/our-work/{{wf {&quot;path&quot;:&quot;slug&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{wf {&quot;path&quot;:&quot;main-image&quot;,&quot;type&quot;:&quot;ImageRef&quot;\} }}"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "NUES",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://cdn.prod.website-files.com/69b4443f93d293c2336db5b9/69ffd79d11a1a944721ccfa9_navbar-logo.svg"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "NUES",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://cdn.prod.website-files.com/69b4443f93d293c2336db5b9/69ffd79d11a1a944721ccfa9_navbar-logo.svg"
+    }
+  },
+  "datePublished": "{{wf {&quot;path&quot;:&quot;published-on&quot;,&quot;type&quot;:&quot;Date&quot;\} }}",
+  "dateModified": "{{wf {&quot;path&quot;:&quot;updated-on&quot;,&quot;type&quot;:&quot;Date&quot;\} }}",
+  "inLanguage": "en"
+}
+</script>
+
+
+<style>
+.rich-our-work ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.rich-our-work ul li {
+  padding: 1.5625rem 0; /* 25px gore-dole */
+  border-bottom: 1px solid #DA2A90;
+  color: #fff;
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+</style>
+
+<!-- Nues: code moved here from page embeds. Edit here, not in embeds. -->
+<style>
+.cs-hero .w-dyn-bind-empty,.cs-body .w-dyn-bind-empty,.cs-next .w-dyn-bind-empty{display:none!important}
+.cs-hero_title-wrap:has(h1.is-v2:not(.w-dyn-bind-empty)) h1.is-legacy{display:none}
+.cs-hero h1 .cs-hl{display:table;margin-left:auto;margin-right:auto}
+.cs-stat:has(.cs-stat_value.w-dyn-bind-empty){display:none}
+/* Stats: Stat 3 filled = Stat 1, Stat 2, Stat 3 (is-v2 row). Stat 3 empty = Stat 1, Stat 2, Industry (is-legacy row). */
+.cs-stats:has(.cs-stat.is-v2:nth-child(3 of .is-v2) .cs-stat_value:not(.w-dyn-bind-empty)) .cs-stat.is-legacy{display:none}
+.cs-stats:not(:has(.cs-stat.is-v2:nth-child(3 of .is-v2) .cs-stat_value:not(.w-dyn-bind-empty))) .cs-stat.is-v2{display:none}
+.cs-shot{-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.cs-shot.is-side:has(.cs-shot_img.w-dyn-bind-empty){display:none}
+.cs-shots:not(:has(.cs-shot.is-center .cs-shot_img:not(.w-dyn-bind-empty))){display:none}
+.cs-shot_screen:has(.cs-shot_img:not(.is-legacy):not(.w-dyn-bind-empty)) .cs-shot_img.is-legacy{display:none}
+/* Hero screenshots: the three take turns in the middle (script in the page footer). The middle one is always in the raised,
+   full-colour state. The row keeps the middle one's height (--cs-shot-h, set by the script) while they swap, so the page never jumps. */
+.cs-shots.is-carousel{position:relative;min-height:var(--cs-shot-h,auto)}
+.cs-shots.is-carousel .cs-shot{position:relative;z-index:1}
+.cs-shots.is-carousel .cs-shot_screen{transition:opacity .6s ease}
+.cs-shots.is-moving .cs-shot{transition:width .8s cubic-bezier(.65,0,.35,1),height .8s cubic-bezier(.65,0,.35,1),transform .8s cubic-bezier(.65,0,.35,1),opacity .6s ease}
+.cs-shots.is-measure .cs-shot{transition:width .8s cubic-bezier(.65,0,.35,1),height .8s cubic-bezier(.65,0,.35,1)}
+.cs-shots.is-carousel .cs-shot.cs-shot_ghost{position:absolute;z-index:0;margin:0;pointer-events:none;transition:opacity .5s ease}
+
+.cs-hero_btn:focus-visible,.cs-next_all:focus-visible{outline:2px solid #5bd3a9;outline-offset:4px}
+.cs-quote:has(.cs-quote_text.w-dyn-bind-empty){display:none}
+.cs-quote_text{text-wrap:balance}
+.cs-quote_text:before{content:"\201C"}
+.cs-quote_text:after{content:"\201D"}
+.cs-quote_author:has(.cs-quote_sig.w-dyn-bind-empty) .cs-quote_divider{display:none}
+.cs-block:not(:has(.cs-rich:not(.w-dyn-bind-empty))){display:none}
+.cs-copy:not(:has(.cs-rich:not(.w-dyn-bind-empty))){display:none}
+.cs-gallery_card:has(img.w-dyn-bind-empty){display:none}
+.cs-gallery:not(:has(.cs-gallery_card img:not(.w-dyn-bind-empty))){display:none}
+.cs-rich>:first-child{margin-top:0}
+.cs-rich>:last-child{margin-bottom:0}
+.cs-rich p{margin:0}
+.cs-rich p+p,.cs-rich p+ul,.cs-rich p+ol,.cs-rich ul+p,.cs-rich ol+p,.cs-rich blockquote+p,.cs-rich figure+p{margin-top:1.5em}
+.cs-rich strong,.cs-rich b{font-weight:500;color:#0d1928}
+.cs-rich em{font-style:italic}
+.cs-rich a{color:#0d1928;text-decoration:underline;text-underline-offset:3px}
+.cs-rich h2,.cs-rich h3,.cs-rich h4,.cs-rich h5,.cs-rich h6{margin:1.6em 0 .6em;color:#0d1928;font-weight:500;line-height:1.2;letter-spacing:-.02em}
+.cs-rich h2{font-size:1.5em}.cs-rich h3{font-size:1.3em}.cs-rich h4,.cs-rich h5,.cs-rich h6{font-size:1.1em}
+.cs-rich ul,.cs-rich ol{margin:0;padding-left:0;list-style:none}
+.cs-rich li{position:relative;padding-left:1.5em;margin-top:.67em}
+.cs-rich li:first-child{margin-top:0}
+.cs-rich ul>li:before{content:"";position:absolute;left:.15em;top:.55em;width:.5em;height:.5em;border-radius:50%;background-color:#5bd3a9}
+.cs-rich ol{counter-reset:csol}
+.cs-rich ol>li{counter-increment:csol}
+.cs-rich ol>li:before{content:counter(csol) ".";position:absolute;left:0;top:0;color:#0d1928;font-weight:500}
+.cs-rich blockquote{margin:1.5em 0;padding:0 0 0 .9em;border-left:3px solid #5bd3a9;font-size:1em;line-height:1.5;color:#0d1928}
+.cs-rich figure{margin:1.5em 0;max-width:100%}
+.cs-rich figure img{display:block;width:100%;height:auto;border-radius:16px}
+.cs-rich figcaption{margin-top:.6em;font-size:.7em;color:rgba(13,25,40,.5);text-align:center}
+/* Arrow: same hover as Home (mint circle, white arrow) */
+.cs-next_arrow{transition:background-color .3s,border-color .3s,color .3s}
+.cs-next_all:hover .cs-next_arrow,.cs-next_all:focus-visible .cs-next_arrow{background-color:#5bd3a9;border-color:#5bd3a9;color:#fff}
+.cs-next_grid:not(.is-ready)>.cs-next_item:nth-child(n+3){display:none}
+.cs-next_item:has(.work-card_bg.w-dyn-bind-empty):has(.work-card_img.w-dyn-bind-empty){display:none}
+@media (min-width:992px) and (max-width:1279px){
+.cs-hero h1{font-size:68px}
+.cs-stat_value{font-size:28px}
+.cs-stat_label{font-size:16px}
+.cs-hero_btn{padding-left:32px;padding-right:32px}
+.cs-shot{width:420px;height:340px}
+.cs-shot.is-center{width:540px;height:405px}
+.cs-quote_text{font-size:52px}
+}
+@media (prefers-reduced-motion:reduce){.cs-hero_btn,.cs-next_arrow,.cs-shots.is-carousel .cs-shot,.cs-shots.is-carousel .cs-shot_screen{transition:none}}
+</style>
+<style>
+/* Work card thumbnail (same as Our Work grid, nues-work-grid): Card background + the site (Hero screen center) as a window rising from the bottom edge.
+   Hover opens the window to the full preview and scrolls the homepage. No screenshot = 'Launching soon'. No Card background = old Main Image card. */
+.work-card_media{container-type:inline-size}
+.work-card_window{border-radius:1.95cqw 1.95cqw 0 0;box-shadow:0 0 0 1px rgba(16,25,39,.06),0 2.4cqw 6cqw -2cqw rgba(16,25,39,.28);transition:left .75s cubic-bezier(.22,1,.36,1),right .75s cubic-bezier(.22,1,.36,1),top .75s cubic-bezier(.22,1,.36,1),bottom .75s cubic-bezier(.22,1,.36,1),border-radius .75s cubic-bezier(.22,1,.36,1)}
+.work-card_shot{transition:transform .9s cubic-bezier(.22,1,.36,1)}
+@media (hover:hover){.work-card_component:hover .work-card_window{left:0;right:0;top:0;bottom:0;border-radius:0}
+/* the site scrolls at an even pace whatever its length (--shot-y / --shot-dur from the script: about 500px a second, 3 to 12s); a short screenshot stays put; leaving glides back up */
+.work-card_component:hover .work-card_shot{transform:translateY(var(--shot-y,min(0px,calc(-100% + 62.5cqw))));transition:transform var(--shot-dur,4s) cubic-bezier(.45,0,.55,1) .35s}}
+.work-card_bg.w-dyn-bind-empty,.work-card_window:has(.work-card_shot.w-dyn-bind-empty),.work-card_media:has(.work-card_shot:not(.w-dyn-bind-empty)) .work-card_soon,
+.work-card_media:has(.work-card_bg.w-dyn-bind-empty) :is(.work-card_window,.work-card_soon),.work-card_media:has(.work-card_bg:not(.w-dyn-bind-empty)) .work-card_img{display:none}
+@media (prefers-reduced-motion:reduce){.work-card_window,.work-card_shot{transition:none}.work-card_component:hover .work-card_shot{transform:none}}
+</style>
+<style>
+/* Sidebar (nues-case-sidebar-scroll.html): Services used + On this page in a rail beside the text. Team (Figma 8428:1356).
+   Layout and sizes are native classes; this adds the states. Colours: service colours by Services slug, circle by Discipline. */
+.cs-body{overflow-x:clip}
+.section_cs-team:not(:has(.cs-team_item)),.cs-used:not(:has(.cs-used_item)){display:none}
+.section_cs-team .w-dyn-empty,.cs-used .w-dyn-empty{display:none}
+/* the rail stops at the gallery, rides up with the page and slides out to the right; comes back the same way (script in the footer) */
+.cs-aside_inner.is-away{transform:translateX(var(--off,110vw));pointer-events:none;transition:transform .55s cubic-bezier(.55,0,.75,.2)}
+/* Services used: grey icons and text until hover, then the service colours; each icon moves in its own way */
+.cs-used_item:first-child{border-top:0}
+.cs-used_row{--k1:#e4e2dc;--k2:#d2cfc8;--k3:#bdb9b1;--c1:#d2cfc8;--c2:#8d929c;--c3:#0e1726}
+.cs-used_row[data-svc="design-development"]{--c1:#cfe7d7;--c2:#8cc6a0;--c3:#3f7a55}
+.cs-used_row[data-svc="webflow-development"]{--c1:#d5daf4;--c2:#a9b2ea;--c3:#4e5eab}
+.cs-used_row[data-svc="seo-aeo"]{--c1:#f1e1c8;--c2:#d9b27a;--c3:#a86a1c}
+.cs-used_row[data-svc="growth"]{--c1:#f1d3e4;--c2:#d98ab8;--c3:#a8407f}
+.cs-used_svg{flex:none;display:block;width:30px;height:30px;overflow:visible}
+.cs-used_svg *{transition:fill .45s ease,transform .6s cubic-bezier(.22,1,.36,1),opacity .4s;transform-box:fill-box;transform-origin:center}
+.cs-used_svg .k1{fill:var(--k1)}.cs-used_svg .k2{fill:var(--k2)}.cs-used_svg .k3{fill:var(--k3)}
+.cs-used_icon{filter:grayscale(1);opacity:.5;transition:filter .45s ease,opacity .45s ease}
+.cs-used_row:is(:hover,:focus-visible){color:#0e1726}
+.cs-used_row:is(:hover,:focus-visible) .cs-used_icon{filter:none;opacity:1}
+.cs-used_row:is(:hover,:focus-visible) .k1{fill:var(--c1)}.cs-used_row:is(:hover,:focus-visible) .k2{fill:var(--c2)}.cs-used_row:is(:hover,:focus-visible) .k3{fill:var(--c3)}
+.cs-used_row:is(:hover,:focus-visible) .cs-used_arrow{transform:translateX(3px);color:#fff;background-color:var(--c3);box-shadow:none}
+.cs-used_row[data-svc="design-development"]:hover .k1{transform:scale(1.18)}.cs-used_row[data-svc="design-development"]:hover .k2{transform:scale(1.1);transition-delay:.05s}.cs-used_row[data-svc="design-development"]:hover .k3{transform:scale(.86);transition-delay:.1s}
+.cs-used_row[data-svc="webflow-development"]:hover .k1{transform:rotate(-14deg) translateX(-2px)}.cs-used_row[data-svc="webflow-development"]:hover .k2{transform:rotate(12deg) translateX(2px)}.cs-used_row[data-svc="webflow-development"]:hover .k3{transform:translateY(-2px)}
+.cs-used_row[data-svc="seo-aeo"] .cs-used_svg *{transform-origin:50% 100%}
+.cs-used_row[data-svc="seo-aeo"]:hover .k1{transform:scaleY(1.25)}.cs-used_row[data-svc="seo-aeo"]:hover .k2{transform:scaleY(1.18);transition-delay:.06s}.cs-used_row[data-svc="seo-aeo"]:hover .k3{transform:scaleY(1.1);transition-delay:.12s}
+.cs-used_row[data-svc="growth"]:hover .k1{transform:scale(1.16) rotate(45deg)}.cs-used_row[data-svc="growth"]:hover .k2{transform:scale(1.08);transition-delay:.05s}.cs-used_row[data-svc="growth"]:hover .k3{transform:rotate(90deg);transition-delay:.1s}
+.cs-used_row:focus-visible{outline:2px solid #5bd3a9;outline-offset:3px;border-radius:10px}
+.cs-used_row:is([href="#"],:not([href])) .cs-used_arrow{display:none}
+/* On this page: dark card, the active heading gets the mint line */
+.cs-toc_link:hover{color:rgba(255,255,255,.8)}
+.cs-toc_link.is-active{color:#fff;border-left-color:#5bd3a9}
+.cs-toc_link:focus-visible{outline:2px solid #5bd3a9;outline-offset:2px}
+.cs-block>h2{scroll-margin-top:120px}
+@media (max-width:991px){.cs-block>h2{scroll-margin-top:90px}}
+/* Team: circle colour from the member's Discipline; on hover the photo fades and the LinkedIn mark comes in */
+.cs-team_photo-wrap[data-discipline="development" i]{background-color:#9fb4f2}
+.cs-team_photo-wrap[data-discipline="design" i]{background-color:#5bd3a9}
+.cs-team_photo-wrap[data-discipline="growth" i]{background-color:#f434a3}
+.cs-team_card:focus-visible{outline:2px solid #5bd3a9;outline-offset:6px;border-radius:12px}
+.cs-team_card:focus-visible .cs-team_photo{opacity:0}
+.cs-team_card:focus-visible .cs-team_linkedin{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.cs-team_card:is([href="#"],:not([href])) .cs-team_linkedin{display:none}
+@media (hover:hover){
+.cs-team_card[href]:not([href="#"]):hover .cs-team_photo{opacity:0;transform:translateX(-50%) scale(1.06)}
+.cs-team_card[href]:not([href="#"]):hover .cs-team_linkedin{opacity:1;transform:translate(-50%,-50%) scale(1)}
+}
+@media (prefers-reduced-motion:reduce){.cs-aside_inner,.cs-aside_inner.is-away,.cs-used_row,.cs-used_arrow,.cs-used_icon,.cs-used_svg *,.cs-toc_link,.cs-team_photo,.cs-team_linkedin{transition:none}}
+</style>
