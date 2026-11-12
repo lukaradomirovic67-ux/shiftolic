@@ -1,0 +1,399 @@
+<script>setTimeout(function(){var h=document.querySelector('.section_careers-hero');if(h&&!h.classList.contains('is-in')){h.classList.add('is-split','is-in','is-settled');}},4000);</script>
+<style>
+/* Careers: what Webflow classes can't express. Classes live in the Style Manager (careers-*). */
+/* Envelope (closed until hover): the back has a flat top; the flap lies over the pocket, closed. On hover / keyboard focus the flap
+   folds up behind the letter, then the letter rises. On the way back the letter goes in first, then the flap folds shut.
+   Touch screens keep it open, like the card that opened the popup (is-applying). */
+.careers-job_card{perspective:1600px}
+.careers-job_back{clip-path:polygon(0 20.2%,100% 20.2%,100% 100%,0 100%)}
+.careers-job_pocket{clip-path:polygon(0 0,50% 25.9%,100% 0,100% 100%,0 100%)}
+.careers-job_flap{transform:rotateX(0deg) scaleY(1);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:50% 0;
+  transition:transform .55s cubic-bezier(.65,0,.35,1) .2s,background-color 0s linear .47s,z-index 0s linear .47s}
+.careers-job_letter{transform:translateY(8%)}
+/* the closed flap casts a soft shadow on the pocket along its two edges; it fades while the flap opens */
+.careers-job_pocket::before{content:"";position:absolute;inset:0;pointer-events:none;transition:opacity .3s ease .3s;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 645 301' preserveAspectRatio='none'%3E%3Cfilter id='b' x='-20%25' y='-40%25' width='140%25' height='180%25'%3E%3CfeGaussianBlur stdDeviation='10'/%3E%3C/filter%3E%3Cpath d='M-40.0 -9.3H685.0L322.50 147.8Z' fill='%23040911' fill-opacity='.55' filter='url(%23b)'/%3E%3C/svg%3E") 0 0/100% 100% no-repeat}
+.careers-job_card.is-applying .careers-job_pocket::before,.careers-job_card:focus-visible .careers-job_pocket::before{opacity:0;transition-delay:0s}
+.careers-job_card.is-applying .careers-job_flap,.careers-job_card:focus-visible .careers-job_flap{transform:rotateX(180deg) scaleY(0.558);z-index:1;background-color:#121c2b;
+  transition:transform .55s cubic-bezier(.65,0,.35,1),background-color 0s linear .27s,z-index 0s linear .27s}
+.careers-job_card.is-applying .careers-job_letter,.careers-job_card:focus-visible .careers-job_letter{transform:translateY(-45.4%);transition-delay:.25s}
+.careers-job_card.is-applying .careers-job_letter-content,.careers-job_card:focus-visible .careers-job_letter-content{opacity:1;transition-delay:.45s}
+.careers-job_card.is-applying .careers-job_pocket{background-color:#192539}
+@media (hover:hover){
+.careers-job_card:hover .careers-job_flap{transform:rotateX(180deg) scaleY(0.558);z-index:1;background-color:#121c2b;
+  transition:transform .55s cubic-bezier(.65,0,.35,1),background-color 0s linear .27s,z-index 0s linear .27s}
+.careers-job_card:hover .careers-job_letter{transform:translateY(-45.4%);transition-delay:.25s}
+.careers-job_card:hover .careers-job_letter-content{opacity:1;transition-delay:.45s}
+.careers-job_card:hover .careers-job_pocket{background-color:#192539}
+.careers-job_card:hover .careers-job_pocket::before{opacity:0;transition-delay:0s}
+}
+.careers-job_card:focus-visible{outline:2px solid #5bd3a9;outline-offset:6px;border-radius:1.5rem}
+.careers-jobs_filter:focus-visible{outline:2px solid #5bd3a9;outline-offset:3px}
+@media (hover:none){
+.careers-job_flap{transform:rotateX(180deg) scaleY(0.558);z-index:1;background-color:#121c2b;transition:none}
+.careers-job_pocket::before{opacity:0}
+.careers-job_letter{transform:translateY(-45.4%)}
+.careers-job_letter-content{opacity:1}
+}
+/* Benefits: the highlighted one (set by the footer script) */
+.careers-benefit_item.is-active{opacity:1}
+/* Benefits 3D: the footer script swaps the flat pyramid image for a three.js pyramid when WebGL is available */
+.careers-benefits_canvas{position:absolute;inset:0;z-index:0;cursor:grab;touch-action:pan-y}
+/* The canvas runs 4rem past the top and the bottom of its box: the light on the floor fades out on its own instead of stopping
+   at an edge, and the top part has room when it lifts. Only the box takes the pointer. */
+.careers-benefits_canvas canvas{position:relative;top:-4rem;display:block;width:100%;height:calc(100% + 8rem);pointer-events:none}
+.careers-benefits_links{position:absolute;left:0;top:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:1}
+.careers-benefits_links line{stroke:rgba(169,238,208,.5);stroke-width:1;stroke-dasharray:3 5}
+.careers-benefits_links circle{fill:#a9eed0}
+.careers-benefits_stage.is-3d .careers-benefits_pyramid,.careers-benefits_stage.is-3d .careers-benefit_line{display:none}
+@media (min-width:992px){
+.careers-benefits_stage.is-3d{min-height:32.5rem}
+.careers-benefits_stage.is-3d .careers-benefit_item{left:0;top:0;width:18.5rem;z-index:2;opacity:0;cursor:pointer;will-change:transform;transition:opacity .8s cubic-bezier(.22,1,.36,1)}
+.careers-benefits_stage.is-3d.is-split .careers-benefit_item{opacity:.45}
+.careers-benefits_stage.is-3d.is-split .careers-benefit_item.is-active{opacity:1}
+.careers-benefits_stage.is-3d .careers-benefit_item.is-trust{text-align:right;align-items:flex-end}
+}
+@media (max-width:991px){
+.careers-benefits_canvas{position:relative;inset:auto;width:100%;height:26.25rem}
+.careers-benefits_links{display:none}
+.careers-benefits_stage.is-3d .careers-benefit_item{position:relative;inset:auto;z-index:1;opacity:.45}
+.careers-benefits_stage.is-3d .careers-benefit_item.is-active{opacity:1}
+}
+/* Phones: the canvas also reaches the screen edges, so the floor light is never cut at the sides */
+@media (max-width:767px){.careers-benefits_canvas canvas{width:100vw;margin-left:calc(50% - 50vw)}}
+@media (max-width:479px){.careers-benefits_canvas{height:21.25rem}}
+/* Jobs filter */
+.careers-jobs_item.is-filtered{display:none}
+.careers-jobs_item.is-in{animation:careersFade .45s ease both}
+@keyframes careersFade{from{opacity:0;transform:translateY(12px)}}
+.careers-jobs_empty p{margin:0}
+/* Empty state (Figma 8664:32): when the Jobs collection has no items, the list's Empty State shows one envelope, already open,
+   with the open application on the letter (careers-job_card is-open). The filters and "Don't see your role?" hide; the button stays.
+   The list's top margin is the room the raised letter needs: 10.7% of the envelope's height (43px at full size). The envelope
+   gets taller on small screens (native combo: 645/450 up to 767px, square up to 479px), so the share of its width changes. */
+.careers-job_card.is-open .careers-job_flap{transform:rotateX(180deg) scaleY(0.558);z-index:1;background-color:#121c2b;transition:none}
+.careers-job_card.is-open .careers-job_pocket{background-color:#192539}
+.careers-job_card.is-open .careers-job_pocket::before{opacity:0;transition:none}
+.careers-job_card.is-open .careers-job_letter{transform:translateY(-45.4%)}
+.careers-job_card.is-open .careers-job_letter-content{opacity:1}
+.careers-jobs_list:has(>.careers-jobs_empty){margin-top:min(2.6875rem,6.67%)}
+@media (max-width:767px){.careers-jobs_list:has(>.careers-jobs_empty){margin-top:min(3rem,7.47%)}}
+@media (max-width:479px){.careers-jobs_list:has(>.careers-jobs_empty){margin-top:10.7%}}
+.careers-section_component:has(.careers-jobs_empty) .careers-jobs_filters,.careers-section_component:has(.careers-jobs_empty) .careers-jobs_more-text{display:none}
+/* Hero intro (nues-careers-hero-animation.html). The footer script splits the heading into lines, then the photos deal out from
+   behind the headline (is-pre -> is-in) and settle on the board (is-settled). While entrance animations are on (html.reveal-on),
+   the photos and copy wait hidden until the script starts them. */
+.reveal-on .section_careers-hero:not(.is-in) .careers-hero_card,.reveal-on .section_careers-hero:not(.is-in) .hero_pill,.reveal-on .section_careers-hero:not(.is-in) .careers-hero_content>.cta-v2_button{opacity:0}
+.reveal-on .section_careers-hero:not(.is-split) h1{opacity:0}
+.careers-hero_line{display:block;overflow:hidden;padding-bottom:.12em;margin-bottom:-.12em}
+.careers-hero_line-text{display:block}
+.reveal-on .section_careers-hero:not(.is-in) .careers-hero_line-text{translate:0 110%}
+.section_careers-hero.is-in .careers-hero_line-text{transition:translate 1.1s cubic-bezier(.22,1,.36,1) .45s}
+.section_careers-hero.is-in .careers-hero_line+.careers-hero_line .careers-hero_line-text{transition-delay:.57s}
+.section_careers-hero.is-in .hero_pill{animation:careersUp 1s cubic-bezier(.22,1,.36,1) .35s backwards}
+.section_careers-hero.is-in .careers-hero_content>.cta-v2_button{animation:careersUp 1s cubic-bezier(.22,1,.36,1) .8s backwards}
+@keyframes careersUp{from{opacity:0;translate:0 16px}}
+/* Photos: they start small and straight at the centre (offsets set by the script) and fan out to their places, one after another */
+.section_careers-hero.is-pre .careers-hero_card{opacity:0;translate:var(--fx,0) var(--fy,0);scale:.4;rotate:calc(var(--r,0deg) * -1);transition:none}
+.section_careers-hero.is-dealing .careers-hero_card{transition:translate 1.3s cubic-bezier(.22,1,.36,1) calc(.5s + var(--i,0) * .07s),scale 1.3s cubic-bezier(.22,1,.36,1) calc(.5s + var(--i,0) * .07s),rotate 1.3s cubic-bezier(.22,1,.36,1) calc(.5s + var(--i,0) * .07s),opacity .35s ease calc(.5s + var(--i,0) * .07s),transform .6s cubic-bezier(.22,1,.36,1),background-color .4s ease,box-shadow .4s ease,border-color .4s ease}
+/* Desktop: the photos drift a little with the cursor (bigger photos sit closer and move more); the one under the cursor lifts
+   while the others dim. The Figma hover (straightens, green frame) stays on the native classes. */
+.careers-hero_card{--d:.6}
+.careers-hero_card.is-1{--d:.8}.careers-hero_card.is-2{--d:.7}.careers-hero_card.is-3{--d:.85}.careers-hero_card.is-4{--d:.5}
+.careers-hero_card.is-5{--d:.9}.careers-hero_card.is-6{--d:1}.careers-hero_card.is-7{--d:.6}.careers-hero_card.is-8{--d:.4}
+@media (min-width:992px) and (hover:hover){
+.section_careers-hero.is-settled .careers-hero_card{translate:calc(var(--mx,0) * var(--d) * -24px) calc(var(--my,0) * var(--d) * -16px + var(--lift,0px));transition:translate .9s cubic-bezier(.22,1,.36,1),scale .5s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1),background-color .4s ease,box-shadow .4s ease,border-color .4s ease}
+.section_careers-hero.is-settled .careers-hero_card:hover{--lift:-8px;scale:1.06;z-index:3}
+.careers-hero_card-img{transition:transform 1s cubic-bezier(.22,1,.36,1),filter .5s ease}
+.section_careers-hero.is-settled .careers-hero_card:hover .careers-hero_card-img{transform:scale(1.03)}
+.section_careers-hero.is-settled:has(.careers-hero_card:hover) .careers-hero_card:not(:hover) .careers-hero_card-img{filter:brightness(.72) saturate(.8)}
+/* the copy sits on a full-width layer; let the photos under it take the hover */
+.careers-hero_inner{pointer-events:none}
+.careers-hero_content>*{pointer-events:auto}
+}
+/* Hero field: the footer script draws the Nues marks into this canvas (nues-careers-hero.html) */
+.careers-hero_field canvas{display:block;width:100%;height:100%}
+@media (prefers-reduced-motion:reduce){
+.careers-jobs_item.is-in{animation:none}
+.careers-job_letter,.careers-job_flap,.careers-benefit_item{transition:none}
+}
+</style>
+<style>
+/* Apply popup (Figma 8042:31 form, 7984:103 filled and sending, 8050:210 sent; motion from nues-careers-apply-popup.html).
+   The modal, the Webflow form and every part of it are native elements (careers-apply_*); this block only adds the states and the motion.
+   A job card or "Send an open application" opens it from that letter; the sent screen is the form's own success message. */
+.careers-apply_modal.is-open{display:block}
+html.is-apply-lock,html.is-apply-lock body{overflow:hidden}
+/* the page keeps the scrollbar's space while locked, so nothing shifts sideways */
+html.is-apply-lock{scrollbar-gutter:stable}
+/* the job card stays open behind its popup (is-applying, see the envelope block above), so the card can close back into the letter */
+.careers-apply_overlay{
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+    radial-gradient(34% 40% at 50% 50%,rgba(91,211,169,.13),rgba(91,211,169,0) 72%),
+    radial-gradient(60% 55% at 18% 110%,rgba(58,96,170,.3),rgba(58,96,170,0) 70%),
+    radial-gradient(55% 50% at 86% -10%,rgba(58,96,170,.2),rgba(58,96,170,0) 70%),
+    radial-gradient(110% 85% at 50% 50%,rgba(8,13,22,.42) 35%,rgba(3,6,12,.88) 100%);
+  -webkit-backdrop-filter:blur(22px) saturate(.7);backdrop-filter:blur(22px) saturate(.7)}
+/* the dialog scrolls when the card is taller than the screen; the card centres itself with auto margins */
+.careers-apply_dialog{overflow-y:auto;overscroll-behavior:contain;align-items:flex-start;
+  padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.careers-apply_card{margin:auto;overflow:visible;transform-origin:0 0}
+/* on touch screens the card itself takes focus when it opens; it is not a control, so no ring around it */
+.careers-apply_card:focus{outline:0}
+.careers-apply_close{transition:transform .45s cubic-bezier(.22,1,.36,1),background-color .25s}
+.careers-apply_close:hover{transform:rotate(90deg)}
+.careers-apply_close:focus-visible,.careers-apply_note-toggle:focus-visible,.careers-apply_done-back:focus-visible,.careers-apply_submit:focus-visible{outline:2px solid #5BD3A9;outline-offset:3px}
+/* fields: the label sits in the middle until there is a value or focus, then it moves up and shrinks to 12px */
+.careers-apply_input{-webkit-appearance:none;appearance:none;transition:background-color .25s,border-color .25s,box-shadow .25s}
+.careers-apply_input::placeholder{color:transparent}
+.careers-apply_input:focus{outline:0;background-color:#fff;border-color:#0d1928;box-shadow:0 0 0 5px rgba(91,211,169,.25)}
+.careers-apply_input.is-area{resize:none;line-height:1.45}
+.careers-apply_label{transition:transform .25s cubic-bezier(.22,1,.36,1),color .25s}
+.careers-apply_input:focus+.careers-apply_label,.careers-apply_input:not(:placeholder-shown)+.careers-apply_label{transform:translateY(-8.5px) scale(.667)}
+.careers-apply_field.is-bad .careers-apply_input{border-color:#C8463A;background-color:#fff}
+.careers-apply_field.is-bad .careers-apply_label{color:#C8463A}
+/* CV: the Webflow upload field lies over the whole box, so a click or a dropped file goes straight into it; the box shows its state */
+.careers-apply_upload-field .w-file-upload-default,.careers-apply_upload-field .w-file-upload-input{position:absolute;top:0;left:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+/* Webflow sizes the file input inline (1px wide); keep it over the whole box so a dropped file lands in it, not in a new tab */
+.careers-apply_upload-field .w-file-upload-input{z-index:1;width:100%!important;height:100%!important}
+.careers-apply_upload-field .w-file-upload-label{position:absolute;top:0;left:0;width:100%;height:100%;margin:0;opacity:0}
+.careers-apply_upload{transition:border-color .25s,background-color .25s,box-shadow .25s}
+.careers-apply_upload:hover,.careers-apply_upload.is-over{border-color:rgba(13,25,40,.55)}
+.careers-apply_upload:focus-within{box-shadow:0 0 0 5px rgba(91,211,169,.25);border-color:#0d1928}
+.careers-apply_upload-icon [data-icon="pdf"]{display:none}
+.careers-apply_upload-icon{transition:background-color .3s}
+.careers-apply_upload-tag{transition:background-color .3s,color .3s}
+.careers-apply_upload:hover .careers-apply_upload-tag,.careers-apply_upload.is-over .careers-apply_upload-tag{background-color:#E2483D;color:#fff}
+.careers-apply_upload.is-has{border-style:solid;border-color:rgba(13,25,40,.12)}
+.careers-apply_upload.is-has .careers-apply_upload-icon{background-color:#FCE9E6}
+.careers-apply_upload.is-has [data-icon="up"]{display:none}
+.careers-apply_upload.is-has [data-icon="pdf"]{display:block}
+.careers-apply_upload.is-has .careers-apply_upload-tag{display:none}
+.careers-apply_upload.is-has .careers-apply_upload-remove{display:flex}
+.careers-apply_upload-remove{transition:background-color .25s}
+.careers-apply_upload-remove:hover{background-color:#f4f4f4}
+.careers-apply_upload.is-error{border-color:#C8463A}
+.careers-apply_upload.is-error .careers-apply_upload-sub{color:#C8463A}
+/* note: opens with a soft grid-row unfold and the field fades in; on close the field fades out first, then the row folds away
+   evenly. The card keeps its top edge while the note opens or closes (script), so only the part under the note moves. The + turns into an x */
+.careers-apply_note{grid-template-rows:0fr;margin-top:-25px;transition:grid-template-rows .42s cubic-bezier(.65,0,.35,1) .08s,margin-top .42s cubic-bezier(.65,0,.35,1) .08s}
+.careers-apply_note-inner{padding:5px;margin:-5px;visibility:hidden;opacity:0;transform:translateY(-6px);transition:opacity .18s ease,transform .3s cubic-bezier(.65,0,.35,1),visibility 0s .5s}
+.careers-apply_note.is-open{grid-template-rows:1fr;margin-top:-10px;transition:grid-template-rows .5s cubic-bezier(.22,1,.36,1),margin-top .5s cubic-bezier(.22,1,.36,1)}
+.careers-apply_note.is-open .careers-apply_note-inner{visibility:visible;opacity:1;transform:none;transition:opacity .35s ease .12s,transform .5s cubic-bezier(.22,1,.36,1) .08s,visibility 0s}
+.careers-apply_note-icon{transition:transform .4s cubic-bezier(.22,1,.36,1),border-radius .18s ease,background-color .25s}
+.careers-apply_note-toggle:hover .careers-apply_note-icon{background-color:#ebebeb}
+.careers-apply_note-toggle[aria-expanded="true"] .careers-apply_note-icon{transform:rotate(45deg);border-radius:50%}
+/* send: while the form goes out the label gives way to three bouncing dots (Figma 7984:103) */
+.careers-apply_submit{transition:background-color .3s,color .2s}
+.careers-apply_submit:hover{background-color:#1B2A41}
+.careers-apply_send [data-dots]{position:absolute;left:50%;top:50%;display:none;gap:13px;transform:translate(-50%,-50%);pointer-events:none}
+.careers-apply_send [data-dots] i{display:block;width:10px;height:10px;border-radius:50%;background-color:#fff;animation:apDot 1s ease-in-out infinite}
+.careers-apply_send [data-dots] i:nth-child(2){animation-delay:.15s}.careers-apply_send [data-dots] i:nth-child(3){animation-delay:.3s}
+.careers-apply_send.is-busy .careers-apply_submit{color:transparent;pointer-events:none}
+.careers-apply_send.is-busy [data-dots]{display:flex}
+@keyframes apDot{0%,100%{opacity:.35;transform:translateY(0)}50%{opacity:1;transform:translateY(-3px)}}
+/* sent (nues-careers-apply-popup.html): the letter drops into the envelope, the flap folds shut, the mint check pops with a burst
+   of rays, under a soft mint glow at the top of the card */
+.careers-apply_done::before{content:"";position:absolute;left:50%;top:-140px;width:520px;height:340px;margin-left:-260px;border-radius:50%;background:radial-gradient(closest-side,rgba(91,211,169,.22),rgba(91,211,169,0));pointer-events:none}
+.careers-apply_done>*{position:relative}
+.careers-apply_done-icon svg{overflow:visible}
+.careers-apply_done [data-part="rays"]{transform-origin:90px 86px;opacity:0}
+.careers-apply_done [data-part="letter"]{transform:translateY(-62px)}
+.careers-apply_done [data-part="flap"]{transform-origin:90px 50px;transform:scaleY(-1)}
+.careers-apply_done [data-part="check"]{transform-origin:150px 108px;transform:scale(0)}
+.careers-apply_done.is-play [data-part="letter"]{animation:apLetter .8s cubic-bezier(.22,1,.36,1) .15s forwards}
+.careers-apply_done.is-play [data-part="flap"]{animation:apFlap .55s cubic-bezier(.22,1,.36,1) .8s forwards}
+.careers-apply_done.is-play [data-part="check"]{animation:apCheck .5s cubic-bezier(.34,1.4,.5,1) 1.25s forwards}
+.careers-apply_done.is-play [data-part="rays"]{animation:apRays .8s cubic-bezier(.22,1,.36,1) 1.3s forwards}
+@keyframes apLetter{to{transform:translateY(34px)}}
+@keyframes apFlap{to{transform:scaleY(1)}}
+@keyframes apCheck{to{transform:scale(1)}}
+@keyframes apRays{0%{opacity:0;transform:scale(.7)}35%{opacity:1}100%{opacity:0;transform:scale(1.18)}}
+.careers-apply_done-back{transition:background-color .25s}
+.careers-apply_done-back:hover{background-color:#ececec}
+@media (prefers-reduced-motion:reduce){
+.careers-apply_modal *,.careers-apply_modal *::before,.careers-apply_modal *::after{animation-duration:1ms!important;animation-delay:0s!important;transition-duration:1ms!important;transition-delay:0s!important}}
+</style>
+<script>
+/* Careers apply popup (runs once the page is parsed) (nues-careers-apply-popup.html; Figma 8042:31, 7984:103, 8050:210). A job card (or "Send an open application")
+   opens the native form from that letter; the card grows out of the letter and goes back into it when closed. The form is a normal
+   Webflow form: the role travels in a hidden "Role" field, the CV goes through the Webflow upload field, and the sent screen is the
+   form's own success message, played as an envelope closing. */
+(function(){
+ function init(){
+  var modal=document.querySelector('[data-apply-modal]');
+  if(!modal) return;
+  document.body.appendChild(modal);
+  var card=modal.querySelector('[data-apply-card]'),ov=modal.querySelector('[data-apply-overlay]'),dialog=modal.querySelector('[data-apply-dialog]'),
+      form=modal.querySelector('form'),block=form&&form.parentNode,done=block&&block.querySelector('.w-form-done'),fail=block&&block.querySelector('.w-form-fail'),
+      roleEl=modal.querySelector('[data-apply-role]'),metaEl=modal.querySelector('[data-apply-meta]'),send=modal.querySelector('[data-apply-send]'),
+      up=modal.querySelector('[data-apply-upload]'),note=modal.querySelector('[data-apply-note]'),more=modal.querySelector('[data-apply-note-toggle]');
+  if(!card||!form||!done) return;
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches,EO='cubic-bezier(.22,1,.36,1)',
+      D=function(ms){return reduce?1:ms;},src=null,busy=false,last=null,sending=false,h0=0,job=null,fade=null;
+  form.noValidate=true;
+  // the role of the application, sent with the form
+  var role=document.createElement('input');role.type='hidden';role.name='Role';role.value='Open application';form.appendChild(role);
+  // dots for the sending state
+  if(send&&!send.querySelector('[data-dots]')){var dots=document.createElement('span');dots.setAttribute('data-dots','');dots.setAttribute('aria-hidden','true');dots.innerHTML='<i></i><i></i><i></i>';send.appendChild(dots);}
+  // floating labels follow :placeholder-shown, so every field gets an empty placeholder (replaces Webflow's "Example Text")
+  [].forEach.call(form.querySelectorAll('.careers-apply_input'),function(i){i.setAttribute('placeholder',' ');});
+  var LBL={};
+  [].forEach.call(form.querySelectorAll('.careers-apply_label'),function(l){LBL[l.getAttribute('for')]=l.textContent;});
+  function mark(id,msg){var i=document.getElementById(id);if(!i)return true;var f=i.parentNode,l=f.querySelector('.careers-apply_label');
+    f.classList.toggle('is-bad',!!msg);if(l)l.textContent=msg||LBL[id];i.setAttribute('aria-invalid',msg?'true':'false');return !msg;}
+  ['apply-name','apply-email'].forEach(function(id){var i=document.getElementById(id);if(i)i.addEventListener('input',function(){if(i.parentNode.classList.contains('is-bad'))mark(id,'');});});
+
+  /* ---- open / close: the card grows out of the letter that was clicked and goes back into it ---- */
+  // the visible part of the letter (above the envelope pocket), or the button
+  function srcBox(el){var b=el.getBoundingClientRect(),h=b.height;
+    if(el.classList.contains('careers-job_letter')){var p=el.parentNode.querySelector('.careers-job_pocket');if(p)h=Math.min(b.bottom,p.getBoundingClientRect().top)-b.top;}
+    return {x:b.left,y:b.top,w:b.width,h:Math.max(24,h),r:parseFloat(getComputedStyle(el).borderTopLeftRadius)||14};}
+  // the card scaled evenly onto that box and cropped to its height, so text, corners and shadow never stretch
+  function morph(el){var a=card.getBoundingClientRect(),b=srcBox(el),s=b.w/a.width,r=(b.r/s)+'px';
+    return {transform:'translate('+(b.x-a.left)+'px,'+(b.y-a.top)+'px) scale('+s+')',clipPath:'inset(0px 0px '+Math.max(0,a.height-b.h/s)+'px 0px round '+r+')',borderRadius:r};}
+  // fully open: the crop sits outside the card, so its shadow shows. On the way the crop first opens the whole card
+  // (keeping its rounded bottom corners on the card), and only then lets the shadow out.
+  function full(){var R=getComputedStyle(card).borderTopLeftRadius;return {transform:'none',clipPath:'inset(-60px -60px -120px -60px round '+R+')',borderRadius:R};}
+  function edge(o){return {offset:o,clipPath:'inset(0px 0px 0px 0px round '+getComputedStyle(card).borderTopLeftRadius+')'};}
+  function onScreen(el){if(!el||!el.offsetParent)return false;var r=el.getBoundingClientRect();return r.bottom>0&&r.top<innerHeight&&r.width>0;}
+  function open(el,r,m){
+    if(busy||modal.classList.contains('is-open'))return;busy=true;src=el;last=document.activeElement;
+    if(roleEl)roleEl.textContent=r;if(metaEl)metaEl.textContent=m;role.value=r;reset();
+    job=el&&el.closest?el.closest('.careers-job_card'):null;if(job)job.classList.add('is-applying');
+    modal.classList.add('is-open');document.documentElement.classList.add('is-apply-lock');dialog.scrollTop=0;
+    if(ov.animate)ov.animate([{opacity:0},{opacity:1}],{duration:D(450),easing:'ease-out'});
+    var parts=[].slice.call(form.querySelectorAll('.careers-apply_header,.careers-apply_field,.careers-apply_upload,.careers-apply_note-toggle,.careers-apply_send')).concat([modal.querySelector('.careers-apply_close')]);
+    if(card.animate&&el&&onScreen(el)){
+      // a soft start while the card still sits on the letter, then a long glide into place
+      card.animate([morph(el),edge(.85),full()],{duration:D(700),easing:'cubic-bezier(.2,0,0,1)'}).onfinish=opened;
+      // the card fades in over the letter first; the letter goes only once it is covered
+      card.animate([{opacity:0},{opacity:1}],{duration:D(110)});
+      if(job)fade=el.animate([{opacity:1},{opacity:0}],{duration:D(120),delay:D(110),fill:'forwards'});
+    }else if(card.animate){card.animate([{opacity:0,transform:'translateY(24px) scale(.97)'},{opacity:1,transform:'none'}],{duration:D(520),easing:EO}).onfinish=opened;}
+    else opened();
+    if(card.animate)parts.forEach(function(p,i){if(p)p.animate([{opacity:0,transform:'translateY(14px)'},{opacity:1,transform:'none'}],{duration:D(560),delay:D(240+i*40),easing:EO,fill:'backwards'});});
+  }
+  function opened(){busy=false;var f=document.getElementById('apply-name');
+    // desktop: straight into the first field; touch: focus the card so the keyboard does not jump up
+    if(f&&window.matchMedia('(hover: hover)').matches)f.focus({preventScroll:true});else{card.setAttribute('tabindex','-1');card.focus({preventScroll:true});}}
+  function close(){
+    if(busy||!modal.classList.contains('is-open'))return;busy=true;
+    var el=src&&onScreen(src)?src:null,T=D(540),anims=[];
+    var fin=function(){modal.classList.remove('is-open');document.documentElement.classList.remove('is-apply-lock');
+      if(fade){fade.cancel();fade=null;}
+      // then the letter slides back into its envelope
+      var j=job;job=null;if(j)setTimeout(function(){j.classList.remove('is-applying');},D(120));
+      busy=false;reset();if(last&&last.focus)last.focus({preventScroll:true});};
+    if(!card.animate){fin();return;}
+    var view=done.style.display==='block'?done:form;
+    anims.push(ov.animate([{opacity:1},{opacity:0}],{duration:D(400),delay:D(140),easing:'ease-in',fill:'forwards'}));
+    [view,modal.querySelector('.careers-apply_close')].forEach(function(v){if(v)anims.push(v.animate([{opacity:1},{opacity:0}],{duration:D(140),fill:'forwards'}));});
+    var an;
+    if(el){
+      an=card.animate([full(),edge(.15),morph(el)],{duration:T,easing:'cubic-bezier(.5,0,.2,1)',fill:'forwards'});
+      // the letter comes back under the card, then the card melts away on top of it
+      anims.push(card.animate([{opacity:1},{opacity:1,offset:.8},{opacity:0}],{duration:T,fill:'forwards'}));
+      if(fade){anims.push(el.animate([{opacity:0},{opacity:0,offset:.6},{opacity:1,offset:.8},{opacity:1}],{duration:T,fill:'forwards'}));fade.cancel();fade=null;}
+    }else an=card.animate([{transform:'none',opacity:1},{transform:'translateY(30px) scale(.96)',opacity:0}],{duration:D(420),easing:'cubic-bezier(.5,0,.75,0)',fill:'forwards'});
+    an.onfinish=function(){fin();an.cancel();anims.forEach(function(x){x.cancel();});};
+  }
+  // job cards (mailto links stay as the no-script fallback) and the open application button; data-job-role / -text name the
+  // role when the card title is not one (the empty state's envelope is the open application)
+  [].forEach.call(document.querySelectorAll('.careers-job_card'),function(a){
+    a.addEventListener('click',function(e){e.preventDefault();var t=a.querySelector('.careers-card_title'),m=a.querySelector('.careers-card_text');
+      open(a.querySelector('.careers-job_letter')||a,a.getAttribute('data-job-role')||(t?t.textContent.trim():'Open application'),a.getAttribute('data-job-text')||(m?m.textContent.trim():''));});
+  });
+  [].forEach.call(document.querySelectorAll('.section_careers-jobs a[href^="mailto:"]:not(.careers-job_card)'),function(a){
+    a.addEventListener('click',function(e){e.preventDefault();open(a,'Open application','Any role, any team');});
+  });
+  [].forEach.call(modal.querySelectorAll('[data-apply-close]'),function(b){b.addEventListener('click',close);});
+  dialog.addEventListener('click',function(e){if(e.target===dialog)close();});
+  document.addEventListener('keydown',function(e){
+    if(!modal.classList.contains('is-open'))return;
+    if(e.key==='Escape'){close();return;}
+    if(e.key==='Tab'){var f=[].slice.call(card.querySelectorAll('button,input:not([type="hidden"]):not([type="file"]),textarea,[role="button"]')).filter(function(x){return x.offsetParent&&!x.disabled&&getComputedStyle(x).visibility!=='hidden';});
+      if(!f.length)return;var a=f[0],z=f[f.length-1];
+      if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus();}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus();}}
+  });
+
+  /* ---- note ---- */
+  // the card is centred in the dialog; while the note opens or closes it keeps its top edge, so only the part under the note moves
+  function pads(){var s=getComputedStyle(dialog);return {t:parseFloat(s.paddingTop)||0,b:parseFloat(s.paddingBottom)||0};}
+  function pin(){if(card.style.marginTop)return;var p=pads(),top=card.getBoundingClientRect().top-dialog.getBoundingClientRect().top+dialog.scrollTop-p.t;
+    card.style.marginTop=Math.max(0,top)+'px';card.style.marginBottom='auto';}
+  function unpin(){card.style.marginTop='';card.style.marginBottom='';}
+  if(more&&note)more.addEventListener('click',function(){var o=!note.classList.contains('is-open');pin();note.classList.toggle('is-open',o);more.setAttribute('aria-expanded',o?'true':'false');
+    if(o)setTimeout(function(){var t=note.querySelector('textarea');if(t)t.focus({preventScroll:true});},D(200));});
+
+  /* ---- CV: PDF only, up to 10 MB; the box mirrors the Webflow upload states ---- */
+  var cv=up&&up.querySelector('input[type="file"]'),tT=up&&up.querySelector('[data-apply-file-title]'),tS=up&&up.querySelector('[data-apply-file-sub]'),
+      rm=up&&up.querySelector('[data-apply-file-remove]'),T0=tT?tT.textContent:'Upload CV',S0=tS?tS.textContent:'Drop file or browse',file=null;
+  function setUp(state,msg){if(!up)return;up.classList.toggle('is-has',state==='has'||state==='busy');up.classList.toggle('is-error',state==='error');
+    if(state==='none'){tT.textContent=T0;tS.textContent=msg||S0;}
+    else if(file){tT.textContent=file.name;tS.textContent=state==='busy'?'Uploading…':state==='error'?(msg||'Upload failed, try again'):(file.size/1048576).toFixed(1)+' MB';}}
+  function clearFile(msg){file=null;var r=up&&up.querySelector('.w-file-remove-link');var ok=up&&up.querySelector('.w-file-upload-success');
+    if(r&&ok&&!ok.classList.contains('w-hidden'))r.click();else if(cv)cv.value='';
+    var er=up&&up.querySelector('.w-file-upload-error');if(er&&!er.classList.contains('w-hidden')){er.classList.add('w-hidden');var df=up.querySelector('.w-file-upload-default');if(df)df.classList.remove('w-hidden');}
+    setUp('none',msg);up&&up.classList.toggle('is-error',!!msg);}
+  if(up&&cv){
+    cv.setAttribute('accept','.pdf,application/pdf');
+    // check the file before Webflow starts the upload (capture phase, so a wrong file never reaches it)
+    up.addEventListener('change',function(e){if(e.target!==cv)return;var f=cv.files&&cv.files[0];if(!f){return;}
+      if(!/\.pdf$/i.test(f.name)){e.stopImmediatePropagation();cv.value='';clearFile('Only PDF files');return;}
+      if(f.size>10485760){e.stopImmediatePropagation();cv.value='';clearFile('Max file size is 10 MB');return;}
+      file=f;setUp('busy');var ic=up.querySelector('.careers-apply_upload-icon');if(ic&&ic.animate)ic.animate([{transform:'scale(.6)'},{transform:'scale(1)'}],{duration:D(450),easing:'cubic-bezier(.34,1.4,.5,1)'});},true);
+    // follow Webflow's uploading / success / error blocks
+    var st=function(){if(!file)return;var u=up.querySelector('.w-file-upload-uploading'),s=up.querySelector('.w-file-upload-success'),r=up.querySelector('.w-file-upload-error');
+      if(r&&!r.classList.contains('w-hidden')){var m=r.querySelector('.w-file-upload-error-msg');setUp('error',m&&m.textContent.trim());}
+      else if(u&&!u.classList.contains('w-hidden'))setUp('busy');else if(s&&!s.classList.contains('w-hidden'))setUp('has');};
+    new MutationObserver(st).observe(up.querySelector('.w-file-upload')||up,{subtree:true,attributes:true,attributeFilter:['class']});
+    if(rm)rm.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();clearFile('');});
+    ['dragenter','dragover'].forEach(function(t){up.addEventListener(t,function(){up.classList.add('is-over');});});
+    ['dragleave','drop'].forEach(function(t){up.addEventListener(t,function(){up.classList.remove('is-over');});});
+  }
+
+  /* ---- send: our checks first, then Webflow sends the form ---- */
+  document.addEventListener('submit',function(e){
+    if(e.target!==form)return;
+    var n=document.getElementById('apply-name'),m=document.getElementById('apply-email');
+    var a=mark('apply-name',n&&n.value.trim()?'':'Add your name'),b=mark('apply-email',m&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(m.value.trim())?'':'Check your email');
+    var upB=up&&up.querySelector('.w-file-upload-uploading'),still=upB&&!upB.classList.contains('w-hidden');
+    if(!a||!b||still||sending){e.preventDefault();e.stopImmediatePropagation();
+      if(still&&a&&b&&tS){tS.textContent='Uploading… one moment';return;}
+      var f=form.querySelector('.is-bad');if(f){if(f.animate)f.animate([{transform:'translateX(0)'},{transform:'translateX(-6px)'},{transform:'translateX(5px)'},{transform:'translateX(-3px)'},{transform:'translateX(0)'}],{duration:D(380)});var i=f.querySelector('input');if(i)i.focus();}
+      return;}
+    sending=true;h0=card.offsetHeight;if(send)send.classList.add('is-busy');
+    var first=(n.value.trim().split(/\s+/)[0]||'').replace(/^./,function(c){return c.toUpperCase();});
+    var tt=done.querySelector('[data-apply-done-title]'),tx=done.querySelector('[data-apply-done-text]');
+    if(tt)tt.textContent=first?'Thank you, '+first+'!':'Thank you!';
+    if(tx)tx.textContent=role.value==='Open application'?'Your open application is on its way.':'Your application for '+role.value+' is on its way.';
+  },true);
+  // Webflow shows the success or the error message; play the sent screen or bring the button back
+  var watch=function(){
+    if(done.style.display==='block'&&!done.classList.contains('is-play')){sending=false;if(send)send.classList.remove('is-busy');showDone();}
+    else if(fail&&fail.style.display==='block'&&sending){sending=false;if(send)send.classList.remove('is-busy');}};
+  new MutationObserver(watch).observe(block,{subtree:true,attributes:true,attributeFilter:['style']});
+  function showDone(){
+    var h1=card.offsetHeight;if(card.animate&&h0)card.animate([{height:h0+'px'},{height:h1+'px'}],{duration:D(520),easing:EO});
+    // a card pinned by the note glides back to the centre together with its new height
+    if(card.style.marginTop){var p=pads(),m0=parseFloat(card.style.marginTop)||0,m1=Math.max(0,(dialog.clientHeight-p.t-p.b-h1)/2);
+      card.style.marginTop=m1+'px';if(card.animate)card.animate([{marginTop:m0+'px'},{marginTop:m1+'px'}],{duration:D(520),easing:EO});}
+    var ic=done.querySelector('.careers-apply_done-icon');
+    if(ic&&ic.animate)ic.animate([{opacity:0,transform:'translateY(10px)'},{opacity:1,transform:'none'}],{duration:D(480),delay:D(80),easing:EO,fill:'backwards'});
+    [].forEach.call(done.querySelectorAll('.careers-apply_done-title,.careers-apply_done-text,.careers-apply_done-back'),function(p,i){
+      if(p.animate)p.animate([{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'none'}],{duration:D(520),delay:D(900+i*90),easing:EO,fill:'backwards'});});
+    void done.offsetWidth;done.classList.add('is-play');
+    var bk=done.querySelector('.careers-apply_done-back');if(bk)bk.focus({preventScroll:true});
+  }
+  function reset(){
+    sending=false;if(send)send.classList.remove('is-busy');
+    form.reset();mark('apply-name','');mark('apply-email','');clearFile('');
+    if(note){note.classList.remove('is-open');if(more)more.setAttribute('aria-expanded','false');}
+    unpin();
+    done.classList.remove('is-play');done.style.display='none';form.style.display='';if(fail)fail.style.display='none';
+  }
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>

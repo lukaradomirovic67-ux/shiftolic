@@ -3,6 +3,23 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 12.11.2026: Careers, prazno stanje za pozicije (Figma 8664:32) i brisanje pozicija iz CMS-a
+Po tvom zahtevu. Nije objavljeno.
+
+Kad u kolekciji Jobs nema nijedne stavke, Webflow umesto liste prikazuje njen „Empty State“. Tu je sada ista koverta kao kartice pozicija, ali stalno otvorena. Na pismu piše „Open application“ i „Tell us what you do best...“, a na koverti „No open roles right now“ i rečenica ispod. Klik na kovertu otvara isti popup kao „Send an open application“. Filteri i rečenica „Don't see your role?“ se tada ne prikazuju, a dugme ostaje. Čim se doda prva pozicija, sve se vraća na listu sa filterima.
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Careers (`6ada16efb73db28b0b5cbad8`), Empty State liste pozicija (`3b55563a-…4885`) | tekst „No open roles right now. Send us an open application below.“ (`d3663aa6-…5e68`, uklonjen) | koverta `careers-job_card is-open` (`71a40307-…f7a9`) sa postojećim delovima koverte (`careers-job_back`, `_letter`, `_pocket`, `_flap`, `_content`, `careers-card_title`, `careers-card_text`). Link je `mailto:hello@nues.agency?subject=Application: Open application` (radi i bez JS-a), atributi `data-job-role="Open application"`, `data-job-text="Any role, any team"`, `data-reveal` |
+| Style Manager, nove klase | nema | `careers-jobs_empty-label` (20px, 60% navy), `careers-jobs_empty-note` (18px medium navy, max 357px), combo `careers-job_card is-open` (max 645px, centrirana; ≤767 odnos 645/450, ≤479 kvadrat, da tekst stane na telefonu), combo `careers-card_text is-narrow` (max 453px, prelom kao u Figmi) |
+| Style Manager, `careers-jobs_empty` | providnost 60%, padding 2rem, centriran tekst 20px | samo boja (bela); izgled nosi koverta |
+| Careers, page head | koverta otvorena samo na hover / dok je popup otvoren | dodat blok „Empty state“: `is-open` drži kovertu otvorenom; razmak iznad liste je tačno visina podignutog pisma (kao u Figmi: 100px od naslova do pisma); filteri i „Don't see your role?“ se kriju preko `:has(.careers-jobs_empty)`. Klik na karticu sada čita `data-job-role` / `data-job-text` pre naslova kartice |
+| CMS Jobs (`6ada1b11e40ddb96b7a870e0`) | 4 objavljene pozicije: Senior Webflow Developer, Product Designer, SEO & AEO Specialist, Junior Webflow Developer | sve 4 obrisane. Kopija: `backup/cms-items/jobs-2026-11-12.json` |
+
+Kopija head koda pre izmene: `backup/page-code/2026-11-12/careers-head.html`. Nova verzija: `webflow-assets/site-code/careers-page-head.html`.
+Lokalni test (stranica sa staging-a, lista zamenjena praznim stanjem) na 1440, 992, 820, 767, 600, 480, 390 i 360: razmaci kao u Figmi (100px na desktopu), tekst nigde ne ulazi pod kovertu, nema širenja ni JS grešaka; klik na kovertu otvara popup sa „Open application“.
+Na staging-u se pozicije i dalje vide dok se sajt ne objavi.
+
 ## 12.11.2026: Resources hero, Case studies broji samo napisane case studije (objavljeno na staging)
 Po tvojoj odluci („daj samo broj ovih koji imaju da se čitaju“). Ranije je broj bio „10“, tj. sve stavke Our Works. Sada broji samo stavke koje imaju popunjen „Case title“ (napisan case): TrakPro, Veyor, Sustain, Shiftolic i Ballerine, ukupno 5. Pythagora ima Case title, ali je u draftu, pa se ne broji.
 

@@ -1,0 +1,10 @@
+{
+  "collection": {"id": "6ada1b11e40ddb96b7a870e0", "displayName": "Jobs", "slug": "jobs"},
+  "note": "All Jobs items before deletion on 12.11.2026 (user asked to delete all positions after the Careers empty state was added). Category ids: Development e1342d6345f7688c86a98fab74be5d74, Design 5a2cb9003b0246c1ed53a7d9bd1d9199, Growth 0eb79bd0438e56a3839268ce4954489f.",
+  "items": [
+    {"id": "6ada1b2ae40ddb96b7a8778f", "isDraft": false, "isArchived": false, "lastPublished": "2026-10-22T14:25:34.721Z", "fieldData": {"name": "Senior Webflow Developer", "slug": "senior-webflow-developer", "location": "Belgrade or Remote, Full Time", "category": "e1342d6345f7688c86a98fab74be5d74", "summary": "Lead Webflow builds from Figma to launch, with clean CMS and fast pages.", "order": 1}},
+    {"id": "6ada1b3ed7a15edf9d16e2c6", "isDraft": false, "isArchived": false, "lastPublished": "2026-10-22T14:25:34.721Z", "fieldData": {"name": "Product Designer", "slug": "product-designer", "location": "Belgrade, Full Time", "category": "5a2cb9003b0246c1ed53a7d9bd1d9199", "summary": "Design sites from first sketch to launch, side by side with clients.", "order": 2}},
+    {"id": "6ada1b3ed7a15edf9d16e2c8", "isDraft": false, "isArchived": false, "lastPublished": "2026-10-22T14:25:34.721Z", "fieldData": {"name": "SEO & AEO Specialist", "slug": "seo-aeo-specialist", "location": "Remote, Full Time", "category": "0eb79bd0438e56a3839268ce4954489f", "summary": "Grow rankings and AI answers for the Webflow sites we look after.", "order": 3}},
+    {"id": "6ada1b3ed7a15edf9d16e2ca", "isDraft": false, "isArchived": false, "lastPublished": "2026-10-22T14:25:34.721Z", "fieldData": {"name": "Junior Webflow Developer", "slug": "junior-webflow-developer", "location": "Belgrade, Internship", "category": "e1342d6345f7688c86a98fab74be5d74", "summary": "Learn to ship production Webflow sites next to our senior developers.", "order": 4}}
+  ]
+}
