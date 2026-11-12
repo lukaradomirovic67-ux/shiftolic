@@ -45,8 +45,8 @@ Rezime automatske provere:
 - [x] (popravljeno 11.11., objavljeno na staging) Pricing na tabletu (820): oznake ispod slidera se preklapaju („Design & Development“ / „Webflow Development“),
       a prva je odsečena levo.
 - [x] (popravljeno 11.11., objavljeno na staging) Hamburger dugme je 24×18 px. Treba ga povećati na bar 44×44 (površina za prst), na svih 47 stranica.
-- [x] (11.11., čeka objavu) Blog paginacija: „2“ i „3“ su beli tekst na svetlosivoj podlozi (15% navy) i izgledaju kao isključeni.
-- [x] (11.11., čeka objavu) „Copy link“ na 21 blog postu je link sa `#` umesto dugmeta (pristupačnost).
+- [x] (11.11., objavljeno na staging 12.11.) Blog paginacija: „2“ i „3“ su beli tekst na svetlosivoj podlozi (15% navy) i izgledaju kao isključeni.
+- [x] (11.11., objavljeno na staging 12.11.) „Copy link“ na 21 blog postu je link sa `#` umesto dugmeta (pristupačnost).
 - [x] (preuređeno 11.11., objavljeno na staging) Tabela „Side by side“ (Services) na tabletu i telefonu nema znak da se skroluje u stranu.
       Sada je prekidač sa 4 usluge i jedna kartica za izabranu uslugu (vidi CHANGELOG).
 - [ ] 5 praznih case stranica: noindex + preusmerenje (kad odobriš).
@@ -55,9 +55,9 @@ Rezime automatske provere:
 - [x] Sitnice sa QA 8.11. (ponovo provereno 11.11.):
   - navodnik iza Clutch bedža: tako je u Figmi, ostaje;
   - sitni logoi LaSalle, Sustain i Hypersonix: treba bolji fajl loga (ide uz slike);
-  - neaktivan tab „Veyor“: popravljeno (dvostruka providnost), čeka objavu;
+  - neaktivan tab „Veyor“: popravljeno (dvostruka providnost), objavljeno 12.11.;
   - naslov istaknutog posta preko „VS“ grafike: zavisi od naslovne slike, predlog čeka tvoju odluku;
-  - tačke u listama: pravne stranice popravljene (čeka objavu), na blogu su već dobre.
+  - tačke u listama: pravne stranice popravljene (objavljeno 12.11.), na blogu su već dobre.
 
 ## 3. Šta završava tim (sadržaj i odluke)
 **Sadržaj koji fali**

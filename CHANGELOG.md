@@ -3,6 +3,14 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 12.11.2026: objava na staging (webflow.io, bez custom domena)
+Objavljeno je pet izmena: logoi na Resources, paginacija na blogu, „Copy link“, tabovi na Our Work i tačke u pravnim listama. Proverio sam ih na staging-u posle objave:
+- Resources: svih 8 logoa u hero karticama su SVG i učitavaju se;
+- Blog: page head je identičan lokalnom fajlu; brojevi „2“ i „3“ su rgba(13,25,40,.7), aktivni je beo na tamnom;
+- blog post: footer kod je identičan lokalnom fajlu; „Copy link“ nema href, ima role=button i tabindex 0;
+- Our Work: neaktivni logo ima jednu providnost (0.4, filter bez opacity), izgleda kao u Figmi;
+- Privacy i Terms: tačka je na 1.92px 20.64px, veličine 7.68px (.08em .86em / .32em pri 24px).
+
 ## 12.11.2026: slike koje su čekale Designer (MCP app)
 Designer je bio otvoren, pa sam prošao listu iz `notes/pre-launch-2026-11-11.md`. Pre svake zamene sam izmerio prikazanu veličinu i rezoluciju trenutne slike. Nije objavljeno.
 
