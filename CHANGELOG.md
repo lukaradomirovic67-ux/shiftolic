@@ -3,6 +3,28 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 12.11.2026: Our Work slider videi prebačeni sa GitHub-a (jsDelivr) na Webflow (objavljeno na staging)
+Po planu koji smo dogovorili. Ti si na novoj Draft stranici „Slider videos“ (`6af6466b9f4f3eaa0bb1fa80`) dodao 4 Background Video elementa i u njih otpremio videe. Webflow ih čuva kao asset-e, a ja sam njihove linkove upisao u CMS.
+
+| Gde | Pre | Posle |
+|---|---|---|
+| CMS Our Works, polje „Slider video“ (`slider-video-2`), TrakPro (`6aba6bc07d6279b4b561798e`) | `https://cdn.jsdelivr.net/gh/lukaradomirovic67-ux/shiftolic@46bba2e…/webflow-assets/ourwork-video/trakpro-slider.mp4` | `https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6af646bf70e562225ced8c49_trakpro-slider.mp4` |
+| isto, Sustain Commercial Solar (`6aba6bc07d6279b4b561798c`) | jsDelivr `…/sustain-slider.mp4` | `https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6af646c4deb177f9145906ae_sustain-slider.mp4` |
+| isto, Shiftolic (`6aba6bc07d6279b4b561798b`) | jsDelivr `…/shiftolic-slider.mp4` | `https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6af646caa0271d7cf124d95c_shiftolic-slider.mp4` |
+| isto, Ballerine (`6aba6bc07d6279b4b5617989`) | jsDelivr `…/ballerine-slider.mp4` | `https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6af646d045263033b2f2e934_ballerine-slider.mp4` |
+
+Stare vrednosti su u `backup/cms-items/our-works-slider-video-2026-11-12.json`.
+Koristim originalne fajlove koje si otpremio, a ne Webflow-ove preračunate verzije, pa nema dodatne kompresije.
+
+Provereno:
+- svaki fajl sa Webflow servera je bajt po bajt isti kao original (md5). Server podržava preskakanje unutar videa i šalje ga sa keširanjem od godinu dana;
+- na staging-u slider na Our Work čita nove linkove, a linkova ka GitHub-u za videe više nema;
+- videi se puštaju (u testu zamenjeni probnim WebM-om, jer test pregledač nema H.264), traka prati video, klik na traku menja slajd, 1440 i 390, bez JS grešaka;
+- stranica „Slider videos“ je Draft i na staging-u vraća 404;
+- Home, About, Services, Pricing, Careers, Resources, Blog i Let's talk ne učitavaju ništa iz GitHub repozitorijuma.
+
+Stranicu „Slider videos“ ne treba brisati. Novi video za slider se dodaje isto: Background Video na toj stranici, pa link u polje „Slider video“.
+
 ## 12.11.2026: Our Work hero slider vraćen na CMS (objavljeno na staging)
 Po tvom zahtevu („stani aj ipak da budu cms“). Poništava izmenu ispod („slider bez CMS-a“). Izgled i ponašanje su isti kao pre nje.
 

@@ -1,0 +1,11 @@
+{
+  "collection": "Our Works (6aba6bc07d6279b4b561771c)",
+  "field": "slider-video-2 (Slider video, bf08b49af769121c764a6cc85a5b2d4c)",
+  "backed_up": "2026-11-12, before switching to Webflow-hosted videos",
+  "items": {
+    "6aba6bc07d6279b4b561798e (trak-pro)": "https://cdn.jsdelivr.net/gh/lukaradomirovic67-ux/shiftolic@46bba2e52827ccfb75b3676df307e642af6d4bf4/webflow-assets/ourwork-video/trakpro-slider.mp4",
+    "6aba6bc07d6279b4b561798c (sustain-commercial-solar)": "https://cdn.jsdelivr.net/gh/lukaradomirovic67-ux/shiftolic@46bba2e52827ccfb75b3676df307e642af6d4bf4/webflow-assets/ourwork-video/sustain-slider.mp4",
+    "6aba6bc07d6279b4b561798b (shiftolic)": "https://cdn.jsdelivr.net/gh/lukaradomirovic67-ux/shiftolic@46bba2e52827ccfb75b3676df307e642af6d4bf4/webflow-assets/ourwork-video/shiftolic-slider.mp4",
+    "6aba6bc07d6279b4b5617989 (ballerine)": "https://cdn.jsdelivr.net/gh/lukaradomirovic67-ux/shiftolic@46bba2e52827ccfb75b3676df307e642af6d4bf4/webflow-assets/ourwork-video/ballerine-slider.mp4"
+  }
+}
