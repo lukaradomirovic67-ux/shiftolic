@@ -1,0 +1,15 @@
+{
+  "component": "Service FAQ (5896a28a-03e8-6426-c47f-4bc3a414ebeb), group Services, 5 instances, only prop before: Variant",
+  "backed_up": "2026-11-12, before adding text props",
+  "heading_h2 (…ebf0)": ["Trusted by ambitious teams", "<line break>", "across six industries"],
+  "items": [
+    {"q_el": "…ebf8 (String in div.svc-faq_q-text …ebf7)", "q": "What if we already have a brand?", "a_el": "Paragraph …ebfe", "a": "Then we use it. Art direction becomes a shorter step, we apply what you already have to real pages instead of inventing a new world, and the time saved goes back into design and build."},
+    {"q_el": "…ec03 (div …ec02)", "q": "Who writes the copy?", "a_el": "…ec09", "a": "[Add the answer to: Who writes the copy?]"},
+    {"q_el": "…ec0e (div …ec0d)", "q": "How long does it actually take?", "a_el": "…ec14", "a": "[Add the answer to: How long does it actually take?]"},
+    {"q_el": "…ec19 (div …ec18)", "q": "What does it cost?", "a_el": "…ec1f", "a": "[Add the answer to: What does it cost?]"},
+    {"q_el": "…ec24 (div …ec23)", "q": "What happens after launch?", "a_el": "…ec2a", "a": "[Add the answer to: What happens after launch?]"},
+    {"q_el": "…ec2f (div …ec2e)", "q": "Can you work with our developers?", "a_el": "…ec35", "a": "[Add the answer to: Can you work with our developers?]"}
+  ],
+  "more_line (…ec37)": "Something else on your mind? <a page 6aba6bc07d6279b4b56176f8 (Let's talk)>Ask it on the call</a>",
+  "element_id_prefix": "5896a28a-03e8-6426-c47f-4bc3a414"
+}

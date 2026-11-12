@@ -3,6 +3,18 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 12.11.2026: Service FAQ komponenta, tekst se menja po stranici preko property-ja (objavljeno na staging)
+Po tvom zahtevu („da se tekst u faq-u componenti moze menjati u zavisnosti od page-a, preko properties“). Bez vizuelne promene: podrazumevane vrednosti su isti tekstovi koji su bili na sajtu.
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Komponenta Service FAQ (`5896a28a-03e8-6426-c47f-4bc3a414ebeb`), 5 instanci: Services, Design & Development, Webflow Development, SEO & AEO, Growth | jedini property Variant; naslov, 6 pitanja i 6 odgovora upisani u komponentu, isti na svih 5 stranica | 13 novih tekstualnih property-ja: Heading (grupa Heading, Enter = novi red) i Question 1–6 / Answer 1–6 (grupe FAQ 1–FAQ 6). H2, `svc-faq_q-text` i `svc-faq_a-text` su vezani za njih. Variant je ostao |
+
+Šta nije property: red „Something else on your mind? Ask it on the call“ (isti na svim stranicama) i broj pitanja (uvek 6). FAQ na Pricing i Webflow Integrations nije ova komponenta, pa se tamo tekst menja direktno na stranici.
+Backup komponente pre izmene: `backup/components/service-faq-2026-11-12.json`.
+
+Provereno na staging-u (objava 23:20 UTC): na svih 5 stranica naslov (sa prelomom reda), pitanja i odgovori su identični kao pre izmene, a `data-svc-faq` atributi su ostali; klik na pitanje i dalje otvara odgovor, bez JS grešaka.
+
 ## 12.11.2026: Our Work slider videi prebačeni sa GitHub-a (jsDelivr) na Webflow (objavljeno na staging)
 Po planu koji smo dogovorili. Ti si na novoj Draft stranici „Slider videos“ (`6af6466b9f4f3eaa0bb1fa80`) dodao 4 Background Video elementa i u njih otpremio videe. Webflow ih čuva kao asset-e, a ja sam njihove linkove upisao u CMS.
 
