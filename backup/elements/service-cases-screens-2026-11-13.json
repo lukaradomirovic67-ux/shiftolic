@@ -1,0 +1,12 @@
+{
+  "note": "Komponenta Service Cases (34b22d05-b194-8512-c6a7-fe84ab3212d1), 6 slika pre zamene lakšim verzijama. Koristi se na 4 servisne stranice.",
+  "date": "2026-11-13",
+  "elements": [
+    {"element": "0fc9d5ca-60e9-98c7-af63-89b61cd1f409", "class": "home-projects_screen-image is-left", "assetId": "6ae913ddcfa35fd973751b67", "file": "svc-case-ballerine-home-full.webp", "altText": null},
+    {"element": "f260e972-aa96-a01d-5612-81becfed6703", "class": "home-projects_screen-image is-right", "assetId": "6ae913ddcfa35fd973751b67", "file": "svc-case-ballerine-home-full.webp", "altText": null},
+    {"element": "ff2714d5-66bf-191e-c819-9026f4f931c6", "class": "home-projects_screen-image", "assetId": "6ae913ddcfa35fd973751b67", "file": "svc-case-ballerine-home-full.webp", "altText": "Ballerine website homepage"},
+    {"element": "abaf8c35-0c4c-3e3b-2ecb-5b449c5a2bda", "class": "home-projects_screen-image is-left", "assetId": "6ae913e9de52550f9c6108c2", "file": "svc-case-shiftolic-home-full.webp", "altText": null},
+    {"element": "016fb198-4490-8831-b1cf-da90f09059b8", "class": "home-projects_screen-image is-right", "assetId": "6ae913e9de52550f9c6108c2", "file": "svc-case-shiftolic-home-full.webp", "altText": null},
+    {"element": "75e9ace8-94fe-8d5b-273c-6846e8c49767", "class": "home-projects_screen-image", "assetId": "6ae913e9de52550f9c6108c2", "file": "svc-case-shiftolic-home-full.webp", "altText": "Shiftolic website homepage"}
+  ]
+}

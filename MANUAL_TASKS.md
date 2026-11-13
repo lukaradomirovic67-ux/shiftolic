@@ -50,7 +50,7 @@ Nazive menija proverite u trenutnom Webflow interfejsu.
      - da je tekst isti do piksela (lokalni test sa ovim fajlom je to već pokazao na 4 stranice);
      - i onda objavim.
    - Geist je pod licencom SIL OFL 1.1 (dozvoljeno samostalno hostovanje). Licenca je u `fonts/Geist-OFL-LICENSE.txt`.
-9. **Service Cases, dve teške slike** (na sve 4 servisne stranice):
+9. **[URAĐENO 13.11., provereno na stagingu]** **Service Cases, dve teške slike** (na sve 4 servisne stranice):
    - `svc-case-ballerine-home-full` je 1.023 KB, a nova `images/svc-case-ballerine-home-full-1200.webp` ima 450 KB.
    - `svc-case-shiftolic-home-full` je 431 KB, a nova `images/svc-case-shiftolic-home-full-1200.webp` ima 242 KB.
    - Izgled je isti (1200 px je i dalje 2× najšira veličina prikaza).

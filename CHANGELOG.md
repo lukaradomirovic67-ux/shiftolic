@@ -3,6 +3,17 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 13.11.2026: MANUAL_TASKS 9 urađen, lakše slike u Service Cases (objavljeno na staging)
+Ti si ubacio 2 slike u Assets; ja sam ih postavio u komponentu **Service Cases** (`34b22d05-b194-8512-c6a7-fe84ab3212d1`), pa važe na sve 4 servisne stranice. Kopija pre izmene: `backup/elements/service-cases-screens-2026-11-13.json`.
+| Okviri (po 3: levo, sredina, desno) | Pre | Posle |
+|---|---|---|
+| Ballerine | asset `6ae913ddcfa35fd973751b67` `svc-case-ballerine-home-full.webp`, 1.024 KB | asset `6af746e796cf66ec841507cd` `svc-case-ballerine-home-full-1200.webp`, 451 KB |
+| Shiftolic | asset `6ae913e9de52550f9c6108c2` `svc-case-shiftolic-home-full.webp`, 431 KB | asset `6af746e7ccc5ab40a428af82` `svc-case-shiftolic-home-full-1200.webp`, 242 KB |
+- Ukupno po servisnoj stranici: 1.455 KB → 693 KB (oko 760 KB manje), i na desktopu i na telefonu.
+- Alt tekstovi su ostali isti („Ballerine website homepage“, „Shiftolic website homepage“; bočni okviri prazni, kao i pre).
+- Provereno na sve 4 servisne stranice: 6 novih slika, nijedna stara. Snimak sekcije pre i posle na 1440 i 390 px je isti (razlika ispod 0,5% piksela, samo od kompresije). Bez JS grešaka.
+- Stare slike su ostale u Assets i nisu obrisane.
+
 ## 13.11.2026: MANUAL_TASKS 10 urađen, lakša LaSalle slika (objavljeno na staging)
 Ti si zamenio sliku u CMS-u; ja sam objavio na staging i proverio.
 | Gde | Pre | Posle |
