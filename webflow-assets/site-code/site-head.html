@@ -719,10 +719,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <!-- Nues 13.11.: two-tone text that writes in letter by letter, and bigger tap areas for small controls. -->
 <style>
-/* Two-tone sentences (Service Cases .svc-case_muted, Home Every project .text-reveal_muted): the grey part keeps its own colour,
-   only the white part writes in */
-[data-text-reveal] :is(.svc-case_muted, .text-reveal_muted) .text-reveal_char,
-[data-text-reveal].is-revealed :is(.svc-case_muted, .text-reveal_muted) .text-reveal_char { color: inherit; }
+/* Two-tone sentences (Service Cases .svc-case_muted, Home Every project .text-reveal_muted): the whole sentence starts grey
+   and every letter, the second part too, turns white one after another. The base .text-reveal_char rules above already do this
+   for every letter, so the dark pages need nothing extra here.
+   Our Work tabs heading (light card, .ow-cs_char letters from the Our Work page code): once revealed the grey part takes the
+   heading colour, so its letters end dark navy like the first part instead of staying grey */
+.is-revealed .ow-cs_muted { color: inherit; }
 /* Bigger tap areas without changing the look: an invisible frame around small links, arrows and slider dots (about 40-44px) */
 .footer-v2_link { position: relative; }
 .footer-v2_link::after { content: ""; position: absolute; inset: -8px -6px; }

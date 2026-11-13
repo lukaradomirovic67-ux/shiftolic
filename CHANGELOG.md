@@ -3,6 +3,25 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 13.11.2026: ceo dvobojni tekst kreće siv i ceo pobeli (objavljeno na staging)
+Po tvom zahtevu („ceo ovaj tekst treba da se kao izpise ne samo ovaj deo“, pa „ceo ovaj tekst je siv na pocetku i onda ceo pobeli postepeno“). Menja tačku 1 iz unosa ispod.
+
+- Gde: Home „Every project“ (`.home-projects_description`), „Service Cases“ na 4 servisne stranice (`.svc-case_text`) i naslovi u Our Work tabovima (`.ow-cs_item h3`).
+- Pre: ispisivao se samo prvi deo rečenice (40% → belo). Drugi deo je bio siv na početku i ostajao siv (40% → 40%), pa se nije video nikakav pomak.
+- Sada: cela rečenica kreće siva (40%) i slovo po slovo postaje bela, i drugi deo. Na kraju je cela rečenica bela, a na Our Work kartici cela tamnoplava (rgb(13,25,40)).
+- Site head (CSS):
+  - uklonjena pravila koja su slova u `.svc-case_muted` i `.text-reveal_muted` držala sivim (`color: inherit`), pa sva slova idu postojećim putem: `.text-reveal_char` 40% → `#fff`;
+  - dodato `.is-revealed .ow-cs_muted { color: inherit; }`, pa sivi deo na Our Work posle otkrivanja preuzima boju naslova.
+- Usput: između ova dva koraka kratko je bila objavljena verzija u kojoj je sivi deo kretao od 12% i završavao siv. Ova verzija je zamenila tu.
+- Skripta, podela znakom `|` u CMS-u i klase `text-reveal_muted` i `ow-cs_muted` ostaju kakve su. Sivi deo je sada samo početno stanje.
+- Proveravano na stagingu, na 1440 i 390, na Home, /our-work i /services/design-development:
+  - pre otkrivanja su sva slova 40%;
+  - posle otkrivanja su sva bela (na Our Work tamnoplava);
+  - drugi deo kreće posle prvog (kašnjenje 569 ms → 1376 ms);
+  - nema JS grešaka.
+- Snimak tri trenutka animacije: `notes/text-reveal-2026-11-13.png`.
+- Site head: 39.048 → 38.799 znakova.
+
 ## 13.11.2026: 6 ispravki iz provere naspram Figme (objavljeno na staging)
 Po tvom zahtevu („aj ovo uradi“), stavke iz `notes/figma-qa-2026-11-12.md`, odeljak 1.
 
