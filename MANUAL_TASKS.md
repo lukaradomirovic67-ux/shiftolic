@@ -60,7 +60,7 @@ Nazive menija proverite u trenutnom Webflow interfejsu.
     - Webflow je odbio izmenu preko API-ja dva puta („Missing fields“, bez objašnjenja).
     - CMS → **Our Works** → **LaSalle Agri** → polje **Full page screenshot** → zameni sliku sa `images/lasalle-home-full-hq-1200.webp` (594 KB umesto 1.019 KB) → Save.
     - Alt tekst ostaje „LaSalle Agri home page“.
-11. **Site settings → Publishing → Advanced publishing options**: uključiti **Minify HTML**, **Minify CSS** i **Minify JS** → Save.
+11. **[PRESKOČENO 13.11., tvoja odluka: ne radimo]** **Site settings → Publishing → Advanced publishing options**: uključiti **Minify HTML**, **Minify CSS** i **Minify JS** → Save.
     - Glavni CSS sajta (581 KB) sada nije minifikovan.
     - Posle sledeće objave proveravam da se ništa nije promenilo.
 12. **Aeonik u WOFF2** (vidi QUESTIONS 18): ako postoje WOFF2 fajlovi iz licence, upload-ovati ih umesto `.otf` za težine 300, 400, 500 i 600, pod istim imenom porodice **Aeonik**.
