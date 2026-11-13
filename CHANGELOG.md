@@ -12,6 +12,7 @@ Tvoja poruka: tamni kvadrat je i dalje tu. Kopija pre izmene: `site-head.min.htm
 - Ostalo isto: maska na uglovima, X bez prstena, radius 16 / 12 px.
 - Provereno u Chromium-u: svih 21 video dugmadi na 8 stranica otvara prozor ispravno, bez JS grešaka. Na tvom browseru i sa pravim Vimeo videom ovo odavde ne mogu da proverim.
 - Deployovan head (39.032 znaka) identičan je `webflow-assets/site-code/site-head.min.html`.
+- Potvrđeno: ti si proverio na svom browseru sa pravim Vimeo videom, tamnog kvadrata više nema.
 
 ## 13.11.2026: video popup, drugi pokušaj: maska na uglovima + X bez prstena (objavljeno na staging)
 Tvoj drugi snimak: tamni kvadrat je i dalje bio tu, a X je imao beli prsten oko sebe. Kopija pre izmene: `site-head.min.html` i `site-footer.min.html` u commit-u 6507132.
