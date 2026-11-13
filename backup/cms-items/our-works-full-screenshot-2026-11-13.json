@@ -1,0 +1,1133 @@
+[
+ {
+  "id": "6adbbe39ef50e14dcb9e70b3",
+  "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+  "lastPublished": "2026-11-07T21:36:14.727Z",
+  "lastUpdated": "2026-11-07T21:36:14.727Z",
+  "createdOn": "2026-10-23T20:06:17.382Z",
+  "isArchived": false,
+  "isDraft": false,
+  "fieldData": {
+   "meta-title": null,
+   "meta-description": null,
+   "heading": null,
+   "main-image": {
+    "fileId": "6aebb1ae051ef4f94311ee31",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aebb1ae051ef4f94311ee31_biotech-cover.webp",
+    "alt": "Biotech Innovations home page"
+   },
+   "metric-value-1": null,
+   "metric-label-1": null,
+   "metric-value-2": null,
+   "metric-label-2": null,
+   "industry-2": "Agriculture",
+   "website-link": "https://www.biotechinnovationsag.com/",
+   "services-delivered": null,
+   "the-background": null,
+   "the-challenge": null,
+   "the-solution": null,
+   "the-result": null,
+   "the-achievement": null,
+   "second-featuerd-image": {
+    "fileId": "6aef994303384eb021627301",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb021627301_case-gallery-biotech-2.webp",
+    "alt": "Biotech Innovations website pages"
+   },
+   "third-featuerd-image": {
+    "fileId": "6aef994303384eb0216272f5",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272f5_case-gallery-biotech-3.webp",
+    "alt": "Biotech Innovations website on mobile"
+   },
+   "logo-with-hover": {
+    "fileId": "6ae50b932cdccd4721716e41",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae50b932cdccd4721716e41_6ae50ae4a2c287885a0531a1_biotech-innovations-logo-white.png",
+    "alt": null
+   },
+   "short-card-text": null,
+   "number-in-section": 10,
+   "show-in-hero-section": false,
+   "show-in-every-project-section": false,
+   "other-images-every-project-section": null,
+   "fade-in-text": null,
+   "hero-title-highlight": null,
+   "hero-stat-3-value": null,
+   "hero-stat-3-label": null,
+   "hero-screen-center": {
+    "fileId": "6aeb5f8413acac10743cf4ea",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aeb5f8413acac10743cf4ea_biotech-home-full-hq.webp",
+    "alt": "Biotech Innovations home page"
+   },
+   "hero-screen-left": null,
+   "hero-screen-right": null,
+   "quote": null,
+   "quote-author": null,
+   "quote-author-role": null,
+   "client-icon": null,
+   "ow-hero-slider": false,
+   "ow-case-tabs": false,
+   "case-before-image": null,
+   "case-after-image": null,
+   "work-category": "f797c19bdb4bad28884b5ced85431180",
+   "logo-with-color": null,
+   "gallery-page-names": null,
+   "card-background": {
+    "fileId": "6aea454412afa8d1c96b1a11",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea454412afa8d1c96b1a11_biotech-card-bg-v2.webp",
+    "alt": ""
+   },
+   "slider-video-2": null,
+   "team": null,
+   "gallery-left": {
+    "fileId": "6aef99b092e91338865f4d31",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef99b092e91338865f4d31_case-gallery-biotech-1.webp",
+    "alt": "Biotech Innovations website on a laptop"
+   },
+   "tabs-background": null,
+   "team---design": null,
+   "team---webflow": null,
+   "team---seo-aeo": null,
+   "team---growth": null,
+   "name": "Biotech Innovations",
+   "slug": "biotech-innovations"
+  }
+ },
+ {
+  "id": "6adbbe39ef50e14dcb9e70b1",
+  "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+  "lastPublished": "2026-11-07T21:36:14.771Z",
+  "lastUpdated": "2026-11-07T21:36:14.771Z",
+  "createdOn": "2026-10-23T20:06:16.570Z",
+  "isArchived": false,
+  "isDraft": false,
+  "fieldData": {
+   "meta-title": null,
+   "meta-description": null,
+   "heading": null,
+   "main-image": {
+    "fileId": "6aecbadbe512f468a877f7ec",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aecbadbe512f468a877f7ec_lasalle-cover.webp",
+    "alt": "LaSalle Agri home page"
+   },
+   "metric-value-1": null,
+   "metric-label-1": null,
+   "metric-value-2": null,
+   "metric-label-2": null,
+   "industry-2": "Agriculture",
+   "website-link": "https://www.lasalleagri.com/",
+   "services-delivered": null,
+   "the-background": null,
+   "the-challenge": null,
+   "the-solution": null,
+   "the-result": null,
+   "the-achievement": null,
+   "second-featuerd-image": {
+    "fileId": "6aef994303384eb0216272fe",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272fe_case-gallery-lasalle-2.webp",
+    "alt": "LaSalle Agri website pages"
+   },
+   "third-featuerd-image": {
+    "fileId": "6aef994303384eb0216272f8",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272f8_case-gallery-lasalle-3.webp",
+    "alt": "LaSalle Agri website on mobile"
+   },
+   "logo-with-hover": {
+    "fileId": "6ae50b932cdccd4721716e44",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae50b932cdccd4721716e44_6ae50aeadb09ea7c9bf53d70_lasalle-agri-logo-white.png",
+    "alt": null
+   },
+   "short-card-text": null,
+   "number-in-section": 9,
+   "show-in-hero-section": false,
+   "show-in-every-project-section": false,
+   "other-images-every-project-section": null,
+   "fade-in-text": null,
+   "hero-title-highlight": null,
+   "hero-stat-3-value": null,
+   "hero-stat-3-label": null,
+   "hero-screen-center": {
+    "fileId": "6aecbadce512f468a877f7fd",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aecbadce512f468a877f7fd_lasalle-home-full-hq.webp",
+    "alt": "LaSalle Agri home page"
+   },
+   "hero-screen-left": null,
+   "hero-screen-right": null,
+   "quote": null,
+   "quote-author": null,
+   "quote-author-role": null,
+   "client-icon": null,
+   "ow-hero-slider": false,
+   "ow-case-tabs": false,
+   "case-before-image": null,
+   "case-after-image": null,
+   "work-category": "f797c19bdb4bad28884b5ced85431180",
+   "logo-with-color": null,
+   "gallery-page-names": null,
+   "card-background": {
+    "fileId": "6aea36d35d29ef2052db5df6",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea36d35d29ef2052db5df6_lasalle-card-bg-hq.webp",
+    "alt": ""
+   },
+   "slider-video-2": null,
+   "team": null,
+   "gallery-left": {
+    "fileId": "6aef99b092e91338865f4d3d",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef99b092e91338865f4d3d_case-gallery-lasalle-1.webp",
+    "alt": "LaSalle Agri website on a laptop"
+   },
+   "tabs-background": null,
+   "team---design": null,
+   "team---webflow": null,
+   "team---seo-aeo": null,
+   "team---growth": null,
+   "name": "LaSalle Agri",
+   "slug": "lasalle-agri"
+  }
+ },
+ {
+  "id": "6ace66976b237ad91feb51a0",
+  "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+  "lastPublished": "2026-11-07T21:36:14.713Z",
+  "lastUpdated": "2026-11-07T21:36:14.713Z",
+  "createdOn": "2026-10-13T17:12:55.625Z",
+  "isArchived": false,
+  "isDraft": false,
+  "fieldData": {
+   "meta-title": null,
+   "meta-description": null,
+   "heading": null,
+   "main-image": {
+    "fileId": "6aebb1ae051ef4f94311ee2b",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aebb1ae051ef4f94311ee2b_hypersonix-cover.webp",
+    "alt": "Hypersonix home page"
+   },
+   "metric-value-1": "Soon",
+   "metric-label-1": "Rebuild in progress",
+   "metric-value-2": null,
+   "metric-label-2": null,
+   "industry-2": "Aerospace",
+   "website-link": "https://hypersonix.com.au/",
+   "services-delivered": null,
+   "the-background": null,
+   "the-challenge": null,
+   "the-solution": null,
+   "the-result": null,
+   "the-achievement": null,
+   "second-featuerd-image": {
+    "fileId": "6aef994303384eb0216272e4",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272e4_case-gallery-hypersonix-2.webp",
+    "alt": "Hypersonix website pages"
+   },
+   "third-featuerd-image": {
+    "fileId": "6aef994303384eb0216272f2",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272f2_case-gallery-hypersonix-3.webp",
+    "alt": "Hypersonix website on mobile"
+   },
+   "logo-with-hover": {
+    "fileId": "6aea36d35d29ef2052db5de0",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea36d35d29ef2052db5de0_logo-white-hypersonix.svg",
+    "alt": "Hypersonix"
+   },
+   "short-card-text": "3x organic traffic",
+   "number-in-section": 6,
+   "show-in-hero-section": true,
+   "show-in-every-project-section": null,
+   "other-images-every-project-section": null,
+   "fade-in-text": null,
+   "hero-title-highlight": null,
+   "hero-stat-3-value": null,
+   "hero-stat-3-label": null,
+   "hero-screen-center": {
+    "fileId": "6aeb5f8413acac10743cf4de",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aeb5f8413acac10743cf4de_hypersonix-home-full-hq.webp",
+    "alt": "Hypersonix home page"
+   },
+   "hero-screen-left": null,
+   "hero-screen-right": null,
+   "quote": null,
+   "quote-author": null,
+   "quote-author-role": null,
+   "client-icon": null,
+   "ow-hero-slider": null,
+   "ow-case-tabs": null,
+   "case-before-image": null,
+   "case-after-image": null,
+   "work-category": "f797c19bdb4bad28884b5ced85431180",
+   "logo-with-color": null,
+   "gallery-page-names": null,
+   "card-background": {
+    "fileId": "6aea36d15d29ef2052db5d9c",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea36d15d29ef2052db5d9c_hypersonix-card-bg-hq.webp",
+    "alt": ""
+   },
+   "slider-video-2": null,
+   "team": null,
+   "gallery-left": {
+    "fileId": "6aef99b092e91338865f4d46",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef99b092e91338865f4d46_case-gallery-hypersonix-1.webp",
+    "alt": "Hypersonix website on a laptop"
+   },
+   "tabs-background": null,
+   "team---design": null,
+   "team---webflow": null,
+   "team---seo-aeo": null,
+   "team---growth": null,
+   "name": "Hypersonix",
+   "slug": "hypersonix"
+  }
+ },
+ {
+  "id": "6ace6668eefb4c00ebea1f2f",
+  "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+  "lastPublished": "2026-11-04T22:29:23.028Z",
+  "lastUpdated": "2026-11-04T22:29:02.302Z",
+  "createdOn": "2026-10-13T17:12:08.654Z",
+  "isArchived": false,
+  "isDraft": false,
+  "fieldData": {
+   "meta-title": null,
+   "meta-description": null,
+   "heading": null,
+   "main-image": {
+    "fileId": "6aebb1ae051ef4f94311ee2e",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aebb1ae051ef4f94311ee2e_harper-cover.webp",
+    "alt": "Harper home page"
+   },
+   "metric-value-1": null,
+   "metric-label-1": null,
+   "metric-value-2": null,
+   "metric-label-2": null,
+   "industry-2": "Insurance",
+   "website-link": "https://harperinsure.com/",
+   "services-delivered": null,
+   "the-background": null,
+   "the-challenge": null,
+   "the-solution": null,
+   "the-result": null,
+   "the-achievement": null,
+   "second-featuerd-image": null,
+   "third-featuerd-image": null,
+   "logo-with-hover": {
+    "fileId": "6aea36d25d29ef2052db5dc1",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea36d25d29ef2052db5dc1_logo-white-harper.svg",
+    "alt": "Harper"
+   },
+   "short-card-text": "3x organic traffic",
+   "number-in-section": 5,
+   "show-in-hero-section": true,
+   "show-in-every-project-section": null,
+   "other-images-every-project-section": null,
+   "fade-in-text": null,
+   "hero-title-highlight": null,
+   "hero-stat-3-value": null,
+   "hero-stat-3-label": null,
+   "hero-screen-center": {
+    "fileId": "6aea454412afa8d1c96b1a14",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea454412afa8d1c96b1a14_harper-home-full-hq.webp",
+    "alt": "Harper home page"
+   },
+   "hero-screen-left": null,
+   "hero-screen-right": null,
+   "quote": null,
+   "quote-author": null,
+   "quote-author-role": null,
+   "client-icon": null,
+   "ow-hero-slider": null,
+   "ow-case-tabs": null,
+   "case-before-image": null,
+   "case-after-image": null,
+   "work-category": null,
+   "logo-with-color": {
+    "fileId": "6ae256831bff15e0e23f7c9d",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae256831bff15e0e23f7c9d_6ae25564f0adf1067904b3f1_logo-color-harper-v2.svg",
+    "alt": "Harper"
+   },
+   "gallery-page-names": null,
+   "card-background": {
+    "fileId": "6aea454412afa8d1c96b19f9",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea454412afa8d1c96b19f9_harper-card-bg-v2.webp",
+    "alt": ""
+   },
+   "slider-video-2": null,
+   "team": null,
+   "gallery-left": null,
+   "tabs-background": null,
+   "team---design": null,
+   "team---webflow": null,
+   "team---seo-aeo": null,
+   "team---growth": null,
+   "name": "Harper",
+   "slug": "harper"
+  }
+ },
+ {
+  "id": "6ace660facdd65a7260ff9f7",
+  "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+  "lastPublished": "2026-11-10T18:55:59.512Z",
+  "lastUpdated": "2026-11-10T18:52:48.458Z",
+  "createdOn": "2026-10-13T17:10:39.861Z",
+  "isArchived": false,
+  "isDraft": false,
+  "fieldData": {
+   "meta-title": null,
+   "meta-description": null,
+   "heading": null,
+   "main-image": {
+    "fileId": "6aebb1ad051ef4f94311ee27",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aebb1ad051ef4f94311ee27_intaker-cover.webp",
+    "alt": "Intaker home page"
+   },
+   "metric-value-1": null,
+   "metric-label-1": null,
+   "metric-value-2": null,
+   "metric-label-2": null,
+   "industry-2": "Legal tech",
+   "website-link": "https://intaker.com/",
+   "services-delivered": null,
+   "the-background": null,
+   "the-challenge": null,
+   "the-solution": null,
+   "the-result": null,
+   "the-achievement": null,
+   "second-featuerd-image": {
+    "fileId": "6aef994303384eb0216272de",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272de_case-gallery-intaker-2.webp",
+    "alt": "Intaker website pages"
+   },
+   "third-featuerd-image": {
+    "fileId": "6aef994303384eb0216272cf",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272cf_case-gallery-intaker-3.webp",
+    "alt": "Intaker website on mobile"
+   },
+   "logo-with-hover": {
+    "fileId": "6aea36d25d29ef2052db5db8",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea36d25d29ef2052db5db8_logo-white-intaker.svg",
+    "alt": "Intaker"
+   },
+   "short-card-text": "3x organic traffic",
+   "number-in-section": 4,
+   "show-in-hero-section": true,
+   "show-in-every-project-section": null,
+   "other-images-every-project-section": null,
+   "fade-in-text": "How nues rebuilt Intaker's site around its new AI lead engagement product.",
+   "hero-title-highlight": null,
+   "hero-stat-3-value": null,
+   "hero-stat-3-label": null,
+   "hero-screen-center": {
+    "fileId": "6aef89742367d3f74366ee1d",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef89742367d3f74366ee1d_intaker-home-full-v2.webp",
+    "alt": "Intaker home page"
+   },
+   "hero-screen-left": null,
+   "hero-screen-right": null,
+   "quote": null,
+   "quote-author": null,
+   "quote-author-role": null,
+   "client-icon": null,
+   "ow-hero-slider": null,
+   "ow-case-tabs": true,
+   "case-before-image": {
+    "fileId": "6af36800432f0d97c749a0e1",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af36800432f0d97c749a0e1_ow-tabs-before-intaker.webp",
+    "alt": "Old Intaker website"
+   },
+   "case-after-image": {
+    "fileId": "6af36800432f0d97c749a0e7",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af36800432f0d97c749a0e7_ow-tabs-after-intaker.webp",
+    "alt": "New Intaker website by nues"
+   },
+   "work-category": "ade3eabf3fc55ea3544802b43b1b8e94",
+   "logo-with-color": null,
+   "gallery-page-names": null,
+   "card-background": {
+    "fileId": "6aea454412afa8d1c96b19f0",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea454412afa8d1c96b19f0_intaker-card-bg-v2.webp",
+    "alt": ""
+   },
+   "slider-video-2": null,
+   "team": null,
+   "gallery-left": {
+    "fileId": "6aef99b092e91338865f4d37",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef99b092e91338865f4d37_case-gallery-intaker-1.webp",
+    "alt": "Intaker website on a laptop"
+   },
+   "tabs-background": {
+    "fileId": "6af36800432f0d97c749a0e4",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af36800432f0d97c749a0e4_ow-tabs-bg-intaker.webp",
+    "alt": ""
+   },
+   "team---design": null,
+   "team---webflow": null,
+   "team---seo-aeo": null,
+   "team---growth": null,
+   "name": "Intaker",
+   "slug": "intaker"
+  }
+ },
+ {
+  "id": "6aba6bc07d6279b4b561798e",
+  "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+  "lastPublished": "2026-11-12T23:09:34.702Z",
+  "lastUpdated": "2026-11-12T23:09:27.155Z",
+  "createdOn": "2026-09-03T10:51:23.281Z",
+  "isArchived": false,
+  "isDraft": false,
+  "fieldData": {
+   "meta-title": "TrakPro's site across UK and Ireland | Case Study | Nues",
+   "meta-description": "Designing and building TrakPro's construction payment site across two markets, UK and Ireland, each in its own legal terminology, with a perfect SEO score",
+   "heading": "Building TrakPro's construction payment platform across the UK and Ireland.",
+   "main-image": {
+    "fileId": "6aba6bc07d6279b4b561797e",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b561797e_1.png",
+    "alt": null
+   },
+   "metric-value-1": "100",
+   "metric-label-1": "Perfect SEO score",
+   "metric-value-2": "25+",
+   "metric-label-2": "Pages launched",
+   "industry-2": "Construction",
+   "website-link": "https://trak-pro.com/",
+   "services-delivered": null,
+   "the-background": "<p>TrakPro is an Irish platform for subcontractor commercial management, bringing payment claims, variations, dayworks, retention, contra charges and compliance into one system instead of spreadsheets and email chains. It is used by contractors including CBRE, Collen, Chas Berger and Comer Group across Ireland, the United Kingdom, Sweden, Portugal and Germany, backed by Enterprise Ireland and certified to ISO 27001.</p><p>The old site was static and basic. It carried none of that weight.</p>",
+   "the-challenge": "<p>TrakPro sells into two markets that share a language and use different words for the same document. In the United Kingdom a subcontractor submits a payment application, under the Housing Grants, Construction and Regeneration Act 1996. In Ireland it is a payment claim, under the Construction Contracts Act 2013. Get that wrong and the site reads as software built for someone else. On top of it, a product that replaces entire workflow had to be made obvious to an enterprise audience and the new site had to take over the old domain without losing anything it had earned.</p>",
+   "the-solution": "<p>TrakPro came to Nues with a brief for a landing page and a product far bigger than one. The work ran in three tracks. First, design from scratch in Figma: competitor analysis, a full design system and custom illustration for the \"Before TrakPro\"section that carries the argument on the home page.</p><p>Second, localisation. We audited the entire site against both acts before touching Webflow Localization, found and fixed the inconsistencies in the base copy, then built Ireland as a second locale where terminology switches on every instance that carries legal meaning and stays put where it does not. Third, the build: a reusable component structure, a CMS the marketing side runs without us, a custom PDF viewer on PDF.js, a lazy mounted booking widget, analytics and cookie consent and a complete redirect map through Webflow with a Couldflare fallback.</p>",
+   "the-result": "<p>The numbers moved in every category that a search engine and an AI assistant read first. SEO went from to a perfect 100, on both mobile and desktop. Best Practices reached 100 on mobile, with the third party cookies from the Vimeo and Calendly embeds handled rather than left to drag the score down. On an independent audit, AI readiness went from the lowest grade on the old site to the highest on the new one, and on-page SEO climbed the same way, from the bottom of the scale to the top. Mobile performance rose almost 20% and it did so while the new site carries video, an interactive markets map and product imagery the old three-page site never had.</p><p>Underneath the scores, the site now replaces the old one on the same domain with a complete redirect map, so no URL it had earned was lost. Visitors in Ireland and the United Kingdom read the site in the terminology their own contracts use. The TrakPro team publishes their Toolbox Talks series through the CMS with no developer involved.</p>",
+   "the-achievement": "<ul><li>23% fewer issues to fix on an independent audit, with AI readiness and on-page SEO both moving from the lowest grade to the highest</li><li>From 3 indexable pages to a full multi-page site, all of it discoverable where the old site exposed almost nothing to a search</li><li>Two markets served from one site in the terminology each law requires: payment applications in the United Kingdom under the Housing Grants, Construction and Regeneration Act 1996, payment claims in Ireland under the Construction Contracts Act 2013, with reciprocal hreflang the old site never had</li><li>A CMS the TrakPro team updates on their own, publishing and editing content with no developred involved.</li></ul>",
+   "second-featuerd-image": {
+    "fileId": "6aef994303384eb0216272e1",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272e1_case-gallery-trakpro-2.webp",
+    "alt": "TrakPro website pages"
+   },
+   "third-featuerd-image": {
+    "fileId": "6aef994303384eb0216272d8",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272d8_case-gallery-trakpro-3.webp",
+    "alt": "TrakPro website on mobile"
+   },
+   "logo-with-hover": {
+    "fileId": "6aea36d25d29ef2052db5dca",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea36d25d29ef2052db5dca_logo-white-trakpro.svg",
+    "alt": "TrakPro"
+   },
+   "short-card-text": "3x organic traffic",
+   "number-in-section": 3,
+   "show-in-hero-section": true,
+   "show-in-every-project-section": null,
+   "other-images-every-project-section": null,
+   "fade-in-text": null,
+   "hero-title-highlight": null,
+   "hero-stat-3-value": null,
+   "hero-stat-3-label": null,
+   "hero-screen-center": {
+    "fileId": "6aef89732367d3f74366ee07",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef89732367d3f74366ee07_trakpro-home-full-v2.webp",
+    "alt": "TrakPro home page"
+   },
+   "hero-screen-left": null,
+   "hero-screen-right": null,
+   "quote": null,
+   "quote-author": null,
+   "quote-author-role": null,
+   "client-icon": null,
+   "ow-hero-slider": true,
+   "ow-case-tabs": false,
+   "case-before-image": null,
+   "case-after-image": {
+    "fileId": "6af090cdc9e95dfb700f5a90",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af090cdc9e95dfb700f5a90_ow-tabs-after-trakpro.webp",
+    "alt": "New TrakPro website by nues"
+   },
+   "work-category": "f797c19bdb4bad28884b5ced85431180",
+   "logo-with-color": {
+    "fileId": "6ae256831bff15e0e23f7c8d",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae256831bff15e0e23f7c8d_6ae2555ecaf172cd299736db_logo-color-trakpro-v2.svg",
+    "alt": "TrakPro"
+   },
+   "gallery-page-names": null,
+   "card-background": {
+    "fileId": "6aea454412afa8d1c96b19ed",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea454412afa8d1c96b19ed_trakpro-card-bg-v2.webp",
+    "alt": ""
+   },
+   "slider-video-2": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6af646bf70e562225ced8c49_trakpro-slider.mp4",
+   "team": null,
+   "gallery-left": {
+    "fileId": "6aef99b092e91338865f4d43",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef99b092e91338865f4d43_case-gallery-trakpro-1.webp",
+    "alt": "TrakPro website on a laptop"
+   },
+   "tabs-background": {
+    "fileId": "6af090cdc9e95dfb700f5a9c",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af090cdc9e95dfb700f5a9c_ow-tabs-bg-trakpro.webp",
+    "alt": ""
+   },
+   "team---design": null,
+   "team---webflow": null,
+   "team---seo-aeo": null,
+   "team---growth": null,
+   "name": "TrakPro",
+   "slug": "trak-pro"
+  }
+ },
+ {
+  "id": "6aba6bc07d6279b4b561798d",
+  "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+  "lastPublished": "2026-11-08T15:18:21.400Z",
+  "lastUpdated": "2026-11-08T15:10:45.393Z",
+  "createdOn": "2026-06-21T15:00:24.447Z",
+  "isArchived": false,
+  "isDraft": false,
+  "fieldData": {
+   "meta-title": "Rebuilding Veyor across 5 markets | Case Study | Nues",
+   "meta-description": "How Nues rebuilt Veyor from the ground up across five markets in one month, migrating 1,000+ CMS items with zero loss of SEO or rankings.",
+   "heading": "Rebuilding Veyor from the ground up across 5 markets in one month, with zero SEO loss.",
+   "main-image": {
+    "fileId": "6aba6bc07d6279b4b561789d",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b561789d_case-studie-veyor-main.avif",
+    "alt": null
+   },
+   "metric-value-1": "5",
+   "metric-label-1": "Markets",
+   "metric-value-2": "1,000+",
+   "metric-label-2": "CMS items migrated",
+   "industry-2": "Construction Software",
+   "website-link": "https://www.veyordigital.com/",
+   "services-delivered": [
+    "6aba6bc07d6279b4b561798f",
+    "6aba6bc07d6279b4b5617991"
+   ],
+   "the-background": "<p>Veyor Digital builds software for the construction and infrastructure industry, serving teams that coordinate complex on-site logistics across multiple regions. As their business expanded into new markets, their website needed to expand with it, not as a single site speaking to everyone, but as distinct regional presences, each targeting its own market.</p><p>\u200d</p><p>That meant the site had to do something most never have to: operate as five separate regional sites at once, each with independent SEO and content, while staying one consistent brand. And it all had to be rebuilt and migrated from their existing Webflow site in a single month, without losing any of the search authority they had already earned.</p>",
+   "the-challenge": "<p>Veyor already had a Webflow site, but it had been built earlier, without a solid structural foundation. The architecture underneath was messy, the content was disorganized, and it relied on outdated practices, which meant it couldn't support the growth Veyor was heading into. Reworking that existing site wasn't the answer. Untangling it would have been slower than starting fresh, and it still wouldn't have produced the clean, robust structure they needed. So the decision was to build a new site from the ground up rather than patch an old one that was working against them.</p><p>\u200d</p><p>The biggest reason a rebuild was unavoidable was the multi-region requirement. The old site was built around a single region, with no concept of multiple markets in its structure, content, or URLs. Retrofitting a five-region system into that foundation was close to impossible, so the new architecture had to be designed for multiple markets from the start. On top of that, the rebuild meant carrying over more than a thousand pieces of existing content and every bit of SEO value attached to it, without losing any of it in the move.</p><p>\u200d</p><p>There was a second challenge beyond the architecture: the site had to be genuinely easy for Veyor's own team to run. That meant designing a clean CMS structure and a component library that anyone on their team could use to build new pages and content independently, without needing a developer each time. Getting that right is harder than it sounds, because it has to stay simple to use while still supporting the complexity of a five-region setup.</p><p>\u200d</p><p>And the migration was the high-risk part. Search authority is earned slowly and lost quickly, and a botched move, broken redirects, a messy domain transfer, lost URL equity, can erase rankings in days. For a business that depends on organic visibility across regions, that loss is felt directly in pipeline. So the project carried several pressures at once: build a new, more sophisticated site, make it easy for the team to manage, and migrate everything without dropping any of the ground already won, all inside a one-month timeline.</p>",
+   "the-solution": "<p>We started with the hardest part: the multi-region architecture. Rather than build five separate sites or settle for a generic single-site setup, we used Webflow Localization to run each region as its own independently managed space, with its own SEO settings and content, while sharing one component foundation for brand consistency. That let us structure URLs, regional metadata, and content so each market could rank independently and optimally, instead of forcing one generic approach across the whole site.</p><p>\u200d</p><p>With the architecture in place, we handled the migration. Because the old site had only one region, the core of the work was restructuring a single-region site into a five-region one without disturbing existing positions. We mapped and built a complete set of redirects from the old URLs to the new regional structure, transferred the domain with no downtime, and preserved the existing SEO value through the shift from one region to five.</p><p>\u200d</p><p>Content was a project in itself. We moved more than 1,000 CMS items from several different collections into the new structure and design. Content from three large CMS categories wasn't just copied across, it was reorganized into a new, expanded structure that supports the multi-region logic, with new fields and content added where needed. The whole site was built around a component library and a carefully structured CMS, so anyone on the Veyor team can create new pages, blog posts, case studies, and features independently, with no developer required. Making that as simple as possible for their marketing team was a specific priority, not an afterthought.</p><p>\u200d</p><p>Then we connected it to the systems Veyor runs on. All forms integrate with HubSpot, wired into their region-specific workflows, with user geolocation reading so submissions route into the correct regional workflow automatically. We set up and connected GA4 and Google Search Console for full visibility into performance and search. Finally, we added Lottie animations, smooth scroll, and more complex motion, while keeping everything clean and enterprise-appropriate.</p>",
+   "the-result": "<p>Despite the one-month timeline, the project was delivered smoothly and without setbacks. The SEO transferred successfully from the old site, with no loss of existing value or positions, and every region indexes well, each with its own independently optimized SEO. The complete migration, domain, redirects, and over 1,000 CMS items, went through with no downtime and no drop in search.</p><p>\u200d</p><p>Most telling is what happened after launch. Managing the site became easier for the Veyor team than it had ever been, to the point where they told us it's now almost too easy to build new pages and content themselves. For a marketing team that previously depended on developers for changes, that independence is the real win, and it's what lets the site keep growing without a bottleneck. The end result is a premium, enterprise site that scales across five markets and that their team can maintain and grow on their own, all delivered in a single month.</p>",
+   "the-achievement": "<ul><li>A brand new site built from the ground up, replacing an old structure that couldn't scale</li><li>Five regional sites on one component foundation, each with independent SEO and content</li><li>Migrated from a single region to five with no loss of SEO value or rankings</li><li>Complete migration of domain, redirects, and over 1,000 CMS items with no downtime</li><li>Content from three large CMS categories restructured to support multi-region logic</li><li>A clean CMS and component library the Veyor team can build on without a developer</li><li>HubSpot integration with geolocation-based routing into region-specific workflows</li><li>GA4 and Google Search Console set up for full performance and search visibility</li><li>Lottie animations, smooth scroll, and motion, kept clean and enterprise-appropriate</li><li>Delivered end to end in one month</li></ul>",
+   "second-featuerd-image": {
+    "fileId": "6aef994303384eb021627304",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb021627304_case-gallery-veyor-2.webp",
+    "alt": "Veyor Digital website pages"
+   },
+   "third-featuerd-image": {
+    "fileId": "6aef994303384eb0216272ef",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272ef_case-gallery-veyor-3.webp",
+    "alt": "Veyor Digital website on mobile"
+   },
+   "logo-with-hover": {
+    "fileId": "6aea36d35d29ef2052db5dda",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea36d35d29ef2052db5dda_logo-white-veyor.svg",
+    "alt": "Veyor"
+   },
+   "short-card-text": "3x organic traffic",
+   "number-in-section": 1,
+   "show-in-hero-section": true,
+   "show-in-every-project-section": null,
+   "other-images-every-project-section": null,
+   "fade-in-text": "How nues rebuilt Veyor across five markets in one month, with zero SEO loss.",
+   "hero-title-highlight": null,
+   "hero-stat-3-value": null,
+   "hero-stat-3-label": null,
+   "hero-screen-center": {
+    "fileId": "6aef89792367d3f74366eedb",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef89792367d3f74366eedb_veyor-home-full-v2.webp",
+    "alt": "Veyor Digital home page"
+   },
+   "hero-screen-left": null,
+   "hero-screen-right": null,
+   "quote": null,
+   "quote-author": null,
+   "quote-author-role": null,
+   "client-icon": null,
+   "ow-hero-slider": false,
+   "ow-case-tabs": true,
+   "case-before-image": {
+    "fileId": "6af090cdc9e95dfb700f5a9f",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af090cdc9e95dfb700f5a9f_ow-tabs-before-veyor.webp",
+    "alt": "Old Veyor website"
+   },
+   "case-after-image": {
+    "fileId": "6af090cfc9e95dfb700f5ba6",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af090cfc9e95dfb700f5ba6_ow-tabs-after-veyor.webp",
+    "alt": "New Veyor website by nues"
+   },
+   "work-category": "5267bee9ab756cf7834fce16707acf01",
+   "logo-with-color": {
+    "fileId": "6ae256831bff15e0e23f7c94",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae256831bff15e0e23f7c94_6ae2555c8b280442843968fe_logo-color-veyor-v2.svg",
+    "alt": "Veyor"
+   },
+   "gallery-page-names": null,
+   "card-background": {
+    "fileId": "6aea454412afa8d1c96b1a02",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea454412afa8d1c96b1a02_veyor-card-bg-v2.webp",
+    "alt": ""
+   },
+   "slider-video-2": null,
+   "team": null,
+   "gallery-left": {
+    "fileId": "6aef99b092e91338865f4d34",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef99b092e91338865f4d34_case-gallery-veyor-1.webp",
+    "alt": "Veyor Digital website on a laptop"
+   },
+   "tabs-background": {
+    "fileId": "6af090cdc9e95dfb700f5a99",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af090cdc9e95dfb700f5a99_ow-tabs-bg-veyor.webp",
+    "alt": ""
+   },
+   "team---design": null,
+   "team---webflow": null,
+   "team---seo-aeo": null,
+   "team---growth": null,
+   "name": "Veyor Digital",
+   "slug": "veyor-digital"
+  }
+ },
+ {
+  "id": "6aba6bc07d6279b4b561798c",
+  "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+  "lastPublished": "2026-11-12T23:09:34.702Z",
+  "lastUpdated": "2026-11-12T23:09:27.155Z",
+  "createdOn": "2026-05-20T21:49:52.826Z",
+  "isArchived": false,
+  "isDraft": false,
+  "fieldData": {
+   "meta-title": "Scaling Sustain Commercial Solar's site | Case study | Nues",
+   "meta-description": "Webflow development for Sustain Commercial Solar, a UK commercial solar leader. 80+ pages, scalable CMS, and a component library designed to keep growing.",
+   "heading": "A scalable Webflow build powering 80+ pages for a UK commercial solar leader.",
+   "main-image": {
+    "fileId": "6aba6bc07d6279b4b5617879",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b5617879_Slide%2016_9%20-%201.avif",
+    "alt": null
+   },
+   "metric-value-1": "80+",
+   "metric-label-1": "Pages launched",
+   "metric-value-2": "17",
+   "metric-label-2": "CMS collection types",
+   "industry-2": "Manufacturing",
+   "website-link": "https://www.sustaincommercialsolar.com/",
+   "services-delivered": [
+    "6aba6bc07d6279b4b561798f"
+   ],
+   "the-background": "<p>Sustain Commercial Solar has been in the UK commercial solar industry since 2007. Their work spans installations for blue-chip companies, real estate portfolios, agricultural sites, manufacturing facilities, and local councils. The product offering grew steadily over the years to cover solar installations, battery storage, EV charging, solar car parks, solar farms, and ongoing performance monitoring. As the business expanded, the website needed to keep up with the scope and the variety of clients walking through the door.</p>",
+   "the-challenge": "<p>The brief on the development side was clear: 80+ pages, multiple content types, and a CMS that the team could publish into independently as new sectors, services, and case studies came on board. Pages had to cover solutions, services, sectors, individual case studies, FAQs, glossary entries, and resources, each with its own structure and editorial workflow. On top of that, the site had to perform under the weight of all that content, with consistent load times, clean code, and a CMS architecture that wouldn\u2019t trip up the editors using it.</p>",
+   "the-solution": "<p>NUES built the Webflow side end to end. The CMS was structured around clear collection types: solutions, services, sectors, case studies, FAQs, glossary terms, and resources. Each collection had its own template designed for the kind of content it would hold, with reusable components covering everything from hero sections and stat blocks to case study layouts and FAQ accordions. Every component was built once and reused across the 80+ pages, which means adding a new sector page, a new case study, or a new FAQ entry now takes a fraction of the time it would take from scratch. Performance was treated as a baseline, not a final-stage check, with image optimization, clean markup, and Core Web Vitals dialed in throughout the build.</p>",
+   "the-result": "<p>The site shipped with 80+ pages, a clean CMS architecture, and a structure built to keep growing. The editorial team can now publish new sectors, case studies, FAQs, and resources without engineering involvement, which has kept the site moving at the same pace as the business behind it. The reusable component library means new pages get built in a fraction of the time, and the performance stayed solid even as the page count climbed. From a business standpoint, the work covered ground that would otherwise have required a dedicated in-house development setup to manage.</p>",
+   "the-achievement": "<ul><li>80+ pages built in Webflow with consistent component patterns</li><li>Scalable CMS architecture covering solutions, services, sectors, case studies, FAQs, and resources</li><li>Reusable component library that turns new pages into a fraction-of-the-time job</li><li>Editorial autonomy for the team to publish new content without development bottlenecks</li><li>Performance optimization across image delivery, markup, and Core Web Vitals</li><li>Multi-collection structure designed to keep up with continued business growth</li><li>Equivalent of a dedicated in-house dev setup, delivered as a single project</li></ul>",
+   "second-featuerd-image": {
+    "fileId": "6aef994303384eb0216272fb",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272fb_case-gallery-sustain-2.webp",
+    "alt": "Sustain Commercial Solar website pages"
+   },
+   "third-featuerd-image": {
+    "fileId": "6aef994303384eb021627307",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb021627307_case-gallery-sustain-3.webp",
+    "alt": "Sustain Commercial Solar website on mobile"
+   },
+   "logo-with-hover": {
+    "fileId": "6aea36d35d29ef2052db5df9",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea36d35d29ef2052db5df9_logo-white-sustain.svg",
+    "alt": "Sustain Commercial Solar"
+   },
+   "short-card-text": "3x organic traffic",
+   "number-in-section": 8,
+   "show-in-hero-section": true,
+   "show-in-every-project-section": null,
+   "other-images-every-project-section": null,
+   "fade-in-text": null,
+   "hero-title-highlight": null,
+   "hero-stat-3-value": null,
+   "hero-stat-3-label": null,
+   "hero-screen-center": {
+    "fileId": "6aecbadbe512f468a877f7f2",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aecbadbe512f468a877f7f2_sustain-home-full-hq.webp",
+    "alt": "Sustain Commercial Solar home page"
+   },
+   "hero-screen-left": null,
+   "hero-screen-right": null,
+   "quote": null,
+   "quote-author": null,
+   "quote-author-role": null,
+   "client-icon": null,
+   "ow-hero-slider": true,
+   "ow-case-tabs": null,
+   "case-before-image": null,
+   "case-after-image": null,
+   "work-category": "f797c19bdb4bad28884b5ced85431180",
+   "logo-with-color": {
+    "fileId": "6ae256831bff15e0e23f7ca0",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae256831bff15e0e23f7ca0_6ae255628697454659bfe56a_logo-color-sustain-v2.svg",
+    "alt": "Sustain Commercial Solar"
+   },
+   "gallery-page-names": null,
+   "card-background": {
+    "fileId": "6aea454412afa8d1c96b1a05",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea454412afa8d1c96b1a05_sustain-card-bg-v2.webp",
+    "alt": ""
+   },
+   "slider-video-2": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6af646c4deb177f9145906ae_sustain-slider.mp4",
+   "team": null,
+   "gallery-left": {
+    "fileId": "6aef99b092e91338865f4d3a",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef99b092e91338865f4d3a_case-gallery-sustain-1.webp",
+    "alt": "Sustain Commercial Solar website on a laptop"
+   },
+   "tabs-background": null,
+   "team---design": null,
+   "team---webflow": null,
+   "team---seo-aeo": null,
+   "team---growth": null,
+   "name": "Sustain Commercial Solar",
+   "slug": "sustain-commercial-solar"
+  }
+ },
+ {
+  "id": "6aba6bc07d6279b4b561798a",
+  "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+  "lastPublished": null,
+  "lastUpdated": "2026-10-21T16:23:28.233Z",
+  "createdOn": "2026-05-19T20:43:44.674Z",
+  "isArchived": false,
+  "isDraft": true,
+  "fieldData": {
+   "meta-title": "Powering Pythagora's website | Case study | Nues",
+   "meta-description": "Custom Webflow development for Pythagora, an AI dev platform trusted by 80,000+ developers. Token sync, custom integrations, and 3.4x traffic growth.",
+   "heading": "Powering Pythagora\u2019s site through 3 redesigns, custom code, and 3.4x traffic growth.",
+   "main-image": {
+    "fileId": "6aba6bc07d6279b4b5617811",
+    "url": "https://cdn.prod.website-files.com/6a0bc2572a345c5cad437d47/6a0ccb0a892bcac5c3ce1407_Frame%2047283.png",
+    "alt": null
+   },
+   "metric-value-1": "3.4x",
+   "metric-label-1": "Website traffic growth",
+   "metric-value-2": "Scalable",
+   "metric-label-2": "CMS",
+   "industry-2": "AI Technology",
+   "website-link": "https://www.pythagora.ai/",
+   "services-delivered": [
+    "6aba6bc07d6279b4b561798f"
+   ],
+   "the-background": "<p>Pythagora sits at the front of one of the fastest-moving spaces in software. Their platform turns plain-language prompts into production-ready full-stack applications, with 14 specialized AI agents handling planning, writing, reviewing, testing, debugging, and deployment, all inside the developer\u2019s existing setup in VS Code or Cursor. They\u2019ve grown to 80,000+ users across startups and global teams, raised through Y Combinator, and built a product that\u2019s evolving as fast as the AI infrastructure underneath it. Their website had to keep up with all of that.</p>",
+   "the-challenge": "<p>Pythagora was moving fast. The product was evolving while the website was being built, and the brief reflected that. The site couldn't just be a marketing page. It had to act like part of the product. Users needed to log into the Pythagora application directly from the site, with tokens passing cleanly between the two so the experience felt seamless. There were features developers expected, like dark and light theming and the ability to send a prompt straight from the site into the product. And the design itself went through three full rounds of changes during the build, each one absorbed without restarting the timeline.&nbsp;</p>",
+   "the-solution": "<p>The Webflow build covered most of the site, but several pieces needed custom code to work the way the team imagined. The login flow connects directly to the Pythagora application, with authentication tokens syncing cleanly between the marketing site and the product so users don't get bounced through extra steps. The prompt input on the homepage sends straight into the application, turning what could've been a marketing CTA into a functional product entry point. Light and dark themes were built into every component from the start, with theme tokens and asset variants set up so neither version felt like an afterthought. And the CMS was structured to scale with the product, with templates for new features, pricing changes, case studies, and resources that the team could publish independently. Through three rounds of design changes, the architecture stayed flexible enough to absorb each one without rebuilding from scratch.&nbsp;</p>",
+   "the-result": "<p>The site shipped exactly as the brief asked for, and the numbers followed. Website traffic grew 3.4x compared to the previous version, with users spending more time on the site and converting into the product through the integrated login flow. The light and dark theming landed naturally for a developer audience, and the CMS gave the team the autonomy to keep shipping pages as Pythagora\u2019s product evolved. The three rounds of design changes that worried most teams turned into a non-issue, and the final site reflects the maturity of what Pythagora has become.</p>",
+   "the-achievement": "<ul><li>Full Webflow development from Pythagora's design, end to end</li><li>3.4x increase in website traffic compared to the previous version</li><li>Custom code beyond standard Webflow capabilities (login flow, token sync, prompt-to-product input)</li><li>Direct login from the marketing site to the Pythagora application with seamless token handoff</li><li>Prompt input on the homepage that sends directly into the product</li><li>Light and dark theme support built into every component</li><li>Scalable CMS architecture for new features, pricing changes, and resources</li><li>Three full rounds of design changes absorbed without losing momentum</li><li>Performance optimization across the entire site</li></ul>",
+   "second-featuerd-image": {
+    "fileId": "6aba6bc07d6279b4b5617833",
+    "url": "https://cdn.prod.website-files.com/6a0bc2572a345c5cad437d47/6a0ccb774ca3371bf4530ee8_Frame%2047512.png",
+    "alt": null
+   },
+   "third-featuerd-image": {
+    "fileId": "6aba6bc07d6279b4b5617855",
+    "url": "https://cdn.prod.website-files.com/6a0bc2572a345c5cad437d47/6a0ccb7b9fdbd0e1ffc6a4f4_Frame%2047511.png",
+    "alt": null
+   },
+   "logo-with-hover": null,
+   "short-card-text": null,
+   "number-in-section": null,
+   "show-in-hero-section": null,
+   "show-in-every-project-section": null,
+   "other-images-every-project-section": null,
+   "fade-in-text": null,
+   "hero-title-highlight": null,
+   "hero-stat-3-value": null,
+   "hero-stat-3-label": null,
+   "hero-screen-center": null,
+   "hero-screen-left": null,
+   "hero-screen-right": null,
+   "quote": null,
+   "quote-author": null,
+   "quote-author-role": null,
+   "client-icon": null,
+   "ow-hero-slider": null,
+   "ow-case-tabs": null,
+   "case-before-image": null,
+   "case-after-image": null,
+   "work-category": "ade3eabf3fc55ea3544802b43b1b8e94",
+   "logo-with-color": null,
+   "gallery-page-names": null,
+   "card-background": null,
+   "slider-video-2": null,
+   "team": null,
+   "gallery-left": null,
+   "tabs-background": null,
+   "team---design": null,
+   "team---webflow": null,
+   "team---seo-aeo": null,
+   "team---growth": null,
+   "name": "Pythagora",
+   "slug": "pythagora"
+  }
+ },
+ {
+  "id": "6aba6bc07d6279b4b561798b",
+  "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+  "lastPublished": "2026-11-13T00:44:20.074Z",
+  "lastUpdated": "2026-11-13T00:38:08.783Z",
+  "createdOn": "2026-05-19T20:25:24.032Z",
+  "isArchived": false,
+  "isDraft": false,
+  "fieldData": {
+   "meta-title": "Shiftolic's web presence in 2 weeks | Case study | Nues",
+   "meta-description": "Designing and building Shiftolic's website from scratch in two weeks. Visual identity, Webflow development, and scalable CMS for a US healthcare marketplace.",
+   "heading": "Rebuilding Shiftolic\u2019s web presence from scratch in just 2 weeks.",
+   "main-image": {
+    "fileId": "6aba6bc07d6279b4b56177bb",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b56177bb_Frame%2047283.avif",
+    "alt": null
+   },
+   "metric-value-1": "2 weeks",
+   "metric-label-1": "Delivery time",
+   "metric-value-2": "From scratch",
+   "metric-label-2": "Design and build",
+   "industry-2": "Healthcare",
+   "website-link": "https://www.shiftolic.com/",
+   "services-delivered": [
+    "6aba6bc07d6279b4b5617990",
+    "6aba6bc07d6279b4b5617991"
+   ],
+   "the-background": "<p>Shiftolic operates in a corner of healthcare that doesn\u2019t get much attention until something goes wrong. Hospitals run short on physicians, agencies can\u2019t fill shifts fast enough, and burnout climbs every time someone has to work back-to-back. Their platform connects physicians, healthcare facilities, and staffing agencies through a marketplace that handles shift scheduling, credentialing, and coverage in one place. As the product grew, the website didn\u2019t grow with it.</p>",
+   "the-challenge": "<p>The old Shiftolic site no longer reflected what the platform had become. It looked dated next to the product, the messaging didn\u2019t match the current positioning, and there was no easy way to tell new visitors what Shiftolic actually does. On top of that, the timeline was tight. Two weeks from kickoff to launch, design and development both, with no room to push the deadline.</p>",
+   "the-solution": "<p>NUES took the project end to end. Design and development ran in parallel, with each side moving in tight one-week sprints. The first week was design: positioning, messaging structure, visual direction, and high-fidelity UI for every page. Two design revisions, both turned around fast. The second week was development: the Webflow build, CMS architecture, integrations, and QA. Two development revisions, again turned around fast. Every decision through the project was made with the timeline in mind, components built once and reused across pages, structures kept simple where simplicity worked, performance dialed in from the start so launch day wouldn\u2019t get held up by optimization.</p>",
+   "the-result": "<p>The site launched on time, exactly two weeks after kickoff. The new design captured what Shiftolic had grown into, with clear positioning, modern visuals, and messaging that finally matched the product. The CMS was set up for the marketing team to manage independently, and performance was solid from day one. What started as a tight two-week project turned into an ongoing partnership through our Growth service, with NUES continuing to handle new pages, updates, and improvements as Shiftolic keeps growing.</p>",
+   "the-achievement": "<ul><li>Full website design and development delivered in 2 weeks</li><li>Two design revisions and two development revisions, both turned around within the timeline</li><li>Modern visual identity that finally matched the maturity of the product</li><li>Messaging restructured to position Shiftolic clearly for hospitals, agencies, and physicians</li><li>Webflow build with a scalable CMS for marketing autonomy</li><li>Performance optimized from the first line of code</li><li>Ongoing partnership through our Growth service supporting Shiftolic\u2019s continued growth</li></ul>",
+   "second-featuerd-image": {
+    "fileId": "6aef994303384eb0216272d5",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272d5_case-gallery-shiftolic-2.webp",
+    "alt": "Shiftolic website pages"
+   },
+   "third-featuerd-image": {
+    "fileId": "6aef994303384eb0216272cc",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272cc_case-gallery-shiftolic-3.webp",
+    "alt": "Shiftolic website on mobile"
+   },
+   "logo-with-hover": {
+    "fileId": "6aea36d25d29ef2052db5db0",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea36d25d29ef2052db5db0_logo-white-shiftolic.svg",
+    "alt": "Shiftolic"
+   },
+   "short-card-text": "3x organic traffic",
+   "number-in-section": 2,
+   "show-in-hero-section": true,
+   "show-in-every-project-section": true,
+   "other-images-every-project-section": [
+    {
+     "fileId": "6ae4d093493363ed91d8f87e",
+     "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae4d093493363ed91d8f87e_9dbcf.png",
+     "alt": "Shiftolic website home page"
+    },
+    {
+     "fileId": "6ae4d094493363ed91d8f88c",
+     "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae4d094493363ed91d8f88c_3935b.png",
+     "alt": "Shiftolic website marketplace page"
+    },
+    {
+     "fileId": "6ae4d094493363ed91d8f884",
+     "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae4d094493363ed91d8f884_72e06.png",
+     "alt": "Shiftolic website testimonial page"
+    },
+    {
+     "fileId": "6ae4d094493363ed91d8f889",
+     "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae4d094493363ed91d8f889_4dac9.png",
+     "alt": "Shiftolic website How it works page"
+    }
+   ],
+   "fade-in-text": "From first call to a live healthcare brand | in a single sprint",
+   "hero-title-highlight": null,
+   "hero-stat-3-value": null,
+   "hero-stat-3-label": null,
+   "hero-screen-center": {
+    "fileId": "6aef89732367d3f74366ee0e",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef89732367d3f74366ee0e_shiftolic-home-full-v2.webp",
+    "alt": "Shiftolic home page"
+   },
+   "hero-screen-left": null,
+   "hero-screen-right": null,
+   "quote": null,
+   "quote-author": null,
+   "quote-author-role": null,
+   "client-icon": null,
+   "ow-hero-slider": true,
+   "ow-case-tabs": false,
+   "case-before-image": null,
+   "case-after-image": {
+    "fileId": "6aba6bc07d6279b4b56177bb",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b56177bb_Frame%2047283.avif",
+    "alt": null
+   },
+   "work-category": "260dd3e0ae4c43c7f04500bf84bd06a4",
+   "logo-with-color": {
+    "fileId": "6ae256831bff15e0e23f7c97",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae256831bff15e0e23f7c97_6ae2551a9c53ce569a4a2d1f_logo-color-shiftolic-v2.svg",
+    "alt": "Shiftolic"
+   },
+   "gallery-page-names": "Home, Marketplace, Testimonials, How it works",
+   "card-background": {
+    "fileId": "6aea454412afa8d1c96b19f3",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea454412afa8d1c96b19f3_shiftolic-card-bg-v2.webp",
+    "alt": ""
+   },
+   "slider-video-2": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6af646caa0271d7cf124d95c_shiftolic-slider.mp4",
+   "team": null,
+   "gallery-left": {
+    "fileId": "6aef99b092e91338865f4d2c",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef99b092e91338865f4d2c_case-gallery-shiftolic-1.webp",
+    "alt": "Shiftolic website on a laptop"
+   },
+   "tabs-background": null,
+   "team---design": null,
+   "team---webflow": null,
+   "team---seo-aeo": null,
+   "team---growth": null,
+   "name": "Shiftolic",
+   "slug": "shiftolic"
+  }
+ },
+ {
+  "id": "6aba6bc07d6279b4b5617989",
+  "cmsLocaleId": "6aba6bc07d6279b4b561771a",
+  "lastPublished": "2026-11-13T00:44:20.074Z",
+  "lastUpdated": "2026-11-13T00:38:08.783Z",
+  "createdOn": "2026-05-19T02:06:45.479Z",
+  "isArchived": false,
+  "isDraft": false,
+  "fieldData": {
+   "meta-title": "Scaling Ballerine's web presence | Case study | Nues",
+   "meta-description": "A 30+ page Webflow build for Ballerine, an AI-powered merchant risk platform. Reusable components, scalable CMS, and 16x increase in engagement time.",
+   "heading": "A risk platform the marketing team now runs on its own",
+   "main-image": {
+    "fileId": "6aba6bc07d6279b4b5617741",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b5617741_Frame%2047505.avif",
+    "alt": null
+   },
+   "metric-value-1": "16x",
+   "metric-label-1": "Engagement time growth",
+   "metric-value-2": "30+",
+   "metric-label-2": "Pages launched",
+   "industry-2": "AI technology",
+   "website-link": "https://ballerine.com/",
+   "services-delivered": [
+    "6aba6bc07d6279b4b561798f"
+   ],
+   "the-background": "<p>Ballerine operates at the intersection of compliance, fraud prevention, and AI infrastructure, a category that\u2019s evolving faster than most. Their platform serves payment service providers, banks, fintechs, and marketplaces, each with their own risk workflows and regulatory pressures. </p><p>\u200d</p><p>With a growing product suite covering everything from merchant underwriting to agentic commerce, Ballerine needed a website that could keep pace with the breadth of their offering and the speed at which it was expanding.</p>",
+   "the-challenge": "<p>The old Ballerine website had grown into a bottleneck. Page speed was slipping as the site expanded, the CMS structure couldn\u2019t easily handle the steady stream of new products and use cases coming out of the roadmap, and even small marketing updates had become development tasks. The site needed to match the speed of the business, both literally and operationally.</p>",
+   "the-solution": "<p>Ballerine came to NUES with a fully realized design in Figma and a clear goal: build it right, build it fast, and build it to last. The development side ran in three parallel tracks. First, a component library built before any pages went into production. Every reusable piece of the design was set up once and used across all 30+ pages, with one immediate result: new pages now ship in hours, not days, because the building blocks are already there. </p><p>\u200d</p><p>Second, a CMS architecture designed for the marketing team to manage independently, with pages, products, and resources structured so that adding a new use case page wouldn't require engineering involvement. Third, performance baked in from the first line of code, with attention paid to load times, image optimization, and Core Web Vitals at every stage of the build.</p>",
+   "the-result": "<p>The impact was immediate and measurable. Page speed went from a bottleneck to a baseline, with the new site loading fast across every page and every device. The marketing team gained the autonomy they needed, new use case pages and product pages now ship without engineering involvement, and what used to take weeks now takes hours. Most telling, average engagement time on the site grew 16x compared to the previous version, with visitors spending significantly more time exploring Ballerine\u2019s product surface.</p>",
+   "the-achievement": "<ul><li>30+ pages built in Webflow from Figma design</li><li>Reusable component library covering the full design system</li><li>Scalable CMS architecture giving the marketing team full publishing autonomy</li><li>Performance optimization across load times, Core Web Vitals, and image delivery</li><li>16x increase in average user engagement time compared to the previous site</li><li>Faster turnaround on new product, use case, and resource pages</li><li>Three competitors reaching out to ask who built the site</li></ul>",
+   "second-featuerd-image": {
+    "fileId": "6aef994303384eb0216272db",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272db_case-gallery-ballerine-2.webp",
+    "alt": "Ballerine website pages"
+   },
+   "third-featuerd-image": {
+    "fileId": "6aef994303384eb0216272d2",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef994303384eb0216272d2_case-gallery-ballerine-3.webp",
+    "alt": "Ballerine website on mobile"
+   },
+   "logo-with-hover": {
+    "fileId": "6aea36d35d29ef2052db5dd2",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea36d35d29ef2052db5dd2_logo-white-ballerine.svg",
+    "alt": "Ballerine"
+   },
+   "short-card-text": "3x organic traffic",
+   "number-in-section": 7,
+   "show-in-hero-section": true,
+   "show-in-every-project-section": true,
+   "other-images-every-project-section": [
+    {
+     "fileId": "6ae3873d47e9d174c96a4901",
+     "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae3873d47e9d174c96a4901_de756.png",
+     "alt": "Ballerine website home page"
+    },
+    {
+     "fileId": "6ae3873d47e9d174c96a48fa",
+     "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae3873d47e9d174c96a48fa_80c17.png",
+     "alt": "Ballerine website Platform page"
+    },
+    {
+     "fileId": "6ae3873d47e9d174c96a4904",
+     "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae3873d47e9d174c96a4904_81e11.png",
+     "alt": "Ballerine website Industries page"
+    },
+    {
+     "fileId": "6ae3873e47e9d174c96a490a",
+     "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae3873e47e9d174c96a490a_da89d.png",
+     "alt": "Ballerine website Company page"
+    }
+   ],
+   "fade-in-text": "How nues rebuilt compliance | into a site the marketing team runs alone.",
+   "hero-title-highlight": "now runs on its own",
+   "hero-stat-3-value": "0.9s",
+   "hero-stat-3-label": "Page load on mobile",
+   "hero-screen-center": {
+    "fileId": "6ae8e94f7310179536732403",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae8e94f7310179536732403_ballerine-home-full.webp",
+    "alt": "Ballerine home page"
+   },
+   "hero-screen-left": {
+    "fileId": "6ad251fe572b1d64a33fa72b",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ad251fe572b1d64a33fa72b_cb62a.png",
+    "alt": "Ballerine website section about AI agents for merchant risk teams"
+   },
+   "hero-screen-right": {
+    "fileId": "6ad251ff572b1d64a33fa732",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ad251ff572b1d64a33fa732_4e6fc.png",
+    "alt": "Ballerine website section about managing risk decisions"
+   },
+   "quote": "Even without the price difference, I would still have picked nues.",
+   "quote-author": "Or Moshkovitz",
+   "quote-author-role": "Ballerine, AI technology",
+   "client-icon": {
+    "fileId": "6ad251fe572b1d64a33fa726",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ad251fe572b1d64a33fa726_e0e6a.svg",
+    "alt": "Ballerine"
+   },
+   "ow-hero-slider": true,
+   "ow-case-tabs": true,
+   "case-before-image": {
+    "fileId": "6af090cdc9e95dfb700f5aa2",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af090cdc9e95dfb700f5aa2_ow-tabs-before-ballerine.webp",
+    "alt": "Old Ballerine website"
+   },
+   "case-after-image": {
+    "fileId": "6af090cdc9e95dfb700f5a93",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af090cdc9e95dfb700f5a93_ow-tabs-after-ballerine.webp",
+    "alt": "New Ballerine website by nues"
+   },
+   "work-category": "ade3eabf3fc55ea3544802b43b1b8e94",
+   "logo-with-color": {
+    "fileId": "6ae256831bff15e0e23f7c9a",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6ae256831bff15e0e23f7c9a_6ae255603583e79c4fc3ee2a_logo-color-ballerine-v2.svg",
+    "alt": "Ballerine"
+   },
+   "gallery-page-names": "Home, Platform, Industries, Company",
+   "card-background": {
+    "fileId": "6aea454412afa8d1c96b19ff",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aea454412afa8d1c96b19ff_ballerine-card-bg-v2.webp",
+    "alt": ""
+   },
+   "slider-video-2": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6af646d045263033b2f2e934_ballerine-slider.mp4",
+   "team": [
+    "6aba6bc07d6279b4b56179aa",
+    "6aee1564539ee1fdc48b9be4",
+    "6aee1564539ee1fdc48b9be6"
+   ],
+   "gallery-left": {
+    "fileId": "6aef99b092e91338865f4d40",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aef99b092e91338865f4d40_case-gallery-ballerine-1.webp",
+    "alt": "Ballerine website on a laptop"
+   },
+   "tabs-background": {
+    "fileId": "6af090cdc9e95dfb700f5a96",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af090cdc9e95dfb700f5a96_ow-tabs-bg-ballerine.webp",
+    "alt": ""
+   },
+   "team---design": [
+    "6aee1564539ee1fdc48b9be6"
+   ],
+   "team---webflow": [
+    "6aba6bc07d6279b4b56179aa",
+    "6aee1564539ee1fdc48b9be4"
+   ],
+   "team---seo-aeo": null,
+   "team---growth": null,
+   "name": "Ballerine",
+   "slug": "ballerine"
+  }
+ }
+]
