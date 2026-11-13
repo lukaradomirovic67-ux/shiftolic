@@ -3,6 +3,17 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 13.11.2026: Home „Four ways“, kartica više ne prolazi kroz prednju (objavljeno na staging)
+Komentar tima: kad se kartice smenjuju, kartica koja treba da bude prva prođe kroz onu ispred. Kopija pre izmene: `backup/page-code/2026-11-13/home-footer.html` (isto što je bilo na sajtu).
+- Uzrok: izabrana kartica izlazila je iz špila samo 26% udesno, pa je u trenutku kad pređe u prednji sloj još bila preko prednje kartice i „iskakala“ kroz nju.
+| Šta (Home page footer, skripta Four ways) | Pre | Posle |
+|---|---|---|
+| Tačka do koje kartica izlazi (`OUT`) | 26% desno, 9% gore, nagib 7°, uvećanje 1.02 | 104% desno (cela širina kartice), 6% gore, nagib 8°, bez uvećanja: kartica je potpuno van špila kad pređe napred |
+| Trajanje prelaza | 1000 ms | 1100 ms (duži put, isti osećaj brzine) |
+- Na telefonu kartica kratko izađe van ekrana desno i vrati se na vrh špila.
+- Usput je na sajt otišla i izmena od 13.11. koja nije bila objavljena: pomeranje belog „pill“-a ispod tabova u mreži 2×2 na tabletu i telefonu (`moveLine`). Do sada je pill na 820 i 390 px bio pogrešne visine; sada prati aktivni tab (provereno: tabovi 1, 3, 4 na 1440, 820 i 390 px).
+- Deployovan Home footer (14.196 znakova) identičan je `webflow-assets/site-code/home-footer.html`. Snimak kadar po kadar: `notes/four-ways-swap-2026-11-13.png`.
+
 ## 13.11.2026: video popup, treći pokušaj: bez zamućenja pozadine (objavljeno na staging)
 Tvoja poruka: tamni kvadrat je i dalje tu. Kopija pre izmene: `site-head.min.html` u commit-u 653d4bf.
 - Analiza tvog snimka: tamni kvadrat je boja zatamnjenja (#080c14) nanesena još jednom, oko 60% providnosti, tačno u pravougaoniku Vimeo plejera. Sve unutar prozora je već odsečeno maskom, pa to crta browser, ne naš element. Najverovatniji uzrok je zamućenje pozadine (`backdrop-filter`) ispod Vimeo iframe-a: browser ga u pravougaoniku plejera iscrta dva puta. Galerija projekata ima isto zamućenje, ali u njoj su slike, ne iframe, i tamo problema nema.
