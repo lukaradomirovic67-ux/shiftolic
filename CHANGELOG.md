@@ -3,6 +3,16 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 13.11.2026: video popup, drugi pokušaj: maska na uglovima + X bez prstena (objavljeno na staging)
+Tvoj drugi snimak: tamni kvadrat je i dalje bio tu, a X je imao beli prsten oko sebe. Kopija pre izmene: `site-head.min.html` i `site-footer.min.html` u commit-u 6507132.
+| Šta | Pre | Posle |
+|---|---|---|
+| Uglovi prozora (`.vmodal_box`) | `overflow:hidden` + radius, `isolation:isolate`, senka `0 30px 80px rgba(0,0,0,.45)` | maska `-webkit-mask-image` u obliku prozora: sve unutra (Vimeo plejer, pozadina) seče se tačno po radiusu. Senke više nema: maska bi je ionako odsekla, a na tamnoj pozadini se jedva videla (tamni kvadrat je bio iste providnosti kao ta senka, 0,45) |
+| Fokus pri otvaranju (site footer) | fokus ide na X, pa se oko njega crta beli prsten za tastaturu | fokus ide na sam prozor (bez okvira); X izgleda kao ranije. Tasterom Tab se i dalje dolazi do X-a, i tada se prsten vidi |
+- Radius ostaje 16 px / 12 px, X je isti kao pre (bela zaobljena kocka).
+- Provereno u Chromium-u na Home (1440 i 390 px) i /services/growth, sa lažnim Vimeo plejerom: uglovi čisti, X bez prstena posle klika, Tab vodi na X, Esc zatvara, bez JS grešaka. Safari i pravi Vimeo ovde nemam.
+- Deployovani head (39.092 znaka) i footer (30.571 znak) identični su fajlovima u repou.
+
 ## 13.11.2026: video popup (video testimonials), tamni kvadrat iza zaobljenih uglova (objavljeno na staging)
 Tvoj snimak: iza zaobljenog ugla videa vidi se tamni kvadratni ugao. Uzrok: zatamnjenje i zamućenje pozadine (backdrop-filter) bili su na istom elementu koji drži video, a Safari tada pogrešno crta uglove. Kopija pre izmene: `webflow-assets/site-code/site-head.min.html` u commit-u 94175d4 (stanje posle izmene galerije, pre ove).
 | Šta | Pre | Posle |

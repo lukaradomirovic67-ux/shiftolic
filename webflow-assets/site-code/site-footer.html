@@ -232,6 +232,7 @@ document.addEventListener('DOMContentLoaded', function () {
     modal.innerHTML='<div class="vmodal_box"><button type="button" class="vmodal_close" aria-label="Close video"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><video class="vmodal_video" controls playsinline preload="none"></video></div>';
     document.body.appendChild(modal);
     box=modal.querySelector('.vmodal_box'); video=modal.querySelector('video'); closeBtn=modal.querySelector('.vmodal_close');
+    box.setAttribute('tabindex','-1');
     closeBtn.addEventListener('click',close);
     modal.addEventListener('click',function(e){ if(e.target===modal) close(); });
     document.addEventListener('keydown',function(e){
@@ -265,7 +266,8 @@ document.addEventListener('DOMContentLoaded', function () {
     document.documentElement.classList.add('vmodal-lock');
     modal.classList.add('is-open');
     if(!v){ var p=video.play(); if(p&&p.catch) p.catch(function(){}); }
-    setTimeout(function(){ closeBtn.focus(); },50);
+    /* focus the popup itself, not the X: focusing the X drew its keyboard focus ring on every open. Tab still reaches the X. */
+    setTimeout(function(){ box.focus({preventScroll:true}); },50);
   }
   function close(){
     modal.classList.remove('is-open');
