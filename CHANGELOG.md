@@ -3,6 +3,37 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 13.11.2026: SEO korak 1, site head kod skraćen sa 49.223 na 36.465 znakova (objavljeno na staging)
+Prvi korak SEO faze, po tvom „ajmo onda seo“. Bez vizuelne promene i bez promene ponašanja.
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Site settings → Custom code → Head | 49.223 od 50.000 znakova: čitljiv kod sa komentarima i razmacima, 28 blokova (CSS, skripte, HTML komentari) | 36.465 znakova (−12.758, −26%). Isti blokovi istim redom: CSS i skripte minifikovani alatom esbuild, HTML komentari uklonjeni, na vrhu jedan komentar koji upućuje na čitljivu verziju. GA4 skripta je ostala ista |
+
+Zašto:
+- Head je bio skoro pun (777 znakova slobodno), pa nije bilo mesta ni za šta novo. Sada ima 13.535 slobodnih.
+- Ovaj kod ide uz svaku stranicu sajta. Svaka stranica je sada lakša za oko 12,7 KB (Home 302.424 → 289.666 bajtova HTML-a).
+
+Fajlovi:
+- Kopija pre izmene: `backup/page-code/2026-11-13/site-head.html` (isto kao `backup/site-code.json` od 10.11.).
+- Čitljiva verzija, koja se ubuduće menja: `webflow-assets/site-code/site-head.html`.
+- Ono što je u Webflow-u: `webflow-assets/site-code/site-head.min.html`.
+- Alat: `webflow-assets/site-code/tools/minify.js` (`node minify.js site-head.html site-head.min.html "<komentar>"`, traži esbuild 0.24) i `compare-css.js` za proveru.
+
+Provera pre objave (lokalno, ista stranica sa starim i sa novim head kodom):
+- CSS: svih 260 pravila je isto kad ih pregledač pročita. Tri pravila su drugačije zapisana, ali znače isto (`300ms` = `0.3s`, senka bez nultog „spread“).
+- 15 stranica (sve vrste): isti DOM posle skripti, isti screenshot, bez JS grešaka. Jedine razlike su bile animacija kucanja na /services i slika koja se jednom nije učitala; obe se javljaju i kad se stari kod uporedi sam sa sobom.
+- Sa uključenim animacijama i klikovima (Home i Design & Development) sve se ponaša isto:
+  - reveal animacije;
+  - „Every project“ galerija: otvaranje, strelica, Esc;
+  - video popup;
+  - autoplay tabovi recenzija;
+  - ponašanje skrola posle ponovnog učitavanja.
+
+Provera posle objave (staging, objava 13.11. 00:24 UTC):
+- head u objavljenom HTML-u je bajt po bajt isti kao `site-head.min.html`;
+- 18 stranica na 1440 i 390: bez JS grešaka iz koda sajta i bez širenja strane, a galerije su na mestu.
+
 ## 12.11.2026: Service FAQ komponenta, tekst se menja po stranici preko property-ja (objavljeno na staging)
 Po tvom zahtevu („da se tekst u faq-u componenti moze menjati u zavisnosti od page-a, preko properties“). Bez vizuelne promene: podrazumevane vrednosti su isti tekstovi koji su bili na sajtu.
 
