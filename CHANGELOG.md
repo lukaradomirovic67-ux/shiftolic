@@ -3,6 +3,39 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 13.11.2026: SEO korak 4, strukturisani podaci (schema) ispravljeni i dopunjeni (objavljeno na staging)
+Po tvom „nastavi“. Vidljivi tekst i izgled se nisu menjali; schema koristi samo tekst koji već postoji na stranicama i u CMS-u.
+
+**1. Blog postovi (šablon Blogs)** — kopija pre izmene: `backup/schema/blogs-template-2026-11-13.html`, `backup/page-code/2026-11-13/blog-template-head.html`
+| Šta | Pre | Posle |
+|---|---|---|
+| Gde je schema | polje „Schema markup“ šablona | head kod šablona. API ne prima schema sa CMS poljima u polju „Schema markup“ (traži čist JSON), a kroz kod šablona može, kao na case stranicama. Staro polje je obrisano, pa post ima jednu BlogPosting oznaku. Ostatak head koda (stilovi) je ostao isti, bajt po bajt |
+| `datePublished` | „Published on“, isti za sve postove (28.09., dan uvoza) | polje Custom date, isti datum koji piše na stranici (npr. „September 21, 2026“ → `2026-09-21`) |
+| autor | `url: /team/<slug>` (stranica ne postoji, 404) i `description` (bio) | bez `url` i `description`; ostaju ime, uloga, slika i LinkedIn (`sameAs`) |
+| `keywords` | „AEO, marketing, Webflow, AI search, structured data, schema markup“ na svakom postu | uklonjeno (bilo je pogrešno za većinu postova) |
+| `abstract` | TL;DR polje | uklonjeno: TL;DR sa novim redom je kvario JSON na postu „Webflow vs WordPress…“ |
+- Provereno na svih 20 objavljenih postova: tačno jedan BlogPosting, ispravan JSON, datum isti kao na stranici. „Webflow vs WordPress…“ više nije neispravan. FAQ schema (dodaje je skripta šablona) i dalje pokazuje na isti `#article`.
+
+**2. Our Work** (kopija: `backup/schema/our-work-2026-11-13.json`)
+- Pre: u listi projekata bila je Pythagora (stavka je draft, `/our-work/pythagora` vraća 404), a nedostajali su TrakPro i Veyor Digital.
+- Posle: Ballerine, Shiftolic, TrakPro, Veyor Digital, Sustain Commercial Solar (5 napisanih case studija). Opisi za TrakPro i Veyor su iz CMS polja (Industry, Stat 1, Stat 2), ostali su ostali isti.
+
+**3. Nova schema na stranicama koje je nisu imale**
+| Stranica | Tip | Sadržaj |
+|---|---|---|
+| SEO & AEO | WebPage + Service | kao druge servisne stranice: opis iz meta opisa, 5 koraka sa stranice (Audit, Research, Structure, Content, Grow) sa njihovim tekstom. Bez cene |
+| Services | WebPage + ItemList | 4 usluge sa adresom i opisom (isti opisi kao u Organization schema na Home) |
+| Blog | Blog | naslov i opis stranice |
+| Resources | CollectionPage | naslov i opis stranice |
+| Careers, Pricing | WebPage | naslov i opis stranice; na Pricing bez cena |
+
+**Nije menjano, čeka odluku ili podatke:**
+- Cene u schema-i servisnih stranica ($8.000 Design & Development, $5.000 Webflow Development) ne postoje na tim stranicama, a /services i Pricing ih prikazuju različito ($8k/$5k naspram $8,000/$20,000). Kad se cene usaglase, uskladiću schema-u.
+- Ime je negde „NUES“ (servisne stranice, case šablon), a negde „Nues“. Ostavljeno dok ne potvrdiš zvaničan zapis.
+- Sve adrese u schema-i su relativne (`/our-work`); posle odluke o domenu (QUESTIONS 7) prelaze u pune.
+- Review na Let's talk: QUESTIONS 11.
+- Javne stranice internih kolekcija: provereno, nema problema (/hero-cards/* vraća 404, Case team i Jobs nemaju stavki).
+
 ## 13.11.2026: SEO korak 4 (tehnički SEO), početak: test linkova, vraćeno na staro (objavljeno na staging)
 Po tvom „radi tehnicki seo“. Zaustavljeno na tvoj zahtev („stopiraj nastavljamo ujutru“). Na sajtu nema promena u odnosu na stanje pre koraka 4.
 

@@ -1,0 +1,42 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "/blog/{{wf {&quot;path&quot;:&quot;slug&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}#article",
+  "headline": "{{wf {&quot;path&quot;:&quot;name&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
+  "description": "{{wf {&quot;path&quot;:&quot;meta-description&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
+  "url": "/blog/{{wf {&quot;path&quot;:&quot;slug&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{wf {&quot;path&quot;:&quot;thumbnail-image&quot;,&quot;type&quot;:&quot;ImageRef&quot;\} }}"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "{{wf {&quot;path&quot;:&quot;author:name&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
+    "url": "/team/{{wf {&quot;path&quot;:&quot;author:slug&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
+    "jobTitle": "{{wf {&quot;path&quot;:&quot;author:role&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
+    "description": "{{wf {&quot;path&quot;:&quot;author:bio&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
+    "image": {
+      "@type": "ImageObject",
+      "url": "{{wf {&quot;path&quot;:&quot;author:image&quot;,&quot;type&quot;:&quot;ImageRef&quot;\} }}"
+    },
+    "sameAs": [
+      "{{wf {&quot;path&quot;:&quot;author:linkedin-profile-2&quot;,&quot;type&quot;:&quot;Link&quot;\} }}"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Nues",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://cdn.prod.website-files.com/69b4443f93d293c2336db5b9/69ffd79d11a1a944721ccfa9_navbar-logo.svg"
+    }
+  },
+  "datePublished": "{{wf {&quot;path&quot;:&quot;published-on&quot;,&quot;type&quot;:&quot;Date&quot;\} }}",
+  "dateModified": "{{wf {&quot;path&quot;:&quot;updated-on&quot;,&quot;type&quot;:&quot;Date&quot;\} }}",
+  "inLanguage": "en",
+  "articleSection": "{{wf {&quot;path&quot;:&quot;category:name&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}",
+  "keywords": "AEO, marketing, Webflow, AI search, structured data, schema markup",
+  "abstract": "{{wf {&quot;path&quot;:&quot;tl-dr&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}"
+}
+</script>

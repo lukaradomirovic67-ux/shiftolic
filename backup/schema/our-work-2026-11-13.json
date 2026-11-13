@@ -1,0 +1,51 @@
+{
+ "@context": "https://schema.org",
+ "@type": "CollectionPage",
+ "name": "Webflow Agency Portfolio | Case Studies",
+ "description": "Webflow projects across SaaS, healthcare, AI. See the work, the case studies, and the websites we've shipped for teams across the globe.",
+ "url": "/our-work",
+ "inLanguage": "en",
+ "about": {
+  "@type": "Organization",
+  "name": "Nues",
+  "description": "Webflow agency specializing in SaaS, healthcare, and AI website development"
+ },
+ "hasPart": [
+  {
+   "@type": "CreativeWork",
+   "name": "Ballerine",
+   "description": "AI Technology Industry project with 16x engagement time growth and 30+ pages launched",
+   "url": "/our-work/ballerine",
+   "about": {
+    "@type": "Thing",
+    "name": "AI Technology"
+   }
+  },
+  {
+   "@type": "CreativeWork",
+   "name": "Shiftolic",
+   "description": "Healthcare Industry project delivered in 2 weeks with design and build from scratch",
+   "url": "/our-work/shiftolic",
+   "about": {
+    "@type": "Thing",
+    "name": "Healthcare"
+   }
+  },
+  {
+   "@type": "CreativeWork",
+   "name": "Pythagora",
+   "description": "AI Technology Industry project with 3.4x website traffic growth and scalable CMS",
+   "url": "/our-work/pythagora",
+   "about": {
+    "@type": "Thing",
+    "name": "AI Technology"
+   }
+  },
+  {
+   "@type": "CreativeWork",
+   "name": "Sustain Commercial Solar",
+   "description": "Commercial solar project with 80+ pages launched and 17 CMS collection types",
+   "url": "/our-work/sustain-commercial-solar"
+  }
+ ]
+}
