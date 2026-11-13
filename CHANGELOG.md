@@ -3,6 +3,15 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 13.11.2026: galerija projekata (popup sa sliderom), manji radijusi (objavljeno na staging)
+Po komentaru tima (manji radius bi lepše izgledao), tvoje „ajde da popravimo“. Menja se samo CSS popupa u site head-u; važi za Home (Every project) i sve 4 servisne stranice (Service Cases). Kopija pre izmene: `backup/page-code/2026-11-13-popup/`.
+| Element | Pre (desktop / telefon) | Posle (desktop / telefon) |
+|---|---|---|
+| Glavni ekran u slideru (`.pg_slide`) | 32 px / 16 px | 16 px / 8 px |
+| Male kartice ispod (`.pg_thumb`) | 12 px / 8 px | 6 px / 4 px |
+- Deployovan head je identičan `webflow-assets/site-code/site-head.min.html` (38.802 znaka). Animacija otvaranja uzima radius sa ekrana, pa prati novu vrednost.
+- Provereno na 1440 i 390 px: popup se otvara, nema JS grešaka. Pre/posle: `notes/popup-radius-2026-11-13-desktop.png` i `-mobile.png`.
+
 ## 13.11.2026: odluka, Aeonik WOFF2 se ne radi
 - MANUAL_TASKS 12 i QUESTIONS 18 zatvoreni, tvoja odluka. Aeonik ostaje u `.otf`. U Webflow-u ništa nije menjano.
 - SEO korak 3 (brzina na mobilnom) je time završen: urađeno je sve što smo odlučili da radimo.
