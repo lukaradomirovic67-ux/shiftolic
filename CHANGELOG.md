@@ -3,6 +3,16 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 13.11.2026: MANUAL_TASKS 14 urađen, linkovi ka blog postovima (objavljeno na staging)
+Ti si u Designer-u povezao 3 linka sa „Current Blogs“; ja sam objavio na staging i proverio.
+| Element | Pre (sirovi HTML) | Posle |
+|---|---|---|
+| Blog, istaknute kartice (`ins-featured_card`) | 3 × `href="#"` | 3 prave adrese `/blog/<slug>` |
+| Blogs Template, povezani postovi (`blog-card_component`) | 21 × `href="#"` | 21 prava adresa |
+| Resources, lista postova (`res-post`) | 3 × `href="#"` | 3 prave adrese |
+- Sve 21 jedinstvene adrese vraćaju 200.
+- U browseru: nijedna kartica bez linka, nijedna JS greška na /blog, /resources i jednom postu. Izgled i tekst se nisu menjali.
+
 ## 13.11.2026: odluke o predlozima koraka 4
 - og:image pravi dizajner, a ja ih povezujem kad stignu.
 - Title i description, isti H1 na servisnim stranicama i cene idu na launch ovakvi kakvi jesu. Menjaju se posle launcha (`notes/seo-predlozi-2026-11-13.md`).
