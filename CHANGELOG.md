@@ -12,6 +12,7 @@ Tvoj drugi snimak: tamni kvadrat je i dalje bio tu, a X je imao beli prsten oko 
 - Radius ostaje 16 px / 12 px, X je isti kao pre (bela zaobljena kocka).
 - Provereno u Chromium-u na Home (1440 i 390 px) i /services/growth, sa lažnim Vimeo plejerom: uglovi čisti, X bez prstena posle klika, Tab vodi na X, Esc zatvara, bez JS grešaka. Safari i pravi Vimeo ovde nemam.
 - Deployovani head (39.092 znaka) i footer (30.571 znak) identični su fajlovima u repou.
+- Naknadno provereno: svi video testimonials i Trusted video kartice na sajtu otvaraju isti prozor, pa ispravka važi svuda. Otvoreno je svako od 21 video dugme na Home, /services, 4 servisne stranice, /our-work i /pricing (1440 i 390 px): sva su OK. Četiri skrivena elementa na /our-work su izvori videa za hero slider, ne video testimonials.
 
 ## 13.11.2026: video popup (video testimonials), tamni kvadrat iza zaobljenih uglova (objavljeno na staging)
 Tvoj snimak: iza zaobljenog ugla videa vidi se tamni kvadratni ugao. Uzrok: zatamnjenje i zamućenje pozadine (backdrop-filter) bili su na istom elementu koji drži video, a Safari tada pogrešno crta uglove. Kopija pre izmene: `webflow-assets/site-code/site-head.min.html` u commit-u 94175d4 (stanje posle izmene galerije, pre ove).
