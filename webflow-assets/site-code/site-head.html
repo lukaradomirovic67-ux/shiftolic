@@ -242,11 +242,12 @@
 </style>
 
 <style>
-/* The dim + blur sit on their own layer behind the video (like .pg_dim in the gallery). The box is cut to its rounded
-   shape with a mask, not only overflow:hidden: Safari left a dark square at the corners around the Vimeo player
-   (the shadow / player layer was not clipped by the radius). A mask also hides the box shadow, so there is none. */
+/* The dim sits on its own layer behind the video. No backdrop blur here: with the Vimeo player (an iframe) on top,
+   the browser drew the blurred dim a second time in the player's square box, so a darker square showed behind the
+   rounded corners. A slightly stronger plain dim (.9) replaces the blur. The box is cut to its rounded shape with a
+   mask, so nothing inside it (player, background) can show outside the corners; the mask also means no box shadow. */
 .vmodal{position:fixed;left:0;top:0;right:0;bottom:0;z-index:10000;display:flex;align-items:center;justify-content:center;padding:5vw;visibility:hidden;transition:visibility 0s linear .35s}
-.vmodal:before{content:"";position:absolute;left:0;top:0;right:0;bottom:0;background:rgba(8,12,20,.84);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);opacity:0;transition:opacity .35s ease}
+.vmodal:before{content:"";position:absolute;left:0;top:0;right:0;bottom:0;background:rgba(8,12,20,.9);opacity:0;transition:opacity .35s ease}
 .vmodal.is-open{visibility:visible;transition:visibility 0s}
 .vmodal.is-open:before{opacity:1}
 .vmodal_box{position:relative;z-index:1;width:min(1120px,100%,calc((100vh - 10vw) * 16 / 9));aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#000;-webkit-mask-image:-webkit-radial-gradient(#fff,#000);mask-image:radial-gradient(#fff,#000);opacity:0;transform:translateY(12px) scale(.97);transition:transform .5s cubic-bezier(.22,1,.36,1),opacity .35s ease}

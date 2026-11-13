@@ -3,6 +3,16 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 13.11.2026: video popup, treći pokušaj: bez zamućenja pozadine (objavljeno na staging)
+Tvoja poruka: tamni kvadrat je i dalje tu. Kopija pre izmene: `site-head.min.html` u commit-u 653d4bf.
+- Analiza tvog snimka: tamni kvadrat je boja zatamnjenja (#080c14) nanesena još jednom, oko 60% providnosti, tačno u pravougaoniku Vimeo plejera. Sve unutar prozora je već odsečeno maskom, pa to crta browser, ne naš element. Najverovatniji uzrok je zamućenje pozadine (`backdrop-filter`) ispod Vimeo iframe-a: browser ga u pravougaoniku plejera iscrta dva puta. Galerija projekata ima isto zamućenje, ali u njoj su slike, ne iframe, i tamo problema nema.
+| Šta | Pre | Posle |
+|---|---|---|
+| Pozadina iza video prozora (`.vmodal:before`) | `rgba(8,12,20,.84)` + `backdrop-filter: blur(6px)` | `rgba(8,12,20,.9)`, bez zamućenja (malo jača boja da stranica iza i dalje bude mirna) |
+- Ostalo isto: maska na uglovima, X bez prstena, radius 16 / 12 px.
+- Provereno u Chromium-u: svih 21 video dugmadi na 8 stranica otvara prozor ispravno, bez JS grešaka. Na tvom browseru i sa pravim Vimeo videom ovo odavde ne mogu da proverim.
+- Deployovan head (39.032 znaka) identičan je `webflow-assets/site-code/site-head.min.html`.
+
 ## 13.11.2026: video popup, drugi pokušaj: maska na uglovima + X bez prstena (objavljeno na staging)
 Tvoj drugi snimak: tamni kvadrat je i dalje bio tu, a X je imao beli prsten oko sebe. Kopija pre izmene: `site-head.min.html` i `site-footer.min.html` u commit-u 6507132.
 | Šta | Pre | Posle |
