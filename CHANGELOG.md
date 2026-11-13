@@ -3,6 +3,10 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 13.11.2026: odluke o predlozima koraka 4
+- og:image pravi dizajner, a ja ih povezujem kad stignu.
+- Title i description, isti H1 na servisnim stranicama i cene idu na launch ovakvi kakvi jesu. Menjaju se posle launcha (`notes/seo-predlozi-2026-11-13.md`).
+
 ## 13.11.2026: SEO korak 4, predlozi za odobrenje (ništa nije objavljeno)
 - Slike za deljenje (og:image):
   - 13 predloga 1200×630, u stilu sajta, sa postojećim naslovima: `webflow-assets/perf/manual/og/`, pregled u `notes/og-predlozi-2026-11-13.png`;

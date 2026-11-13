@@ -66,7 +66,7 @@ Nazive menija proverite u trenutnom Webflow interfejsu.
 12. **Aeonik u WOFF2** (vidi QUESTIONS 18): ako postoje WOFF2 fajlovi iz licence, upload-ovati ih umesto `.otf` za težine 300, 400, 500 i 600, pod istim imenom porodice **Aeonik**.
 
 ## SEO korak 4, tehnički SEO (dodato 13.11.)
-13. **Slike za deljenje (og:image)**, posle odobrenja predloga (`notes/og-predlozi-2026-11-13.png`):
+13. **Slike za deljenje (og:image)**: pravi ih dizajner (tvoja odluka 13.11.). Moji predlozi u `notes/og-predlozi-2026-11-13.png` su samo referenca. Kad budu gotove:
     - ubaciti 13 fajlova iz `webflow-assets/perf/manual/og/` u **Assets** panel i javiti mi;
     - ja ih vezujem za stranice preko API-ja (Open Graph image) i dodajem `twitter:card` gde nedostaje.
 14. **Linkovi ka blog postovima u sirovom HTML-u** (sada `href="#"`; posetiocima ih ispravlja skripta, a crawleri bez JavaScript-a ih ne vide):

@@ -1,5 +1,10 @@
 # SEO predlozi za odobrenje (13.11.2026)
 
+**Tvoja odluka 13.11.:**
+- og:image pravi dizajner, a ja ih povezujem kad stignu.
+- Tačke 2, 3 i 4 (title i description, isti H1 na servisnim stranicama, cene) idu na launch ovakve kakve jesu i menjaju se posle launcha.
+- Moji predlozi slika (`og-predlozi`) ostaju samo kao referenca.
+
 Ovo je tekst, pa ništa od ovoga ne menjam bez tvog „ok“.
 - Može ceo spisak, može po tačkama, a može i sa tvojom izmenom.
 - Predlozi koriste samo tvrdnje koje već postoje na sajtu.
