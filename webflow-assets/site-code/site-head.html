@@ -716,3 +716,93 @@ document.addEventListener('DOMContentLoaded', function () {
   stage.addEventListener('pointercancel', up);
 });
 </script>
+
+<!-- Nues 13.11.: two-tone text that writes in letter by letter, and bigger tap areas for small controls. -->
+<style>
+/* Two-tone sentences (Service Cases .svc-case_muted, Home Every project .text-reveal_muted): the grey part keeps its own colour,
+   only the white part writes in */
+[data-text-reveal] :is(.svc-case_muted, .text-reveal_muted) .text-reveal_char,
+[data-text-reveal].is-revealed :is(.svc-case_muted, .text-reveal_muted) .text-reveal_char { color: inherit; }
+/* Bigger tap areas without changing the look: an invisible frame around small links, arrows and slider dots (about 40-44px) */
+.footer-v2_link { position: relative; }
+.footer-v2_link::after { content: ""; position: absolute; inset: -8px -6px; }
+.lt-quote_arrow { overflow: visible; }
+.lt-quote_arrow::after { content: ""; position: absolute; inset: -8px; }
+.ins-feat-dot { position: relative; }
+.ins-feat-dot::after { content: ""; position: absolute; inset: -18px -4px; }
+</style>
+<!-- Text that writes in letter by letter: Home Every project (.home-projects_description), Service Cases (.svc-case_text) and any
+     [data-reveal-text]. Inner spans are kept, so the grey part of a two-tone sentence stays grey. In CMS text (Story label) a | marks
+     where the grey part starts; it is turned into the grey span here, on Home and in the Our Work tabs (.ow-cs_item h3, which then
+     keep this split instead of the "first third" rule). Runs before the older copy in the site footer, which skips elements done here. -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function splitMarker(el, cls) {
+    if (el.children.length || el.textContent.indexOf('|') < 0) return;
+    var parts = el.textContent.split('|');
+    var first = parts.shift().replace(/\s+$/, ''), rest = parts.join(' ').replace(/\s+/g, ' ').trim();
+    el.textContent = first + ' ';
+    var s = document.createElement('span');
+    s.className = cls;
+    s.textContent = rest;
+    el.appendChild(s);
+  }
+  document.querySelectorAll('.home-projects_description').forEach(function (el) { splitMarker(el, 'text-reveal_muted'); });
+  document.querySelectorAll('.ow-cs_item h3').forEach(function (el) { splitMarker(el, 'ow-cs_muted'); });
+  var els = [];
+  document.querySelectorAll('.home-projects_description, .svc-case_text, [data-reveal-text]').forEach(function (el) {
+    if (el.hasAttribute('data-text-reveal')) return;
+    var text = el.textContent.replace(/\s+/g, ' ').trim();
+    if (!text) return;
+    var sr = document.createElement('span');
+    sr.className = 'text-reveal_sr';
+    sr.textContent = text;
+    var visual = document.createElement('span');
+    visual.setAttribute('aria-hidden', 'true');
+    var chars = [], space = false;
+    // letters become spans; a space between words stays a plain space so lines still break between words
+    function add(target, str) {
+      str.split('').forEach(function (ch) {
+        if (/\s/.test(ch)) { space = true; return; }
+        if (space && chars.length) target.appendChild(document.createTextNode(' '));
+        space = false;
+        var c = document.createElement('span');
+        c.className = 'text-reveal_char';
+        c.textContent = ch;
+        target.appendChild(c);
+        chars.push(c);
+      });
+    }
+    // copy inner elements (e.g. the grey span) without their text, and fill them with letters
+    function walk(node, target) {
+      [].forEach.call(node.childNodes, function (n) {
+        if (n.nodeType === 3) add(target, n.textContent);
+        else if (n.nodeType === 1) { var copy = n.cloneNode(false); target.appendChild(copy); walk(n, copy); }
+      });
+    }
+    walk(el, visual);
+    // Short lines take about 1.4s, long paragraphs up to 2.4s, never slower than 28ms per letter
+    var total = Math.max(1400, Math.min(2400, chars.length * 16));
+    var step = Math.min(28, total / chars.length);
+    chars.forEach(function (c, i) { c.style.transitionDelay = Math.round(i * step) + 'ms'; });
+    el.textContent = '';
+    el.appendChild(sr);
+    el.appendChild(visual);
+    el.setAttribute('data-text-reveal', '');
+    els.push(el);
+  });
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function (el) { el.classList.add('is-revealed'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-revealed');
+      io.unobserve(entry.target);
+    });
+  }, { threshold: 0.6 });
+  els.forEach(function (el) { io.observe(el); });
+});
+</script>

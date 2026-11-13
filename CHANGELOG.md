@@ -3,6 +3,65 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 13.11.2026: 6 ispravki iz provere naspram Figme (objavljeno na staging)
+Po tvom zahtevu („aj ovo uradi“), stavke iz `notes/figma-qa-2026-11-12.md`, odeljak 1.
+
+**1. Dvobojni tekst se više ne gubi** (Home „Every project“ i naslov „Service Cases“ na 4 servisne stranice)
+- Uzrok: skripta koja tekst ispisuje slovo po slovo pravila je ravan tekst i brisala prigušeni deo.
+- Nova skripta u site head-u čuva unutrašnje `span`-ove. Prigušeni deo ostaje sivi, a ispisuje se samo beli deo. Pokreće se pre stare skripte u site footer-u, koja onda preskače te elemente (staru brišem kad budem sređivao footer).
+- CSS (site head): slova u `.svc-case_muted` i `.text-reveal_muted` zadržavaju svoju boju.
+- Nova klasa `text-reveal_muted` (Style Manager), boja rgba(255,255,255,0.4).
+- CMS Our Works, polje „Story label“ (`fade-in-text`): znak `|` označava gde počinje sivi deo.
+  - Ballerine: „How nues rebuilt compliance into a site the marketing team runs alone.“ → „How nues rebuilt compliance | into a site the marketing team runs alone.“
+  - Shiftolic: „From first call to a live healthcare brand in a single sprint“ → „From first call to a live healthcare brand | in a single sprint“
+  - Podela je ista kao u Figmi i kao na servisnim stranicama. Objašnjenje polja je dopunjeno.
+  - U Our Work tabovima skripta pretvara `|` u sivi `ow-cs_muted` deo. Za Ballerine je to ista podela kao i pre, a gde nema `|`, ostaje pravilo „prva trećina tamna“. Znak `|` se nigde ne prikazuje.
+
+**2. Home „Four ways“ tabovi na tabletu i telefonu**
+- Ranije: red tabova se skrolovao u stranu, prvi tab je bio odsečen na 820.
+- Sada su ispod 992 px sva četiri taba u mreži 2×2, sa prelomom teksta, bez skrolovanja.
+- Style Manager:
+  - `.home-ways_tabs` @medium: display flex → grid, kolone 1fr 1fr, `grid-auto-rows` 1fr, row-gap 0.375rem, `overflow-x: auto` i `overflow-y: hidden` uklonjeni;
+  - `.home-ways_tabs` @small: row-gap 0.25rem;
+  - `.home-ways_tab` @medium: white-space nowrap → normal;
+  - `.home-ways_tab-text` @small: line-height 1 → 1.15.
+- Home page footer, skripta Four ways (`moveLine`): beli pill se sada pomera i po visini (translate x i y, plus visina taba), pa prati aktivni tab i u drugom redu. Na desktopu je isti kao pre.
+- Kopija pre izmene: `backup/page-code/2026-11-13/home-footer.html`, nova verzija: `webflow-assets/site-code/home-footer.html`.
+
+**3. Case stranice, H1 u heroju**
+- Nova combo klasa `is-balanced` (`text-wrap: balance`) dodata na H1 u šablonu Our Works.
+- Ballerine sada ide u 3 reda kao u Figmi („A risk platform the / marketing team / now runs on its own“). Shiftolic ide u 3 ujednačena reda, bez „weeks.“ samog na kraju.
+
+**4. Blog, istaknuti slider**
+- `.ins-featured_overlay`, desktop:
+  - vertikalni prelaz kreće ranije i jači je (0 do 30%, pa 0.38, 0.62, 0.8, 0.9);
+  - dodato tamnjenje sleva (0.5 → 0.14), gde stoji tekst.
+- `.ins-featured_overlay`, telefon (@small): jedan vertikalni prelaz od 0.25 do 0.92.
+- Stara vrednost je u `backup/styles/2026-11-13-before-qa-fixes.json`.
+
+**5. SEO & AEO, koraci**
+- Tab 3 „Build“ je sada „Structure“, isto kao naslov njegovog panela.
+
+**6. Površina za dodir**
+- `.button` @medium: min-height 2.75rem (44 px). „Book an intro call“ na telefonu je sa 32 px porastao na 44 px, a isto važi za sva bela dugmad ispod 992 px.
+- Site head CSS dodaje nevidljiv okvir oko malih elemenata, bez promene izgleda:
+  - linkovi u footeru (40–43 px);
+  - strelice testimonijala na Let's talk (40 px, `overflow` je zato `visible`);
+  - tačke slidera na blogu (44 px visine).
+- Trake Our Work slidera (4 px) nisu proširene: oba pseudo-elementa već koriste za animaciju.
+
+Site head: 36.465 → 38.939 znakova. Čitljiva verzija `webflow-assets/site-code/site-head.html`, minifikovana `site-head.min.html`.
+
+Provereno lokalno pre objave (staging HTML sa novim kodom), pa na staging-u (objava 00:44 UTC), na 1440, 820 i 390:
+- head i Home footer su bajt po bajt isti kao lokalni fajlovi;
+- Home: dvobojni tekst (belo `rgb(255,255,255)`, sivo `rgba(255,255,255,0.4)`), bez `|`;
+- tabovi: mreža na 820 i 390, pill tačno preko aktivnog taba, bez skrolovanja;
+- dugmad su 44 px na 820 i 390;
+- servisne stranice: dvobojni naslov na vidljivom slajdu;
+- SEO tabovi glase Audit / Research / Structure / Content / Grow;
+- Our Work: bez `|`;
+- nema JS grešaka ni širenja strane.
+
 ## 13.11.2026: SEO korak 1, site head kod skraćen sa 49.223 na 36.465 znakova (objavljeno na staging)
 Prvi korak SEO faze, po tvom „ajmo onda seo“. Bez vizuelne promene i bez promene ponašanja.
 

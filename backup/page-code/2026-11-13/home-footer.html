@@ -1,0 +1,235 @@
+<!-- Nues: code moved here from page embeds. Edit here, not in embeds. -->
+<script>
+/* Home hero cards: a card opens the case study when the project has one written (Case title filled in Our Works),
+   otherwise the client's live site (Website link) in a new tab. The data comes from the Trusted cards on this page
+   (data-case, data-site, link to /our-work/<slug>), read before the Trusted script swaps their links.
+   The card's own Link may be either the case page or the live site; projects not in Trusted keep their Link (a live site opens in a new tab). */
+(function(){
+  function host(u){try{return new URL(u,location.href).hostname.replace(/^www\./,'');}catch(e){return '';}}
+  function slugOf(u){var m=(u||'').match(/\/our-work\/([^\/?#]+)/);return m?m[1]:'';}
+  var bySlug={},byHost={};
+  [].forEach.call(document.querySelectorAll('.section_trusted .case-card_link'),function(a){
+    var slug=slugOf(a.getAttribute('href'));if(!slug)return;
+    var p={slug:slug,c:(a.getAttribute('data-case')||'').trim(),s:(a.getAttribute('data-site')||'').trim()};
+    bySlug[slug]=p;if(p.s){byHost[host(p.s)]=p;}
+  });
+  [].forEach.call(document.querySelectorAll('.hero-cards_card'),function(a){
+    var href=a.getAttribute('href')||'',slug=slugOf(href);
+    var ext=/^https?:/i.test(href)&&host(href)!==location.hostname.replace(/^www\./,'');
+    var p=slug?bySlug[slug]:(ext?byHost[host(href)]:null);
+    if(!p){if(ext){a.setAttribute('target','_blank');a.setAttribute('rel','noopener');}return;}
+    if(p.c){a.setAttribute('href','/our-work/'+p.slug);a.removeAttribute('target');a.removeAttribute('rel');}
+    else if(p.s){a.setAttribute('href',p.s);a.setAttribute('target','_blank');a.setAttribute('rel','noopener');}
+  });
+})();
+</script>
+<script>
+/* Home hero cards: every column runs through all the cards, each one starting at a different card, so the columns never show the same projects side by side */
+(function(){
+  function ok(it){var img=it.querySelector('img');return !!(img&&img.getAttribute('src')&&!img.classList.contains('w-dyn-bind-empty')&&!img.classList.contains('w-condition-invisible')&&!it.classList.contains('w-condition-invisible'));}
+  // Card gradient colours from the CMS (Colour top / Colour bottom, hex) for the CSS in the page head
+  function colours(card){['top','bottom'].forEach(function(k){var v=(card.getAttribute('data-hc-'+k)||'').trim();if(v){card.style.setProperty('--hc-'+k,/^[0-9a-f]{3,8}$/i.test(v)?'#'+v:v);}});}
+  function build(root){
+    [].forEach.call(root.querySelectorAll('.hero-cards_card'),colours);
+    var tracks=[].slice.call(root.querySelectorAll('[data-hero-track]'));if(!tracks.length)return;
+    var items=[].slice.call(root.querySelectorAll('.hero-cards_item')).filter(ok);if(!items.length)return;
+    // CMS order: the Order field (data-order on the card); cards without one go last
+    items=items.map(function(it,k){var a=it.querySelector('[data-order]'),o=parseFloat(a&&a.getAttribute('data-order'));return {it:it,o:isNaN(o)?1e9:o,k:k};})
+      .sort(function(a,b){return a.o-b.o||a.k-b.k;}).map(function(x){return x.it;});
+    var n=items.length,cols=tracks.length;
+    // about how many cards fit in one column on screen
+    var card=items[0].offsetHeight||1,seen=Math.max(1,Math.round(root.offsetHeight/card));
+    var built=tracks.map(function(tr,j){
+      var down=tr.getAttribute('data-hero-track')==='down';
+      // the column's first visible card; a downward column shows its list backwards, so it starts "seen" cards later
+      var start=Math.round(j*n/cols)+(down?seen:0);
+      var off=((start%n)+n)%n;
+      var rot=items.slice(off).concat(items.slice(0,off));
+      if(down){rot.reverse();}
+      var base=[];while(base.length<Math.max(4,seen+2)){base=base.concat(rot);}
+      var frag=document.createDocumentFragment();
+      for(var k=0;k<2;k++){
+        var set=document.createElement('div');set.className='hero-cards_set';
+        if(k){set.setAttribute('aria-hidden','true');}
+        base.forEach(function(it){var c=it.cloneNode(true);c.removeAttribute('role');if(k){c.querySelectorAll('a').forEach(function(a){a.setAttribute('tabindex','-1');});}set.appendChild(c);});
+        frag.appendChild(set);
+      }
+      return {frag:frag,count:base.length};
+    });
+    tracks.forEach(function(tr,j){
+      while(tr.firstChild){tr.removeChild(tr.firstChild);}
+      tr.appendChild(built[j].frag);
+      // same speed per card in every column, so they stay apart (14s per card: a calm drift)
+      tr.style.setProperty('--hero-speed',(built[j].count*14)+'s');
+    });
+    root.classList.add('is-ready');
+  }
+  function run(){document.querySelectorAll('[data-hero-marquee]').forEach(build);}
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}else{run();}
+})();
+</script>
+<script>
+/* Four ways (see the note in the page head). Tab k, card k and panel k belong together (same order). */
+(function () {
+  var root = document.querySelector('[data-ways]'), deck = root && root.querySelector('[data-ways-deck]');
+  if (!deck || deck.hasAttribute('data-ways-ready')) return;
+  deck.setAttribute('data-ways-ready', '');
+  var tabs = [].slice.call(root.querySelectorAll('.home-ways_tab'));
+  var cards = [].slice.call(deck.querySelectorAll('.home-ways_card'));
+  var panels = [].slice.call(root.querySelectorAll('.home-ways_panel'));
+  var row = root.querySelector('.home-ways_tabs'), line = root.querySelector('.home-ways_tab-line'), fill = root.querySelector('.home-ways_tab-fill');
+  var n = cards.length;
+  if (!n) return;
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var active = 0, order = cards.map(function (c, k) { return k; }), depth = order.slice(), timers = [], flight = null;
+  var visible = false, focused = false, started = false;
+
+  // titles split at their line breaks, so each line can rise out of a mask
+  function lines(el) {
+    if (!el || el.querySelector('.ways-line')) return;
+    el.innerHTML = el.innerHTML.split(/<br\s*\/?>/i).map(function (part, i) {
+      return '<span class="ways-line"><span class="ways-line-in" style="--l:' + i + '">' + part.trim() + '</span></span>';
+    }).join('');
+  }
+  cards.forEach(function (c) { lines(c.querySelector('.home-ways_card-title')); });
+  panels.forEach(function (p) {
+    lines(p.querySelector('.heading-style-h3, h3'));
+    var i = 0;
+    [].forEach.call(p.querySelectorAll('.home-ways_panel-text, .home-ways_list-item, .home-ways_stats, .arrow-link_component'), function (el) {
+      el.setAttribute('data-ways-in', ''); el.style.setProperty('--i', i++);
+    });
+  });
+
+  // tab row: the underline sits under the current tab in its colour and fills while the service is shown
+  function moveLine() {
+    var t = tabs[active];
+    if (!t || !line) return;
+    line.style.width = t.offsetWidth + 'px';
+    line.style.transform = 'translateX(' + t.offsetLeft + 'px)';
+    root.style.setProperty('--ways-ink', t.getAttribute('data-ink') || '#a86a1c');
+  }
+  function more() { if (row) row.setAttribute('data-more', String(row.scrollLeft + row.clientWidth < row.scrollWidth - 4)); }
+  // on small screens the row scrolls sideways: bring the current tab into view (only the row moves, never the page)
+  function showTab() {
+    if (!row || row.scrollWidth <= row.clientWidth + 1) return;
+    var t = tabs[active], left = t.offsetLeft - (row.clientWidth - t.offsetWidth) / 2;
+    row.scrollTo({ left: Math.max(0, left), behavior: still ? 'auto' : 'smooth' });
+  }
+  function run() {
+    if (!fill || still) return;
+    fill.classList.remove('is-run'); void fill.offsetWidth; fill.classList.add('is-run');
+  }
+  function pause() { root.classList.toggle('is-paused', !visible || focused || document.hidden); }
+
+  function later(fn, ms) { if (ms > 0) timers.push(setTimeout(fn, ms)); else fn(); }
+  function place(c, d, delay) { c.style.transitionDelay = delay ? delay + 'ms' : ''; c.setAttribute('data-depth', String(d)); }
+  // a second change while one is still moving: every card goes straight to its slot first
+  function settle() {
+    timers.forEach(clearTimeout); timers = [];
+    if (flight) { flight.cancel(); flight = null; }
+    cards.forEach(function (c, k) { c.removeAttribute('data-leaving'); c.removeAttribute('data-snap'); c.removeAttribute('data-flying'); place(c, depth[k], 0); });
+  }
+  function paint() {
+    tabs.forEach(function (t, k) {
+      var on = k === active;
+      t.classList.toggle('is-active', on);
+      t.setAttribute('aria-selected', String(on));
+      t.tabIndex = on ? 0 : -1;
+    });
+    panels.forEach(function (p, k) {
+      var on = k === active, was = p.getAttribute('data-active') === 'true';
+      if (on && !was && !still) { p.setAttribute('data-active', 'prep'); void p.offsetWidth; }
+      p.setAttribute('data-active', String(on));
+      p.setAttribute('aria-hidden', String(!on));
+      if (on) p.removeAttribute('inert'); else p.setAttribute('inert', '');
+    });
+    moveLine(); showTab(); run();
+  }
+
+  // a change: the chosen card is pulled out of the deck to the upper right, still behind the others, then turns over the top
+  // and lands on the front; the cards that were in front of it step back one slot, the ones behind it stay where they are.
+  // The slots are the ones in the page head (translate %, rotate, scale), OUT is where the card turns.
+  var SLOT = [[0, 0, 0, 1, 1], [-5.34, -2.43, -2.95, .946, .982], [-11.77, -4.14, -6, .869, .974], [-18.78, -4.1, -9, .7935, .99]];
+  var OUT = [26, -9, 7, 1.02, 1.02];
+  function tf(s) { return 'translate(' + s[0] + '%,' + s[1] + '%) rotate(' + s[2] + 'deg) scale(' + s[3] + ',' + s[4] + ')'; }
+  function go(i) {
+    i = ((i % n) + n) % n;
+    if (i === active) { run(); return; }
+    settle();
+    var from = depth[i], c = cards[i], front = cards[order[0]];
+    order.splice(from, 1); order.unshift(i);
+    active = i;
+    depth = cards.map(function (x, k) { return order.indexOf(k); });
+    if (still || !c.animate) { cards.forEach(function (x, k) { place(x, depth[k], 0); }); paint(); return; }
+    // the old front card keeps its title and arcs until the chosen card has covered it
+    front.setAttribute('data-leaving', '');
+    later(function () { front.removeAttribute('data-leaving'); }, 820);
+    cards.forEach(function (x, k) { if (k !== i) place(x, depth[k], depth[k] <= from ? 140 + depth[k] * 60 : 0); });
+    c.setAttribute('data-snap', ''); c.setAttribute('data-flying', ''); place(c, 0, 0);
+    var low = 35 - from * 10;
+    flight = c.animate([
+      { transform: tf(SLOT[from]), zIndex: low, easing: 'cubic-bezier(.3,0,.2,1)' },
+      { transform: tf(OUT), zIndex: low, offset: .45 },
+      { transform: tf(OUT), zIndex: 50, offset: .45, easing: 'cubic-bezier(.55,0,.15,1)' },
+      { transform: tf(SLOT[0]), zIndex: 50 }
+    ], { duration: 1000 });
+    later(function () { c.removeAttribute('data-flying'); }, 760);
+    flight.onfinish = function () { c.removeAttribute('data-snap'); flight = null; };
+    paint();
+  }
+
+  // tabs: click, arrow keys, Home / End; pointing at a tab lights up its card in the deck
+  tabs.forEach(function (t, k) {
+    t.addEventListener('click', function () { go(k); });
+    t.addEventListener('mouseenter', function () { cards[k].setAttribute('data-peek', ''); });
+    t.addEventListener('mouseleave', function () { cards[k].removeAttribute('data-peek'); });
+  });
+  if (row) {
+    row.addEventListener('keydown', function (e) {
+      var step = { ArrowRight: 1, ArrowLeft: -1 }[e.key], to;
+      if (step) to = active + step; else if (e.key === 'Home') to = 0; else if (e.key === 'End') to = n - 1; else return;
+      e.preventDefault(); go(to);
+      tabs[active].focus({ preventScroll: true });
+    });
+    row.addEventListener('scroll', more, { passive: true });
+  }
+
+  // only the tab row changes the service (the deck below does not react to clicks).
+  // autoplay: when the underline has filled, the next service comes up; it waits while the deck is off screen
+  // and while a keyboard user is in the section (not on mouse hover)
+  if (fill) fill.addEventListener('animationend', function () { if (!still) go(active + 1); });
+  root.addEventListener('focusin', function (e) { try { focused = e.target.matches(':focus-visible'); } catch (err) { focused = true; } pause(); });
+  root.addEventListener('focusout', function (e) { if (root.contains(e.relatedTarget)) return; focused = false; pause(); });
+  document.addEventListener('visibilitychange', pause);
+
+  // the deck lies as one pile until it scrolls into view, then fans out
+  function intro() {
+    if (started) return;
+    started = true;
+    if (still) return;
+    cards.forEach(function (c, k) { c.style.transitionDelay = depth[k] ? (120 + depth[k] * 110) + 'ms' : ''; });
+    deck.removeAttribute('data-intro');
+    timers.push(setTimeout(function () { cards.forEach(function (c) { c.style.transitionDelay = ''; }); }, 1600));
+  }
+
+  root.classList.add(still ? 'is-still' : 'is-auto');
+  pause();
+  if (!still) {
+    cards.forEach(function (c) { c.setAttribute('data-snap', ''); });
+    deck.setAttribute('data-intro', '');
+    void deck.offsetWidth;
+    cards.forEach(function (c) { c.removeAttribute('data-snap'); });
+  }
+  if (line) { line.style.transition = 'none'; moveLine(); void line.offsetWidth; line.style.transition = ''; }
+  paint(); more();
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      visible = entries[0].isIntersecting;
+      if (visible) intro();
+      pause();
+    }, { threshold: 0.35 }).observe(deck);
+  } else { visible = true; intro(); pause(); }
+  window.addEventListener('resize', function () { moveLine(); more(); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { moveLine(); more(); });
+})();
+</script>
