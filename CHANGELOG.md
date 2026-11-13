@@ -3,6 +3,10 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 13.11.2026: odluka, Aeonik WOFF2 se ne radi
+- MANUAL_TASKS 12 i QUESTIONS 18 zatvoreni, tvoja odluka. Aeonik ostaje u `.otf`. U Webflow-u ništa nije menjano.
+- SEO korak 3 (brzina na mobilnom) je time završen: urađeno je sve što smo odlučili da radimo.
+
 ## 13.11.2026: MANUAL_TASKS 9 urađen, lakše slike u Service Cases (objavljeno na staging)
 Ti si ubacio 2 slike u Assets; ja sam ih postavio u komponentu **Service Cases** (`34b22d05-b194-8512-c6a7-fe84ab3212d1`), pa važe na sve 4 servisne stranice. Kopija pre izmene: `backup/elements/service-cases-screens-2026-11-13.json`.
 | Okviri (po 3: levo, sredina, desno) | Pre | Posle |

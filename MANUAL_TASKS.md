@@ -63,7 +63,7 @@ Nazive menija proverite u trenutnom Webflow interfejsu.
 11. **[PRESKOČENO 13.11., tvoja odluka: ne radimo]** **Site settings → Publishing → Advanced publishing options**: uključiti **Minify HTML**, **Minify CSS** i **Minify JS** → Save.
     - Glavni CSS sajta (581 KB) sada nije minifikovan.
     - Posle sledeće objave proveravam da se ništa nije promenilo.
-12. **Aeonik u WOFF2** (vidi QUESTIONS 18): ako postoje WOFF2 fajlovi iz licence, upload-ovati ih umesto `.otf` za težine 300, 400, 500 i 600, pod istim imenom porodice **Aeonik**.
+12. **[PRESKOČENO 13.11., tvoja odluka: ne radimo]** **Aeonik u WOFF2** (vidi QUESTIONS 18): ako postoje WOFF2 fajlovi iz licence, upload-ovati ih umesto `.otf` za težine 300, 400, 500 i 600, pod istim imenom porodice **Aeonik**.
 
 ## SEO korak 4, tehnički SEO (dodato 13.11.)
 13. **Slike za deljenje (og:image)**: pravi ih dizajner (tvoja odluka 13.11.). Moji predlozi u `notes/og-predlozi-2026-11-13.png` su samo referenca. Kad budu gotove:
