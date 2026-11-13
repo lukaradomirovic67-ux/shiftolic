@@ -3,6 +3,16 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 13.11.2026: SEO, putanja stranice (BreadcrumbList schema) na blog postovima i case stranicama (objavljeno na staging)
+Google iz ovoga pravi putanju u rezultatu pretrage (npr. „Resources › Insights › naslov“ umesto gole adrese). Vidljivi deo stranica se ne menja. Kopija pre izmene (tačan kod sa sajta): `backup/page-code/2026-11-13-breadcrumbs/`.
+| Šablon (head kod) | Pre | Posle |
+|---|---|---|
+| Blogs Template | BlogPosting + stilovi | dodat BreadcrumbList: Resources (/resources) › Insights (/blog) › naslov posta (polje Name, /blog/slug). Isti redosled kao putanja koja već piše na stranici |
+| Our Works Template | skripta za prazne case-ove + Article + stilovi | dodat BreadcrumbList: Our Work (/our-work) › ime projekta (polje Name, /our-work/slug) |
+- Postojeći BlogPosting, Article, skripta i stilovi su ostali bajt po bajt isti; deployovan kod je identičan `webflow-assets/site-code/blogs-template-head.html` i `our-works-template-head.html`.
+- Provereno na stagingu: svih 21 blog post i 5 napisanih case stranica imaju ispravan JSON, zadnja stavka putanje je baš ta stranica, sve 29 adresa iz putanja vraćaju 200.
+- Adrese su relativne (/blog/…), kao u ostaloj schema-i. Uz odluku o domenu (QUESTIONS 7) sve se prebacuje na pune adrese.
+
 ## 13.11.2026: Home „Four ways“, kartica više ne prolazi kroz prednju (objavljeno na staging)
 Komentar tima: kad se kartice smenjuju, kartica koja treba da bude prva prođe kroz onu ispred. Kopija pre izmene: `backup/page-code/2026-11-13/home-footer.html` (isto što je bilo na sajtu).
 - Uzrok: izabrana kartica izlazila je iz špila samo 26% udesno, pa je u trenutku kad pređe u prednji sloj još bila preko prednje kartice i „iskakala“ kroz nju.
