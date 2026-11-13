@@ -3,8 +3,9 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
-## 13.11.2026: odluka, Minify se ne uključuje
+## 13.11.2026: odluke, Minify i Geist se ne rade
 - MANUAL_TASKS 11 (Minify HTML, CSS i JS) preskačemo, tvoja odluka. Procena dobitka je bila mala: glavni CSS sa 568 na oko 462 KB, a preuzimanje sa 81 na oko 76 KB po stranici.
+- MANUAL_TASKS 8 (Geist kao custom font umesto Google Fonts) preskačemo, tvoja odluka. Google skripta `webfont.js` i Instrument Serif ostaju na svakoj stranici kao do sada.
 - U Webflow-u ništa nije menjano.
 
 ## 13.11.2026: MANUAL_TASKS 14 urađen, linkovi ka blog postovima (objavljeno na staging)

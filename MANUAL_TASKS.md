@@ -38,7 +38,7 @@ Putanje u meniju proverite u trenutnom Webflow interfejsu. Nazivi se ponekad men
 Fajlovi su u repou, u `webflow-assets/perf/manual/`, a dobio si ih i kao zip. Sve se radi na staging-u.
 Nazive menija proverite u trenutnom Webflow interfejsu.
 
-8. **Fontovi: ukloniti Google skriptu koja blokira prikaz** (`webfont.js`, plus još dva Google servera na svakoj stranici).
+8. **[PRESKOČENO 13.11., tvoja odluka: ne radimo]** **Fontovi: ukloniti Google skriptu koja blokira prikaz** (`webfont.js`, plus još dva Google servera na svakoj stranici).
    - **Site settings → Fonts → Custom fonts → Upload**: `fonts/Geist-Variable-latin.woff2`.
      - Ime porodice (family) mora biti tačno **Geist**.
      - Ako Webflow pita za težine, to je promenljiv font 100–900, stil Normal.
