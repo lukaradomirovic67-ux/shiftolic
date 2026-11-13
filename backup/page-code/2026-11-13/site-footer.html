@@ -1,0 +1,802 @@
+<style>
+  .in-link-circle {
+    transition: background-color 300ms ease, border-color 300ms ease, color 300ms ease;
+  }
+
+  .link-with-cicle:hover .in-link-circle,
+  .link-with-cicle:focus-visible .in-link-circle {
+    background-color: #5BD3A9;
+    border-color: #5BD3A9;
+    color: #FFFFFF;
+  }
+
+  .link-with-cicle:hover .in-link-circle svg path,
+  .link-with-cicle:focus-visible .in-link-circle svg path {
+    fill: currentColor;
+  }
+</style>
+
+<!-- Nues: shared code moved here from Global Styles and component embeds. Edit here, not in embeds. -->
+<script>
+(function () {
+  // Services opens on hover on desktop; inside the mobile menu it opens on tap.
+  // Runs before webflow.js builds the dropdown, which reads data-hover once.
+  var desktop = window.matchMedia('(min-width: 992px)').matches;
+  document.querySelectorAll('.navbar2_component .w-dropdown[data-hover]').forEach(function (dd) { dd.setAttribute('data-hover', desktop ? 'true' : 'false'); });
+  function init() {
+    var nav = document.querySelector('.navbar2_component');
+    if (!nav || nav.hasAttribute('data-nav-ready')) return;
+    nav.setAttribute('data-nav-ready', '');
+    var bg = nav.querySelector('[data-nav-bg]');
+    function onScroll() { if (bg) bg.classList.toggle('is-scrolled', window.scrollY > 10); }
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    // Service cards: the hovered (or focused) card expands; the first one is the default.
+    var wrap = nav.querySelector('[data-nav-cards]');
+    if (wrap) {
+      var cards = Array.prototype.slice.call(wrap.querySelectorAll('.navbar_services-card'));
+      var activate = function (card) { cards.forEach(function (c) { c.classList.toggle('is-active', c === card); }); };
+      cards.forEach(function (c) {
+        c.addEventListener('mouseenter', function () { activate(c); });
+        c.addEventListener('focus', function () { activate(c); });
+      });
+      wrap.addEventListener('mouseleave', function () { activate(cards[0]); });
+    }
+    // Services and Resources are links too (navbar2_toggle-link, page links set in the Designer). With a mouse the menu opens
+    // on hover and a click on the label opens the page; in the mobile menu and on touch screens a tap keeps opening the menu.
+    var touch = window.matchMedia('(hover: none)').matches;
+    nav.querySelectorAll('.w-dropdown-toggle .navbar2_toggle-link').forEach(function (a) {
+      a.addEventListener('click', function (e) { if (!desktop || touch) e.preventDefault(); });
+      // Enter on the label follows the link (Enter / Space on the rest of the toggle still opens the menu)
+      a.addEventListener('keydown', function (e) { if (e.key === 'Enter') e.stopPropagation(); });
+    });
+    // Hover menus (Services, Resources): moving from the toggle down to an item usually crosses the empty strip of the
+    // navbar (for Resources, the items sit far to the left of it), and the menu used to close there. While a menu is open,
+    // an invisible triangle from the pointer to the top edge of the panel counts as part of the menu (CSS: the panel's
+    // ::before). It leaves out the toggle itself, so the label stays clickable, and it only lasts while the pointer is on
+    // its way down, so the other nav links still work.
+    if (desktop) {
+      nav.querySelectorAll('.w-dropdown').forEach(function (dd) {
+        var toggle = dd.querySelector('.w-dropdown-toggle'), list = dd.querySelector('.w-dropdown-list'), t = 0;
+        if (!toggle || !list) return;
+        var off = function () { clearTimeout(t); t = 0; list.style.setProperty('--nav-safe-h', '0px'); };
+        toggle.addEventListener('mousemove', function (e) {
+          clearTimeout(t); t = 0;
+          var r = list.getBoundingClientRect(), b = toggle.getBoundingClientRect();
+          var h = r.top - e.clientY, w = r.width, x = e.clientX - r.left;
+          if (!w || h <= 0) { off(); return; }
+          // where each side of the triangle leaves the toggle box (x from the panel's left edge, y from the pointer)
+          var L = b.left - r.left, R = b.right - r.left, B = Math.min(h, b.bottom - e.clientY);
+          var side = function (to, edge) { var y = to === x ? Infinity : h * (edge - x) / (to - x); return y < B ? [edge, y, 1] : [x + (to - x) * B / h, B, 0]; };
+          var a = side(0, L), c = side(w, R), pts = [a, [0, h], [w, h], c];
+          if (c[2]) pts.push([R, B]);
+          if (a[2]) pts.push([L, B]);
+          list.style.setProperty('--nav-safe-clip', 'polygon(' + pts.map(function (p) { return p[0].toFixed(1) + 'px ' + p[1].toFixed(1) + 'px'; }).join(',') + ')');
+          list.style.setProperty('--nav-safe-h', Math.ceil(h) + 'px');
+        });
+        list.addEventListener('mousemove', function (e) {
+          if (e.clientY >= list.getBoundingClientRect().top) { clearTimeout(t); t = 0; return; }
+          if (!t) t = setTimeout(off, 450);
+        });
+        dd.addEventListener('mouseleave', off);
+      });
+    }
+  }
+  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
+})();
+</script>
+<script>
+/* Navbar: hides when the visitor scrolls down and comes back when they scroll up. The slide itself is the Webflow interaction
+   "Navbar hide on scroll down, show on scroll up" (Interactions panel); this only tells it the direction with the custom events
+   nav-hide / nav-show. It stays put near the top of the page, while a menu or dropdown is open, and when it gets keyboard focus. */
+(function () {
+  var nav = document.querySelector('.navbar2_component');
+  if (!nav) return;
+  var hidden = false, lastY = window.scrollY, ticking = false;
+  function emit(name) {
+    try { var ix = window.Webflow && Webflow.require && Webflow.require('ix3'); if (ix && ix.emit) { ix.emit(name); return true; } } catch (e) {}
+    return false;
+  }
+  function show() { if (hidden && emit('nav-show')) hidden = false; }
+  function update() {
+    ticking = false;
+    var y = Math.max(window.scrollY, 0), d = y - lastY;
+    if (y <= nav.offsetHeight) { show(); lastY = y; return; }
+    if (Math.abs(d) < 8) return;
+    lastY = y;
+    if (d < 0) show();
+    else if (!hidden && !nav.querySelector('.w--open') && emit('nav-hide')) hidden = true;
+  }
+  window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  nav.addEventListener('focusin', show);
+})();
+</script>
+<style>
+/* Trusted logo cards without a written case study: the hover only darkens the card and swaps the logo (no stat row, logo stays centred); the card opens the client's site instead */
+.section_trusted .case-card_link.is-no-case:not([href]){cursor:default}
+.section_trusted .case-card_link.is-no-case .case-card_bottom{display:none}
+.section_trusted .case-card_link.is-no-case .case-card_logo-wrap{transform:none}
+</style>
+<script>
+// Trusted logo cards: a case study counts as written when its Heading is filled in Our Works (data-case on the card link).
+// Cards without one get is-no-case and open the client's site (Website Link, data-site) in a new tab, or are not a link when that is empty;
+// the rest fall back to /our-work/<slug> when their link is empty.
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.section_trusted .case-card_link').forEach(function (link) {
+    var list = link.closest('.w-dyn-items') || link.parentNode;
+    if (list.querySelector('.case-card_link[data-case]') && !link.getAttribute('data-case')) {
+      var site = link.getAttribute('data-site');
+      link.classList.add('is-no-case');
+      if (site) {
+        link.setAttribute('href', site);
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener');
+      } else {
+        link.removeAttribute('href');
+      }
+      return;
+    }
+    var slug = link.getAttribute('data-case-slug');
+    var href = link.getAttribute('href') || '';
+    if (slug && (href === '' || href.charAt(href.length - 1) === '#')) link.setAttribute('href', '/our-work/' + slug);
+  });
+});
+// Case study text and any element marked data-reveal-text: split into letters (screen readers get the plain sentence), then light them up once in view
+document.addEventListener('DOMContentLoaded', function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = [];
+  document.querySelectorAll('.home-projects_description, .svc-case_text, [data-reveal-text]').forEach(function (el) {
+    if (el.hasAttribute('data-text-reveal')) return;
+    var text = el.textContent.replace(/\s+/g, ' ').trim();
+    if (!text) return;
+    var sr = document.createElement('span');
+    sr.className = 'text-reveal_sr';
+    sr.textContent = text;
+    var visual = document.createElement('span');
+    visual.setAttribute('aria-hidden', 'true');
+    var chars = [];
+    text.split(' ').forEach(function (word, w) {
+      if (w) visual.appendChild(document.createTextNode(' '));
+      for (var i = 0; i < word.length; i++) {
+        var c = document.createElement('span');
+        c.className = 'text-reveal_char';
+        c.textContent = word.charAt(i);
+        visual.appendChild(c);
+        chars.push(c);
+      }
+    });
+    // Short lines take about 1.4s, long paragraphs up to 2.4s, never slower than 28ms per letter
+    var total = Math.max(1400, Math.min(2400, chars.length * 16));
+    var step = Math.min(28, total / chars.length);
+    chars.forEach(function (c, i) { c.style.transitionDelay = Math.round(i * step) + 'ms'; });
+    el.textContent = '';
+    el.appendChild(sr);
+    el.appendChild(visual);
+    el.setAttribute('data-text-reveal', '');
+    els.push(el);
+  });
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function (el) { el.classList.add('is-revealed'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-revealed');
+      io.unobserve(entry.target);
+    });
+  }, { threshold: 0.6 });
+  els.forEach(function (el) { io.observe(el); });
+});
+</script>
+<script>
+/* CMS item links: links to a Blogs or Our Works item built through the API publish without their address (href "#").
+   Each such link carries the item's slug (data-cms-slug, bound to Slug in the Designer) and its folder (data-cms-base,
+   e.g. /blog/ or /our-work/), and gets /blog/<slug> here. Links that already have their real address are left alone. */
+(function () {
+  function fix() {
+    document.querySelectorAll('a[data-cms-slug]').forEach(function (a) {
+      var slug = a.getAttribute('data-cms-slug'), href = a.getAttribute('href') || '';
+      if (slug && (href === '' || href.charAt(href.length - 1) === '#')) a.setAttribute('href', (a.getAttribute('data-cms-base') || '/') + slug);
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fix); else fix();
+})();
+</script>
+<script>
+/* Autoplay tabs: any native Webflow Tabs with data-tabs-autoplay. When the current tab's progress
+   animation (tabs-progress) ends, the next tab opens. Paused off-screen and while a tab has keyboard focus. */
+(function () {
+  document.querySelectorAll('.w-tabs[data-tabs-autoplay]').forEach(function (root) {
+    var menu = root.querySelector('.w-tab-menu'), content = root.querySelector('.w-tab-content');
+    if (!menu || !content || root.hasAttribute('data-tabs-ready')) return;
+    root.setAttribute('data-tabs-ready', '');
+    var links = [].slice.call(menu.children), panes = [].slice.call(content.children);
+    // Name each tab after its label so links and panes pair up uniquely before webflow.js reads them
+    links.forEach(function (link, i) {
+      var name = link.textContent.trim() || 'Tab ' + (i + 1);
+      link.setAttribute('data-w-tab', name);
+      link.classList.toggle('w--current', i === 0);
+      if (panes[i]) {
+        panes[i].setAttribute('data-w-tab', name);
+        panes[i].classList.toggle('w--tab-active', i === 0);
+      }
+    });
+    root.setAttribute('data-current', links[0].getAttribute('data-w-tab'));
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { root.classList.add('is-static'); return; }
+    var focused = false, visible = false, auto = false;
+    function sync() { root.classList.toggle('is-paused', focused || !visible); }
+    sync();
+    root.addEventListener('focusin', function (e) {
+      if (auto) return;
+      try { focused = e.target.matches(':focus-visible'); } catch (err) { focused = true; }
+      sync();
+    });
+    root.addEventListener('focusout', function (e) {
+      if (auto || root.contains(e.relatedTarget)) return;
+      focused = false; sync();
+    });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) { visible = entries[0].isIntersecting; sync(); }, { threshold: 0.35 }).observe(root);
+    } else { visible = true; sync(); }
+    menu.addEventListener('animationend', function (e) {
+      if (e.animationName !== 'tabs-progress') return;
+      var current = menu.querySelector('.w--current');
+      if (!current || !current.contains(e.target)) return;
+      var next = links[(links.indexOf(current) + 1) % links.length];
+      var prev = document.activeElement;
+      auto = true;
+      next.click();
+      // webflow.js focuses the new tab; give focus back so autoplay never steals it
+      if (prev && prev !== document.body && !menu.contains(prev)) prev.focus({ preventScroll: true });
+      else if (!menu.contains(prev)) next.blur();
+      auto = false;
+    });
+  });
+})();
+</script>
+
+<script>
+(function(){
+  /* Video testimonials popup. Plays Vimeo links (vimeo.com/ID, vimeo.com/ID/HASH for unlisted videos,
+     player.vimeo.com/video/ID?h=HASH) in an iframe, and anything else (.mp4) in a native <video>.
+     Edit VIDEOS to change which video each client plays. Any element can override the source with
+     data-video-src="https://vimeo.com/..." on the trigger or one of its parents. */
+  var VIDEOS={intaker:'https://vimeo.com/1245476052',ballerine:'https://vimeo.com/1245476053'};
+  var TRIGGERS='[data-video-src],.video-testimonial_media,.trusted_video';
+  var modal, box, video, frame, closeBtn, lastFocus, warmed;
+  function vimeo(u){
+    var m=/vimeo\.com\/(?:video\/)?(\d+)(?:\/([0-9a-f]+))?/i.exec(u||''); if(!m) return null;
+    var h=m[2]||(/[?&]h=([0-9a-f]+)/i.exec(u)||[])[1];
+    return 'https://player.vimeo.com/video/'+m[1]+'?autoplay=1&dnt=1&title=0&byline=0&portrait=0&playsinline=1'+(h?'&h='+h:'');
+  }
+  function warm(){
+    if(warmed) return; warmed=1;
+    ['https://player.vimeo.com','https://i.vimeocdn.com','https://f.vimeocdn.com'].forEach(function(h){ var l=document.createElement('link'); l.rel='preconnect'; l.href=h; l.crossOrigin=''; document.head.appendChild(l); });
+  }
+  function build(){
+    modal=document.createElement('div'); modal.className='vmodal'; modal.setAttribute('role','dialog'); modal.setAttribute('aria-modal','true'); modal.setAttribute('aria-label','Video testimonial');
+    modal.innerHTML='<div class="vmodal_box"><button type="button" class="vmodal_close" aria-label="Close video"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><video class="vmodal_video" controls playsinline preload="none"></video></div>';
+    document.body.appendChild(modal);
+    box=modal.querySelector('.vmodal_box'); video=modal.querySelector('video'); closeBtn=modal.querySelector('.vmodal_close');
+    closeBtn.addEventListener('click',close);
+    modal.addEventListener('click',function(e){ if(e.target===modal) close(); });
+    document.addEventListener('keydown',function(e){
+      if(!modal.classList.contains('is-open')) return;
+      if(e.key==='Escape') close();
+      if(e.key==='Tab'){ var f=[closeBtn,frame||video]; var i=f.indexOf(document.activeElement); e.preventDefault(); f[(i+(e.shiftKey?f.length-1:1))%f.length].focus(); }
+    });
+  }
+  function srcFor(t){
+    var o=t.closest('[data-video-src]'); if(o&&o.getAttribute('data-video-src')) return o.getAttribute('data-video-src');
+    var card=t.closest('.video-testimonial_card,.trusted_video,section')||t, txt=(card.textContent+' '+[].map.call(card.querySelectorAll('img[alt],[aria-label]'),function(n){return n.getAttribute('alt')||n.getAttribute('aria-label');}).join(' ')).toLowerCase();
+    return txt.indexOf('ballerine')>-1?VIDEOS.ballerine:VIDEOS.intaker;
+  }
+  function dropFrame(){ if(frame){ frame.remove(); frame=null; } }
+  function open(t){
+    if(!modal) build();
+    lastFocus=document.activeElement;
+    var src=srcFor(t), v=vimeo(src);
+    dropFrame();
+    if(v){
+      video.pause(); video.removeAttribute('src'); video.removeAttribute('poster');
+      frame=document.createElement('iframe'); frame.className='vmodal_frame'; frame.title='Video testimonial'; frame.style.cssText='position:absolute;left:0;top:0;width:100%;height:100%;border:0;background:#000';
+      frame.allow='autoplay; fullscreen; picture-in-picture; encrypted-media'; frame.setAttribute('allowfullscreen',''); frame.src=v;
+      box.appendChild(frame); modal.classList.add('is-vimeo'); video.style.display='none';
+    } else {
+      modal.classList.remove('is-vimeo'); video.style.display='';
+      var card=t.closest('.video-testimonial_card,.trusted_video')||t, img=card.querySelector('.image-cover,.trusted_video-image,img');
+      video.poster=img?(img.currentSrc||img.src):'';
+      video.src=src; video.currentTime=0;
+    }
+    document.documentElement.classList.add('vmodal-lock');
+    modal.classList.add('is-open');
+    if(!v){ var p=video.play(); if(p&&p.catch) p.catch(function(){}); }
+    setTimeout(function(){ closeBtn.focus(); },50);
+  }
+  function close(){
+    modal.classList.remove('is-open');
+    document.documentElement.classList.remove('vmodal-lock');
+    video.pause();
+    if(frame&&frame.contentWindow){ try{ frame.contentWindow.postMessage('{"method":"pause"}','https://player.vimeo.com'); }catch(err){} }
+    setTimeout(function(){ if(!modal.classList.contains('is-open')){ dropFrame(); video.removeAttribute('src'); video.load(); } },400);
+    if(lastFocus&&lastFocus.focus) lastFocus.focus();
+  }
+  function prep(){
+    [].forEach.call(document.querySelectorAll(TRIGGERS),function(el){
+      if(el.closest('.w-editor')) return;
+      el.setAttribute('data-vmodal-trigger','');
+      var btn=el.matches('[role="button"]')?el:el.querySelector('[role="button"]');
+      (btn||el).setAttribute('tabindex','0');
+      if(!btn){ el.setAttribute('role','button'); if(!el.getAttribute('aria-label')) el.setAttribute('aria-label','Play video testimonial'); }
+    });
+  }
+  document.addEventListener('click',function(e){
+    var t=e.target.closest('[data-vmodal-trigger]'); if(!t) return;
+    e.preventDefault(); open(t);
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key!=='Enter'&&e.key!==' ') return;
+    var t=e.target.closest&&e.target.closest('[data-vmodal-trigger]'); if(!t) return;
+    e.preventDefault(); open(t);
+  });
+  /* Open the connection to Vimeo as soon as someone points at or focuses a video, so it starts faster */
+  ['pointerover','focusin'].forEach(function(ev){ document.addEventListener(ev,function(e){ if(e.target.closest&&e.target.closest('[data-vmodal-trigger]')&&vimeo(srcFor(e.target.closest('[data-vmodal-trigger]')))) warm(); },{passive:true}); });
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',prep); else prep();
+})();
+</script>
+<script>
+/* Service pages FAQ accordion: one answer open at a time, opening one closes the rest of its list */
+(function () {
+  function initFaq(root) {
+    var items = [].slice.call(root.querySelectorAll('[data-svc-faq-item]'));
+    function set(item, open) {
+      var q = item.querySelector('[data-svc-faq-q]');
+      item.classList.toggle('is-open', open);
+      if (q) q.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    items.forEach(function (item) {
+      var q = item.querySelector('[data-svc-faq-q]');
+      if (!q) return;
+      function toggle() {
+        var open = !item.classList.contains('is-open');
+        if (open) items.forEach(function (other) { if (other !== item && other.classList.contains('is-open')) set(other, false); });
+        set(item, open);
+      }
+      q.addEventListener('click', toggle);
+      q.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+      });
+    });
+  }
+  function run() {
+    document.querySelectorAll('[data-svc-faq]').forEach(initFaq);
+  }
+  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', run); } else { run(); }
+})();
+</script>
+<style>
+/* Resources dropdown (navbar): Resources / Insights / Careers / Integrations, latest post card and hiring card */
+/* Resources dropdown links (Figma 8122:32): the hovered link becomes a white card, its icon turns dark and tilts, an arrow comes in */
+.navbar-resources_link{transition:background-color .35s ease,padding .4s cubic-bezier(.33,1,.68,1),border-color .35s ease,border-radius .35s ease}
+.navbar-resources_icon svg,.navbar-resources_link-arrow svg{display:block;width:100%;height:100%}
+.navbar-resources_icon{transition:transform .45s cubic-bezier(.34,1.56,.64,1)}
+.navbar-resources_icon rect,.navbar-resources_icon path{transition:fill .35s ease}
+.navbar-resources_link-title,.navbar-resources_link-text{transition:color .35s ease}
+.navbar-resources_link-arrow,.navbar-resources_link-arrow.arrow-swap{transform:translateX(-.5rem) scale(.85);transition:opacity .3s ease,transform .4s cubic-bezier(.33,1,.68,1),scale .2s cubic-bezier(.33,1,.68,1)}
+.navbar-resources_link:focus-visible{background-color:#fff;padding-left:1.25rem;padding-right:4.75rem;border-radius:1rem;border-color:transparent}
+.navbar-resources_link:first-child:is(:hover,:focus-visible){border-top-color:transparent}
+.navbar-resources_link:has(+ .navbar-resources_link:is(:hover,:focus-visible)){border-bottom-color:transparent}
+.navbar-resources_link:is(:hover,:focus-visible) .navbar-resources_link-title{color:#082216}
+.navbar-resources_link:is(:hover,:focus-visible) .navbar-resources_link-text{color:rgba(8,34,22,.6)}
+.navbar-resources_link:is(:hover,:focus-visible) .navbar-resources_icon{transform:rotate(-5deg)}
+.navbar-resources_link:is(:hover,:focus-visible) .navbar-resources_icon rect{fill:#082216}
+.navbar-resources_link:is(:hover,:focus-visible) .navbar-resources_icon path{fill:#fff}
+.navbar-resources_link:is(:hover,:focus-visible) .navbar-resources_link-arrow{opacity:1;transform:none}
+.navbar-resources_link:focus-visible,.navbar-resources_card:focus-visible{outline:2px solid rgba(255,255,255,.7);outline-offset:2px}
+.navbar-resources_card-title{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+.navbar-resources_card-text{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.navbar-resources_card-media{transition:border-color .3s ease}
+.navbar-resources_card-img{transition:transform .6s ease,opacity .3s ease}
+/* the latest post card keeps its image hidden until the post is loaded */
+.navbar-resources_card[data-nav-post]:not(.is-ready) .navbar-resources_card-img{opacity:0}
+@media (hover:hover){
+.navbar-resources_card:hover .navbar-resources_card-media{border-color:rgba(255,255,255,.4)}
+.navbar-resources_card:hover .navbar-resources_card-img{transform:scale(1.03)}
+}
+@media (prefers-reduced-motion:reduce){.navbar-resources_link,.navbar-resources_link-title,.navbar-resources_link-text,.navbar-resources_icon,.navbar-resources_icon rect,.navbar-resources_icon path,.navbar-resources_link-arrow,.navbar-resources_link-arrow.arrow-swap,.navbar-resources_card-media,.navbar-resources_card-img{transition:none}.navbar-resources_card:hover .navbar-resources_card-img{transform:none}}
+/* Services / Resources: on their own pages the label is full white, like the other nav links */
+.navbar2_dropdwn-toggle:has(.navbar2_toggle-link.w--current){opacity:1}
+/* Hover menus: the safe triangle between the pointer and the open panel (set by the nav script at the top of this footer) */
+@media (min-width:992px){
+.navbar2_dropdown-list.w--open::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:var(--nav-safe-h,0px);clip-path:var(--nav-safe-clip,none)}
+}
+/* Services menu cards: the hovered card's border lights up and its drawing lifts a little; the arrow glides through its circle (arrow swap below) */
+@media (min-width:992px) and (hover:hover) and (prefers-reduced-motion:no-preference){
+.navbar_services-card{transition:flex-grow .5s cubic-bezier(.65,0,.35,1),border-color .4s ease}
+.navbar_services-card:hover{border-color:rgba(255,255,255,.35)}
+.navbar_services-card-visual{transition:width .5s cubic-bezier(.65,0,.35,1),transform .5s cubic-bezier(.65,0,.35,1),translate .7s cubic-bezier(.22,1,.36,1)}
+.navbar_services-card:hover .navbar_services-card-visual{translate:0 -3%}
+}
+</style>
+<script>
+/* Resources dropdown: the hovered (or focused) item lights up, the first one is the default.
+   The latest post card and the open roles count come from the hidden CMS feed on /blog
+   (Blogs, newest by Custom date, and the Jobs list), loaded once per visit. */
+(function () {
+  var KEY = 'nues-nav-feed-v2', WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+  function parse(doc) {
+    var f = doc.querySelector('[data-nav-feed]');
+    if (!f) return null;
+    var d = { jobs: f.querySelectorAll('[data-nav-feed-jobs] .w-dyn-item').length };
+    var a = f.querySelector('[data-nav-feed-link]'), img = f.querySelector('[data-nav-feed-img]');
+    var text = function (s) { var el = f.querySelector(s); return el ? el.textContent.trim() : ''; };
+    var href = a && a.getAttribute('href'), slug = a && a.getAttribute('data-cms-slug');
+    // the feed link publishes as "#", so its address is built from the post slug (see CMS item links above)
+    if (slug && (!href || href.charAt(href.length - 1) === '#')) href = (a.getAttribute('data-cms-base') || '/') + slug;
+    if (href) {
+      d.href = href;
+      d.title = text('[data-nav-feed-title]');
+      d.desc = text('[data-nav-feed-desc]');
+      if (img) { d.img = img.getAttribute('src') || ''; d.srcset = img.getAttribute('srcset') || ''; }
+    }
+    return d;
+  }
+  function init() {
+    var nav = document.querySelector('.navbar2_component');
+    var wrap = nav && nav.querySelector('[data-nav-resources]');
+    if (!wrap || wrap.hasAttribute('data-ready')) return;
+    wrap.setAttribute('data-ready', '');
+    var links = [].slice.call(wrap.querySelectorAll('.navbar-resources_link'));
+    var activate = function (el) { links.forEach(function (l) { l.classList.toggle('is-active', l === el); }); };
+    links.forEach(function (l) {
+      l.addEventListener('mouseenter', function () { activate(l); });
+      l.addEventListener('focus', function () { activate(l); });
+    });
+    var list = wrap.querySelector('.navbar-resources_links');
+    if (list && links.length) list.addEventListener('mouseleave', function () { activate(links[0]); });
+    function apply(d) {
+      if (!d) return;
+      var card = wrap.querySelector('[data-nav-post]');
+      if (card && d.href) {
+        card.setAttribute('href', d.href);
+        var t = card.querySelector('.navbar-resources_card-title'), x = card.querySelector('.navbar-resources_card-text'), img = card.querySelector('.navbar-resources_card-img');
+        if (t && d.title) t.textContent = d.title;
+        if (x) x.textContent = d.desc || '';
+        if (img && d.img) {
+          img.removeAttribute('srcset');
+          img.src = d.img;
+          if (d.srcset) { img.sizes = '(max-width: 991px) 50vw, 420px'; img.srcset = d.srcset; }
+          img.alt = '';
+        }
+        card.classList.add('is-ready');
+      }
+      if (typeof d.jobs === 'number' && d.jobs > 0) {
+        var word = WORDS[d.jobs] || String(d.jobs);
+        wrap.querySelectorAll('[data-nav-jobs-text]').forEach(function (el) {
+          el.textContent = el.getAttribute('data-nav-jobs-text')
+            .replace('{n}', d.jobs)
+            .replace('{N}', word.charAt(0).toUpperCase() + word.slice(1))
+            .replace('{roles}', d.jobs === 1 ? 'role' : 'roles');
+        });
+      }
+    }
+    function save(d) { try { sessionStorage.setItem(KEY, JSON.stringify(d)); } catch (e) {} }
+    var cached = null;
+    try { cached = JSON.parse(sessionStorage.getItem(KEY) || 'null'); } catch (e) {}
+    var own = parse(document);
+    if (own) { apply(own); save(own); return; }
+    if (cached) { apply(cached); return; }
+    var started = false;
+    function load() {
+      if (started) return;
+      started = true;
+      fetch('/blog', { credentials: 'same-origin' })
+        .then(function (r) { return r.ok ? r.text() : ''; })
+        .then(function (html) {
+          if (!html) return;
+          var d = parse(new DOMParser().parseFromString(html, 'text/html'));
+          if (d) { apply(d); save(d); }
+        })
+        .catch(function () {});
+    }
+    ['pointerenter', 'focusin', 'touchstart'].forEach(function (type) { nav.addEventListener(type, load, { once: true, passive: true }); });
+    if ('requestIdleCallback' in window) { requestIdleCallback(load, { timeout: 4000 }); } else { setTimeout(load, 2500); }
+  }
+  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
+})();
+</script>
+<style>
+/* Circle arrows ("Glide" in nues-buttons.html): on hover the arrow passes through the circle, sliding out to the right while
+   a copy slides in from the left (diagonal arrows slide diagonally), and on arrow links the label slides 8px left.
+   On the Trusted logo cards (case-card_arrow) the circle itself is the trigger. The copy is added by the script below. */
+.arrow-swap{overflow:hidden;transition:background-color .35s cubic-bezier(.33,1,.68,1),border-color .35s cubic-bezier(.33,1,.68,1),color .35s cubic-bezier(.33,1,.68,1),scale .2s cubic-bezier(.33,1,.68,1)}
+.arrow-swap_cur,.arrow-swap_next{transition:translate .5s cubic-bezier(.76,0,.24,1),transform .5s cubic-bezier(.76,0,.24,1)}
+.arrow-swap_next{position:absolute;inset:0;margin:auto;display:flex;align-items:center;justify-content:center;pointer-events:none;translate:-1.75rem 0}
+.arrow-swap.is-diag .arrow-swap_next{translate:-1.375rem 1.375rem}
+.arrow-swap g.arrow-swap_next{position:static;translate:none;transform:translate(-28px,0)}
+.arrow-swap.is-diag g.arrow-swap_next{translate:none;transform:translate(-22px,22px)}
+/* The circle fills whenever its arrow swaps: mint when a whole card is the link; arrow links fill navy (white arrow),
+   on dark (.is-white) white (navy arrow); Growth (is-plus) and the Trusted sections keep their colours */
+.arrow-swap_trigger:hover .arrow-link_icon,.arrow-swap_trigger:focus-visible .arrow-link_icon{background-color:#5bd3a9;border-color:#5bd3a9;color:#fff}
+.arrow-link_component.arrow-swap_trigger:hover .arrow-link_icon,.arrow-link_component.arrow-swap_trigger:focus-visible .arrow-link_icon{background-color:#131a26;border-color:#131a26;color:#fff}
+.arrow-link_component.arrow-swap_trigger:hover .arrow-link_icon.is-white,.arrow-link_component.arrow-swap_trigger:focus-visible .arrow-link_icon.is-white{background-color:#fff;border-color:#fff;color:#131a26}
+.section_trusted .arrow-link_component.arrow-swap_trigger:hover .arrow-link_icon,.section_trusted .arrow-link_component.arrow-swap_trigger:focus-visible .arrow-link_icon{background-color:#5bd3a9;border-color:#5bd3a9;color:#fff}
+.arrow-swap_trigger:hover .arrow-link_icon.is-plus,.arrow-swap_trigger:focus-visible .arrow-link_icon.is-plus,.section_trusted.is-plus .arrow-swap_trigger:hover .arrow-link_icon,
+.arrow-link_component.arrow-swap_trigger:hover .arrow-link_icon.is-plus,.section_trusted.is-plus .arrow-link_component.arrow-swap_trigger:hover .arrow-link_icon{background-color:#c31379;border-color:#c31379}
+.arrow-link_component.arrow-swap_trigger>:not(.arrow-link_icon){transition:translate .5s cubic-bezier(.76,0,.24,1)}
+/* navbar card arrows keep their own fade (and slide in Resources) next to the swap */
+.navbar_services-card-arrow.arrow-swap{transition:opacity .3s ease,scale .2s cubic-bezier(.33,1,.68,1)}
+.navbar-resources_card-arrow.arrow-swap{transition:opacity .3s ease,transform .3s ease,scale .2s cubic-bezier(.33,1,.68,1)}
+@media (hover:hover) and (prefers-reduced-motion:no-preference){
+.arrow-swap_trigger:hover .arrow-swap_cur,.arrow-swap_trigger:focus-visible .arrow-swap_cur{translate:1.75rem 0}
+.arrow-swap_trigger:hover .is-diag .arrow-swap_cur,.arrow-swap_trigger:focus-visible .is-diag .arrow-swap_cur{translate:1.375rem -1.375rem}
+.arrow-swap_trigger:hover .arrow-swap_next,.arrow-swap_trigger:focus-visible .arrow-swap_next{translate:0 0}
+.arrow-swap_trigger:hover g.arrow-swap_cur,.arrow-swap_trigger:focus-visible g.arrow-swap_cur{translate:none;transform:translate(28px,0)}
+.arrow-swap_trigger:hover .is-diag g.arrow-swap_cur,.arrow-swap_trigger:focus-visible .is-diag g.arrow-swap_cur{translate:none;transform:translate(22px,-22px)}
+.arrow-swap_trigger:hover g.arrow-swap_next,.arrow-swap_trigger:focus-visible g.arrow-swap_next{translate:none;transform:translate(0,0)}
+.arrow-swap_trigger:active .arrow-swap,.arrow-swap.arrow-swap_trigger:active{scale:.94}
+.arrow-link_component.arrow-swap_trigger:hover>:not(.arrow-link_icon),.arrow-link_component.arrow-swap_trigger:focus-visible>:not(.arrow-link_icon){translate:-8px 0}
+}
+</style>
+<script>
+/* Buttons ("Shift", see the note in the site head): wrap each button's label so it can slide, add the arrow that slides in
+   on hover and hide the arrow the button had (a child that is only an arrow, like the old button_icon). Buttons without text
+   (icon buttons) are left alone. --shift-pad keeps the arrow inside the button's own right padding at every breakpoint. */
+(function () {
+  var SEL = '.button,.cta-v2_button,.pr-btn,.svc-btn,.svc-btn-outline,.team_hire-btn,.navbar2_button,.cs-hero_btn';
+  var ARROW = '<svg viewBox="0 0 14 14" fill="none"><path d="M2 7H12M12 7L7.5 2.5M12 7L7.5 11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  var ONLY_ARROW = /^[\s→↗➝➔›»>]*$/;
+  function pad(b) { b.style.setProperty('--shift-pad', getComputedStyle(b).paddingRight); }
+  function shift(b) {
+    if (b.hasAttribute('data-shift') || b.classList.contains('is-icon')) return;
+    var label = [], old = [];
+    [].slice.call(b.childNodes).forEach(function (n) {
+      if (n.nodeType === 3) { if (n.nodeValue.trim()) label.push(n); }
+      else if (n.nodeType === 1) { (ONLY_ARROW.test(n.textContent || '') ? old : label).push(n); }
+    });
+    if (!label.length) return;
+    var text = document.createElement('span');
+    text.className = 'btn-shift_text';
+    b.insertBefore(text, label[0]);
+    label.forEach(function (n) { text.appendChild(n); });
+    [].forEach.call(text.querySelectorAll('.button_icon,.icon-embed-custom-button-arrow'), function (n) { old.push(n); });
+    old.forEach(function (n) { n.setAttribute('data-shift-old', ''); });
+    var icon = document.createElement('span');
+    icon.className = 'btn-shift_icon';
+    icon.setAttribute('aria-hidden', 'true');
+    icon.innerHTML = ARROW;
+    b.appendChild(icon);
+    b.setAttribute('data-shift', '');
+    pad(b);
+  }
+  function init() {
+    document.querySelectorAll(SEL).forEach(shift);
+    var t = 0;
+    window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(function () { document.querySelectorAll('[data-shift]').forEach(pad); }, 150); });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script>
+<script>
+/* Circle arrows: copy the arrow inside every circle so it can swap on hover (CSS above).
+   Circles drawn as one SVG (Our Work) get the copy inside the SVG, clipped to the circle. */
+(function () {
+  var CIRCLES = '.arrow-link_icon,.svc-case_arrow,.cs-next_arrow,.bp-arrow,.in-link-circle,.ow-arrow-circle,.ow-cs_go,.case-card_arrow,.navbar_services-card-arrow,.navbar-resources_card-arrow,.navbar-resources_link-arrow';
+  var RECT_CIRCLES = '.navbar_services-card-arrow,.navbar-resources_card-arrow,.navbar-resources_link-arrow'; // circle drawn as a rounded <rect>
+  var NS = 'http://www.w3.org/2000/svg', n = 0;
+  function swapInSvg(svg) {
+    var paths = [].slice.call(svg.querySelectorAll('path'));
+    if (!paths.length) return false;
+    var vb = svg.viewBox && svg.viewBox.baseVal, w = (vb && vb.width) || 40, h = (vb && vb.height) || 40;
+    var id = 'arrow-swap-' + (++n);
+    var defs = document.createElementNS(NS, 'defs'), clip = document.createElementNS(NS, 'clipPath'), dot = document.createElementNS(NS, 'circle');
+    clip.setAttribute('id', id);
+    dot.setAttribute('cx', (vb ? vb.x : 0) + w / 2);
+    dot.setAttribute('cy', (vb ? vb.y : 0) + h / 2);
+    dot.setAttribute('r', Math.min(w, h) / 2 - 1);
+    clip.appendChild(dot);
+    defs.appendChild(clip);
+    svg.insertBefore(defs, svg.firstChild);
+    var wrap = document.createElementNS(NS, 'g'), cur = document.createElementNS(NS, 'g');
+    wrap.setAttribute('clip-path', 'url(#' + id + ')');
+    cur.setAttribute('class', 'arrow-swap_cur');
+    paths.forEach(function (p) { cur.appendChild(p); });
+    var next = cur.cloneNode(true);
+    next.setAttribute('class', 'arrow-swap_next');
+    wrap.appendChild(cur);
+    wrap.appendChild(next);
+    svg.appendChild(wrap);
+    return true;
+  }
+  function init() {
+    document.querySelectorAll(CIRCLES).forEach(function (c) {
+      if (c.classList.contains('arrow-swap')) return;
+      var drawn = c.querySelector('svg circle') || (c.matches(RECT_CIRCLES) && c.querySelector('svg rect'));
+      if (drawn) {
+        if (!swapInSvg(drawn.ownerSVGElement)) return;
+      } else {
+        var icon = c.firstElementChild;
+        if (!icon) return;
+        var copy = icon.cloneNode(true);
+        icon.classList.add('arrow-swap_cur');
+        copy.classList.add('arrow-swap_next');
+        copy.setAttribute('aria-hidden', 'true');
+        c.appendChild(copy);
+        if (getComputedStyle(c).position === 'static') c.style.position = 'relative';
+      }
+      c.classList.add('arrow-swap');
+      if (c.querySelector('.is-diagonal, .svc-icon.is-diag') || c.matches('.ow-cs_go')) c.classList.add('is-diag');
+      // Trusted logo cards: the arrow swaps when its circle is hovered (it turns mint then); other circles swap with their whole link
+      (c.matches('.case-card_arrow') ? c : (c.closest('a,button') || c)).classList.add('arrow-swap_trigger');
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script>
+<script>
+/* Entrance animations (see the note in the site head): reveal [data-reveal] / [data-reveal-stagger] once they reach
+   88% of the screen. Elements that reach the screen together come in one after another, 0.1s apart. */
+(function () {
+  window.nuesReveal = true;
+  var root = document.documentElement;
+  if (!root.classList.contains('reveal-on')) return;
+  var STEP = 0.1, MAX = 0.6, DUR = 1;
+  function parts(el) { return el.hasAttribute('data-reveal-stagger') ? [].slice.call(el.children) : [el]; }
+  function done(el) { el.classList.add('is-revealed'); }
+  function play(list) {
+    var t = 0;
+    list.forEach(function (el) {
+      var items = parts(el), last = 0;
+      items.forEach(function (item, j) {
+        var delay = t + Math.min(j * 0.08, 0.64);
+        last = Math.max(last, delay);
+        item.style.setProperty('--reveal-delay', delay.toFixed(2) + 's');
+        item.classList.add('reveal-run');
+      });
+      requestAnimationFrame(function () { requestAnimationFrame(function () { done(el); }); });
+      setTimeout(function () {
+        items.forEach(function (item) { item.classList.remove('reveal-run'); item.style.removeProperty('--reveal-delay'); });
+      }, (last + DUR) * 1000 + 100);
+      t = Math.min(t + STEP, MAX);
+    });
+  }
+  function init() {
+    var els = [].slice.call(document.querySelectorAll('[data-reveal],[data-reveal-stagger]'));
+    if (!('IntersectionObserver' in window)) { els.forEach(done); return; }
+    var io = new IntersectionObserver(function (entries) {
+      var now = [];
+      entries.forEach(function (e) {
+        if (e.boundingClientRect.bottom < 0) { io.unobserve(e.target); done(e.target); return; } // already scrolled past
+        if (!e.isIntersecting) return;
+        io.unobserve(e.target);
+        now.push(e.target);
+      });
+      now.sort(function (a, b) { return a.compareDocumentPosition(b) & 2 ? 1 : -1; });
+      if (now.length) play(now);
+    }, { rootMargin: '0px 0px -12% 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script>
+<script>
+/* Reviews animation (see the note in the site head). Works on top of the native Webflow Tabs and the autoplay above:
+   it only follows which tab is open, so tabs, autoplay and keyboard use stay as they were. */
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  // Each word of the quote in its own line mask; line breaks stay where they are
+  function split(q) {
+    var k = 0;
+    [].slice.call(q.childNodes).forEach(function (n) {
+      if (n.nodeType !== 3) return;
+      var f = document.createDocumentFragment();
+      n.textContent.split(/(\s+)/).forEach(function (p) {
+        if (!p) return;
+        if (/^\s+$/.test(p)) { f.appendChild(document.createTextNode(' ')); return; }
+        var w = document.createElement('span'), i = document.createElement('i');
+        w.className = 'rv-w'; i.textContent = p; i.style.setProperty('--i', k++);
+        w.appendChild(i); f.appendChild(w);
+      });
+      q.replaceChild(f, n);
+    });
+  }
+  document.querySelectorAll('.reviews_body.w-tabs').forEach(function (root) {
+    if (root.hasAttribute('data-rv-ready')) return;
+    var card = root.querySelector('.reviews_tabs-content'), menu = root.querySelector('.w-tab-menu');
+    if (!card || !menu) return;
+    root.setAttribute('data-rv-ready', '');
+    var links = [].slice.call(menu.children), panes = [].slice.call(card.children);
+    // The brand colours come from the slides (reviews_slide.is-...), so they stay editable in the Designer
+    var colors = panes.map(function (p) { var s = p.querySelector('.reviews_slide'); return s ? getComputedStyle(s).backgroundColor : ''; });
+    links.forEach(function (l, i) { l.style.setProperty('--rv-c', colors[i] || ''); l.style.setProperty('--i', i); });
+    panes.forEach(function (p) { var q = p.querySelector('.reviews_quote'); if (q) split(q); });
+    var cur = -1, timers = [];
+    function open() { for (var i = 0; i < links.length; i++) if (links[i].classList.contains('w--current')) return i; return 0; }
+    function go(i) {
+      if (i === cur || !panes[i]) return;
+      var o = cur; cur = i;
+      card.style.setProperty('--rv-bg', colors[i]);
+      if (o > -1) {
+        panes[o].classList.remove('rv-cur'); panes[o].classList.add('rv-out');
+        clearTimeout(timers[o]);
+        timers[o] = setTimeout(function () { if (cur !== o) panes[o].classList.remove('rv-out'); }, 700);
+      }
+      panes[i].classList.remove('rv-out'); void panes[i].offsetWidth; panes[i].classList.add('rv-cur');
+    }
+    card.style.setProperty('--rv-bg', colors[open()]);
+    root.classList.add('rv-on');
+    // The card opens when a third of it is on screen, then the open tab's quote comes in
+    new IntersectionObserver(function (es, o) {
+      if (!es[0].isIntersecting) return;
+      o.disconnect();
+      root.classList.add('rv-in');
+      setTimeout(function () { go(open()); }, 350);
+    }, { threshold: 0.35 }).observe(root);
+    // Follow the open tab (click, keyboard or autoplay)
+    new MutationObserver(function () { if (root.classList.contains('rv-in')) go(open()); })
+      .observe(menu, { attributes: true, subtree: true, attributeFilter: ['class'] });
+    card.addEventListener('mouseenter', function () { root.classList.add('rv-hold'); });
+    card.addEventListener('mouseleave', function () { root.classList.remove('rv-hold'); });
+  });
+})();
+</script>
+<style>
+/* Navbar dropdowns (Services, Resources) on desktop: both open the same way. The panel unrolls from under the navbar, its
+   content comes in from just above and the blurred backdrop fades in. This replaces the Relume fade that only Services had
+   (its inline opacity is overruled here). Moving straight from one menu to the other only swaps them (is-swap, script below). */
+@media (min-width:992px){
+.navbar2_dropdown-list.w--open{opacity:1!important}
+.navbar2_dropdown-list.w--open .navbar-dropdown-menu_content{animation:nav-dd-in .55s cubic-bezier(.22,1,.36,1) backwards}
+.navbar2_dropdown-list.w--open .navbar-dropdown-menu_content>*{animation:nav-dd-item .6s cubic-bezier(.22,1,.36,1) .1s backwards}
+.navbar2_dropdown-list.w--open .navbar-dropdown-menu_content>:nth-child(2){animation-delay:.16s}
+.navbar2_dropdown-list.w--open .navbar-dropdown-menu_content>:nth-child(3){animation-delay:.22s}
+.navbar2_dropdown-list.w--open::after{animation:nav-dd-fade .45s ease backwards}
+.navbar2_dropdown-list.w--open.is-swap .navbar-dropdown-menu_content,.navbar2_dropdown-list.w--open.is-swap::after{animation:none}
+.navbar2_dropdown-list.w--open.is-swap .navbar-dropdown-menu_content>*{animation:nav-dd-fade .3s ease backwards}
+}
+@keyframes nav-dd-in{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes nav-dd-item{from{opacity:0;transform:translateY(-.75rem)}to{opacity:1;transform:none}}
+@keyframes nav-dd-fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.navbar2_dropdown-list.w--open .navbar-dropdown-menu_content,.navbar2_dropdown-list.w--open .navbar-dropdown-menu_content>*,.navbar2_dropdown-list.w--open::after{animation:none}}
+</style>
+<script>
+/* Navbar dropdowns: opening one while the other is still open (or has just closed) swaps the panels without replaying the unroll */
+(function () {
+  function init() {
+    var lists = [].slice.call(document.querySelectorAll('.navbar2_component .navbar2_dropdown-list'));
+    if (lists.length < 2 || !window.MutationObserver) return;
+    var open = lists.map(function (l) { return l.classList.contains('w--open'); }), last = 0;
+    var mo = new MutationObserver(function () {
+      var now = Date.now();
+      lists.forEach(function (l, i) {
+        var o = l.classList.contains('w--open');
+        if (o && !open[i]) l.classList.toggle('is-swap', now - last < 300 || lists.some(function (x, j) { return j !== i && x.classList.contains('w--open'); }));
+        if (!o && open[i]) last = now;
+        open[i] = o;
+      });
+    });
+    lists.forEach(function (l) { mo.observe(l, { attributes: true, attributeFilter: ['class'] }); });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script>
+<script>
+/* Case links (site-wide): a project opens its case study only when one is written (Case title filled in Our Works, bound to
+   data-case); otherwise the client's live site (Website link, data-site) in a new tab, or no link at all. Applies to every CMS
+   link that has both attributes; also on hover / focus / tap, so cards that Finsweet re-renders follow it too. */
+(function () {
+  function route(a) {
+    if (!a || !a.hasAttribute('data-site') || (a.getAttribute('data-case') || '').trim()) return;
+    var site = (a.getAttribute('data-site') || '').trim();
+    if (!/^https?:\/\//i.test(site)) { a.removeAttribute('href'); return; }
+    if (a.getAttribute('href') === site) return;
+    a.setAttribute('href', site); a.setAttribute('target', '_blank'); a.setAttribute('rel', 'noopener');
+  }
+  function all() { document.querySelectorAll('a[data-case]').forEach(route); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', all); else all();
+  ['pointerover', 'focusin', 'touchstart', 'click'].forEach(function (t) {
+    document.addEventListener(t, function (e) { route(e.target.closest && e.target.closest('a[data-case]')); }, { capture: true, passive: true });
+  });
+})();
+</script>

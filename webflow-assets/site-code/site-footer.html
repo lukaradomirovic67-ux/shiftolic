@@ -141,53 +141,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (slug && (href === '' || href.charAt(href.length - 1) === '#')) link.setAttribute('href', '/our-work/' + slug);
   });
 });
-// Case study text and any element marked data-reveal-text: split into letters (screen readers get the plain sentence), then light them up once in view
-document.addEventListener('DOMContentLoaded', function () {
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var els = [];
-  document.querySelectorAll('.home-projects_description, .svc-case_text, [data-reveal-text]').forEach(function (el) {
-    if (el.hasAttribute('data-text-reveal')) return;
-    var text = el.textContent.replace(/\s+/g, ' ').trim();
-    if (!text) return;
-    var sr = document.createElement('span');
-    sr.className = 'text-reveal_sr';
-    sr.textContent = text;
-    var visual = document.createElement('span');
-    visual.setAttribute('aria-hidden', 'true');
-    var chars = [];
-    text.split(' ').forEach(function (word, w) {
-      if (w) visual.appendChild(document.createTextNode(' '));
-      for (var i = 0; i < word.length; i++) {
-        var c = document.createElement('span');
-        c.className = 'text-reveal_char';
-        c.textContent = word.charAt(i);
-        visual.appendChild(c);
-        chars.push(c);
-      }
-    });
-    // Short lines take about 1.4s, long paragraphs up to 2.4s, never slower than 28ms per letter
-    var total = Math.max(1400, Math.min(2400, chars.length * 16));
-    var step = Math.min(28, total / chars.length);
-    chars.forEach(function (c, i) { c.style.transitionDelay = Math.round(i * step) + 'ms'; });
-    el.textContent = '';
-    el.appendChild(sr);
-    el.appendChild(visual);
-    el.setAttribute('data-text-reveal', '');
-    els.push(el);
-  });
-  if (reduce || !('IntersectionObserver' in window)) {
-    els.forEach(function (el) { el.classList.add('is-revealed'); });
-    return;
-  }
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('is-revealed');
-      io.unobserve(entry.target);
-    });
-  }, { threshold: 0.6 });
-  els.forEach(function (el) { io.observe(el); });
-});
 </script>
 <script>
 /* CMS item links: links to a Blogs or Our Works item built through the API publish without their address (href "#").

@@ -3,6 +3,47 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 13.11.2026: SEO korak 2, site footer kod skraćen sa 48.409 na 30.451 znakova (objavljeno na staging)
+Drugi korak SEO faze, po tvom „ajde radi seo redom“. Bez vizuelne promene i bez promene ponašanja.
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Site settings → Custom code → Footer | 48.409 od 50.000 znakova: čitljiv kod sa komentarima, 21 blok | 30.451 znakova (−17.958, −37%). Isti blokovi istim redom, CSS i skripte minifikovani alatom esbuild, HTML komentar uklonjen, na vrhu jedan komentar koji upućuje na čitljivu verziju. Uklonjena je stara kopija skripte za ispisivanje teksta |
+
+Uklonjena skripta (2.048 znakova): „Case study text… light them up once in view“, koja je deo teksta pretvarala u slova.
+- Novija verzija iste skripte je od 13.11. u site head-u, radi na istim elementima (`.home-projects_description`, `.svc-case_text`, `[data-reveal-text]`) i pokreće se prva.
+- Stara skripta je zato svaki element preskakala (`data-text-reveal` već postoji), pa nije radila ništa.
+
+Zašto:
+- Footer je bio skoro pun (1.591 znak slobodno). Sada ima 19.549 slobodnih.
+- Kod ide uz svaku stranicu, pa je svaka lakša za oko 18 KB HTML-a. Na primer, Home: 292.206 → 274.326 bajtova.
+
+Fajlovi:
+- Kopija pre izmene: `backup/page-code/2026-11-13/site-footer.html`.
+- Čitljiva verzija, koja se ubuduće menja: `webflow-assets/site-code/site-footer.html` (iz nje je uklonjena i stara skripta).
+- Ono što je u Webflow-u: `webflow-assets/site-code/site-footer.min.html`.
+
+Provera pre objave, lokalno (15 stranica, svaka sa starim i sa novim footer kodom):
+- CSS: svih 74 pravila je isto kad ih pregledač pročita. Pet je drugačije zapisano, ali znači isto (`300ms` = `0.3s`, `translate(-28px, 0)` = `translate(-28px)`, `translateX` = `translate`).
+- Bez animacija: isti DOM i isti linkovi, bez JS grešaka.
+  - Na 14 stranica je i screenshot identičan.
+  - Na Privacy screenshot nije identičan do piksela, ali se golim okom ne razlikuje.
+  - Na Design & Development jedna razlika je u vremenu učitavanja prstenova (`nr-box.ready`), ne u kodu footera.
+- Sa animacijama, na 1440, isto se ponaša:
+  - meni (Services i Resources na hover, „safe“ trougao, zamena panela, kartica poslednjeg posta);
+  - dugmad (Shift);
+  - strelice (Glide);
+  - reveal animacije, ispisivanje teksta i animacija recenzija;
+  - FAQ (jedan otvoren);
+  - video popup (Vimeo, fokus, Esc);
+  - Trusted kartice i case linkovi.
+- Na telefonu (iPhone 13) se isto ponaša: meni se otvara, Services se otvara na dodir i ne vodi na stranicu, a dugmad su ista.
+
+Provera posle objave (staging):
+- footer u objavljenom HTML-u je bajt po bajt isti kao `site-footer.min.html`;
+- 18 stranica na 1440 i 390: bez JS grešaka i bez širenja strane;
+- meni, dugmad, strelice i ispisivanje teksta rade (About: obe rečenice se ispišu).
+
 ## 13.11.2026: ceo dvobojni tekst kreće siv i ceo pobeli (objavljeno na staging)
 Po tvom zahtevu („ceo ovaj tekst treba da se kao izpise ne samo ovaj deo“, pa „ceo ovaj tekst je siv na pocetku i onda ceo pobeli postepeno“). Menja tačku 1 iz unosa ispod.
 
