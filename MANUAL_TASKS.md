@@ -56,7 +56,7 @@ Nazive menija proverite u trenutnom Webflow interfejsu.
    - Izgled je isti (1200 px je i dalje 2× najšira veličina prikaza).
    - Dovoljno je da ih ubaciš u **Assets** panel i javiš mi. Ja ih zamenim u 6 okvira (po 3 u Ballerine i Shiftolic redu) i objavim.
    - Webflow API ne dozvoljava da ja upload-ujem fajl.
-10. **LaSalle Agri, „Full page screenshot“**:
+10. **[URAĐENO 13.11., provereno na stagingu]** **LaSalle Agri, „Full page screenshot“**:
     - Webflow je odbio izmenu preko API-ja dva puta („Missing fields“, bez objašnjenja).
     - CMS → **Our Works** → **LaSalle Agri** → polje **Full page screenshot** → zameni sliku sa `images/lasalle-home-full-hq-1200.webp` (594 KB umesto 1.019 KB) → Save.
     - Alt tekst ostaje „LaSalle Agri home page“.
