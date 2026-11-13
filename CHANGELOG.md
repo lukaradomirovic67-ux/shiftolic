@@ -3,6 +3,29 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 13.11.2026: SEO korak 4 (tehnički SEO), početak: test linkova, vraćeno na staro (objavljeno na staging)
+Po tvom „radi tehnicki seo“. Zaustavljeno na tvoj zahtev („stopiraj nastavljamo ujutru“). Na sajtu nema promena u odnosu na stanje pre koraka 4.
+
+**Test na Blog stranici:** link featured kartice (`ins-featured_card`, element `a4289385-ed16-88ab-2476-d4d525963265`).
+- Pre: `{mode: collectionPage}`, objavljen kao `href="#"`; skripta u footer-u ga ispravlja na `/blog/<slug>`.
+- Proba 1: `to: "blog"` → objavljeno `href="blog"` (pogrešno).
+- Proba 2: `to: "detail_blog"` → objavljeno `href="detail_blog"` (pogrešno).
+- Posle: vraćeno na `{mode: collectionPage}` i objavljeno. Provereno: ponovo je `href="#"`, a skripta ga ispravlja kao i ranije.
+
+**Zaključak:** Webflow API ne može da poveže link sa „trenutnom stavkom“ kolekcije. To je jedan klik u Designer-u po elementu (Link settings → Collection page → Current …), pa ide na ručnu listu.
+
+**Utvrđeno za nastavak:**
+- Linkovi `#` u sirovom HTML-u:
+  - ka blog postovima: Blog featured kartice, „povezani postovi“ u šablonu posta, Resources postovi;
+  - ka case stranicama: Our Work „View project“ i tabovi, Resources case kartice, „sledeći projekti“ u case šablonu.
+  - Case linkove treba rešiti tek posle odluke o praznim case stranicama (QUESTIONS 13). Inače bi crawleri dobili linkove ka praznim stranicama.
+- Alat za stranice podržava og:image (`openGraph.imageUrl` / `imageAssetId`) i JSON-LD po stranici. og:image sada nema nijedna statična stranica.
+- Postojeći JSON-LD:
+  - Home (Organization), About, 3 servisne stranice, Our Work, Let's talk, šablon blog posta;
+  - u njima su relativni URL-ovi (`"url": "/"`), ime je i „Nues“ i „NUES“, a na Our Work se pominje Pythagora (draft stavka);
+  - Services, SEO & AEO, Pricing, Careers, Blog, Resources i pravne stranice nemaju schema.
+- Šabloni Hero Cards (/hero-cards/…), Case team (/case-team/…) i Jobs (/jobs/…) objavljuju javne stranice za interne kolekcije.
+
 ## 13.11.2026: SEO korak 3 (prvi deo), lakše slike celih sajtova i manje preuzimanja na telefonu (objavljeno na staging)
 Treći korak SEO faze, brzina na mobilnom. Izgled se nije promenio.
 
