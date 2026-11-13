@@ -65,5 +65,21 @@ Nazive menija proverite u trenutnom Webflow interfejsu.
     - Posle sledeće objave proveravam da se ništa nije promenilo.
 12. **Aeonik u WOFF2** (vidi QUESTIONS 18): ako postoje WOFF2 fajlovi iz licence, upload-ovati ih umesto `.otf` za težine 300, 400, 500 i 600, pod istim imenom porodice **Aeonik**.
 
+## SEO korak 4, tehnički SEO (dodato 13.11.)
+13. **Slike za deljenje (og:image)**, posle odobrenja predloga (`notes/og-predlozi-2026-11-13.png`):
+    - ubaciti 13 fajlova iz `webflow-assets/perf/manual/og/` u **Assets** panel i javiti mi;
+    - ja ih vezujem za stranice preko API-ja (Open Graph image) i dodajem `twitter:card` gde nedostaje.
+14. **Linkovi ka blog postovima u sirovom HTML-u** (sada `href="#"`; posetiocima ih ispravlja skripta, a crawleri bez JavaScript-a ih ne vide):
+    - Webflow API ne može da poveže link sa „trenutnom stavkom“ kolekcije, pa se to radi u Designer-u.
+    - Za svaki od 3 elementa: izabrati link → **Link settings** → **Collection page** → **Current Blogs** (ili slično, zavisi od interfejsa).
+    - Elementi:
+      - **Blog** stranica, istaknute kartice na vrhu (klasa `ins-featured_card`);
+      - šablon **Blogs Template**, kartice „povezani postovi“ pri dnu (klasa `blog-card_component`);
+      - **Resources**, lista postova (klasa `res-post`).
+    - Posle toga mi javi, pa proverim sirovi HTML.
+    - Linkove ka case stranicama (Our Work, Resources, „sledeći projekti“) ostavljamo kako jesu:
+      - prazne case stranice već dobijaju noindex i šalju posetioca na sajt klijenta (head kod šablona Our Works);
+      - pravi link bi crawlerima bez JavaScript-a pokazao baš te prazne stranice.
+
 ## Kasnije faze
 Biće dopunjeno u fazama 4–6 (sitemap izuzeci po stranici…).

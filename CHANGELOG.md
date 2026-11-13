@@ -3,6 +3,15 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 13.11.2026: SEO korak 4, predlozi za odobrenje (ništa nije objavljeno)
+- Slike za deljenje (og:image):
+  - 13 predloga 1200×630, u stilu sajta, sa postojećim naslovima: `webflow-assets/perf/manual/og/`, pregled u `notes/og-predlozi-2026-11-13.png`;
+  - sada nijedna statična stranica nema og:image;
+  - povezivanje ide preko API-ja kad ih odobriš i ubaciš u Assets (MANUAL_TASKS 13).
+- Title i description: izmereno na svim stranicama, postovima i case stranicama. Predlozi za one van granica su u `notes/seo-predlozi-2026-11-13.md` (tekst, čeka odobrenje).
+- Nađeno: sve 4 servisne stranice imaju isti H1 („Zero to a live site, in weeks not quarters“). Predlog je u istoj belešci.
+- Linkovi `#` ka blog postovima: ručni korak u Designer-u (MANUAL_TASKS 14).
+
 ## 13.11.2026: SEO korak 4, strukturisani podaci (schema) ispravljeni i dopunjeni (objavljeno na staging)
 Po tvom „nastavi“. Vidljivi tekst i izgled se nisu menjali; schema koristi samo tekst koji već postoji na stranicama i u CMS-u.
 
