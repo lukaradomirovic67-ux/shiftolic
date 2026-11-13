@@ -1,0 +1,594 @@
+<meta name="dash-one-writer">
+<style>
+  .na { container-type: inline-size; display: grid; gap: var(--cds-gap-xl); font-family: var(--font-anthropic-sans); color: var(--color-fg); }
+  .na-kicker { margin: 0 0 var(--cds-gap-xs); color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .na-lede { margin: 0; max-width: 62ch; font-size: var(--cds-font-size-heading); line-height: 1.4; }
+  .na-lede b, .na-sub b { font-weight: var(--cds-font-weight-medium); font-variant-numeric: tabular-nums; }
+  .na-h2 { margin: 0 0 var(--cds-gap-xs); font-size: var(--cds-font-size-title); font-weight: var(--cds-font-weight-medium); }
+  .na-sub { margin: 0 0 var(--cds-gap-md); max-width: 72ch; color: var(--color-fg-muted); }
+  .na-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); }
+  .na-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--cds-gap-md); }
+  .na-tile-label { margin: 0; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .na-tile-big { margin: var(--cds-gap-sm) 0 var(--cds-gap-xs); font-family: var(--font-anthropic-serif); font-weight: 400; font-size: 2.6rem; line-height: 1; font-variant-numeric: tabular-nums; }
+  .na-tile-sub { margin: 0; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .na-tile-sub b { color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
+  .na-g-ok { color: var(--color-ok); } .na-g-warn { color: var(--color-warn); } .na-g-bad { color: var(--color-bad); }
+  .na-gaps { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: var(--cds-gap-md); }
+  .na-gap { display: flex; flex-direction: column; gap: var(--cds-gap-xs); border-top: 3px solid var(--color-ok); }
+  .na-gap.na-hit { border-top-color: var(--color-warn); }
+  .na-gap-n { margin: 0; font-family: var(--font-anthropic-serif); font-weight: 400; font-size: 2rem; line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .na-gap-of { font-family: var(--font-anthropic-sans); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  .na-gap-label { margin: 0; font-size: var(--cds-font-size-body); }
+  .na-gap-note { margin: 0; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .na-gap details { margin-top: auto; font-size: var(--cds-font-size-caption); }
+  .na-gap summary { cursor: pointer; color: var(--color-fg-muted); }
+  .na-list { margin: var(--cds-gap-xs) 0 0; padding: 0; list-style: none; display: grid; gap: 4px; max-height: 220px; overflow: auto; }
+  .na-list code { font-size: 12px; word-break: break-all; }
+  .na-li-v { color: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
+  .na-scroll { overflow-x: auto; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); }
+  .na-table { width: 100%; border-collapse: collapse; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+  .na-table th, .na-table td { padding: 8px 10px; border-bottom: 1px solid var(--color-border-line); text-align: center; white-space: nowrap; vertical-align: middle; }
+  .na-table tbody tr:last-child td { border-bottom: 0; }
+  .na-table thead th { background: var(--color-panel); color: var(--color-fg-muted); font-weight: var(--cds-font-weight-medium); }
+  .na-table .na-grp th { padding-bottom: 0; border-bottom: 0; font-size: 11px; letter-spacing: .05em; text-transform: uppercase; }
+  .na-table th:first-child, .na-table td:first-child { position: sticky; left: 0; z-index: 1; text-align: left; background: var(--color-bg); }
+  .na-table thead th:first-child { background: var(--color-panel); }
+  .na-table .na-sep { border-left: 1px solid var(--color-border-line); }
+  .na-table .na-left { text-align: left; }
+  .na-table .na-wrap { white-space: normal; min-width: 14rem; max-width: 26rem; text-align: left; }
+  .na-table th[tabindex] { cursor: pointer; user-select: none; }
+  .na-table th[aria-sort="ascending"]::after { content: " ↑"; }
+  .na-table th[aria-sort="descending"]::after { content: " ↓"; }
+  .na-table tbody tr:hover td { background: color-mix(in srgb, var(--color-panel) 70%, var(--color-bg)); }
+  .na-path { display: inline-block; max-width: 22rem; overflow: hidden; text-overflow: ellipsis; vertical-align: middle; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
+  @container (max-width: 560px) { .na-path { max-width: 9.5rem; } }
+  .na-pill { display: inline-block; min-width: 2.4em; padding: 2px 7px; border-radius: 999px; font-weight: var(--cds-font-weight-medium); }
+  .na-s-ok { background: color-mix(in srgb, var(--color-ok) 16%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-ok) 45%, transparent); }
+  .na-s-warn { background: color-mix(in srgb, var(--color-warn) 18%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-warn) 50%, transparent); }
+  .na-s-bad { background: color-mix(in srgb, var(--color-bad) 16%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-bad) 45%, transparent); }
+  .na-s-na { color: var(--color-fg-muted); }
+  .na-dot { display: inline-block; width: 8px; height: 8px; margin-right: 6px; border-radius: 50%; vertical-align: middle; background: var(--color-fg-muted); }
+  .na-dot.ok { background: var(--color-ok); } .na-dot.warn { background: var(--color-warn); } .na-dot.bad { background: var(--color-bad); }
+  .na-small { font-size: 11px; color: var(--color-fg-muted); }
+  .na-muted { display: block; color: var(--color-fg-muted); font-size: 11px; }
+  .na-bar { display: inline-block; height: 8px; margin-right: 8px; border-radius: 4px; vertical-align: middle; }
+  .na-empty { padding: var(--cds-pad-lg) !important; color: var(--color-fg-muted); text-align: left !important; }
+  .na-tools { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--cds-gap-sm); margin-bottom: var(--cds-gap-sm); }
+  .na-seg { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 3px; border: 1px solid var(--color-border-line); border-radius: 999px; background: var(--color-panel); }
+  .na-seg button { padding: 5px 12px; border: 0; border-radius: 999px; background: transparent; color: var(--color-fg-muted); font: inherit; font-size: var(--cds-font-size-caption); cursor: pointer; }
+  .na-seg button[aria-pressed="true"] { background: var(--color-bg); color: var(--color-fg); box-shadow: 0 0 0 1px var(--color-border-line); }
+  .na-legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm); color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .na-legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .na-notes summary { cursor: pointer; font-weight: var(--cds-font-weight-medium); }
+  .na-notes ul { margin: var(--cds-gap-sm) 0 0; padding-left: 1.2em; display: grid; gap: var(--cds-gap-xs); color: var(--color-fg-muted); max-width: 80ch; }
+  [data-dash-source-state=refreshing] { opacity: .5; }
+</style>
+
+<div class="na">
+  <header id="summary">
+    <p class="na-kicker">Staging (webflow.io) · Lighthouse 13.6.0 · mobilni i desktop · 13. 11. 2026.</p>
+    <p class="na-lede">Najslabija je brzina na mobilnom: prosek je <b class="dash-skeleton" data-draw="avg" data-source="avg" data-field="mPerf" data-row="0">—</b>, a na desktopu <b class="dash-skeleton" data-draw="avg" data-source="avg" data-field="dPerf" data-row="0">—</b>. SEO, pristupačnost i best practices su <b class="dash-skeleton" data-draw="avg" data-source="avg" data-field="mSeo" data-row="0">—</b>, <b class="dash-skeleton" data-draw="avg" data-source="avg" data-field="mA11y" data-row="0">—</b> i <b class="dash-skeleton" data-draw="avg" data-source="avg" data-field="mBp" data-row="0">—</b> na mobilnom, na <b class="dash-skeleton" data-draw="avg" data-source="avg" data-field="pages" data-row="0">—</b> stranica.</p>
+  </header>
+
+  <section id="averages" aria-label="Prosek sajta">
+    <div class="na-tiles">
+      <div class="na-card" id="tile-perf">
+        <p class="na-tile-label">Performance · mobilni</p>
+        <p class="na-tile-big"><b class="dash-skeleton" data-draw="avg" data-grade data-source="avg" data-field="mPerf" data-row="0">—</b></p>
+        <p class="na-tile-sub">Desktop <b data-draw="avg" data-source="avg" data-field="dPerf" data-row="0">—</b></p>
+      </div>
+      <div class="na-card" id="tile-a11y">
+        <p class="na-tile-label">Pristupačnost · mobilni</p>
+        <p class="na-tile-big"><b class="dash-skeleton" data-draw="avg" data-grade data-source="avg" data-field="mA11y" data-row="0">—</b></p>
+        <p class="na-tile-sub">Desktop <b data-draw="avg" data-source="avg" data-field="dA11y" data-row="0">—</b></p>
+      </div>
+      <div class="na-card" id="tile-bp">
+        <p class="na-tile-label">Best practices · mobilni</p>
+        <p class="na-tile-big"><b class="dash-skeleton" data-draw="avg" data-grade data-source="avg" data-field="mBp" data-row="0">—</b></p>
+        <p class="na-tile-sub">Desktop <b data-draw="avg" data-source="avg" data-field="dBp" data-row="0">—</b></p>
+      </div>
+      <div class="na-card" id="tile-seo">
+        <p class="na-tile-label">SEO · mobilni</p>
+        <p class="na-tile-big"><b class="dash-skeleton" data-draw="avg" data-grade data-source="avg" data-field="mSeo" data-row="0">—</b></p>
+        <p class="na-tile-sub">Desktop <b data-draw="avg" data-source="avg" data-field="dSeo" data-row="0">—</b> · bez staging blokade</p>
+      </div>
+      <div class="na-card" id="tile-ab">
+        <p class="na-tile-label">Agentic browsing · mobilni</p>
+        <p class="na-tile-big"><b class="dash-skeleton" data-draw="avg" data-grade data-source="avg" data-field="mAb" data-row="0">—</b></p>
+        <p class="na-tile-sub">Desktop <b data-draw="avg" data-source="avg" data-field="dAb" data-row="0">—</b></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gaps">
+    <h2 class="na-h2">Propusti u sadržaju na celom sajtu</h2>
+    <p class="na-sub">Iz HTML-a koji pretraživač dobije pre JavaScripta. Broj je koliko stranica ne prolazi proveru; spisak je ispod svake kartice.</p>
+    <div class="na-gaps">
+      <div class="na-card na-gap" id="gap-title-long" data-gap="titleLong">
+        <p class="na-gap-n"><b data-draw="gap" data-gap="titleLong" data-source="gaps" data-field="count" data-where="gap=titleLong">—</b><span class="na-gap-of"> / <b data-draw="gap" data-gap="titleLong" data-source="gaps" data-field="of" data-where="gap=titleLong">—</b> stranica</span></p>
+        <p class="na-gap-label">Meta title duži od <b data-draw="gap" data-gap="titleLong" data-source="gaps" data-field="limit" data-where="gap=titleLong">—</b> znakova</p>
+        <p class="na-gap-note">Google ga skraćuje u rezultatima.</p>
+        <details><summary>Stranice</summary><ul class="na-list" data-draw="gap-list" data-gap="titleLong" data-source="gaps"></ul></details>
+      </div>
+      <div class="na-card na-gap" id="gap-title-short" data-gap="titleShort">
+        <p class="na-gap-n"><b data-draw="gap" data-gap="titleShort" data-source="gaps" data-field="count" data-where="gap=titleShort">—</b><span class="na-gap-of"> / <b data-draw="gap" data-gap="titleShort" data-source="gaps" data-field="of" data-where="gap=titleShort">—</b> stranica</span></p>
+        <p class="na-gap-label">Meta title kraći od <b data-draw="gap" data-gap="titleShort" data-source="gaps" data-field="limit" data-where="gap=titleShort">—</b> znakova</p>
+        <p class="na-gap-note">Ostaje prostora za ključnu reč.</p>
+        <details><summary>Stranice</summary><ul class="na-list" data-draw="gap-list" data-gap="titleShort" data-source="gaps"></ul></details>
+      </div>
+      <div class="na-card na-gap" id="gap-desc-long" data-gap="descLong">
+        <p class="na-gap-n"><b data-draw="gap" data-gap="descLong" data-source="gaps" data-field="count" data-where="gap=descLong">—</b><span class="na-gap-of"> / <b data-draw="gap" data-gap="descLong" data-source="gaps" data-field="of" data-where="gap=descLong">—</b> stranica</span></p>
+        <p class="na-gap-label">Meta description duži od <b data-draw="gap" data-gap="descLong" data-source="gaps" data-field="limit" data-where="gap=descLong">—</b> znakova</p>
+        <p class="na-gap-note">Kraj teksta se ne vidi u rezultatima.</p>
+        <details><summary>Stranice</summary><ul class="na-list" data-draw="gap-list" data-gap="descLong" data-source="gaps"></ul></details>
+      </div>
+      <div class="na-card na-gap" id="gap-desc-short" data-gap="descShort">
+        <p class="na-gap-n"><b data-draw="gap" data-gap="descShort" data-source="gaps" data-field="count" data-where="gap=descShort">—</b><span class="na-gap-of"> / <b data-draw="gap" data-gap="descShort" data-source="gaps" data-field="of" data-where="gap=descShort">—</b> stranica</span></p>
+        <p class="na-gap-label">Meta description kraći od <b data-draw="gap" data-gap="descShort" data-source="gaps" data-field="limit" data-where="gap=descShort">—</b> znakova</p>
+        <p class="na-gap-note">Google ga češće zameni svojim tekstom.</p>
+        <details><summary>Stranice</summary><ul class="na-list" data-draw="gap-list" data-gap="descShort" data-source="gaps"></ul></details>
+      </div>
+      <div class="na-card na-gap" id="gap-h1" data-gap="h1Bad">
+        <p class="na-gap-n"><b data-draw="gap" data-gap="h1Bad" data-source="gaps" data-field="count" data-where="gap=h1Bad">—</b><span class="na-gap-of"> / <b data-draw="gap" data-gap="h1Bad" data-source="gaps" data-field="of" data-where="gap=h1Bad">—</b> stranica</span></p>
+        <p class="na-gap-label">Nema tačno jedan H1</p>
+        <p class="na-gap-note">Svaka stranica treba jedan glavni naslov.</p>
+        <details><summary>Stranice</summary><ul class="na-list" data-draw="gap-list" data-gap="h1Bad" data-source="gaps"></ul></details>
+      </div>
+      <div class="na-card na-gap" id="gap-schema" data-gap="noSchema">
+        <p class="na-gap-n"><b data-draw="gap" data-gap="noSchema" data-source="gaps" data-field="count" data-where="gap=noSchema">—</b><span class="na-gap-of"> / <b data-draw="gap" data-gap="noSchema" data-source="gaps" data-field="of" data-where="gap=noSchema">—</b> stranica</span></p>
+        <p class="na-gap-label">Bez schema (JSON-LD) podataka</p>
+        <p class="na-gap-note">Schema pomaže pretraživačima i AI odgovorima.</p>
+        <details><summary>Stranice</summary><ul class="na-list" data-draw="gap-list" data-gap="noSchema" data-source="gaps"></ul></details>
+      </div>
+      <div class="na-card na-gap" id="gap-og-image" data-gap="noOgImage">
+        <p class="na-gap-n"><b data-draw="gap" data-gap="noOgImage" data-source="gaps" data-field="count" data-where="gap=noOgImage">—</b><span class="na-gap-of"> / <b data-draw="gap" data-gap="noOgImage" data-source="gaps" data-field="of" data-where="gap=noOgImage">—</b> stranica</span></p>
+        <p class="na-gap-label">Bez OG slike</p>
+        <p class="na-gap-note">Slika za deljenje na LinkedInu i u porukama.</p>
+        <details><summary>Stranice</summary><ul class="na-list" data-draw="gap-list" data-gap="noOgImage" data-source="gaps"></ul></details>
+      </div>
+      <div class="na-card na-gap" id="gap-og-title" data-gap="noOgTitle">
+        <p class="na-gap-n"><b data-draw="gap" data-gap="noOgTitle" data-source="gaps" data-field="count" data-where="gap=noOgTitle">—</b><span class="na-gap-of"> / <b data-draw="gap" data-gap="noOgTitle" data-source="gaps" data-field="of" data-where="gap=noOgTitle">—</b> stranica</span></p>
+        <p class="na-gap-label">Bez OG naslova i opisa</p>
+        <p class="na-gap-note">Deljeni link tada nema svoj naslov i opis.</p>
+        <details><summary>Stranice</summary><ul class="na-list" data-draw="gap-list" data-gap="noOgTitle" data-source="gaps"></ul></details>
+      </div>
+      <div class="na-card na-gap" id="gap-canonical" data-gap="noCanonical">
+        <p class="na-gap-n"><b data-draw="gap" data-gap="noCanonical" data-source="gaps" data-field="count" data-where="gap=noCanonical">—</b><span class="na-gap-of"> / <b data-draw="gap" data-gap="noCanonical" data-source="gaps" data-field="of" data-where="gap=noCanonical">—</b> stranica</span></p>
+        <p class="na-gap-label">Bez canonical taga</p>
+        <p class="na-gap-note">Webflow ga dodaje kad se u podešavanjima upiše adresa pravog domena.</p>
+        <details><summary>Stranice</summary><ul class="na-list" data-draw="gap-list" data-gap="noCanonical" data-source="gaps"></ul></details>
+      </div>
+      <div class="na-card na-gap" id="gap-noindex" data-gap="noindex">
+        <p class="na-gap-n"><b data-draw="gap" data-gap="noindex" data-source="gaps" data-field="count" data-where="gap=noindex">—</b><span class="na-gap-of"> / <b data-draw="gap" data-gap="noindex" data-source="gaps" data-field="of" data-where="gap=noindex">—</b> stranica</span></p>
+        <p class="na-gap-label">Označeno noindex</p>
+        <p class="na-gap-note">Ne ulaze u Google. Proveriti da li je namerno.</p>
+        <details><summary>Stranice</summary><ul class="na-list" data-draw="gap-list" data-gap="noindex" data-source="gaps"></ul></details>
+      </div>
+      <div class="na-card na-gap" id="gap-alt" data-gap="altEmpty">
+        <p class="na-gap-n"><b data-draw="gap" data-gap="altEmpty" data-source="gaps" data-field="count" data-where="gap=altEmpty">—</b><span class="na-gap-of"> / <b data-draw="gap" data-gap="altEmpty" data-source="gaps" data-field="of" data-where="gap=altEmpty">—</b> slika</span></p>
+        <p class="na-gap-label">Slike sa praznim alt tekstom</p>
+        <p class="na-gap-note">Ispravno za pozadine i ikone, ali fotografije i screenshot-ovi treba da imaju opis. Slika bez alt atributa: <b data-draw="gap" data-gap="altMissing" data-source="gaps" data-field="count" data-where="gap=altMissing">—</b>.</p>
+        <details><summary>Po stranici</summary><ul class="na-list" data-draw="gap-list" data-gap="altEmpty" data-source="gaps"></ul></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="perf">
+    <h2 class="na-h2">Najveći dobici u brzini</h2>
+    <p class="na-sub">Lighthouse procena na mobilnom, sabrano preko svih stranica. Najviše bi se uštedelo na stavci <b data-draw="top-opp" data-source="opportunities" data-field="label" data-row="0">—</b>: ukupno <b data-draw="top-opp" data-source="opportunities" data-field="kbTotal" data-row="0">—</b> KB na <b data-draw="top-opp" data-source="opportunities" data-field="pagesMobile" data-row="0">—</b> stranica.</p>
+    <div class="na-scroll">
+      <table class="na-table" data-source="opportunities" data-row-key="id">
+        <thead>
+          <tr>
+            <th data-field="label" data-kind="label">Šta</th>
+            <th data-field="pagesMobile" data-kind="num">Stranica (mob.)</th>
+            <th data-field="kbTotal" data-kind="bar" class="na-left">Ukupno (KB)</th>
+            <th data-field="kbMedian" data-kind="num">Po stranici (KB, medijana)</th>
+            <th data-field="msMedian" data-kind="num">Brže za (ms, medijana)</th>
+          </tr>
+        </thead>
+        <tbody data-draw="opps-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="groups">
+    <h2 class="na-h2">Kolekcije: medijana ocena</h2>
+    <p class="na-sub">Stranice iz iste kolekcije dele šablon, pa je medijana dovoljna. Pojedinačne stranice su u tabeli ispod.</p>
+    <div class="na-scroll">
+      <table class="na-table" data-source="groups" data-row-key="group">
+        <thead>
+          <tr class="na-grp"><th></th><th></th><th colspan="5" class="na-sep">Mobilni</th><th colspan="5" class="na-sep">Desktop</th></tr>
+          <tr>
+            <th data-field="group" data-kind="group">Grupa</th>
+            <th data-field="n" data-kind="num">Stranica</th>
+            <th data-field="mPerf" data-kind="score" class="na-sep">Perf</th>
+            <th data-field="mA11y" data-kind="score">A11y</th>
+            <th data-field="mBp" data-kind="score">BP</th>
+            <th data-field="mSeo" data-kind="score">SEO</th>
+            <th data-field="mAb" data-kind="score">AB</th>
+            <th data-field="dPerf" data-kind="score" class="na-sep">Perf</th>
+            <th data-field="dA11y" data-kind="score">A11y</th>
+            <th data-field="dBp" data-kind="score">BP</th>
+            <th data-field="dSeo" data-kind="score">SEO</th>
+            <th data-field="dAb" data-kind="score">AB</th>
+          </tr>
+        </thead>
+        <tbody data-draw="groups-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="pages">
+    <h2 class="na-h2">Sve stranice</h2>
+    <p class="na-sub">Klik na naslov kolone sortira tabelu. Ceo spisak sa dodatnim kolonama (LCP, težina stranice, title i description) preuzima se kao CSV iz Sources.</p>
+    <div class="na-tools">
+      <div class="na-seg" role="group" aria-label="Grupa stranica">
+        <button type="button" data-group="all" aria-pressed="true">Sve</button>
+        <button type="button" data-group="Stranica" aria-pressed="false">Stranice</button>
+        <button type="button" data-group="Case study" aria-pressed="false">Case studies</button>
+        <button type="button" data-group="Blog" aria-pressed="false">Blog</button>
+      </div>
+      <div class="na-legend" aria-label="Legenda">
+        <span><i class="na-dot ok"></i>prolazi</span><span><i class="na-dot warn"></i>popraviti</span><span><i class="na-dot bad"></i>nedostaje</span>
+      </div>
+    </div>
+    <div class="na-scroll">
+      <table class="na-table" id="pages-table" data-sortable data-source="pages" data-row-key="path">
+        <thead>
+          <tr class="na-grp"><th></th><th colspan="5" class="na-sep">Mobilni</th><th colspan="5" class="na-sep">Desktop</th><th colspan="6" class="na-sep">Provere u HTML-u</th></tr>
+          <tr>
+            <th data-field="path" data-kind="path">Stranica</th>
+            <th data-field="mPerf" data-kind="score" class="na-sep">Perf</th>
+            <th data-field="mA11y" data-kind="score">A11y</th>
+            <th data-field="mBp" data-kind="score">BP</th>
+            <th data-field="mSeo" data-kind="score">SEO</th>
+            <th data-field="mAb" data-kind="score">AB</th>
+            <th data-field="dPerf" data-kind="score" class="na-sep">Perf</th>
+            <th data-field="dA11y" data-kind="score">A11y</th>
+            <th data-field="dBp" data-kind="score">BP</th>
+            <th data-field="dSeo" data-kind="score">SEO</th>
+            <th data-field="dAb" data-kind="score">AB</th>
+            <th data-field="h1" data-kind="check" class="na-sep">H1</th>
+            <th data-field="titleLen" data-kind="check">Title</th>
+            <th data-field="descLen" data-kind="check">Desc</th>
+            <th data-field="schema" data-kind="check" class="na-left">Schema</th>
+            <th data-field="ogImage" data-kind="check">OG slika</th>
+            <th data-field="altEmpty" data-kind="num">Prazan alt</th>
+          </tr>
+        </thead>
+        <tbody data-draw="pages-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="fails">
+    <h2 class="na-h2">Provere koje ne prolaze</h2>
+    <p class="na-sub">Pristupačnost, best practices, SEO i agentic browsing. Broj je koliko stranica ne prolazi, posebno za mobilni i desktop.</p>
+    <div class="na-scroll">
+      <table class="na-table" data-source="failing-audits" data-row-key="id">
+        <thead>
+          <tr>
+            <th data-field="label" data-kind="label">Problem</th>
+            <th data-field="category" data-kind="text" class="na-left">Kategorija</th>
+            <th data-field="pagesMobile" data-kind="num">Mob.</th>
+            <th data-field="pagesDesktop" data-kind="num">Desk.</th>
+            <th data-field="note" data-kind="wrap" class="na-left">Napomena</th>
+            <th data-field="examples" data-kind="wrap" class="na-left">Primeri stranica</th>
+          </tr>
+        </thead>
+        <tbody data-draw="fails-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="notes">
+    <details class="na-notes">
+      <summary>Kako je mereno i šta ocene znače</summary>
+      <ul>
+        <li>Ocene su od 0 do 100: zeleno od <b data-draw="rule" data-rule="good">—</b> naviše, žuto od <b data-draw="rule" data-rule="ok">—</b> do ispod toga, crveno ispod <b data-draw="rule" data-rule="ok">—</b>.</li>
+        <li>SEO je prikazan bez provere „Page is blocked from indexing”, jer staging robots.txt blokira ceo sajt. Na pravom domenu ta blokada ne postoji. Lighthouse ocena sa blokadom je u CSV-u, kolone mSeoRaw i dSeoRaw.</li>
+        <li>Best practices je prikazan bez provere grešaka u konzoli kada sve greške dolaze od adresa koje okruženje za merenje ne može da otvori (Google Tag Manager, Google Analytics, Webflow fontovi, Cloudflare). Original je u kolonama mBpRaw i dBpRaw.</li>
+        <li>AB je Lighthouse kategorija Agentic browsing (nova, još se menja): koliko je stranica čitljiva AI agentima. Računaju se samo provere koje važe za stranicu; WebMCP provere se ne računaju jer sajt nema WebMCP alate.</li>
+        <li>Jedno merenje po stranici i uređaju, sa Lighthouse simulacijom sporijeg telefona i mreže. Razlika od 5 do 10 poena između dva merenja je normalna, a PageSpeed Insights može dati drugačije brojeve.</li>
+        <li>Provere u HTML-u čitaju stranicu pre JavaScripta, kako je prvo vidi pretraživač. Title je dobar od 30 do 60 znakova, description od 110 do 160, a H1 treba da bude tačno jedan.</li>
+      </ul>
+    </details>
+  </section>
+</div>
+
+<script>
+  window.NA = {
+    good: 90,
+    ok: 50,
+    state: { group: 'all', sort: null, dir: 1 },
+    grade(v) { return v == null ? 'na' : v >= NA.good ? 'ok' : v >= NA.ok ? 'warn' : 'bad'; },
+    enc(s) { return String(s).replace(/%/g, '%25').replace(/&/g, '%26').replace(/=/g, '%3D'); },
+    text(v) { return v == null || v === '' ? '—' : String(v); },
+    cols(table) {
+      return [...table.querySelectorAll('thead th[data-field]')].map((th) => ({ f: th.dataset.field, kind: th.dataset.kind || 'text', cls: th.className }));
+    },
+    cmp(a, b) {
+      const na = a == null || a === '', nb = b == null || b === '';
+      if (na || nb) return na - nb;
+      return typeof a === 'number' && typeof b === 'number' ? a - b : String(a).localeCompare(String(b), 'sr');
+    },
+    placeholder(tb, n, status) {
+      const tr = document.createElement('tr'), td = document.createElement('td');
+      td.colSpan = n;
+      td.className = 'na-empty';
+      td.textContent = status === 'loading' ? 'Učitavam…' : status === 'ok' ? 'Nema redova.' : 'Nije učitano.';
+      tr.append(td);
+      tb.replaceChildren(tr);
+    },
+    flags() {
+      const g = dash.data('gaps'), out = {};
+      if (g.status !== 'ok' || !Array.isArray(g.data)) return null;
+      g.data.forEach((row) => (row.pages || []).forEach((p) => (out[p] = out[p] || new Set()).add(row.gap)));
+      return out;
+    },
+    check(f, r, flags) {
+      if (!flags) return 'na';
+      const s = flags[r.path], has = (...ids) => ids.some((id) => s && s.has(id));
+      if (f === 'h1') return has('h1Bad') ? 'bad' : 'ok';
+      if (f === 'titleLen') return !r.titleLen ? 'bad' : has('titleLong', 'titleShort') ? 'warn' : 'ok';
+      if (f === 'descLen') return !r.descLen ? 'bad' : has('descLong', 'descShort') ? 'warn' : 'ok';
+      if (f === 'schema') return has('noSchema') ? 'warn' : 'ok';
+      if (f === 'ogImage') return has('noOgImage') ? 'warn' : 'ok';
+      return 'na';
+    },
+    cell(col, r, ctx) {
+      const td = document.createElement('td');
+      if (/na-sep/.test(col.cls)) td.classList.add('na-sep');
+      if (/na-left/.test(col.cls)) td.classList.add('na-left');
+      const v = r[col.f];
+      if (col.kind === 'path') {
+        const s = document.createElement('span');
+        s.className = 'na-path';
+        s.title = v;
+        s.textContent = v;
+        td.append(s);
+      } else if (col.kind === 'score') {
+        const s = document.createElement('span');
+        s.className = 'na-pill na-s-' + NA.grade(v);
+        s.textContent = NA.text(v);
+        td.append(s);
+      } else if (col.kind === 'check') {
+        const d = document.createElement('i');
+        d.className = 'na-dot ' + NA.check(col.f, r, ctx.flags);
+        td.append(d, NA.text(v));
+        if (col.f === 'schema') td.classList.add('na-small');
+      } else if (col.kind === 'bar') {
+        const b = document.createElement('span');
+        b.className = 'na-bar';
+        b.style.width = Math.max(2, Math.round(120 * (v || 0) / (ctx.max || 1))) + 'px';
+        b.style.background = dash.colors[0];
+        td.append(b, NA.text(v));
+      } else if (col.kind === 'label') {
+        td.classList.add('na-wrap');
+        td.append(NA.text(v));
+        if (r.lighthouse && r.lighthouse !== v) {
+          const m = document.createElement('span');
+          m.className = 'na-muted';
+          m.textContent = r.lighthouse;
+          td.append(m);
+        }
+      } else if (col.kind === 'wrap') {
+        td.classList.add('na-wrap', 'na-small');
+        td.textContent = v || '';
+      } else if (col.kind === 'group') {
+        td.textContent = { Stranica: 'Stranice', 'Case study': 'Case studies', Blog: 'Blog' }[v] || NA.text(v);
+      } else {
+        td.textContent = NA.text(v);
+      }
+      return td;
+    },
+    body(tb, id, rows, ctx) {
+      const cols = NA.cols(tb.closest('table'));
+      const d = dash.data(id);
+      if (d.status !== 'ok' || !Array.isArray(rows)) return NA.placeholder(tb, cols.length, d.status);
+      if (!rows.length) return NA.placeholder(tb, cols.length, 'ok');
+      tb.replaceChildren(...rows.map((r) => {
+        const tr = document.createElement('tr');
+        cols.forEach((c) => tr.append(NA.cell(c, r, ctx || {})));
+        return tr;
+      }));
+    },
+  };
+</script>
+
+<script>
+  dash.calc('avg', {
+    inputs: ['pages'],
+    title: 'Prosek sajta',
+    description: 'Prosek ocena svih stranica, mobilni i desktop.',
+    fn: (pages) => {
+      const fields = ['mPerf', 'mA11y', 'mBp', 'mSeo', 'mAb', 'dPerf', 'dA11y', 'dBp', 'dSeo', 'dAb'];
+      const out = { pages: pages.length };
+      fields.forEach((f) => {
+        const vals = pages.map((p) => p[f]).filter((v) => typeof v === 'number');
+        out[f] = vals.length ? Math.round(vals.reduce((a, b) => a + b, 0) / vals.length) : null;
+      });
+      return [out];
+    },
+  });
+
+  dash.calc('groups', {
+    inputs: ['pages'],
+    title: 'Medijana po grupi',
+    description: 'Medijana ocena za obične stranice, case studies i blog postove.',
+    fn: (pages) => {
+      const fields = ['mPerf', 'mA11y', 'mBp', 'mSeo', 'mAb', 'dPerf', 'dA11y', 'dBp', 'dSeo', 'dAb'];
+      const median = (vals) => {
+        const s = vals.filter((v) => typeof v === 'number').sort((a, b) => a - b);
+        if (!s.length) return null;
+        const m = Math.floor(s.length / 2);
+        return s.length % 2 ? s[m] : Math.round((s[m - 1] + s[m]) / 2);
+      };
+      return ['Stranica', 'Case study', 'Blog'].map((group) => {
+        const rows = pages.filter((p) => p.group === group);
+        const out = { group, n: rows.length };
+        fields.forEach((f) => (out[f] = median(rows.map((r) => r[f]))));
+        return out;
+      });
+    },
+  });
+
+  dash.calc('gaps', {
+    inputs: ['pages'],
+    title: 'Propusti u sadržaju',
+    description: 'Koliko stranica ne prolazi svaku proveru iz HTML-a, sa spiskom stranica.',
+    fn: (pages) => {
+      const titleMin = 30, titleMax = 60, descMin = 110, descMax = 160;
+      const checks = [
+        ['titleLong', 'titleLen', titleMax, (p) => p.titleLen > titleMax],
+        ['titleShort', 'titleLen', titleMin, (p) => p.titleLen > 0 && p.titleLen < titleMin],
+        ['descLong', 'descLen', descMax, (p) => p.descLen > descMax],
+        ['descShort', 'descLen', descMin, (p) => p.descLen > 0 && p.descLen < descMin],
+        ['h1Bad', 'h1', 1, (p) => p.h1 !== 1],
+        ['noSchema', 'schema', null, (p) => !p.schema],
+        ['noOgImage', 'ogImage', null, (p) => p.ogImage !== 'da'],
+        ['noOgTitle', 'ogTitle', null, (p) => p.ogTitle !== 'da'],
+        ['noCanonical', 'canonical', null, (p) => p.canonical !== 'da'],
+        ['noindex', 'noindex', null, (p) => p.noindex === 'da'],
+      ];
+      const rows = checks.map(([gap, field, limit, test]) => {
+        const hit = pages.filter(test);
+        return { gap, field, limit, count: hit.length, of: pages.length, pages: hit.map((p) => p.path) };
+      });
+      const sum = (f) => pages.reduce((a, p) => a + (p[f] || 0), 0);
+      const withEmpty = pages.filter((p) => p.altEmpty > 0).sort((a, b) => b.altEmpty - a.altEmpty);
+      rows.push({ gap: 'altEmpty', field: 'altEmpty', limit: null, count: sum('altEmpty'), of: sum('imgs'), pages: withEmpty.map((p) => p.path) });
+      rows.push({ gap: 'altMissing', field: 'altMissing', limit: null, count: sum('altMissing'), of: sum('imgs'), pages: pages.filter((p) => p.altMissing > 0).map((p) => p.path) });
+      return rows;
+    },
+  });
+</script>
+
+<script>
+  dash.draw('avg', (el) => {
+    const r = dash.data('avg');
+    const row = r.status === 'ok' && Array.isArray(r.data) ? r.data[0] : null;
+    const v = row ? row[el.dataset.field] : null;
+    el.textContent = NA.text(v);
+    el.classList.toggle('dash-skeleton', r.status === 'loading');
+    if (el.hasAttribute('data-grade')) ['ok', 'warn', 'bad'].forEach((g) => el.classList.toggle('na-g-' + g, row != null && NA.grade(v) === g));
+  });
+
+  dash.draw('gap', (el) => {
+    const r = dash.data('gaps');
+    const row = r.status === 'ok' && Array.isArray(r.data) ? r.data.find((x) => x.gap === el.dataset.gap) : null;
+    el.textContent = NA.text(row ? row[el.dataset.field] : null);
+  });
+
+  dash.draw('gap-list', (ul) => {
+    const g = dash.data('gaps'), p = dash.data('pages');
+    if (g.status !== 'ok' || p.status !== 'ok' || !Array.isArray(g.data)) return ul.replaceChildren();
+    const row = g.data.find((x) => x.gap === ul.dataset.gap);
+    const byPath = new Map(p.data.map((r) => [r.path, r]));
+    const items = (row ? row.pages : []).map((path) => {
+      const li = document.createElement('li');
+      const c = document.createElement('code');
+      c.textContent = path;
+      c.setAttribute('data-source', 'pages');
+      c.setAttribute('data-field', 'path');
+      c.setAttribute('data-where', 'path=' + NA.enc(path));
+      li.append(c);
+      const page = byPath.get(path);
+      if (page && typeof page[row.field] === 'number') {
+        const v = document.createElement('span');
+        v.className = 'na-li-v';
+        v.setAttribute('data-source', 'pages');
+        v.setAttribute('data-field', row.field);
+        v.setAttribute('data-where', 'path=' + NA.enc(path));
+        v.textContent = String(page[row.field]);
+        li.append(' · ', v);
+      }
+      return li;
+    });
+    if (!items.length) {
+      const li = document.createElement('li');
+      li.textContent = 'Nijedna';
+      items.push(li);
+    }
+    ul.replaceChildren(...items);
+  });
+
+  dash.draw('top-opp', (el) => {
+    const r = dash.data('opportunities');
+    const row = r.status === 'ok' && r.data.length ? r.data[0] : null;
+    el.textContent = NA.text(row ? row[el.dataset.field] : null);
+  });
+
+  dash.draw('rule', (el) => {
+    el.textContent = String(NA[el.dataset.rule]);
+  });
+
+  dash.draw('opps-body', (tb) => {
+    const r = dash.data('opportunities');
+    const rows = r.status === 'ok' ? r.data : null;
+    const max = rows ? Math.max(1, ...rows.map((x) => x.kbTotal || 0)) : 1;
+    NA.body(tb, 'opportunities', rows, { max });
+  });
+
+  dash.draw('groups-body', (tb) => {
+    const r = dash.data('groups');
+    NA.body(tb, 'groups', r.status === 'ok' ? r.data : null);
+  });
+
+  dash.draw('fails-body', (tb) => {
+    const r = dash.data('failing-audits');
+    NA.body(tb, 'failing-audits', r.status === 'ok' ? r.data : null);
+  });
+
+  dash.draw('pages-body', (tb) => {
+    const r = dash.data('pages');
+    if (r.status !== 'ok') return NA.body(tb, 'pages', null);
+    const s = NA.state;
+    const rows = r.data
+      .map((row, i) => ({ row, i }))
+      .filter(({ row }) => s.group === 'all' || row.group === s.group)
+      .sort((a, b) => (s.sort ? NA.cmp(a.row[s.sort], b.row[s.sort]) * s.dir : 0) || a.i - b.i)
+      .map(({ row }) => row);
+    NA.body(tb, 'pages', rows, { flags: NA.flags() });
+  });
+</script>
+
+<script>
+  dash.onData(() => {
+    const g = dash.data('gaps');
+    const rows = g.status === 'ok' && Array.isArray(g.data) ? g.data : [];
+    document.querySelectorAll('.na-gap[data-gap]').forEach((card) => {
+      const row = rows.find((x) => x.gap === card.dataset.gap);
+      card.classList.toggle('na-hit', !!row && row.gap !== 'altEmpty' && row.count > 0);
+      card.querySelectorAll('details').forEach((d) => (d.hidden = !!row && row.pages.length === 0));
+    });
+  });
+
+  document.querySelectorAll('.na-seg [data-group]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      NA.state.group = btn.dataset.group;
+      document.querySelectorAll('.na-seg [data-group]').forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+      dash.draw('pages-body');
+    });
+  });
+
+  document.querySelectorAll('table[data-sortable] thead th[data-field]').forEach((th) => {
+    th.setAttribute('tabindex', '0');
+    th.setAttribute('aria-sort', 'none');
+    const sort = () => {
+      const s = NA.state, f = th.dataset.field;
+      s.dir = s.sort === f ? -s.dir : 1;
+      s.sort = f;
+      th.closest('table').querySelectorAll('thead th[data-field]').forEach((h) => h.setAttribute('aria-sort', h === th ? (s.dir > 0 ? 'ascending' : 'descending') : 'none'));
+      dash.draw('pages-body');
+    };
+    th.addEventListener('click', sort);
+    th.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        sort();
+      }
+    });
+  });
+</script>
