@@ -3,6 +3,12 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 13.11.2026: SEO audit celog sajta (bez izmena u Webflow-u)
+Samo merenje, na sajtu se ništa ne menja. Tabela: https://claude.ai/artifact/6hbiiooYKFkgdDm2s7Rc4H
+- Lighthouse 13.6.0 (Performance, pristupačnost, best practices, SEO, agentic browsing), mobilni i desktop, 1 merenje po stranici, svih 41 stranica na stagingu (15 stranica, 5 case-ova, 21 blog post), plus provere sirovog HTML-a (title, description, H1, schema, OG, canonical, noindex, alt).
+- Sve je u `reports/audit-2026-11-13/`: `run-lh.sh`, `html-checks.py`, `build-data.py`, sirovi rezultati u `lighthouse/`, sažetak u `pages.json`/`pages.csv`, `opportunities.json`, `failing-audits.json`.
+- SEO je računat bez provere „blocked from indexing” (staging robots.txt), a best practices bez grešaka u konzoli koje dolaze samo od adresa blokiranih u okruženju za merenje. Originalne ocene su u kolonama `*Raw`.
+
 ## 13.11.2026: SEO, putanja stranice (BreadcrumbList schema) na blog postovima i case stranicama (objavljeno na staging)
 Google iz ovoga pravi putanju u rezultatu pretrage (npr. „Resources › Insights › naslov“ umesto gole adrese). Vidljivi deo stranica se ne menja. Kopija pre izmene (tačan kod sa sajta): `backup/page-code/2026-11-13-breadcrumbs/`.
 | Šablon (head kod) | Pre | Posle |

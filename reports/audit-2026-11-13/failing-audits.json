@@ -1,0 +1,116 @@
+{
+ "rows": [
+  {
+   "id": "errors-in-console",
+   "category": "Best practices",
+   "label": "Greške u konzoli pregledača",
+   "lighthouse": "Browser errors were logged to the console",
+   "pagesMobile": 41,
+   "pagesDesktop": 41,
+   "note": "Samo u okruženju za merenje: blokirane adrese (GTM, GA, Webflow fontovi, Cloudflare).",
+   "examples": "/, /about, /blog, /blog/aeo-for-marketing-teams-what-you-can-do-without-a-developer, /blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search, /blog/aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters"
+  },
+  {
+   "id": "is-crawlable",
+   "category": "SEO",
+   "label": "Stranica blokirana za indeksiranje",
+   "lighthouse": "Page is blocked from indexing",
+   "pagesMobile": 41,
+   "pagesDesktop": 41,
+   "note": "Samo staging: robots.txt ima Disallow: /. Na pravom domenu ne važi.",
+   "examples": "/, /about, /blog, /blog/aeo-for-marketing-teams-what-you-can-do-without-a-developer, /blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search, /blog/aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters"
+  },
+  {
+   "id": "landmark-one-main",
+   "category": "Pristupačnost",
+   "label": "Nema glavne <main> oblasti",
+   "lighthouse": "Document does not have a main landmark.",
+   "pagesMobile": 35,
+   "pagesDesktop": 15,
+   "note": "",
+   "examples": "/blog/aeo-for-marketing-teams-what-you-can-do-without-a-developer, /blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search, /blog/aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters, /blog/b2b-saas-seo-in-2026-a-strategy-guide-for-marketing-leaders, /blog/best-15-webflow-apps-for-marketing-teams-in-2026, /blog/how-to-delete-a-cms-collection-page-in-webflow-without-breaking-your-site"
+  },
+  {
+   "id": "target-size",
+   "category": "Pristupačnost",
+   "label": "Mete za dodir premale ili preblizu",
+   "lighthouse": "Touch targets do not have sufficient size or spacing.",
+   "pagesMobile": 1,
+   "pagesDesktop": 41,
+   "note": "",
+   "examples": "/, /about, /blog, /blog/aeo-for-marketing-teams-what-you-can-do-without-a-developer, /blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search, /blog/aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters"
+  },
+  {
+   "id": "color-contrast",
+   "category": "Pristupačnost",
+   "label": "Nedovoljan kontrast teksta",
+   "lighthouse": "Background and foreground colors do not have a sufficient contrast ratio.",
+   "pagesMobile": 9,
+   "pagesDesktop": 5,
+   "note": "",
+   "examples": "/careers, /lets-talk, /our-work, /our-work/ballerine, /resources, /services"
+  },
+  {
+   "id": "agent-accessibility-tree",
+   "category": "Agentic browsing",
+   "label": "Stablo pristupačnosti nije ispravno",
+   "lighthouse": "Accessibility tree is not well-formed",
+   "pagesMobile": 2,
+   "pagesDesktop": 2,
+   "note": "",
+   "examples": "/blog, /our-work"
+  },
+  {
+   "id": "image-aspect-ratio",
+   "category": "Best practices",
+   "label": "Slika prikazana u pogrešnom odnosu stranica",
+   "lighthouse": "Displays images with incorrect aspect ratio",
+   "pagesMobile": 2,
+   "pagesDesktop": 2,
+   "note": "",
+   "examples": "/our-work, /our-work/ballerine"
+  },
+  {
+   "id": "aria-required-children",
+   "category": "Pristupačnost",
+   "label": "ARIA lista bez stavki",
+   "lighthouse": "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+   "pagesMobile": 2,
+   "pagesDesktop": 2,
+   "note": "",
+   "examples": "/blog, /our-work"
+  },
+  {
+   "id": "heading-order",
+   "category": "Pristupačnost",
+   "label": "Naslovi preskaču nivoe",
+   "lighthouse": "Heading elements are not in a sequentially-descending order",
+   "pagesMobile": 2,
+   "pagesDesktop": 2,
+   "note": "",
+   "examples": "/privacy-policy, /terms-of-service"
+  },
+  {
+   "id": "crawlable-anchors",
+   "category": "SEO",
+   "label": "Link koji pretraživač ne može da prati",
+   "lighthouse": "Links are not crawlable",
+   "pagesMobile": 1,
+   "pagesDesktop": 1,
+   "note": "",
+   "examples": "/blog/saas-content-marketing-in-2026-a-strategy-guide"
+  }
+ ],
+ "meta": [
+  {
+   "label": "build-data.py",
+   "value": "\"\"\"Build the audit dashboard data from Lighthouse JSON (lighthouse/*.json.gz) and raw-HTML checks (html-checks.json).\nWrites pages.json, opportunities.json, failing-audits.json and pages.csv next to this file.\nSEO is also given without 'is-crawlable', because the staging robots.txt (Disallow: /) fails it on every page.\"\"\"\nimport csv, glob, gzip, json, os, statistics\nfrom collections import defaultdict\n\nHERE = os.path.dirname(os.path.abspath(__file__))\nSELF = open(os.path.abspath(__file__), encoding='utf-8').read()\nSTAGING = 'https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io'\nCATS = {'performance': 'Perf', 'accessibility': 'A11y', 'best-practices': 'Bp', 'seo': 'Seo', 'agentic-browsing': 'Ab'}\nCAT_SR = {'performance': 'Performance', 'accessibility': 'Pristupačnost', 'best-practices': 'Best practices', 'seo': 'SEO',\n          'agentic-browsing': 'Agentic browsing'}\nOPP_SR = {\n    'unused-javascript': 'Neiskorišćen JavaScript', 'unused-css-rules': 'Neiskorišćen CSS',\n    'cache-insight': 'Kratko keširanje fajlova', 'image-delivery-insight': 'Isporuka slika (veličina i format)',\n    'legacy-javascript-insight': 'Zastareli JavaScript (polyfill-i)', 'duplicated-javascript-insight': 'Dupli JavaScript',\n    'unminified-css': 'Neminifikovan CSS', 'unminified-javascript': 'Neminifikovan JavaScript',\n    'render-blocking-insight': 'Fajlovi koji blokiraju prvi prikaz', 'font-display-insight': 'Prikaz fontova (font-display)',\n    'document-latency-insight': 'Odziv servera za HTML', 'lcp-discovery-insight': 'Otkrivanje LCP slike',\n    'mainthread-work-breakdown': 'Previše posla na glavnoj niti', 'bootup-time': 'Dugo izvršavanje JavaScripta',\n}\nFAIL_SR = {\n    'errors-in-console': 'Greške u konzoli pregledača', 'is-crawlable': 'Stranica blokirana za indeksiranje',\n    'landmark-one-main': 'Nema glavne <main> oblasti', 'target-size': 'Mete za dodir premale ili preblizu',\n    'color-contrast': 'Nedovoljan kontrast teksta', 'agent-accessibility-tree': 'Stablo pristupačnosti nije ispravno',\n    'image-aspect-ratio': 'Slika prikazana u pogrešnom odnosu stranica', 'aria-required-children': 'ARIA lista bez stavki',\n    'heading-order': 'Naslovi preskaču nivoe', 'link-name': 'Link bez naziva', 'button-name': 'Dugme bez naziva',\n    'image-alt': 'Slika bez alt atributa', 'link-text': 'Linkovi bez opisnog teksta', 'meta-description': 'Nema meta opisa',\n    'label-content-name-mismatch': 'Vidljiv tekst se ne poklapa sa nazivom', 'aria-allowed-role': 'Nedozvoljena ARIA uloga',\n    'list': 'Lista sa pogrešnim podelementima', 'listitem': 'Stavka liste van liste', 'inspector-issues': 'Problemi u Chrome DevTools',\n    'third-party-cookies': 'Kolačići trećih strana', 'deprecations': 'Zastareli API-ji',\n    'crawlable-anchors': 'Link koji pretraživač ne može da prati',\n}\nSANDBOX_BLOCKED = 'ERR_TUNNEL_CONNECTION_FAILED'  # hosts the measuring environment cannot reach (GTM, GA, Webflow font CDN, Cloudflare)\n\n\ndef group(path):\n    if path.startswith('/blog/'):\n        return 'Blog'\n    if path.startswith('/our-work/'):\n        return 'Case study'\n    return 'Stranica'\n\n\ndef slug(path):\n    return path.strip('/').replace('/', '__') or 'home'\n\n\ndef cat_score(cat, audits, skip=()):\n    num = den = 0\n    for ref in cat['auditRefs']:\n        a = audits.get(ref['id'], {})\n        if ref['id'] in skip or a.get('scoreDisplayMode') in ('notApplicable', 'manual', 'informative') or a.get('score') is None:\n            continue\n        num += ref['weight'] * a['score']\n        den += ref['weight']\n    return round(100 * num / den) if den else None\n\n\ndef fraction(cat, audits):\n    ok = n = 0\n    for ref in cat['auditRefs']:\n        a = audits.get(ref['id'], {})\n        if a.get('scoreDisplayMode') in ('notApplicable', 'manual', 'informative') or a.get('score') is None:\n            continue\n        n += 1\n        ok += a['score'] >= 0.9\n    return f'{ok}/{n}'\n\n\ndef fails(cat, audits):\n    return [r['id'] for r in cat['auditRefs'] if audits.get(r['id'], {}).get('score') is not None\n            and audits[r['id']].get('scoreDisplayMode') not in ('notApplicable', 'manual', 'informative')\n            and audits[r['id']]['score'] < 0.9 and (r.get('weight') or 0) > 0]\n\n\ndef savings(a):\n    det = a.get('details') or {}\n    b = det.get('overallSavingsBytes')\n    if b is None:\n        b = sum((i.get('wastedBytes') or 0) for i in det.get('items') or [] if isinstance(i, dict))\n    ms = max([v for v in (a.get('metricSavings') or {}).values() if isinstance(v, (int, float))] or [0])\n    return b or 0, ms\n\n\nhtml = {r['path']: r for r in json.load(open(os.path.join(HERE, 'html-checks.json')))}\npaths = [l.strip() for l in open(os.path.join(HERE, 'urls.txt')) if l.strip()]\nrows, opp = [], defaultdict(lambda: {'m': [], 'd': [], 'title': ''})\nfailing = defaultdict(lambda: {'m': [], 'd': [], 'title': '', 'cat': ''})\nfor path in paths:\n    h = html[path]\n    row = {'path': path, 'group': group(path)}\n    for ff, p in (('mobile', 'm'), ('desktop', 'd')):\n        f = os.path.join(HERE, 'lighthouse', f'{slug(path)}--{ff}.json.gz')\n        if not os.path.exists(f):\n            continue\n        d = json.load(gzip.open(f))\n        a, c = d['audits'], d['categories']\n        for cid, short in CATS.items():\n            row[p + short] = round(c[cid]['score'] * 100) if c.get(cid) and c[cid]['score'] is not None else None\n        row[p + 'SeoRaw'] = row[p + 'Seo']\n        row[p + 'Seo'] = cat_score(c['seo'], a, skip=('is-crawlable',))\n        cons = (a.get('errors-in-console', {}).get('details') or {}).get('items') or []\n        sandbox_only = all(SANDBOX_BLOCKED in (i.get('description') or '') for i in cons)\n        row[p + 'BpRaw'] = row[p + 'Bp']\n        if sandbox_only:\n            row[p + 'Bp'] = cat_score(c['best-practices'], a, skip=('errors-in-console',))\n        row[p + 'AbPassed'] = fraction(c['agentic-browsing'], a)\n        if p == 'm':\n            row['mLcpS'] = round(a['largest-contentful-paint']['numericValue'] / 1000, 1)\n            row['mTbtMs'] = round(a['total-blocking-time']['numericValue'])\n            row['mCls'] = round(a['cumulative-layout-shift']['numericValue'], 3)\n            row['mWeightKb'] = round(a['total-byte-weight']['numericValue'] / 1024)\n        for cid in CATS:\n            if cid == 'performance':\n                continue\n            for aid in fails(c[cid], a):\n                if aid == 'errors-in-console' and sandbox_only:\n                    failing['errors-in-console']['sandbox'] = True\n                failing[aid][p].append(path)\n                failing[aid]['title'] = a[aid]['title']\n                failing[aid]['cat'] = CAT_SR[cid]\n        for aid, au in a.items():\n            if au.get('score') is None or au['score'] >= 0.9 or au.get('scoreDisplayMode') in ('notApplicable', 'informative', 'manual'):\n                continue\n            b, ms = savings(au)\n            if b >= 1024 or ms >= 50:\n                opp[aid][p].append((b, ms))\n                opp[aid]['title'] = au['title']\n    row.update({\n        'h1': h['h1Count'], 'titleLen': h['titleLen'], 'descLen': h['descLen'],\n        'schema': ', '.join(h['ldTypes']), 'imgs': h['imgs'], 'altEmpty': h['imgEmptyAlt'], 'altMissing': h['imgNoAlt'],\n        'ogImage': 'da' if h['ogImage'] else 'ne', 'ogTitle': 'da' if h['ogTitle'] else 'ne',\n        'canonical': 'da' if h['canonical'] else 'ne', 'noindex': 'da' if (h['robotsMeta'] or '').find('noindex') >= 0 else 'ne',\n        'title': h['title'] or '', 'description': h['desc'] or '',\n    })\n    rows.append(row)\n\nopps = []\nfor aid, v in opp.items():\n    m = v['m']\n    if not m:\n        continue\n    kb = [round(b / 1024) for b, _ in m]\n    opps.append({'id': aid, 'label': OPP_SR.get(aid, v['title']), 'lighthouse': v['title'],\n                 'pagesMobile': len(m), 'pagesDesktop': len(v['d']), 'kbTotal': sum(kb),\n                 'kbMedian': round(statistics.median(kb)), 'msMedian': round(statistics.median([ms for _, ms in m]))})\nopps.sort(key=lambda r: (-r['kbTotal'], -r['msMedian']))\n\nNOTES = {'is-crawlable': 'Samo staging: robots.txt ima Disallow: /. Na pravom domenu ne važi.',\n         'errors-in-console': 'Samo u okruženju za merenje: blokirane adrese (GTM, GA, Webflow fontovi, Cloudflare).'}\nfail_rows = [{'id': k, 'category': v['cat'], 'label': FAIL_SR.get(k, v['title']), 'lighthouse': v['title'],\n              'pagesMobile': len(v['m']), 'pagesDesktop': len(v['d']),\n              'note': NOTES.get(k, '') if (k != 'errors-in-console' or v.get('sandbox')) else '',\n              'examples': ', '.join(sorted(set(v['m'] + v['d']))[:6])} for k, v in failing.items()]\nfail_rows.sort(key=lambda r: (-(r['pagesMobile'] + r['pagesDesktop']), r['category']))\n\nmeta = [{'label': 'build-data.py', 'value': SELF, 'type': 'code', 'lang': 'python'},\n        {'label': 'Input', 'value': f'Lighthouse 13.6.0 (mobile + desktop, 1 run per page) and raw HTML of {len(rows)} pages on {STAGING}, 13.11.2026'}]\nfor name, data in (('pages.json', rows), ('opportunities.json', opps), ('failing-audits.json', fail_rows)):\n    json.dump({'rows': data, 'meta': meta}, open(os.path.join(HERE, name), 'w'), ensure_ascii=False, indent=1)\ncols = list(rows[0].keys())\nfor r in rows:\n    cols += [k for k in r if k not in cols]\nwith open(os.path.join(HERE, 'pages.csv'), 'w', newline='', encoding='utf-8') as fh:\n    w = csv.DictWriter(fh, fieldnames=cols)\n    w.writeheader()\n    w.writerows(rows)\nprint('pages', len(rows), 'opps', len(opps), 'fails', len(fail_rows))\n",
+   "type": "code",
+   "lang": "python"
+  },
+  {
+   "label": "Input",
+   "value": "Lighthouse 13.6.0 (mobile + desktop, 1 run per page) and raw HTML of 41 pages on https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io, 13.11.2026"
+  }
+ ]
+}
