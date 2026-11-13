@@ -3,6 +3,17 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 13.11.2026: video popup (video testimonials), tamni kvadrat iza zaobljenih uglova (objavljeno na staging)
+Tvoj snimak: iza zaobljenog ugla videa vidi se tamni kvadratni ugao. Uzrok: zatamnjenje i zamućenje pozadine (backdrop-filter) bili su na istom elementu koji drži video, a Safari tada pogrešno crta uglove. Kopija pre izmene: `webflow-assets/site-code/site-head.min.html` u commit-u 94175d4 (stanje posle izmene galerije, pre ove).
+| Šta | Pre | Posle |
+|---|---|---|
+| Zatamnjenje + zamućenje | na `.vmodal` (roditelj videa) | na posebnom sloju `.vmodal:before` iza videa, kao `.pg_dim` u galeriji |
+| Pojavljivanje | ceo `.vmodal` menja providnost | sloj iza i video menjaju providnost odvojeno (isto trajanje 0,35 s) |
+| Uglovi | radius samo na `.vmodal_box` | `.vmodal_box` dobija `isolation:isolate`; video i Vimeo iframe nasleđuju radius |
+- Radius ostaje isti: 16 px na desktopu, 12 px na telefonu. Dugme X se nije menjalo.
+- Provereno u Chromium-u na Home (1440 i 390 px) i /services/growth: otvaranje, zatvaranje na X, Esc, klik pored videa, zamućenje radi, bez JS grešaka. Safari ovde nemam, pa to treba pogledati na Mac-u ili iPhone-u.
+- Deployovan head je identičan `webflow-assets/site-code/site-head.min.html` (39.023 znaka).
+
 ## 13.11.2026: galerija projekata (popup sa sliderom), manji radijusi (objavljeno na staging)
 Po komentaru tima (manji radius bi lepše izgledao), tvoje „ajde da popravimo“. Menja se samo CSS popupa u site head-u; važi za Home (Every project) i sve 4 servisne stranice (Service Cases). Kopija pre izmene: `backup/page-code/2026-11-13-popup/`.
 | Element | Pre (desktop / telefon) | Posle (desktop / telefon) |

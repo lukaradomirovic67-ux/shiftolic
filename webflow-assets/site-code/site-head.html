@@ -242,18 +242,23 @@
 </style>
 
 <style>
-.vmodal{position:fixed;left:0;top:0;right:0;bottom:0;z-index:10000;display:flex;align-items:center;justify-content:center;padding:5vw;background:rgba(8,12,20,.84);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);opacity:0;visibility:hidden;transition:opacity .35s ease,visibility 0s linear .35s}
-.vmodal.is-open{opacity:1;visibility:visible;transition:opacity .35s ease}
-.vmodal_box{position:relative;width:min(1120px,100%,calc((100vh - 10vw) * 16 / 9));aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#000;box-shadow:0 30px 80px rgba(0,0,0,.45);transform:translateY(12px) scale(.97);transition:transform .5s cubic-bezier(.22,1,.36,1)}
-.vmodal.is-open .vmodal_box{transform:none}
-.vmodal_video{display:block;width:100%;height:100%;background:#000;object-fit:contain}
+/* The dim + blur sit on their own layer behind the video (like .pg_dim in the gallery), not on the popup itself:
+   Safari showed a dark square behind the rounded corners when the blur was on the element that holds the video. */
+.vmodal{position:fixed;left:0;top:0;right:0;bottom:0;z-index:10000;display:flex;align-items:center;justify-content:center;padding:5vw;visibility:hidden;transition:visibility 0s linear .35s}
+.vmodal:before{content:"";position:absolute;left:0;top:0;right:0;bottom:0;background:rgba(8,12,20,.84);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);opacity:0;transition:opacity .35s ease}
+.vmodal.is-open{visibility:visible;transition:visibility 0s}
+.vmodal.is-open:before{opacity:1}
+.vmodal_box{position:relative;z-index:1;isolation:isolate;width:min(1120px,100%,calc((100vh - 10vw) * 16 / 9));aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#000;box-shadow:0 30px 80px rgba(0,0,0,.45);opacity:0;transform:translateY(12px) scale(.97);transition:transform .5s cubic-bezier(.22,1,.36,1),opacity .35s ease}
+.vmodal.is-open .vmodal_box{opacity:1;transform:none}
+.vmodal_video{display:block;width:100%;height:100%;background:#000;object-fit:contain;border-radius:inherit}
+.vmodal_frame{border-radius:inherit}
 .vmodal_close{position:absolute;top:16px;right:16px;z-index:2;display:flex;width:44px;height:44px;align-items:center;justify-content:center;padding:0;border:0;border-radius:12px;background:rgba(255,255,255,.92);color:#0d1928;cursor:pointer;transition:background .2s ease,transform .2s ease}
 .vmodal_close:hover{background:#fff;transform:scale(1.05)}
 .vmodal_close:focus-visible{outline:2px solid #fff;outline-offset:3px}
 html.vmodal-lock,html.vmodal-lock body{overflow:hidden}
 [data-vmodal-trigger]{cursor:pointer}
 @media (max-width:767px){.vmodal{padding:16px}.vmodal_box{border-radius:12px}.vmodal_close{top:10px;right:10px;width:38px;height:38px}}
-@media (prefers-reduced-motion:reduce){.vmodal,.vmodal_box{transition:none}}
+@media (prefers-reduced-motion:reduce){.vmodal,.vmodal:before,.vmodal_box{transition:none}}
 </style>
 <style>
 /* Service pages (nuesLaunch, nuesBuild, nues+) */
