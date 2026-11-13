@@ -31,6 +31,13 @@ Ažurirano: 10.11.2026 (faza 0). Ništa od ovoga ne izmišljam u copy-ju ni u sc
     (noindex + kartice bez linka)?
 14. Blog post „B2B SaaS SEO in 2026“ je u draftu, a stara verzija je živa i 6 postova linkuje na nju. Objaviti ga ili ukloniti?
 
+## Fontovi (13.11.)
+18. **Aeonik u formatu WOFF2.** Sada se Aeonik učitava kao `.otf`.
+    - Težine 400 i 500 se učitavaju na svakoj stranici, 600 na pet stranica, a 300 na About; oko 60 KB po težini.
+    - WOFF2 je za iste fontove obično 30–40% manji.
+    - Aeonik je komercijalni font (CoType), pa ga ne konvertujem sam: licenca to možda ne dozvoljava.
+    - Da li imate WOFF2 fajlove iz web licence? Ako imate, ide MANUAL_TASKS 12.
+
 ## Our Work, tab Intaker (10.11.)
 15. Broj za Intaker tab (Stat 1 vrednost i opis, npr. „16x / Engagement time growth“ kod Ballerine). Sada je prazno.
 16. Odobrenje rečenice: „How nues rebuilt Intaker's site around its new AI lead engagement product.“ (moj nacrt).

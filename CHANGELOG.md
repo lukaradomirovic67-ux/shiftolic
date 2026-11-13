@@ -3,6 +3,64 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 13.11.2026: SEO korak 3 (prvi deo), lakše slike celih sajtova i manje preuzimanja na telefonu (objavljeno na staging)
+Treći korak SEO faze, brzina na mobilnom. Izgled se nije promenio.
+
+**1. Screenshotovi celih sajtova klijenata (CMS Our Works, polje „Full page screenshot“, `hero-screen-center`)**
+- Problem: dugačke slike od 1440 do 2200 px širine, 0,4–1 MB svaka.
+  - Prikazuju se najviše oko 584 px široko (Resources kartice), 526 px (Home „Every project“), a na telefonu 140–332 px.
+  - Webflow za tako visoke slike ne pravi manje verzije (srcset), pa telefon preuzima ceo fajl.
+- Sada: iste slike, smanjene na 1200 px širine (i dalje 2× najšira veličina prikaza) i ponovo kompresovane.
+  - WebP q75, a Veyor ostaje AVIF jer je i bio AVIF.
+  - Fajlovi su u `webflow-assets/perf/full-screenshots/`.
+  - Webflow ih je preuzeo sa jsDelivr linka i čuva ih na svom CDN-u (`cdn.prod.website-files.com`), pa nema zavisnosti od GitHub-a.
+- Alt tekstovi su ostali isti. Kopija svih stavki pre izmene: `backup/cms-items/our-works-full-screenshot-2026-11-13.json`.
+
+| Stavka | Pre | Posle |
+|---|---|---|
+| Ballerine | `6ae8e94f…_ballerine-home-full.webp`, 1440×11981, 1.023 KB | `6af66906…_ballerine-home-full-1200.webp`, 1200×9984, 450 KB |
+| Shiftolic | `…_shiftolic-home-full-v2.webp`, 1920×11674, 589 KB | `…_shiftolic-home-full-v2-1200.webp`, 1200×7296, 250 KB |
+| TrakPro | `…_trakpro-home-full-v2.webp`, 1920×10227, 575 KB | `…-1200.webp`, 1200×6392, 242 KB |
+| Intaker | `…_intaker-home-full-v2.webp`, 1920×13392, 685 KB | `…-1200.webp`, 1200×8370, 300 KB |
+| Veyor Digital | `…_veyor-home-full-v2.avif`, 1920×15174, 801 KB | `…-1200.avif`, 1200×9484, 519 KB |
+| Harper | `…_harper-home-full-hq.webp`, 2200×9472, 512 KB | `…-1200.webp`, 1200×5167, 192 KB |
+| Hypersonix | `…_hypersonix-home-full-hq.webp`, 2200×6185, 436 KB | `…-1200.webp`, 1200×3374, 153 KB |
+| Biotech Innovations | `…_biotech-home-full-hq.webp`, 2200×10894, 1.070 KB | `…-1200.webp`, 1200×5942, 445 KB |
+| Sustain Commercial Solar | `…_sustain-home-full-hq.webp`, 1440×13224, 893 KB | `…-1200.webp`, 1200×11020, 555 KB |
+| LaSalle Agri | 1440×9781, 1.019 KB | **nije promenjeno.** Webflow je odbio izmenu dva puta („Missing fields“), pa je to ručni korak (MANUAL_TASKS 10) |
+
+- Opis polja „Full page screenshot“: „1440px wide, JPG/WebP under 8 MB“ → „1200px wide WebP (quality about 75), ideally under 600 KB…“, da i sledeće slike budu lake.
+- Provera izgleda: iste stranice sa starim i sa novim slikama.
+  - Stranice i prikazi: Home, Our Work, Resources i Ballerine case, na 1440 (2×) i na telefonu.
+  - Razlika: prosečno ispod 1 nivoa od 255, a manje od 0,5% piksela (ivice slova); golim okom je ista.
+
+**Mobilni (Pixel 5), ukupno preuzeto sa učitavanjem:**
+
+| Stranica | Pre | Posle |
+|---|---|---|
+| Home | 3.254 KB | 2.342 KB (−28%) |
+| Our Work | 3.878 KB | 2.535 KB (−35%) |
+| Resources | 4.648 KB | 2.792 KB (−40%) |
+| Ballerine case | 1.985 KB | 1.412 KB (−29%) |
+
+Servisne stranice se još nisu promenile: tamo su dve statične slike u Service Cases, koje mora da upload-uje čovek (MANUAL_TASKS 9).
+
+**2. Kartica poslednjeg posta u Resources meniju** (site footer, skripta „Resources dropdown“)
+- Pre: svaka stranica je u mirovanju preuzimala /blog (48 KB) da bi kartica bila spremna, i na telefonu.
+- Sada:
+  - desktop sa mišem radi isto kao pre;
+  - telefon i tablet preuzimaju /blog tek kad posetilac dodirne navbar (otvaranje menija), pa kartica i dalje stigne pre nego što se Resources otvori.
+- Provereno: na telefonu nema /blog pre dodira, a posle otvaranja menija kartica ima post. Na desktopu je isto kao pre. Na 18 stranica (1440 i 390) nema JS grešaka.
+- Napomena: CSS koji se u merenju javljao dvaput je posledica testa bez keša (parsiranje /blog). U pravom pregledaču drugi put dolazi iz keša.
+
+**3. Utvrđeno, a čeka ručni korak ili odluku** (MANUAL_TASKS 8–12, QUESTIONS 18)
+- Google fontovi:
+  - Webflow ubacuje `webfont.js` u head, a ta skripta blokira prikaz i otvara još tri servera.
+  - Geist je jedini koji se stvarno koristi. Instrument Serif se ne koristi nigde, a preuzima se na svakoj stranici.
+  - Lokalni test sa samostalno hostovanim Geist fajlom: 8 prikaza (4 stranice, 1440 i 390) identični do piksela, bez Google servera.
+- Aeonik je `.otf` (oko 60 KB po težini, 2–3 težine po stranici). WOFF2 samo iz licence.
+- Glavni CSS (581 KB) nije minifikovan: to je podešavanje sajta.
+
 ## 13.11.2026: SEO korak 2, site footer kod skraćen sa 48.409 na 30.451 znakova (objavljeno na staging)
 Drugi korak SEO faze, po tvom „ajde radi seo redom“. Bez vizuelne promene i bez promene ponašanja.
 

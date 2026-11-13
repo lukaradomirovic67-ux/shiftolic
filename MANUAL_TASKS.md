@@ -34,5 +34,36 @@ Putanje u meniju proverite u trenutnom Webflow interfejsu. Nazivi se ponekad men
    - Zatim Publish samo na webflow.io i otvoriti /integrations/webflow-salesforce-integration (treba 200, ne 404).
    Napomena: Salesforce stavka nema napisan sadržaj (polje Content), pa će stranica biti skoro prazna dok se vodič ne napiše.
 
+## SEO korak 3, brzina na mobilnom (dodato 13.11.)
+Fajlovi su u repou, u `webflow-assets/perf/manual/`, a dobio si ih i kao zip. Sve se radi na staging-u.
+Nazive menija proverite u trenutnom Webflow interfejsu.
+
+8. **Fontovi: ukloniti Google skriptu koja blokira prikaz** (`webfont.js`, plus još dva Google servera na svakoj stranici).
+   - **Site settings → Fonts → Custom fonts → Upload**: `fonts/Geist-Variable-latin.woff2`.
+     - Ime porodice (family) mora biti tačno **Geist**.
+     - Ako Webflow pita za težine, to je promenljiv font 100–900, stil Normal.
+     - Font display: **Swap**.
+   - Tek zatim, u istom tabu, u delu **Google Fonts** ukloniti **Geist** i **Instrument Serif**.
+     - Instrument Serif se ne koristi ni u jednom tekstu na sajtu, a sada se preuzima na svakoj stranici.
+   - Save, pa mi javi „fontovi gotovi“. Ja proverim:
+     - da u HTML-u više nema `webfont.js`;
+     - da je tekst isti do piksela (lokalni test sa ovim fajlom je to već pokazao na 4 stranice);
+     - i onda objavim.
+   - Geist je pod licencom SIL OFL 1.1 (dozvoljeno samostalno hostovanje). Licenca je u `fonts/Geist-OFL-LICENSE.txt`.
+9. **Service Cases, dve teške slike** (na sve 4 servisne stranice):
+   - `svc-case-ballerine-home-full` je 1.023 KB, a nova `images/svc-case-ballerine-home-full-1200.webp` ima 450 KB.
+   - `svc-case-shiftolic-home-full` je 431 KB, a nova `images/svc-case-shiftolic-home-full-1200.webp` ima 242 KB.
+   - Izgled je isti (1200 px je i dalje 2× najšira veličina prikaza).
+   - Dovoljno je da ih ubaciš u **Assets** panel i javiš mi. Ja ih zamenim u 6 okvira (po 3 u Ballerine i Shiftolic redu) i objavim.
+   - Webflow API ne dozvoljava da ja upload-ujem fajl.
+10. **LaSalle Agri, „Full page screenshot“**:
+    - Webflow je odbio izmenu preko API-ja dva puta („Missing fields“, bez objašnjenja).
+    - CMS → **Our Works** → **LaSalle Agri** → polje **Full page screenshot** → zameni sliku sa `images/lasalle-home-full-hq-1200.webp` (594 KB umesto 1.019 KB) → Save.
+    - Alt tekst ostaje „LaSalle Agri home page“.
+11. **Site settings → Publishing → Advanced publishing options**: uključiti **Minify HTML**, **Minify CSS** i **Minify JS** → Save.
+    - Glavni CSS sajta (581 KB) sada nije minifikovan.
+    - Posle sledeće objave proveravam da se ništa nije promenilo.
+12. **Aeonik u WOFF2** (vidi QUESTIONS 18): ako postoje WOFF2 fajlovi iz licence, upload-ovati ih umesto `.otf` za težine 300, 400, 500 i 600, pod istim imenom porodice **Aeonik**.
+
 ## Kasnije faze
-Biće dopunjeno u fazama 1–6 (minifikacija, konverzija asseta, fontovi, sitemap izuzeci po stranici…).
+Biće dopunjeno u fazama 4–6 (sitemap izuzeci po stranici…).

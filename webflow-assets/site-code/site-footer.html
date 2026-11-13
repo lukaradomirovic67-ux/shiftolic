@@ -454,7 +454,11 @@ document.addEventListener('DOMContentLoaded', function () {
         .catch(function () {});
     }
     ['pointerenter', 'focusin', 'touchstart'].forEach(function (type) { nav.addEventListener(type, load, { once: true, passive: true }); });
-    if ('requestIdleCallback' in window) { requestIdleCallback(load, { timeout: 4000 }); } else { setTimeout(load, 2500); }
+    // Desktop (mouse) fetches the feed in idle time so the card is ready on first hover. Phones and tablets fetch it only
+    // when the visitor touches the navbar (opening the menu), so a visit that never opens the menu does not download /blog.
+    if (window.matchMedia('(hover: hover) and (min-width: 992px)').matches) {
+      if ('requestIdleCallback' in window) { requestIdleCallback(load, { timeout: 4000 }); } else { setTimeout(load, 2500); }
+    }
   }
   if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
 })();
