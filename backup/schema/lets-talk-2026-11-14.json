@@ -1,0 +1,58 @@
+{
+ "note": "Let's talk JSON-LD before removing self-review and replacing external logo (14.11.2026)",
+ "jsonLdSchema": {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Nues | Schedule a Free Strategy Call",
+  "description": "Schedule a free strategy call to see how we can help turn your website from cost centre to growth engine. Book a 30-minute demo today.",
+  "url": "/lets-talk",
+  "inLanguage": "en",
+  "about": {
+   "@type": "Organization",
+   "name": "Nues",
+   "description": "Website development and growth agency specializing in Webflow sites",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://cdn.prod.website-files.com/69b4443f93d293c2336db5b9/69ffd79d11a1a944721ccfa9_navbar-logo.svg"
+   },
+   "url": "/",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Sales",
+    "availableLanguage": "en"
+   }
+  },
+  "mainEntity": {
+   "@type": "Service",
+   "name": "Free Strategy Call",
+   "description": "30-minute consultation to discuss your project and determine fit",
+   "provider": {
+    "@type": "Organization",
+    "name": "Nues"
+   },
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "The first 30 minutes are on us"
+   }
+  },
+  "review": {
+   "@type": "Review",
+   "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Or Moshkovitz",
+    "jobTitle": "Marketing Director",
+    "worksFor": {
+     "@type": "Organization",
+     "name": "Ballerine"
+    }
+   },
+   "reviewBody": "Three competitors asked us who built our site. That tells you everything."
+  }
+ }
+}

@@ -22,7 +22,7 @@ Ažurirano: 10.11.2026 (faza 0). Ništa od ovoga ne izmišljam u copy-ju ni u sc
    Bez adrese ne pravim LocalBusiness.
 10. Potvrda profila za `sameAs`: LinkedIn (company/nues-agency), Instagram (nues.agency), Clutch (profile/nues),
     Webflow (@nues). Ima li X/Twitter, YouTube, Dribbble?
-11. Clutch: tačna ocena i broj recenzija (sajt navodi „5.0 on Clutch“). Na Let's talk već postoji Review/Rating schema.
+11. ~~Review na Let's talk~~ uklonjen 14.11. (tvoja odluka). Ostaje: Clutch: tačna ocena i broj recenzija (sajt navodi „5.0 on Clutch“). Na Let's talk već postoji Review/Rating schema.
     Da li su to doslovni citati sa Clutch-a? Google ignoriše ocene koje firma daje sama sebi, pa predlažem da se to ukloni.
 
 ## Odluke o sadržaju (iz QA od 8.11.)

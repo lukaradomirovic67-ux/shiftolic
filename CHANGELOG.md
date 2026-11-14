@@ -3,6 +3,23 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 14.11.2026: blog link sa about:blank, status B2B posta i Review schema na Let's talk (objavljeno na staging)
+Tvoje „uradi“ 14.11. Kopije pre izmene: `backup/cms-items/blog-saas-content-marketing-2026-11-14.json`, `backup/cms-items/blog-b2b-saas-seo-2026-11-14.json`, `backup/schema/lets-talk-2026-11-14.json`.
+| Gde | Pre | Posle |
+|---|---|---|
+| Blog „SaaS content marketing in 2026“, polje Content, link „B2B SaaS SEO guide“ (odeljak Distribution) | `href="https://about:blank"`, otvara se u novom tabu | `href="/blog/b2b-saas-seo-in-2026-a-strategy-guide-for-marketing-leaders"`, isto kao drugi link na isti vodič u tom postu |
+| Blog „B2B SaaS SEO in 2026“, status u CMS-u | Draft od 12.10. (javna je bila verzija od 28.09.) | objavljeno. Tekst, title, opis, slika i FAQ su isti kao u objavljenoj verziji (upoređeno rečenicu po rečenicu) |
+| Let's talk, JSON-LD | sadržao `review` (ocena 5, Or Moshkovitz, Ballerine, citat „Three competitors asked us…“) | `review` uklonjen; ostatak (ContactPage, Organization, Service) isti |
+| Let's talk, JSON-LD, logo organizacije | fajl iz drugog Webflow projekta (crno-roza logo) | naš tamni Nues znak iz Assets-a (`pricing-receipt-logo.svg`, isti kao na Pricing računu) |
+- Beleška „nova verzija B2B posta je u draftu“ bila je netačna: postoji samo jedna stavka, a razlika je bila samo status.
+- Ostatak teksta oba posta je ostao znak po znak isti (provereno posle upisa).
+- Citat i dalje stoji vidljiv u slideru recenzija na Let's talk; uklonjen je samo iz koda za Google.
+- Provereno na stagingu:
+  - u postu nema about:blank, a oba linka „B2B SaaS SEO guide“ vode na vodič;
+  - B2B post vraća 200;
+  - Let's talk JSON-LD nema `review`, a logo vraća 200.
+- Isti stari logo je i u Organization schema na Home. Nije menjano, čeka tvoju odluku.
+
 ## 14.11.2026: Our Work mreža u redosledu iz Figme, novo CMS polje „Our Work order“ (objavljeno na staging)
 Tvoje odobrenje 14.11. Kopija pre izmene (sortiranje liste i Order vrednosti): `backup/cms-items/our-work-order-2026-11-14.json`.
 | Šta | Pre | Posle |
