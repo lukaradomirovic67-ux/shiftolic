@@ -3,6 +3,16 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 14.11.2026: ponovljen SEO audit (bez izmena u Webflow-u)
+Isti postupak kao 13.11. (svih 41 stranica, mobilni i desktop), rezultati su u `reports/audit-2026-11-14/`. Tabela je osvežena i sada ispod svake ocene pokazuje razliku od 13.11.: https://claude.ai/artifact/6hbiiooYKFkgdDm2s7Rc4H
+- Provere HTML-a (title, description, H1, schema, OG, canonical, alt): nijedna promena na 41 stranici.
+- Prosek ocena:
+  - mobilni Performance 61 (bio 57);
+  - pristupačnost 97, best practices 100, SEO 100, agentic browsing 98, kao 13.11.;
+  - desktop isti (88 / 95 / 100 / 100 / 98).
+- Rast mobilnog Performance-a je razlika između dva merenja, ne promena na sajtu: na sajtu ništa nije menjano. Najviše se pomerio Home (37 → 57, LCP 8,0 → 3,8 s).
+- Iste provere ne prolaze na istom broju stranica kao 13.11.
+
 ## 14.11.2026: odluka, OG slike pravi dizajner
 - Tvoja odluka: moje OG slike (v2 ispod) se ne koriste, sve pravi dizajner. Fajlovi ostaju u repou samo kao referenca. U Webflow-u ništa nije menjano.
 
