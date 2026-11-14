@@ -3,6 +3,16 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 14.11.2026: tačkice istaknutih tekstova na /blog, veća površina za klik (objavljeno na staging)
+Tvoje „uradi“ 14.11. na predlog `notes/blog-tackice-predlog-2026-11-14.png`. Druga od tri preostale stavke iz audita, drugi deo. Kopije pre izmene: `backup/page-code/2026-11-14-dots/blog-head.html`, `backup/styles/ins-featured_dots-2026-11-14.json`.
+| Gde | Pre | Posle |
+|---|---|---|
+| Blog, head kod: `.ins-feat-dot` | dugme 8x8 px (aktivno 28x8) | dugme 24x24 px (aktivno 44x24) sa istom tačkicom 8x8 (28x8) nacrtanom u sredini; prsten za tastaturu iste veličine kao pre |
+| Klasa `ins-featured_dots` (Designer) | razmak 8px; desno/dole 50/50 (tablet 36/40, telefon desno 24, gore 38) | razmak 0; desno/dole 42/42 (tablet 28/32, telefon desno 16, gore 30) |
+- Vidljiva razlika je samo razmak između tačkica, 16 px umesto 8 px. Tačkice su iste veličine i boje, poslednja je na istom mestu, visina ista (provereno na 1440, 1100, 900, 600 i 390 px).
+- Klik na tačkicu i dalje menja istaknuti tekst.
+- Provereno na stagingu: provera „target-size“ na tačkicama prolazi na svim širinama.
+
 ## 14.11.2026: veća površina za klik na Services i Resources u navbaru (objavljeno na staging)
 Druga od tri preostale stavke iz audita („premala dugmad“), prvi deo. Kopija stila pre izmene: `backup/styles/navbar2_toggle-link-2026-11-14.json`.
 | Gde | Pre | Posle |
@@ -12,7 +22,7 @@ Druga od tri preostale stavke iz audita („premala dugmad“), prvi deo. Kopija
 - Ništa se ne pomera: položaj svih elemenata navbara je isti do piksela na 1440, 1100, 991 i 390 px (sa otvorenim menijem na manjim širinama).
 - Hover i padajući meni rade kao pre (veća površina je unutar istog elementa koji otvara meni).
 - Provereno na stagingu: provera „target-size“ u navbaru prolazi na svim širinama.
-- Tačkice za listanje istaknutih tekstova na /blog (8 px, 8 px razmaka) ne mogu da se srede bez vidljive promene; predlog je u `notes/blog-tackice-predlog-2026-11-14.png`, čeka odobrenje.
+- Tačkice za listanje istaknutih tekstova na /blog: urađene posle odobrenja (unos iznad).
 
 ## 14.11.2026: opisi linkova za čitače ekrana sadrže tekst koji piše na njima (objavljeno na staging)
 Tvoje „radi jednu po jednu redom“ 14.11, prva od tri preostale stavke iz audita. Kopije pre izmene: `backup/page-code/2026-11-14-labels/`.

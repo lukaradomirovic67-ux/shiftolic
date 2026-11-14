@@ -1,0 +1,21 @@
+{
+ "note": "ins-featured_dots style before the change on 14.11.2026",
+ "main": {
+  "position": "absolute",
+  "right": "50px",
+  "bottom": "50px",
+  "z-index": "3",
+  "display": "flex",
+  "align-items": "center",
+  "grid-column-gap": "8px"
+ },
+ "medium": {
+  "right": "36px",
+  "bottom": "40px"
+ },
+ "small": {
+  "top": "38px",
+  "right": "24px",
+  "bottom": "auto"
+ }
+}
