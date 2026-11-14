@@ -3,6 +3,9 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 14.11.2026: odluka, kontrast teksta se ne menja
+Tvoje „nemoj ništa od ovoga dirati“ 14.11. na predlog `notes/kontrast-predlog-2026-11-14.png`. Sporedni tekst ostaje kakav jeste: tamnoplavi 40–50%, beli 40%, oznake na plavoj kartici recenzije 60%, kao i prigušeni tabovi i kartice. Ništa nije menjano u Webflow-u. Lighthouse će i dalje prijavljivati „color-contrast“ na tim mestima.
+
 ## 14.11.2026: tačkice istaknutih tekstova na /blog, veća površina za klik (objavljeno na staging)
 Tvoje „uradi“ 14.11. na predlog `notes/blog-tackice-predlog-2026-11-14.png`. Druga od tri preostale stavke iz audita, drugi deo. Kopije pre izmene: `backup/page-code/2026-11-14-dots/blog-head.html`, `backup/styles/ins-featured_dots-2026-11-14.json`.
 | Gde | Pre | Posle |
