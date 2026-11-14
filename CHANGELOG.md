@@ -3,6 +3,24 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 14.11.2026: liste na Blog i Our Work i redosled naslova na Privacy i Terms (objavljeno na staging)
+Tvoje „radi“ 14.11. Kopije koda pre izmene: `backup/page-code/2026-11-14-lists/` (Blog footer, Our Work footer, head Privacy i Terms).
+| Gde | Pre | Posle |
+|---|---|---|
+| Blog, footer kod: filteri kategorija (`.ins-filter_list`) | Webflow lista (`role="list"`), a stavke su dugmad, pa lista nema nijednu stavku | grupa dugmadi: `role="group"`, `aria-label="Filter insights by category"` (1 red koda) |
+| Our Work, footer kod: crtice hero slajdera (`.ow-hs-bars_list`) | `role="list"`, stavke su dugmad | `role="group"`, `aria-label="Choose a project"` (2 reda) |
+| Our Work, footer kod: paneli case studija (`.ow-cs_list`) | `role="list"`, stavke su paneli tabova | `role="presentation"`, samo omotač; paneli i tabovi isti kao pre (2 reda) |
+| Privacy policy, tekst (Rich Text) | naslovi H4 (7) i H6 (3), posle H1 | H2 (7) i H3 (3) |
+| Terms of service, tekst (Rich Text) | naslovi H4 (8), posle H1 | H2 (8) |
+| Privacy i Terms, head kod | pravila samo za H4 i H6 | dodata pravila da H2 i H3 izgledaju isto kao ranije H4 i H6 (sve 4 veličine ekrana) |
+- Webflow API ne može da napravi stilove za naslove unutar Rich Text-a (u Designer-u „All H2 headings“ u `legal-rich_text`), zato su pravila u head kodu te dve stranice, pored postojećeg pravila za liste. Stari stilovi za H4 i H6 nisu dirani.
+- Ponašanje filtera, slajdera i tabova nije menjano; dodati su samo atributi.
+- Provereno na stagingu:
+  - pre objave, u pregledaču: zamena nivoa naslova sa novim pravilima daje iste veličine, razmake i položaj svih 18 naslova na 1440, 900, 700 i 390 px;
+  - posle objave: visina stranica, položaj naslova i lista isti kao pre na Blog, Our Work, Privacy i Terms (4 širine);
+  - Lighthouse pristupačnost: Blog 92 → 97, Our Work 90 → 96, Privacy i Terms 97 → 100 (telefon) i 93 → 96 (desktop). Provere „aria-required-children“ i „heading-order“ prolaze, nijedna nova greška.
+- Ostaje iz audita (nije deo ove izmene): Clutch link čiji opis za čitače ekrana ne sadrži vidljiv tekst, premala dugmad na nekim mestima i kontrast na Our Work na telefonu.
+
 ## 14.11.2026: oznaka glavnog sadržaja (`<main>`) na svim stranicama (objavljeno na staging)
 Tvoje „uradi“ 14.11. Na 16 Webflow stranica postojeći omotač sadržaja `main-wrapper` (između navbara i footera) dobio je tag Main umesto Div, preko obične Webflow opcije za tag. Nije dodat nijedan element, klase i stilovi su isti. Spisak elemenata i stari tag: `backup/elements/main-wrapper-tag-2026-11-14.json`.
 | Gde | Pre | Posle |

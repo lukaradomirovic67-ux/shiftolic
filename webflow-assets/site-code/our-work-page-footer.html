@@ -117,6 +117,8 @@
       if (n > 1) load((idx + 1) % n);
     }
     function go(i) { idx = (i + n) % n; elapsed = 0; wait = 0; last = null; render(); }
+    var barList = slider.querySelector('.ow-hs-bars_list');
+    if (barList) { barList.setAttribute('role', 'group'); barList.setAttribute('aria-label', 'Choose a project'); }
     bars.forEach(function (b, i) {
       b.setAttribute('role', 'button');
       b.tabIndex = 0;
@@ -311,6 +313,8 @@
     var list = sec.querySelector('.ow-case-tabs_list');
     var bar = sec.querySelector('.ow-case_tabs');
     if (list) list.setAttribute('role', 'tablist');
+    var panels = sec.querySelector('.ow-cs_list');
+    if (panels) panels.setAttribute('role', 'presentation');
     if (bar && tabs.length < 2) bar.style.display = 'none';
     /* Address bar: Website link without https:// and www. */
     arr(sec.querySelectorAll('.ow-cs_host')).forEach(function (e) {

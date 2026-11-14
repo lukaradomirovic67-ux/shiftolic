@@ -1,0 +1,533 @@
+<!-- Before/after card (Figma 8420:1075 + nues-before-after-slider.html): runtime states; layout is native classes -->
+<style>
+.ow-cs_bg.w-dyn-bind-empty{display:none}
+.ow-cs_url:has(.ow-cs_host.w-dyn-bind-empty){visibility:hidden}
+.ow-cs_knob svg{filter:none}
+.ow-cs_chev{flex:none;transition:transform .45s cubic-bezier(.22,1,.36,1)}
+@media (hover:hover){.ow-cs_compare:hover .ow-cs_knob{width:52px;margin-left:-26px}.ow-cs_compare:hover .ow-cs_chev.is-l{transform:translateX(-2px)}.ow-cs_compare:hover .ow-cs_chev.is-r{transform:translateX(2px)}}
+.ow-cs_compare.is-drag .ow-cs_knob{width:40px;height:56px;margin:-28px 0 0 -20px}
+.ow-cs_compare.is-focus .ow-cs_knob{border-radius:22px}
+.ow-cs_label.is-hidden{opacity:0}
+.ow-cs_compare.no-before .ow-cs_labels{display:none}
+@media (max-width:767px){.ow-cs_compare.is-drag .ow-cs_knob{width:34px;height:48px;margin:-24px 0 0 -17px}}
+@media (prefers-reduced-motion:reduce){.ow-cs_knob,.ow-cs_chev,.ow-cs_label{transition:none}}
+</style>
+<!-- Nues: Our Work page code. Every slide, bar, tab and card is a CMS Collection List item; this script only switches the active one. -->
+<script>
+(function () {
+  var reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  function arr(list) { return Array.prototype.slice.call(list || []); }
+  function noImg(img) { return !img || img.classList.contains('w-dyn-bind-empty') || !(img.getAttribute('src') || '').trim(); }
+  function onKeys(el, fn) {
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fn(); }
+    });
+  }
+
+  /* Work filters: one radio group for Finsweet List Filter, then load Finsweet (fs-list + fs-numbercount) */
+  function prepFilters() {
+    var form = document.querySelector('.ow-filters');
+    if (!form) return;
+    arr(form.querySelectorAll('.ow-filter_input')).forEach(function (inp) {
+      var wrap = inp.closest('.ow-filter');
+      var label = wrap && wrap.querySelector('.ow-filter_label');
+      var all = inp.id === 'ow-filter-all';
+      var v = all ? '' : (inp.getAttribute('fs-list-value') || inp.value || (label ? label.textContent.trim() : ''));
+      inp.name = 'category';
+      inp.value = v;
+      inp.setAttribute('fs-list-field', 'category');
+      inp.setAttribute('fs-list-value', v);
+      inp.setAttribute('fs-list-activeclass', 'is-active');
+      inp.setAttribute('fs-list-operator', 'equal');
+      if (all) inp.checked = true;
+      else if (wrap) wrap.setAttribute('fs-list-emptyfacet', 'hide');
+    });
+  }
+  function loadFinsweet() {
+    if (document.querySelector('script[src*="@finsweet/attributes"]')) return;
+    var s = document.createElement('script');
+    s.type = 'module';
+    s.async = true;
+    s.src = 'https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/attributes.js';
+    s.setAttribute('fs-list', '');
+    document.head.appendChild(s);
+  }
+  try { prepFilters(); } catch (e) { if (window.console) console.warn('ow filters', e); }
+  loadFinsweet();
+
+  /* Hero: slides, bars, domain and meta are four CMS lists with the same filter, so they line up by index.
+     A slide with a Slider video (CMS link field with a direct MP4/WebM URL, bound to the data-video-src attribute of the hidden
+     .ow-hs_video-src link in the slide) plays it muted over
+     its Cover image: that slide lasts as long as the video and its bar follows the video. Without a video, or if the video
+     cannot play (blocked, failed, too slow to start), the slide shows the Cover image for 6 seconds as before. */
+  function initHero() {
+    var slider = document.querySelector('.ow-slider');
+    if (!slider) return;
+    var slides = arr(slider.querySelectorAll('.ow-hs_item'));
+    var n = slides.length;
+    if (!n) { slider.style.display = 'none'; return; }
+    var metas = arr(slider.querySelectorAll('.ow-hm_item'));
+    var hosts = arr(slider.querySelectorAll('.ow-hh_item'));
+    var bars = arr(slider.querySelectorAll('.ow-hs_bar'));
+    function fill(i, v) { if (bars[i]) bars[i].style.setProperty('--ow-progress', v); }
+    var prog = slider.querySelector('.ow-hs_progress');
+    if (n < 2 && prog) prog.style.visibility = 'hidden';
+    var idx = 0, DUR = 6000, WAIT = 4000, elapsed = 0, wait = 0, last = null, kbFocus = false, inView = true;
+    var vids = slides.map(function (s) {
+      var a = s.querySelector('.ow-hs_video-src');
+      var src = a ? (a.getAttribute('data-video-src') || '').trim() : '';
+      if (!/^https?:\/\//i.test(src)) src = '';
+      if (reduce || !src) return null;
+      var box = s.querySelector('.ow-hs_slide') || s;
+      var img = box.querySelector('.ow-hs_img');
+      var v = document.createElement('video');
+      v.className = 'ow-hs_video';
+      v.muted = true; v.defaultMuted = true; v.playsInline = true; v.loop = n < 2; v.preload = 'none';
+      v.setAttribute('muted', ''); v.setAttribute('playsinline', ''); v.setAttribute('aria-hidden', 'true');
+      v.setAttribute('data-src', src);
+      if (img && !noImg(img)) v.poster = img.currentSrc || img.src;
+      box.insertBefore(v, img ? img.nextSibling : box.firstChild);
+      var st = { el: v, bad: false, pending: false };
+      v.addEventListener('playing', function () { if (!st.bad) v.classList.add('is-on'); });
+      v.addEventListener('error', function () { drop(st); });
+      return st;
+    });
+    function drop(st) { st.bad = true; st.el.classList.remove('is-on'); try { st.el.pause(); } catch (e) {} }
+    function load(i) {
+      var st = vids[i];
+      if (st && !st.bad && !st.el.getAttribute('src')) { st.el.preload = 'auto'; st.el.src = st.el.getAttribute('data-src'); }
+    }
+    function render() {
+      slides.forEach(function (s, i) {
+        s.classList.toggle('is-active', i === idx);
+        s.setAttribute('aria-hidden', i === idx ? 'false' : 'true');
+        var st = vids[i];
+        if (st && i !== idx && !st.el.paused) st.el.pause();
+      });
+      [metas, hosts].forEach(function (list) {
+        list.forEach(function (m, i) { m.classList.toggle('is-active', i === idx); });
+      });
+      bars.forEach(function (b, i) {
+        fill(i, i < idx || (i === idx && reduce) ? '100%' : '0%');
+        b.setAttribute('aria-current', i === idx ? 'true' : 'false');
+      });
+      var cur = vids[idx];
+      if (cur && !cur.bad && cur.el.readyState > 0) { try { cur.el.currentTime = 0; } catch (e) {} }
+      load(idx);
+      if (n > 1) load((idx + 1) % n);
+    }
+    function go(i) { idx = (i + n) % n; elapsed = 0; wait = 0; last = null; render(); }
+    bars.forEach(function (b, i) {
+      b.setAttribute('role', 'button');
+      b.tabIndex = 0;
+      b.setAttribute('aria-label', 'Show project: ' + (b.getAttribute('aria-label') || i + 1));
+      b.addEventListener('click', function () { go(i); });
+      onKeys(b, function () { go(i); });
+    });
+    function tick(t) {
+      var run = !reduce && !kbFocus && inView && !document.hidden;
+      var dt = last === null ? 0 : Math.min(t - last, 100);
+      last = run ? t : null;
+      var st = vids[idx];
+      if (st && !st.bad) {
+        var v = st.el;
+        if (run) {
+          if (v.paused && !v.ended && !st.pending) {
+            st.pending = true;
+            var pr = v.play();
+            if (pr && pr.then) pr.then(function () { st.pending = false; }, function () { st.pending = false; drop(st); });
+            else st.pending = false;
+          }
+        } else if (!v.paused) {
+          v.pause();
+        }
+        if (v.duration && v.readyState > 1) {
+          fill(idx, (Math.min(v.currentTime / v.duration, 1) * 100) + '%');
+          if (!v.loop && (v.ended || v.currentTime >= v.duration - 0.05)) go(idx + 1);
+        } else if (run && (wait += dt) > WAIT) {
+          drop(st);
+        }
+      } else if (run) {
+        elapsed += dt;
+        var p = Math.min(elapsed / DUR, 1);
+        fill(idx, (p * 100) + '%');
+        if (p >= 1) go(idx + 1);
+      }
+      window.requestAnimationFrame(tick);
+    }
+    /* Keeps running on hover and after a click; only keyboard focus pauses it, so keyboard users can stop the motion */
+    slider.addEventListener('focusin', function (e) {
+      try { kbFocus = e.target.matches(':focus-visible'); } catch (err) { kbFocus = false; }
+    });
+    slider.addEventListener('focusout', function () { kbFocus = false; });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (es) { inView = es[0].isIntersecting; }).observe(slider);
+    }
+    slider.classList.add('is-ready');
+    render();
+    if (n > 1 || vids[0]) window.requestAnimationFrame(tick);
+  }
+
+  /* Case: before/after comparison (nues-before-after-slider.html). Drag, tap or use the arrow keys; the split eases to where you point.
+     The Before/After pills fade when the split nearly covers them, and the split nudges once when the card first comes into view. */
+  function initCompare(c) {
+    if (!c) return;
+    var bImg = c.querySelector('.ow-cs_before-img');
+    var aImg = c.querySelector('.ow-cs_after');
+    var before = c.querySelector('.ow-cs_before');
+    var handle = c.querySelector('.ow-cs_handle');
+    if (noImg(bImg) || noImg(aImg) || !before || !handle) { c.classList.add('no-before'); return; }
+    var tagL = c.querySelector('.ow-cs_label.is-before'), tagR = c.querySelector('.ow-cs_label:not(.is-before)');
+    var range = document.createElement('input');
+    range.type = 'range'; range.min = '0'; range.max = '100'; range.step = '5'; range.value = '50';
+    range.className = 'ow-cs_range';
+    range.setAttribute('aria-label', 'Compare the site before and after the rebuild');
+    c.appendChild(range);
+    var x = 50, target = 50, raf = 0;
+    function apply() {
+      var clip = 'inset(0 ' + (100 - x) + '% 0 0)';
+      before.style.clipPath = clip;
+      before.style.webkitClipPath = clip;
+      handle.style.left = x + '%';
+      range.value = String(Math.round(x));
+      if (tagL) tagL.classList.toggle('is-hidden', x < 14);
+      if (tagR) tagR.classList.toggle('is-hidden', x > 86);
+    }
+    function ease() {
+      x += (target - x) * 0.25;
+      if (Math.abs(target - x) < 0.05) x = target;
+      apply();
+      raf = x !== target ? window.requestAnimationFrame(ease) : 0;
+    }
+    function set(p, instant) {
+      target = Math.max(2, Math.min(98, p));
+      if (instant || reduce) { x = target; apply(); return; }
+      if (!raf) raf = window.requestAnimationFrame(ease);
+    }
+    function fromEvent(e) { var r = c.getBoundingClientRect(); return r.width ? (e.clientX - r.left) / r.width * 100 : 50; }
+    var drag = false, startX = 0, startY = 0, decided = false;
+    function stop() { drag = false; c.classList.remove('is-drag'); }
+    c.addEventListener('pointerdown', function (e) {
+      if (e.button && e.button !== 0) return;
+      drag = true; decided = e.pointerType === 'mouse'; startX = e.clientX; startY = e.clientY;
+      if (decided) {
+        c.classList.add('is-drag');
+        try { c.setPointerCapture(e.pointerId); } catch (err) {}
+        set(fromEvent(e));
+      }
+    });
+    c.addEventListener('pointermove', function (e) {
+      if (!drag) return;
+      if (!decided) {
+        var dx = Math.abs(e.clientX - startX), dy = Math.abs(e.clientY - startY);
+        if (dx < 6 && dy < 6) return;
+        if (dy > dx) { drag = false; return; }
+        decided = true;
+        c.classList.add('is-drag');
+        try { c.setPointerCapture(e.pointerId); } catch (err) {}
+      }
+      set(fromEvent(e), true);
+    });
+    c.addEventListener('pointerup', function (e) {
+      if (drag && !decided) set(fromEvent(e));
+      stop();
+    });
+    c.addEventListener('pointercancel', stop);
+    range.addEventListener('input', function () { set(parseFloat(range.value)); });
+    range.addEventListener('focus', function () { c.classList.add('is-focus'); });
+    range.addEventListener('blur', function () { c.classList.remove('is-focus'); });
+    set(50, true);
+    /* one gentle nudge the first time the card is on screen, so people see it can be dragged */
+    if (!reduce && 'IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) {
+        if (!es[0].isIntersecting) return;
+        io.disconnect();
+        setTimeout(function () { if (!drag) set(36); }, 500);
+        setTimeout(function () { if (!drag) set(50); }, 1300);
+      }, { threshold: 0.5 });
+      io.observe(c);
+    }
+  }
+
+  /* Case heading: split into letters (screen readers get the plain sentence) so full colour can write over the faint text, like Home and About */
+  function splitChars(h) {
+    var text = (h.textContent || '').replace(/\s+/g, ' ').trim();
+    if (!text || h.hasAttribute('data-ow-chars')) return;
+    var visual = document.createElement('span');
+    visual.setAttribute('aria-hidden', 'true');
+    var chars = [];
+    function add(target, str) {
+      str.split(/(\s+)/).forEach(function (part) {
+        if (!part) return;
+        if (/^\s+$/.test(part)) { target.appendChild(document.createTextNode(' ')); return; }
+        for (var i = 0; i < part.length; i++) {
+          var c = document.createElement('span');
+          c.className = 'ow-cs_char';
+          c.textContent = part.charAt(i);
+          target.appendChild(c);
+          chars.push(c);
+        }
+      });
+    }
+    arr(h.childNodes).forEach(function (node) {
+      if (node.nodeType === 3) { add(visual, node.textContent); return; }
+      if (node.nodeType !== 1) return;
+      var copy = node.cloneNode(false);
+      add(copy, node.textContent);
+      visual.appendChild(copy);
+    });
+    // Same pace as the site-wide text reveal: about 1.4s for a short heading, never slower than 28ms per letter
+    var total = Math.max(1400, Math.min(2400, chars.length * 16));
+    var step = Math.min(28, total / chars.length);
+    chars.forEach(function (c, i) { c.style.transitionDelay = Math.round(i * step) + 'ms'; });
+    var sr = document.createElement('span');
+    sr.className = 'text-reveal_sr';
+    sr.textContent = text;
+    h.textContent = '';
+    h.appendChild(sr);
+    h.appendChild(visual);
+    h.setAttribute('data-ow-chars', '');
+  }
+
+  /* Case heading (Story label): the first third of the words stays dark, the rest is grey (Figma 8420:1075) */
+  function tone(h) {
+    var words = (h.textContent || '').replace(/\s+/g, ' ').trim().split(' ');
+    if (words.length < 4 || h.querySelector('.ow-cs_muted')) return;
+    var n = Math.max(2, Math.ceil(words.length / 3));
+    h.textContent = words.slice(0, n).join(' ') + ' ';
+    var s = document.createElement('span');
+    s.className = 'ow-cs_muted';
+    s.textContent = words.slice(n).join(' ');
+    h.appendChild(s);
+  }
+
+  /* Case: tabs and panels are two CMS lists with the same filter and sort */
+  function initCase() {
+    var sec = document.querySelector('.ow-case');
+    if (!sec) return;
+    var items = arr(sec.querySelectorAll('.ow-cs_item'));
+    if (!items.length) { sec.style.display = 'none'; return; }
+    var tabs = arr(sec.querySelectorAll('.ow-cs_tab'));
+    var list = sec.querySelector('.ow-case-tabs_list');
+    var bar = sec.querySelector('.ow-case_tabs');
+    if (list) list.setAttribute('role', 'tablist');
+    if (bar && tabs.length < 2) bar.style.display = 'none';
+    /* Address bar: Website link without https:// and www. */
+    arr(sec.querySelectorAll('.ow-cs_host')).forEach(function (e) {
+      e.textContent = (e.textContent || '').trim().replace(/^https?:\/\/(www\.)?/i, '').replace(/\/+$/, '');
+    });
+    var heads = [], seen = false;
+    function write(h) {
+      if (!h) return;
+      h.classList.remove('is-revealed');
+      void h.offsetWidth;
+      h.classList.add('is-revealed');
+    }
+    function select(i, focus) {
+      var was = items[i] && items[i].classList.contains('is-active');
+      items.forEach(function (it, j) { it.classList.toggle('is-active', i === j); });
+      // Each newly opened case writes its heading in again once the section has been seen
+      if (seen && !was) write(heads[i]);
+      tabs.forEach(function (t, j) {
+        t.classList.toggle('is-active', i === j);
+        t.setAttribute('aria-selected', i === j ? 'true' : 'false');
+        t.tabIndex = i === j ? 0 : -1;
+      });
+      if (focus && tabs[i]) tabs[i].focus();
+    }
+    items.forEach(function (it, i) {
+      it.id = 'ow-case-panel-' + i;
+      it.setAttribute('role', 'tabpanel');
+      var h = it.querySelector('h3');
+      if (h) { tone(h); splitChars(h); heads[i] = h; }
+      initCompare(it.querySelector('.ow-cs_compare'));
+      var t = tabs[i];
+      if (!t) return;
+      t.id = 'ow-case-tab-' + i;
+      t.setAttribute('role', 'tab');
+      t.setAttribute('aria-controls', it.id);
+      it.setAttribute('aria-labelledby', t.id);
+      t.addEventListener('click', function () { select(i); });
+      t.addEventListener('keydown', function (e) {
+        var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+        if (d) { e.preventDefault(); select((i + d + items.length) % items.length, true); return; }
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(i); }
+      });
+    });
+    sec.classList.add('is-ready');
+    select(0);
+    // Write the open case's heading in once it scrolls into view
+    if (reduce || !('IntersectionObserver' in window)) {
+      seen = true;
+      heads.forEach(function (h) { if (h) h.classList.add('is-revealed'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting || seen) return;
+        seen = true;
+        write(e.target);
+        io.disconnect();
+      });
+    }, { threshold: 0.6 });
+    heads.forEach(function (h) { if (h) io.observe(h); });
+  }
+
+  /* Work cards for projects without a written case study (empty Case title, bound to data-case) open the client's live site
+     (Website link, bound to data-site) in a new tab instead of an empty case page. Also run on hover/focus/click so cards that
+     Finsweet loads or filters in later get the same link. */
+  function siteLink(a) {
+    if (!a || a.hasAttribute('data-site-link')) return;
+    var site = (a.getAttribute('data-site') || '').trim();
+    if ((a.getAttribute('data-case') || '').trim() || !/^https?:\/\//i.test(site)) return;
+    a.setAttribute('href', site);
+    a.setAttribute('target', '_blank');
+    a.setAttribute('rel', 'noopener');
+    a.setAttribute('data-site-link', '');
+  }
+  function initSiteLinks() {
+    arr(document.querySelectorAll('.work-card_component[data-case]')).forEach(siteLink);
+    ['pointerover', 'focusin', 'click'].forEach(function (t) {
+      document.addEventListener(t, function (e) {
+        siteLink(e.target.closest && e.target.closest('.work-card_component[data-case]'));
+      }, true);
+    });
+  }
+
+  /* CMS links: fall back to /our-work/<slug> if the template link did not resolve */
+  function fixLinks() {
+    arr(document.querySelectorAll('.work-card_component[data-slug], .ow-cs_side[data-slug], .ow-hm_view[data-slug]')).forEach(function (a) {
+      var slug = (a.getAttribute('data-slug') || '').trim();
+      var href = a.getAttribute('href') || '';
+      if (slug && (!href || href === '#' || /detail_our-work/.test(href))) a.setAttribute('href', '/our-work/' + slug);
+    });
+  }
+
+  /* Work cards: when the pointer comes onto a card, work out how far the site has to scroll inside it (the screenshot at the card's full width
+     minus the card's height) and how long that takes at an even pace, so short and very long pages both feel calm. Delegated, so cards that
+     Finsweet filters or pages in later work too. */
+  function initShots() {
+    var PACE = 500, MIN = 3, MAX = 12;
+    document.addEventListener('mouseover', function (e) {
+      var card = e.target.closest && e.target.closest('.work-card_component');
+      if (!card || (e.relatedTarget && card.contains(e.relatedTarget))) return;
+      var shot = card.querySelector('.work-card_shot'), media = card.querySelector('.work-card_media');
+      if (!shot || !media) return;
+      var w = shot.naturalWidth || shot.offsetWidth, h = shot.naturalHeight || shot.offsetHeight;
+      if (!w || !h || !media.clientWidth) return;
+      var dist = Math.max(0, Math.round(media.clientWidth * h / w - media.clientHeight));
+      card.style.setProperty('--shot-y', -dist + 'px');
+      card.style.setProperty('--shot-dur', Math.min(MAX, Math.max(MIN, dist / PACE)).toFixed(2) + 's');
+    });
+  }
+
+  function boot() {
+    try { initShots(); } catch (e) { if (window.console) console.warn('ow cards', e); }
+    try { fixLinks(); } catch (e) { if (window.console) console.warn('ow links', e); }
+    try { initSiteLinks(); } catch (e) { if (window.console) console.warn('ow site links', e); }
+    try { initHero(); } catch (e) { if (window.console) console.warn('ow hero', e); }
+    try { initCase(); } catch (e) { if (window.console) console.warn('ow case', e); }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
+  else boot();
+})();
+</script>
+<script>
+/* Numbers: results rings, built from the native stat blocks so they stay editable in the Designer */
+(function(){
+var sec=document.querySelector('[data-ow-rings]'); if(!sec) return;
+if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded',init); } else { init(); }
+function init(){
+var root=sec.querySelector('.ow-numbers_viz'); if(!root) return; root.insertAdjacentHTML('afterbegin','<div class="nr-box"><svg viewBox="60 60 1000 680" aria-hidden="true" focusable="false"></svg></div><ul class="nr-list" aria-hidden="true"></ul>'); var box=root.querySelector('.nr-box'), svg=box.querySelector('svg'), list=root.querySelector('.nr-list'), pin=sec.querySelector('.padding-global'), cont=sec.querySelector('.ow-numbers_inner');
+var COL=['#FFFFFF','#ADB1B6','#D8D9DC','#A0A5AB'], R=[300,266,232,198], Y=[130,290,450,592], TICK='#0d1928';
+/* numbers and labels come from the Webflow stat blocks, so they stay editable in the Designer */
+var M=[].slice.call(sec.querySelectorAll('.ow-stat')).slice(0,4).map(function(el,i){
+var v=el.querySelector('.ow-stat_value'), l=el.querySelector('.ow-stat_label');
+return {n:v?v.textContent.trim():'',lb:l?l.textContent.trim():'',col:COL[i],r:R[i],y:Y[i]};
+});
+if(!M.length) return;
+sec.classList.add('nr-on');
+var CX=400,CY=400,W=14,LX=820,s='';
+s+='<circle class="nr-orbit" cx="400" cy="400" r="336"/>';
+M.forEach(function(m,i){
+var end=Math.asin((m.y-CY)/m.r), endDeg=end*180/Math.PI;
+m.f=((-90-endDeg)%360+360)%360/360; m.C=2*Math.PI*m.r; m.tx=CX+m.r*Math.cos(end); m.L=LX-m.tx;
+s+='<circle class="nr-track" cx="400" cy="400" r="'+m.r+'" stroke-width="'+W+'"/>';
+s+='<circle class="nr-arc" cx="400" cy="400" r="'+m.r+'" stroke="'+m.col+'" stroke-width="'+W+'" stroke-dasharray="'+m.C.toFixed(1)+'" stroke-dashoffset="'+m.C.toFixed(1)+'" transform="translate(800 0) scale(-1 1) rotate(-90 400 400)"/>';
+s+='<path class="nr-lead" d="M'+m.tx.toFixed(1)+' '+m.y+'H'+LX+'" style="stroke-dasharray:'+m.L.toFixed(1)+';stroke-dashoffset:'+m.L.toFixed(1)+'"/>';
+s+='<g class="nr-tick" opacity="0"><circle cx="'+m.tx.toFixed(1)+'" cy="'+m.y+'" r="7" fill="'+TICK+'" stroke="'+m.col+'" stroke-width="2"/><circle class="nr-end" cx="'+LX+'" cy="'+m.y+'" r="3" fill="'+m.col+'"/></g>';
+});
+var P1='M0 0L66.7 66.7H46A13 13 0 0 0 33 79.7V100H9A9 9 0 0 1 0 91Z', P2='M66.7 0H91A9 9 0 0 1 100 9V100L66.7 66.7Z', gid='nr-mg-'+Math.random().toString(36).slice(2,7);
+s+='<defs><linearGradient id="'+gid+'" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".55" stop-color="#FFFFFF"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient></defs>';
+s+='<g class="nr-mark" transform="translate(330 330) scale(1.4)">'+
+'<g class="nr-half nr-h1"><path class="fl" fill="url(#'+gid+')" d="'+P1+'"/><path class="ol" d="'+P1+'" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></g>'+
+'<g class="nr-half nr-h2"><path class="fl" fill="url(#'+gid+')" d="'+P2+'"/><path class="ol" d="'+P2+'" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></g>'+
+'<path class="nr-glint" d="M0 0L66.7 66.7" pathLength="1" stroke-dasharray=".18 1" stroke-dashoffset="1"/></g>';
+s+='<circle class="nr-pulse" cx="400" cy="400" r="150"/>';
+svg.innerHTML=s;
+var arcs=svg.querySelectorAll('.nr-arc'), leads=svg.querySelectorAll('.nr-lead'), ticks=svg.querySelectorAll('.nr-tick'), labs=[], lis=[];
+function esc(t){var d=document.createElement('div');d.textContent=t;return d.innerHTML;}
+M.forEach(function(m){
+var d=document.createElement('div'); d.className='nr-lab'; d.style.top=((m.y-60)/680*100)+'%';
+d.innerHTML='<div class="ow-stat_value">'+esc(m.n)+'</div><div class="ow-stat_label">'+esc(m.lb)+'</div>';
+box.appendChild(d); labs.push(d);
+var li=document.createElement('li');
+li.innerHTML='<div class="ow-stat_value"><i style="background:'+m.col+'"></i><span>'+esc(m.n)+'</span></div><div class="ow-stat_label">'+esc(m.lb)+'</div>';
+list.appendChild(li); lis.push(li);
+});
+var mob=matchMedia('(max-width:767px)');
+function fit(){ svg.setAttribute('viewBox',mob.matches?'56 56 688 688':'60 60 1000 680'); }
+fit(); if(mob.addEventListener) mob.addEventListener('change',fit); else mob.addListener(fit);
+var io=new IntersectionObserver(function(e){ if(e[0].isIntersecting){ box.classList.add('ready'); io.disconnect(); } },{threshold:.25});
+io.observe(box);
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function parse(t){ var x=String(t).match(/^([^0-9]*)([0-9]+(?:[.,][0-9]+)?)(.*)$/); return x?{pre:x[1],num:parseFloat(x[2].replace(',','.')),dec:(x[2].split(/[.,]/)[1]||'').length,suf:x[3]}:null; }
+M.forEach(function(m){ m.v=parse(m.n); });
+function show(el,m,k){ if(m.v) el.textContent=m.v.pre+(m.v.num*k).toFixed(m.v.dec)+m.v.suf; }
+function count(el,m,on,mobile){
+if(!el||!m.v) return; var key=mobile?'cm':'cd';
+if(on===m[key]) return; m[key]=on;
+if(!on){ show(el,m,0); return; }
+if(reduce){ show(el,m,1); return; }
+var t0=performance.now(), dur=1400;
+(function step(now){ if(m[key]!==true) return; var k=Math.min(1,(now-t0)/dur); show(el,m,1-Math.pow(1-k,3)); if(k<1) requestAnimationFrame(step); })(t0);
+}
+var mark=svg.querySelector('.nr-mark'), ol=svg.querySelectorAll('.nr-mark .ol');
+function ease(t){return t<0?0:t>1?1:1-Math.pow(1-t,3);}
+function progress(){
+if(reduce) return 1;
+if(cont&&getComputedStyle(root).position==='sticky'){
+/* the stage sits right above the scroll room (::after), so its unpinned top is worked out from the container's bottom;
+   progress runs from the moment it pins (top reaches 0) to when the scroll room below it is used up */
+var cc=getComputedStyle(cont), room=(parseFloat(getComputedStyle(cont,'::after').height)||0)+(parseFloat(cc.rowGap)||0); if(room<1) return 1;
+var top=cont.getBoundingClientRect().bottom-(parseFloat(cc.paddingBottom)||0)-room-root.offsetHeight;
+return Math.min(1,Math.max(0,-top/room));
+}
+var b=box.getBoundingClientRect();
+return Math.min(1,Math.max(0,(innerHeight*.9-b.top)/(innerHeight*.5+b.height)));
+}
+function frame(){
+var p=progress();
+pin.style.setProperty('--p',p.toFixed(4));
+M.forEach(function(m,i){
+var t=(p-.05-i*.22)/.22, draw=ease(t/.72), lt=ease((t-.62)/.38);
+arcs[i].setAttribute('stroke-dashoffset',(m.C*(1-m.f*draw)).toFixed(1));
+leads[i].style.strokeDashoffset=(m.L*(1-lt)).toFixed(1);
+ticks[i].setAttribute('opacity',draw>.98?1:0);
+count(labs[i].querySelector('.ow-stat_value'),m,lt>.6);
+lis[i].classList.toggle('in',draw>.9); count(lis[i].querySelector('.ow-stat_value span'),m,draw>.9,true); labs[i].classList.toggle('in',lt>.6);
+});
+var lp=Math.min(1,Math.max(0,(p-.05)/.88));
+ol[0].setAttribute('stroke-dashoffset',(1-Math.min(1,lp*2)).toFixed(4));
+ol[1].setAttribute('stroke-dashoffset',(1-Math.max(0,lp*2-1)).toFixed(4));
+ol[0].style.opacity=lp>.002?1:0; ol[1].style.opacity=lp>.5?1:0;
+mark.classList.toggle('full',lp>=.995);
+}
+/* only animate while the section is on screen */
+var on=false, raf=0;
+function loop(){ frame(); raf=on?requestAnimationFrame(loop):0; }
+new IntersectionObserver(function(e){ on=e[0].isIntersecting; if(on&&!raf) raf=requestAnimationFrame(loop); },{rootMargin:'100px 0px'}).observe(sec);
+frame();
+}
+})();
+</script>

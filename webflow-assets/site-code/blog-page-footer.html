@@ -1,0 +1,112 @@
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var holder = document.querySelector('.blog-main-categories_holder');
+  if (!holder) return;
+
+  var items = holder.querySelectorAll('a, button, label, [role="button"]');
+  var target = null;
+
+  items.forEach(function(item) {
+    if (item.textContent.trim().toLowerCase() === 'all') {
+      target = item;
+    }
+  });
+
+  if (target) {
+    target.click();
+  }
+});
+</script>
+
+<!-- Nues: code moved here from page embeds. Edit here, not in embeds. -->
+<style>
+/* Insights pagination: the grid fades out and back in, the cards come in one after another (see the list script in this footer) */
+.ins-grid{transition:opacity .2s ease}
+.ins-grid.is-out{opacity:0}
+.ins-grid_item.ins-in{animation:insIn .55s cubic-bezier(.22,1,.36,1) both;animation-delay:calc(var(--ins-i,0) * 45ms)}
+@keyframes insIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.ins-grid{transition:none}.ins-grid_item.ins-in{animation:none}}
+</style>
+<script>
+(function(){
+  /* Insights list: category filter, search and pagination (9 per page) over the native CMS list.
+     Changing page: the grid fades out while the page scrolls back to the list, the new cards' images are already loaded
+     (every thumbnail is fetched in the background once the page is idle), then the cards come in one after another.
+     The grid keeps its height during the swap so nothing below it jumps. */
+  function run(){
+    var root=document.querySelector('[data-ins-list]');if(!root){return;}
+    var grid=root.querySelector('.ins-grid');
+    var PER=9,page=1,cat='',q='';
+    var reduce=!!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    function txt(el,sel){var n=el.querySelector(sel);return n?n.textContent.trim():'';}
+    var data=grid?[].slice.call(grid.querySelectorAll('.ins-grid_item')).map(function(it,i){return {el:it,title:txt(it,'h3'),cat:txt(it,'.blog-card_cat'),author:txt(it,'.blog-author_name'),date:Date.parse(txt(it,'.blog-card_date'))||0,i:i};}):[];
+    data.sort(function(a,b){return (b.date-a.date)||(a.i-b.i);});
+    data.forEach(function(d){grid.appendChild(d.el);});
+    function nameOf(b){var t='';[].forEach.call(b.childNodes,function(c){if(!(c.classList&&c.classList.contains('ins-filter_order'))){t+=c.textContent;}});return t.trim();}
+    var fl=root.querySelector('.ins-filter_list');
+    if(fl){fl.setAttribute('role','group');fl.setAttribute('aria-label','Filter insights by category');}
+    var btns=fl?[].slice.call(fl.querySelectorAll('.ins-filter_btn')):[];
+    btns.sort(function(a,b){var x=parseFloat(txt(a,'.ins-filter_order')),y=parseFloat(txt(b,'.ins-filter_order'));return (isNaN(x)?99:x)-(isNaN(y)?99:y);});
+    btns.forEach(function(b){fl.appendChild(b);});
+    var hasAll=btns.some(function(b){return /^all$/i.test(nameOf(b));});
+    if(fl&&!hasAll){var a=document.createElement('div');a.className='ins-filter_btn';a.textContent='All';fl.insertBefore(a,fl.firstChild);btns.unshift(a);}
+    btns.forEach(function(b){var n=nameOf(b);b.setAttribute('data-cat',/^all$/i.test(n)?'':n);b.setAttribute('role','button');b.setAttribute('tabindex','0');
+      b.addEventListener('click',function(){setCat(b.getAttribute('data-cat'));});
+      b.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();setCat(b.getAttribute('data-cat'));}});});
+    function setCat(c){c=c||'';if(c===cat&&page===1){return;}cat=c;page=1;swap(false);}
+    var input=root.querySelector('[data-ins-search]');var tmr;
+    if(input){input.addEventListener('input',function(){clearTimeout(tmr);tmr=setTimeout(function(){q=input.value.trim().toLowerCase();page=1;render();},150);});}
+    var pag=root.querySelector('[data-ins-pagination]');var empty=root.querySelector('.ins-empty');
+    function filtered(){return data.filter(function(d){if(cat&&d.cat.toLowerCase()!==cat.toLowerCase()){return false;}if(q&&(d.title+' '+d.cat+' '+d.author).toLowerCase().indexOf(q)===-1){return false;}return true;});}
+    function pageList(n){var a=[],i;if(n<=7){for(i=1;i<=n;i++){a.push(i);}return a;}var start=Math.max(2,page-1),end=Math.min(n-1,page+1);if(page<=3){start=2;end=4;}if(page>=n-2){start=n-3;end=n-1;}a.push(1);if(start>2){a.push('gap');}for(i=start;i<=end;i++){a.push(i);}if(end<n-1){a.push('gap');}a.push(n);return a;}
+    function arrow(left){return '<svg viewBox="0 0 20 20" width="20" height="20" fill="none" aria-hidden="true"><path d="'+(left?'M12.5 4.5L7 10l5.5 5.5':'M7.5 4.5L13 10l-5.5 5.5')+'" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';}
+    function mk(cls,html,label){var b=document.createElement('button');b.type='button';b.className=cls;b.innerHTML=html;b.setAttribute('aria-label',label);return b;}
+    function go(p){if(p===page){return;}page=p;swap(true);}
+    function buildPag(n){if(!pag){return;}pag.innerHTML='';if(n<=1){pag.style.display='none';return;}pag.style.display='';
+      var prev=mk('ins-page_arrow is-prev',arrow(true),'Previous page');prev.disabled=page===1;prev.addEventListener('click',function(){go(page-1);});
+      var nums=document.createElement('div');nums.className='ins-page_nums';
+      pageList(n).forEach(function(p){if(p==='gap'){var s=document.createElement('span');s.className='ins-page_gap';s.textContent='...';nums.appendChild(s);return;}
+        var b=mk('ins-page_num'+(p===page?' is-active':''),String(p),'Page '+p);if(p===page){b.setAttribute('aria-current','page');}b.addEventListener('click',function(){go(p);});nums.appendChild(b);});
+      var next=mk('ins-page_arrow is-next',arrow(false),'Next page');next.disabled=page===n;next.addEventListener('click',function(){go(page+1);});
+      pag.appendChild(prev);pag.appendChild(nums);pag.appendChild(next);}
+    function render(){var list=filtered();var n=Math.max(1,Math.ceil(list.length/PER));if(page>n){page=n;}
+      var show=list.slice((page-1)*PER,page*PER);
+      data.forEach(function(d){d.el.style.display='none';d.el.classList.remove('ins-in');});
+      show.forEach(function(d){d.el.style.display='';});
+      btns.forEach(function(b){var on=(b.getAttribute('data-cat')||'')===cat;b.classList.toggle('is-active',on);b.setAttribute('aria-pressed',on?'true':'false');});
+      if(empty){empty.style.display=list.length?'none':'block';}
+      buildPag(n);return show;}
+    /* wait (at most ~0.35s) for the new cards' images, so they appear complete instead of popping in */
+    function ready(items,ms){var imgs=[];items.forEach(function(d){[].forEach.call(d.el.querySelectorAll('img'),function(im){im.loading='eager';imgs.push(im);});});
+      var all=Promise.all(imgs.map(function(im){var p=im.complete?Promise.resolve():new Promise(function(r){im.addEventListener('load',r,{once:true});im.addEventListener('error',r,{once:true});});
+        return p.then(function(){return im.decode?im.decode().catch(function(){}):null;});}));
+      return Promise.race([all,new Promise(function(r){setTimeout(r,ms);})]);}
+    function toList(){var top=root.getBoundingClientRect().top;if(top<0||top>window.innerHeight*.6){window.scrollTo({top:top+window.pageYOffset-80,behavior:reduce?'auto':'smooth'});}}
+    var token=0,T=0;
+    function swap(scroll){
+      if(reduce||!grid||!('Promise' in window)){render();if(scroll){toList();}return;}
+      var my=++token;clearTimeout(T);
+      if(!grid.style.minHeight){grid.style.minHeight=grid.offsetHeight+'px';}
+      grid.classList.add('is-out');
+      if(scroll){toList();}
+      T=setTimeout(function(){
+        if(my!==token){return;}
+        var show=render();
+        ready(show,350).then(function(){
+          if(my!==token){return;}
+          show.forEach(function(d,i){d.el.style.setProperty('--ins-i',i);d.el.classList.add('ins-in');});
+          grid.classList.remove('is-out');
+          setTimeout(function(){if(my===token){grid.style.minHeight='';}},700);
+        });
+      },200);
+    }
+    render();
+    /* fetch every thumbnail in the background once the page is idle, so later pages open with their images ready */
+    function warm(){data.forEach(function(d){[].forEach.call(d.el.querySelectorAll('img'),function(im){im.loading='eager';});});}
+    function idle(){if('requestIdleCallback' in window){requestIdleCallback(warm,{timeout:3000});}else{setTimeout(warm,1500);}}
+    if(document.readyState==='complete'){idle();}else{window.addEventListener('load',idle);}
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}else{run();}
+})();
+</script>
+<script>(function(){var s=document.currentScript;var root=(s&&s.closest)?s.closest('[data-ins-featured]'):null;if(!root){root=document.querySelector('[data-ins-featured]');}if(!root){return;}function init(){var items=[].slice.call(root.querySelectorAll('.ins-featured_item')).filter(function(i){return !i.classList.contains('w-condition-invisible');});if(!items.length){root.style.display='none';return;}var dots=root.querySelector('[data-ins-dots]');var cur=0,timer=null;var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;function show(n){cur=(n+items.length)%items.length;items.forEach(function(it,i){var on=i===cur;it.classList.toggle('is-active',on);it.setAttribute('aria-hidden',on?'false':'true');var a=it.querySelector('a');if(a){a.setAttribute('tabindex',on?'0':'-1');}});if(dots){[].forEach.call(dots.children,function(d,i){d.classList.toggle('is-active',i===cur);d.setAttribute('aria-current',i===cur?'true':'false');});}}function restart(){clearInterval(timer);if(items.length>1&&!reduce){timer=setInterval(function(){show(cur+1);},6000);}}if(dots){dots.innerHTML='';if(items.length>1){items.forEach(function(_,i){var b=document.createElement('button');b.type='button';b.className='ins-feat-dot';b.setAttribute('aria-label','Show featured insight '+(i+1));b.addEventListener('click',function(){show(i);restart();});dots.appendChild(b);});}}root.addEventListener('focusin',function(e){var kb=true;try{kb=e.target.matches(':focus-visible');}catch(err){}if(kb){clearInterval(timer);}});root.addEventListener('focusout',function(e){if(!root.contains(e.relatedTarget)){restart();}});root.classList.add('is-ready');show(0);restart();}init();})();</script>
