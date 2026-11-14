@@ -1,0 +1,25 @@
+{
+ "note": "navbar2_toggle-link style before the change on 14.11.2026 (Navbar Services and Resources dropdown title links)",
+ "before": {
+  "main": {
+   "text-decoration": "none",
+   "color": "inherit"
+  }
+ },
+ "after": {
+  "main": {
+   "text-decoration": "none",
+   "color": "inherit",
+   "padding-top": "12px",
+   "padding-bottom": "12px",
+   "margin-top": "-12px",
+   "margin-bottom": "-12px"
+  },
+  "medium": {
+   "padding-top": "0px",
+   "padding-bottom": "0px",
+   "margin-top": "0px",
+   "margin-bottom": "0px"
+  }
+ }
+}

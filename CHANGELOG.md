@@ -3,6 +3,17 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 14.11.2026: veća površina za klik na Services i Resources u navbaru (objavljeno na staging)
+Druga od tri preostale stavke iz audita („premala dugmad“), prvi deo. Kopija stila pre izmene: `backup/styles/navbar2_toggle-link-2026-11-14.json`.
+| Gde | Pre | Posle |
+|---|---|---|
+| Klasa `navbar2_toggle-link` (naslovi Services i Resources u navbaru), desktop | bez razmaka, površina za klik 19,5 px visine | padding gore i dole 12px, margin gore i dole -12px: površina 43,5 px, kao ostali linkovi u navbaru |
+| Ista klasa, tablet i manje (≤991 px) | (nasleđivalo bi desktop) | padding i margin 0, kao do sada (u mobilnom meniju link je već 26 do 31 px) |
+- Ništa se ne pomera: položaj svih elemenata navbara je isti do piksela na 1440, 1100, 991 i 390 px (sa otvorenim menijem na manjim širinama).
+- Hover i padajući meni rade kao pre (veća površina je unutar istog elementa koji otvara meni).
+- Provereno na stagingu: provera „target-size“ u navbaru prolazi na svim širinama.
+- Tačkice za listanje istaknutih tekstova na /blog (8 px, 8 px razmaka) ne mogu da se srede bez vidljive promene; predlog je u `notes/blog-tackice-predlog-2026-11-14.png`, čeka odobrenje.
+
 ## 14.11.2026: opisi linkova za čitače ekrana sadrže tekst koji piše na njima (objavljeno na staging)
 Tvoje „radi jednu po jednu redom“ 14.11, prva od tri preostale stavke iz audita. Kopije pre izmene: `backup/page-code/2026-11-14-labels/`.
 | Gde | Pre | Posle |
