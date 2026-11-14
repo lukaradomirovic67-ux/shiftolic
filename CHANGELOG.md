@@ -3,6 +3,16 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 14.11.2026: opisi linkova za čitače ekrana sadrže tekst koji piše na njima (objavljeno na staging)
+Tvoje „radi jednu po jednu redom“ 14.11, prva od tri preostale stavke iz audita. Kopije pre izmene: `backup/page-code/2026-11-14-labels/`.
+| Gde | Pre | Posle |
+|---|---|---|
+| Footer komponenta, Clutch link (vidljivo „5.0 on Clutch“), važi na svih 41 stranici | `aria-label="Nues reviews on Clutch, rated 5.0"` | `aria-label="5.0 on Clutch, read Nues reviews"` |
+| Our Works Template, footer kod: kartice tima | opis „Ime on LinkedIn“; ime i uloga bez razmaka, pa ih čitač ekrana čita kao jednu reč („DumicHead“) | opis „Ime, uloga, on LinkedIn“ i nevidljiv razmak između imena i uloge (2 reda koda) |
+- Ništa vidljivo nije menjano. Raspored kartica tima je isti do piksela na 1440 i 390 px (provereno pre upisa).
+- Ostali Clutch linkovi (Home hero, CTA, Reviews) već prolaze proveru, nisu dirani.
+- Provereno na stagingu: novi opis je na svih 41 stranici; Lighthouse „label-content-name-mismatch“ prolazi na About, Ballerine i Shiftolic. Ballerine 95 → 96 (telefon), 91 → 93 (desktop); Shiftolic 98 → 100 i 95 → 96.
+
 ## 14.11.2026: liste na Blog i Our Work i redosled naslova na Privacy i Terms (objavljeno na staging)
 Tvoje „radi“ 14.11. Kopije koda pre izmene: `backup/page-code/2026-11-14-lists/` (Blog footer, Our Work footer, head Privacy i Terms).
 | Gde | Pre | Posle |

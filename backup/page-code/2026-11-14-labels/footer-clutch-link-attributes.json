@@ -1,0 +1,15 @@
+{
+ "note": "Footer component (a84f52e6-89fa-5c5d-f18b-cf1f598b378d), Clutch rating link 6346c197-8078-a57e-fa5e-ebd8ea76cdc5, before the change on 14.11.2026",
+ "attributes_before": [
+  {
+   "name": "aria-label",
+   "value": "Nues reviews on Clutch, rated 5.0"
+  }
+ ],
+ "attributes_after": [
+  {
+   "name": "aria-label",
+   "value": "5.0 on Clutch, read Nues reviews"
+  }
+ ]
+}

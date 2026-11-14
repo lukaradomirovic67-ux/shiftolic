@@ -1,0 +1,304 @@
+<!-- Nues: code moved here from page embeds. Edit here, not in embeds. -->
+<script>
+(function(){
+function ready(fn){if(document.readyState!=='loading'){fn();}else{document.addEventListener('DOMContentLoaded',fn);}}
+var ZW=new RegExp('['+String.fromCharCode(8203)+'-'+String.fromCharCode(8205)+String.fromCharCode(65279)+String.fromCharCode(160)+']','g');
+function txt(el){return el?el.textContent.replace(ZW,'').trim():'';}
+function noSlash(s){s=s||'';while(s.length>1&&s.charAt(s.length-1)==='/'){s=s.slice(0,-1);}return s;}
+function isEmpty(el){return !el||el.classList.contains('w-dyn-bind-empty')||!txt(el).length;}
+function imgEmpty(el){return !el||el.classList.contains('w-dyn-bind-empty')||!el.getAttribute('src');}
+function rm(el){if(el&&el.parentNode){el.parentNode.removeChild(el);}}
+function each(root,sel,fn){Array.prototype.forEach.call((root||document).querySelectorAll(sel),fn);}
+ready(function(){
+var hero=document.querySelector('.cs-hero');
+if(hero){
+var v2=hero.querySelector('h1.is-v2'),lg=hero.querySelector('h1.is-legacy');
+// Title: Case title (is-legacy h1); the is-v2 h1 only shows old Hero title text. Case title highlight works on both.
+var h1=null;
+if(v2&&!isEmpty(v2)){rm(lg);h1=v2;}
+else{rm(v2);if(lg&&isEmpty(lg)){var nm=(lg.getAttribute('data-name')||'').trim();if(nm){lg.textContent=nm;lg.classList.remove('w-dyn-bind-empty');}}else{h1=lg;}}
+if(h1){
+var hl=(h1.getAttribute('data-hl')||'').trim(),t=h1.textContent,i=hl?t.lastIndexOf(hl):-1;
+if(i>-1){
+var before=t.slice(0,i).trim(),after=t.slice(i+hl.length),span=document.createElement('span');
+span.className='text-gradient is-green cs-hl';span.textContent=hl;
+h1.textContent=before?before+' ':'';h1.appendChild(span);
+if(after){h1.appendChild(document.createTextNode(after));}
+}
+}
+var stats=hero.querySelector('.cs-stats');
+if(stats){
+// Stat 3 filled = Stat 1, Stat 2, Stat 3 (is-v2 row); Stat 3 empty = Stat 1, Stat 2, Industry (is-legacy row)
+var v2s=stats.querySelectorAll('.cs-stat.is-v2'),s3=v2s.length>2?v2s[2]:null;
+var hasV2=!!(s3&&!isEmpty(s3.querySelector('.cs-stat_value')));
+each(stats,'.cs-stat',function(s){
+if(isEmpty(s.querySelector('.cs-stat_value'))||(hasV2&&s.classList.contains('is-legacy'))||(!hasV2&&s.classList.contains('is-v2'))){rm(s);return;}
+var l=s.querySelector('.cs-stat_label');if(isEmpty(l)){rm(l);}
+});
+if(!stats.querySelector('.cs-stat')){rm(hero.querySelector('.cs-stats_clip'));}
+}
+var btn=hero.querySelector('.cs-hero_btn');
+if(btn){var h=btn.getAttribute('href');if(!h||h==='#'||btn.classList.contains('w-dyn-bind-empty')){rm(btn);}else{btn.setAttribute('target','_blank');btn.setAttribute('rel','noopener');}}
+var bar=hero.querySelector('.cs-hero_bar');
+if(bar&&!bar.querySelector('.cs-stat,.cs-hero_btn')){rm(bar);}
+each(hero,'.cs-shot',function(shot){
+var v=null,l=null;
+each(shot,'.cs-shot_img',function(im){if(im.classList.contains('is-legacy')){l=im;}else{v=im;}});
+if(!imgEmpty(v)){rm(l);}else{rm(v);if(imgEmpty(l)){rm(l);shot.setAttribute('data-empty','1');}}
+});
+var center=hero.querySelector('.cs-shot.is-center');
+if(!center||center.getAttribute('data-empty')){rm(hero.querySelector('.cs-shots'));}
+else{each(hero,'.cs-shot[data-empty]',rm);}
+var logo=hero.querySelector('.cs-hero_logo');
+if(imgEmpty(logo)){rm(hero.querySelector('.cs-hero_logo-wrap'));}
+if(!hero.querySelector('.cs-shots')){hero.style.paddingBottom='clamp(64px,8vw,100px)';var hb=hero.querySelector('.cs-hero_bottom');if(hb&&!hb.querySelector('.cs-hero_bar')){rm(hb);}}
+}
+var q=document.querySelector('.cs-quote');
+if(q){
+if(isEmpty(q.querySelector('.cs-quote_text'))){rm(q);}
+else{
+['.cs-quote_sig','.cs-quote_name','.cs-quote_role'].forEach(function(s){var e=q.querySelector(s);if(isEmpty(e)){rm(e);}});
+if(!q.querySelector('.cs-quote_sig')||!q.querySelector('.cs-quote_name,.cs-quote_role')){rm(q.querySelector('.cs-quote_divider'));}
+var au=q.querySelector('.cs-quote_author');if(au&&!au.querySelector('p')){rm(au);}
+var ic=q.querySelector('.cs-quote_icon.is-client');if(imgEmpty(ic)){rm(ic);}
+}
+}
+each(document,'.cs-rich',function(r){
+each(r,'p',function(p){if(!p.querySelector('img,iframe,video')&&!txt(p).length){rm(p);}});
+if(r.classList.contains('w-dyn-bind-empty')||(!txt(r).length&&!r.querySelector('img,iframe,video'))){rm(r);}
+});
+each(document,'.cs-block',function(b){if(!b.querySelector('.cs-rich')){rm(b);}});
+each(document,'.cs-copy',function(c){if(!c.querySelector('.cs-block')){rm(c);}});
+var g=document.querySelector('.cs-gallery');
+if(g){
+each(g,'.cs-gallery_card',function(c){if(imgEmpty(c.querySelector('img'))){rm(c);}});
+if(!g.querySelector('.cs-gallery_card')){rm(g);}
+}
+var bd=document.querySelector('.cs-body');
+if(bd&&!bd.querySelector('.cs-quote,.cs-copy,.cs-gallery')){rm(bd);}
+var grid=document.querySelector('.cs-next_grid');
+if(grid){
+var MAX=2,path=noSlash(location.pathname),curSlug=path.split('/').pop(),items=[].slice.call(grid.querySelectorAll('.cs-next_item')),cur=-1;
+items.forEach(function(it,idx){
+var a=it.querySelector('.work-card_component');if(!a){return;}
+var slug=(a.getAttribute('data-slug')||'').trim(),href=a.getAttribute('href')||'';
+if(slug&&(!href||href.charAt(0)==='#')){a.setAttribute('href','/our-work/'+slug);}
+if(slug){if(slug===curSlug){cur=idx;}}
+else if(href&&href.charAt(0)!=='#'&&noSlash(a.pathname)===path){cur=idx;}
+});
+var ordered=cur>-1?items.slice(cur+1).concat(items.slice(0,cur)):items,shown=0,keep=[];
+ordered.forEach(function(it){
+if(shown<MAX&&(!imgEmpty(it.querySelector('.work-card_bg'))||!imgEmpty(it.querySelector('.work-card_img')))){
+grid.appendChild(it);keep.push(it);shown++;
+if(isEmpty(it.querySelector('.work-card_value'))){rm(it.querySelector('.work-card_stat'));}
+else if(isEmpty(it.querySelector('.work-card_label'))){rm(it.querySelector('.work-card_label'));}
+if(imgEmpty(it.querySelector('.work-card_logo'))){rm(it.querySelector('.work-card_logo-wrap'));}
+if(isEmpty(it.querySelector('.work-card_industry'))){rm(it.querySelector('.work-card_industry'));}
+}
+});
+items.forEach(function(it){if(keep.indexOf(it)<0){rm(it);}});
+grid.classList.add('is-ready');
+if(!shown){rm(document.querySelector('.cs-next'));}
+}
+});
+})();
+</script>
+<script>
+/* Hero screenshots: the three take turns in the middle every few seconds (paused while off screen). A turn only changes
+   the flex order and the native is-center / is-side / is-dim classes, so sizes still come from the Designer at every breakpoint. */
+(function(){
+function ready(fn){if(document.readyState!=='loading'){fn();}else{document.addEventListener('DOMContentLoaded',fn);}}
+ready(function(){
+var box=document.querySelector('.cs-hero .cs-shots');
+if(!box){return;}
+var cards=[].slice.call(box.children).filter(function(c){return c.classList.contains('cs-shot');});
+if(cards.length!==3){return;}
+var reduce=!!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+var slot=[0,1,2],busy=false,inView=true,timer=0,DUR=850,WAIT=4500;
+function apply(){
+cards.forEach(function(c,i){
+var mid=slot[i]===1,s=c.querySelector('.cs-shot_screen');
+c.style.order=slot[i];
+c.classList.toggle('is-center',mid);
+c.classList.toggle('is-side',!mid);
+if(s){s.classList.toggle('is-dim',!mid);}
+});
+}
+function shown(r){return r.width>0&&r.height>0;}
+function step(dir){
+if(busy){return;}
+var next=slot.map(function(p){return (p-dir+3)%3;});
+if(reduce){slot=next;apply();return;}
+busy=true;
+var host=box.getBoundingClientRect(),before=cards.map(function(c){return c.getBoundingClientRect();});
+var side=cards[slot.indexOf(0)],sidesHidden=getComputedStyle(side).display==='none',ghosts=[];
+var wrap=next.map(function(p,i){return Math.abs(p-slot[i])===2;});
+// A card that jumps across the row, or leaves the screen (phones show only the middle one), fades out as a copy where it was
+cards.forEach(function(c,i){
+var r=before[i];
+if(!shown(r)||!(wrap[i]||(sidesHidden&&next[i]!==1))){return;}
+var g=c.cloneNode(true);
+g.classList.add('cs-shot_ghost');
+g.setAttribute('aria-hidden','true');
+g.style.cssText='left:'+(r.left-host.left)+'px;top:'+(r.top-host.top)+'px;width:'+r.width+'px;height:'+r.height+'px;transform:none';
+box.appendChild(g);ghosts.push(g);
+});
+// FLIP: switch to the new places, then start every card from where it was so it glides (sizes ease in CSS at the same pace)
+box.classList.add('is-measure');
+slot=next;apply();
+cards.forEach(function(c){c.style.transform='none';});
+var now=cards.map(function(c){return c.getBoundingClientRect();});
+cards.forEach(function(c,i){
+var a=now[i],b=before[i];
+if(!shown(a)){c.style.transform='';return;}
+if(!shown(b)||wrap[i]){c.style.transform='translateX('+(dir*60)+'px)';c.style.opacity='0';}
+else{c.style.transform='translate('+(b.left-a.left)+'px,'+(b.bottom-a.bottom)+'px)';}
+});
+void box.offsetWidth;
+box.classList.remove('is-measure');box.classList.add('is-moving');
+cards.forEach(function(c){c.style.transform='';c.style.opacity='';});
+ghosts.forEach(function(g){g.style.opacity='0';});
+setTimeout(function(){box.classList.remove('is-moving');ghosts.forEach(function(g){if(g.parentNode){g.parentNode.removeChild(g);}});busy=false;},DUR);
+}
+function schedule(){
+clearTimeout(timer);
+if(reduce){return;}
+timer=setTimeout(function(){if(inView&&!document.hidden){step(1);}schedule();},WAIT);
+}
+if('IntersectionObserver' in window){new IntersectionObserver(function(es){inView=es[0].isIntersecting;}).observe(box);}
+// The row keeps the middle one's height during a turn; keep it current when the breakpoint changes
+function measure(){if(busy){setTimeout(measure,DUR);return;}var m=cards[slot.indexOf(1)];if(m.offsetHeight){box.style.setProperty('--cs-shot-h',m.offsetHeight+'px');}}
+var rt=0;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(measure,150);});
+box.classList.add('is-carousel');
+apply();
+measure();
+schedule();
+});
+})();
+</script>
+<script>
+/* Read next cards: same hover as the Our Work grid. On hover the site screenshot scrolls at an even pace
+   (script from the Our Work page: --shot-y / --shot-dur per card). */
+(function () {
+  function initShots() {
+    var PACE = 500, MIN = 3, MAX = 12;
+    document.addEventListener('mouseover', function (e) {
+      var card = e.target.closest && e.target.closest('.work-card_component');
+      if (!card || (e.relatedTarget && card.contains(e.relatedTarget))) return;
+      var shot = card.querySelector('.work-card_shot'), media = card.querySelector('.work-card_media');
+      if (!shot || !media) return;
+      var w = shot.naturalWidth || shot.offsetWidth, h = shot.naturalHeight || shot.offsetHeight;
+      if (!w || !h || !media.clientWidth) return;
+      var dist = Math.max(0, Math.round(media.clientWidth * h / w - media.clientHeight));
+      card.style.setProperty('--shot-y', -dist + 'px');
+      card.style.setProperty('--shot-dur', Math.min(MAX, Math.max(MIN, dist / PACE)).toFixed(2) + 's');
+    });
+  }
+  try { initShots(); } catch (e) { if (window.console) console.warn('cs cards', e); }
+})();
+</script>
+<script>
+/* Sidebar (nues-case-sidebar-scroll.html): animated Services used icons, On this page links with scroll spy, and the rail that
+   follows the text, stops at the gallery, slides out to the right and comes back after it (desktop only).
+   Team: LinkedIn links open in a new tab; a member without a profile is not a link. */
+(function () {
+  var d = document, w = window;
+  var reduce = !!(w.matchMedia && w.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  var desk = w.matchMedia ? w.matchMedia('(min-width: 992px)') : { matches: true };
+  function $(s, r) { return (r || d).querySelector(s); }
+  function $$(s, r) { return [].slice.call((r || d).querySelectorAll(s)); }
+  function txt(el) { return el ? (el.textContent || '').replace(/\s+/g, ' ').trim() : ''; }
+  function slug(t) { var s = t.toLowerCase(); if (s.normalize) { s = s.normalize('NFKD').replace(/[̀-ͯ]/g, ''); } s = s.replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 64); return s || 'section'; }
+  function off() { return desk.matches ? 120 : 90; }
+  var ICONS = {
+    'design-development': '<svg class="cs-used_svg" viewBox="0 0 30 30" aria-hidden="true"><circle class="k1" cx="15" cy="15" r="14"/><circle class="k2" cx="15" cy="15" r="9.5"/><circle class="k3" cx="15" cy="15" r="5"/></svg>',
+    'webflow-development': '<svg class="cs-used_svg" viewBox="0 0 30 30" aria-hidden="true"><rect class="k1" x="2" y="8" width="12" height="17" rx="3"/><rect class="k2" x="16" y="8" width="12" height="17" rx="3"/><rect class="k3" x="8" y="4" width="14" height="22" rx="3.5"/></svg>',
+    'seo-aeo': '<svg class="cs-used_svg" viewBox="0 0 30 30" aria-hidden="true"><rect class="k1" x="1.5" y="16.5" width="7.5" height="12" rx="2.4"/><rect class="k2" x="11.25" y="9.75" width="7.5" height="18.75" rx="2.4"/><rect class="k3" x="21" y="2.25" width="7.5" height="26.25" rx="2.4"/></svg>',
+    'growth': '<svg class="cs-used_svg" viewBox="0 0 30 30" aria-hidden="true"><g class="k1"><rect x="10" y="1" width="10" height="28" rx="3"/><rect x="1" y="10" width="28" height="10" rx="3"/></g><g class="k2"><rect x="11.5" y="5" width="7" height="20" rx="2.4"/><rect x="5" y="11.5" width="20" height="7" rx="2.4"/></g><g class="k3"><rect x="12.8" y="9" width="4.4" height="12" rx="1.6"/><rect x="9" y="12.8" width="12" height="4.4" rx="1.6"/></g></svg>'
+  };
+
+  function icons() {
+    $$('.cs-used_row[data-svc]').forEach(function (row) {
+      var key = (row.getAttribute('data-svc') || '').trim(), svg = ICONS[key], img = $('.cs-used_icon', row);
+      if (!svg || !img || $('.cs-used_svg', row)) return;
+      img.insertAdjacentHTML('beforebegin', svg);
+      img.style.display = 'none';
+    });
+  }
+
+  function toc() {
+    var nav = $('[data-cs-toc]'), list = nav && $('.cs-toc_list', nav);
+    if (!list) return null;
+    var hs = $$('.cs-block > h2').filter(function (h) { return txt(h) && h.getClientRects().length; });
+    if (!hs.length) { nav.style.display = 'none'; return null; }
+    var used = {}, cur = -1;
+    list.textContent = '';
+    var links = hs.map(function (h) {
+      var id = h.id || slug(txt(h)), base = id, n = 2;
+      while (used[id] || (d.getElementById(id) && d.getElementById(id) !== h)) { id = base + '-' + (n++); }
+      used[id] = 1; h.id = id;
+      var a = d.createElement('a'); a.className = 'cs-toc_link'; a.href = '#' + id; a.textContent = txt(h);
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        w.scrollTo({ top: h.getBoundingClientRect().top + w.pageYOffset - off(), behavior: reduce ? 'auto' : 'smooth' });
+        if (w.history && w.history.replaceState) { w.history.replaceState(null, '', '#' + id); }
+      });
+      list.appendChild(a); return a;
+    });
+    return function spy() {
+      var line = w.innerHeight * 0.35, i = 0;
+      for (var k = 0; k < hs.length; k++) { if (hs[k].getBoundingClientRect().top < line) { i = k; } }
+      if (i === cur) return;
+      cur = i;
+      links.forEach(function (a, j) { a.classList.toggle('is-active', j === cur); if (j === cur) { a.setAttribute('aria-current', 'true'); } else { a.removeAttribute('aria-current'); } });
+    };
+  }
+
+  function rail() {
+    var aside = $('.cs-aside'), inner = $('.cs-aside_inner'), gal = $('.cs-body_row .cs-gallery'), GAP = 40;
+    if (!aside || !inner) return null;
+    function setOff() {
+      var was = inner.classList.contains('is-away');
+      inner.style.transition = 'none'; inner.classList.remove('is-away');
+      inner.style.setProperty('--off', (w.innerWidth - inner.getBoundingClientRect().left + 24) + 'px');
+      if (was) inner.classList.add('is-away');
+      void inner.offsetWidth; inner.style.transition = '';
+    }
+    setOff();
+    w.addEventListener('resize', setOff);
+    return function tick() {
+      if (!desk.matches || !gal || !gal.isConnected) { aside.style.transform = ''; inner.classList.remove('is-away'); return; }
+      var top = parseFloat(w.getComputedStyle(aside).top) || 0, g = gal.getBoundingClientRect(), h = aside.offsetHeight;
+      var room = g.top - GAP - (top + h), away = !(g.bottom < top) && room < 0;
+      // never overlap the gallery: the rail stops and rides up in front of it, then slides out
+      aside.style.transform = away ? 'translateY(' + room + 'px)' : '';
+      inner.classList.toggle('is-away', away);
+    };
+  }
+
+  function team() {
+    $$('.cs-team_card').forEach(function (a) {
+      var h = (a.getAttribute('href') || '').trim();
+      if (!h || h === '#') { a.removeAttribute('href'); a.removeAttribute('target'); return; }
+      a.setAttribute('target', '_blank'); a.setAttribute('rel', 'noopener');
+      var nm = txt($('.cs-team_name', a));
+      if (nm) a.setAttribute('aria-label', nm + ' on LinkedIn');
+    });
+  }
+
+  function run() {
+    var fns = [];
+    [icons, team].forEach(function (f) { try { f(); } catch (e) { if (w.console) console.warn('cs', e); } });
+    [toc, rail].forEach(function (f) { try { var t = f(); if (t) fns.push(t); } catch (e) { if (w.console) console.warn('cs', e); } });
+    if (!fns.length) return;
+    var busy = false;
+    function all() { busy = false; fns.forEach(function (f) { f(); }); }
+    w.addEventListener('scroll', function () { if (!busy) { busy = true; w.requestAnimationFrame(all); } }, { passive: true });
+    w.addEventListener('resize', all, { passive: true });
+    if (desk.addEventListener) { desk.addEventListener('change', all); } else if (desk.addListener) { desk.addListener(all); }
+    all();
+    if (w.location.hash) { var t = null; try { t = d.getElementById(decodeURIComponent(w.location.hash.slice(1))); } catch (e) {} if (t && t.matches && t.matches('.cs-block > h2')) { setTimeout(function () { w.scrollTo(0, t.getBoundingClientRect().top + w.pageYOffset - off()); }, 60); } }
+  }
+  if (d.readyState === 'loading') d.addEventListener('DOMContentLoaded', run); else run();
+})();
+</script>

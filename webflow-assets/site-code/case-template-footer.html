@@ -278,11 +278,14 @@ schedule();
 
   function team() {
     $$('.cs-team_card').forEach(function (a) {
+      var ne = $('.cs-team_name', a), re = $('.cs-team_role', a);
+      // a space between name and role, so screen readers do not read them as one word
+      if (ne && re && ne.nextSibling === re) ne.parentNode.insertBefore(d.createTextNode(' '), re);
       var h = (a.getAttribute('href') || '').trim();
       if (!h || h === '#') { a.removeAttribute('href'); a.removeAttribute('target'); return; }
       a.setAttribute('target', '_blank'); a.setAttribute('rel', 'noopener');
-      var nm = txt($('.cs-team_name', a));
-      if (nm) a.setAttribute('aria-label', nm + ' on LinkedIn');
+      var nm = txt($('.cs-team_name', a)), role = txt($('.cs-team_role', a));
+      if (nm) a.setAttribute('aria-label', nm + (role ? ', ' + role : '') + ', on LinkedIn');
     });
   }
 
