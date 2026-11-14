@@ -1,0 +1,122 @@
+{
+ "note": "Before adding Our Work order field (14.11.2026). Our Work grid list c42f4a79-b0a9-4e6e-9669-8efbafe1eed3 sort and Order values.",
+ "gridSettings": {
+  "filters": [
+   {
+    "fieldSlug": "card-background",
+    "operator": "isSet"
+   }
+  ],
+  "sort": [
+   {
+    "fieldSlug": "number-in-section",
+    "direction": "ascending"
+   }
+  ],
+  "limit": 100,
+  "pagination": {
+   "itemsPerPage": 10
+  }
+ },
+ "items": [
+  {
+   "id": "6aba6bc07d6279b4b561798a",
+   "name": "Pythagora",
+   "order": null,
+   "isDraft": true,
+   "lastPublished": null,
+   "lastUpdated": "2026-10-21T16:23:28.233Z",
+   "unpublishedChanges": true
+  },
+  {
+   "id": "6aba6bc07d6279b4b561798d",
+   "name": "Veyor Digital",
+   "order": 1,
+   "isDraft": false,
+   "lastPublished": "2026-11-13T01:38:34.820Z",
+   "lastUpdated": "2026-11-13T01:35:01.409Z",
+   "unpublishedChanges": false
+  },
+  {
+   "id": "6aba6bc07d6279b4b561798b",
+   "name": "Shiftolic",
+   "order": 2,
+   "isDraft": false,
+   "lastPublished": "2026-11-13T01:38:34.820Z",
+   "lastUpdated": "2026-11-13T01:35:04.064Z",
+   "unpublishedChanges": false
+  },
+  {
+   "id": "6aba6bc07d6279b4b561798e",
+   "name": "TrakPro",
+   "order": 3,
+   "isDraft": false,
+   "lastPublished": "2026-11-13T01:38:34.820Z",
+   "lastUpdated": "2026-11-13T01:35:00.747Z",
+   "unpublishedChanges": false
+  },
+  {
+   "id": "6ace660facdd65a7260ff9f7",
+   "name": "Intaker",
+   "order": 4,
+   "isDraft": false,
+   "lastPublished": "2026-11-13T01:38:34.820Z",
+   "lastUpdated": "2026-11-13T01:34:59.356Z",
+   "unpublishedChanges": false
+  },
+  {
+   "id": "6ace6668eefb4c00ebea1f2f",
+   "name": "Harper",
+   "order": 5,
+   "isDraft": false,
+   "lastPublished": "2026-11-13T01:38:34.820Z",
+   "lastUpdated": "2026-11-13T01:34:57.404Z",
+   "unpublishedChanges": false
+  },
+  {
+   "id": "6ace66976b237ad91feb51a0",
+   "name": "Hypersonix",
+   "order": 6,
+   "isDraft": false,
+   "lastPublished": "2026-11-13T01:38:34.820Z",
+   "lastUpdated": "2026-11-13T01:34:39.004Z",
+   "unpublishedChanges": false
+  },
+  {
+   "id": "6aba6bc07d6279b4b5617989",
+   "name": "Ballerine",
+   "order": 7,
+   "isDraft": false,
+   "lastPublished": "2026-11-13T01:38:34.820Z",
+   "lastUpdated": "2026-11-13T01:33:58.307Z",
+   "unpublishedChanges": false
+  },
+  {
+   "id": "6aba6bc07d6279b4b561798c",
+   "name": "Sustain Commercial Solar",
+   "order": 8,
+   "isDraft": false,
+   "lastPublished": "2026-11-13T01:38:34.820Z",
+   "lastUpdated": "2026-11-13T01:35:02.912Z",
+   "unpublishedChanges": false
+  },
+  {
+   "id": "6adbbe39ef50e14dcb9e70b1",
+   "name": "LaSalle Agri",
+   "order": 9,
+   "isDraft": false,
+   "lastPublished": "2026-11-13T17:17:08.488Z",
+   "lastUpdated": "2026-11-13T17:16:20.648Z",
+   "unpublishedChanges": false
+  },
+  {
+   "id": "6adbbe39ef50e14dcb9e70b3",
+   "name": "Biotech Innovations",
+   "order": 10,
+   "isDraft": false,
+   "lastPublished": "2026-11-13T01:38:34.820Z",
+   "lastUpdated": "2026-11-13T01:34:36.814Z",
+   "unpublishedChanges": false
+  }
+ ]
+}

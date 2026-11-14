@@ -3,6 +3,17 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 14.11.2026: Our Work mreža u redosledu iz Figme, novo CMS polje „Our Work order“ (objavljeno na staging)
+Tvoje odobrenje 14.11. Kopija pre izmene (sortiranje liste i Order vrednosti): `backup/cms-items/our-work-order-2026-11-14.json`.
+| Šta | Pre | Posle |
+|---|---|---|
+| Our Works, novo polje | nema | „Our Work order“ (Number, slug `our-work-order`), u grupi „1 · Basics“ odmah posle Order. Help: samo Our Work mreža, manji broj ide prvi |
+| Our Works, help tekst polja Order | „Trusted strip, Our Work grid and Resources“ | „Trusted strip and Resources“, uz napomenu da Our Work mreža koristi Our Work order |
+| Our Work stranica, lista `ow-grid_wrap`, sortiranje | po Order (Veyor, Shiftolic, TrakPro, Intaker, Harper, Hypersonix, Ballerine, Sustain, LaSalle, Biotech) | po Our Work order: Intaker, Ballerine, Shiftolic, Veyor, Harper, Sustain, LaSalle, Biotech, Hypersonix, TrakPro (Figma 6361:3425, sekcija „Every site we shipped“, ponovo pročitano 14.11.) |
+- Upisan Our Work order od 1 do 10 za tih 10 projekata. Pythagora je u draftu i nije dirana. Pre izmene nijedna stavka nije imala neobjavljene promene.
+- Trusted traka (Home i servisne stranice) i Resources i dalje koriste Order, pa je njihov redosled isti kao pre.
+- Provereno na stagingu u sirovom HTML-u: mreža na /our-work ima istih 10 kartica, u redosledu iz Figme.
+
 ## 14.11.2026: ponovljen SEO audit (bez izmena u Webflow-u)
 Isti postupak kao 13.11. (svih 41 stranica, mobilni i desktop), rezultati su u `reports/audit-2026-11-14/`. Tabela je osvežena i sada ispod svake ocene pokazuje razliku od 13.11.: https://claude.ai/artifact/6hbiiooYKFkgdDm2s7Rc4H
 - Provere HTML-a (title, description, H1, schema, OG, canonical, alt): nijedna promena na 41 stranici.
