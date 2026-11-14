@@ -3,6 +3,19 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 14.11.2026: stari logo u kodu za Google zamenjen našim Nues znakom (objavljeno na staging)
+Tvoje „zameni ga“ 14.11. Stari logo je fajl iz drugog Webflow projekta (`69b4443f…/69ffd79d11a1a944721ccfa9_navbar-logo.svg`, crno-roza). Novi je naš tamni Nues znak iz Assets-a (`6aba6bc0…/6adbb6b72708019a0404c6a6_pricing-receipt-logo.svg`, isti kao na Let's talk i na Pricing računu). Kopije pre izmene: `backup/schema/home-2026-11-14.json`, `backup/schema/about-2026-11-14.json`, `backup/page-code/2026-11-14-logo/`.
+| Gde | Pre | Posle |
+|---|---|---|
+| Home, JSON-LD (Organization), `logo` | stari logo | Nues znak |
+| About, JSON-LD (AboutPage, Organization), `logo` | stari logo | Nues znak |
+| Blogs Template, head kod (Article schema, `publisher.logo`), važi za 21 blog post | stari logo | Nues znak |
+| Our Works Template, head kod (Article schema, `author.logo` i `publisher.logo`), važi za 5 case stranica | stari logo (2 puta) | Nues znak (2 puta) |
+- Ostatak schema i koda je isti znak po znak (upisani kod upoređen sa pripremljenim fajlom; About JSON-LD upoređen sa kopijom).
+- Lokalne kopije `webflow-assets/site-code/blogs-template-head.html` i `our-works-template-head.html` ažurirane da budu iste kao na sajtu.
+- Ništa vidljivo na stranicama nije menjano, samo kod za Google.
+- Provereno na stagingu: stari logo se ne pojavljuje ni na jednoj od 41 stranice; Nues znak je na 30 (Home, About, Pricing, Let's talk, 21 post, 5 case stranica).
+
 ## 14.11.2026: blog link sa about:blank, status B2B posta i Review schema na Let's talk (objavljeno na staging)
 Tvoje „uradi“ 14.11. Kopije pre izmene: `backup/cms-items/blog-saas-content-marketing-2026-11-14.json`, `backup/cms-items/blog-b2b-saas-seo-2026-11-14.json`, `backup/schema/lets-talk-2026-11-14.json`.
 | Gde | Pre | Posle |
@@ -18,7 +31,7 @@ Tvoje „uradi“ 14.11. Kopije pre izmene: `backup/cms-items/blog-saas-content-
   - u postu nema about:blank, a oba linka „B2B SaaS SEO guide“ vode na vodič;
   - B2B post vraća 200;
   - Let's talk JSON-LD nema `review`, a logo vraća 200.
-- Isti stari logo je i u Organization schema na Home. Nije menjano, čeka tvoju odluku.
+- Isti stari logo je bio i u Organization schema na Home; zamenjen kasnije istog dana (unos iznad).
 
 ## 14.11.2026: Our Work mreža u redosledu iz Figme, novo CMS polje „Our Work order“ (objavljeno na staging)
 Tvoje odobrenje 14.11. Kopija pre izmene (sortiranje liste i Order vrednosti): `backup/cms-items/our-work-order-2026-11-14.json`.

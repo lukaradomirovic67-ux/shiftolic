@@ -1,0 +1,70 @@
+{
+ "note": "About JSON-LD before replacing external logo (14.11.2026)",
+ "jsonLdSchema": {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About Nues | The Webflow team building it",
+  "url": "/about",
+  "inLanguage": "en",
+  "description": "A Webflow agency built by people who've been at it for a long time. Get to know the team, the work, and the story that brought Nues to where it is today.",
+  "about": {
+   "@type": "Organization",
+   "@id": "#organization",
+   "name": "Nues",
+   "description": "A team that designs, builds, and grows Webflow websites for clients across the globe",
+   "url": "/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://cdn.prod.website-files.com/69b4443f93d293c2336db5b9/69ffd79d11a1a944721ccfa9_navbar-logo.svg"
+   },
+   "employee": [
+    {
+     "@type": "Person",
+     "name": "Danilo Stikovic",
+     "jobTitle": "CEO",
+     "sameAs": "https://www.linkedin.com/in/danilo-s-b3aa7a285/"
+    },
+    {
+     "@type": "Person",
+     "name": "Darko Milosevic",
+     "jobTitle": "COO",
+     "sameAs": "https://www.linkedin.com/in/darko-milosevicc/"
+    },
+    {
+     "@type": "Person",
+     "name": "Aleksandar Dumic",
+     "jobTitle": "CTO",
+     "sameAs": "https://www.linkedin.com/in/aleksandar-dumic-603080318/"
+    },
+    {
+     "@type": "Person",
+     "name": "Pavle Stikovic",
+     "jobTitle": "Designer",
+     "sameAs": "https://www.linkedin.com/in/pavle-stikovic-1466682a3/"
+    },
+    {
+     "@type": "Person",
+     "name": "Luka Radomirovic",
+     "jobTitle": "Developer",
+     "sameAs": "https://www.linkedin.com/in/luka-radomirovic-7015b1372/"
+    },
+    {
+     "@type": "Person",
+     "name": "Mihajlo Nikolic",
+     "jobTitle": "Designer",
+     "sameAs": "https://www.linkedin.com/in/nikolicmihajlo/"
+    },
+    {
+     "@type": "Person",
+     "name": "Daris Henjas",
+     "jobTitle": "Marketing Manager",
+     "sameAs": "https://www.linkedin.com/in/daris-henja%C5%A1-153754407/"
+    }
+   ],
+   "serviceArea": {
+    "@type": "Place",
+    "name": "Global"
+   }
+  }
+ }
+}

@@ -1,0 +1,64 @@
+{
+ "note": "Home JSON-LD before replacing external logo (14.11.2026)",
+ "jsonLdSchema": {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Nues",
+  "url": "/",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://cdn.prod.website-files.com/69b4443f93d293c2336db5b9/69ffd79d11a1a944721ccfa9_navbar-logo.svg"
+  },
+  "description": "A Webflow agency designing and building websites for fast-growing teams. Custom Webflow development, scalable CMS, and performance dialed in from the first line of code.",
+  "slogan": "Design, build, grow. That's NUES.",
+  "sameAs": [],
+  "contactPoint": {
+   "@type": "ContactPoint",
+   "contactType": "Sales",
+   "url": "/lets-talk"
+  },
+  "areaServed": "Worldwide",
+  "hasOfferCatalog": {
+   "@type": "OfferCatalog",
+   "name": "Webflow Services",
+   "itemListElement": [
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "Service",
+      "name": "Design & Development",
+      "description": "A new website from scratch, end to end. Strategy, design, development, SEO, and launch, all handled by the same team. From blank canvas to live site, on a clear timeline.",
+      "url": "/services/design-development"
+     }
+    },
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "Service",
+      "name": "Webflow Development",
+      "description": "Webflow development from your existing design. We take what's in your Figma and bring it to life with components built to scale, CMS structures that hold up, and performance dialed in from the first line of code.",
+      "url": "/services/webflow-development"
+     }
+    },
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "Service",
+      "name": "SEO & AEO",
+      "description": "Technical SEO, content and AI answer optimisation for Webflow sites. We audit, structure and grow your rankings and AI citations, month after month.",
+      "url": "/services/seo-aeo"
+     }
+    },
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "Service",
+      "name": "Growth",
+      "description": "An ongoing Webflow team for teams that want their site to keep growing. New pages, optimizations, recommendations, all on a retainer where hours roll over and the work never sits still.",
+      "url": "/services/growth"
+     }
+    }
+   ]
+  }
+ }
+}
