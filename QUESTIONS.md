@@ -22,14 +22,14 @@ Ažurirano: 10.11.2026 (faza 0). Ništa od ovoga ne izmišljam u copy-ju ni u sc
    Bez adrese ne pravim LocalBusiness.
 10. Potvrda profila za `sameAs`: LinkedIn (company/nues-agency), Instagram (nues.agency), Clutch (profile/nues),
     Webflow (@nues). Ima li X/Twitter, YouTube, Dribbble?
-11. ~~Review na Let's talk~~ uklonjen 14.11. (tvoja odluka). Ostaje: Clutch: tačna ocena i broj recenzija (sajt navodi „5.0 on Clutch“). Na Let's talk već postoji Review/Rating schema.
+11. ~~Review/Rating schema na Let's talk~~: uklonjena 14.11. (tvoja odluka). Ostaje: Clutch, tačna ocena i broj recenzija (sajt navodi „5.0 on Clutch“).
     Da li su to doslovni citati sa Clutch-a? Google ignoriše ocene koje firma daje sama sebi, pa predlažem da se to ukloni.
 
 ## Odluke o sadržaju (iz QA od 8.11.)
 12. Resources ima `noindex`. Skinuti ga sada ili tek kad nova verzija (Figma 7670:106) bude gotova?
 13. 5 praznih case stranica (Intaker, Harper, Biotech, LaSalle, Hypersonix): popuniti ih, ili ih sakriti
     (noindex + kartice bez linka)?
-14. Blog post „B2B SaaS SEO in 2026“ je u draftu, a stara verzija je živa i 6 postova linkuje na nju. Objaviti ga ili ukloniti?
+14. ~~Blog post „B2B SaaS SEO in 2026“~~: rešeno 14.11. Nova verzija ne postoji (tekst je isti), post je vraćen u status objavljeno, a about:blank link ka njemu je ispravljen.
 
 ## Fontovi (13.11.)
 18. ~~**Aeonik u formatu WOFF2.**~~ Zatvoreno 13.11.: ne radimo, tvoja odluka. Aeonik ostaje u `.otf`. Sada se Aeonik učitava kao `.otf`.
