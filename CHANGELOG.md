@@ -3,6 +3,18 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 14.11.2026: nove slike za deljenje (og:image), bez izmena u Webflow-u
+Aleksandrov zahtev: svaka glavna stranica dobija svoju sliku (kao Flow Ninja), CMS stranice koriste svoju CMS sliku, ostale jednu univerzalnu.
+- 14 slika 1200×630 JPG (46–99 KB) u `webflow-assets/og-v2/`:
+  - 13 pojedinačnih;
+  - `og-universal.jpg` za stranice koje se ne dele.
+- Svaka pojedinačna slika je pravi hero te stranice sa staginga. Navbar, dugmad i sitan tekst su uklonjeni, logo je dodat gore levo, a naslov je uvećan.
+- Na servisnim stranicama naslov je ime usluge, a ispod je postojeći title stranice. Ništa od teksta nije novo.
+- Univerzalna: Clutch i Certified Partner bedževi, naslov sa Home-a i veliki Nues znak u dnu.
+- Skripta: `webflow-assets/og-v2/render.js`. Pregled: `notes/og-v2-pregled-2026-11-14.jpg`.
+- Sledeći korak je upload u Assets (MANUAL_TASKS 13), pa povezivanje preko API-ja.
+- Nađeno: og:image na blog postovima i case stranicama je AVIF (npr. „Untitled (1).avif“), a LinkedIn AVIF verovatno ne prikazuje.
+
 ## 13.11.2026: SEO audit celog sajta (bez izmena u Webflow-u)
 Samo merenje, na sajtu se ništa ne menja. Tabela: https://claude.ai/artifact/6hbiiooYKFkgdDm2s7Rc4H
 - Lighthouse 13.6.0 (Performance, pristupačnost, best practices, SEO, agentic browsing), mobilni i desktop, 1 merenje po stranici, svih 41 stranica na stagingu (15 stranica, 5 case-ova, 21 blog post), plus provere sirovog HTML-a (title, description, H1, schema, OG, canonical, noindex, alt).
