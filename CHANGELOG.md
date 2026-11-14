@@ -3,6 +3,19 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 14.11.2026: oznaka glavnog sadržaja (`<main>`) na svim stranicama (objavljeno na staging)
+Tvoje „uradi“ 14.11. Na 16 Webflow stranica postojeći omotač sadržaja `main-wrapper` (između navbara i footera) dobio je tag Main umesto Div, preko obične Webflow opcije za tag. Nije dodat nijedan element, klase i stilovi su isti. Spisak elemenata i stari tag: `backup/elements/main-wrapper-tag-2026-11-14.json`.
+| Gde | Pre | Posle |
+|---|---|---|
+| About, Services, 4 servisne stranice, Our Work, Pricing, Let's talk, Careers, Blog, Resources, Privacy policy, Terms of service | `div.main-wrapper` | `main.main-wrapper` |
+| Blogs Template (21 post) i Our Works Template (5 case stranica) | `div.main-wrapper` | `main.main-wrapper` |
+- Home i 404 su već imali `<main>`, nisu dirani.
+- Provereno na stagingu:
+  - svih 41 stranica ima tačno jednu `<main>`, a navbar i footer su van nje;
+  - visina stranice, širina i visina omotača i njegov CSS su isti pre i posle na 17 stranica (sve vrste stranica), na 1440 i 390 px;
+  - Lighthouse pristupačnost (mobilni): About 100, blog post „Webflow vs Wix“ 100 (ranije 98); provera „landmark-one-main“ prolazi.
+- Napomena: u poruci pre izmene naveo sam 35 stranica bez `<main>`; tačan broj je bio 40 (sve osim Home).
+
 ## 14.11.2026: stari logo u kodu za Google zamenjen našim Nues znakom (objavljeno na staging)
 Tvoje „zameni ga“ 14.11. Stari logo je fajl iz drugog Webflow projekta (`69b4443f…/69ffd79d11a1a944721ccfa9_navbar-logo.svg`, crno-roza). Novi je naš tamni Nues znak iz Assets-a (`6aba6bc0…/6adbb6b72708019a0404c6a6_pricing-receipt-logo.svg`, isti kao na Let's talk i na Pricing računu). Kopije pre izmene: `backup/schema/home-2026-11-14.json`, `backup/schema/about-2026-11-14.json`, `backup/page-code/2026-11-14-logo/`.
 | Gde | Pre | Posle |

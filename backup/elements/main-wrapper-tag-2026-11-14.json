@@ -1,0 +1,165 @@
+{
+ "note": "main-wrapper tag before the change on 14.11.2026 (all were div). To undo: set_tag back to div on these elements.",
+ "elements": [
+  {
+   "page": "About",
+   "page_id": "6aba6bc07d6279b4b56176f9",
+   "element_id": {
+    "component": "6aba6bc07d6279b4b56176f9",
+    "element": "01b2a0dc-c70a-a331-ad6c-fe9faa2ea9d3"
+   },
+   "tag_before": "div",
+   "tag_after": "main"
+  },
+  {
+   "page": "Services",
+   "page_id": "6ae0e4a4872d8069c67b0475",
+   "element_id": {
+    "component": "6ae0e4a4872d8069c67b0475",
+    "element": "01b2a0dc-c70a-a331-ad6c-fe9faa2ea9d3"
+   },
+   "tag_before": "div",
+   "tag_after": "main"
+  },
+  {
+   "page": "Design & Development",
+   "page_id": "6aba6bc07d6279b4b5617701",
+   "element_id": {
+    "component": "6aba6bc07d6279b4b5617701",
+    "element": "01b2a0dc-c70a-a331-ad6c-fe9faa2ea9d3"
+   },
+   "tag_before": "div",
+   "tag_after": "main"
+  },
+  {
+   "page": "Webflow Development",
+   "page_id": "6aba6bc07d6279b4b5617702",
+   "element_id": {
+    "component": "6aba6bc07d6279b4b5617702",
+    "element": "01b2a0dc-c70a-a331-ad6c-fe9faa2ea9d3"
+   },
+   "tag_before": "div",
+   "tag_after": "main"
+  },
+  {
+   "page": "SEO & AEO",
+   "page_id": "6ad9125fa551cf984d9bb34a",
+   "element_id": {
+    "component": "6ad9125fa551cf984d9bb34a",
+    "element": "01b2a0dc-c70a-a331-ad6c-fe9faa2ea9d3"
+   },
+   "tag_before": "div",
+   "tag_after": "main"
+  },
+  {
+   "page": "Growth",
+   "page_id": "6aba6bc07d6279b4b56176fd",
+   "element_id": {
+    "component": "6aba6bc07d6279b4b56176fd",
+    "element": "01b2a0dc-c70a-a331-ad6c-fe9faa2ea9d3"
+   },
+   "tag_before": "div",
+   "tag_after": "main"
+  },
+  {
+   "page": "Our Work",
+   "page_id": "6aba6bc07d6279b4b56176fe",
+   "element_id": {
+    "component": "6aba6bc07d6279b4b56176fe",
+    "element": "5241e277-9b6d-607d-47a9-6849543cfe4b"
+   },
+   "tag_before": "div",
+   "tag_after": "main"
+  },
+  {
+   "page": "Pricing",
+   "page_id": "6ad2500978181edbb22ab367",
+   "element_id": {
+    "component": "6ad2500978181edbb22ab367",
+    "element": "01b2a0dc-c70a-a331-ad6c-fe9faa2ea9d3"
+   },
+   "tag_before": "div",
+   "tag_after": "main"
+  },
+  {
+   "page": "Let's talk",
+   "page_id": "6aba6bc07d6279b4b56176f8",
+   "element_id": {
+    "component": "6aba6bc07d6279b4b56176f8",
+    "element": "e98f1fac-338e-b607-dbfe-56300c0230f5"
+   },
+   "tag_before": "div",
+   "tag_after": "main"
+  },
+  {
+   "page": "Careers",
+   "page_id": "6ada16efb73db28b0b5cbad8",
+   "element_id": {
+    "component": "6ada16efb73db28b0b5cbad8",
+    "element": "01b2a0dc-c70a-a331-ad6c-fe9faa2ea9d3"
+   },
+   "tag_before": "div",
+   "tag_after": "main"
+  },
+  {
+   "page": "Blog",
+   "page_id": "6aba6bc07d6279b4b5617705",
+   "element_id": {
+    "component": "6aba6bc07d6279b4b5617705",
+    "element": "5241e277-9b6d-607d-47a9-6849543cfe4b"
+   },
+   "tag_before": "div",
+   "tag_after": "main"
+  },
+  {
+   "page": "Resources",
+   "page_id": "6aba6bc07d6279b4b5617709",
+   "element_id": {
+    "component": "6aba6bc07d6279b4b5617709",
+    "element": "5241e277-9b6d-607d-47a9-6849543cfe4b"
+   },
+   "tag_before": "div",
+   "tag_after": "main"
+  },
+  {
+   "page": "Privacy policy",
+   "page_id": "6aba6bc07d6279b4b5617704",
+   "element_id": {
+    "component": "6aba6bc07d6279b4b5617704",
+    "element": "e98f1fac-338e-b607-dbfe-56300c0230f5"
+   },
+   "tag_before": "div",
+   "tag_after": "main"
+  },
+  {
+   "page": "Terms of service",
+   "page_id": "6aba6bc07d6279b4b5617703",
+   "element_id": {
+    "component": "6aba6bc07d6279b4b5617703",
+    "element": "e98f1fac-338e-b607-dbfe-56300c0230f5"
+   },
+   "tag_before": "div",
+   "tag_after": "main"
+  },
+  {
+   "page": "Blogs Template",
+   "page_id": "6aba6bc07d6279b4b5617706",
+   "element_id": {
+    "component": "6aba6bc07d6279b4b5617706",
+    "element": "e3d13bd0-d362-b386-ee52-11fbae8662bc"
+   },
+   "tag_before": "div",
+   "tag_after": "main"
+  },
+  {
+   "page": "Our Works Template",
+   "page_id": "6aba6bc07d6279b4b56176ff",
+   "element_id": {
+    "component": "6aba6bc07d6279b4b56176ff",
+    "element": "9d47f09b-664a-459a-c7f7-5d221741e29f"
+   },
+   "tag_before": "div",
+   "tag_after": "main"
+  }
+ ]
+}
