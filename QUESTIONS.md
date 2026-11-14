@@ -23,7 +23,6 @@ Ažurirano: 10.11.2026 (faza 0). Ništa od ovoga ne izmišljam u copy-ju ni u sc
 10. Potvrda profila za `sameAs`: LinkedIn (company/nues-agency), Instagram (nues.agency), Clutch (profile/nues),
     Webflow (@nues). Ima li X/Twitter, YouTube, Dribbble?
 11. ~~Review/Rating schema na Let's talk~~: uklonjena 14.11. (tvoja odluka). Ostaje: Clutch, tačna ocena i broj recenzija (sajt navodi „5.0 on Clutch“).
-    Da li su to doslovni citati sa Clutch-a? Google ignoriše ocene koje firma daje sama sebi, pa predlažem da se to ukloni.
 
 ## Odluke o sadržaju (iz QA od 8.11.)
 12. Resources ima `noindex`. Skinuti ga sada ili tek kad nova verzija (Figma 7670:106) bude gotova?
