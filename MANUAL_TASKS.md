@@ -66,14 +66,14 @@ Nazive menija proverite u trenutnom Webflow interfejsu.
 12. **[PRESKOČENO 13.11., tvoja odluka: ne radimo]** **Aeonik u WOFF2** (vidi QUESTIONS 18): ako postoje WOFF2 fajlovi iz licence, upload-ovati ih umesto `.otf` za težine 300, 400, 500 i 600, pod istim imenom porodice **Aeonik**.
 
 ## SEO korak 4, tehnički SEO (dodato 13.11.)
-13. **Slike za deljenje (og:image), nova verzija 14.11.** (Aleksandrov zahtev: svaka glavna stranica svoju sliku, kao Flow Ninja):
-    - 14 slika 1200×630 u `webflow-assets/og-v2/` (zip: `webflow-assets/nues-og-v2.zip`, pregled: `notes/og-v2-pregled-2026-11-14.jpg`):
-      - 13 pojedinačnih, napravljenih od pravog hero dela svake stranice;
-      - `og-universal.jpg` za Privacy, Terms, 404 i ostale stranice koje se ne dele.
-    - Ti: ubaci svih 14 fajlova u **Assets** panel i javi mi. Webflow API ne dozvoljava da ja upload-ujem fajl.
-    - Ja: vezujem ih za stranice preko API-ja (Open Graph image) i objavljujem na staging.
-    - CMS stranice (blog, case) već imaju og:image iz CMS slike, ali su te slike u AVIF formatu, koji LinkedIn verovatno ne prikazuje. Predlog dolazi posebno.
-    - Stari predlozi od 13.11. (`webflow-assets/perf/manual/og/`) se ne koriste.
+13. **Slike za deljenje (og:image): pravi dizajner** (tvoja odluka 13.11, potvrđena 14.11).
+    - Moje verzije od 13. i 14.11. (`webflow-assets/perf/manual/og/`, `webflow-assets/og-v2/`) se ne koriste.
+    - Plan po Aleksandru:
+      - svaka glavna stranica dobija svoju sliku;
+      - CMS stranice koriste svoju CMS sliku;
+      - ostale (Privacy, Terms, 404) jednu univerzalnu.
+    - Kad slike budu gotove, ubaciti ih u **Assets** i javiti mi. Ja ih vezujem za stranice preko API-ja.
+    - Napomena za CMS stranice: sadašnje CMS slike koje se koriste za og:image su AVIF, a LinkedIn AVIF verovatno ne prikazuje. Za njih treba JPG ili PNG.
 14. **[URAĐENO 13.11., provereno na stagingu]** **Linkovi ka blog postovima u sirovom HTML-u** (sada `href="#"`; posetiocima ih ispravlja skripta, a crawleri bez JavaScript-a ih ne vide):
     - Webflow API ne može da poveže link sa „trenutnom stavkom“ kolekcije, pa se to radi u Designer-u.
     - Za svaki od 3 elementa: izabrati link → **Link settings** → **Collection page** → **Current Blogs** (ili slično, zavisi od interfejsa).

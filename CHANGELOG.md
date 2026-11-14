@@ -3,6 +3,9 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 14.11.2026: odluka, OG slike pravi dizajner
+- Tvoja odluka: moje OG slike (v2 ispod) se ne koriste, sve pravi dizajner. Fajlovi ostaju u repou samo kao referenca. U Webflow-u ništa nije menjano.
+
 ## 14.11.2026: nove slike za deljenje (og:image), bez izmena u Webflow-u
 Aleksandrov zahtev: svaka glavna stranica dobija svoju sliku (kao Flow Ninja), CMS stranice koriste svoju CMS sliku, ostale jednu univerzalnu.
 - 14 slika 1200×630 JPG (46–99 KB) u `webflow-assets/og-v2/`:
