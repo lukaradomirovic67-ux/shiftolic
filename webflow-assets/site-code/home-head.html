@@ -29,9 +29,10 @@
   .home-ways_card-title { font-size: 2.5rem; }
   .home-projects_info { width: 21.25rem; }
   .home-projects_tag { flex: none; white-space: nowrap; }
-  /* CTA (Figma 8814:30): the heading scales with the screen and the columns sit closer, so it keeps its two lines next to the booking card */
+  /* CTA (Figma 8814:30): the columns sit closer and the heading takes the room left next to the 478px booking card
+     (screen - 100px side padding - card - 50px gap; the heading is about 10.4 times its font size wide), so it keeps its two lines */
   .home-cta_component { grid-column-gap: 3.125rem; column-gap: 3.125rem; }
-  .home-cta_content .heading-style-h2 { font-size: 4.3vw; }
+  .home-cta_content .heading-style-h2 { font-size: min(3.625rem, calc((100vw - 640px) / 10.4)); }
 }
 /* 1441px and up (larger screens, like flowninja.com): the text stays in the centred container while the card columns reach
    out to 50px from the screen's right edge and grow with the screen. At 1440 both give exactly the design (right 0, 515px). */

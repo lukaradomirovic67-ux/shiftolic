@@ -3,6 +3,16 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 16.11.2026: Home CTA, kartica sa iClosed-om bez „kutije u kutiji“ (objavljeno na staging)
+Tvoje „ružno izgleda sad, napravi da je lepše“ 16.11, uz snimak: iClosed crta svoj panel širok oko 480 px sa sivim okvirom, a kartica je bila 648 px, pa se videla kutija u kutiji sa praznim belim poljima levo i desno.
+| Gde | Pre | Posle |
+|---|---|---|
+| `home-cta_booking` (desktop) | širi se do 648 px (flex 1) | 478 px, kao `lt-booking` na Let's talk; stoji uz desnu ivicu (`home-cta_component` justify space-between) |
+| `home-cta_booking` (tablet i telefon) | 100% širine | 100%, najviše 478 px, levo poravnata |
+| iClosed widget u kartici | `iclosed-widget` | `iclosed-widget` + combo `is-flush`: 1 px širi sa svake strane i 1 px gore, pa ivica kartice odseca sivi okvir iClosed panela |
+| Home head kod, 992–1279 px | naslov 4.3vw | naslov zauzima prostor koji ostane pored kartice: min(58 px, (širina ekrana − 640 px) / 10.4) |
+- Provereno na stagingu: kartica 478 px i 50 px od desne ivice na 1440; widget 480 px sa pomakom −1 px na svim širinama; naslov u dva reda od 992 do 1440 px. Sam iClosed i dalje ne mogu da vidim (domen mi je blokiran).
+
 ## 16.11.2026: Home, srednja CTA sekcija po novom dizajnu (Figma 8814:30) sa iClosed zakazivanjem (objavljeno na staging)
 Tvoj zahtev 16.11: sekciju „Have a project in mind?“ zameniti dizajnom iz Figme (8814:30 i 8820:147), s tim da desno umesto forme bude iClosed kao na Let's talk. Kopije pre izmene: `backup/elements/home-cta-section-2026-11-16.json` (cela stara struktura), `backup/page-code/2026-11-16-home-cta/` (Home head i footer kod).
 | Gde | Pre | Posle |
