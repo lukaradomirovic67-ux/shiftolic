@@ -1,0 +1,496 @@
+{
+ "note": "Home middle CTA section (section_home-cta) element tree before the rebuild to Figma 8814:30 on 16.11.2026",
+ "tree": {
+  "id": {
+   "component": "6aba6bc07d6279b4b56176f1",
+   "element": "2efb8692-4d39-b0df-0a08-0189f1922e97"
+  },
+  "type": "Block",
+  "styleNames": [
+   "section_home-cta"
+  ],
+  "settings": {
+   "tag": "section",
+   "visibility": true,
+   "block": {
+    "tag": "section"
+   }
+  },
+  "children": [
+   {
+    "id": {
+     "component": "6aba6bc07d6279b4b56176f1",
+     "element": "2efb8692-4d39-b0df-0a08-0189f1922e80"
+    },
+    "type": "Block",
+    "styleNames": [
+     "home-cta_glow"
+    ],
+    "settings": {
+     "tag": "div",
+     "visibility": true,
+     "block": {
+      "tag": "div"
+     }
+    }
+   },
+   {
+    "id": {
+     "component": "6aba6bc07d6279b4b56176f1",
+     "element": "2efb8692-4d39-b0df-0a08-0189f1922e81"
+    },
+    "type": "Block",
+    "styleNames": [
+     "home-cta_lines"
+    ],
+    "settings": {
+     "tag": "div",
+     "visibility": true,
+     "block": {
+      "tag": "div"
+     }
+    },
+    "children": [
+     {
+      "id": {
+       "component": "6aba6bc07d6279b4b56176f1",
+       "element": "c8a75615-be83-f960-9ceb-33907bc3001b"
+      },
+      "type": "Image",
+      "styleNames": [
+       "home-cta_lines-img"
+      ],
+      "settings": {
+       "visibility": true,
+       "assetId": "6ad11f575f7e670a211dfdfe"
+      }
+     }
+    ]
+   },
+   {
+    "id": {
+     "component": "6aba6bc07d6279b4b56176f1",
+     "element": "2efb8692-4d39-b0df-0a08-0189f1922e96"
+    },
+    "type": "Block",
+    "styleNames": [
+     "padding-global",
+     "is-wide"
+    ],
+    "settings": {
+     "tag": "div",
+     "visibility": true,
+     "block": {
+      "tag": "div"
+     }
+    },
+    "children": [
+     {
+      "id": {
+       "component": "6aba6bc07d6279b4b56176f1",
+       "element": "2efb8692-4d39-b0df-0a08-0189f1922e95"
+      },
+      "type": "Block",
+      "styleNames": [
+       "container-large"
+      ],
+      "settings": {
+       "tag": "div",
+       "visibility": true,
+       "block": {
+        "tag": "div"
+       }
+      },
+      "children": [
+       {
+        "id": {
+         "component": "6aba6bc07d6279b4b56176f1",
+         "element": "b1130c9e-c649-0203-cf42-a2364f7cfebc"
+        },
+        "type": "Block",
+        "styleNames": [
+         "padding-section-medium"
+        ],
+        "settings": {
+         "tag": "div",
+         "visibility": true,
+         "block": {
+          "tag": "div"
+         }
+        },
+        "children": [
+         {
+          "id": {
+           "component": "6aba6bc07d6279b4b56176f1",
+           "element": "2efb8692-4d39-b0df-0a08-0189f1922e94"
+          },
+          "type": "Block",
+          "styleNames": [
+           "home-cta_component"
+          ],
+          "settings": {
+           "tag": "div",
+           "visibility": true,
+           "block": {
+            "tag": "div"
+           }
+          },
+          "children": [
+           {
+            "id": {
+             "component": "6aba6bc07d6279b4b56176f1",
+             "element": "2efb8692-4d39-b0df-0a08-0189f1922e8e"
+            },
+            "type": "Block",
+            "styleNames": [
+             "home-cta_content"
+            ],
+            "attributes": {
+             "data-reveal": ""
+            },
+            "settings": {
+             "tag": "div",
+             "visibility": true,
+             "block": {
+              "tag": "div"
+             }
+            },
+            "children": [
+             {
+              "id": {
+               "component": "6aba6bc07d6279b4b56176f1",
+               "element": "2efb8692-4d39-b0df-0a08-0189f1922e85"
+              },
+              "type": "Heading",
+              "styleNames": [
+               "heading-style-h3"
+              ],
+              "settings": {
+               "tag": "h2",
+               "visibility": true,
+               "headingLevel": 2
+              },
+              "children": [
+               {
+                "id": {
+                 "component": "6aba6bc07d6279b4b56176f1",
+                 "element": "2efb8692-4d39-b0df-0a08-0189f1922e82"
+                },
+                "type": "String",
+                "textContent": "Have a project in mind?"
+               },
+               {
+                "id": {
+                 "component": "6aba6bc07d6279b4b56176f1",
+                 "element": "2efb8692-4d39-b0df-0a08-0189f1922e83"
+                },
+                "type": "",
+                "settings": {
+                 "visibility": true
+                }
+               },
+               {
+                "id": {
+                 "component": "6aba6bc07d6279b4b56176f1",
+                 "element": "2efb8692-4d39-b0df-0a08-0189f1922e84"
+                },
+                "type": "String",
+                "textContent": "Let’s talk it through."
+               }
+              ]
+             },
+             {
+              "id": {
+               "component": "6aba6bc07d6279b4b56176f1",
+               "element": "2efb8692-4d39-b0df-0a08-0189f1922e8d"
+              },
+              "type": "Block",
+              "styleNames": [
+               "home-cta_rating"
+              ],
+              "settings": {
+               "tag": "div",
+               "visibility": true,
+               "block": {
+                "tag": "div"
+               }
+              },
+              "children": [
+               {
+                "id": {
+                 "component": "6aba6bc07d6279b4b56176f1",
+                 "element": "d1a609bf-9e5e-b08f-aca6-824cd69870c5"
+                },
+                "type": "Link",
+                "styleNames": [
+                 "home-cta_rating-link"
+                ],
+                "attributes": {
+                 "aria-label": "Nues reviews on Clutch, rated 5.0"
+                },
+                "settings": {
+                 "visibility": true,
+                 "link": {
+                  "linkType": "url",
+                  "href": "https://clutch.co/profile/nues"
+                 }
+                },
+                "children": [
+                 {
+                  "id": {
+                   "component": "6aba6bc07d6279b4b56176f1",
+                   "element": "2efb8692-4d39-b0df-0a08-0189f1922e86"
+                  },
+                  "type": "Block",
+                  "styleNames": [
+                   "home-cta_rating-stars"
+                  ],
+                  "settings": {
+                   "tag": "div",
+                   "visibility": true,
+                   "block": {
+                    "tag": "div"
+                   }
+                  },
+                  "children": [
+                   {
+                    "id": {
+                     "component": "6aba6bc07d6279b4b56176f1",
+                     "element": "a1cfbb84-cd6b-21cb-730f-8a282519caf1"
+                    },
+                    "type": "HtmlEmbed",
+                    "styleNames": [
+                     "icon-embed-star"
+                    ],
+                    "settings": {
+                     "visibility": true
+                    }
+                   },
+                   {
+                    "id": {
+                     "component": "6aba6bc07d6279b4b56176f1",
+                     "element": "50ae0e02-91b7-24c2-b527-3e457ff15375"
+                    },
+                    "type": "HtmlEmbed",
+                    "styleNames": [
+                     "icon-embed-star"
+                    ],
+                    "settings": {
+                     "visibility": true
+                    }
+                   },
+                   {
+                    "id": {
+                     "component": "6aba6bc07d6279b4b56176f1",
+                     "element": "e4f76411-9c29-03d0-a7f5-d68ac4021226"
+                    },
+                    "type": "HtmlEmbed",
+                    "styleNames": [
+                     "icon-embed-star"
+                    ],
+                    "settings": {
+                     "visibility": true
+                    }
+                   },
+                   {
+                    "id": {
+                     "component": "6aba6bc07d6279b4b56176f1",
+                     "element": "e2f50bec-c203-bd98-4176-701fd4ca2e16"
+                    },
+                    "type": "HtmlEmbed",
+                    "styleNames": [
+                     "icon-embed-star"
+                    ],
+                    "settings": {
+                     "visibility": true
+                    }
+                   },
+                   {
+                    "id": {
+                     "component": "6aba6bc07d6279b4b56176f1",
+                     "element": "764686b0-2852-46db-3265-db4a01e4d3cb"
+                    },
+                    "type": "HtmlEmbed",
+                    "styleNames": [
+                     "icon-embed-star"
+                    ],
+                    "settings": {
+                     "visibility": true
+                    }
+                   }
+                  ]
+                 },
+                 {
+                  "id": {
+                   "component": "6aba6bc07d6279b4b56176f1",
+                   "element": "2efb8692-4d39-b0df-0a08-0189f1922e88"
+                  },
+                  "type": "Block",
+                  "styleNames": [
+                   "home-cta_rating-text"
+                  ],
+                  "settings": {
+                   "tag": "div",
+                   "visibility": true,
+                   "block": {
+                    "tag": "div"
+                   }
+                  },
+                  "children": [
+                   {
+                    "id": {
+                     "component": "6aba6bc07d6279b4b56176f1",
+                     "element": "2efb8692-4d39-b0df-0a08-0189f1922e87"
+                    },
+                    "type": "String",
+                    "textContent": "5.0 on Clutch"
+                   }
+                  ]
+                 }
+                ]
+               },
+               {
+                "id": {
+                 "component": "6aba6bc07d6279b4b56176f1",
+                 "element": "2efb8692-4d39-b0df-0a08-0189f1922e8a"
+                },
+                "type": "Block",
+                "styleNames": [
+                 "home-cta_rating-text"
+                ],
+                "settings": {
+                 "tag": "div",
+                 "visibility": true,
+                 "block": {
+                  "tag": "div"
+                 }
+                },
+                "children": [
+                 {
+                  "id": {
+                   "component": "6aba6bc07d6279b4b56176f1",
+                   "element": "2efb8692-4d39-b0df-0a08-0189f1922e89"
+                  },
+                  "type": "String",
+                  "textContent": "·"
+                 }
+                ]
+               },
+               {
+                "id": {
+                 "component": "6aba6bc07d6279b4b56176f1",
+                 "element": "2efb8692-4d39-b0df-0a08-0189f1922e8c"
+                },
+                "type": "Block",
+                "styleNames": [
+                 "home-cta_rating-text"
+                ],
+                "settings": {
+                 "tag": "div",
+                 "visibility": true,
+                 "block": {
+                  "tag": "div"
+                 }
+                },
+                "children": [
+                 {
+                  "id": {
+                   "component": "6aba6bc07d6279b4b56176f1",
+                   "element": "2efb8692-4d39-b0df-0a08-0189f1922e8b"
+                  },
+                  "type": "String",
+                  "textContent": "free 30-minute intro"
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "id": {
+             "component": "6aba6bc07d6279b4b56176f1",
+             "element": "2efb8692-4d39-b0df-0a08-0189f1922e93"
+            },
+            "type": "Link",
+            "styleNames": [
+             "button"
+            ],
+            "attributes": {
+             "data-reveal": ""
+            },
+            "settings": {
+             "visibility": true,
+             "link": {
+              "linkType": "page",
+              "pageId": "6aba6bc07d6279b4b56176f8"
+             }
+            },
+            "children": [
+             {
+              "id": {
+               "component": "6aba6bc07d6279b4b56176f1",
+               "element": "2efb8692-4d39-b0df-0a08-0189f1922e90"
+              },
+              "type": "Block",
+              "settings": {
+               "tag": "div",
+               "visibility": true,
+               "block": {
+                "tag": "div"
+               }
+              },
+              "children": [
+               {
+                "id": {
+                 "component": "6aba6bc07d6279b4b56176f1",
+                 "element": "2efb8692-4d39-b0df-0a08-0189f1922e8f"
+                },
+                "type": "String",
+                "textContent": "Book an intro call"
+               }
+              ]
+             },
+             {
+              "id": {
+               "component": "6aba6bc07d6279b4b56176f1",
+               "element": "2efb8692-4d39-b0df-0a08-0189f1922e92"
+              },
+              "type": "Block",
+              "styleNames": [
+               "button_icon"
+              ],
+              "attributes": {
+               "aria-hidden": "true"
+              },
+              "settings": {
+               "tag": "div",
+               "visibility": true,
+               "block": {
+                "tag": "div"
+               }
+              },
+              "children": [
+               {
+                "id": {
+                 "component": "6aba6bc07d6279b4b56176f1",
+                 "element": "2efb8692-4d39-b0df-0a08-0189f1922e91"
+                },
+                "type": "String",
+                "textContent": "↗"
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

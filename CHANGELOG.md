@@ -3,6 +3,22 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 16.11.2026: Home, srednja CTA sekcija po novom dizajnu (Figma 8814:30) sa iClosed zakazivanjem (objavljeno na staging)
+Tvoj zahtev 16.11: sekciju „Have a project in mind?“ zameniti dizajnom iz Figme (8814:30 i 8820:147), s tim da desno umesto forme bude iClosed kao na Let's talk. Kopije pre izmene: `backup/elements/home-cta-section-2026-11-16.json` (cela stara struktura), `backup/page-code/2026-11-16-home-cta/` (Home head i footer kod).
+| Gde | Pre | Posle |
+|---|---|---|
+| Pozadina | tamnoplava + zeleni sjaj (`home-cta_glow`) + linije (`home-cta_lines`, slika) | slika iz Drive foldera (`nues-home-cta-bg@2x.png`, 2880x1320, kao AVIF 24 KB, asset `home-cta-bg.avif`), preko cele sekcije, poravnata levo (`home-cta_bg`) |
+| Raspored | naslov levo, dugme „Book an intro call“ desno | ocena + naslov levo, bela kartica sa iClosed widgetom desno (razmak 100 px, kartica do 50 px od desne ivice) |
+| Ocena | ispod naslova; zvezdice zelene; „5.0 on Clutch · free 30-minute intro“, 60% providno | iznad naslova; zvezdice bele (combo `is-white`, footer zadržava zelene); „5.0 · Free 30-Minute Intro“, puna bela, medium |
+| Naslov | `heading-style-h3` (Geist 48 px) | `heading-style-h2` (Aeonik 58 px, visina reda 1.1), kao u Figmi |
+| Desno | link „Book an intro call“ ka Let's talk | `home-cta_booking` (bela, zaobljenje 24 px, na telefonu 16 px) sa `iclosed-widget` (isti URL kao na Let's talk: discovery-call) |
+| Home footer kod | (nije bilo) | skripta koja učitava iClosed tek kada se sekcija približi ekranu (800 px ranije), da vrh stranice ostane brz |
+| Home head kod, 992–1279 px | (nije bilo) | naslov 4.3vw i razmak 50 px, da naslov ostane u dva reda pored kartice |
+- Stari elementi (sjaj, linije, dugme, tekst „5.0 on Clutch“) su uklonjeni. Njihove klase i slika linija ostaju u Webflow-u, nisu brisane.
+- Clutch link (zvezdice i „5.0“) i dalje vodi na Clutch; opis za čitače ekrana: „5.0 on Clutch, read Nues reviews“.
+- Pokušaj da se iClosed skripta doda kao registrovana skripta stranice vratio je grešku 404 (dva puta), pa je stavljena u Home footer kod; registrovana skripta koju sam pri tome napravio je obrisana.
+- Provereno na stagingu (1440, 1279, 1100, 992, 991, 800, 390 px): na 1440 sve mere kao u Figmi (tekst 50 px od leve ivice, kartica 648 px i 50 px od desne, gornji razmak 100 px, naslov 58/63.8 px); naslov u dva reda na svim širinama desktopa; ispod 992 px kartica ide ispod naslova preko cele širine. iClosed se u mom pregledaču ne učitava (domen mi je blokiran), pa je kartica u mojim snimcima prazna; posetiocima se prikazuje kao na Let's talk.
+
 ## 14.11.2026: odluka, kontrast teksta se ne menja
 Tvoje „nemoj ništa od ovoga dirati“ 14.11. na predlog `notes/kontrast-predlog-2026-11-14.png`. Sporedni tekst ostaje kakav jeste: tamnoplavi 40–50%, beli 40%, oznake na plavoj kartici recenzije 60%, kao i prigušeni tabovi i kartice. Ništa nije menjano u Webflow-u. Lighthouse će i dalje prijavljivati „color-contrast“ na tim mestima.
 

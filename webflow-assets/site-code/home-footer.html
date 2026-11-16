@@ -237,3 +237,15 @@
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { moveLine(); more(); });
 })();
 </script>
+<script>
+/* Home CTA (Figma 8814:30): the iClosed booking widget, the same one as on Let's talk (native .iclosed-widget in the section).
+   Its script loads only when the section comes near the screen, so the top of the page stays fast. */
+(function(){
+  var w=document.querySelector('.section_home-cta .iclosed-widget');if(!w)return;
+  var done=false;
+  function load(){if(done)return;done=true;if(document.querySelector('script[src*="app.iclosed.io/assets/widget.js"]'))return;var s=document.createElement('script');s.src='https://app.iclosed.io/assets/widget.js';s.async=true;document.body.appendChild(s);}
+  if(!('IntersectionObserver' in window)){load();return;}
+  var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){io.disconnect();load();}},{rootMargin:'800px 0px'});
+  io.observe(w);
+})();
+</script>
