@@ -3,6 +3,14 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 16.11.2026: Home OG slika na 6 stranica bez svoje (objavljeno na staging)
+Tvoje „oni nek koriste isti kao i homepage“ 16.11: stranice za koje u Drive folderu nije bilo OG slike dobile su Home sliku. Pre izmene nijedna nije imala OG sliku (stanje u listi stranica od 16.11, sve `imageAssetId: null`).
+| Stranica | Pre | Posle |
+|---|---|---|
+| Pricing, Let's talk, Blog, Resources, Privacy policy, Terms of service | bez OG slike | `nues-og-home.jpg` (asset 6afb8fdb780d6de45c2ec743) |
+- OG naslov i opis nisu menjani.
+- Provereno na stagingu: `og:image` je na svih 6 stranica. Sada svih 46 objavljenih stranica ima OG sliku (9 sa svojom slikom od dizajnera, 6 sa Home slikom, 31 blog i case study iz CMS-a).
+
 ## 16.11.2026: Open Graph slike od dizajnera (objavljeno na staging)
 Tvoj zahtev 16.11: „sada update-uj, open graph images“ (Drive folder sa 13 PNG fajlova, 2400x1260). Pre izmene nijedna stranica nije imala OG sliku; kopija stanja: `backup/page-settings/og-images-before-2026-11-16.json`.
 Slike su smanjene na 1200x630 JPEG (41–82 KB umesto ~3 MB), sačuvane u `webflow-assets/og/` i uploadovane u Webflow assets (alt tekst = tekst sa slike).
