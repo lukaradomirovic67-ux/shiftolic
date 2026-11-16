@@ -1,0 +1,15 @@
+{
+  "note": "Open Graph state before the designer's OG images were set (2026-11-16). All pages had no OG image.",
+  "pages": {
+    "Home 6aba6bc07d6279b4b56176f1": {"titleCopied": true, "descriptionCopied": true, "imageUrl": null, "imageAssetId": null},
+    "About 6aba6bc07d6279b4b56176f9": {"titleCopied": true, "descriptionCopied": true, "imageUrl": null, "imageAssetId": null},
+    "Services 6ae0e4a4872d8069c67b0475": {"titleCopied": false, "descriptionCopied": false, "imageUrl": null, "imageAssetId": null},
+    "Design & Development 6aba6bc07d6279b4b5617701": {"titleCopied": true, "descriptionCopied": true, "imageUrl": null, "imageAssetId": null},
+    "Webflow Development 6aba6bc07d6279b4b5617702": {"titleCopied": true, "descriptionCopied": true, "imageUrl": null, "imageAssetId": null},
+    "SEO & AEO 6ad9125fa551cf984d9bb34a": {"imageUrl": null, "imageAssetId": null},
+    "Growth 6aba6bc07d6279b4b56176fd": {"titleCopied": true, "descriptionCopied": true, "imageUrl": null, "imageAssetId": null},
+    "Our Work 6aba6bc07d6279b4b56176fe": {"titleCopied": true, "descriptionCopied": true, "imageUrl": null, "imageAssetId": null},
+    "Careers 6ada16efb73db28b0b5cbad8": {"imageUrl": null, "imageAssetId": null},
+    "Webflow Integrations (draft) 6ae0d85d4a2c075c26d111c8": {"imageUrl": null, "imageAssetId": null}
+  }
+}

@@ -3,6 +3,25 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 16.11.2026: Open Graph slike od dizajnera (objavljeno na staging)
+Tvoj zahtev 16.11: „sada update-uj, open graph images“ (Drive folder sa 13 PNG fajlova, 2400x1260). Pre izmene nijedna stranica nije imala OG sliku; kopija stanja: `backup/page-settings/og-images-before-2026-11-16.json`.
+Slike su smanjene na 1200x630 JPEG (41–82 KB umesto ~3 MB), sačuvane u `webflow-assets/og/` i uploadovane u Webflow assets (alt tekst = tekst sa slike).
+| Stranica | Pre | Posle (fajl iz Drive-a → asset) |
+|---|---|---|
+| Home | bez OG slike | `og-home-v10@2x.png` → `nues-og-home.jpg` |
+| About | bez OG slike | `og-about@2x.png` → `nues-og-about.jpg` |
+| Services | bez OG slike | `og-services@2x.png` → `nues-og-services.jpg` |
+| Design & Development | bez OG slike | `og-services-design-dev2elopment@2x.png` → `nues-og-services-design-development.jpg` |
+| Webflow Development | bez OG slike | `og-services-webflow-development@2x.png` → `nues-og-services-webflow-development.jpg` |
+| SEO & AEO | bez OG slike | `og-services-seo-aeo@2x.png` → `nues-og-services-seo-aeo.jpg` |
+| Growth | bez OG slike | `og-services-growth@2x.png` → `nues-og-services-growth.jpg` |
+| Our Work | bez OG slike | `og-our-work@2x.png` → `nues-og-our-work.jpg` |
+| Careers | bez OG slike | `og-careers@2x.png` → `nues-og-careers.jpg` |
+| Webflow Integrations (draft, nije objavljena) | bez OG slike | `og-integrations@2x.png` → `nues-og-integrations.jpg` |
+- Gde je u folderu bilo više verzija, uzeta je novija: Home `v10` (ne `v8`), About `og-about` (ne `v5`, starija 30 min), Design & Development `dev2elopment` (8 min novija; unutrašnji krug svetliji, kao kod ostalih servisa).
+- OG naslov i opis nisu menjani. Pricing, Let's talk, Blog, Resources, Privacy i Terms nemaju sliku u folderu, pa su ostali bez OG slike. Blog i case study šabloni i dalje koriste sliku iz CMS-a.
+- Provereno na stagingu: `og:image` je na svih 9 objavljenih stranica i pokazuje na novi asset (200, image/jpeg).
+
 ## 16.11.2026: Home CTA, kartica sa iClosed-om bez „kutije u kutiji“ (objavljeno na staging)
 Tvoje „ružno izgleda sad, napravi da je lepše“ 16.11, uz snimak: iClosed crta svoj panel širok oko 480 px sa sivim okvirom, a kartica je bila 648 px, pa se videla kutija u kutiji sa praznim belim poljima levo i desno.
 | Gde | Pre | Posle |
