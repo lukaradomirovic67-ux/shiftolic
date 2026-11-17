@@ -3,6 +3,40 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 17.11.2026 (veče): stavke 2–6 iz večernjeg QA-a, objavljeno na staging
+Tvoje „1. ne radimo, a ove ostale ajmo redom“. Clutch („5.0 on Clutch“) ostaje kako jeste.
+
+**2 i 3. Blog: alt tekst i slike sa drugog Webflow sajta.** Kopija pre izmene: `backup/cms-items/blog-content-images-2026-11-17.json` (14 postova, polje Content).
+- Ponovo je snimljeno polje Content na 14 postova: 13 objavljenih i Flow Conf, koji ostaje draft. Tekst je isti kao pre; promenjeno je samo `alt="__wf_reserved_inherit"` u `alt=""`.
+- Posle snimanja, Webflow je sam prebacio 25 slika sa CDN-a sajta `6a0bc2572a345c5cad437d47` u ovaj sajt. Taj sajt opslužuje i sadašnji www.nues.agency, pa bi slike nestale kad se stari sajt ugasi.
+- Na AEO vs SEO i SaaS content marketing 4 slike više nemaju doslovni alt „__wf_reserved_inherit“. Nastao je pri ranijim izmenama teksta preko API-ja.
+- Provereno:
+  - sačuvani tekst svih 14 postova se poklapa sa originalom znak po znak, osim adresa slika;
+  - svih 29 adresa slika vraća 200;
+  - na objavljenom sajtu nema „__wf_reserved_inherit“ ni slika sa drugog sajta;
+  - tabele (HTML embed sa stilom) su ostale iste.
+- Slike u tekstu i dalje imaju prazan alt, kao i pre. Opisni alt tekstovi su posebna stavka.
+
+**4. TrakPro case, greške u tekstu.** Kopija: `backup/cms-items/trakpro-typos-2026-11-17.json`.
+| Polje | Pre | Posle |
+|---|---|---|
+| The Solution | „"Before TrakPro"section“ | „"Before TrakPro" section“ |
+| The Solution | „Couldflare fallback“ | „Cloudflare fallback“ |
+| The Result | „SEO went from to a perfect 100“ | „SEO reached a perfect 100“ |
+| The Achievement | „no developred involved“ | „no developer involved“ |
+- Ni stari sajt nema početni SEO rezultat (ista rečenica bez broja), pa broj nije izmišljen. Ako tim ima stari rezultat, rečenica može da se vrati na „went from X to a perfect 100“.
+- TrakPro je u međuvremenu u Webflow-u sačuvan kao **draft** (izmena tima, ne moja), pa je ispravka sačuvana, ali nije uživo dok se stavka ne objavi. Isto važi za izmene timova na Shiftolic i Veyor.
+
+**5. Pristupačnost (axe „nested-interactive“).** Nova registrovana skripta sajta `nuesA11yFixes` 1.0.0, footer, sve stranice. Izvor: `webflow-assets/site-code/a11y-fixes.js`; objavljena verzija je `a11y-fixes.min.js` (1574 znaka, ograničenje je 2000). Postojeći head i footer kod nisu menjani.
+- Meni na desktopu:
+  - link „Services“/„Resources“ je jedina kontrola: Enter otvara stranicu, Space otvara meni, Escape ga zatvara;
+  - hover i klik rade kao pre;
+  - Webflow-ov toggle više nije dugme sa linkom unutra.
+- Meni na telefonu: dodir na „Services“ otvara meni kao pre; oznaka nema href, jer tamo ionako ne vodi na stranicu.
+- Home „Every project“: bočni ekrani više nisu dugmad unutar dugmeta. Klik mišem na njih i dalje otvara galeriju; tastatura otvara galeriju i strelicama ide kroz ekrane.
+- Provereno pre objave ubacivanjem skripte na stagingu, i posle objave: axe 0 na desktopu i telefonu (i sa otvorenim menijem), bez JS grešaka.
+- Uklanjanje: Site settings → Custom code → registrovane skripte, ili preko API-ja `remove_site_script nuesa11yfixes`.
+
 ## 17.11.2026: odgovori tima (Aleksandar) primenjeni, objavljeno na staging
 Odgovori iz Slack-a na liste „Sadržaj od tima“ i „Tvoje odluke“. Kopije pre izmena su u `backup/` (putanje uz svaku stavku).
 

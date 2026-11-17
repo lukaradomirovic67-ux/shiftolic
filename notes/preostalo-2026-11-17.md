@@ -43,16 +43,18 @@ Ovo je jedini aktuelni spisak. Starije liste (`qa-2026-11-17.md`, `preostalo-202
 ## 2. Novo nađeno večeras
 | # | Šta | Gde | Ko |
 |---|---|---|---|
-| 1 | Footer kaže **„5.0 on Clutch“**, a Clutch pokazuje **4.8** (5 recenzija) | footer, svih 47 stranica | odluka: predlog „4.8 on Clutch“ |
-| 2 | Alt tekst slika je doslovno **„__wf_reserved_inherit“** (4 slike); verovatno posledica izmena teksta preko API-ja (14. i 17.11.) | blog: AEO vs SEO in 2026, SaaS content marketing in 2026 | ja, tehnički, bez promene izgleda |
-| 3 | **25 slika u 12 blog postova** učitava se sa CDN-a drugog Webflow sajta (`6a0bc2572a345c5cad437d47`), ne ovog. Ako se taj sajt obriše ili prestane da se plaća, slike nestaju | 11 objavljenih postova + Flow Conf (draft) | ja: prebaciti slike u ovaj sajt, izgled isti |
+| 1 | ~~Footer kaže **„5.0 on Clutch“**, a Clutch pokazuje **4.8** (5 recenzija) | footer, svih 47 stranica | **odluka: ostaje kako jeste** ~~ |
+| 2 | Alt tekst slika je doslovno **„__wf_reserved_inherit“** (4 slike); verovatno posledica izmena teksta preko API-ja (14. i 17.11.) | blog: AEO vs SEO in 2026, SaaS content marketing in 2026 | **urađeno 17.11. veče** |
+| 3 | **25 slika u 12 blog postova** učitava se sa CDN-a drugog Webflow sajta (`6a0bc2572a345c5cad437d47`), ne ovog. Ako se taj sajt obriše ili prestane da se plaća, slike nestaju | 11 objavljenih postova + Flow Conf (draft) | **urađeno 17.11. veče** (25 slika, provereno) |
 | 4 | Ostale slike u blog tekstovima imaju prazan alt (oko 40) | 21 post | ja pišem opise, tim odobri (može i posle lansiranja) |
-| 5 | TrakPro case: „SEO went from to a perfect 100“ (fali broj), „developred“, „Couldflare“ | /our-work/trak-pro | tim (copy) |
-| 6 | Pristupačnost: „Services“ i „Resources“ u meniju su dugme sa linkom unutra (axe „nested-interactive“); isto kartice u „Every project“ galeriji na Home | desktop meni, 47 stranica; Home | ja, tehnički |
-| 7 | Slika za deljenje (og:image) je **AVIF** na 7 stranica; LinkedIn je verovatno ne prikazuje | 5 case stranica, 2 bloga (Sanity vs Webflow, Source by Webflow) | ide uz OG slike od dizajnera (MANUAL_TASKS 13) |
+| 5 | TrakPro case: „SEO went from to a perfect 100“ (fali broj), „developred“, „Couldflare“ | /our-work/trak-pro | **ispravljeno, ali TrakPro je draft (izmena tima), uživo kad se objavi** |
+| 6 | Pristupačnost: „Services“ i „Resources“ u meniju su dugme sa linkom unutra (axe „nested-interactive“); isto kartice u „Every project“ galeriji na Home | desktop meni, 47 stranica; Home | **urađeno 17.11. veče** (skripta `nuesA11yFixes`) |
+| 7 | Slika za deljenje (og:image) je **AVIF** na 7 stranica; LinkedIn je verovatno ne prikazuje | 5 case stranica, 2 bloga (Sanity vs Webflow, Source by Webflow) | čeka odluku: predlog novo CMS polje „Share image“ sa JPG slikama |
 | 8 | Meta description sa razmakom na kraju | 11 blog postova | ja, sitno |
 | 9 | Isti id `wf-template-…` dva puta na Home (Webflow-ov element) | Home | sitno, može da ostane |
 | 10 | Case timovi: po 2 osobe; Growth (Shiftolic, Veyor) i SEO & AEO (TrakPro) bez osobe; Daris i Pavle nisu ni na jednoj case stranici | 5 case stranica | odluka Aleksandar |
+
+**Draft stavke (17.11. veče):** Shiftolic, Veyor i TrakPro su u Webflow-u sačuvani kao draft (izmene timova). Uživo je i dalje stara verzija, dok ih neko ne objavi.
 
 ## 3. Sadržaj koji čeka tim
 - **FAQ:** 30 odgovora su moj nacrt i čekaju potvrdu. Uz to su 4 pitanja za tim, u `notes/faq-odgovori-claude-2026-11-17.md`.
