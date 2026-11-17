@@ -23,6 +23,7 @@ Odgovori iz Slack-a na liste „Sadržaj od tima“ i „Tvoje odluke“. Kopije
 | Veyor Digital | Team | prazno | Aleksandar Dumic, Luka Radomirovic, Daris Henjas, Darko Milosevic |
 | Sustain Commercial Solar | Team | prazno | Luka Radomirovic, Aleksandar Dumic, Darko Milosevic |
 - Timovi su raspoređeni po ulogama iz Teams kolekcije (dizajn, Webflow, growth i SEO, PM) i po uslugama u case studiji, kako je Aleksandar tražio („izmešaj, da je realno“). Ballerine (Aleksandar, Luka, Pavle) nije diran.
+- **Posle toga (19:09–19:12) timovi su izmenjeni direktno u Webflow-u, ne preko mene, i objavljeni.** Stanje sada: Shiftolic i TrakPro: Mihajlo Nikolic, Luka Radomirovic; Veyor, Sustain i Ballerine: Aleksandar Dumic, Darko Milosevic. Kod Ballerine je promenjeno i nekorišćeno polje „Team – Webflow“ (Aleksandar, Darko). Sekcija „The team behind this project“ prikazuje tačno ovo (provereno na desktopu i telefonu): `notes/case-tim-desktop-2026-11-17.png`, `notes/case-tim-telefon-2026-11-17.png`.
 
 **Svaka stranica usluge ima svoj H1, iz Figme (Copy page, okviri `7759:2605`, `7759:3231`, `7759:5948`, `7759:6574`).** `backup/elements/service-h1-2026-11-17.json`
 | Stranica | Pre | Posle |
