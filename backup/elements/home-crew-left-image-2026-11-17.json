@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-17",
+  "site": "Copy of Nues (6aba6bc07d6279b4b561771f)",
+  "page": "Home (6aba6bc07d6279b4b56176f1)",
+  "element": {"component": "6aba6bc07d6279b4b56176f1", "element": "4e866e62-4feb-6163-0b45-7cd9640f2ccb"},
+  "type": "Image",
+  "styleNames": ["home-crew_image", "is-left"],
+  "before": {
+    "assetId": "6ad11fd5b78766c3453970d7",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ad11fd5b78766c3453970d7_home-crew-raw-3.avif",
+    "size": "512x342",
+    "attributes": {"loading": "lazy", "alt": ""}
+  },
+  "restore": "data_element_tool set_image_asset on the element above with image_asset_id 6ad11fd5b78766c3453970d7"
+}
