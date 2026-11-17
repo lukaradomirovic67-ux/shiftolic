@@ -3,6 +3,16 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 17.11.2026: dve greške u tekstu, Terms i blog „AEO vs SEO“ (objavljeno na staging)
+Tvoje „napravi ovo dvoje“ 17.11. Kopije pre izmene: `backup/elements/terms-typo-paragraph-2026-11-17.json`, `backup/cms-items/blog-aeo-vs-seo-2026-11-17.json`.
+| Gde | Pre | Posle |
+|---|---|---|
+| Terms of Service, prvi paragraf (Paragraph `2e0275db-5baa-bc63-7803-172d6a3bf7a8`) | „…modify, expand, or disconti-nue any service offering…“ | „…modify, expand, or discontinue any service offering…“ |
+| Blog „AEO vs SEO in 2026“ (CMS Blogs, stavka `6aba6bc07d6279b4b56179a3`), polje Content, drugi odeljak | `AEO,<a …> answer engine optimization</a>,` (razmak unutar linka, podvlaka kreće pre reči) | `AEO, <a …>answer engine optimization</a>,` (razmak ispred linka) |
+- Ostatak teksta oba mesta je isti, znak po znak (provereno posle upisa).
+- Usput, pri upisu polja Content, Webflow je sam kopirao dve slike iz tog posta (`robotseo.png`, `web.png`) iz Assets-a drugog Webflow projekta (`6a0bc257…`) u Assets ovog sajta (`6aba6bc0…`), pa im se promenila adresa. Fajlovi su isti, bajt po bajt (proveren SHA-1), i obe nove adrese vraćaju 200. Post više ne zavisi od tuđeg projekta za te dve slike.
+- Provereno na stagingu: na Terms nema „disconti-nue“; u postu link počinje rečju „answer“.
+
 ## 17.11.2026: odluka, boje na servisnim stranicama ostaju kako jesu (QA grupa 5, stavka 6)
 Tvoje „neka ostane kako jeste“ 17.11. Provera prema Figmi (Services FINAL) je pokazala da se sajt poklapa: ljubičast naslov „Verified reviews“ na Growth, zelena podvlaka u video citatu i zelene zvezdice u CTA na svim stranicama, i zvezdice u „Verified reviews“ u boji stranice. Jedina razlika ostaje kako jeste: naslov „Verified reviews“ (i video citati na SEO & AEO) je na sajtu #0d1928, a u Figmi je u skoro crnoj nijansi boje stranice (#082216, #131a26, #321f0d). Ništa nije menjano.
 
