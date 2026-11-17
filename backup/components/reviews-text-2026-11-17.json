@@ -1,0 +1,12 @@
+{
+ "date": "2026-11-17",
+ "component": "Reviews (6bd64d63-6573-e5d4-1c1c-e02a53bf67a1), 7 instances: Home, About, Services, 4 service pages",
+ "note": "Text before the final reviews from Figma (Copy page, Home 7759:1227, frames 7759:651/824/882/944/1015)",
+ "slides": {
+  "Shiftolic": {"quote_el": "6bd64d63-6573-e5d4-1c1c-e02a53bf67ba", "quote": "“The honest feedback stung for about a day. Then the new site outperformed the old one in every metric we track.”", "role_el": "6bd64d63-6573-e5d4-1c1c-e02a53bf67bd", "role": "Marketing Director", "industry_el": "6bd64d63-6573-e5d4-1c1c-e02a53bf67c4", "industry": "Healthcare"},
+  "Ballerine": {"quote_el": "6bd64d63-6573-e5d4-1c1c-e02a53bf67c9", "quote": "“The honest feedback stung for about a day.<br>Then the new site outperformed the old one in every metric we track.”", "role_el": "6bd64d63-6573-e5d4-1c1c-e02a53bf67ce", "role": "Marketing Director", "industry_el": "6bd64d63-6573-e5d4-1c1c-e02a53bf67d5", "industry": "AI technology"},
+  "Harper": {"quote_el": "6bd64d63-6573-e5d4-1c1c-e02a53bf67da", "quote": "“The honest feedback stung for about a day. Then the new site outperformed the old one in every metric we track.”", "role_el": "6bd64d63-6573-e5d4-1c1c-e02a53bf67dd", "role": "Marketing Director", "meta_el": "6bd64d63-6573-e5d4-1c1c-e02a53bf67df", "industry": "(none, meta had only 'Harper')"},
+  "Intaker": {"quote_el": "6bd64d63-6573-e5d4-1c1c-e02a53bf67e5", "quote": "“Even without the price difference, I would still have picked nues.”", "role_el": "6bd64d63-6573-e5d4-1c1c-e02a53bf67e8", "role": "Joseph Rudolo", "industry_el": "6bd64d63-6573-e5d4-1c1c-e02a53bf67ef", "industry": "Legal tech"},
+  "Veyor": {"quote_el": "6bd64d63-6573-e5d4-1c1c-e02a53bf67f4", "quote": "“The honest feedback stung for about a day. Then the new site outperformed the old one in every metric we track.”", "role_el": "6bd64d63-6573-e5d4-1c1c-e02a53bf67f7", "role": "Marketing Director", "industry_el": "6bd64d63-6573-e5d4-1c1c-e02a53bf67fe", "industry": "Construction software"}
+ }
+}

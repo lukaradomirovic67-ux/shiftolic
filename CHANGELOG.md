@@ -3,6 +3,21 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 17.11.2026: konačne recenzije u sekciji „Verified reviews, real stories“ (objavljeno na staging)
+Tvoji Figma linkovi 17.11. (Copy page, Home `7759:1227`, okviri `7759:651`, `7759:824`, `7759:882`, `7759:944`, `7759:1015`). Kopija pre izmene: `backup/components/reviews-text-2026-11-17.json`.
+Komponenta „Reviews“ (`6bd64d63-…67a1`) je jedna za 7 stranica (Home, About, Services, 4 servisne), pa je izmena urađena jednom, u komponenti.
+| Tab | Pre | Posle |
+|---|---|---|
+| Shiftolic | „The honest feedback stung…“ · Marketing Director · Shiftolic · Healthcare | „If you’re looking for a team to build your B2B Saas website fast and right I would definitely recommend Nues.“ · Founder · Shiftolic · Workforce |
+| Ballerine | „The honest feedback stung…“ (sa prelomom) · Marketing Director · Ballerine · AI technology | „When I need something, the team responds quickly, and that is what’s the most important.“ · Marketing Director · Ballerine · Fintech |
+| Harper | „The honest feedback stung…“ · Marketing Director · Harper (bez industrije) | isti citat · Head of Growth · Harper · Insurance (dodata dva bloka, „·“ i „Insurance“, kao kod ostalih) |
+| Intaker | „Even without the price difference, I would still have picked nues.“ · Joseph Rudolo · Intaker · Legal tech | „When priorities needed to shift, they were able to adjust. That level of communication and partnership that made a huge difference“ · Marketing Director · Intaker · Legal |
+| Veyor | „The honest feedback stung…“ · Marketing Director · Veyor · Construction software | „Apart from the craft, which was perfect, what stood out was team’s dedication to improving everyday.“ · CEO · Veyor · Construction |
+- Tekst je prenet doslovno iz Figme, uključujući „Saas“, citat Intaker-a bez tačke na kraju i „everyday“ (vidi poruku u četu).
+- Nazivi tabova ostaju „Shiftolic“; u Figmi tab piše „Shiftholic“, što je greška u kucanju.
+- Provereno na stagingu: svih 7 stranica prikazuje istih 5 recenzija, bez JS grešaka. Snimak: `notes/recenzije-harper-2026-11-17.png`.
+- Let’s talk ima svoj, poseban slider citata (Or Moshkovitz, „Marketing Director at Ballerine“); nije deo ovih Figma okvira i nije menjan.
+
 ## 17.11.2026: cene vraćene (objavljeno na staging)
 Tvoje „vrati sve cene da budu prikazane“ 17.11. Vraćeno tačno stanje od pre sakrivanja:
 - svih 16 elemenata sa cenom (Home, Services, Pricing) ponovo imaju Visibility uključen (spisak: `backup/elements/prices-hidden-2026-11-17.json`);
