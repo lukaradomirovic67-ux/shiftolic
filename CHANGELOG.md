@@ -3,6 +3,9 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 17.11.2026: odluka, kartica „Webflow natives, fiercely honest“ na Home ostaje kako jeste (QA grupa 5, stavka 4)
+Tvoje „ne menjaj tu ništa“ 17.11. Predlog sa spuštenom fotografijom (`notes/home-kartica-lice-predlog-2026-11-17.png`) nije primenjen; ništa nije menjano.
+
 ## 17.11.2026: odluka, tabovi na telefonu ostaju u dva reda (QA grupa 5, stavka 3)
 Tvoje „preskoči, okej mi je ovo ovako kako je sad“ 17.11. „Design & Development“ i „Webflow Development“ ostaju u dva reda u tabovima na telefonu (Home „Four ways“, Pricing hero, Services Tour, Services poređenje). Ništa nije menjano. Snimak stanja: `notes/tabovi-telefon-sada-2026-11-17.png`.
 
