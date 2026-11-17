@@ -3,6 +3,14 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 17.11.2026 (veče): Ballerine tim
+Tvoje „samo za ballerinu dodaj i pavla“. Kopija: `backup/cms-items/ballerine-team-2026-11-17-2040.json`.
+| Polje | Pre | Posle |
+|---|---|---|
+| Ballerine → Team | Aleksandar Dumic, Darko Milosevic | Aleksandar Dumic, Darko Milosevic, Pavle Stikovic |
+- Objavljeno i provereno na stagingu: case stranica prikazuje sva tri.
+- Polja Team – Design, Team – Webflow, Team – SEO & AEO i Team – Growth sajt ne koristi. Na šablonu case stranice postoji samo jedna lista ljudi, vezana za polje Team. Nisu brisana.
+
 ## 17.11.2026 (veče): stavke 2–6 iz večernjeg QA-a, objavljeno na staging
 Tvoje „1. ne radimo, a ove ostale ajmo redom“. Clutch („5.0 on Clutch“) ostaje kako jeste.
 
