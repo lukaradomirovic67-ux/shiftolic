@@ -3,6 +3,17 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 17.11.2026: oštrija fotografija u kartici „Ideas become live sites“ na Home (objavljeno na staging)
+Tvoje „slika u levoj kartici je baš lošeg kvaliteta, popravi je“ 17.11. Kopija pre izmene: `backup/elements/home-crew-left-image-2026-11-17.json`. Pregled pre i posle: `notes/home-kartica-slika-desktop-2026-11-17.png`, `notes/home-kartica-slika-telefon-2026-11-17.png`.
+| Gde | Pre | Posle |
+|---|---|---|
+| Home, leva kartica u „crew“ sekciji (Image `4e866e62-4feb-6163-0b45-7cd9640f2ccb`, klase `home-crew_image is-left`) | asset `6ad11fd5b78766c3453970d7` `home-crew-raw-3.avif`, 512×342 px, 7 KB: na ekranu razvučena oko 3 puta (na telefonu 3x i do 5 puta), mutna | asset `6afc73abaed05009a0a0fcc1` `home-crew-ideas-live-sites-1920.avif`, 1920×1280 px, 62 KB |
+- Ista fotografija, isti kadar i iste boje: izvor je `NEB02694.jpg` iz dizajnerovog Drive foldera (Home / Navigation, 7008×4672, sRGB), ista slika koju koristi Figma (Home FINAL, čvor 4926:2512), samo smanjena na 1920 px. Razlika u boji prema staroj slici je u proseku oko 2 od 255.
+- Odnos strana je isti kao pre (3:2), pa `object-fit: cover` i `object-position: 23% 50%` prikazuju isti deo slike. Klase, stil, `loading="lazy"` i prazan alt nisu menjani.
+- Veličina je izabrana prema najvećem prikazu: kartica je do 890×438 px (tablet) i 349×418 px na telefonu, pa je na ekranima 2x i 3x potrebno oko 1.800–1.900 px širine.
+- Provereno na stagingu (1440 px 2x i 390 px 3x): učitava se nova slika 1920×1280, kadar isti, bez JS grešaka.
+- Stari asset `home-crew-raw-3.avif` je ostao u biblioteci (nije obrisan); više se ne koristi na ovom elementu.
+
 ## 17.11.2026: odluka, kartica „Webflow natives, fiercely honest“ na Home ostaje kako jeste (QA grupa 5, stavka 4)
 Tvoje „ne menjaj tu ništa“ 17.11. Predlog sa spuštenom fotografijom (`notes/home-kartica-lice-predlog-2026-11-17.png`) nije primenjen; ništa nije menjano.
 
