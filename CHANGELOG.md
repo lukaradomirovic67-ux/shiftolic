@@ -3,6 +3,16 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 17.11.2026: CTA podnaslov, prelom posle crte umesto pre nje (QA grupa 5, stavka 2, objavljeno na staging)
+Tvoje „uradi“ 17.11. posle pregleda (`notes/cta-podnaslov-predlog-2026-11-17.png`). Kopija pre izmene: `backup/page-code/2026-11-17-headings/site-footer.html` (site footer pre obe izmene od 17.11.).
+| Gde | Pre | Posle |
+|---|---|---|
+| CTA na dnu svih stranica (`cta-v2_subtitle`), desktop i tablet | „A 30-minute call. You leave with a plan and an estimate“ / „— whether you hire us or not.“ | „…and an estimate —“ / „whether you hire us or not.“ |
+| Isto, telefon | 3 reda, „and an estimate“ sam u srednjem redu, treći red počinje crtom | „A 30-minute call. You leave“ / „with a plan and an estimate —“ / „whether you hire us or not.“ |
+| Site footer kod | — | u bloku za naslove: crta posle preloma se premešta ispred njega, sa razmakom koji ne lomi red (pa crta ne može da počne red); podnaslov se prelama ravnomerno (`text-wrap: balance`) |
+- Tekst je isti; menja se samo mesto preloma. Provereno na stagingu na Home, Pricing, blog postu, TrakPro case-u i Careers, na 1440, 820 i 390 px.
+- Webflow je pri upisu escape oznake u ovom pravilu (`\u2014`, `\u00a0`) pretvorio u prave znakove; ponašanje je isto, a lokalna kopija je usklađena sa upisanim kodom.
+
 ## 17.11.2026: naslovi na telefonu bez jedne reči same u redu (QA grupa 5, stavka 1, objavljeno na staging)
 Tvoje „uradi“ 17.11. posle pregleda pre i posle (`notes/naslovi-telefon-predlog-2026-11-17.png`). Kopija pre izmene: `backup/page-code/2026-11-17-headings/` (site head i footer kod). Head kod nije menjan.
 | Gde | Pre | Posle |
