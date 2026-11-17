@@ -50,3 +50,7 @@ U svakom slučaju, pre lansiranja ne sme ostati „[$X,XXX]“ ni dve različite
 - Da li je „from $8,000“ za Design & Development tačno i da li ostaje?
 - Webflow Development: $5,000 ili $20,000 (ili „posle poziva“)?
 - SEO & AEO ($2,000 / month) i Growth ($3,000 / month): da li ti brojevi sa Services važe? Ako važe, Pricing dobija iste umesto „[$X,XXX]“.
+
+## Dokument za odluku
+Analiza je prebačena u Claude Docs, sa slikama i izvorima: https://claude.ai/artifact/DHYnbAUKSXu5wPrAK8bQ9R
+Slike iz dokumenta: `notes/doc-cene/`.
