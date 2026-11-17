@@ -3,6 +3,18 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 17.11.2026 (veče): spljošten krug sa strelicom na case karticama (objavljeno na staging)
+Tvoje „vidis kako se krug spljostio u trusted by sekciji, popravi“. Kopija stilova: `backup/styles/case-card-arrow-2026-11-17.json`.
+- Uzrok: krug (`case-card_arrow`, 40×40) je u flex redu pored teksta i smeo je da se suzi. Kad je tekst dugačak („Built from scratch in 2 weeks“), krug se stisnuo na 23–38 px širine. To se dešavalo na skoro svim širinama ekrana, na Home i Services.
+
+| Klasa (Style Manager) | Pre | Posle |
+|---|---|---|
+| `case-card_arrow` | flex `0 1 auto` (sme da se suzi) | flex `0 0 auto`: ne raste i ne skuplja se |
+| `case-card_bottom` | bez razmaka između teksta i kruga | `column-gap: 0.75rem` (bez toga je tekst prilazio krugu na 4 px) |
+
+- Provereno posle objave, Home i Services, na 11 širina od 1440 do 360: svih 8 krugova je 40×40, a tekst je najmanje 12 px od kruga.
+- Na nekim širinama tekst kartice sada ide u 3 reda umesto u 2, jer krug više ne ustupa mesto tekstu.
+
 ## 17.11.2026 (veče): Careers, animacija otvaranja koverte (objavljeno na staging)
 Tvoje „popravi ovu animaciju otvaranja koverte“. Kopija koda pre izmene: `backup/page-code/2026-11-17-careers-envelope/careers-head-before.html`. Poređenje pre/posle: `notes/careers-koverta-pre-posle-2026-11-17.png`.
 

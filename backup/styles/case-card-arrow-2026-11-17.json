@@ -1,0 +1,5 @@
+{
+  "note": "Before adding flex-shrink:0 (17.11.2026). Only the main breakpoint has properties; no other breakpoints or hover.",
+  "case-card_arrow": {"id": "2d4d0d5d-f835-6b6d-744b-033802a80d69", "main": {"display":"flex","width":"2.5rem","height":"2.5rem","justify-content":"center","align-items":"center","border-radius":"50% (all four corners)","background-color":"var relume-variable--neutral-white-20","transition-property":"all","transition-duration":"300ms","transition-timing-function":"ease","color":"var variable-4b70e862-7771-2ba3-c476-34e1d38d85c5","cursor":"pointer"}},
+  "case-card_bottom": {"id": "10be5ee0-5882-570f-a1ea-fa7a2771592d", "main": {"position":"absolute","left":"0.9375rem","top":"auto","right":"0.9375rem","bottom":"0.9375rem","z-index":"1","display":"flex","padding-top":"0.625rem","justify-content":"space-between","align-items":"center","border-top":"1px solid var relume-variable--neutral-white-10","transform":"translate(0px, 16px)","transition":"transform, opacity 400ms ease"}}
+}
