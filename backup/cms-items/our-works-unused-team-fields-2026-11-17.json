@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-17",
+  "collection": "Our Works 6aba6bc07d6279b4b561771c",
+  "note": "Field definitions before deleting the 4 unused team fields (user: 'izbrisi visak polja'). Only Ballerine had values; they were not shown on the site (the case template reads only the Team field).",
+  "fields": [
+    {"id": "55533b5f560c9be8cebe243082d6e05b", "slug": "team---design", "displayName": "Team – Design", "type": "MultiReference", "collectionId": "6aba6bc07d6279b4b561778a", "helpText": "Not used for now (skill pills are off on the case page)."},
+    {"id": "c6e6936dcb189446f018a488b53c040a", "slug": "team---webflow", "displayName": "Team – Webflow", "type": "MultiReference", "collectionId": "6aba6bc07d6279b4b561778a", "helpText": "Not used for now (skill pills are off on the case page)."},
+    {"id": "3d8d059e83e92228257456823fc024eb", "slug": "team---seo-aeo", "displayName": "Team – SEO & AEO", "type": "MultiReference", "collectionId": "6aba6bc07d6279b4b561778a", "helpText": "Not used for now (skill pills are off on the case page)."},
+    {"id": "a7981aa27a308faf745b799f8d78bd73", "slug": "team---growth", "displayName": "Team – Growth", "type": "MultiReference", "collectionId": "6aba6bc07d6279b4b561778a", "helpText": "Not used for now (skill pills are off on the case page)."}
+  ],
+  "values": {
+    "Ballerine 6aba6bc07d6279b4b5617989": {
+      "team---design": ["6aee1564539ee1fdc48b9be6 (Pavle Stikovic)"],
+      "team---webflow": ["6aba6bc07d6279b4b56179aa (Aleksandar Dumic)", "6aee1564539ee1fdc48b9be8 (Darko Milosevic)", "6aee1564539ee1fdc48b9be6 (Pavle Stikovic)", "6aee1564539ee1fdc48b9be4 (Luka Radomirovic)"]
+    },
+    "all other items": "empty"
+  },
+  "field_group": "7 · Case study page held these 4 fields after Team (8cbc2760cd47c44219357a84d16f1cd3)"
+}

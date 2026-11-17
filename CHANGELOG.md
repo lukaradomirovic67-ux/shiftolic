@@ -9,7 +9,9 @@ Tvoje „samo za ballerinu dodaj i pavla“. Kopija: `backup/cms-items/ballerine
 |---|---|---|
 | Ballerine → Team | Aleksandar Dumic, Darko Milosevic | Aleksandar Dumic, Darko Milosevic, Pavle Stikovic |
 - Objavljeno i provereno na stagingu: case stranica prikazuje sva tri.
-- Polja Team – Design, Team – Webflow, Team – SEO & AEO i Team – Growth sajt ne koristi. Na šablonu case stranice postoji samo jedna lista ljudi, vezana za polje Team. Nisu brisana.
+- Polja Team – Design, Team – Webflow, Team – SEO & AEO i Team – Growth sajt ne koristi. Na šablonu case stranice postoji samo jedna lista ljudi, vezana za polje Team. 
+- **Na tvoje „izbrisi visak polja“ ta 4 polja su obrisana iz Our Works.** Definicije i Ballerine vrednosti su sačuvane u `backup/cms-items/our-works-unused-team-fields-2026-11-17.json`. Polje Team je ostalo, a grupe polja su netaknute. Objavljeno; svih 5 case stranica radi (200) i prikazuje isti tim kao pre brisanja.
+- Prazna kolekcija „Case team“ i dalje postoji. API ne može da briše kolekcije, pa se briše ručno: CMS → Case team → Settings → Delete collection.
 
 ## 17.11.2026 (veče): stavke 2–6 iz večernjeg QA-a, objavljeno na staging
 Tvoje „1. ne radimo, a ove ostale ajmo redom“. Clutch („5.0 on Clutch“) ostaje kako jeste.
