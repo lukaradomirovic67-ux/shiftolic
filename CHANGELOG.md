@@ -3,6 +3,14 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 17.11.2026: cene vraćene (objavljeno na staging)
+Tvoje „vrati sve cene da budu prikazane“ 17.11. Vraćeno tačno stanje od pre sakrivanja:
+- svih 16 elemenata sa cenom (Home, Services, Pricing) ponovo imaju Visibility uključen (spisak: `backup/elements/prices-hidden-2026-11-17.json`);
+- JSON-LD na Design & Development i Webflow Development vraćen iz `backup/schema/services-prices-before-2026-11-17.json` (`offers` 8000 i 5000 USD, „Starting at $5,000.“ u opisu).
+- Provereno na stagingu: vide se iste cene kao pre (From $8k na Home; From $8k/$5k/$2k, $3,000 i red „Starting at“ na Services; $8,000, $20,000, [$X,XXX]/month ×2 i from $8k/$20k na Pricing), schema ima 8000 i 5000, bez JS grešaka.
+- FAQ odgovori i Trusted kartice ostaju kako su upisani (FAQ odgovori ne navode cene, pa važe i sa prikazanim cenama).
+- Analiza prikazivanja i sakrivanja cena: `notes/analiza-cene-2026-11-17.md`.
+
 ## 17.11.2026: cene sakrivene, Trusted kartice sa pravim metrikama, FAQ odgovori (objavljeno na staging)
 Tvoj zahtev 17.11.: „za FAQ napiši ti … ali naglasi šta si napisao i zapamti“, „price … samo ga hajduj“, „trusted kartice, uzmi metrike sa starog nues sajta“.
 
