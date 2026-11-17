@@ -1,0 +1,999 @@
+<style>
+  .about-jurney-nues_wrapper {
+    cursor: grab;
+    will-change: transform;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: none;
+    position: relative;
+    z-index: 9999;
+  }
+  .about-jurney-nues_wrapper:active {
+    cursor: grabbing;
+    z-index: 10000;
+  }
+  .about-jurney-nues_wrapper img,
+  .about-jurney-nues_wrapper * {
+    pointer-events: none;
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const el = document.querySelector('.about-jurney-nues_wrapper');
+  if (!el) return;
+
+  // Podešavanja
+  const DRAG_EASE = 0.18;    // brzina praćenja miša dok se vuče
+  const RETURN_EASE = 0.06;  // sporije vraćanje u prvobitnu poziciju
+  const MIN_DELTA = 0.01;
+
+  let isDragging = false;
+  let startX = 0, startY = 0;
+  let targetX = 0, targetY = 0;
+  let currentX = 0, currentY = 0;
+  let rafId = null;
+
+  function animate() {
+    const ease = isDragging ? DRAG_EASE : RETURN_EASE;
+
+    currentX += (targetX - currentX) * ease;
+    currentY += (targetY - currentY) * ease;
+
+    el.style.transform = 'translate(' + currentX + 'px, ' + currentY + 'px)';
+
+    const stillMoving =
+      Math.abs(targetX - currentX) > MIN_DELTA ||
+      Math.abs(targetY - currentY) > MIN_DELTA;
+
+    if (isDragging || stillMoving) {
+      rafId = requestAnimationFrame(animate);
+    } else {
+      currentX = targetX;
+      currentY = targetY;
+      el.style.transform = 'translate(' + currentX + 'px, ' + currentY + 'px)';
+      rafId = null;
+    }
+  }
+
+  function getPoint(e) {
+    if (e.touches && e.touches.length) return e.touches[0];
+    return e;
+  }
+
+  function onDown(e) {
+    isDragging = true;
+    const p = getPoint(e);
+    startX = p.clientX - targetX;
+    startY = p.clientY - targetY;
+
+    if (!rafId) animate();
+    e.preventDefault();
+  }
+
+  function onMove(e) {
+    if (!isDragging) return;
+    const p = getPoint(e);
+    targetX = p.clientX - startX;
+    targetY = p.clientY - startY;
+  }
+
+  function onUp() {
+    if (!isDragging) return;
+    isDragging = false;
+    targetX = 0;
+    targetY = 0;
+    if (!rafId) animate();
+  }
+
+  // Mouse
+  el.addEventListener('mousedown', onDown);
+  window.addEventListener('mousemove', onMove);
+  window.addEventListener('mouseup', onUp);
+
+  // Touch
+  el.addEventListener('touchstart', onDown, { passive: false });
+  window.addEventListener('touchmove', onMove, { passive: false });
+  window.addEventListener('touchend', onUp);
+  window.addEventListener('touchcancel', onUp);
+});
+</script>
+
+
+<style>
+  /* Tranzicije na karticama */
+  .about-hero-card {
+    transition: background-color 400ms ease-in-out, color 400ms ease-in-out;
+  }
+
+  /* Tranzicija na tekstu unutar kartica */
+  .about-hero-card h1,
+  .about-hero-card h2,
+  .about-hero-card h3,
+  .about-hero-card h4,
+  .about-hero-card h5,
+  .about-hero-card h6,
+  .about-hero-card p,
+  .about-hero-card span,
+  .about-hero-card a {
+    transition: color 400ms ease-in-out;
+  }
+
+  /* Tranzicija na borderu */
+  .about-hero-card .about-hero-card-border {
+    transition: opacity 400ms ease-in-out;
+    opacity: 1;
+  }
+
+  /* Aktivno stanje - bela kartica, crn tekst, border opacity 0 */
+  .about-hero-card.is-active {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .about-hero-card.is-active h1,
+  .about-hero-card.is-active h2,
+  .about-hero-card.is-active h3,
+  .about-hero-card.is-active h4,
+  .about-hero-card.is-active h5,
+  .about-hero-card.is-active h6,
+  .about-hero-card.is-active p,
+  .about-hero-card.is-active span,
+  .about-hero-card.is-active a {
+    color: #000000;
+  }
+
+  .about-hero-card.is-active .about-hero-card-border {
+    opacity: 0;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var cards = document.querySelectorAll('.about-hero-card');
+    if (!cards.length) return;
+
+    // Breakpoint - ispod ovoga koristimo mobilnu logiku
+    var MOBILE_BREAKPOINT = 768;
+
+    // Trigger ratio za desktop/tablet (sticky video layout)
+    var TRIGGER_RATIO_DESKTOP = 0.55;
+
+    // Trigger ratio za mobile (vertikalni stack layout)
+    // 0.7 = pali se kada centar kartice dođe na 70% visine ekrana
+    // Povećaj (0.75, 0.8) za ranije; smanji (0.6, 0.5) za kasnije
+    var TRIGGER_RATIO_MOBILE = 0.7;
+
+    var ticking = false;
+
+    function update() {
+      var isMobile = window.innerWidth < MOBILE_BREAKPOINT;
+      var triggerRatio = isMobile ? TRIGGER_RATIO_MOBILE : TRIGGER_RATIO_DESKTOP;
+      var triggerLine = window.innerHeight * triggerRatio;
+
+      cards.forEach(function (card) {
+        var rect = card.getBoundingClientRect();
+        var cardCenter = rect.top + rect.height / 2;
+
+        if (cardCenter <= triggerLine) {
+          card.classList.add('is-active');
+        } else {
+          card.classList.remove('is-active');
+        }
+      });
+
+      ticking = false;
+    }
+
+    function onScroll() {
+      if (!ticking) {
+        window.requestAnimationFrame(update);
+        ticking = true;
+      }
+    }
+
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+  });
+</script>
+
+
+<style>
+/*  @media (hover: hover) and (pointer: fine) {
+
+    .about-hero-video_holder {
+/*      position: relative; */
+/*      overflow: hidden;
+      clip-path: inset(0); /* garantovano isecanje na ivicama */
+    }
+
+    /* pointer kursor preko celog videa - sa !important da nista ne prepise */
+/*    .about-hero-video_holder,
+    .about-hero-video_holder * {
+      cursor: pointer !important;
+    }
+
+    .about-hero-whatch-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: transform, opacity;
+      z-index: 10;
+    }
+
+    .about-hero-video_holder:hover .about-hero-whatch-video {
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .about-hero-whatch-video {
+      display: none;
+    }
+  } */
+</style>
+
+<script>
+  /*
+document.addEventListener('DOMContentLoaded', function() {
+  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+
+  const videoHolder = document.querySelector('.about-hero-video_holder');
+  const followLink = document.querySelector('.about-hero-whatch-video');
+
+  if (!videoHolder || !followLink) return;
+
+  let mouseX = 0;
+  let mouseY = 0;
+  let currentX = 0;
+  let currentY = 0;
+  const smoothing = 0.1;
+
+  videoHolder.addEventListener('mouseenter', function(e) {
+    const rect = videoHolder.getBoundingClientRect();
+    mouseX = e.clientX - rect.left;
+    mouseY = e.clientY - rect.top;
+    currentX = mouseX;
+    currentY = mouseY;
+  });
+
+  videoHolder.addEventListener('mousemove', function(e) {
+    const rect = videoHolder.getBoundingClientRect();
+    mouseX = e.clientX - rect.left;
+    mouseY = e.clientY - rect.top;
+  });
+
+  videoHolder.addEventListener('click', function() {
+    followLink.click();
+  });
+
+  function animate() {
+    currentX += (mouseX - currentX) * smoothing;
+    currentY += (mouseY - currentY) * smoothing;
+
+    // CENTRIRAJ button - kursor je u sredini buttona
+    const linkWidth = followLink.offsetWidth;
+    const linkHeight = followLink.offsetHeight;
+    const finalX = currentX - linkWidth / 2;
+    const finalY = currentY - linkHeight / 2;
+
+    // bez clamp-a - button slobodno prati misa, clip-path ga vizuelno isecka
+    followLink.style.transform = `translate(${finalX}px, ${finalY}px)`;
+
+    requestAnimationFrame(animate);
+  }
+  animate();
+}); */
+</script>
+
+<script>
+(function() {
+  const COMPLETION_DURATION = 500;
+  const REVERSE_DURATION = 500;
+  const SCROLL_SMOOTHING = 0.05;
+  const FILL_BUFFER = 0.2;
+  const FORCE_FILL_DURATION = 200;
+  const FORCE_EMPTY_DURATION = 200;
+  const FAST_SKIP_DURATION = 150; // brza animacija kad korisnik preskace vise kartica odjednom
+
+  const wrapper = document.querySelector('.about-journey-contact_holder');
+  const camera = document.querySelector('.about-journey-camera');
+  const cards = document.querySelectorAll('.about-journey-timeline_holder');
+
+  if (!wrapper || !camera || cards.length === 0) {
+    console.warn('Journey animation: missing elements');
+    return;
+  }
+
+  const totalCards = cards.length;
+  let currentIndex = 0;
+  let rafId = null;
+  let isPinned = false;
+  let lastScrollY = window.scrollY;
+  let scrollDirection = 'down';
+
+  let animationMode = null;
+  let animStartTime = null;
+  let animStartProgress = 0;
+  let animTargetProgress = 0;
+  let pendingCardIndex = null;
+  let pendingNextMode = null;
+
+  let targetProgress = 100;
+  let currentProgress = 100;
+
+  let desiredIndex = 0;
+
+  function setActiveCard(index) {
+    if (index < 0 || index >= totalCards) return;
+    cards.forEach((card, i) => {
+      card.classList.toggle('is-active', i === index);
+    });
+    currentIndex = index;
+  }
+
+  function setTimerProgress(percent) {
+    const activeCard = cards[currentIndex];
+    if (!activeCard) return;
+    const timer = activeCard.querySelector('.about-journey-timer_holder');
+    if (timer) timer.style.setProperty('--progress', percent + '%');
+  }
+
+  function easeOutCubic(t) {
+    return 1 - Math.pow(1 - t, 3);
+  }
+
+  function easeInOutCubic(t) {
+    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  }
+
+  function startCompletionAnimation() {
+    animationMode = 'completing';
+    animStartTime = performance.now();
+    animStartProgress = currentProgress;
+    animTargetProgress = 100;
+  }
+
+  function startReverseAnimation() {
+    animationMode = 'reversing';
+    animStartTime = performance.now();
+    animStartProgress = currentProgress;
+    animTargetProgress = 0;
+  }
+
+  function startForceAnim(toValue, duration, onComplete) {
+    animationMode = 'forcing';
+    animStartTime = performance.now();
+    animStartProgress = currentProgress;
+    animTargetProgress = toValue;
+    pendingNextMode = onComplete;
+  }
+
+  // Provera da li trenutni index zaostaje za desiredIndex i pokrece catch-up
+  // Ako je razlika velika (2+), instant prebaci karticu sa brzom animacijom
+  function checkCatchUp() {
+    if (currentIndex === desiredIndex) return false;
+
+    const distance = Math.abs(desiredIndex - currentIndex);
+
+    // Ako je razlika 2+, instant skok na pravu karticu sa brzom animacijom
+    if (distance >= 2) {
+      const goingDown = desiredIndex > currentIndex;
+
+      if (goingDown) {
+        // Instant prebaci na desired-1, pa pusti normalnu force anim za zadnji korak
+        setActiveCard(desiredIndex);
+        currentProgress = 0;
+        targetProgress = 0;
+        setTimerProgress(0);
+        animationMode = null;
+      } else {
+        setActiveCard(desiredIndex);
+        currentProgress = 100;
+        targetProgress = 100;
+        setTimerProgress(100);
+        animationMode = null;
+      }
+      return true;
+    }
+
+    // Razlika je tacno 1 - normalna force animacija
+    if (desiredIndex > currentIndex) {
+      pendingCardIndex = currentIndex + 1;
+      startForceAnim(100, FORCE_FILL_DURATION, 'switchAndEmpty');
+      return true;
+    } else {
+      pendingCardIndex = currentIndex - 1;
+      startForceAnim(0, FORCE_EMPTY_DURATION, 'switchAndFill');
+      return true;
+    }
+  }
+
+  function tick(timestamp) {
+    if (animationMode === 'completing') {
+      const elapsed = timestamp - animStartTime;
+      const t = Math.min(elapsed / COMPLETION_DURATION, 1);
+      const eased = easeOutCubic(t);
+      currentProgress = animStartProgress + (100 - animStartProgress) * eased;
+      setTimerProgress(currentProgress);
+
+      if (t >= 1) {
+        animationMode = null;
+        targetProgress = currentProgress;
+      }
+    }
+    else if (animationMode === 'reversing') {
+      const elapsed = timestamp - animStartTime;
+      const t = Math.min(elapsed / REVERSE_DURATION, 1);
+      const eased = easeInOutCubic(t);
+      currentProgress = animStartProgress * (1 - eased);
+      setTimerProgress(currentProgress);
+
+      if (t >= 1) {
+        animationMode = null;
+        targetProgress = currentProgress;
+        checkCatchUp();
+      }
+    }
+    else if (animationMode === 'forcing') {
+      const duration = (animStartProgress < animTargetProgress) ? FORCE_FILL_DURATION : FORCE_EMPTY_DURATION;
+      const elapsed = timestamp - animStartTime;
+      const t = Math.min(elapsed / duration, 1);
+      const eased = easeOutCubic(t);
+      currentProgress = animStartProgress + (animTargetProgress - animStartProgress) * eased;
+      setTimerProgress(currentProgress);
+
+      if (t >= 1) {
+        currentProgress = animTargetProgress;
+        setTimerProgress(currentProgress);
+
+        if (pendingNextMode === 'switchAndEmpty') {
+          if (pendingCardIndex !== null) {
+            setActiveCard(pendingCardIndex);
+            pendingCardIndex = null;
+          }
+          startForceAnim(0, FORCE_EMPTY_DURATION, 'done');
+        } else if (pendingNextMode === 'switchAndFill') {
+          if (pendingCardIndex !== null) {
+            setActiveCard(pendingCardIndex);
+            pendingCardIndex = null;
+          }
+          startForceAnim(100, FORCE_FILL_DURATION, 'done');
+        } else {
+          animationMode = null;
+          pendingNextMode = null;
+          targetProgress = currentProgress;
+          checkCatchUp();
+        }
+      }
+    }
+    else {
+      const diff = targetProgress - currentProgress;
+      if (Math.abs(diff) > 0.05) {
+        currentProgress += diff * SCROLL_SMOOTHING;
+        setTimerProgress(currentProgress);
+      } else if (currentProgress !== targetProgress) {
+        currentProgress = targetProgress;
+        setTimerProgress(currentProgress);
+      }
+    }
+
+    rafId = requestAnimationFrame(tick);
+  }
+
+  function checkPinned() {
+    const rect = wrapper.getBoundingClientRect();
+    const wrapperHeight = wrapper.offsetHeight;
+    const viewportHeight = window.innerHeight;
+    const scrollableDistance = wrapperHeight - viewportHeight;
+
+    const currentScrollY = window.scrollY;
+    if (currentScrollY > lastScrollY) {
+      scrollDirection = 'down';
+    } else if (currentScrollY < lastScrollY) {
+      scrollDirection = 'up';
+    }
+    lastScrollY = currentScrollY;
+
+    const wasPinned = isPinned;
+    isPinned = rect.top <= 0 && rect.bottom > viewportHeight;
+
+    camera.classList.toggle('is-pinned', isPinned);
+
+    if (isPinned && !wasPinned) {
+      if (currentProgress > 0 && scrollDirection === 'down') {
+        startReverseAnimation();
+      } else if (scrollDirection === 'up') {
+        currentProgress = 100;
+        targetProgress = 100;
+        setTimerProgress(100);
+        animationMode = null;
+      } else {
+        animationMode = null;
+      }
+    }
+
+    if (!isPinned && wasPinned) {
+      if (rect.top > 0) {
+        setActiveCard(0);
+        desiredIndex = 0;
+        pendingCardIndex = null;
+        pendingNextMode = null;
+
+        if (currentProgress < 100) {
+          startCompletionAnimation();
+        }
+      } else {
+        setActiveCard(totalCards - 1);
+        desiredIndex = totalCards - 1;
+        pendingCardIndex = null;
+        pendingNextMode = null;
+
+        if (currentProgress < 100) {
+          startCompletionAnimation();
+        }
+      }
+    }
+
+    // Tokom animacije - samo azuriraj desiredIndex
+    if (animationMode === 'forcing' || animationMode === 'reversing') {
+      if (isPinned && scrollableDistance > 0) {
+        const scrolled = -rect.top;
+        const globalProgress = Math.max(0, Math.min(0.9999, scrolled / scrollableDistance));
+        const progressInCards = globalProgress * totalCards;
+        desiredIndex = Math.min(Math.floor(progressInCards), totalCards - 1);
+      }
+      return;
+    }
+
+    if (isPinned && scrollableDistance > 0) {
+      const scrolled = -rect.top;
+      const globalProgress = Math.max(0, Math.min(0.9999, scrolled / scrollableDistance));
+
+      const progressInCards = globalProgress * totalCards;
+      const targetIndex = Math.min(Math.floor(progressInCards), totalCards - 1);
+      const rawLocalProgress = progressInCards - targetIndex;
+
+      desiredIndex = targetIndex;
+
+      let localProgress;
+      if (rawLocalProgress >= (1 - FILL_BUFFER)) {
+        localProgress = 100;
+      } else {
+        localProgress = (rawLocalProgress / (1 - FILL_BUFFER)) * 100;
+      }
+
+      // Kartica se menja
+      if (targetIndex !== currentIndex) {
+        const distance = Math.abs(targetIndex - currentIndex);
+
+        // Veliki preskok - instant pozicija + brza animacija
+        if (distance >= 2) {
+          setActiveCard(targetIndex);
+          const goingDown = targetIndex > currentIndex;
+          if (goingDown) {
+            currentProgress = 0;
+            setTimerProgress(0);
+            targetProgress = localProgress;
+          } else {
+            currentProgress = 100;
+            setTimerProgress(100);
+            targetProgress = localProgress;
+          }
+          return;
+        }
+
+        // Razlika 1 - normalna force animacija
+        const goingDown = targetIndex > currentIndex;
+        if (goingDown) {
+          pendingCardIndex = currentIndex + 1;
+          startForceAnim(100, FORCE_FILL_DURATION, 'switchAndEmpty');
+        } else {
+          pendingCardIndex = currentIndex - 1;
+          startForceAnim(0, FORCE_EMPTY_DURATION, 'switchAndFill');
+        }
+        return;
+      }
+
+      if (animationMode !== 'completing') {
+        targetProgress = localProgress;
+      }
+    }
+  }
+
+  window.addEventListener('scroll', checkPinned, { passive: true });
+  window.addEventListener('resize', checkPinned, { passive: true });
+
+  setActiveCard(0);
+  currentProgress = 100;
+  targetProgress = 100;
+  setTimerProgress(100);
+  lastScrollY = window.scrollY;
+  desiredIndex = 0;
+  checkPinned();
+  rafId = requestAnimationFrame(tick);
+})();
+</script>
+
+<!-- Nues: code moved here from page embeds. Edit here, not in embeds. -->
+<script>
+/* About map stats: each number counts up from 0 once it reaches the screen, a beat after the stats rise in.
+   Set the target with data-count and the length in ms with data-count-duration; the page text keeps the final number. */
+(function () {
+  function count(el, delay) {
+    var end = parseFloat(el.getAttribute('data-count')) || 0, dur = parseFloat(el.getAttribute('data-count-duration')) || 1600;
+    setTimeout(function () {
+      var t0 = performance.now();
+      (function step(now) {
+        var t = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - t, 4);
+        el.textContent = Math.round(end * e);
+        if (t < 1) requestAnimationFrame(step);
+      })(t0);
+    }, delay);
+  }
+  function init() {
+    var nums = [].slice.call(document.querySelectorAll('[data-count]'));
+    if (!nums.length) return;
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      nums.forEach(function (el) { el.textContent = el.getAttribute('data-count'); });
+      return;
+    }
+    nums.forEach(function (el) { el.textContent = '0'; });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        io.unobserve(e.target);
+        // Follow the stats' one-after-another entrance
+        var item = e.target.closest('[data-reveal-stagger] > *'), k = item ? [].indexOf.call(item.parentNode.children, item) : 0;
+        count(e.target, 250 + Math.min(k * 80, 640));
+      });
+    }, { rootMargin: '0px 0px -12% 0px' });
+    nums.forEach(function (el) { io.observe(el); });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script>
+<script>
+(function () {
+  var NS = 'http://www.w3.org/2000/svg';
+  var HUB = { x: 776, y: 181 }; // Serbia, in the map's 1440x581 viewBox
+  // Land dots of the map image in viewBox units, one row per entry: "y,dx:x*count@dx,..."
+  var DOTS = '41,9.40:530*5;46,9.30:501*8@9.49,615*2;50,9.70:471*15@9.57,758*5;55,9.70:432*18@9.60,739*4,921,940;59,9.70:353*26@9.63,748*2,777*2;64,9.70:313*7,390*22;68,9.70:302*7,379*23,1089;73,9.80:270*9,387*22,983,1091*3;77,9.80:258*9,356*24,935*3,1112*2;82,9.90:246*9,365*22,926*2,1134*2;87,9.90:244*3,284*5,432*16,799*2,918*2;92,10.00:232,282*2,431*14,769*6,928,998*2,1048,1078*9;96,10.00:200*2,250*3,290*3,440*14,759*10,950,990*2,1020*17;101,10.10:228,268*2,308*4,438*12,750*12,890,920,960*2,991*2,1021*18;106,10.00:155,205*3,266,286*8,457*8,750*9,851*2,901*11,1022*15@10.09;111,10.20:132,172*3,233*3,274*11,446*8,588*4,740*5,801*5,872*14,1024*19@10.13;116,10.20:119*6,221*2,251,282*3,343*6,445*6,587*3,730*5,791*21,1015*21;121,10.30:106*2,136,188,228,249*2,300*2,341*6,453*5,720*5,781*48@10.23,1313*2;126,10.30:123*2,164*4,246*6,350*3,391,452*4,720*5,791*47,1336;132,10.40:100*12,234,255*5,337*6,461*3,720*5,802*46@10.33,1288,1329,1360;137,10.40:97*10,232*7,335,367*3,481,668,740*3,802*53;142,10.50:136*14@10.40,292,313,667,730*3,782*56@10.43;148,10.50:112*4,164*10,321*5,667*2,730,782*57;153,10.50:77*18,330*4,393,646*2,677,730*64@10.53;158,10.60:53*19,328*8,645*5,709*68@10.58;164,10.60:39*20,337*8,666*72@10.64;169,10.70:-7*25,335*9,698*71;175,10.80:0*28@10.74,322*10,676*72@10.74;180,10.90:-4*29@10.80,331*8,428,676*17@10.80,871*54@10.79;186,10.90:-7*30@10.84,329*5,394,427*2,687*5,752*7,839,860*5,936*37@10.84,1349*10;192,10.90:0*36,436,687*6,763*5,861*4,927*36,1385*3,1428*2;198,10.90:-4*36@10.96,654*5,741*2,774*4,884*2,928*35@10.95;203,11.00:-7*2,37*34,654*4,752*15,929*38,1413*3;209,11.10:55*29,387,642*4,786,808*10,930*38@11.06,1406*4;215,11.10:74*26,653*3,742*2,786,809*10,942*35,1410*3;221,11.20:82*25,664,697*4,820*9,943*34,1335,1413;228,11.20:90*23,663*7,854*41@11.24,1338;234,11.30:109*21,652*9,855*38,1296;240,11.40:106*21,640*11,788*2,856*33,1242*3,1333*2;246,11.40:103*21,640*53,1256*2;253,11.50:111*19,639*24,926*27,1271,1328;259,11.60:108*19,627*19,858*5,927*27@11.55,1262,1308*2;266,11.60:116*17,615*27,952*25,1277*3;272,11.70:124*14,299*2,614*21,871*7,1000*21;279,11.80:144*9,309,614*21@11.74,872*8,1001*21@11.71;286,11.80:142,165*6,307,613*21,873*8,1015*19;292,11.90:150,174*5,613*22,886*6,1028*5,1111*10,1242;299,12.00:159,183*4,314*2,612*22@11.93,886*5,1030*4,1113*5;306,12.00:192*4,276,348*2,612*26,1031*3,1116*5,1187;313,12.10:201*3,273,611*24,1033*2,1130*4,1238;320,12.10:198*7,622*25,1035*2,1132*5,1241;328,12.30:231,256*4,622*25@12.20,1037,1134,1159*3,1244;335,12.30:278*2,352*4,634*24,1051;342,12.40:288,337*6,646*3,720*16,1052,1139,1225;350,12.50:310*11,732*14,1129*2,1253;357,12.50:333*10,732*13,1131,1206*2;365,12.60:330*11,732*12,1134*2,1184*4;372,12.70:316*13,745*11,1149,1186*3,1250;380,12.70:313*16,745*10,1152*2,1190*5,1291;388,12.80:324*16,745*10,1167,1231,1294*3;396,12.80:308*17,758*9,1182*2,1311*3;404,12.90:319*16,758*9,1314*4,1379;412,13.00:329*14,746*10,915,1357;421,13.10:340*13,746*10,903*2,1282*3,1334;429,13.20:351*12,746*8,891*2,1246*5,1338;437,13.30:362*11,759*7,892*2,1236*9;446,13.30:360*9,760*7,893*2,1213*11;455,13.40:371*7,760*6,1202*13;464,13.50:369*7,774*5,1205*13,1448;473,13.60:366*7,774*4,1209*13;482,13.70:364*6,1211*4,1294*7;491,13.70:362*5,1311*6;500,13.90:360*4,1328*4;509,14.00:357*3,1346;519,497.80:355,369,1351;528,14.05:353*3;538,546.75:350,364,1444';
+  function mapInit() {
+    var svg = document.querySelector('.about-map_svg-el');
+    if (!svg || svg.hasAttribute('data-map-ready')) return;
+    svg.setAttribute('data-map-ready', '');
+    var dots = [];
+    DOTS.split(';').forEach(function (row) {
+      var parts = row.split(':'), head = parts[0].split(','), y = +head[0], dx = +head[1];
+      parts[1].split(',').forEach(function (run) {
+        var r = run.split('@'), step = r[1] ? +r[1] : dx, a = r[0].split('*');
+        for (var i = 0; i < +(a[1] || 1); i++) dots.push([+a[0] + i * step, y]);
+      });
+    });
+    var hub = svg.querySelector('.am-hub-ring');
+    var layer = document.createElementNS(NS, 'g');
+    // New connections sit under Serbia's hub and label
+    svg.insertBefore(layer, hub ? hub.parentNode : null);
+    var arcs = [], lastTime = 0, lastPointer = null, MAX = 4;
+    function el(tag, attrs, parent) {
+      var n = document.createElementNS(NS, tag);
+      for (var k in attrs) n.setAttribute(k, attrs[k]);
+      parent.appendChild(n);
+      return n;
+    }
+    // The part of the viewBox that is on screen, since the map is cropped to fit its box
+    function visibleBox() {
+      var ctm = svg.getScreenCTM();
+      if (!ctm) return null;
+      var r = svg.getBoundingClientRect(), inv = ctm.inverse(), pt = svg.createSVGPoint();
+      pt.x = r.left; pt.y = r.top;
+      var a = pt.matrixTransform(inv);
+      pt.x = r.right; pt.y = r.bottom;
+      var b = pt.matrixTransform(inv);
+      return { x0: Math.max(0, a.x), y0: Math.max(0, a.y), x1: Math.min(1440, b.x), y1: Math.min(581, b.y) };
+    }
+    // Snap to the closest land dot near the pointer, skipping dots next to Serbia or already connected
+    function nearestDot(p, box) {
+      var best = null, bestD = 90 * 90;
+      for (var i = 0; i < dots.length; i++) {
+        var d = dots[i];
+        if (d[0] < box.x0 + 14 || d[0] > box.x1 - 14 || d[1] > box.y1 - 10) continue;
+        var dd = (d[0] - p.x) * (d[0] - p.x) + (d[1] - p.y) * (d[1] - p.y);
+        if (dd < bestD && Math.hypot(d[0] - HUB.x, d[1] - HUB.y) > 110) { bestD = dd; best = d; }
+      }
+      if (best && arcs.some(function (g) { return Math.hypot(g._end[0] - best[0], g._end[1] - best[1]) < 60; })) return null;
+      return best;
+    }
+    // Highest point of a quadratic curve between y0 and y1 with control height c
+    function topOf(y0, c, y1) {
+      if (c >= Math.min(y0, y1)) return Math.min(y0, y1);
+      return y0 - (y0 - c) * (y0 - c) / (y0 + y1 - 2 * c);
+    }
+    // Bow the line away from its chord like the design's arcs, flattening it until it fits inside the visible map
+    function control(x1, y1, box) {
+      var vx = x1 - HUB.x, vy = y1 - HUB.y, dist = Math.hypot(vx, vy);
+      var nx = vy / dist, ny = -vx / dist;
+      if (ny > 0) { nx = -nx; ny = -ny; }
+      var mx = (HUB.x + x1) / 2, my = (HUB.y + y1) / 2, k = 0.46, c;
+      for (var i = 0; i < 14; i++) {
+        c = [mx + nx * dist * k, my + ny * dist * k];
+        if (topOf(HUB.y, c[1], y1) >= box.y0 + 16) break;
+        k *= 0.82;
+      }
+      return c;
+    }
+    function ripple(x, y, parent) {
+      return el('ellipse', { cx: x, cy: y, rx: 14, ry: 5.6, fill: 'none', stroke: '#5bd3a9', 'stroke-width': 1.2, 'class': 'am-ripple' }, parent);
+    }
+    function spawn(end, box) {
+      var x1 = end[0], y1 = end[1];
+      var c = control(x1, y1, box);
+      var d = 'M' + HUB.x + ' ' + HUB.y + ' Q' + c[0].toFixed(1) + ' ' + c[1].toFixed(1) + ' ' + x1.toFixed(1) + ' ' + y1.toFixed(1);
+      var g = el('g', { 'class': 'am-user', fill: 'none', 'stroke-linecap': 'round' }, layer);
+      g._end = end;
+      [['#5bd3a9', 10, 0.22, 'url(#am-b6)'], ['#5bd3a9', 4, 0.45, 'url(#am-b2)'], ['#dffcef', 1.4, 0.95, '']].forEach(function (s) {
+        var path = el('path', { d: d, stroke: s[0], 'stroke-width': s[1], opacity: s[2], 'class': 'am-user-draw' }, g);
+        if (s[3]) path.setAttribute('filter', s[3]);
+        var len = path.getTotalLength();
+        path.style.strokeDasharray = len;
+        path.style.strokeDashoffset = len;
+      });
+      var pulse = el('path', { d: d, stroke: '#ffffff', 'stroke-width': 2.2, 'class': 'am-user-pulse' }, g);
+      pulse.style.setProperty('--len', pulse.getTotalLength().toFixed(1));
+      ripple(x1, y1, g);
+      var pin = el('g', { transform: 'translate(' + x1.toFixed(1) + ' ' + y1.toFixed(1) + ')' }, g);
+      var dot = el('g', { 'class': 'am-user-pin' }, pin);
+      el('ellipse', { rx: 14, ry: 5.6, fill: '#5bd3a9', opacity: 0.35, filter: 'url(#am-b2)' }, dot);
+      el('ellipse', { rx: 8, ry: 3.2, fill: 'none', stroke: '#5bd3a9', 'stroke-width': 1 }, dot);
+      el('ellipse', { rx: 3.5, ry: 1.4, fill: '#ffffff' }, dot);
+      // Serbia sends a ping as the line leaves
+      var ping = ripple(HUB.x, HUB.y, layer);
+      setTimeout(function () { if (ping.parentNode) ping.parentNode.removeChild(ping); }, 1400);
+      arcs.push(g);
+      if (arcs.length > MAX) {
+        var old = arcs.shift();
+        old.classList.add('is-leaving');
+        setTimeout(function () { if (old.parentNode) old.parentNode.removeChild(old); }, 750);
+      }
+    }
+    function tryAt(e, force) {
+      var ctm = svg.getScreenCTM(), box = visibleBox();
+      if (!ctm || !box) return;
+      var pt = svg.createSVGPoint();
+      pt.x = e.clientX; pt.y = e.clientY;
+      var p = pt.matrixTransform(ctm.inverse());
+      var now = Date.now();
+      if (!force && (now - lastTime < 550 || (lastPointer && Math.hypot(p.x - lastPointer.x, p.y - lastPointer.y) < 110))) return;
+      var end = nearestDot(p, box);
+      if (!end) return;
+      lastTime = now; lastPointer = p;
+      spawn(end, box);
+    }
+    // A click (or a tap on touch screens) draws one new connection to the closest land dot; just moving the mouse does nothing
+    svg.addEventListener('click', function (e) { tryAt(e, true); });
+  }
+  function swapInit() {
+    var grid = document.querySelector('.about-photos_grid');
+    if (!grid || grid.hasAttribute('data-swap-ready')) return;
+    grid.setAttribute('data-swap-ready', '');
+    var a = grid.querySelector('.about-photos_col.is-1 .about-photo-card');
+    var b = grid.querySelector('.about-photos_col.is-3 .about-photo-card');
+    if (!a || !b || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    // The left card starts at the right card's height and the right card at the left's; they trade heights as the section scrolls up
+    var dy = 0, ticking = false;
+    a.style.willChange = b.style.willChange = 'transform';
+    function measure() {
+      a.style.transform = b.style.transform = '';
+      var ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect();
+      dy = rb.left - ra.left < 40 ? 0 : rb.top - ra.top; // stacked layout on tablet and mobile: no swap
+      update();
+    }
+    function update() {
+      ticking = false;
+      var vh = window.innerHeight, top = grid.getBoundingClientRect().top;
+      // 0 when the grid enters at the bottom of the screen, 1 when its top reaches 20% from the top
+      var p = Math.min(1, Math.max(0, (vh - top) / (vh * 0.8)));
+      var e = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+      var y = dy * (1 - e);
+      a.style.transform = y ? 'translate3d(0,' + y.toFixed(1) + 'px,0)' : '';
+      b.style.transform = y ? 'translate3d(0,' + (-y).toFixed(1) + 'px,0)' : '';
+    }
+    window.addEventListener('scroll', function () {
+      if (!ticking) { ticking = true; requestAnimationFrame(update); }
+    }, { passive: true });
+    window.addEventListener('resize', measure);
+    window.addEventListener('load', measure);
+    measure();
+  }
+  // Keep a space at each desktop line break so words stay apart when the breaks are hidden
+  function softBreaks() {
+    document.querySelectorAll('.about-sub br, .hero_subtitle br').forEach(function (br) {
+      var prev = br.previousSibling;
+      if (prev && prev.nodeType === 3 && /\s$/.test(prev.nodeValue)) return;
+      br.parentNode.insertBefore(document.createTextNode(' '), br);
+    });
+  }
+  function init() { mapInit(); swapInit(); softBreaks(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script>
+<style>
+/* About journey on desktop: the chart pins and scrolling steps through the four years, as the Services tour (the script below sets is-scroll).
+   The 300vh of scroll is an empty block after the chart, since a sticky element cannot move into its own margin. */
+.about-timeline.is-scroll{overflow:clip}
+.about-timeline.is-scroll .about-timeline_inner::after{content:"";display:block;flex:none;height:300vh}
+.about-timeline.is-scroll .about-timeline_chart-wrap{position:sticky;top:var(--jr-top,100px);width:100%;max-width:calc((100vh - 125px) * 1.818);margin-left:auto;margin-right:auto}
+.about-timeline.is-scroll .about-timeline_pill.is-on::before{transform:scaleX(var(--jr-p,0))}
+</style>
+<script>
+/* About journey chart. Desktop (992px+ wide, 720px+ tall): the chart pins and scrolling steps through the four years, as the Services tour; the year pill fills as you scroll and a click scrolls to that year.
+   Tablet, phone and reduced motion: plays through the four milestones once it scrolls into view; pills, bubbles and nodes jump to a year */
+(function () {
+  var NS = 'http://www.w3.org/2000/svg';
+  // [year, height 0-1, milestone index]; the chart's viewBox is 1200x660 with the axis at y=620
+  var D = [[2023,.03],[2023.2,.09],[2023.45,.14,0],[2023.7,.15],[2023.9,.21],[2024.15,.27],[2024.45,.37,1],[2024.62,.4],[2024.85,.5],[2025.02,.49],[2025.18,.44],[2025.36,.54,2],
+    [2025.6,.6],[2025.82,.63],[2026.08,.72],[2026.28,.75],[2026.5,.85,3],[2026.75,.9],[2027,.97]];
+  var DUR = 6500;
+  function init(root) {
+    if (root.hasAttribute('data-journey-ready')) return;
+    var chart = root.querySelector('.about-timeline_chart'), svg = root.querySelector('.about-timeline_svg-el');
+    if (!chart || !svg) return;
+    root.setAttribute('data-journey-ready', '');
+    var ln = svg.querySelector('.jr-lit'), upto = svg.querySelector('.jr-upto'), drop = svg.querySelector('.jr-drop'), nodesG = svg.querySelector('.jr-nodes');
+    var dotHead = root.querySelector('.about-timeline_head-dot');
+    function list(sel) {
+      return [].slice.call(root.querySelectorAll(sel)).sort(function (a, b) { return a.getAttribute('data-journey-i') - b.getAttribute('data-journey-i'); });
+    }
+    var bbs = list('.about-timeline_bubble'), pns = list('.about-timeline_photo'), sts = list('.about-timeline_step'), pills = list('.about-timeline_pill');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var P = D.map(function (d) { return [(d[0] - 2023) * 300, 620 - d[1] * 560, d[2]]; });
+    var cum = [0];
+    for (var i = 1; i < P.length; i++) cum.push(cum[i - 1] + Math.hypot(P[i][0] - P[i - 1][0], P[i][1] - P[i - 1][1]));
+    var L = cum[cum.length - 1];
+    // Titles come in word by word
+    sts.forEach(function (st) {
+      var h = st.querySelector('.about-timeline_step-title');
+      if (!h || h.querySelector('.jr-w')) return;
+      var words = h.textContent.trim().split(/\s+/);
+      h.setAttribute('aria-label', words.join(' '));
+      h.innerHTML = words.map(function (w, k) { return '<span class="jr-w" aria-hidden="true"><span style="--k:' + k + '">' + w.replace(/</g, '&lt;') + '</span></span>'; }).join(' ');
+    });
+    // Non-scaling strokes measure dashes in screen pixels, so scale them with the chart
+    function sc() { return chart.clientWidth / 1200; }
+    function at(x) {
+      for (var i = 1; i < P.length; i++) {
+        if (x <= P[i][0]) { var u = (x - P[i - 1][0]) / (P[i][0] - P[i - 1][0]); return { y: P[i - 1][1] + (P[i][1] - P[i - 1][1]) * u, l: cum[i - 1] + (cum[i] - cum[i - 1]) * u }; }
+      }
+      return { y: P[P.length - 1][1], l: L };
+    }
+    var MS = [];
+    P.forEach(function (p) {
+      if (p[2] === undefined) return;
+      var g = document.createElementNS(NS, 'g');
+      g.setAttribute('class', 'jr-nd');
+      g.innerHTML = '<circle class="jr-hit" cx="' + p[0] + '" cy="' + p[1] + '" r="22"/><circle class="jr-dot" cx="' + p[0] + '" cy="' + p[1] + '" r="15"/>';
+      nodesG.appendChild(g);
+      var k = p[2];
+      MS[k] = { x: p[0], y: p[1], g: g };
+      g.addEventListener('click', function () { pick(k); });
+    });
+    var cx = 0, cur = -1, anim = null, timer = null;
+    function setX(x) {
+      cx = x;
+      var a = at(x), s = sc();
+      ln.style.strokeDasharray = (L * s).toFixed(1) + ' ' + (L * s + 10).toFixed(1);
+      ln.style.strokeDashoffset = ((L - a.l) * s).toFixed(1);
+      upto.setAttribute('width', x.toFixed(1));
+      dotHead.style.left = (x / 12) + '%';
+      dotHead.style.top = (a.y / 6.6) + '%';
+      MS.forEach(function (m, k) {
+        var r = x >= m.x - 0.5;
+        m.g.classList.toggle('is-reached', r);
+        if (bbs[k]) bbs[k].classList.toggle('is-reached', r);
+      });
+    }
+    function mark(i) {
+      [bbs, pns, sts].forEach(function (set) { set.forEach(function (el, k) { el.classList.toggle('is-on', k === i); }); });
+      pills.forEach(function (p, k) { p.classList.toggle('is-on', k === i); p.setAttribute('aria-pressed', k === i ? 'true' : 'false'); });
+    }
+    function open(i) {
+      cur = i;
+      mark(i);
+      MS.forEach(function (m, k) { m.g.classList.toggle('is-on', k === i); });
+      drop.setAttribute('x1', MS[i].x); drop.setAttribute('x2', MS[i].x); drop.setAttribute('y1', MS[i].y);
+      chart.classList.add('is-rest');
+      // Restart the waiting pill's fill
+      pills.forEach(function (p) { p.style.animation = 'none'; void p.offsetWidth; p.style.animation = ''; });
+      clearTimeout(timer);
+      if (chart.classList.contains('is-auto') && i < MS.length - 1) timer = setTimeout(function () { go(i + 1); }, DUR);
+    }
+    // The line travels to the milestone, then the milestone opens
+    function go(i, user) {
+      if (user) chart.classList.remove('is-auto');
+      clearTimeout(timer);
+      cancelAnimationFrame(anim);
+      mark(-1);
+      pills.forEach(function (p, k) { p.classList.toggle('is-on', k === i); });
+      chart.classList.remove('is-rest');
+      var from = cx, to = MS[i].x, dur = reduce ? 0 : Math.min(1600, 400 + Math.abs(to - from) * 2.4), t0 = performance.now();
+      if (!dur) { setX(to); open(i); return; }
+      chart.classList.add('is-moving');
+      (function step(now) {
+        var t = Math.min(1, (now - t0) / dur), e = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        setX(from + (to - from) * e);
+        if (t < 1) anim = requestAnimationFrame(step);
+        else { chart.classList.remove('is-moving'); open(i); }
+      })(t0);
+    }
+    // Scroll mode: the chart sticks below the navbar for 300vh of scroll (the block after it), split into one step per year
+    var sec = root.closest('.about-timeline') || root, inner = root.parentElement, head = root.previousElementSibling;
+    var wide = window.matchMedia('(min-width: 992px) and (min-height: 720px)');
+    var n = MS.length, scrollMode = false, near = false, ticking = false, tgt = -1;
+    function navH() { var b = document.querySelector('.navbar2_component'); return b ? b.offsetHeight : 0; }
+    function runPx() { return window.innerHeight * 3; }
+    function pinTop() { return parseFloat(root.style.getPropertyValue('--jr-top')) || 0; }
+    // where the chart's top would be without sticking: below the heading (offsetHeight ignores the heading's reveal transform) and the gap
+    function natTop() {
+      var cs = getComputedStyle(inner);
+      return inner.getBoundingClientRect().top + (parseFloat(cs.paddingTop) || 0) + (head ? head.offsetHeight + (parseFloat(cs.rowGap) || 0) : 0);
+    }
+    function layout() {
+      var nb = navH(), h = root.offsetHeight + 14;
+      root.style.setProperty('--jr-top', Math.round(nb + Math.max(12, (window.innerHeight - nb - h) / 2)) + 'px');
+    }
+    function onScroll() {
+      ticking = false;
+      if (!scrollMode || !near) return;
+      var p = Math.min(1, Math.max(0, (pinTop() - natTop()) / runPx())) * n;
+      var i = Math.min(n - 1, Math.floor(p));
+      chart.style.setProperty('--jr-p', Math.min(1, p - i).toFixed(3));
+      if (i !== tgt) { tgt = i; go(i); }
+    }
+    function request() { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }
+    function goTo(i) {
+      window.scrollTo({ top: window.pageYOffset + natTop() - pinTop() + runPx() * ((i + 0.08) / n), behavior: 'smooth' });
+    }
+    function pick(i) { if (scrollMode) goTo(i); else { tgt = i; go(i, true); } }
+    function setMode() {
+      var want = wide.matches && !reduce;
+      if (want !== scrollMode) {
+        scrollMode = want;
+        sec.classList.toggle('is-scroll', want);
+        if (want) { chart.classList.remove('is-auto'); clearTimeout(timer); tgt = -1; }
+        else chart.style.removeProperty('--jr-p');
+      }
+      if (scrollMode) layout();
+      setX(cx);
+      request();
+    }
+    pills.forEach(function (p, k) {
+      p.addEventListener('click', function () { pick(k); });
+      p.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(k); } });
+    });
+    bbs.forEach(function (b, k) { b.addEventListener('click', function () { pick(k); }); });
+    window.addEventListener('resize', setMode);
+    window.addEventListener('scroll', request, { passive: true });
+    if (wide.addEventListener) wide.addEventListener('change', setMode); else if (wide.addListener) wide.addListener(setMode);
+    chart.style.setProperty('--jr-dur', DUR / 1000 + 's');
+    setX(0);
+    if (reduce) { go(0); return; }
+    new IntersectionObserver(function (es) { near = es[0].isIntersecting; request(); }, { rootMargin: '200px 0px' }).observe(root);
+    setMode();
+    // Tabs mode: autoplay starts once the chart is in view
+    new IntersectionObserver(function (es, o) {
+      if (!es[0].isIntersecting) return;
+      o.disconnect();
+      if (scrollMode) return;
+      chart.classList.add('is-auto');
+      setTimeout(function () { if (!scrollMode) go(0); }, 250);
+    }, { threshold: 0.35 }).observe(chart);
+  }
+  function run() { document.querySelectorAll('[data-journey]').forEach(init); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
+})();
+</script>

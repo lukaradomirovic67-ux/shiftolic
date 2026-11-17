@@ -3,6 +3,16 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 17.11.2026: About, „The journey behind building Nues“ radi i na skrol i na klik po godinama, kao Tour na Services (objavljeno na staging)
+Tvoj zahtev 17.11, uz snimke About i Services: „ova sekcija na about page-u, promeni je da bude i scroll i tabovi, kao ova services sekcija“. Kopija pre izmene: `backup/page-code/2026-11-17-about-timeline/` (About head i footer kod). Head kod nije menjan.
+| Gde | Pre | Posle |
+|---|---|---|
+| Desktop (od 992 px širine i 720 px visine) | grafikon se sam vrti kroz 2023–2026 (6,5 s po godini) kad uđe u ekran; klik na godinu skače na nju | grafikon ostaje zakačen ispod navbara dok se skroluje (300vh, kao Tour na Services); svaka četvrtina skrola je jedna godina, linija se crta do te godine i otvara njenu priču i sliku; pilula godine se puni dok skroluješ; klik na godinu (pilula, krug ili slika) skroluje do te godine |
+| Tablet, telefon i „smanji animacije“ | kao gore | isto kao pre (vrti se sam, klik skače na godinu) |
+| About footer kod | skripta grafikona i CSS u head-u | skripta proširena režimom skrola; dodat mali CSS blok (`.about-timeline.is-scroll`: overflow clip umesto hidden, jer hidden ne da elementu da se zakači; prazan blok od 300vh posle grafikona; zakačen grafikon najviše onoliko širok da stane u visinu ekrana) |
+- Klasu `is-scroll` dodaje skripta, kao `is-on` i `is-auto` koje je sekcija već koristila.
+- Provereno na stagingu (1440x900, 1280x720, 1920x1080, 1024x768, 390x844): grafikon se zakači i prolazi kroz 2023, 2024, 2025 i 2026, pa se otkači i stranica ide dalje; klik na 2026 i 2024 skroluje do te godine; na 1280x720 grafikon je malo uži (1082 px) da ceo stane na ekran; na telefonu se ništa nije promenilo. Bez JS grešaka.
+
 ## 16.11.2026: Home OG slika na 6 stranica bez svoje (objavljeno na staging)
 Tvoje „oni nek koriste isti kao i homepage“ 16.11: stranice za koje u Drive folderu nije bilo OG slike dobile su Home sliku. Pre izmene nijedna nije imala OG sliku (stanje u listi stranica od 16.11, sve `imageAssetId: null`).
 | Stranica | Pre | Posle |

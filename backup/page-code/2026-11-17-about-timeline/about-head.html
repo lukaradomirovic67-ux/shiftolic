@@ -1,0 +1,309 @@
+
+<style>
+  /* === Sticky kamera === */
+  .about-journey-camera {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Bela pozadina popunjava celu kameru */
+  .about-journey-camera #section_layout366,
+  .about-journey-camera .section_layout366 {
+    min-height: 100vh;
+  }
+
+  .about-journey-camera > * {
+    width: 100%;
+  }
+
+  .about-journey-camera > section,
+  .about-journey-camera > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* === Padding section large - relative container za kartice === */
+  .about-journey-camera .padding-section-large {
+    position: relative;
+    display: block !important;
+  }
+
+  /* === Kartice - stack jedna preko druge === */
+  .about-journey-timeline_holder {
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(40px);
+    pointer-events: none;
+  }
+
+  .about-journey-timeline_holder:not(:first-child) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .about-journey-timeline_holder.is-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  /* === Timer prsten - originalni stil koji radi === */
+  .about-journey-timer_holder {
+    border: 2px solid transparent !important;
+    background: 
+      linear-gradient(#fff, #fff) padding-box,
+      conic-gradient(from -90deg, #DA2A90 0%, #DA2A90 var(--progress, 100%), #ffffff var(--progress, 100%), #ffffff 100%) border-box !important;
+  }
+</style>
+
+
+
+
+<style>
+  /* Default state - pruge */
+  .about-teams-bg_line {
+    background: linear-gradient(90deg, #17171D 0%, #66023C 100%);
+    transform: rotateY(0deg);
+    transition: transform 400ms ease, background 400ms ease;
+    transform-style: preserve-3d;
+    backface-visibility: visible;
+    will-change: transform, background;
+  }
+  
+  /* Hover state - pruge */
+  .about-teams-card:hover .about-teams-bg_line {
+    background: linear-gradient(270deg, #DA2A90 0%, #66023C 100%);
+    transform: rotateY(180deg);
+  }
+  
+  /* Perspective na card */
+  .about-teams-card {
+    perspective: 1000px;
+  }
+  
+  /* Image holder - shadow */
+  .about-teams-image_holder {
+    box-shadow: 0px 0px 4px 0px #FFFFFF;
+    transition: box-shadow 400ms ease;
+    will-change: box-shadow;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  /* Hover state - image holder shadow */
+  .about-teams-card:hover .about-teams-image_holder {
+    box-shadow: 0px 0px 0px 2px #FFFFFF;
+  }
+</style>
+
+<!-- Nues: code moved here from page embeds. Edit here, not in embeds. -->
+<style>
+/* Map: connections the visitor draws out of Serbia */
+.about-map_svg-el .am-user { transition: opacity 0.7s ease; }
+.about-map_svg-el .am-user.is-leaving { opacity: 0; }
+.about-map_svg-el .am-user-draw { animation: amUserDraw 0.95s cubic-bezier(0.3, 0, 0.2, 1) forwards; }
+@keyframes amUserDraw { to { stroke-dashoffset: 0; } }
+.about-map_svg-el .am-user-pulse { stroke-dasharray: 46 var(--len); stroke-dashoffset: calc(var(--len) + 46); animation: amUserFlow 3.2s cubic-bezier(0.45, 0, 0.55, 1) 0.95s infinite; }
+@keyframes amUserFlow { to { stroke-dashoffset: 0; } }
+.about-map_svg-el .am-user-pin { transform-box: fill-box; transform-origin: center; animation: amUserPin 0.5s cubic-bezier(0.2, 0.8, 0.2, 1.2) 0.8s both; }
+@keyframes amUserPin { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.about-map_svg-el .am-ripple { transform-box: fill-box; transform-origin: center; opacity: 0; animation: amRipple 1.3s ease-out both; }
+.about-map_svg-el .am-user .am-ripple { animation-delay: 0.85s; }
+@keyframes amRipple { from { transform: scale(0.4); opacity: 0.8; } to { transform: scale(2.8); opacity: 0; } }
+.about-map_graphic { cursor: crosshair; }
+/* Tablet and mobile: paragraphs wrap naturally instead of following the desktop line breaks */
+@media (max-width: 991px) {
+  .about-sub br, .hero_subtitle br { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .about-map_svg-el .am-user-draw, .about-map_svg-el .am-user-pin { animation: none; stroke-dashoffset: 0; }
+  .about-map_svg-el .am-user-pulse, .about-map_svg-el .am-ripple { display: none; }
+}
+</style>
+<style>.about-map_svg-el{display:block;width:100%;height:100%}.about-map_svg-el .am-pulse use{stroke-dasharray:46 1600;stroke-dashoffset:1646;animation:amFlow 3.6s cubic-bezier(.45,0,.55,1) infinite}@keyframes amFlow{from{stroke-dashoffset:1646}to{stroke-dashoffset:0}}.about-map_svg-el .am-hub-ring{transform-box:fill-box;transform-origin:center;animation:amHub 2.8s ease-in-out infinite}@keyframes amHub{0%,100%{opacity:.12;transform:scale(.85)}50%{opacity:.3;transform:scale(1.15)}}@media (prefers-reduced-motion: reduce){.about-map_svg-el .am-pulse{display:none}.about-map_svg-el .am-hub-ring{animation:none}}</style>
+<style>
+/* About journey chart: the line draws itself from one milestone to the next while the story, photo and year pill follow it */
+.about-timeline_svg .w-embed,.about-timeline_svg-el{display:block;width:100%;height:100%;overflow:visible}
+.about-timeline_svg-el .jr-ln{fill:none;stroke-linejoin:round;stroke-linecap:round;vector-effect:non-scaling-stroke}
+.about-timeline_svg-el .jr-ghost{stroke:rgba(214,226,240,.1);stroke-width:2}
+.about-timeline_svg-el .jr-lit{stroke:#5bd3a9;stroke-width:2.5;filter:drop-shadow(0 0 8px rgba(91,211,169,.45))}
+[data-journey-ready] .jr-lit{stroke-dasharray:0 1e5}
+.about-timeline_svg-el .jr-drop{stroke-width:1.5;vector-effect:non-scaling-stroke;opacity:0;transition:opacity .5s ease}
+.about-timeline_chart.is-rest .jr-drop{opacity:1}
+.about-timeline_svg-el .jr-nd{cursor:pointer}
+.about-timeline_svg-el .jr-hit{fill:transparent}
+.about-timeline_svg-el .jr-dot{fill:#0d1928;stroke:rgba(214,226,240,.3);stroke-width:2;vector-effect:non-scaling-stroke;transform-box:fill-box;transform-origin:center;transition:transform .5s cubic-bezier(.34,1.6,.5,1),opacity .3s ease}
+.about-timeline_svg-el .jr-nd:hover .jr-dot{transform:scale(1.25)}
+.about-timeline_svg-el .jr-nd.is-reached .jr-dot{opacity:0}
+.about-timeline_head-dot{position:absolute;left:0;top:0;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:#e9fbf3;box-shadow:0 0 0 5px rgba(91,211,169,.22),0 0 18px rgba(91,211,169,.8);opacity:0;pointer-events:none;transition:opacity .3s ease}
+.about-timeline_chart.is-moving .about-timeline_head-dot{opacity:1}
+.about-timeline_bubble{transform:scale(0);transition:transform .8s cubic-bezier(.34,1.35,.5,1)}
+.about-timeline_bubble::before{content:"";position:absolute;inset:-6px;border-radius:50%;box-shadow:0 0 0 1.5px #5bd3a9;opacity:0;pointer-events:none}
+.about-timeline_bubble.is-reached{transform:scale(1)}
+.about-timeline_bubble.is-reached:hover{transform:scale(1.12)}
+.about-timeline_bubble.is-on{transform:scale(0)}
+.about-timeline_bubble.is-on::before{animation:jrPulse 2.4s cubic-bezier(.22,1,.36,1) infinite}
+@keyframes jrPulse{0%{opacity:.6;transform:scale(1)}100%{opacity:0;transform:scale(1.45)}}
+.about-timeline_bubble:focus-visible,.about-timeline_pill:focus-visible{outline:2px solid #5bd3a9;outline-offset:3px}
+.about-timeline_bubble-logo svg{display:block;width:100%;height:100%}
+.about-timeline_photo{opacity:0;pointer-events:none;transform:translate(-50%,-100%) scale(.12);transform-origin:50% 100%;transition:transform .35s cubic-bezier(.22,1,.36,1),opacity .25s ease}
+.about-timeline_photo.is-on{opacity:1;transform:translate(-50%,-100%);transition:transform .9s cubic-bezier(.34,1.3,.5,1) .05s,opacity .4s ease .05s}
+.about-timeline_photo-img{transform:scale(1.04);transition:transform 1.4s cubic-bezier(.22,1,.36,1)}
+.about-timeline_photo.is-on .about-timeline_photo-img{transform:none}
+.about-timeline_pill{isolation:isolate;transition:color .3s ease,box-shadow .3s ease,background-color .3s ease}
+.about-timeline_pill:hover{color:#f4f7fb;box-shadow:inset 0 0 0 1px rgba(214,226,240,.32)}
+.about-timeline_pill.is-on{color:#101927;background-color:#f4f7fb;box-shadow:none}
+.about-timeline_pill::before{content:"";position:absolute;inset:0;z-index:-1;background:#a9eed0;transform:scaleX(0);transform-origin:0 50%}
+.about-timeline_chart.is-auto .about-timeline_pill.is-on::before{animation:jrFill var(--jr-dur,6.5s) linear forwards}
+.about-timeline_chart.is-paused .about-timeline_pill.is-on::before{animation-play-state:paused}
+@keyframes jrFill{to{transform:scaleX(1)}}
+.about-timeline_step{pointer-events:none}
+.about-timeline_step.is-on{pointer-events:auto}
+.jr-w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em}
+.jr-w>span{display:inline-block;transform:translateY(110%);transition:transform .35s ease-in}
+.about-timeline_step.is-on .jr-w>span{transform:none;transition:transform .9s cubic-bezier(.22,1,.36,1) calc(.12s + var(--k) * 45ms)}
+.about-timeline_step-text,.about-timeline_team{opacity:0;transform:translateY(8px);transition:opacity .3s ease,transform .5s cubic-bezier(.22,1,.36,1)}
+.about-timeline_step.is-on .about-timeline_step-text,.about-timeline_step.is-on .about-timeline_team{opacity:1;transform:none;transition:opacity .6s ease .45s,transform .8s cubic-bezier(.22,1,.36,1) .45s}
+.about-timeline_step.is-on .about-timeline_team{transition-delay:.55s}
+.about-timeline_team-number{font-variant-numeric:tabular-nums}
+.about-timeline_pill{font-variant-numeric:tabular-nums}
+@media (max-width:991px){
+.about-timeline_bubble.is-on{transform:scale(.5)}
+.about-timeline_step-photo{opacity:0;transform:scale(.97);transition:opacity .3s ease,transform .6s cubic-bezier(.22,1,.36,1)}
+.about-timeline_step.is-on .about-timeline_step-photo{opacity:1;transform:none;transition:opacity .6s ease,transform 1s cubic-bezier(.22,1,.36,1)}
+}
+@media (min-width:992px) and (max-width:1279px){
+.about-timeline_story{width:42%}
+.about-timeline_step-title{font-size:30px}
+.about-timeline_step-text{font-size:15.5px}
+.about-timeline_team{margin-top:32px;padding-top:32px}
+.about-timeline_team-number{font-size:26px}
+.about-timeline_team-label{font-size:17px}
+}
+@media (prefers-reduced-motion:reduce){
+.about-timeline_bubble,.about-timeline_photo,.about-timeline_photo-img,.jr-w>span,.about-timeline_step-text,.about-timeline_team,.about-timeline_step-photo{transition:none!important}
+.about-timeline_bubble.is-on::before{animation:none}
+}
+</style>
+<style>@media (min-width: 992px) and (max-width: 1279px){.about-story_lead{font-size:34px}.about-photo-card{padding:32px}.about-photo-card .heading-style-h4{font-size:30px}.about-photo-card_text{font-size:16px}.about-map_stats{padding-left:5%;padding-right:5%}}</style>
+<style>
+/* About hero: the background fades into the story section's top colour so there is no seam between them */
+.about-hero::after{content:"";position:absolute;left:0;right:0;bottom:0;z-index:1;height:min(32%,300px);pointer-events:none;background:linear-gradient(180deg,rgba(16,33,26,0) 0%,rgba(16,33,26,.12) 25%,rgba(16,33,26,.42) 55%,rgba(16,33,26,.8) 82%,#10211a 100%)}
+.about-hero > .padding-global{position:relative;z-index:2}
+</style>
+<style>
+/* About hero background: the N lines in the backdrop hum a touch brighter now and then, a soft band of light slides down
+   through them, and a spot of light runs along the edge of the hill. The hero image stays a normal Webflow image;
+   the script below draws the N lines of it once, brightened, into a canvas inside .about-hero_anim (right after the image).
+   Everything moves with opacity and transform only, so the browser animates it on the graphics card without repainting. */
+.about-hero_anim{container-type:size}
+/* a box with the image's proportions, cropped like the image (object-fit: cover, centred) */
+.ahb-stage{position:absolute;left:50%;top:50%;width:max(100cqw,156.522cqh);aspect-ratio:2880/1840;translate:-50% -50%}
+/* the N only covers the top right of the image, so the brightened layers are cut to that part */
+.ahb-box{position:absolute;left:44.444%;top:0;width:55.556%;height:79.783%;overflow:hidden}
+.ahb-lift{position:absolute;left:0;top:0;width:100%;height:100%;max-width:none}
+.ahb-hum{opacity:0;animation:aboutHum 13s ease-in-out infinite;will-change:opacity}
+@keyframes aboutHum{0%{opacity:0}16%{opacity:.32}22%{opacity:.16}38%{opacity:.44}52%{opacity:.2}53%{opacity:.5}53.8%{opacity:.14}54.6%{opacity:.42}72%{opacity:.26}86%{opacity:.38}100%{opacity:0}}
+/* the light band slides down while the image inside it moves the other way, so the picture itself stays put */
+.ahb-band{position:absolute;left:0;top:0;width:100%;height:35.422%;opacity:.55;-webkit-mask-image:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.9) 50%,rgba(0,0,0,0));mask-image:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.9) 50%,rgba(0,0,0,0));animation:aboutBand 11s cubic-bezier(.45,0,.55,1) infinite;will-change:transform}
+.ahb-band .ahb-lift{height:282.308%;animation:aboutBandImg 11s cubic-bezier(.45,0,.55,1) infinite;will-change:transform}
+@keyframes aboutBand{0%{transform:translateY(-134.615%)}60%,100%{transform:translateY(288.462%)}}
+@keyframes aboutBandImg{0%{transform:translateY(47.684%)}60%,100%{transform:translateY(-102.18%)}}
+/* the spot of light on the hill edge (moved by the script with the Web Animations API, also off the main thread) */
+.ahb-glint{position:absolute;left:0;top:0;width:13.194%;height:2.826%;margin:-.903% 0 0 -6.597%;opacity:0;mix-blend-mode:screen;pointer-events:none;will-change:transform,opacity;
+background:radial-gradient(closest-side,rgba(255,255,255,.85),rgba(255,255,255,0)) 50% 50%/15.79% 10% no-repeat,radial-gradient(closest-side,rgba(232,255,245,.5),rgba(210,248,231,.16) 55%,rgba(210,248,231,0)) 50% 50%/44.74% 26.92% no-repeat,radial-gradient(closest-side,rgba(191,242,220,.16),rgba(191,242,220,0)) 50% 50%/100% 100% no-repeat}
+.about-hero_anim.is-paused .ahb-hum,.about-hero_anim.is-paused .ahb-band,.about-hero_anim.is-paused .ahb-band .ahb-lift{animation-play-state:paused}
+@media (prefers-reduced-motion:reduce){.about-hero_anim{display:none}}
+</style>
+<script>
+/* About hero background animation (see the note above). It uses the hero image's current file (already downloaded,
+   so nothing loads twice) once the image is in, so swapping the image in the Designer keeps working; the N mask and
+   the hill edge are drawn for this image.
+   It sits in the head because the page footer is close to the custom code limit, so it waits for the page to load. */
+document.addEventListener('DOMContentLoaded', function () {
+  var layer = document.querySelector('[data-about-hero-anim]');
+  var img = layer && layer.parentNode.querySelector('.image-cover');
+  if (!layer || !img || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  // Where the N lines are in the image (opaque = lit), 2880 x 1840 like the image
+  var MASK = 'data:image/webp;base64,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';
+  // The hill edge the light runs along, in the same 2880 x 1840 units
+  var EDGE = 'M0 700.4 L16 700.1 L32 699.7 L48 699.3 L64 698.9 L80 698.6 L96 698.3 L112 698.1 L128 698.0 L144 698.1 L160 698.4 L176 698.7 L192 699.1 L208 699.7 L224 700.6 L240 701.6 L256 702.6 L272 703.7 L288 705.1 L304 706.6 L320 708.1 L336 709.7 L352 711.6 L368 713.6 L384 715.7 L400 717.9 L416 720.3 L432 722.9 L448 725.6 L464 728.3 L480 731.1 L496 734.0 L512 737.1 L528 740.3 L544 743.6 L560 747.0 L576 750.6 L592 754.3 L608 758.1 L624 762.1 L640 766.3 L656 770.4 L672 774.7 L688 779.1 L704 783.7 L720 788.4 L736 793.1 L752 798.0 L768 803.0 L784 808.0 L800 813.1 L816 818.4 L832 823.7 L848 829.1 L864 834.7 L880 840.4 L896 846.1 L912 852.0 L928 857.9 L944 863.9 L960 869.9 L976 876.0 L992 882.1 L1008 888.6 L1024 894.9 L1040 901.3 L1056 907.7 L1072 914.3 L1088 920.9 L1104 927.6 L1120 934.3 L1136 941.1 L1152 948.0 L1168 955.0 L1184 962.0 L1200 968.9 L1216 975.9 L1232 983.0 L1248 990.1 L1264 997.3 L1280 1004.3 L1296 1011.4 L1312 1018.7 L1328 1026.0 L1344 1033.1 L1360 1040.4 L1376 1047.7 L1392 1055.1 L1408 1062.6 L1424 1070.0 L1440 1077.4 L1456 1084.9 L1472 1092.0 L1488 1099.3 L1504 1106.7 L1520 1114.0 L1536 1121.3 L1552 1128.3 L1568 1135.4 L1584 1142.9 L1600 1150.1 L1616 1157.3 L1632 1164.3 L1648 1171.4 L1664 1178.6 L1680 1185.6 L1696 1192.4 L1712 1199.3 L1728 1206.0 L1744 1212.9 L1760 1219.4 L1776 1226.1 L1792 1232.9 L1808 1239.4 L1824 1245.9 L1840 1252.4 L1856 1258.9 L1872 1265.3 L1888 1271.7 L1904 1278.0 L1920 1284.3 L1936 1290.6 L1952 1296.7 L1968 1302.9 L1984 1309.0 L2000 1315.0 L2016 1321.0 L2032 1327.0 L2048 1333.0 L2064 1339.0 L2080 1345.0 L2096 1350.9 L2112 1356.7 L2128 1362.6 L2144 1368.3 L2160 1374.0 L2176 1379.6 L2192 1385.1 L2208 1390.7 L2224 1396.3 L2240 1401.7 L2256 1407.1 L2272 1412.6 L2288 1418.0 L2304 1423.3 L2320 1428.6 L2336 1433.7 L2352 1438.9 L2368 1444.0 L2384 1449.0 L2400 1454.0 L2416 1459.0 L2432 1464.0 L2448 1468.9 L2464 1473.7 L2480 1478.6 L2496 1483.3 L2512 1488.0 L2528 1492.6 L2544 1497.1 L2560 1501.7 L2576 1506.1 L2592 1510.4 L2608 1514.7 L2624 1519.0 L2640 1523.3 L2656 1527.4 L2672 1531.4 L2688 1535.6 L2704 1539.6 L2720 1543.6 L2736 1547.4 L2752 1551.3 L2768 1555.0 L2784 1558.9 L2800 1562.4 L2816 1566.1 L2832 1569.8 L2848 1572.9 L2864 1575.4 L2879 1577.4';
+  var CYCLE = 9000, DELAY = 1200, TRAVEL = .26, STEPS = 48, OP = [[0, 0], [.06, .15], [.13, 1], [.19, .55], [.26, 0]];
+  var pts = EDGE.match(/-?[\d.]+/g).map(Number), xs = [], ys = [], acc = [0];
+  for (var i = 0; i < pts.length; i += 2) { xs.push(pts[i]); ys.push(pts[i + 1]); }
+  for (i = 1; i < xs.length; i++) acc.push(acc[i - 1] + Math.hypot(xs[i] - xs[i - 1], ys[i] - ys[i - 1]));
+  var L = acc[acc.length - 1];
+  function at(len) {
+    len = Math.max(0, Math.min(L, len));
+    var k = 1; while (k < acc.length - 1 && acc[k] < len) k++;
+    var t = (len - acc[k - 1]) / ((acc[k] - acc[k - 1]) || 1);
+    return [xs[k - 1] + (xs[k] - xs[k - 1]) * t, ys[k - 1] + (ys[k] - ys[k - 1]) * t];
+  }
+  function ease(x) { return x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; }
+  function op(k) {
+    for (var i = 1; i < OP.length; i++) if (k <= OP[i][0]) { var a = OP[i - 1], b = OP[i]; return a[1] + (b[1] - a[1]) * (k - a[0]) / (b[0] - a[0]); }
+    return 0;
+  }
+  var stage, glint, anim, built = false;
+  // Every 9s the spot of light slides along the hill edge (like sun on glass), then rests. The path is turned into
+  // keyframes once (and again when the hero changes size), so no script runs while it plays.
+  function frames() {
+    var s = stage.offsetWidth / 2880, f = [];
+    for (var k = 0; k <= STEPS; k++) {
+      var o = k / STEPS * TRAVEL, len = Math.max(0, Math.min(1, -.02 + ease(k / STEPS) * .89)) * L,
+          a = at(len), b = at(len + 12), ang = Math.atan2(b[1] - a[1], b[0] - a[0]) * 180 / Math.PI;
+      f.push({ offset: o, opacity: op(o), transform: 'translate(' + (a[0] * s).toFixed(1) + 'px,' + (a[1] * s).toFixed(1) + 'px) rotate(' + ang.toFixed(2) + 'deg)' });
+    }
+    f.push({ offset: 1, opacity: 0, transform: f[f.length - 1].transform });
+    return f;
+  }
+  // The brightened N lines, drawn once (and again if the hero gets much bigger): the N part of the image, lifted like the
+  // original design (red x1.45, green x1.5, blue x1.42), then cut to the mask. t is a scratch canvas for the extra red and green.
+  var N = [.44444, 0, .55556, .79783];
+  function bake(c, t, mask) {
+    var nw = img.naturalWidth || 2880, nh = img.naturalHeight || 1840,
+        w = Math.round(Math.min(nw * N[2], c.parentNode.offsetWidth * Math.min(2, window.devicePixelRatio || 1)));
+    if (w <= c.width) return false;
+    t.width = c.width = w; t.height = c.height = Math.round(w * N[3] * 1840 / (N[2] * 2880));
+    var x = c.getContext('2d'), y = t.getContext('2d'), s = [img, nw * N[0], nh * N[1], nw * N[2], nh * N[3], 0, 0, w, c.height];
+    y.drawImage.apply(y, s);
+    y.globalCompositeOperation = 'multiply'; y.fillStyle = 'rgb(8,20,0)'; y.fillRect(0, 0, w, c.height);
+    x.drawImage.apply(x, s);
+    x.globalCompositeOperation = 'lighter'; x.globalAlpha = .42; x.drawImage.apply(x, s);
+    x.globalAlpha = 1; x.drawImage(t, 0, 0);
+    x.globalCompositeOperation = 'destination-in';
+    x.drawImage(mask, mask.width * N[0], mask.height * N[1], mask.width * N[2], mask.height * N[3], 0, 0, w, c.height);
+    return true;
+  }
+  function build() {
+    if (built || !(img.currentSrc || img.src)) return;
+    built = true;
+    var mask = new Image();
+    mask.onload = function () {
+      layer.innerHTML = '<div class="ahb-stage"><div class="ahb-box"><canvas class="ahb-lift ahb-hum" width="0" height="0"></canvas>' +
+        '<div class="ahb-band"><canvas class="ahb-lift" width="0" height="0"></canvas></div></div><div class="ahb-glint"></div></div>';
+      stage = layer.firstChild; glint = stage.lastChild;
+      var hum = stage.firstChild.firstChild, band = stage.firstChild.lastChild.firstChild;
+      // the band shows the same lit picture, so it gets a copy of the first canvas
+      function draw() { if (bake(hum, band, mask)) { var y = band.getContext('2d'); y.globalCompositeOperation = 'copy'; y.drawImage(hum, 0, 0); } }
+      draw();
+      if (glint.animate) anim = glint.animate(frames(), { duration: CYCLE, delay: DELAY, iterations: Infinity });
+      var rt;
+      window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { draw(); if (anim) anim.effect.setKeyframes(frames()); }, 150); });
+      // Only animate while the hero is on screen
+      function set(on) { layer.classList.toggle('is-paused', !on); if (anim) { if (on) anim.play(); else anim.pause(); } }
+      if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { set(es[0].isIntersecting); }).observe(layer);
+    };
+    mask.src = MASK;
+  }
+  if (img.complete && (img.currentSrc || img.src)) build(); else img.addEventListener('load', build, { once: true });
+});
+</script>
