@@ -3,6 +3,33 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 17.11.2026: meta title i description na 13 stranica (objavljeno na staging)
+Tvoje „odobravam sve“ 17.11. za predloge iz `notes/seo-predlozi-2026-11-13.md` (ranija odluka od 13.11. bila je da se ovo radi posle launcha). Kopije pre izmene: `backup/page-settings/meta-before-2026-11-17.json`, `backup/cms-items/meta-before-2026-11-17.json`.
+Granice: title do 60 znakova, description 120–155.
+| Gde | Pre | Posle |
+|---|---|---|
+| Careers, description | Join a senior Webflow team that ships every week. Remote-first, flexible hours, real weekends and time to grow. See open roles at Nues or send an open application. (163) | Join a senior Webflow team that ships every week. Remote-first, flexible hours and real weekends. See open roles at Nues or send an open application. (149) |
+| Pricing, title | Pricing \| Nues (14) | Webflow pricing, one price agreed up front \| Nues (49) |
+| Resources, description | Insights, case studies and Webflow integration guides from Nues in one place. Learn from the projects we have shipped. (118) | Insights, case studies and Webflow integration guides from Nues in one place. Learn from the Webflow projects we have designed, built and shipped. (146) |
+| Blog, description | Practical notes on Webflow, SEO, AEO and conversion from the Nues team, written from real client builds. (104) | Practical notes on Webflow, SEO, AEO and conversion from the Nues team: guides, comparisons and how-tos written from real client builds. (136) |
+| Privacy, title | Privacy Policy \| NUES (21) | Privacy Policy \| Nues (21) |
+| Privacy, description | Learn how NUES collects, uses, and protects your personal information. Review our privacy practices, data security measures, and your rights. (141) | Learn how Nues collects, uses, and protects your personal information. Review our privacy practices, data security measures, and your rights. (141) |
+| Terms, title | Terms of Service \| NUES (23) | Terms of Service \| Nues (23) |
+| Terms, description | Read NUES Terms of Service for web design, Webflow development, and digital services. Understand project terms, payment policies, and client responsibilities. (158) | Read the Nues Terms of Service for web design and Webflow development: project terms, payment policies and client responsibilities. (131) |
+| Home, title | Webflow agency that designs, builds, and grows websites \| Nues (62) | Webflow agency that designs, builds and grows sites \| Nues (58) |
+| Home, description | A Webflow agency designing and building websites for fast-growing teams. Custom Webflow development, scalable CMS, and performance dialed in from the first line of code. (169) | Webflow agency designing and building sites for fast-growing teams. Custom Webflow development, scalable CMS and performance from the first line of code. (153) |
+| Blog „Sanity vs Webflow CMS“, meta-title (CMS) | Sanity vs Webflow CMS: which one your team actually needs \| Nues (64) | Sanity vs Webflow CMS: which one your team needs \| Nues (55) |
+| Blog „Source by Webflow“, meta-title (CMS) | Source by Webflow: what it is and what it means for teams on Webflow \| Nues (75) | Source by Webflow: what it means for Webflow teams \| Nues (57) |
+| Blog „How to improve your website conversion rate“, meta-description (CMS) | Most sites have a conversion problem, not a traffic problem. How to improve website conversion through speed, clarity, forms, trust, and mobile, before testing. (160) | Most sites have a conversion problem, not a traffic problem. How to improve conversion through speed, clarity, forms, trust and mobile, before testing. (151) |
+| Blog „Webflow for B2B lead generation“, meta-description (CMS) | How to use Webflow for lead generation: fast landing pages, gated content, forms that convert, and CRM integration.  (116) | How to use Webflow for B2B lead generation: fast landing pages, gated content, forms that convert and CRM integration that turns your site into a pipeline. (155) |
+| Blog „Webflow vs Wix“, meta-description (CMS) | An honest 2026 comparison of Webflow and Wix, including Wix Studio: where each wins, and how to choose for your site.  (118) | An honest 2026 comparison of Webflow vs Wix, including Wix Studio: where each platform wins and how to choose the right one for your website. (141) |
+| Case Shiftolic, meta-description (CMS) | Designing and building Shiftolic's website from scratch in two weeks. Visual identity, Webflow development, and scalable CMS for a US healthcare marketplace. (157) | Shiftolic's website designed and built from scratch in two weeks: visual identity, Webflow development and scalable CMS for a US healthcare marketplace. (152) |
+| Pricing i Careers, Open Graph | og:title i og:description nisu postojali (deljenje linka nije imalo naslov ni opis) | preuzimaju SEO title i description, kao ostale stranice |
+- Home title: od dve ponuđene verzije uzeta je B („…designs, builds and grows sites“), najbliža dosadašnjoj. Verzija A („Webflow agency for websites that sell | Nues“) ostaje kao opcija.
+- B2B lead gen opis: u predlogu od 13.11. stajalo je „integration that turn“, ispravljeno u „that turns“.
+- CMS: promenjena su samo polja Meta title i Meta description (upoređeno polje po polje pre i posle); ostatak stavki je isti.
+- Provereno na stagingu: od 46 adresa nijedna stranica nije van granica. Izuzetak je 5 case stranica bez napisanog case-a (Intaker, Harper, Hypersonix, LaSalle, Biotech), koje su od 12.11. noindex i preusmeravaju na sajt klijenta. og:title i og:description su isti kao title i description na svim izmenjenim stranicama.
+
 ## 17.11.2026: dve greške u tekstu, Terms i blog „AEO vs SEO“ (objavljeno na staging)
 Tvoje „napravi ovo dvoje“ 17.11. Kopije pre izmene: `backup/elements/terms-typo-paragraph-2026-11-17.json`, `backup/cms-items/blog-aeo-vs-seo-2026-11-17.json`.
 | Gde | Pre | Posle |

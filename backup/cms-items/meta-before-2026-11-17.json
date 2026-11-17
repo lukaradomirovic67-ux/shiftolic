@@ -1,0 +1,60 @@
+{
+ "date": "2026-11-17",
+ "note": "CMS meta fields before the approved title/description update",
+ "items": [
+  {
+   "collection": "blogs",
+   "id": "6aba6bc07d6279b4b56179a7",
+   "slug": "sanity-vs-webflow-cms-which-one-your-team-actually-needs",
+   "isDraft": false,
+   "lastPublished": "2026-09-28T15:43:09.036Z",
+   "meta-title": "Sanity vs Webflow CMS: which one your team actually needs | Nues",
+   "meta-description": "Sanity vs Webflow CMS, compared honestly. Which one fits your team depends on one thing: where your content actually needs to go. Here's how to choose."
+  },
+  {
+   "collection": "blogs",
+   "id": "6aba6bc07d6279b4b56179a6",
+   "slug": "source-by-webflow-what-it-is-and-what-it-means-for-teams-on-webflow",
+   "isDraft": false,
+   "lastPublished": "2026-09-28T15:43:09.036Z",
+   "meta-title": "Source by Webflow: what it is and what it means for teams on Webflow | Nues",
+   "meta-description": "What is Source by Webflow? A new platform where marketing teams and AI agents build on code together, still in preview. Here's what it means for you."
+  },
+  {
+   "collection": "blogs",
+   "id": "6aba6bc07d6279b4b56179a2",
+   "slug": "how-to-improve-your-website-conversion-rate-in-2026",
+   "isDraft": false,
+   "lastPublished": "2026-09-28T15:43:09.036Z",
+   "meta-title": "How to improve your website conversion rate in 2026 | Nues",
+   "meta-description": "Most sites have a conversion problem, not a traffic problem. How to improve website conversion through speed, clarity, forms, trust, and mobile, before testing."
+  },
+  {
+   "collection": "blogs",
+   "id": "6aba6bc07d6279b4b561799f",
+   "slug": "webflow-for-b2b-lead-generation-how-to-turn-your-site-into-a-pipeline-engine",
+   "isDraft": false,
+   "lastPublished": "2026-09-28T15:43:09.036Z",
+   "meta-title": "Webflow for lead generation: build a pipeline | Nues",
+   "meta-description": "How to use Webflow for lead generation: fast landing pages, gated content, forms that convert, and CRM integration. "
+  },
+  {
+   "collection": "blogs",
+   "id": "6aba6bc07d6279b4b561799a",
+   "slug": "webflow-vs-wix-in-2026-which-one-is-right-for-your-site",
+   "isDraft": false,
+   "lastPublished": "2026-09-28T15:43:09.036Z",
+   "meta-title": "Webflow vs Wix in 2026: which is right for you | Nues",
+   "meta-description": "An honest 2026 comparison of Webflow and Wix, including Wix Studio: where each wins, and how to choose for your site. "
+  },
+  {
+   "collection": "shiftolic",
+   "id": "6aba6bc07d6279b4b561798b",
+   "slug": "shiftolic",
+   "isDraft": false,
+   "lastPublished": "2026-11-14T15:05:12.578Z",
+   "meta-title": "Shiftolic's web presence in 2 weeks | Case study | Nues",
+   "meta-description": "Designing and building Shiftolic's website from scratch in two weeks. Visual identity, Webflow development, and scalable CMS for a US healthcare marketplace."
+  }
+ ]
+}

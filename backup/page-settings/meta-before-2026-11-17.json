@@ -1,0 +1,114 @@
+{
+ "date": "2026-11-17",
+ "note": "Page SEO and Open Graph settings before the approved title/description update",
+ "pages": [
+  {
+   "id": "6ada16efb73db28b0b5cbad8",
+   "title": "Careers",
+   "slug": "careers",
+   "seo": {
+    "title": "Careers at Nues | Join our Webflow team",
+    "description": "Join a senior Webflow team that ships every week. Remote-first, flexible hours, real weekends and time to grow. See open roles at Nues or send an open application."
+   },
+   "openGraph": {
+    "imageUrl": null,
+    "imageAssetId": "6afb8fe83ee451c533056c0a"
+   },
+   "publishedPath": "/careers"
+  },
+  {
+   "id": "6ad2500978181edbb22ab367",
+   "title": "Pricing",
+   "slug": "pricing",
+   "seo": {
+    "title": "Pricing | Nues",
+    "description": "Launch fast, build the whole thing, or keep a senior crew on it every month. Pick where you are, and you get a fixed number after the first call."
+   },
+   "openGraph": {
+    "imageUrl": null,
+    "imageAssetId": "6afb8fdb780d6de45c2ec743"
+   },
+   "publishedPath": "/pricing"
+  },
+  {
+   "id": "6aba6bc07d6279b4b5617709",
+   "title": "Resources",
+   "slug": "resources",
+   "seo": {
+    "title": "Resources: insights, case studies and integrations | Nues",
+    "description": "Insights, case studies and Webflow integration guides from Nues in one place. Learn from the projects we have shipped."
+   },
+   "openGraph": {
+    "titleCopied": true,
+    "descriptionCopied": true,
+    "imageUrl": null,
+    "imageAssetId": "6afb8fdb780d6de45c2ec743"
+   },
+   "publishedPath": "/resources"
+  },
+  {
+   "id": "6aba6bc07d6279b4b5617705",
+   "title": "Blog",
+   "slug": "blog",
+   "seo": {
+    "title": "Industry insights on Webflow, SEO and AEO | Nues",
+    "description": "Practical notes on Webflow, SEO, AEO and conversion from the Nues team, written from real client builds."
+   },
+   "openGraph": {
+    "titleCopied": true,
+    "descriptionCopied": true,
+    "imageUrl": null,
+    "imageAssetId": "6afb8fdb780d6de45c2ec743"
+   },
+   "publishedPath": "/blog"
+  },
+  {
+   "id": "6aba6bc07d6279b4b5617704",
+   "title": "Privacy policy",
+   "slug": "privacy-policy",
+   "seo": {
+    "title": "Privacy Policy | NUES",
+    "description": "Learn how NUES collects, uses, and protects your personal information. Review our privacy practices, data security measures, and your rights."
+   },
+   "openGraph": {
+    "titleCopied": true,
+    "descriptionCopied": true,
+    "imageUrl": null,
+    "imageAssetId": "6afb8fdb780d6de45c2ec743"
+   },
+   "publishedPath": "/privacy-policy"
+  },
+  {
+   "id": "6aba6bc07d6279b4b5617703",
+   "title": "Terms of service",
+   "slug": "terms-of-service",
+   "seo": {
+    "title": "Terms of Service | NUES",
+    "description": "Read NUES Terms of Service for web design, Webflow development, and digital services. Understand project terms, payment policies, and client responsibilities."
+   },
+   "openGraph": {
+    "titleCopied": true,
+    "descriptionCopied": true,
+    "imageUrl": null,
+    "imageAssetId": "6afb8fdb780d6de45c2ec743"
+   },
+   "publishedPath": "/terms-of-service"
+  },
+  {
+   "id": "6aba6bc07d6279b4b56176f1",
+   "title": "Home",
+   "slug": null,
+   "seo": {
+    "title": "Webflow agency that designs, builds, and grows websites | Nues",
+    "description": "A Webflow agency designing and building websites for fast-growing teams. Custom Webflow development, scalable CMS, and performance dialed in from the first line of code."
+   },
+   "openGraph": {
+    "titleCopied": true,
+    "descriptionCopied": true,
+    "imageUrl": null,
+    "imageAssetId": "6afb8fdb780d6de45c2ec743"
+   },
+   "publishedPath": "/"
+  }
+ ]
+}

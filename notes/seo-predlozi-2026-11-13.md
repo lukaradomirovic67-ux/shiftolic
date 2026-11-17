@@ -1,5 +1,7 @@
 # SEO predlozi za odobrenje (13.11.2026)
 
+**17.11.: tačka 1 i 2 (title i description) odobrene i primenjene na staging, vidi CHANGELOG 17.11. Home title: verzija B.**
+
 **Tvoja odluka 13.11.:**
 - og:image pravi dizajner, a ja ih povezujem kad stignu.
 - Tačke 2, 3 i 4 (title i description, isti H1 na servisnim stranicama, cene) idu na launch ovakve kakve jesu i menjaju se posle launcha.
