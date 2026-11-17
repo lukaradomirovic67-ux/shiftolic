@@ -3,6 +3,9 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 17.11.2026: odluka, tabovi na telefonu ostaju u dva reda (QA grupa 5, stavka 3)
+Tvoje „preskoči, okej mi je ovo ovako kako je sad“ 17.11. „Design & Development“ i „Webflow Development“ ostaju u dva reda u tabovima na telefonu (Home „Four ways“, Pricing hero, Services Tour, Services poređenje). Ništa nije menjano. Snimak stanja: `notes/tabovi-telefon-sada-2026-11-17.png`.
+
 ## 17.11.2026: CTA podnaslov, prelom posle crte umesto pre nje (QA grupa 5, stavka 2, objavljeno na staging)
 Tvoje „uradi“ 17.11. posle pregleda (`notes/cta-podnaslov-predlog-2026-11-17.png`). Kopija pre izmene: `backup/page-code/2026-11-17-headings/site-footer.html` (site footer pre obe izmene od 17.11.).
 | Gde | Pre | Posle |
