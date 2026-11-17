@@ -3,6 +3,42 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 17.11.2026: cene sakrivene, Trusted kartice sa pravim metrikama, FAQ odgovori (objavljeno na staging)
+Tvoj zahtev 17.11.: „za FAQ napiši ti … ali naglasi šta si napisao i zapamti“, „price … samo ga hajduj“, „trusted kartice, uzmi metrike sa starog nues sajta“.
+
+### Cene
+Spisak i detalji: `notes/cene-2026-11-17.md`. Kopije: `backup/elements/prices-hidden-2026-11-17.json`, `backup/schema/services-prices-before-2026-11-17.json`.
+| Gde | Pre | Posle |
+|---|---|---|
+| Home, Services, Pricing: 16 elemenata sa cenom (statistike, red „Starting at“ u tabeli, „Investment from“ na 4 Pricing kartice, „from $8k/$20k“ ispod klizača) | vidljivi | Visibility isključen (nisu obrisani) |
+| Design & Development i Webflow Development, JSON-LD | `offers` sa cenom 8000 i 5000 USD, „Starting at $5,000.“ u opisu | bez `offers` i bez cene u opisu |
+- Ostavljeno: „Change orders $0“, kalkulator preporuke na Pricing ($4,000 / $40,000 / $40k / $50k+) i cene tuđih alata u blogu.
+- Proveren JS na Services: skripta tabele vezuje nazive redova za ćelije po redosledu, a sakriven je poslednji red u obe kolone, pa se ništa ne pomera (16 naziva redova, 8 ćelija po koloni, bez grešaka).
+- Snimci: `notes/services-tabela-bez-cena-2026-11-17.png`, `notes/pricing-kartica-bez-cene-2026-11-17.png`.
+
+### Trusted kartice (CMS Our Works → Card text)
+Metrike sa starog sajta (nues.agency/our-work, pročitano preko Firecrawl-a). Kopija pre izmene: `backup/cms-items/our-works-card-text-2026-11-17.json`.
+| Projekat | Pre | Posle | Izvor |
+|---|---|---|---|
+| Veyor Digital | 3x organic traffic | 1,000+ CMS items migrated | stari sajt |
+| Shiftolic | 3x organic traffic | Built from scratch in 2 weeks | stari sajt („2 weeks Delivery time“, „From scratch“) |
+| TrakPro | 3x organic traffic | Perfect 100 SEO score | stari sajt |
+| Intaker | 3x organic traffic | Legal tech | nema metrike na starom sajtu; industrija iz CMS-a |
+| Harper | 3x organic traffic | Insurance | nema metrike na starom sajtu; industrija iz CMS-a |
+| Hypersonix | 3x organic traffic | Rebuild in progress | nema metrike; isto kao Stat 1 u CMS-u |
+| Ballerine | 3x organic traffic | 16x engagement time growth | stari sajt |
+| Sustain Commercial Solar | 3x organic traffic | 80+ pages launched | stari sajt |
+- Za Intaker, Harper i Hypersonix ovo je privremeno, dok tim ne da broj.
+
+### FAQ odgovori (napisao Claude, čeka proveru tima)
+Svih 30 odgovora i šta tim treba da potvrdi: `notes/faq-odgovori-claude-2026-11-17.md`.
+| Gde | Pre | Posle |
+|---|---|---|
+| Services i 4 servisne stranice, komponenta „Service FAQ“, odgovori 2 do 6 | `[Add the answer to: …]` (podrazumevana vrednost komponente) | odgovor za tu stranicu, upisan samo na toj stranici; komponenta nije menjana |
+| Pricing, 5 paragrafa `pr-faq_text` | `[Answer to be provided]` | odgovori |
+- Pisano samo iz onoga što već stoji na sajtu, bez cena. Odgovor „Yes“ na „Can you work with our developers?“ je pretpostavka i treba potvrdu.
+- Provereno na stagingu (7 stranica, desktop i telefon): nijedna naša cena se ne vidi, nema placeholder odgovora, Trusted kartice imaju nove tekstove, nema JS grešaka.
+
 ## 17.11.2026: meta title i description na 13 stranica (objavljeno na staging)
 Tvoje „odobravam sve“ 17.11. za predloge iz `notes/seo-predlozi-2026-11-13.md` (ranija odluka od 13.11. bila je da se ovo radi posle launcha). Kopije pre izmene: `backup/page-settings/meta-before-2026-11-17.json`, `backup/cms-items/meta-before-2026-11-17.json`.
 Granice: title do 60 znakova, description 120–155.

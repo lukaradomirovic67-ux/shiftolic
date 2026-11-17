@@ -1,0 +1,76 @@
+{
+ "date": "2026-11-17",
+ "note": "Elements hidden with Webflow visibility = false (prices). All were visibility true before. Restore: set_visibility true on each.",
+ "elements": {
+  "Home (6aba6bc07d6279b4b56176f1)": [
+   [
+    "af7570da-36e0-a9a5-95f2-4a4e16c3f95d",
+    "home-ways_stat: From $8k / Starting price (Design & Development card)"
+   ]
+  ],
+  "Services (6ae0e4a4872d8069c67b0475)": [
+   [
+    "7e971f3c-15ee-b0e9-b469-dadfb8e144f0",
+    "services-tabs_stat: From $8k / One fixed price (Design & Development)"
+   ],
+   [
+    "7e971f3c-15ee-b0e9-b469-dadfb8e1452b",
+    "services-tabs_stat: From $5k / One fixed price (Webflow Development)"
+   ],
+   [
+    "7e971f3c-15ee-b0e9-b469-dadfb8e14564",
+    "services-tabs_stat: From $2k / Starting price (SEO & AEO)"
+   ],
+   [
+    "7e971f3c-15ee-b0e9-b469-dadfb8e1459d",
+    "services-tabs_stat: $3,000 / Per month (Growth)"
+   ],
+   [
+    "74d71a38-9b22-7f44-6336-ab21a5386705",
+    "services-compare_label: Starting at"
+   ],
+   [
+    "74d71a38-9b22-7f44-6336-ab21a538671f",
+    "services-compare_cell: $8,000"
+   ],
+   [
+    "74d71a38-9b22-7f44-6336-ab21a5386741",
+    "services-compare_cell: $5,000"
+   ],
+   [
+    "74d71a38-9b22-7f44-6336-ab21a5386765",
+    "services-compare_cell: $2,000 / month"
+   ],
+   [
+    "74d71a38-9b22-7f44-6336-ab21a5386787",
+    "services-compare_cell: $3,000 / month"
+   ]
+  ],
+  "Pricing (6ad2500978181edbb22ab367)": [
+   [
+    "ad197fa8-6a3c-2803-994d-d3ccedccf087",
+    "pr-price: Investment from $8,000"
+   ],
+   [
+    "ad197fa8-6a3c-2803-994d-d3ccedccf0b9",
+    "pr-price: Investment from $20,000"
+   ],
+   [
+    "ad197fa8-6a3c-2803-994d-d3ccedccf0e9",
+    "pr-price: Investment from [$X,XXX]/month"
+   ],
+   [
+    "84dc2a39-97a5-f45d-546f-a14bb372a537",
+    "pr-price: Investment from [$X,XXX]/month"
+   ],
+   [
+    "1a3ca450-fbdb-a585-8656-2608f3110d9f",
+    "pr-slider_label-price: from $8k (Design & Development)"
+   ],
+   [
+    "1a3ca450-fbdb-a585-8656-2608f3110da4",
+    "pr-slider_label-price: from $20k (Webflow Development)"
+   ]
+  ]
+ }
+}
