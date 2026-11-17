@@ -1,0 +1,204 @@
+{
+ "date": "2026-11-17",
+ "note": "Our Works Card text and stats before the Trusted card update",
+ "items": [
+  {
+   "id": "6aba6bc07d6279b4b561798d",
+   "name": "Veyor Digital",
+   "slug": "veyor-digital",
+   "draft": false,
+   "trusted": true,
+   "order": 1,
+   "card": "3x organic traffic",
+   "s1": [
+    "5",
+    "Markets"
+   ],
+   "s2": [
+    "1,000+",
+    "CMS items migrated"
+   ],
+   "case": true
+  },
+  {
+   "id": "6aba6bc07d6279b4b561798b",
+   "name": "Shiftolic",
+   "slug": "shiftolic",
+   "draft": false,
+   "trusted": true,
+   "order": 2,
+   "card": "3x organic traffic",
+   "s1": [
+    "2 weeks",
+    "Delivery time"
+   ],
+   "s2": [
+    "From scratch",
+    "Design and build"
+   ],
+   "case": true
+  },
+  {
+   "id": "6aba6bc07d6279b4b561798e",
+   "name": "TrakPro",
+   "slug": "trak-pro",
+   "draft": false,
+   "trusted": true,
+   "order": 3,
+   "card": "3x organic traffic",
+   "s1": [
+    "100",
+    "Perfect SEO score"
+   ],
+   "s2": [
+    "25+",
+    "Pages launched"
+   ],
+   "case": true
+  },
+  {
+   "id": "6ace660facdd65a7260ff9f7",
+   "name": "Intaker",
+   "slug": "intaker",
+   "draft": false,
+   "trusted": true,
+   "order": 4,
+   "card": "3x organic traffic",
+   "s1": [
+    null,
+    null
+   ],
+   "s2": [
+    null,
+    null
+   ],
+   "case": false
+  },
+  {
+   "id": "6ace6668eefb4c00ebea1f2f",
+   "name": "Harper",
+   "slug": "harper",
+   "draft": false,
+   "trusted": true,
+   "order": 5,
+   "card": "3x organic traffic",
+   "s1": [
+    null,
+    null
+   ],
+   "s2": [
+    null,
+    null
+   ],
+   "case": false
+  },
+  {
+   "id": "6ace66976b237ad91feb51a0",
+   "name": "Hypersonix",
+   "slug": "hypersonix",
+   "draft": false,
+   "trusted": true,
+   "order": 6,
+   "card": "3x organic traffic",
+   "s1": [
+    "Soon",
+    "Rebuild in progress"
+   ],
+   "s2": [
+    null,
+    null
+   ],
+   "case": false
+  },
+  {
+   "id": "6aba6bc07d6279b4b5617989",
+   "name": "Ballerine",
+   "slug": "ballerine",
+   "draft": false,
+   "trusted": true,
+   "order": 7,
+   "card": "3x organic traffic",
+   "s1": [
+    "16x",
+    "Engagement time growth"
+   ],
+   "s2": [
+    "30+",
+    "Pages launched"
+   ],
+   "case": true
+  },
+  {
+   "id": "6aba6bc07d6279b4b561798c",
+   "name": "Sustain Commercial Solar",
+   "slug": "sustain-commercial-solar",
+   "draft": false,
+   "trusted": true,
+   "order": 8,
+   "card": "3x organic traffic",
+   "s1": [
+    "80+",
+    "Pages launched"
+   ],
+   "s2": [
+    "17",
+    "CMS collection types"
+   ],
+   "case": true
+  },
+  {
+   "id": "6adbbe39ef50e14dcb9e70b1",
+   "name": "LaSalle Agri",
+   "slug": "lasalle-agri",
+   "draft": false,
+   "trusted": false,
+   "order": 9,
+   "card": null,
+   "s1": [
+    null,
+    null
+   ],
+   "s2": [
+    null,
+    null
+   ],
+   "case": false
+  },
+  {
+   "id": "6adbbe39ef50e14dcb9e70b3",
+   "name": "Biotech Innovations",
+   "slug": "biotech-innovations",
+   "draft": false,
+   "trusted": false,
+   "order": 10,
+   "card": null,
+   "s1": [
+    null,
+    null
+   ],
+   "s2": [
+    null,
+    null
+   ],
+   "case": false
+  },
+  {
+   "id": "6aba6bc07d6279b4b561798a",
+   "name": "Pythagora",
+   "slug": "pythagora",
+   "draft": true,
+   "trusted": null,
+   "order": null,
+   "card": null,
+   "s1": [
+    "3.4x",
+    "Website traffic growth"
+   ],
+   "s2": [
+    "Scalable",
+    "CMS"
+   ],
+   "case": true
+  }
+ ]
+}
