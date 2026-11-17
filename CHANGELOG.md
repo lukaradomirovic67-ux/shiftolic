@@ -3,6 +3,9 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 17.11.2026: odluka, citati u video utiscima ostaju kao u Figmi (QA grupa 5, stavka 5)
+Tvoje „kao u Figmi neka bude“ 17.11. Citat Joseph Rudolo (Intaker) ostaje u navodnicima, citat Or Moshkovitz (Ballerine) ostaje bez njih, kao u svim FINAL verzijama u Figmi (Home, Services, Our Work, Pricing). Sekcija je ista na 7 stranica (Home, Our Work, Pricing, 4 servisne). Ništa nije menjano. Snimak stanja: `notes/video-citati-sada-2026-11-17.png`.
+
 ## 17.11.2026: oštrija fotografija u kartici „Ideas become live sites“ na Home (objavljeno na staging)
 Tvoje „slika u levoj kartici je baš lošeg kvaliteta, popravi je“ 17.11. Kopija pre izmene: `backup/elements/home-crew-left-image-2026-11-17.json`. Pregled pre i posle: `notes/home-kartica-slika-desktop-2026-11-17.png`, `notes/home-kartica-slika-telefon-2026-11-17.png`.
 | Gde | Pre | Posle |
