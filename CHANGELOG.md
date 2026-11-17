@@ -3,6 +3,12 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 17.11.2026: odluka, recenzije ostaju tačno kao u Figmi
+Tvoje „napravi sve kao u Figmi“ 17.11. Provereno prema Figmi (Copy page, okviri `7759:651`–`7759:1015`): tekst, uloge, industrije, boje kartica (#005287, #6f3a1d, #7b2c29, #201f23, #1a40b2) i tipografija (citat 32 px, 800 px širine; uloga 14 px Medium; firma i industrija 14 px) su isti na sajtu. Ništa nije menjano:
+- greške u kucanju u citatima ostaju kako su u Figmi;
+- industrije u recenzijama (Workforce, Fintech, Legal, Construction) i u video utiscima (Intaker, Legal tech; Ballerine, AI technology) su i u Figmi takve;
+- tab ostaje „Shiftolic“: Figma i sama ima oba oblika („Shiftolic“ u okviru `7759:824`, „Shiftholic“ u ostala četiri).
+
 ## 17.11.2026: konačne recenzije u sekciji „Verified reviews, real stories“ (objavljeno na staging)
 Tvoji Figma linkovi 17.11. (Copy page, Home `7759:1227`, okviri `7759:651`, `7759:824`, `7759:882`, `7759:944`, `7759:1015`). Kopija pre izmene: `backup/components/reviews-text-2026-11-17.json`.
 Komponenta „Reviews“ (`6bd64d63-…67a1`) je jedna za 7 stranica (Home, About, Services, 4 servisne), pa je izmena urađena jednom, u komponenti.
