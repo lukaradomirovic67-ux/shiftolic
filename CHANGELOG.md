@@ -3,6 +3,16 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 17.11.2026: naslovi na telefonu bez jedne reči same u redu (QA grupa 5, stavka 1, objavljeno na staging)
+Tvoje „uradi“ 17.11. posle pregleda pre i posle (`notes/naslovi-telefon-predlog-2026-11-17.png`). Kopija pre izmene: `backup/page-code/2026-11-17-headings/` (site head i footer kod). Head kod nije menjan.
+| Gde | Pre | Posle |
+|---|---|---|
+| Svi naslovi (h1–h3 i `heading-style-h*`), do 767 px | prelamaju se redom, pa poslednja reč često ostaje sama („deserves.“, „website.“, „industries“, „itself.“…); ručni prelomi postavljeni za desktop važe i na telefonu | redovi se prelamaju ravnomerno (`text-wrap: balance`); ručni prelom se na telefonu ne poštuje, osim preloma ispred zelenog dela naslova (`.text-gradient`, npr. „no surprises after“ na Pricing) |
+| Site footer kod (na kraju) | — | CSS za gore + kratka skripta koja na mestu svakog preloma ostavi razmak (da se reči ne spoje), prelom ispred zelenog dela označi kao „ostaje“ i tek onda uključi sakrivanje preloma (klasa `nues-hb` na `<html>`) |
+- Desktop i tablet (od 768 px) se ne menjaju: provereno na 20 stranica na 1440 i 820 px, iste visine i isti broj redova u svim naslovima.
+- Na telefonu (390 px, 20 stranica): naslova sa jednom rečju samom u poslednjem redu sada ima 1 umesto 41; spojenih reči nema. Jedini koji je ostao je naslov u Services Tour-u („Design & / Development“), koji je po dizajnu u dva reda.
+- Tekst naslova nije menjan. Ako skripta ne radi, naslovi izgledaju kao pre (prelomi ostaju), samo ravnomernije prelomljeni.
+
 ## 17.11.2026: tabele u blog postovima i duplirani ID-jevi na Home (QA tačka 4, objavljeno na staging)
 Tvoje „kreni sa tačkom 4“ 17.11. Kopije pre izmene: `backup/page-code/2026-11-17-blog-tables/blogs-template-footer.html`, `backup/elements/home-ways-card-domid-2026-11-17.json`.
 | Gde | Pre | Posle |
