@@ -1,0 +1,10 @@
+{
+  "note": "Home, Four ways deck cards: DOM id before it was cleared (17.11.2026). The same ids are on the tabs (role=tab), which the panels point to with aria-labelledby; nothing reads the card ids.",
+  "page": "Home 6aba6bc07d6279b4b56176f1",
+  "cards": [
+    {"element": "af7570da-36e0-a9a5-95f2-4a4e16c3f934", "class": "home-ways_card is-design", "domId": "ways-tab-design"},
+    {"element": "af7570da-36e0-a9a5-95f2-4a4e16c3f93b", "class": "home-ways_card is-webflow", "domId": "ways-tab-webflow"},
+    {"element": "af7570da-36e0-a9a5-95f2-4a4e16c3f942", "class": "home-ways_card is-seo", "domId": "ways-tab-seo"},
+    {"element": "af7570da-36e0-a9a5-95f2-4a4e16c3f947", "class": "home-ways_card is-growth", "domId": "ways-tab-growth"}
+  ]
+}

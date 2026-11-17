@@ -1,4 +1,11 @@
 <!-- Nues: code moved here from page embeds. Edit here, not in embeds. -->
+<style>
+/* Blog tables that scroll sideways: a fade on the right while more columns are hidden, and a focus ring for the keyboard (classes set by the script below) */
+.bp-table-shell{position:relative}
+.bp-table-shell::after{content:"";position:absolute;top:0;right:0;bottom:0;width:56px;border-radius:0 16px 16px 0;background:linear-gradient(to right,transparent,var(--bp-table-bg,#0d1928));pointer-events:none;opacity:0;transition:opacity .25s ease}
+.bp-table-shell.is-more::after{opacity:1}
+.bp-rich .nues-table-wrap:focus-visible,.bp-rich .bp-table-wrap:focus-visible{outline:2px solid #5bd3a9;outline-offset:3px}
+</style>
 <script>
 (function(){
 var d=document,w=window;
@@ -147,7 +154,25 @@ function misc(){
   $$('.bp-rich table').forEach(function(t){if(t.closest('.nues-table-wrap')||t.closest('.bp-table-wrap')){return;}var wr=d.createElement('div');wr.className='bp-table-wrap';t.parentNode.insertBefore(wr,t);wr.appendChild(t);});
 }
 
-function run(){[tldr,toc,share,ai,faq,related,misc].forEach(function(f){try{f();}catch(e){if(w.console){console.warn('bp',e);}}});}
+function tables(){
+  // A table wider than its box scrolls sideways: the box gets keyboard focus and a name, and a fade on the right while more is hidden
+  $$('.bp-rich .nues-table-wrap, .bp-rich .bp-table-wrap').forEach(function(wr){
+    if(wr.parentNode.classList.contains('bp-table-shell')){return;}
+    var sh=d.createElement('div');sh.className='bp-table-shell';
+    wr.parentNode.insertBefore(sh,wr);sh.appendChild(wr);
+    sh.style.setProperty('--bp-table-bg',w.getComputedStyle(wr).backgroundColor);
+    var own=!wr.hasAttribute('aria-label');
+    function upd(){
+      var more=wr.scrollWidth>wr.clientWidth+2;
+      if(more){wr.setAttribute('tabindex','0');wr.setAttribute('role','region');if(own){wr.setAttribute('aria-label','Table, scroll sideways to see all columns');}}
+      else{wr.removeAttribute('tabindex');wr.removeAttribute('role');if(own){wr.removeAttribute('aria-label');}}
+      sh.classList.toggle('is-more',more&&wr.scrollLeft+wr.clientWidth<wr.scrollWidth-2);
+    }
+    wr.addEventListener('scroll',upd,{passive:true});w.addEventListener('resize',upd,{passive:true});upd();
+  });
+}
+
+function run(){[tldr,toc,share,ai,faq,related,misc,tables].forEach(function(f){try{f();}catch(e){if(w.console){console.warn('bp',e);}}});}
 if(d.readyState==='loading'){d.addEventListener('DOMContentLoaded',run);}else{run();}
 })();
 </script>

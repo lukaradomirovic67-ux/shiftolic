@@ -3,6 +3,15 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 17.11.2026: tabele u blog postovima i duplirani ID-jevi na Home (QA tačka 4, objavljeno na staging)
+Tvoje „kreni sa tačkom 4“ 17.11. Kopije pre izmene: `backup/page-code/2026-11-17-blog-tables/blogs-template-footer.html`, `backup/elements/home-ways-card-domid-2026-11-17.json`.
+| Gde | Pre | Posle |
+|---|---|---|
+| Blogs Template, footer kod | tabela šira od ekrana se skroluje u stranu bez ikakvog znaka; tastaturom se ne može fokusirati (axe: scrollable-region-focusable, 13 postova na telefonu) | dok tabela ima skrivene kolone, desno je senka u boji tabele (nestaje kad se doskroluje do kraja); tabela dobija fokus tastaturom (tabindex), ulogu region i opis „Table, scroll sideways to see all columns“, i zeleni okvir pri fokusu. Kad tabela stane, ništa se ne dodaje |
+| Home, „Four ways“, 4 kartice u špilu (`home-ways_card`) | DOM ID `ways-tab-design`, `-webflow`, `-seo`, `-growth`, isti kao na tabovima | bez ID-ja; ID imaju samo tabovi, na koje panel pokazuje (`aria-labelledby`). Skripta karticu nalazi po klasi, ne po ID-ju |
+- Provereno na stagingu: na 390 px tabela u „AEO vs SEO“ i „Webflow vs Wix“ ima senku i fokus, posle skrola do kraja senka nestaje; na 1440 px tabela koja stane nema ništa dodato, a šira („Webflow vs Wix“, 900 px) ima. axe više ne javlja scrollable-region-focusable.
+- Home: nema dupliranih ID-jeva osim jednog koji Webflow sam pravi za CMS listu (`wf-template-…`, skriveni šablon, ne može se menjati). Tabovi rade: klik na SEO & AEO podiže tu karticu i otvara njen panel.
+
 ## 17.11.2026: About, „The journey behind building Nues“ radi i na skrol i na klik po godinama, kao Tour na Services (objavljeno na staging)
 Tvoj zahtev 17.11, uz snimke About i Services: „ova sekcija na about page-u, promeni je da bude i scroll i tabovi, kao ova services sekcija“. Kopija pre izmene: `backup/page-code/2026-11-17-about-timeline/` (About head i footer kod). Head kod nije menjan.
 | Gde | Pre | Posle |
