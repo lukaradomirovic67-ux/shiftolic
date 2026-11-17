@@ -38,7 +38,8 @@ Ovo je jedini aktuelni spisak. Starije liste (`qa-2026-11-17.md`, `preostalo-202
   - H1 na 4 servisne stranice;
   - Cookies tekst;
   - schema sa Nues Digital OÜ;
-  - CMS izmene.
+  - CMS izmene;
+  - Careers: animacija otvaranja i zatvaranja koverte (preklop se sad vidi dok se podiže i spušta).
 
 ## 2. Novo nađeno večeras
 | # | Šta | Gde | Ko |
@@ -73,6 +74,7 @@ Ovo je jedini aktuelni spisak. Starije liste (`qa-2026-11-17.md`, `preostalo-202
   - naslov „Trusted by ambitious teams…“ iznad FAQ-a (tako je i u Figmi).
 
 ## 4. Odluke (ti ili Aleksandar)
+- **iClosed kartica na Home (tvoj dizajn sa danima i terminima):** varijanta A (forma, pa iClosed sa popunjenim podacima) ili B (pravi termini preko iClosed API-ja i malog servera). Preporuka B. Čeka: izbor, API ključ, Cloudflare ili Vercel. Detalji: `notes/iclosed-mogucnosti-2026-11-17.md`, odeljak 4.
 - **Cookie banner:** preporuka je besplatni Finsweet, ako ga TrakPro koristi; inače CookieYes Free. Kad se odluči, ugrađujem ga i vezujem za GA4 (Consent Mode v2).
 - **Domen:** www kao glavni. Moja preporuka, čeka potvrdu.
 - **Izgled, iz jutarnjeg QA-a, čeka odobrenje:**

@@ -3,6 +3,32 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 17.11.2026 (veče): Careers, animacija otvaranja koverte (objavljeno na staging)
+Tvoje „popravi ovu animaciju otvaranja koverte“. Kopija koda pre izmene: `backup/page-code/2026-11-17-careers-envelope/careers-head-before.html`. Poređenje pre/posle: `notes/careers-koverta-pre-posle-2026-11-17.png`.
+
+**Šta je bilo pogrešno** (snimljeno sličicu po sličicu, na tačna vremena):
+- Prvih 200 ms posle prelaska mišem preklop se skoro nije pomerao, jer je kriva kretanja na početku vrlo spora.
+- Preklop se zatim za oko 100 ms sklopio u liniju i nestao. Druga polovina okreta se nije videla, jer je unutrašnja strana preklopa (#121c2b) skoro iste boje kao pozadina sekcije (#0d1928). Izgledalo je kao da preklop nestaje, a ne da se otvara.
+- Pri zatvaranju je preklop „iskakao niotkuda“ na pola puta. Senka na džepu se vraćala dok je koverta još bila otvorena.
+
+| Careers (`6ada16efb73db28b0b5cbad8`), page head, blok koverte | Pre | Posle |
+|---|---|---|
+| Okret preklopa pri otvaranju | .55s, `cubic-bezier(.65,0,.35,1)`, preklop je „na ivici“ (90°) tek na .27s | .6s, `cubic-bezier(.3,0,.2,1)`: kreće odmah i na 90° je na .19s, kada prelazi iza pisma |
+| Unutrašnja strana preklopa dok se podiže | odmah tamna (#121c2b), nevidljiva | ostaje boje preklopa, pa se vidi kako se podiže; za .4s potamni u #121c2b (novi `.careers-job_flap::after`) |
+| Pismo / tekst na pismu | kreću na .25s / .45s | .2s / .4s (odmah kad preklop prođe 90°) |
+| Zatvaranje | preklop se pojavi tek na 90° | posvetli dok se spušta, na 90° prelazi ispred pisma (.47s) i spušta se na .75s |
+| Senka na džepu pri zatvaranju | vraća se od .3s, dok je koverta otvorena | vraća se od .5s, kad preklop pada |
+| Perspektiva kartice | 1600px | 1000px, okret se jasnije vidi kao 3D |
+| `prefers-reduced-motion` | bez prelaza za pismo i preklop | isto, plus unutrašnja strana preklopa i senka |
+
+- Važi za praznu kovertu („No open roles right now“) i za kartice pozicija, jer dele iste klase.
+- Zatvorena i otvorena koverta su piksel po piksel iste kao pre (i kao Figma 7104:399); menja se samo kretanje između. Telefon je nepromenjen (koverta je otvorena, bez animacije).
+- Provereno posle objave:
+  - kod na stagingu je identičan fajlu `webflow-assets/site-code/careers-page-head.html`;
+  - svih 46 sličica sa žive stranice se poklapa sa testom;
+  - fokus tastaturom otvara kovertu, klik otvara popup, Escape ga zatvara i koverta se zatvori;
+  - 0 JS grešaka.
+
 ## 17.11.2026 (veče): Ballerine tim
 Tvoje „samo za ballerinu dodaj i pavla“. Kopija: `backup/cms-items/ballerine-team-2026-11-17-2040.json`.
 | Polje | Pre | Posle |

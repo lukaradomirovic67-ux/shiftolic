@@ -44,3 +44,28 @@ Sada: `<div class="iclosed-widget" data-url="https://app.iclosed.io/e/nues/disco
 - Trikovi (CSS filter, skaliranje, maska preko okvira) su mogući, ali krhki i ne preporučujem ih.
 
 Napomena: sam kalendar ne vidim iz svog okruženja (app.iclosed.io mi je blokiran), pa izgled unutar okvira proveravate vi.
+
+## 4. Plan za Home karticu „Have a project in mind?“ (dizajn sa izborom dana i termina), čeka odluku
+Tvoj dizajn 17.11.: korak 1 „Book a free intro call“ (5 dana, termini, Continue), korak 2 „Almost there“ (ime, email, projekat, „Confirm the call“).
+
+**A. Brzo, samo Webflow (sat-dva):**
+- U kartici je naša forma: ime, email i projekat. Na „Confirm the call“ otvara se iClosed (popup ili /lets-talk) sa već upisanim podacima (`iclosedName`, `iclosedEmail`, identifikator pitanja za projekat).
+- Uz „Pre-qualified form skipping“ u iClosed-u posetilac odmah vidi termine.
+- Korak sa danima i terminima izbacujemo, jer bez servera ne može da prikaže stvarne termine, a iClosed ne prima izabrani termin kroz link.
+- Podatke čuvamo i kao Webflow formu, pa imamo kontakt i ako posetilac odustane.
+
+**B. Tačno kao dizajn, preko iClosed API-ja (preporuka):**
+- Kartica učitava stvarne slobodne termine (`POST /v1/events/eventDates`, `linkPrefix` `nues/discovery-call`) za 5 dana, u vremenskoj zoni posetioca.
+- „Confirm the call“ zakazuje poziv direktno (`POST /v1/eventCalls`), bez odlaska sa stranice. Zakazani pozivi se pouzdano mere u GA4.
+- Potrebno:
+  - API ključ (iClosed → Settings → Developer; proveriti da ga plan ima);
+  - mali server koji čuva ključ (Cloudflare Worker ili Vercel funkcija);
+  - zaštita od spama.
+- Može da se uradi i preko A: prvo A, pa B.
+
+**Otvorena pitanja:**
+1. A ili B?
+2. Imate li API ključ?
+3. Server na Cloudflare-u ili Vercel-u?
+
+Uz to: brand boja u iClosed-u (Nues zelena), ivice u boji pozadine, i /thank-you stranica za GA4.
