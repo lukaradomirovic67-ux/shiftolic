@@ -3,6 +3,9 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 17.11.2026: odluka, boje na servisnim stranicama ostaju kako jesu (QA grupa 5, stavka 6)
+Tvoje „neka ostane kako jeste“ 17.11. Provera prema Figmi (Services FINAL) je pokazala da se sajt poklapa: ljubičast naslov „Verified reviews“ na Growth, zelena podvlaka u video citatu i zelene zvezdice u CTA na svim stranicama, i zvezdice u „Verified reviews“ u boji stranice. Jedina razlika ostaje kako jeste: naslov „Verified reviews“ (i video citati na SEO & AEO) je na sajtu #0d1928, a u Figmi je u skoro crnoj nijansi boje stranice (#082216, #131a26, #321f0d). Ništa nije menjano.
+
 ## 17.11.2026: odluka, citati u video utiscima ostaju kao u Figmi (QA grupa 5, stavka 5)
 Tvoje „kao u Figmi neka bude“ 17.11. Citat Joseph Rudolo (Intaker) ostaje u navodnicima, citat Or Moshkovitz (Ballerine) ostaje bez njih, kao u svim FINAL verzijama u Figmi (Home, Services, Our Work, Pricing). Sekcija je ista na 7 stranica (Home, Our Work, Pricing, 4 servisne). Ništa nije menjano. Snimak stanja: `notes/video-citati-sada-2026-11-17.png`.
 
