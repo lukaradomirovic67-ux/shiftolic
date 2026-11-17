@@ -1,0 +1,10 @@
+{
+  "date": "2026-11-17",
+  "note": "H1 on the 4 service pages before the change. Line 1 is a String, then a line break, then a Span (text-gradient) with line 2.",
+  "pages": [
+    {"page": "Design & Development 6aba6bc07d6279b4b5617701", "line1": {"id": "00864f78-0eaf-5feb-7083-bfc42426d512", "text": "Zero to a live site,"}, "line2": {"id": "00864f78-0eaf-5feb-7083-bfc42426d515", "span": "text-gradient is-launch", "text": "in weeks not quarters"}},
+    {"page": "Webflow Development 6aba6bc07d6279b4b5617702", "line1": {"id": "d90503e0-0a57-c639-23fa-ed90f799004d", "text": "Zero to a live site,"}, "line2": {"id": "d90503e0-0a57-c639-23fa-ed90f7990050", "span": "text-gradient is-build", "text": "in weeks not quarters"}},
+    {"page": "SEO & AEO 6ad9125fa551cf984d9bb34a", "line1": {"id": "8f1f3bed-58b7-8d0a-c448-45cac2b96b63", "text": "Zero to a live site,"}, "line2": {"id": "8f1f3bed-58b7-8d0a-c448-45cac2b96b66", "span": "text-gradient is-seo", "text": "in weeks not quarters"}},
+    {"page": "Growth 6aba6bc07d6279b4b56176fd", "line1": {"id": "7c77e956-01e8-76a6-07c4-9872eb7a5ec5", "text": "Zero to a live site,"}, "line2": {"id": "7c77e956-01e8-76a6-07c4-9872eb7a5ec8", "span": "text-gradient is-plus", "text": "in weeks not quarters"}}
+  ]
+}

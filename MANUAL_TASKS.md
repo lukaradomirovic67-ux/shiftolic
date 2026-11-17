@@ -19,7 +19,15 @@ Putanje u meniju proverite u trenutnom Webflow interfejsu. Nazivi se ponekad men
    | /services/nues-build | /services/webflow-development |
    | /services/nues-plus | /services/growth |
    | /services/nues-seo | /services/seo-aeo |
-   Plus adrese starog sajta kad stigne spisak (QUESTIONS 8).
+   | /integrations | /webflow-integrations ako je ta stranica objavljena pri lansiranju, inače /resources |
+   | /blog/nues-is-officialy-certified-webflow-partner | /about (post ne postoji u novom CMS-u) |
+   | /blog/from-guests-to-sponsors-notes-from-flow-conf-2026 | /blog, ali samo ako post ostane u draftu (u novom CMS-u postoji kao draft, isti slug; ako se objavi, redirect ne treba) |
+
+   Provereno 17.11.2026: sitemap starog sajta (www.nues.agency/sitemap.xml) ima 40 adresa. Njih 34 postoje na novom sajtu
+   sa istom putanjom (Home, About, Let's talk, Our work i 5 case studija, Blog i 20 postova, Resources, Privacy, Terms)
+   i za njih ne treba redirect, jer domen ostaje isti. Ostalih 6 su u tabeli iznad. /services/main i /services/nues-seo
+   nisu u sitemap-u starog sajta, ali ostaju u tabeli za svaki slučaj. Ceo spisak sa statusima:
+   `notes/301-mapa-2026-11-17.md`.
 6. **Google Search Console**: verifikacija domena (DNS TXT), slanje sitemap-a. **Bing Webmaster Tools**: uvoz iz GSC-a.
 
 ## Sada (van SEO faza)

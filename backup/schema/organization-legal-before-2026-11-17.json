@@ -1,0 +1,36 @@
+{
+ "date": "2026-11-17",
+ "note": "Organization JSON-LD before adding Nues Digital OÜ legal data and sameAs (Clutch, LinkedIn, Instagram). Home: only sameAs was empty and legal fields were missing; hasOfferCatalog stays identical. About: Organization in 'about' had no legalName or sameAs.",
+ "home_page": "6aba6bc07d6279b4b56176f1",
+ "home_before": {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "areaServed": "Worldwide",
+  "contactPoint": {
+   "@type": "ContactPoint",
+   "contactType": "Sales",
+   "url": "/lets-talk"
+  },
+  "description": "A Webflow agency designing and building websites for fast-growing teams. Custom Webflow development, scalable CMS, and performance dialed in from the first line of code.",
+  "hasOfferCatalog": "(unchanged, see live)",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6adbb6b72708019a0404c6a6_pricing-receipt-logo.svg"
+  },
+  "name": "Nues",
+  "sameAs": [],
+  "slogan": "Design, build, grow. That's NUES.",
+  "url": "/"
+ },
+ "about_page": "6aba6bc07d6279b4b56176f9",
+ "about_org_before_keys": [
+  "@id",
+  "@type",
+  "description",
+  "employee",
+  "logo",
+  "name",
+  "serviceArea",
+  "url"
+ ]
+}

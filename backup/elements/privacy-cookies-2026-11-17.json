@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-17",
+  "page": "Privacy policy 6aba6bc07d6279b4b5617704, rich text b60072ae-ba24-c3ae-ed91-103a017c7332, section H2 'Cookies' fe339752-f8f4-f30a-9783-25fad3eb3fe1",
+  "note": "Text before: a copy of the Data Sharing section.",
+  "strings": [
+    {"id": "fe339752-f8f4-f30a-9783-25fad3eb3fe3", "in": "Paragraph fe339752-...fe5", "text": "We do not sell your personal data."},
+    {"id": "91172ac3-98d0-5d26-2d13-0526dfff7875", "in": "Paragraph 91172ac3-...874", "text": "Your data may only be shared in the following cases:"},
+    {"id": "b8a70955-f5d1-de47-53dd-051d9c80f5e7", "in": "ListItem 1", "text": "When required by law"},
+    {"id": "94ec9b8f-b278-c235-be40-fc908716d635", "in": "ListItem 2", "text": "With service providers that help operate the website (hosting, analytics, etc.)"},
+    {"id": "88a36fd7-e72e-1696-b432-91f44c15478d", "in": "ListItem 3", "text": "To protect our rights and ensure safety"}
+  ]
+}

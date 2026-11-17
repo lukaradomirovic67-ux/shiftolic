@@ -3,6 +3,59 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 17.11.2026: odgovori tima (Aleksandar) primenjeni, objavljeno na staging
+Odgovori iz Slack-a na liste „Sadržaj od tima“ i „Tvoje odluke“. Kopije pre izmena su u `backup/` (putanje uz svaku stavku).
+
+**Privacy i Terms se indeksiraju.** `backup/page-code/2026-11-17-legal-noindex/`
+| Stranica | Pre | Posle |
+|---|---|---|
+| Privacy policy, Terms of service (head kod stranice) | `<meta name="robots" content="noindex">` + stilovi za liste i naslove | samo stilovi; robots meta nema. Isto u `webflow-assets/site-code/legal-pages-head.html` |
+
+**Our Works CMS.** `backup/cms-items/our-works-team-services-2026-11-17.json`
+| Projekat | Polje | Pre | Posle |
+|---|---|---|---|
+| Hypersonix | Stat 1 | „Soon“ / „Rebuild in progress“ | prazno, kao ostali projekti bez case studije |
+| Hypersonix | Card text (Trusted) | „Rebuild in progress“ | „Aerospace“ (industrija, kao Intaker i Harper) |
+| Harper | Filter category | prazno (nije bio ni pod jednim filterom) | SaaS (broker osiguranja za firme koji radi preko svoje platforme; od 5 postojećih filtera najbliži) |
+| TrakPro | Services used | prazno | Design & Development, SEO & AEO (iz teksta case studije: dizajn od nule, build, lokalizacija, SEO i AI readiness) |
+| TrakPro | Team | prazno | Mihajlo Nikolic, Aleksandar Dumic, Daris Henjas, Darko Milosevic |
+| Shiftolic | Team | prazno | Pavle Stikovic, Luka Radomirovic, Daris Henjas, Darko Milosevic |
+| Veyor Digital | Team | prazno | Aleksandar Dumic, Luka Radomirovic, Daris Henjas, Darko Milosevic |
+| Sustain Commercial Solar | Team | prazno | Luka Radomirovic, Aleksandar Dumic, Darko Milosevic |
+- Timovi su raspoređeni po ulogama iz Teams kolekcije (dizajn, Webflow, growth i SEO, PM) i po uslugama u case studiji, kako je Aleksandar tražio („izmešaj, da je realno“). Ballerine (Aleksandar, Luka, Pavle) nije diran.
+
+**Svaka stranica usluge ima svoj H1, iz Figme (Copy page, okviri `7759:2605`, `7759:3231`, `7759:5948`, `7759:6574`).** `backup/elements/service-h1-2026-11-17.json`
+| Stranica | Pre | Posle |
+|---|---|---|
+| Design & Development | Zero to a live site, / in weeks not quarters | Every pixel of your vision, / landed in Webflow |
+| Webflow Development | isto kao gore | The art is yours, / and everything in it |
+| SEO & AEO | isto kao gore | AI is recommending someone, / make sure it’s you |
+| Growth | isto kao gore | Team of your own, / long after launch |
+- Struktura naslova ista (prvi red, prelom, drugi red u gradijentu usluge); menjan je samo tekst.
+- Design & Development: hero dobio postojeću combo klasu `svc-hero_content.is-wide` (62.5rem), jer je prvi red širok 848 px, a hero je bio 745 px pa je „vision,“ padalo u treći red. Sada su dva reda, kao u Figmi (850 px). Ostale tri stranice nisu dirane.
+- Podnaslov ispod H1 je i dalje isti na sve 4 stranice; predlog iz Figme je u poruci u četu, nije menjan.
+- Snimci: `notes/servisi-h1-desktop-2026-11-17.png`, `notes/servisi-h1-telefon-2026-11-17.png`.
+
+**Privacy policy, odeljak „Cookies“ (bio je kopija „Data Sharing“).** `backup/elements/privacy-cookies-2026-11-17.json`
+| Pre | Posle |
+|---|---|
+| We do not sell your personal data. | Cookies are small text files a website stores in your browser. You can block or delete them at any time in your browser settings, though some parts of the website may not work as expected without them. |
+| Your data may only be shared in the following cases: | This website uses: |
+| When required by law | Essential cookies, which the website needs to load and work properly |
+| With service providers that help operate the website (hosting, analytics, etc.) | Analytics cookies from Google Analytics, which show us in aggregate which pages are visited and how people find the website |
+| To protect our rights and ensure safety | Cookies from embedded services, such as our video player (Vimeo) and booking calendar (iClosed), set when you watch a video or book a call |
+- Navedeno je samo ono što sajt stvarno učitava: GA4 (`G-NNTMD9FV5D`), Vimeo, iClosed. Snimak: `notes/privacy-cookies-2026-11-17.png`.
+
+**Organization schema: pravno lice Nues Digital OÜ i profili.** `backup/schema/organization-legal-before-2026-11-17.json`
+| Stranica | Pre | Posle |
+|---|---|---|
+| Home (Organization) | bez pravnih podataka, `sameAs: []` | + legalName „Nues Digital OÜ“, registarski kod 17377418, vatID EE102989731, adresa Tornimäe tn 5, 10145 Tallinn, Harju maakond, EE, email u contactPoint hello@nues.agency (isti kao u footeru), sameAs Clutch, LinkedIn, Instagram |
+| About (Organization u „about“) | bez legalName i sameAs | + legalName i isti sameAs |
+- Izvor: e-Äriregister (ariregister.rik.ee/eng/company/17377418), proveren 17.11.2026. Adresa u registru je adresa kontakt osobe (DigiRepresent Services OÜ), ne kancelarija.
+- Clutch ocena (4.8, 5 recenzija) nije dodata kao aggregateRating: Google ne prikazuje zvezdice za ocene koje firma objavi o sebi.
+
+**301 mapa.** Sitemap starog sajta ima 40 adresa; 34 postoje na novom sajtu sa istom putanjom, 6 ne postoji. Spisak i predlog: `notes/301-mapa-2026-11-17.md`, MANUAL_TASKS 5. Redirect se unosi ručno pri lansiranju.
+
 ## 17.11.2026: odluka, recenzije ostaju tačno kao u Figmi
 Tvoje „napravi sve kao u Figmi“ 17.11. Provereno prema Figmi (Copy page, okviri `7759:651`–`7759:1015`): tekst, uloge, industrije, boje kartica (#005287, #6f3a1d, #7b2c29, #201f23, #1a40b2) i tipografija (citat 32 px, 800 px širine; uloga 14 px Medium; firma i industrija 14 px) su isti na sajtu. Ništa nije menjano:
 - greške u kucanju u citatima ostaju kako su u Figmi;

@@ -1,0 +1,93 @@
+{
+ "collection": "Our Works 6aba6bc07d6279b4b561771c",
+ "date": "2026-11-17",
+ "note": "Fields before: Hypersonix no case, Harper filter, TrakPro services, team on case studies",
+ "items": [
+  {
+   "id": "6ace66976b237ad91feb51a0",
+   "fieldData": {
+    "metric-value-1": "Soon",
+    "metric-label-1": "Rebuild in progress",
+    "short-card-text": "Rebuild in progress",
+    "work-category": "f797c19bdb4bad28884b5ced85431180",
+    "services-delivered": null,
+    "team": null,
+    "name": "Hypersonix",
+    "slug": "hypersonix"
+   }
+  },
+  {
+   "id": "6ace6668eefb4c00ebea1f2f",
+   "fieldData": {
+    "metric-value-1": null,
+    "metric-label-1": null,
+    "short-card-text": "Insurance",
+    "work-category": null,
+    "services-delivered": null,
+    "team": null,
+    "name": "Harper",
+    "slug": "harper"
+   }
+  },
+  {
+   "id": "6aba6bc07d6279b4b561798e",
+   "fieldData": {
+    "metric-value-1": "100",
+    "metric-label-1": "Perfect SEO score",
+    "short-card-text": "Perfect 100 SEO score",
+    "work-category": "f797c19bdb4bad28884b5ced85431180",
+    "services-delivered": null,
+    "team": null,
+    "name": "TrakPro",
+    "slug": "trak-pro"
+   }
+  },
+  {
+   "id": "6aba6bc07d6279b4b561798d",
+   "fieldData": {
+    "metric-value-1": "5",
+    "metric-label-1": "Markets",
+    "short-card-text": "1,000+ CMS items migrated",
+    "work-category": "5267bee9ab756cf7834fce16707acf01",
+    "services-delivered": [
+     "6aba6bc07d6279b4b561798f",
+     "6aba6bc07d6279b4b5617991"
+    ],
+    "team": null,
+    "name": "Veyor Digital",
+    "slug": "veyor-digital"
+   }
+  },
+  {
+   "id": "6aba6bc07d6279b4b561798c",
+   "fieldData": {
+    "metric-value-1": "80+",
+    "metric-label-1": "Pages launched",
+    "short-card-text": "80+ pages launched",
+    "work-category": "f797c19bdb4bad28884b5ced85431180",
+    "services-delivered": [
+     "6aba6bc07d6279b4b561798f"
+    ],
+    "team": null,
+    "name": "Sustain Commercial Solar",
+    "slug": "sustain-commercial-solar"
+   }
+  },
+  {
+   "id": "6aba6bc07d6279b4b561798b",
+   "fieldData": {
+    "metric-value-1": "2 weeks",
+    "metric-label-1": "Delivery time",
+    "short-card-text": "Built from scratch in 2 weeks",
+    "work-category": "260dd3e0ae4c43c7f04500bf84bd06a4",
+    "services-delivered": [
+     "6aba6bc07d6279b4b5617990",
+     "6aba6bc07d6279b4b5617991"
+    ],
+    "team": null,
+    "name": "Shiftolic",
+    "slug": "shiftolic"
+   }
+  }
+ ]
+}
