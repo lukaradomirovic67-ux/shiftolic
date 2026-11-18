@@ -1,0 +1,12 @@
+{
+  "note": "Teams collection (6aba6bc07d6279b4b561778a), field round-photo before replacing it with the new portraits from Drive folder 'Slike za our work single' (18.11.2026).",
+  "items": [
+    {"id": "6aee1564539ee1fdc48b9bea", "name": "Mihajlo Nikolic", "round-photo": {"fileId": "6af0a6c4dcab934e2bb62b8f", "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af0a6c4dcab934e2bb62b8f_6ad68876ecb578a22924ac27_about-team-mihajlo-nikolic.webp", "alt": "Mihajlo Nikolic"}},
+    {"id": "6aee1564539ee1fdc48b9be8", "name": "Darko Milosevic", "round-photo": {"fileId": "6af0a6c4dcab934e2bb62b8c", "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af0a6c4dcab934e2bb62b8c_6ad68875d747f64f4cb98d32_about-team-darko-milosevic.webp", "alt": "Darko Milosevic"}},
+    {"id": "6aee1564539ee1fdc48b9be6", "name": "Pavle Stikovic", "round-photo": {"fileId": "6af0a6c4dcab934e2bb62b86", "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af0a6c4dcab934e2bb62b86_6ad68876d705b3ef803e9dbf_about-team-pavle-stikovic.webp", "alt": "Pavle Stikovic"}},
+    {"id": "6aee1564539ee1fdc48b9be4", "name": "Luka Radomirovic", "round-photo": {"fileId": "6af0a6c4dcab934e2bb62b80", "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af0a6c4dcab934e2bb62b80_6ad68876d705b3ef803e9dd5_about-team-luka-radomirovic.webp", "alt": "Luka Radomirovic"}},
+    {"id": "6aba6bc07d6279b4b56179aa", "name": "Aleksandar Dumic", "round-photo": {"fileId": "6af0a6c4dcab934e2bb62b92", "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af0a6c4dcab934e2bb62b92_6ad68875cf6b48152fd28ad6_about-team-aleksandar-dumic.webp", "alt": "Aleksandar Dumic"}},
+    {"id": "6aba6bc07d6279b4b56179a9", "name": "Danilo Stikovic", "round-photo": {"fileId": "6af0a6c4dcab934e2bb62b89", "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af0a6c4dcab934e2bb62b89_6ad68875be3d851bd7a0bb90_about-team-danilo-stikovic.webp", "alt": "Danilo Stikovic"}},
+    {"id": "6aba6bc07d6279b4b56179a8", "name": "Daris Henjas", "round-photo": {"fileId": "6af0a6c4dcab934e2bb62b83", "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af0a6c4dcab934e2bb62b83_6ad688767506850986dd8714_about-team-daris-henjas.webp", "alt": "Daris Henjas"}}
+  ]
+}
