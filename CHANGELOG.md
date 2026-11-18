@@ -3,6 +3,22 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 18.11.2026: Teams, nove fotografije u krugu na case stranicama (objavljeno na staging)
+Tvoje „dodaj ih u cms u team collection listu“, za slike iz Drive foldera „Slike za our work single“ (Mihajlo, 18.11.). Kopija starih vrednosti: `backup/cms-items/teams-round-photo-2026-11-18.json`.
+- **Polje:** „Round photo“ u kolekciji Teams. Prema svom opisu, ono je baš za ovo: portret sa providnom pozadinom, glava i ramena, za krug na case stranicama.
+- **Priprema:** originali su PNG 2000×2000 (2,0–2,5 MB) i kadriraniji su od sadašnjih slika. Svaku sam uklopio u isti format kao dosadašnja slika te osobe (WebP 1000×1228, 23–40 KB): glava je iste veličine i na istom mestu, pa krug izgleda isto, a stilovi nisu dirani.
+  - Luka i Darko su povećani oko 5%, da slika pokrije ceo krug do dna.
+  - Fajlovi su u `webflow-assets/team/round-photos-2026-11-18/`, a poređenje staro/novo u `notes/team-round-photos-2026-11-18.png`.
+
+| Teams (`6aba6bc07d6279b4b561778a`) | Round photo pre | Posle |
+|---|---|---|
+| Aleksandar Dumic, Danilo Stikovic, Daris Henjas, Darko Milosevic, Luka Radomirovic, Mihajlo Nikolic, Pavle Stikovic | `about-team-<ime>.webp` | `round-<ime>.webp` (nove slike, alt = ime) |
+
+- Otpremljeno preko repoa: jsDelivr za 5 slika, a za 2 direktan GitHub link (jsDelivr je odbio, jer je repo prešao njegovih 50 MB). Fajlovi u Webflow-u su identični lokalnim (md5).
+- Objavljeno je svih 7 stavki. Ostala polja i draft status nisu menjani.
+- **Provereno:** svih 5 case stranica (Ballerine, Shiftolic, Sustain, TrakPro, Veyor) prikazuje nove slike, na desktopu i telefonu.
+- U biblioteci asseta je ostalo 7 otpremljenih `round-….webp` fajlova koje CMS ne koristi (CMS je napravio svoje kopije). Ne brišem ih bez tvog „da“.
+
 ## 18.11.2026: Services, „Four services“: razmak ispod oblika pred kraj taba (objavljeno na staging)
 Tvoje „popravi ovo da se pri kraju taba ne pravi razmak između ekrana i ovog oblika“. Kopija koda pre izmene: `backup/page-code/2026-11-18-services-shape/services-head-before.html`.
 - **Uzrok:** na desktopu se sekcija zalepi za ekran, a skrolovanje prolazi kroz 4 servisa. Dok se skroluje kroz jedan servis, oblik se blago podiže (paralaksa): na početku je 24 px ispod dna, a na kraju 24 px iznad dna. Zato se pred kraj svakog taba otvarala tamna traka od oko 23 px između oblika i dna ekrana.
