@@ -3,6 +3,20 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 18.11.2026: strukturisani podaci (schema), WebSite, datum projekta i znakovi (objavljeno na staging)
+Tvoje „da“ na problem 3 iz audita (a, b i c). Kopije pre izmene: `backup/schema/home-organization-before-2026-11-18.json` i `backup/page-code/2026-11-18-schema/` (head kod oba šablona).
+
+| Gde | Pre | Posle |
+|---|---|---|
+| a. Home (`6aba6bc07d6279b4b56176f1`), JSON-LD u podešavanjima stranice | samo Organization | `@graph`: isti Organization (dodat samo `@id` „/#organization“) + WebSite (`name` Nues, `url` „/“, `inLanguage` en, `publisher` = Organization). Ništa izmišljeno, bez `alternateName` i pretrage. |
+| b. Our Works Template (`6aba6bc07d6279b4b56176ff`), head, Article `datePublished` | polje Published On: datum poslednjeg objavljivanja sajta (svi projekti 17.11.2026) | polje Created On: kada je projekat unet (npr. Ballerine 19.5.2026, TrakPro 3.9.2026) |
+| c. Our Works Template i Blogs Template (`6aba6bc07d6279b4b5617706`), head | Webflow upisuje CMS tekst u kod sa HTML znakovima (`&amp;`, `&#39;`), pa je u schemi pisalo „SEO &amp;amp; AEO“ i „Shiftolic&amp;#39;s“ | mala skripta posle JSON-LD blokova vraća ih u obične znakove („SEO & AEO“, „Shiftolic's“) čim se stranica učita; Google čita schemu posle prikaza stranice |
+
+- Provera posle objave: HTML Home, 2 case i 2 blog stranice upoređen sa stanjem pre. Razlikuju se samo ovi redovi. Organization je isti kao kopija.
+- Svi JSON-LD blokovi su ispravni, a posle prikaza nema nijednog HTML znaka.
+- JS greška je i dalje jedna („WebFont is not defined“), ista pre i posle. Javlja se samo zato što u testu blokiram Google fontove.
+- Ako se schema u šablonima menja: skripta radi samo kada u bloku ima HTML znakova, a nevažeći JSON ostavlja kakav jeste.
+
 ## 18.11.2026: slike u prvom ekranu „eager“ samo tamo gde merenje pokazuje dobitak (objavljeno na staging)
 Tvoje „b“ na problem 2 iz audita. Webflow MCP nema podešavanje „Load“ za slike, ali atribut `loading="eager"` na slici Webflow prepisuje preko svog `lazy` (provereno u objavljenom HTML-u, nema duplikata). Pre izmene slike nisu imale nijedan atribut.
 

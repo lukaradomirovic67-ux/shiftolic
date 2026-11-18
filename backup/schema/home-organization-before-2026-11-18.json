@@ -1,0 +1,81 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Organization",
+ "address": {
+  "@type": "PostalAddress",
+  "addressCountry": "EE",
+  "addressLocality": "Tallinn",
+  "addressRegion": "Harju maakond",
+  "postalCode": "10145",
+  "streetAddress": "Tornimäe tn 5"
+ },
+ "areaServed": "Worldwide",
+ "contactPoint": {
+  "@type": "ContactPoint",
+  "contactType": "Sales",
+  "email": "hello@nues.agency",
+  "url": "/lets-talk"
+ },
+ "description": "A Webflow agency designing and building websites for fast-growing teams. Custom Webflow development, scalable CMS, and performance dialed in from the first line of code.",
+ "hasOfferCatalog": {
+  "@type": "OfferCatalog",
+  "itemListElement": [
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "description": "A new website from scratch, end to end. Strategy, design, development, SEO, and launch, all handled by the same team. From blank canvas to live site, on a clear timeline.",
+     "name": "Design & Development",
+     "url": "/services/design-development"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "description": "Webflow development from your existing design. We take what's in your Figma and bring it to life with components built to scale, CMS structures that hold up, and performance dialed in from the first line of code.",
+     "name": "Webflow Development",
+     "url": "/services/webflow-development"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "description": "Technical SEO, content and AI answer optimisation for Webflow sites. We audit, structure and grow your rankings and AI citations, month after month.",
+     "name": "SEO & AEO",
+     "url": "/services/seo-aeo"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "description": "An ongoing Webflow team for teams that want their site to keep growing. New pages, optimizations, recommendations, all on a retainer where hours roll over and the work never sits still.",
+     "name": "Growth",
+     "url": "/services/growth"
+    }
+   }
+  ],
+  "name": "Webflow Services"
+ },
+ "identifier": {
+  "@type": "PropertyValue",
+  "propertyID": "Estonian Business Register code",
+  "value": "17377418"
+ },
+ "legalName": "Nues Digital OÜ",
+ "logo": {
+  "@type": "ImageObject",
+  "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6adbb6b72708019a0404c6a6_pricing-receipt-logo.svg"
+ },
+ "name": "Nues",
+ "sameAs": [
+  "https://clutch.co/profile/nues",
+  "https://www.linkedin.com/company/nues-agency/",
+  "https://www.instagram.com/nues.agency"
+ ],
+ "slogan": "Design, build, grow. That's NUES.",
+ "url": "/",
+ "vatID": "EE102989731"
+}

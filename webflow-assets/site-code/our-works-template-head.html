@@ -32,7 +32,7 @@ location.replace(/^https?:\/\//i.test(u)?u:'/our-work');})();</script>
       "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6adbb6b72708019a0404c6a6_pricing-receipt-logo.svg"
     }
   },
-  "datePublished": "{{wf {&quot;path&quot;:&quot;published-on&quot;,&quot;type&quot;:&quot;Date&quot;\} }}",
+  "datePublished": "{{wf {&quot;path&quot;:&quot;created-on&quot;,&quot;type&quot;:&quot;Date&quot;\} }}",
   "dateModified": "{{wf {&quot;path&quot;:&quot;updated-on&quot;,&quot;type&quot;:&quot;Date&quot;\} }}",
   "inLanguage": "en"
 }
@@ -48,6 +48,8 @@ location.replace(/^https?:\/\//i.test(u)?u:'/our-work');})();</script>
   ]
 }
 </script>
+<!-- JSON-LD: Webflow writes CMS text into custom code with HTML entities (&amp; for &, &#39; for '); this turns them back into plain characters. -->
+<script>(function(){var t=document.createElement('textarea');function d(v){if(typeof v==='string'){t.innerHTML=v;return t.value;}if(Array.isArray(v))return v.map(d);if(v&&typeof v==='object'){for(var k in v)v[k]=d(v[k]);}return v;}[].forEach.call(document.querySelectorAll('script[type="application/ld+json"]'),function(s){if(!/&(#\d+|#x[0-9a-f]+|[a-z]+);/i.test(s.textContent))return;try{s.textContent=JSON.stringify(d(JSON.parse(s.textContent)));}catch(e){}});})();</script>
 
 
 <style>
