@@ -33,8 +33,9 @@
 [data-services-tabs].is-ready .services-tabs_bg.is-current{opacity:1;z-index:1}
 [data-services-tabs].is-ready .services-tabs_shape{opacity:0;transform:translate3d(0,12%,0) scale(.94);transform-origin:100% 100%;transition:opacity .5s ease,transform .7s cubic-bezier(.4,0,.2,1)}
 [data-services-tabs].is-ready .services-tabs_bg.is-current .services-tabs_shape{opacity:1;transform:none;transition:opacity .9s ease .15s,transform 1.3s cubic-bezier(.22,1,.36,1) .1s}
-/* a little drift while scrolling through one service */
-[data-services-tabs].is-scroll .services-tabs_bg.is-current .services-tabs_shape{translate:0 calc((var(--svs-p,.5) - .5) * -48px)}
+/* a little drift while scrolling through one service: the shape rises 48px over the step and ends flush with the bottom edge,
+   so no strip of background opens under it near the end of a step */
+[data-services-tabs].is-scroll .services-tabs_bg.is-current .services-tabs_shape{translate:0 calc((1 - var(--svs-p,.5)) * 48px)}
 /* panels share one grid cell; only the current one can be clicked. The new service comes in from the direction you are going
    (from below going forward, from above going back) while the old one leaves the other way */
 [data-services-tabs]{--svs-from:28px;--svs-to:-20px;--svt-from:105%;--svt-to:-105%}

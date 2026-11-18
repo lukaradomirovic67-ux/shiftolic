@@ -3,6 +3,20 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 18.11.2026: Services, „Four services“: razmak ispod oblika pred kraj taba (objavljeno na staging)
+Tvoje „popravi ovo da se pri kraju taba ne pravi razmak između ekrana i ovog oblika“. Kopija koda pre izmene: `backup/page-code/2026-11-18-services-shape/services-head-before.html`.
+- **Uzrok:** na desktopu se sekcija zalepi za ekran, a skrolovanje prolazi kroz 4 servisa. Dok se skroluje kroz jedan servis, oblik se blago podiže (paralaksa): na početku je 24 px ispod dna, a na kraju 24 px iznad dna. Zato se pred kraj svakog taba otvarala tamna traka od oko 23 px između oblika i dna ekrana.
+
+| Services (`6ae0e4a4872d8069c67b0475`), page head | Pre | Posle |
+|---|---|---|
+| `[data-services-tabs].is-scroll .services-tabs_bg.is-current .services-tabs_shape` | `translate: 0 calc((var(--svs-p,.5) - .5) * -48px)` (od +24 do −24 px) | `translate: 0 calc((1 - var(--svs-p,.5)) * 48px)` (od +48 do 0 px) |
+
+- Pomeranje je isto (48 px naviše kroz jedan servis), samo se završava tačno na dnu ekrana. Tablet i telefon (tabovi koji se sami menjaju) nisu dirani.
+- **Provereno:**
+  - pre objave, ubacivanjem koda u stranicu: stara verzija na kraju svakog taba ima traku od 23 px, a nova je nema;
+  - posle objave: kod na stagingu je identičan fajlu `webflow-assets/site-code/services-page-head.html`;
+  - na 1440×900, 1512×790, 1920×1080 i 1280×720, na početku, sredini i kraju svakog od 4 taba, oblik nigde nije iznad dna ekrana.
+
 ## 17.11.2026 (veče): spljošten krug sa strelicom na case karticama (objavljeno na staging)
 Tvoje „vidis kako se krug spljostio u trusted by sekciji, popravi“. Kopija stilova: `backup/styles/case-card-arrow-2026-11-17.json`.
 - Uzrok: krug (`case-card_arrow`, 40×40) je u flex redu pored teksta i smeo je da se suzi. Kad je tekst dugačak („Built from scratch in 2 weeks“), krug se stisnuo na 23–38 px širine. To se dešavalo na skoro svim širinama ekrana, na Home i Services.
