@@ -3,6 +3,18 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 18.11.2026: Open Graph na /services i /services/seo-aeo (objavljeno na staging)
+Tvoje „da“ na problem 1 iz audita. Kopija podešavanja: `backup/pages/og-services-2026-11-18.json`.
+
+| Stranica | Pre | Posle |
+|---|---|---|
+| Services (`6ae0e4a4872d8069c67b0475`) | og:title, og:description, twitter:title i twitter:description ne postoje („isto kao SEO“ isključeno, bez sopstvenog teksta) | uključeno „isto kao SEO naslov / opis“ |
+| SEO & AEO (`6ad9125fa551cf984d9bb34a`) | isto | isto |
+
+- Tekst je postojeći SEO naslov i opis, a slika za deljenje je ista.
+- Posle objave obe stranice imaju svih 5 oznaka (og:title, og:description, og:image, twitter:title, twitter:description).
+- Ispravka audita: većina mreža bi i bez ovih oznaka uzela običan naslov stranice, pa ovo nije bio kvar nego doslednost sa ostatkom sajta.
+
 ## 18.11.2026: Teams, nove fotografije u krugu na case stranicama (objavljeno na staging)
 Tvoje „dodaj ih u cms u team collection listu“, za slike iz Drive foldera „Slike za our work single“ (Mihajlo, 18.11.). Kopija starih vrednosti: `backup/cms-items/teams-round-photo-2026-11-18.json`.
 - **Polje:** „Round photo“ u kolekciji Teams. Prema svom opisu, ono je baš za ovo: portret sa providnom pozadinom, glava i ramena, za krug na case stranicama.

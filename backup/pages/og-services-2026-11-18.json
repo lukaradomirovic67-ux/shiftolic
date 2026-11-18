@@ -1,0 +1,7 @@
+{
+  "note": "Page settings before turning on 'Open Graph same as SEO' (18.11.2026), from data_pages_tool list_pages.",
+  "pages": [
+    {"id": "6ae0e4a4872d8069c67b0475", "slug": "services", "seo": {"title": "Webflow services: design, development, SEO and growth | Nues", "description": "Four ways in, one senior crew behind them. Webflow design and development, Webflow builds from your designs, SEO and AEO, and ongoing growth."}, "openGraph": {"titleCopied": false, "descriptionCopied": false, "imageUrl": null, "imageAssetId": "6afb8fde780d6de45c2ec81a"}},
+    {"id": "6ad9125fa551cf984d9bb34a", "slug": "services/seo-aeo", "seo": {"title": "Webflow SEO and AEO agency | Nues", "description": "Technical SEO, content and AI answer optimisation for Webflow sites. We audit, structure and grow your rankings and AI citations, month after month."}, "openGraph": {"imageUrl": null, "imageAssetId": "6afb8fe4614a28b934a75ffd"}}
+  ]
+}
