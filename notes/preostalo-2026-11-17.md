@@ -3,6 +3,17 @@
 Staging: https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/
 Ovo je jedini aktuelni spisak. Starije liste (`qa-2026-11-17.md`, `preostalo-2026-11-13.md`, `pre-launch-2026-11-11.md`) su istorija.
 
+**18.11.: novi QA i detaljan audit u `notes/audit-2026-11-18.md`.** QA je čist. Novo iz audita:
+- dupli GA4;
+- praćenje bez pristanka;
+- stari llms.txt (predlog novog: `notes/llms-txt-predlog-2026-11-18.txt`);
+- spor LCP na telefonu (H1 sakriven do skripti, lazy slike u prvom ekranu);
+- og:title i og:description fale na /services i /services/seo-aeo;
+- 5 case adresa bez studije u budućem sitemap-u;
+- sitnice u schema.
+
+Stavka 8 (razmak na kraju meta opisa) je rešena.
+
 ## 1. Kako je provereno
 - Svih 47 javnih adresa, desktop (1440) i telefon (390), ukupno 94 učitavanja:
   - 15 stranica, 404, 21 blog post, 10 case stranica.
