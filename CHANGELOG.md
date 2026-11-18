@@ -3,6 +3,28 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 18.11.2026: slike u prvom ekranu „eager“ samo tamo gde merenje pokazuje dobitak (objavljeno na staging)
+Tvoje „b“ na problem 2 iz audita. Webflow MCP nema podešavanje „Load“ za slike, ali atribut `loading="eager"` na slici Webflow prepisuje preko svog `lazy` (provereno u objavljenom HTML-u, nema duplikata). Pre izmene slike nisu imale nijedan atribut.
+
+**A/B merenje** na telefonu (procesor 4× sporiji, oko 1,6 Mb/s, 150 ms), po 4 učitavanja naizmenično, medijana LCP:
+
+| Stranica | lazy (pre) | eager | Odluka |
+|---|---|---|---|
+| Our Work | 8,5 s | 7,1 s | ostaje eager |
+| Blog post (šablon) | 2,4 s | 1,6 s | ostaje eager |
+| Blog (lista) | 3,2 s | 6,0 s (samo pozadina: 8,9 s) | vraćeno na lazy |
+| Case stranica (TrakPro) | 3,4 s | 5,6 s | vraćeno na lazy |
+
+Na Blogu i case stranicama eager slike otimaju mrežu skriptama, a tekst u prvom ekranu čeka te skripte (problem 2A), pa sve kasni.
+
+| Element (stranica) | Pre | Posle |
+|---|---|---|
+| Our Work (`6aba6bc07d6279b4b56176fe`): `ow-hs_img` (slider, 4 slike) i `ow-hero_stripes` | lazy | `loading="eager"` |
+| Blogs Template (`6aba6bc07d6279b4b5617706`): pozadina `495f04a6…` i glavna slika `31ee2357…` | lazy | `loading="eager"` |
+| Blog (`6aba6bc07d6279b4b5617705`) i Our Works Template (`6aba6bc07d6279b4b56176ff`) | lazy | probno eager, pa vraćeno (atribut obrisan); stanje isto kao pre |
+
+- Kada se uradi 2A (tekst bez čekanja skripti), vredi ponovo izmeriti eager na case stranicama.
+
 ## 18.11.2026: Open Graph na /services i /services/seo-aeo (objavljeno na staging)
 Tvoje „da“ na problem 1 iz audita. Kopija podešavanja: `backup/pages/og-services-2026-11-18.json`.
 
