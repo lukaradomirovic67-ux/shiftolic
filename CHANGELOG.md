@@ -3,6 +3,32 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 19.11.2026: naslovi na vrhu stranice se pojavljuju bez čekanja skripti (objavljeno na staging)
+Tvoje „uradi“ (stavka 3 u `notes/preostalo-2026-11-19.md`). Kopija pre izmene: `backup/site-code/2026-11-19-early-reveal/`.
+
+**Gde:** Site settings, Custom code, Head (`webflow-assets/site-code/site-head.min.html`, čitljiva verzija `site-head.html`). Dodati su jedan `<style>` i jedan `<script>` odmah posle postojećeg CSS-a za reveal.
+
+**Pre:** elementi sa `data-reveal` u prvom ekranu (H1, podnaslov, dugmad) čekali su da se učitaju jQuery, Webflow i GSAP. Na telefonu su bili skriveni 5–7 s. Na Home-u se H1 pojavljivao tek kroz rezervni tajmer od 4 s, i to bez animacije.
+
+**Posle:** mala skripta u head-u pokreće istu animaciju (isti pomak, trajanje i kašnjenja) čim se element pojavi u HTML-u. Elementi koje je ona pokrenula dobijaju `data-reveal-early`, pa ih skripta u footer-u više ne dira. Elementi ispod prvog ekrana rade kao i ranije.
+
+Merenje na telefonu (150 ms kašnjenja, 1,6 Mb/s, procesor 4× sporiji; medijana 3 merenja, staro i novo naizmenično):
+
+| Stranica | Šta je mereno | Pre | Posle |
+|---|---|---|---|
+| Services | LCP | 5,9 s | 2,5 s |
+| Design & Development | LCP | 5,8 s | 1,7 s |
+| Webflow Development | LCP | 6,0 s | 2,6 s |
+| SEO & AEO | LCP | 5,9 s | 1,7 s |
+| Growth | LCP | 6,0 s | 2,6 s |
+| About | LCP | 6,5 s | 2,7 s |
+| Home | H1 ceo vidljiv | 5,6 s | 2,5 s |
+| Pricing | LCP | oko 3,2 s | oko 3,2 s (bez promene) |
+
+- Provera posle objave: nova head verzija je identična fajlu u repou na svih 16 proverenih stranica. Uživo na telefonu je H1 ceo vidljiv za 2,7–3,4 s.
+- Funkcionalna provera pre objave (15 stranica, širina 390 i 1440): nijedan element ne ostaje skriven posle skrola, JS grešaka nema.
+- Ostaje isto: rezervni tajmer od 4 s, režim smanjenog pokreta (animacije isključene), stranice bez elemenata u prvom ekranu (Our Work, Careers, Resources).
+
 ## 19.11.2026: obrisano 7 neiskorišćenih slika iz Assets
 Tvoje „ako ih ne koristimo obriši ih slobodno“.
 
