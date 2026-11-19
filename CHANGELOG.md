@@ -3,6 +3,19 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 19.11.2026: alt tekst na 46 slika u blog tekstovima (objavljeno na staging)
+Tvoje „ma odobravam sve“: svi predlozi sa stranice za pregled (https://claude.ai/artifact/BG3BpjGKmLqLW43tMnPT7t) idu onako kako su napisani. Kopija pre izmene (sveže pročitana neposredno pre upisa): `backup/cms-items/blog-alt-before-2026-11-19.json`. Predlozi sa adresama slika: `notes/blog-alt-predlozi-2026-11-19.json`.
+
+**Gde:** kolekcija Blogs (`6aba6bc07d6279b4b5617769`), polje Content, 21 objavljen post. Svaka slika u tekstu dobila je opis umesto praznog alt-a (u CMS-u je stajalo `__wf_reserved_inherit`, a na stranici prazan alt).
+
+- Primer: Source by Webflow, slika naočara sa kodom: prazno → „Robot hands holding glasses that show the code behind a website wireframe“.
+- Opisi su na engleskom, do 125 znakova, i kažu samo šta je na slici. Na ilustracijama sa robotom piše „Nues robot“.
+- Slike su uparene po ID-ju fajla, ne po redosledu (na sajtu se serviraju kao AVIF, u CMS-u su PNG/JPG/WebP).
+- Provera pre upisa: u svakom postu je jedina razlika alt na slikama.
+- Provera posle upisa: tekst svih 21 posta je u CMS-u identičan pripremljenom. Ostala polja, draft status i ostali postovi nisu promenjeni.
+- Provera posle objave: na stranicama postova svih 46 slika ima tačan opis, nijedna slika u tekstu nema prazan alt.
+- Nije dirano: draft post o Flow Conf (2 slike, nije javan) i naslovne slike postova (thumbnail).
+
 ## 19.11.2026: svaka stranica usluge ima svoj podnaslov ispod H1, iz Figme (objavljeno na staging)
 Tvoje „prepravi“: tekstovi iz Figme (Copy page, okviri `7759:2605`, `7759:3231`, `7759:5948`, `7759:6574`), a SEO & AEO sa gramatičkom ispravkom. Kopija pre izmene: `backup/elements/service-subtitle-2026-11-19.json`.
 
