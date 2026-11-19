@@ -1,0 +1,11 @@
+{
+ "date": "2026-11-19",
+ "note": "Hero subtitle (String inside the paragraph under the H1) on the 4 service pages before the change.",
+ "old_text": "Strategy, brand, copy, design and the Webflow build, from one senior crew on a date we commit to.",
+ "pages": [
+  {"page": "Design & Development 6aba6bc07d6279b4b5617701", "id": {"component": "6aba6bc07d6279b4b5617701", "element": "00864f78-0eaf-5feb-7083-bfc42426d517"}},
+  {"page": "Webflow Development 6aba6bc07d6279b4b5617702", "id": {"component": "6aba6bc07d6279b4b5617702", "element": "d90503e0-0a57-c639-23fa-ed90f7990052"}},
+  {"page": "SEO & AEO 6ad9125fa551cf984d9bb34a", "id": {"component": "6ad9125fa551cf984d9bb34a", "element": "8f1f3bed-58b7-8d0a-c448-45cac2b96b68"}},
+  {"page": "Growth 6aba6bc07d6279b4b56176fd", "id": {"component": "6aba6bc07d6279b4b56176fd", "element": "7c77e956-01e8-76a6-07c4-9872eb7a5eca"}}
+ ]
+}

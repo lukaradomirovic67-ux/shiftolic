@@ -3,6 +3,24 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 19.11.2026: svaka stranica usluge ima svoj podnaslov ispod H1, iz Figme (objavljeno na staging)
+Tvoje „prepravi“: tekstovi iz Figme (Copy page, okviri `7759:2605`, `7759:3231`, `7759:5948`, `7759:6574`), a SEO & AEO sa gramatičkom ispravkom. Kopija pre izmene: `backup/elements/service-subtitle-2026-11-19.json`.
+
+Pre, na sve 4 stranice: „Strategy, brand, copy, design and the Webflow build, from one senior crew on a date we commit to.“
+
+| Stranica | Element | Posle |
+|---|---|---|
+| Design & Development (`6aba6bc07d6279b4b5617701`) | `00864f78-…d517` | We take your brand from blank page to live site. Stop filing tickets to change a headline. |
+| Webflow Development (`6aba6bc07d6279b4b5617702`) | `d90503e0-…0052` | Have your own design? Bring it, making it work on the web is on us. |
+| SEO & AEO (`6ad9125fa551cf984d9bb34a`) | `8f1f3bed-…6b68` | You can have great design and a pixel‑perfect website, but if no one can see it, what’s the point? |
+| Growth (`6aba6bc07d6279b4b56176fd`) | `7c77e956-…5eca` | We keep your site moving as fast as your team. |
+
+- SEO & AEO, razlika u odnosu na Figmu („You can have great design, and pixel perfect website, …“): bez zareza posle „design“, dodato „a“, „pixel-perfect“ sa crticom. Crtica je neprelomiva (U+2011), jer se na telefonu reč lomila na „pixel-“ / „perfect“. Izgleda isto (Aeonik ima taj znak, iste je širine).
+- Bez ručnog preloma reda. U Figmi su prva tri teksta u dva reda; ovde se tekst sam prelama. Desktop: Design & Development i SEO & AEO u 2 reda, Webflow Development i Growth u 1. Telefon: 2–3 reda.
+- Menjan je samo tekst; klasa i stil su isti.
+- Snimci: `notes/servisi-podnaslovi-desktop-2026-11-19.png`, `notes/servisi-podnaslovi-telefon-2026-11-19.png`.
+- Provera posle objave: stari tekst više nije ni na jednoj od 4 stranice, novi je vidljiv na 1440 i 390 px.
+
 ## 19.11.2026: naslovi na vrhu stranice se pojavljuju bez čekanja skripti (objavljeno na staging)
 Tvoje „uradi“ (stavka 3 u `notes/preostalo-2026-11-19.md`). Kopija pre izmene: `backup/site-code/2026-11-19-early-reveal/`.
 

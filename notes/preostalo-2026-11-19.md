@@ -3,10 +3,10 @@
 Ovo je jedini aktuelni spisak. `preostalo-2026-11-17.md` i stariji su istorija.
 
 ## Mogu odmah, na „da“
-1. **llms.txt:** nova verzija je spremna (`notes/llms-txt-predlog-2026-11-18.txt`).
-2. **Brisanje 7 neiskorišćenih slika `round-*.webp` iz Assets:** stare verzije fotki tima, nigde se ne koriste.
-3. **Hero naslov na telefonu bez čekanja skripti (problem 2A iz audita):** LCP na telefonu je 5–7,5 s, jer je naslov sakriven dok se skripte ne učitaju.
-4. **Podnaslov ispod H1 na 4 servisne stranice:** iz Figme Copy page, svaka stranica ima svoj.
+1. **llms.txt:** nova verzija je spremna (`notes/llms-txt-predlog-2026-11-18.txt`). *Preskočeno 19.11. na tvoj zahtev.*
+2. **Brisanje 7 neiskorišćenih slika `round-*.webp` iz Assets:** stare verzije fotki tima, nigde se ne koriste. *Urađeno 19.11.*
+3. **Hero naslov na telefonu bez čekanja skripti (problem 2A iz audita):** LCP na telefonu je 5–7,5 s, jer je naslov sakriven dok se skripte ne učitaju. *Urađeno 19.11., objavljeno (sada 1,7–2,7 s).*
+4. **Podnaslov ispod H1 na 4 servisne stranice:** iz Figme Copy page, svaka stranica ima svoj. *Urađeno 19.11., objavljeno.*
 5. **Alt tekst za oko 40 slika u blog tekstovima:** ja pišem, tim odobrava.
 6. **og:image je AVIF na 7 stranica** (LinkedIn ga ne prikazuje): predlog je novo CMS polje „Share image“, koje treba odobriti.
 7. **Geist kao font sa našeg servera:** umesto Google WebFont loader-a.
