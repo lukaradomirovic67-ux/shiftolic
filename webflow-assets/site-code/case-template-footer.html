@@ -211,6 +211,8 @@ schedule();
   function txt(el) { return el ? (el.textContent || '').replace(/\s+/g, ' ').trim() : ''; }
   function slug(t) { var s = t.toLowerCase(); if (s.normalize) { s = s.normalize('NFKD').replace(/[̀-ͯ]/g, ''); } s = s.replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 64); return s || 'section'; }
   function off() { return desk.matches ? 120 : 90; }
+  // where an element sits once laid out: headings slide in (reveal) from 24px lower, so their on-screen box is not where they end up
+  function docTop(el) { var y = 0; for (var e = el; e; e = e.offsetParent) { y += e.offsetTop; } return y; }
   var ICONS = {
     'design-development': '<svg class="cs-used_svg" viewBox="0 0 30 30" aria-hidden="true"><circle class="k1" cx="15" cy="15" r="14"/><circle class="k2" cx="15" cy="15" r="9.5"/><circle class="k3" cx="15" cy="15" r="5"/></svg>',
     'webflow-development': '<svg class="cs-used_svg" viewBox="0 0 30 30" aria-hidden="true"><rect class="k1" x="2" y="8" width="12" height="17" rx="3"/><rect class="k2" x="16" y="8" width="12" height="17" rx="3"/><rect class="k3" x="8" y="4" width="14" height="22" rx="3.5"/></svg>',
@@ -240,8 +242,9 @@ schedule();
       used[id] = 1; h.id = id;
       var a = d.createElement('a'); a.className = 'cs-toc_link'; a.href = '#' + id; a.textContent = txt(h);
       a.addEventListener('click', function (e) {
-        e.preventDefault();
-        w.scrollTo({ top: h.getBoundingClientRect().top + w.pageYOffset - off(), behavior: reduce ? 'auto' : 'smooth' });
+        // stop here so Webflow's own smooth scroll for #links does not run as well and park the heading at the top edge
+        e.preventDefault(); e.stopPropagation();
+        w.scrollTo({ top: docTop(h) - off(), behavior: reduce ? 'auto' : 'smooth' });
         if (w.history && w.history.replaceState) { w.history.replaceState(null, '', '#' + id); }
       });
       list.appendChild(a); return a;
@@ -304,7 +307,7 @@ schedule();
     w.addEventListener('resize', all, { passive: true });
     if (desk.addEventListener) { desk.addEventListener('change', all); } else if (desk.addListener) { desk.addListener(all); }
     all();
-    if (w.location.hash) { var t = null; try { t = d.getElementById(decodeURIComponent(w.location.hash.slice(1))); } catch (e) {} if (t && t.matches && t.matches('.cs-block > h2')) { setTimeout(function () { w.scrollTo(0, t.getBoundingClientRect().top + w.pageYOffset - off()); }, 60); } }
+    if (w.location.hash) { var t = null; try { t = d.getElementById(decodeURIComponent(w.location.hash.slice(1))); } catch (e) {} if (t && t.matches && t.matches('.cs-block > h2')) { setTimeout(function () { w.scrollTo(0, docTop(t) - off()); }, 60); } }
   }
   if (d.readyState === 'loading') d.addEventListener('DOMContentLoaded', run); else run();
 })();

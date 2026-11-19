@@ -3,6 +3,19 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 19.11.2026: QA bočne kolone na case stranicama, 3 ispravke (objavljeno na staging)
+Tvoje „aj uradi qa ovoga“. Ceo izveštaj: `notes/qa-case-bocna-kolona-2026-11-19.md`. Kopija koda pre ispravki: `backup/page-code/2026-11-19-case-rail/case-footer-before-3.html`.
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Our Works Template (`6aba6bc07d6279b4b56176ff`), footer, bočna kolona | pri brzom skrolu (oba smera) i sporom skrolu nagore galerija je prelazila preko kolone dok je ova klizila (70 od 100 testova) | dok klizi udesno, galerija gura kolonu ispred sebe; 0 od 100 testova, i 40 od 40 na objavljenom sajtu |
+| isto, On this page klik | radilo je i Webflow-ovo ugrađeno skrolovanje, pa je naslov završavao na −24 do 0 px (iza menija) | samo naše skrolovanje; naslov na 120 px |
+| isto, klik i otvaranje na #naslovu | cilj se računao pre animacije pojavljivanja naslova (24 px), pa je naslov završavao na 96 px | računa se konačan položaj; 120 px |
+
+- Tablet i telefon: kolona se ne pomera. Režim smanjenog pokreta i promena veličine prozora: bez problema.
+- JS greške: nema.
+- Posle objave je footer identičan fajlu u repou na svih 5 case stranica.
+
 ## 19.11.2026: case stranice, bočna kolona i pri skrolu nagore odlazi udesno (objavljeno na staging)
 Tvoje „i kad se vraća gore, da ide u desno“. Kopija koda pre izmene: `backup/page-code/2026-11-19-case-rail/case-footer-before-2.html`.
 
