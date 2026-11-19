@@ -3,6 +3,17 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 19.11.2026: case stranice, bočna kolona i pri skrolu nagore odlazi udesno (objavljeno na staging)
+Tvoje „i kad se vraća gore, da ide u desno“. Kopija koda pre izmene: `backup/page-code/2026-11-19-case-rail/case-footer-before-2.html`.
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Our Works Template (`6aba6bc07d6279b4b56176ff`), footer kod, bočna kolona | pri skrolu nagore, kad galerija stigne odozgo, kolona je odjednom skakala nagore van ekrana (izmereno: vrh kolone sa 120 na −928 px) | ostaje na svom mestu (120 px od vrha) i za oko 0,55 s klizne udesno van ekrana, isto kao pri skrolu nadole |
+
+- Kad galerija prođe ispod nje i odmakne se 120 px, kolona se vraća zdesna.
+- Pri skrolu nadole nema promene: i dalje se penje ispred galerije dok klizi udesno, a odlazi i vraća se na istim mestima kao posle jutrošnje izmene.
+- Posle objave je footer identičan fajlu u repou na Ballerine, TrakPro i Shiftolic stranici.
+
 ## 19.11.2026: case stranice, bočna kolona drži 120 px razmaka od galerije (objavljeno na staging)
 Tvoje „popravi ovo, neka se ranije miče“ (snimak Ballerine case stranice). Kopija koda pre izmene: `backup/page-code/2026-11-19-case-rail/case-footer-before.html`.
 

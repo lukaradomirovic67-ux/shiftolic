@@ -200,7 +200,7 @@ schedule();
 <script>
 /* Sidebar (nues-case-sidebar-scroll.html): animated Services used icons, On this page links with scroll spy, and the rail that
    follows the text, stops at the gallery, slides out to the right and comes back after it (desktop only). It keeps GAP px clear of
-   the gallery: it slides out once the gallery comes within GAP of it and comes back once the gallery is GAP past it.
+   the gallery: it slides out once the gallery comes within GAP of it and comes back once the gallery is GAP past it, in both scroll directions.
    Team: LinkedIn links open in a new tab; a member without a profile is not a link. */
 (function () {
   var d = document, w = window;
@@ -271,8 +271,9 @@ schedule();
       if (!desk.matches || !gal || !gal.isConnected) { aside.style.transform = ''; inner.classList.remove('is-away'); return; }
       var top = parseFloat(w.getComputedStyle(aside).top) || 0, g = gal.getBoundingClientRect(), h = aside.offsetHeight;
       var room = g.top - GAP - (top + h), away = g.bottom > top - GAP && room < 0;
-      // never overlap the gallery: the rail stops and rides up in front of it, then slides out
-      aside.style.transform = away ? 'translateY(' + room + 'px)' : '';
+      // never overlap the gallery. Gallery coming up from below (scrolling down): the rail rides up in front of it while it slides out.
+      // Gallery coming down from above (scrolling back up): the rail stays where it is and slides out to the right.
+      aside.style.transform = away && g.top > top ? 'translateY(' + room + 'px)' : '';
       inner.classList.toggle('is-away', away);
     };
   }
