@@ -1,5 +1,7 @@
 # Šta je ostalo (17.11.2026, veče, posle novog QA-a)
 
+> **Zastarelo: aktuelni spisak je `preostalo-2026-11-19.md`.**
+
 Staging: https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/
 Ovo je jedini aktuelni spisak. Starije liste (`qa-2026-11-17.md`, `preostalo-2026-11-13.md`, `pre-launch-2026-11-11.md`) su istorija.
 
