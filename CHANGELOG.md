@@ -3,6 +3,23 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 19.11.2026: obrisano 7 neiskorišćenih slika iz Assets
+Tvoje „ako ih ne koristimo obriši ih slobodno“.
+
+| Asset ID | Fajl |
+|---|---|
+| `6afdfc4d6d774da1f4976353` | round-aleksandar-dumic.webp |
+| `6afdfc4f6d0969692980e642` | round-danilo-stikovic.webp |
+| `6afdfc5058f0c62e98a9720e` | round-daris-henjas.webp |
+| `6afdfc520be8b8900f9b9146` | round-darko-milosevic.webp |
+| `6afdfc53811f2999a52abbc9` | round-luka-radomirovic.webp |
+| `6afdfc5535d8fbab6d0f75c7` | round-mihajlo-nikolic.webp |
+| `6afdfc57bf2b4f97176dbebd` | round-pavle-stikovic.webp |
+
+- Otpremljeni su 18.11. samo da bi se upisali u Teams CMS. Webflow je pri upisu napravio svoje kopije (npr. `6afdfc6f5d1d02055342bfde_…`), pa originali nigde nisu bili povezani. Proverio sam 20 stranica pre brisanja.
+- Posle brisanja se fotke tima na svih 5 case stranica i dalje učitavaju (19 od 19).
+- Fajlovi su i dalje u repou: `webflow-assets/team/round-photos-2026-11-18/`.
+
 ## 19.11.2026: QA bočne kolone na case stranicama, 3 ispravke (objavljeno na staging)
 Tvoje „aj uradi qa ovoga“. Ceo izveštaj: `notes/qa-case-bocna-kolona-2026-11-19.md`. Kopija koda pre ispravki: `backup/page-code/2026-11-19-case-rail/case-footer-before-3.html`.
 
