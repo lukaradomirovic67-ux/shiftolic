@@ -3,6 +3,27 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 19.11.2026: Our Work slider, sledeći video se skida tek na pola trenutnog (objavljeno na staging)
+Tvoje „odradi“ na problem 4b iz audita. Kopija koda pre izmene: `backup/page-code/2026-11-19-ow-video/our-work-footer-before.html`.
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Our Work (`6aba6bc07d6279b4b56176fe`), footer kod, slider na vrhu | odmah po otvaranju skidaju se dva videa: trenutni (TrakPro) i sledeći (Sustain, 1,7 MB) | skida se samo trenutni; sledeći počinje kad je trenutni slajd na pola (video na pola trajanja, a slajd sa slikom posle 3 od 6 sekundi) |
+
+Merenje (snimak mreže i stanje slajdova, 40 s):
+
+| | Pre | Posle |
+|---|---|---|
+| Desktop: videi na početku | TrakPro i Sustain u 1,6 s | samo TrakPro; Sustain u 8 s |
+| Desktop: prelaz na drugi slajd | 14 s, oko 1 s se vidi slika pa krene video | 14 s, video kreće odmah |
+| Telefon (spora mreža, procesor 4× sporiji): drugi slajd | 23 s (TrakPro se sporo puštao jer je delio mrežu) | 17 s, Sustain kreće odmah |
+
+- Slajdovi se i dalje menjaju istim redom, a na kraju se vraća na prvi.
+- JS greška je i dalje jedna („WebFont is not defined“), ista kao pre. Javlja se samo zato što u testu blokiram Google fontove.
+- Posle objave je footer na stranici identičan fajlu `webflow-assets/site-code/our-work-page-footer.html`. U HTML-u su se promenili samo ovi redovi.
+
+**4a (kartice na vrhu Resources) nije urađeno.** Kartice uzimaju sliku iz polja Our Works „Full page screenshot“. Isto polje koriste i kartice projekata koje se skroluju na hover, pa se snimak ne može iseći. Polje Cover image izgleda drugačije za Veyor, Shiftolic, TrakPro i Intaker (`notes/resources-kartice-cover-vs-snimak-2026-11-19.png`). Za 4a je potrebno novo CMS polje, a predlog čeka odobrenje.
+
 ## 18.11.2026: strukturisani podaci (schema), WebSite, datum projekta i znakovi (objavljeno na staging)
 Tvoje „da“ na problem 3 iz audita (a, b i c). Kopije pre izmene: `backup/schema/home-organization-before-2026-11-18.json` i `backup/page-code/2026-11-18-schema/` (head kod oba šablona).
 

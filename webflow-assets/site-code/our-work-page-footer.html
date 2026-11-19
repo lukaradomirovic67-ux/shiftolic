@@ -59,7 +59,9 @@
      A slide with a Slider video (CMS link field with a direct MP4/WebM URL, bound to the data-video-src attribute of the hidden
      .ow-hs_video-src link in the slide) plays it muted over
      its Cover image: that slide lasts as long as the video and its bar follows the video. Without a video, or if the video
-     cannot play (blocked, failed, too slow to start), the slide shows the Cover image for 6 seconds as before. */
+     cannot play (blocked, failed, too slow to start), the slide shows the Cover image for 6 seconds as before.
+     Only the current slide's video downloads at first; the next one starts downloading once the current slide is halfway through,
+     so opening the page does not pull two videos at once. */
   function initHero() {
     var slider = document.querySelector('.ow-slider');
     if (!slider) return;
@@ -114,8 +116,8 @@
       var cur = vids[idx];
       if (cur && !cur.bad && cur.el.readyState > 0) { try { cur.el.currentTime = 0; } catch (e) {} }
       load(idx);
-      if (n > 1) load((idx + 1) % n);
     }
+    function loadNext() { if (n > 1) load((idx + 1) % n); }
     function go(i) { idx = (i + n) % n; elapsed = 0; wait = 0; last = null; render(); }
     var barList = slider.querySelector('.ow-hs-bars_list');
     if (barList) { barList.setAttribute('role', 'group'); barList.setAttribute('aria-label', 'Choose a project'); }
@@ -145,6 +147,7 @@
         }
         if (v.duration && v.readyState > 1) {
           fill(idx, (Math.min(v.currentTime / v.duration, 1) * 100) + '%');
+          if (v.currentTime >= v.duration / 2) loadNext();
           if (!v.loop && (v.ended || v.currentTime >= v.duration - 0.05)) go(idx + 1);
         } else if (run && (wait += dt) > WAIT) {
           drop(st);
@@ -153,6 +156,7 @@
         elapsed += dt;
         var p = Math.min(elapsed / DUR, 1);
         fill(idx, (p * 100) + '%');
+        if (p >= 0.5) loadNext();
         if (p >= 1) go(idx + 1);
       }
       window.requestAnimationFrame(tick);
