@@ -7,7 +7,7 @@ Ovo je jedini aktuelni spisak. `preostalo-2026-11-17.md` i stariji su istorija.
 2. **Brisanje 7 neiskorišćenih slika `round-*.webp` iz Assets:** stare verzije fotki tima, nigde se ne koriste. *Urađeno 19.11.*
 3. **Hero naslov na telefonu bez čekanja skripti (problem 2A iz audita):** LCP na telefonu je 5–7,5 s, jer je naslov sakriven dok se skripte ne učitaju. *Urađeno 19.11., objavljeno (sada 1,7–2,7 s).*
 4. **Podnaslov ispod H1 na 4 servisne stranice:** iz Figme Copy page, svaka stranica ima svoj. *Urađeno 19.11., objavljeno.*
-5. **Alt tekst za oko 40 slika u blog tekstovima:** ja pišem, tim odobrava.
+5. **Alt tekst za 46 slika u blog tekstovima (21 post):** ja pišem, tim odobrava. *19.11.: predlozi su napisani i na stranici za pregled (https://claude.ai/artifact/BG3BpjGKmLqLW43tMnPT7t), spisak sa adresama slika je u `notes/blog-alt-predlozi-2026-11-19.json`. Čeka odobrenje tima; posle toga upisujem u CMS.*
 6. **og:image je AVIF na 7 stranica** (LinkedIn ga ne prikazuje): predlog je novo CMS polje „Share image“, koje treba odobriti.
 7. **Geist kao font sa našeg servera:** umesto Google WebFont loader-a.
 
