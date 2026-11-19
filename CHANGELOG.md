@@ -3,6 +3,28 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 19.11.2026: case stranice, bočna kolona drži 120 px razmaka od galerije (objavljeno na staging)
+Tvoje „popravi ovo, neka se ranije miče“ (snimak Ballerine case stranice). Kopija koda pre izmene: `backup/page-code/2026-11-19-case-rail/case-footer-before.html`.
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Our Works Template (`6aba6bc07d6279b4b56176ff`), footer kod, bočna kolona (Services used + On this page) | odlazila je u stranu kad je galerija na 40 px od nje, a vraćala se čim galerija pređe njen vrh (5–10 px razmaka, deluje zalepljeno) | odlazi kad je galerija na 120 px, a vraća se tek kad je galerija 120 px iznad nje (praktično van ekrana); nagore se sklanja na isti način |
+
+Merenje na Ballerine stranici:
+
+| Ekran | Odlazak, pre → posle | Povratak, pre → posle |
+|---|---|---|
+| 1000×625 | skrol 2716 → 2636 (80 px ranije) | galerija 5 px iznad kolone → 125 px |
+| 1440×900 | skrol 2333 → 2253 (80 px ranije) | galerija 10 px iznad kolone → 130 px |
+
+- Posle objave je footer identičan fajlu `webflow-assets/site-code/case-template-footer.html` na Ballerine, TrakPro i Shiftolic stranici. U HTML-u su se promenili samo ovi redovi.
+- On this page i dalje radi (Background, The challenge, What we shipped, The result).
+- Nema novih JS grešaka. Jedina je i dalje „WebFont is not defined“, zato što u testu blokiram Google fontove.
+
+## 19.11.2026: Our Work slider, izravnati videi (pripremljeno, nije na sajtu)
+Tvoje „ajde pokušaj“. U Sustain, Shiftolic i Ballerine videu svaka zamrznuta sličica usred kretanja (7, 15 i 15 sličica) zamenjena je izračunatom sličicom između susedne dve. TrakPro nema zastoja. Fajlovi su u `webflow-assets/video/slider-smooth-2026-11-19/`, a poređenje u `notes/slider-staro-levo-novo-desno-2026-11-19.mp4`. Na sajt idu kad se otpreme u Webflow Assets i upišu u polje „Slider video“.
+- Ispravka: prva analiza od 19.11. (brojevi skrolovanja, npr. `112, 52, 36, 0`) bila je pogrešna. Videi su animacije, a ne snimci skrola.
+
 ## 19.11.2026: Our Work slider, sledeći video se skida tek na pola trenutnog (objavljeno na staging)
 Tvoje „odradi“ na problem 4b iz audita. Kopija koda pre izmene: `backup/page-code/2026-11-19-ow-video/our-work-footer-before.html`.
 

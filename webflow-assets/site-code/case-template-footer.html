@@ -199,7 +199,8 @@ schedule();
 </script>
 <script>
 /* Sidebar (nues-case-sidebar-scroll.html): animated Services used icons, On this page links with scroll spy, and the rail that
-   follows the text, stops at the gallery, slides out to the right and comes back after it (desktop only).
+   follows the text, stops at the gallery, slides out to the right and comes back after it (desktop only). It keeps GAP px clear of
+   the gallery: it slides out once the gallery comes within GAP of it and comes back once the gallery is GAP past it.
    Team: LinkedIn links open in a new tab; a member without a profile is not a link. */
 (function () {
   var d = document, w = window;
@@ -255,7 +256,7 @@ schedule();
   }
 
   function rail() {
-    var aside = $('.cs-aside'), inner = $('.cs-aside_inner'), gal = $('.cs-body_row .cs-gallery'), GAP = 40;
+    var aside = $('.cs-aside'), inner = $('.cs-aside_inner'), gal = $('.cs-body_row .cs-gallery'), GAP = 120;
     if (!aside || !inner) return null;
     function setOff() {
       var was = inner.classList.contains('is-away');
@@ -269,7 +270,7 @@ schedule();
     return function tick() {
       if (!desk.matches || !gal || !gal.isConnected) { aside.style.transform = ''; inner.classList.remove('is-away'); return; }
       var top = parseFloat(w.getComputedStyle(aside).top) || 0, g = gal.getBoundingClientRect(), h = aside.offsetHeight;
-      var room = g.top - GAP - (top + h), away = !(g.bottom < top) && room < 0;
+      var room = g.top - GAP - (top + h), away = g.bottom > top - GAP && room < 0;
       // never overlap the gallery: the rail stops and rides up in front of it, then slides out
       aside.style.transform = away ? 'translateY(' + room + 'px)' : '';
       inner.classList.toggle('is-away', away);
