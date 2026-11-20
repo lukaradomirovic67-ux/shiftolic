@@ -22,6 +22,7 @@ Ovo je jedini aktuelni spisak. `preostalo-2026-11-17.md` i stariji su istorija.
   - $5,000 na Services naspram $20,000 na Pricing;
   - 30 dana podrške naspram nedelju dana;
   - greška u „How we compare“.
+  - *20.11.: kalkulator preporuke („$4,000 / $40,000“), „Change orders $0“ i red „What you pay“ u „How we compare“ ostaju kako jesu, tvoja odluka („nemoj to dirati“).*
 - **FAQ:** 30 odgovora (moj nacrt) i 4 pitanja čekaju potvrdu. Posle toga ide FAQPage schema.
 - **5 projekata bez studije** (Biotech, Harper, Hypersonix, Intaker, LaSalle): izbaciti iz sitemap-a ili napisati studije.
 - **iClosed kartica na Home:** varijanta A ili B.
