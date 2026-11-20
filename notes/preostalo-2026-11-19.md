@@ -13,7 +13,7 @@ Ovo je jedini aktuelni spisak. Namerno ostavljene stvari su u `notes/nereseno.md
 
 ## Čeka da otpremiš
 - **Stara pozadinska slika Home CTA** (`home-cta-bg.avif`) se više ne koristi: brisanje iz Assets na tvoje „da“.
-- **3 izravnata videa za Our Work slider** (Sustain, Shiftolic, Ballerine): u Webflow Assets, pa ih ja upisujem u CMS (`webflow-assets/video/slider-smooth-2026-11-19/`).
+- ~~**3 izravnata videa za Our Work slider** (Sustain, Shiftolic, Ballerine)~~: **urađeno 20.11.** Ti si otpremio fajlove, ja sam ih upisao u CMS i objavio na staging (CHANGELOG 20.11.).
 
 ## Odluke (ti ili Aleksandar)
 - **Dupli GA4:** koji ostaje. Preporuka: Webflow integracija, a kod iz Head da se obriše. *20.11.: preskočeno, tvoja odluka; kod u Head ostaje.*

@@ -3,6 +3,19 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 20.11.2026: Our Work slider, izravnati videi za Sustain, Shiftolic i Ballerine (objavljeno na staging)
+Ti si otpremio 3 fajla kroz draft stranicu „Slider videos“; fajlovi na Webflow CDN-u su bajt po bajt isti kao `webflow-assets/video/slider-smooth-2026-11-19/` (md5 se poklapa za sva tri). Kopija pre izmene: `backup/cms-items/our-works-slider-video-before-2026-11-20.json`.
+
+| Our Works stavka | polje Slider video (`slider-video-2`), staro | novo |
+|---|---|---|
+| Sustain Commercial Solar (`6aba6bc07d6279b4b561798c`) | `…/6af646c4deb177f9145906ae_sustain-slider.mp4` | `…/6b00840c457b359a796596b1_sustain-slider-smooth.mp4` |
+| Shiftolic (`6aba6bc07d6279b4b561798b`) | `…/6af646caa0271d7cf124d95c_shiftolic-slider.mp4` | `…/6b00840ca865e7a6541ee7b4_shiftolic-slider-smooth.mp4` |
+| Ballerine (`6aba6bc07d6279b4b5617989`) | `…/6af646d045263033b2f2e934_ballerine-slider.mp4` | `…/6b00840cd66a691392842118_ballerine-slider-smooth.mp4` |
+
+- Menjano samo to polje; draft status stavki nije diran (sve tri su i dalje objavljene). TrakPro video nije menjan.
+- Provera posle objave (/our-work, 1440 i 390): slajdovi imaju nove linkove, klikom na svaku traku video se pušta (2140×1280; 13,4 s, 15,0 s, 14,8 s), JS grešaka nema.
+- Stari fajlovi (`*-slider.mp4`) su ostali u Assets; ne brišu se bez tvog „da“.
+
 ## 20.11.2026: Home CTA, dugme bez pomeranja za mišem (objavljeno na staging)
 Tvoje „ne sviđa mi se pomeranje button-a na hover, neka na button-u ostane hover kao i na svim ostalim buttonima“. Kopija pre izmene: `backup/page-code/2026-11-20-home-cta/home-head-before-2.html`, `home-footer-before-2.html`.
 - Home head: uklonjen CSS koji je pomerao `home-cta_actions` (translate za mišem).

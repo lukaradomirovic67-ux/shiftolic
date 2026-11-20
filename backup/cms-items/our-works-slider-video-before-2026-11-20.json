@@ -1,0 +1,16 @@
+{
+  "collection": "Our Works (6aba6bc07d6279b4b561771c)",
+  "field": "slider-video-2",
+  "savedAt": "2026-11-20",
+  "note": "Vrednosti pre zamene izravnatim videima. Za vracanje upisati ove URL-ove nazad.",
+  "items": [
+    {"id": "6aba6bc07d6279b4b561798c", "name": "Sustain Commercial Solar", "slug": "sustain-commercial-solar", "isDraft": false, "slider-video-2": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6af646c4deb177f9145906ae_sustain-slider.mp4"},
+    {"id": "6aba6bc07d6279b4b561798b", "name": "Shiftolic", "slug": "shiftolic", "isDraft": false, "slider-video-2": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6af646caa0271d7cf124d95c_shiftolic-slider.mp4"},
+    {"id": "6aba6bc07d6279b4b5617989", "name": "Ballerine", "slug": "ballerine", "isDraft": false, "slider-video-2": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6af646d045263033b2f2e934_ballerine-slider.mp4"}
+  ],
+  "newValues": {
+    "sustain-commercial-solar": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6b00840c457b359a796596b1_sustain-slider-smooth.mp4",
+    "shiftolic": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6b00840ca865e7a6541ee7b4_shiftolic-slider-smooth.mp4",
+    "ballerine": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6b00840cd66a691392842118_ballerine-slider-smooth.mp4"
+  }
+}
