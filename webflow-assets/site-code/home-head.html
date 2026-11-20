@@ -129,9 +129,8 @@
 .section_home-cta.is-lit .home-cta_mark{filter:brightness(1.35) saturate(1.15)}
 .section_home-cta.is-lit .home-cta_beam{opacity:1}
 .section_home-cta.is-lit .home-cta_sweep{animation-duration:2.4s}
-.home-cta_actions{translate:var(--cta-mx,0px) var(--cta-my,0px);transition:translate .5s cubic-bezier(.33,1,.68,1)}
 @media (max-width:991px){.home-cta_mark{right:-5.625rem}.home-cta_beam{right:1.875rem}}
-@media (prefers-reduced-motion:reduce){.home-cta_sweep{animation:none;transform:translate(-75px,-75px)}.home-cta_mark,.home-cta_actions{transform:none!important;translate:none!important}}
+@media (prefers-reduced-motion:reduce){.home-cta_sweep{animation:none;transform:translate(-75px,-75px)}.home-cta_mark{transform:none!important}}
 </style>
 <script>
 document.addEventListener('DOMContentLoaded',function(){var bg=document.querySelector('.home-hero_bg');if(!bg||!('IntersectionObserver' in window))return;new IntersectionObserver(function(e){bg.classList.toggle('is-off',!e[0].isIntersecting);}).observe(bg);});

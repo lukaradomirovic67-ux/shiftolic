@@ -239,10 +239,10 @@
 </script>
 <script>
 /* Home CTA (Figma 9098:24): the glass N leans a little toward the mouse while it is over the section; hovering or focusing the button
-   lights the N up (.is-lit on the section) and the button follows the mouse by a few pixels. Mouse only, and not with reduced motion. */
+   lights the N up (.is-lit on the section); the button keeps the same hover as every other button. The lean is mouse only, and not with reduced motion. */
 (function(){
   var s=document.querySelector('.section_home-cta');if(!s)return;
-  var n=s.querySelector('.home-cta_mark'),a=s.querySelector('.home-cta_actions'),b=a&&a.querySelector('.button');
+  var n=s.querySelector('.home-cta_mark'),b=s.querySelector('.home-cta_actions .button');
   var move=!window.matchMedia('(prefers-reduced-motion: reduce)').matches&&window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   if(n&&move){
     s.addEventListener('mousemove',function(e){var r=s.getBoundingClientRect();n.style.setProperty('--cta-ry',((e.clientX-r.left)/r.width-.5)*10+'deg');n.style.setProperty('--cta-rx',-((e.clientY-r.top)/r.height-.5)*8+'deg');});
@@ -250,8 +250,7 @@
   }
   if(!b)return;
   function on(){s.classList.add('is-lit');}
-  function off(){s.classList.remove('is-lit');a.style.setProperty('--cta-mx','0px');a.style.setProperty('--cta-my','0px');}
+  function off(){s.classList.remove('is-lit');}
   b.addEventListener('mouseenter',on);b.addEventListener('mouseleave',off);b.addEventListener('focus',on);b.addEventListener('blur',off);
-  if(move)b.addEventListener('mousemove',function(e){var r=b.getBoundingClientRect();a.style.setProperty('--cta-mx',((e.clientX-r.left)/r.width-.5)*8+'px');a.style.setProperty('--cta-my',((e.clientY-r.top)/r.height-.5)*6+'px');});
 })();
 </script>
