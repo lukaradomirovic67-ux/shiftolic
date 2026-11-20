@@ -12,7 +12,7 @@ Ovo je jedini aktuelni spisak. Namerno ostavljene stvari su u `notes/nereseno.md
 7. **Geist kao font sa našeg servera:** umesto Google WebFont loader-a. *Napomena 20.11.: ovo si 13.11. odlučio da ne radimo (MANUAL_TASKS #8); traži ručni upload fonta u Webflow podešavanjima.*
 
 ## Čeka da otpremiš
-- **Stara pozadinska slika Home CTA** (`home-cta-bg.avif`) se više ne koristi: brisanje iz Assets na tvoje „da“.
+- ~~**Stara pozadinska slika Home CTA** (`home-cta-bg.avif`)~~: **obrisana 20.11.**, zajedno sa starim CTA linijama i neiskorišćenim hero videom (CHANGELOG 20.11.).
 - ~~**3 izravnata videa za Our Work slider** (Sustain, Shiftolic, Ballerine)~~: **urađeno 20.11.** Ti si otpremio fajlove, ja sam ih upisao u CMS i objavio na staging (CHANGELOG 20.11.).
 
 ## Odluke (ti ili Aleksandar)
@@ -27,7 +27,7 @@ Ovo je jedini aktuelni spisak. Namerno ostavljene stvari su u `notes/nereseno.md
 - **FAQ:** 30 odgovora (moj nacrt) i 4 pitanja čekaju potvrdu. Posle toga ide FAQPage schema. *20.11.: ostaje kako jeste, upisano u `notes/nereseno.md`.*
 - **5 projekata bez studije** (Biotech, Harper, Hypersonix, Intaker, LaSalle): izbaciti iz sitemap-a ili napisati studije. *20.11.: opcija (a), ručni sitemap pripremljen (`webflow-assets/seo/sitemap-manual.xml`), ubacuje se na dan lansiranja (MANUAL_TASKS tačka 3).*
 - **iClosed kartica na Home:** varijanta A ili B. *20.11.: rešeno drugačije, umesto kartice je nova CTA sekcija sa dugmetom ka Let's talk (Figma 9098:24).*
-- **Domen:** www kao glavni.
+- **Domen:** www kao glavni. *20.11.: još nije na redu (tvoja odluka).*
 - **Izgled:**
   - jedna reč sama u poslednjem redu naslova na telefonu;
   - prelom u CTA podnaslovu;

@@ -3,6 +3,20 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 20.11.2026: obrisani stara CTA grafika i stari hero video (Assets)
+Tvoje „obriši staru verziju CTA, i obriši stare video snimke koje ne koristimo“. Kopije svih fajlova: `backup/assets/unused-2026-11-20/`.
+
+| Asset | Šta je bio | Zašto ne treba |
+|---|---|---|
+| `6afb8acb1ba525d9d1a53a4c` home-cta-bg.avif (25 KB) | pozadina Home CTA od 16.11. | zamenjena novom CTA sekcijom 20.11. |
+| `6ad11f575f7e670a211dfdfe` home-cta-lines.svg (2 KB) | linije u CTA pre 16.11. (`backup/elements/home-cta-section-2026-11-16.json`) | ne koristi se od 16.11. |
+| `6ad657e9faa3c82f31f4bdd1` nues-hero-bg.mp4 (0,9 MB) | stari pozadinski video za hero (otpremljen 19.10.) | nigde se ne koristi |
+| `6ad657e9faa3c82f31f4bded` nues-hero-bg.webm (0,26 MB) | isti video, webm | nigde se ne koristi |
+
+- Provera pre brisanja: nijedan od 4 fajla se ne pominje na 48 objavljenih stranica, u CSS-u ni JS-u sajta, ni u custom kodu u repou; na draft stranicama (Webflow Integrations, Style Guide) i među skrivenim elementima na Home nema video elemenata ni starih CTA klasa.
+- U Assets sada ostaju samo 4 videa i svi se koriste u Our Work slideru (TrakPro + 3 izravnata).
+- Provereno posle brisanja: Home i Our Work bez neispravnih fajlova i bez JS grešaka.
+
 ## 20.11.2026: obrisana 3 stara videa za Our Work slider (Assets)
 Tvoje „možemo li ove koje ne koristimo da obrišemo“. Pre brisanja: nijedna stavka u Our Works ne koristi stare linkove (proverenih svih 11), a originali su sačuvani u `backup/assets/slider-video-old-2026-11-20/` (md5: sustain eff6590b…, shiftolic ec96dc04…, ballerine dda94ccf…).
 - Obrisani asset-i: `6af646c4deb177f9145906ae` sustain-slider.mp4, `6af646caa0271d7cf124d95c` shiftolic-slider.mp4, `6af646d045263033b2f2e934` ballerine-slider.mp4.
