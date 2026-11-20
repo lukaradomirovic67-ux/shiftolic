@@ -16,7 +16,7 @@ Ovo je jedini aktuelni spisak. `preostalo-2026-11-17.md` i stariji su istorija.
 
 ## Odluke (ti ili Aleksandar)
 - **Dupli GA4:** koji ostaje. Preporuka: Webflow integracija, a kod iz Head da se obriše. *20.11.: preskočeno, tvoja odluka; kod u Head ostaje.*
-- **Cookie banner (Finsweet ili CookieYes) i Consent Mode:** sada se prati bez pristanka.
+- **Cookie banner (Finsweet ili CookieYes) i Consent Mode:** sada se prati bez pristanka. *20.11.: preskočeno, tvoja odluka.*
 - **Cene:**
   - „[$X,XXX]“ 2 puta na Pricing;
   - $5,000 na Services naspram $20,000 na Pricing;
