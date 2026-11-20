@@ -3,6 +3,26 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 20.11.2026: slike za deljenje (og:image) više nisu AVIF (objavljeno na staging)
+Tvoje „da“ na predlog da se 7 slika zameni WebP verzijama. Kopija polja pre izmene: `backup/cms-items/share-image-before-2026-11-20.json`. WebP fajlovi: `webflow-assets/og/webp-2026-11-20/`.
+
+**Zašto ne novo polje „Share image“ sa JPG-om, kako je ranije predloženo:** Webflow PNG i JPG slike iz CMS-a na sajtu sam servira kao AVIF (npr. TrakPro slika je u CMS-u bila PNG, a na stranici AVIF; isto JPG slike u blog tekstovima). WebP ostavlja kakav jeste. LinkedIn AVIF ne prikazuje; WebP je prošao na javnom testu (joost.blog), ali LinkedIn to zvanično ne navodi za preglede linkova.
+
+| Stranica | Polje | Pre | Posle |
+|---|---|---|---|
+| Ballerine | Our Works › Main image | AVIF 25 KB | WebP 48 KB |
+| Shiftolic | Our Works › Main image | AVIF 16 KB | WebP 37 KB |
+| Sustain Commercial Solar | Our Works › Main image | AVIF 33 KB | WebP 61 KB |
+| TrakPro | Our Works › Main image | PNG u CMS-u, AVIF na sajtu | WebP 57 KB |
+| Veyor Digital | Our Works › Main image | AVIF 83 KB | WebP 200 KB |
+| Sanity vs Webflow (blog) | Blogs › Thumbnail image | PNG 1,7 MB u CMS-u, AVIF na sajtu | WebP 32 KB |
+| Source by Webflow (blog) | Blogs › Thumbnail image | PNG 1,8 MB u CMS-u, AVIF na sajtu | WebP 32 KB |
+
+- Iste slike, iste dimenzije, menja se samo format (WebP, kvalitet 85; providnost kod Ballerine i Shiftolic sačuvana). Alt je ostao prazan, kao i pre.
+- Iste slike se vide i na stranicama: na case stranici (centralni ekran), na karticama (Our Work, Home, Resources) i u heroju i karticama bloga. Provereno na 11 stranica: 43 slike se učitavaju, nijedna nije slomljena, stari AVIF fajlovi se više ne koriste.
+- Posle objave: og:image i twitter:image na 7 stranica su nove WebP slike (200, image/webp). Ceo sajt: 31 stranica WebP, 15 JPG, 0 AVIF.
+- Ostaje za posle lansiranja: proveriti nekoliko adresa u LinkedIn Post Inspector-u (radi samo na javnom domenu). Ako LinkedIn ne prikaže WebP, sledeći korak je JPG preko koda u šablonu.
+
 ## 19.11.2026: alt tekst na 46 slika u blog tekstovima (objavljeno na staging)
 Tvoje „ma odobravam sve“: svi predlozi sa stranice za pregled (https://claude.ai/artifact/BG3BpjGKmLqLW43tMnPT7t) idu onako kako su napisani. Kopija pre izmene (sveže pročitana neposredno pre upisa): `backup/cms-items/blog-alt-before-2026-11-19.json`. Predlozi sa adresama slika: `notes/blog-alt-predlozi-2026-11-19.json`.
 
