@@ -1,0 +1,58 @@
+<!-- iClosed booking widget (the .iclosed-widget container is a native element on the page) -->
+<script type="text/javascript" src="https://app.iclosed.io/assets/widget.js" async></script>
+<!-- Booking form (lt-form): step 1 is a native Webflow form ("Book a call"); after a successful submit step 2 shows
+     the Cal.com calendar with name, email and the answers prefilled. The Cal.com link goes in the data-cal-link
+     attribute of .lt-form (e.g. "nues/discovery-call"); while it is empty, step 2 shows a placeholder.
+     Phone field: intl-tel-input 25.3.1 (MIT) adds the country flag and dial code; the full number is sent. -->
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInput.min.js"></script>
+<script>
+(function(){
+  var wraps=document.querySelectorAll('[data-lt-form]');
+  if(!wraps.length)return;
+  var CAL='https://app.cal.com';
+  function country(){var l=(navigator.languages&&navigator.languages[0])||navigator.language||'';var m=l.match(/-([A-Za-z]{2})$/);return m?m[1].toLowerCase():'us';}
+  function loadCal(){if(window.Cal)return;(function(C,A,L){var p=function(a,ar){a.q.push(ar);};var d=C.document;C.Cal=C.Cal||function(){var cal=C.Cal;var ar=arguments;if(!cal.loaded){cal.ns={};cal.q=cal.q||[];d.head.appendChild(d.createElement('script')).src=A;cal.loaded=true;}if(ar[0]===L){var api=function(){p(api,arguments);};var ns=ar[1];api.q=api.q||[];if(typeof ns==='string'){cal.ns[ns]=cal.ns[ns]||api;p(cal.ns[ns],ar);p(cal,['initNamespace',ns]);}else p(cal,ar);return;}p(cal,ar);};})(window,CAL+'/embed/embed.js','init');}
+  wraps.forEach(function(w,i){
+    var form=w.querySelector('form');if(!form)return;
+    form.querySelectorAll('input,textarea').forEach(function(el){if(/^example text$/i.test(el.getAttribute('placeholder')||''))el.removeAttribute('placeholder');});
+    var em=form.querySelector('[name="Email"]'),nm=form.querySelector('[name="Name"]');
+    if(em)em.setAttribute('placeholder','Email *');if(nm)nm.setAttribute('placeholder','Name *');
+    var pc=w.querySelector('[data-lt-preview-cal]');
+    if(pc){var now=new Date(),y=now.getFullYear(),m=now.getMonth(),first=new Date(y,m,1).getDay(),days=new Date(y,m+1,0).getDate();
+      var html='<div class="lt-form_preview-head"><span>'+now.toLocaleString('en-US',{month:'long'})+' '+y+'</span><span class="lt-form_preview-arrows"><span class="lt-form_preview-arrow">&#8249;</span><span class="lt-form_preview-arrow">&#8250;</span></span></div><div class="lt-form_preview-grid">';
+      ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].forEach(function(d){html+='<span class="lt-form_preview-dow">'+d+'</span>';});
+      for(var k=0;k<first;k++)html+='<span></span>';
+      for(var d=1;d<=days;d++)html+='<span class="lt-form_preview-day">'+d+'</span>';
+      pc.innerHTML=html+'</div>';}
+    if(em&&nm){
+      form.classList.add('is-short');
+      var ready=function(){return !!nm.value.trim()&&!!em.value.trim()&&em.checkValidity();};
+      var reveal=function(){if(ready()){form.classList.remove('is-short');w.classList.add('is-expanded');}};
+      em.addEventListener('input',reveal);nm.addEventListener('input',reveal);em.addEventListener('change',reveal);nm.addEventListener('change',reveal);
+      var go=form.querySelector('[type="submit"]');if(go)go.addEventListener('click',reveal,true);
+    }
+    var tel=form.querySelector('input[type="tel"]'),iti=null;
+    if(tel&&window.intlTelInput){
+      try{iti=window.intlTelInput(tel,{initialCountry:country(),separateDialCode:true,countrySearch:true,dropdownContainer:document.body,loadUtils:function(){return import('https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/utils.js');}});}catch(e){iti=null;}
+    }
+    function val(n){var c=form.querySelector('[name="'+n+'"]:checked');if(c)return c.value;var el=form.querySelector('[name="'+n+'"]');return el&&el.type!=='radio'?(el.value||'').trim():'';}
+    form.addEventListener('submit',function(){if(iti){try{var full=iti.getNumber();if(full)tel.value=full;}catch(e){}}},true);
+    function open(){
+      if(w.classList.contains('is-open'))return;
+      w.classList.add('is-open');
+      w.querySelectorAll('[data-lt-step]').forEach(function(s){var two=s.getAttribute('data-lt-step')==='2';s.classList.toggle('is-active',two);s.classList.toggle('is-done',!two);});
+      var link=(w.getAttribute('data-cal-link')||'').trim(),box=w.querySelector('[data-lt-cal]'),empty=w.querySelector('[data-lt-cal-empty]');
+      if(!link||!box)return;
+      if(empty)empty.style.display='none';
+      var notes=['Phone: '+val('Phone'),'Company: '+val('Company'),'Website: '+val('Website'),'Budget: '+val('Budget'),'How they heard about us: '+val('Source'),'',val('Notes')].join('\n');
+      loadCal();
+      var ns='ltcal'+i;if(!box.id)box.id='lt-cal-'+i;
+      window.Cal('init',ns,{origin:CAL});
+      window.Cal.ns[ns]('inline',{elementOrSelector:'#'+box.id,calLink:link,config:{name:val('Name'),email:val('Email'),notes:notes,layout:'month_view',theme:'light'}});
+      window.Cal.ns[ns]('ui',{hideEventTypeDetails:true,layout:'month_view'});
+    }
+    var done=w.querySelector('.w-form-done');
+    if(done&&window.MutationObserver){new MutationObserver(function(){if(getComputedStyle(done).display!=='none')open();}).observe(done,{attributes:true,attributeFilter:['style','class']});}
+  });
+})();
+</script>

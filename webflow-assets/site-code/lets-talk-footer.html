@@ -1,29 +1,48 @@
 <!-- iClosed booking widget (the .iclosed-widget container is a native element on the page) -->
 <script type="text/javascript" src="https://app.iclosed.io/assets/widget.js" async></script>
 <!-- Booking form (lt-form): step 1 is a native Webflow form ("Book a call"); after a successful submit step 2 shows
-     the Cal.com calendar with name, email and the answers prefilled. The Cal.com link goes in the data-cal-link
-     attribute of .lt-form (e.g. "nues/discovery-call"); while it is empty, step 2 shows a placeholder.
+     our own calendar. Free times come from the Cal.com API and the booking is created there too (no key needed for a
+     public event). The event goes in the data-cal-link attribute of .lt-form as "username/event-slug".
      Phone field: intl-tel-input 25.3.1 (MIT) adds the country flag and dial code; the full number is sent. -->
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInput.min.js"></script>
 <script>
 (function(){
   var wraps=document.querySelectorAll('[data-lt-form]');
   if(!wraps.length)return;
-  var CAL='https://app.cal.com';
+  var API='https://api.cal.com/v2', MAX_GUESTS=5;
+  var browserTz=(Intl.DateTimeFormat().resolvedOptions().timeZone)||'Europe/Belgrade';
   function country(){var l=(navigator.languages&&navigator.languages[0])||navigator.language||'';var m=l.match(/-([A-Za-z]{2})$/);return m?m[1].toLowerCase():'us';}
-  function loadCal(){if(window.Cal)return;(function(C,A,L){var p=function(a,ar){a.q.push(ar);};var d=C.document;C.Cal=C.Cal||function(){var cal=C.Cal;var ar=arguments;if(!cal.loaded){cal.ns={};cal.q=cal.q||[];d.head.appendChild(d.createElement('script')).src=A;cal.loaded=true;}if(ar[0]===L){var api=function(){p(api,arguments);};var ns=ar[1];api.q=api.q||[];if(typeof ns==='string'){cal.ns[ns]=cal.ns[ns]||api;p(cal.ns[ns],ar);p(cal,['initNamespace',ns]);}else p(cal,ar);return;}p(cal,ar);};})(window,CAL+'/embed/embed.js','init');}
-  wraps.forEach(function(w,i){
+  function pad(n){return (n<10?'0':'')+n;}
+  function ymd(y,m,d){return y+'-'+pad(m+1)+'-'+pad(d);}
+  function el(tag,cls,text){var e=document.createElement(tag);if(cls)e.className=cls;if(text!=null)e.textContent=text;if(tag==='button')e.type='button';return e;}
+  function todayIn(tz){return new Intl.DateTimeFormat('en-CA',{timeZone:tz,year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());}
+  function monthName(y,m){return new Date(Date.UTC(y,m,1)).toLocaleString('en-US',{month:'long',timeZone:'UTC'})+' '+y;}
+  function slotsFor(link,tz,y,m){
+    var parts=link.split('/'),today=todayIn(tz),first=ymd(y,m,1),last=ymd(y,m,new Date(Date.UTC(y,m+1,0)).getUTCDate());
+    if(last<today)return Promise.resolve({});
+    var start=first<today?today:first;
+    var url=API+'/slots?username='+encodeURIComponent(parts[0])+'&eventTypeSlug='+encodeURIComponent(parts[1])+'&start='+start+'&end='+last+'&timeZone='+encodeURIComponent(tz);
+    return fetch(url,{headers:{'cal-api-version':'2024-09-04'}}).then(function(r){return r.json();}).then(function(j){if(!j||j.status!=='success')throw new Error('slots');return j.data||{};});
+  }
+  wraps.forEach(function(w){
     var form=w.querySelector('form');if(!form)return;
-    form.querySelectorAll('input,textarea').forEach(function(el){if(/^example text$/i.test(el.getAttribute('placeholder')||''))el.removeAttribute('placeholder');});
+    var link=(w.getAttribute('data-cal-link')||'').trim();
+    form.querySelectorAll('input,textarea').forEach(function(x){if(/^example text$/i.test(x.getAttribute('placeholder')||''))x.removeAttribute('placeholder');});
     var em=form.querySelector('[name="Email"]'),nm=form.querySelector('[name="Name"]');
     if(em)em.setAttribute('placeholder','Email *');if(nm)nm.setAttribute('placeholder','Name *');
+    function val(n){var c=form.querySelector('[name="'+n+'"]:checked');if(c)return c.value;var x=form.querySelector('[name="'+n+'"]');return x&&x.type!=='radio'?(x.value||'').trim():'';}
+
+    /* Step 1: locked calendar preview under the form (this month; free days are marked once the Cal.com event answers) */
     var pc=w.querySelector('[data-lt-preview-cal]');
-    if(pc){var now=new Date(),y=now.getFullYear(),m=now.getMonth(),first=new Date(y,m,1).getDay(),days=new Date(y,m+1,0).getDate();
-      var html='<div class="lt-form_preview-head"><span>'+now.toLocaleString('en-US',{month:'long'})+' '+y+'</span><span class="lt-form_preview-arrows"><span class="lt-form_preview-arrow">&#8249;</span><span class="lt-form_preview-arrow">&#8250;</span></span></div><div class="lt-form_preview-grid">';
+    if(pc){var now=new Date(),py=now.getFullYear(),pm=now.getMonth(),first=new Date(py,pm,1).getDay(),days=new Date(py,pm+1,0).getDate();
+      var html='<div class="lt-form_preview-head"><span>'+monthName(py,pm)+'</span><span class="lt-form_preview-arrows"><span class="lt-form_preview-arrow">&#8249;</span><span class="lt-form_preview-arrow">&#8250;</span></span></div><div class="lt-form_preview-grid">';
       ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].forEach(function(d){html+='<span class="lt-form_preview-dow">'+d+'</span>';});
       for(var k=0;k<first;k++)html+='<span></span>';
-      for(var d=1;d<=days;d++)html+='<span class="lt-form_preview-day">'+d+'</span>';
-      pc.innerHTML=html+'</div>';}
+      for(var d=1;d<=days;d++)html+='<span class="lt-form_preview-day" data-d="'+ymd(py,pm,d)+'">'+d+'</span>';
+      pc.innerHTML=html+'</div>';
+      if(link)slotsFor(link,browserTz,py,pm).then(function(data){Object.keys(data).forEach(function(k){var c=pc.querySelector('[data-d="'+k+'"]');if(c&&data[k].length)c.classList.add('is-available');});}).catch(function(){});
+    }
+    /* Step 1: Email and Name first, the other questions once both are filled in */
     if(em&&nm){
       form.classList.add('is-short');
       var ready=function(){return !!nm.value.trim()&&!!em.value.trim()&&em.checkValidity();};
@@ -35,21 +54,146 @@
     if(tel&&window.intlTelInput){
       try{iti=window.intlTelInput(tel,{initialCountry:country(),separateDialCode:true,countrySearch:true,dropdownContainer:document.body,loadUtils:function(){return import('https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/utils.js');}});}catch(e){iti=null;}
     }
-    function val(n){var c=form.querySelector('[name="'+n+'"]:checked');if(c)return c.value;var el=form.querySelector('[name="'+n+'"]');return el&&el.type!=='radio'?(el.value||'').trim():'';}
     form.addEventListener('submit',function(){if(iti){try{var full=iti.getNumber();if(full)tel.value=full;}catch(e){}}},true);
+
+    /* Step 2: our calendar (free days, times, time zone with search, guests, Confirm, thank you) */
+    function calendar(box){
+      var st={tz:browserTz,y:0,m:0,data:{},sel:null,h12:true,guests:[],busy:false,autoNext:true};
+      var t=todayIn(st.tz).split('-');st.y=+t[0];st.m=+t[1]-1;
+      box.innerHTML='';
+      var root=el('div','lt-cal');
+      var head=el('div','lt-cal_head'),mon=el('div','lt-cal_month'),nav=el('div','lt-cal_nav'),prev=el('button','lt-cal_arrow','‹'),next=el('button','lt-cal_arrow','›');
+      prev.setAttribute('aria-label','Previous month');next.setAttribute('aria-label','Next month');
+      nav.appendChild(prev);nav.appendChild(next);head.appendChild(mon);head.appendChild(nav);
+      var grid=el('div','lt-cal_grid'),status=el('div','lt-cal_status');status.setAttribute('aria-live','polite');
+      var tzw=el('div','lt-cal_tz'),tzb=el('button','lt-cal_tz-button'),tzl=el('span'),tzc=el('span',null,'▾'),panel=el('div','lt-cal_tz-panel'),list=el('div','lt-cal_tz-list'),search=el('input','lt-cal_tz-search');
+      tzb.setAttribute('aria-haspopup','listbox');tzb.setAttribute('aria-expanded','false');tzb.appendChild(tzl);tzb.appendChild(tzc);
+      search.type='text';search.placeholder='Search by continent, country or city';search.setAttribute('aria-label','Search time zones');list.setAttribute('role','listbox');
+      panel.hidden=true;panel.appendChild(list);panel.appendChild(search);tzw.appendChild(tzb);tzw.appendChild(panel);
+      var gw=el('div','lt-cal_guests'),gh=el('div','lt-cal_guests-head'),gc=el('span','lt-cal_count'),chips=el('div','lt-cal_chips'),grow=el('div','lt-cal_guest-row'),gin=el('input','lt-cal_guest-input'),gok=el('button','lt-cal_guest-ok','✓'),gadd=el('button','lt-cal_add','+ Add guests');
+      gh.appendChild(el('span',null,'Add guests (Optional)'));gh.appendChild(gc);gin.type='email';gin.placeholder='Email';gin.setAttribute('aria-label','Guest email');gok.setAttribute('aria-label','Add guest');
+      grow.hidden=true;grow.appendChild(gin);grow.appendChild(gok);gw.appendChild(gh);gw.appendChild(chips);gw.appendChild(grow);gw.appendChild(gadd);
+      var dh=el('div','lt-cal_day-head'),dt=el('div','lt-cal_day-title'),tg=el('div','lt-cal_toggle'),b12=el('button','lt-cal_toggle-btn is-active','12h'),b24=el('button','lt-cal_toggle-btn','24h');
+      tg.appendChild(b12);tg.appendChild(b24);dh.appendChild(dt);dh.appendChild(tg);
+      var slots=el('div','lt-cal_slots');
+      [head,grid,status,tzw,gw,dh,slots].forEach(function(n){root.appendChild(n);});
+      box.appendChild(root);
+
+      function tzLabel(z){var tm='';try{tm=new Intl.DateTimeFormat('en-US',{hour:'numeric',minute:'2-digit',timeZone:z}).format(new Date());}catch(e){}return {name:z.replace(/_/g,' '),time:tm};}
+      function setTz(z){st.tz=z;var l=tzLabel(z);tzl.textContent=l.name+' ('+l.time+')';}
+      function fmtTime(iso){return new Intl.DateTimeFormat('en-US',{hour:'numeric',minute:'2-digit',hour12:st.h12,timeZone:st.tz}).format(new Date(iso));}
+      function dayTitle(k){var p=k.split('-'),dd=new Date(Date.UTC(+p[0],+p[1]-1,+p[2]));return dd.toLocaleString('en-US',{weekday:'short',timeZone:'UTC'})+' '+(+p[2]);}
+      function renderGrid(){
+        mon.textContent=monthName(st.y,st.m);grid.innerHTML='';
+        ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].forEach(function(d){grid.appendChild(el('div','lt-cal_dow',d));});
+        var first=new Date(Date.UTC(st.y,st.m,1)).getUTCDay(),days=new Date(Date.UTC(st.y,st.m+1,0)).getUTCDate(),today=todayIn(st.tz);
+        for(var k=0;k<first;k++)grid.appendChild(el('span'));
+        for(var d=1;d<=days;d++){
+          var key=ymd(st.y,st.m,d),b=el('button','lt-cal_day',String(d)),free=st.data[key]&&st.data[key].length;
+          if(key===today)b.classList.add('is-today');
+          if(free){b.classList.add('is-available');b.setAttribute('aria-label',dayTitle(key)+', available');(function(k2){b.addEventListener('click',function(){pickDay(k2);});})(key);}else{b.disabled=true;}
+          if(key===st.sel){b.classList.add('is-selected');b.setAttribute('aria-pressed','true');}
+          grid.appendChild(b);
+        }
+        var t2=todayIn(st.tz).split('-');prev.disabled=(st.y<+t2[0])||(st.y===+t2[0]&&st.m<=+t2[1]-1);prev.classList.toggle('is-disabled',prev.disabled);
+      }
+      function renderSlots(){
+        slots.innerHTML='';
+        if(!st.sel){dt.textContent='Pick a day';return;}
+        dt.textContent=dayTitle(st.sel);
+        (st.data[st.sel]||[]).forEach(function(s){
+          var b=el('button','lt-cal_slot',fmtTime(s.start));
+          b.addEventListener('click',function(){pickSlot(s,b);});
+          slots.appendChild(b);
+        });
+      }
+      function pickDay(k){st.sel=k;renderGrid();renderSlots();}
+      function pickSlot(s,b){
+        var old=slots.querySelector('.lt-cal_pick');
+        if(old){var ob=old.querySelector('.lt-cal_slot');old.parentNode.replaceChild(ob,old);}
+        if(b.parentNode!==slots)return;
+        var row=el('div','lt-cal_pick'),cf=el('button','lt-cal_confirm','Confirm');
+        slots.replaceChild(row,b);row.appendChild(b);row.appendChild(cf);
+        cf.addEventListener('click',function(){book(s,cf);});cf.focus();
+      }
+      function load(){
+        status.textContent='Loading available times…';
+        return slotsFor(link,st.tz,st.y,st.m).then(function(data){
+          st.data=data;var keys=Object.keys(data).filter(function(k){return data[k].length;}).sort();
+          if(!keys.length&&st.autoNext){st.autoNext=false;moveMonth(1);return;}
+          st.autoNext=false;
+          if(!st.sel||!data[st.sel])st.sel=keys[0]||null;
+          status.textContent=keys.length?'':'No available times this month. Try the next month.';
+          renderGrid();renderSlots();
+        }).catch(function(){status.textContent='Could not load available times. Please refresh the page, or email hello@nues.agency.';});
+      }
+      function moveMonth(dir){st.m+=dir;if(st.m<0){st.m=11;st.y--;}if(st.m>11){st.m=0;st.y++;}st.sel=null;st.data={};renderGrid();renderSlots();load();}
+      prev.addEventListener('click',function(){if(!prev.disabled)moveMonth(-1);});
+      next.addEventListener('click',function(){moveMonth(1);});
+      b12.addEventListener('click',function(){st.h12=true;b12.classList.add('is-active');b24.classList.remove('is-active');renderSlots();});
+      b24.addEventListener('click',function(){st.h12=false;b24.classList.add('is-active');b12.classList.remove('is-active');renderSlots();});
+      /* time zone: dropdown with search */
+      var zones=[];try{zones=Intl.supportedValuesOf('timeZone').slice();}catch(e){}
+      if(!zones.length)zones=['Europe/Belgrade','Europe/London','Europe/Berlin','Europe/Paris','America/New_York','America/Chicago','America/Denver','America/Los_Angeles','Asia/Dubai','Asia/Singapore','Australia/Sydney','UTC'];
+      if(zones.indexOf(st.tz)<0)zones.unshift(st.tz);
+      function fillList(q){
+        list.innerHTML='';q=(q||'').toLowerCase().replace(/\s+/g,' ').trim();
+        zones.filter(function(z){return !q||z.toLowerCase().replace(/_/g,' ').indexOf(q)>-1;}).slice(0,200).forEach(function(z){
+          var l=tzLabel(z),it=el('button','lt-cal_tz-item');it.setAttribute('role','option');
+          if(z===st.tz){it.classList.add('is-current');it.setAttribute('aria-selected','true');}
+          it.appendChild(el('span',null,l.name));it.appendChild(el('span','lt-cal_tz-time',l.time));
+          it.addEventListener('click',function(){setTz(z);closeTz();st.data={};st.sel=null;load();});
+          list.appendChild(it);
+        });
+      }
+      function openTz(){panel.hidden=false;tzb.setAttribute('aria-expanded','true');search.value='';fillList('');search.focus();var c=list.querySelector('.is-current');if(c)list.scrollTop=Math.max(0,c.offsetTop-list.offsetTop-80);}
+      function closeTz(){panel.hidden=true;tzb.setAttribute('aria-expanded','false');}
+      tzb.addEventListener('click',function(){if(panel.hidden)openTz();else closeTz();});
+      search.addEventListener('input',function(){fillList(search.value);});
+      document.addEventListener('click',function(e){if(!panel.hidden&&!tzw.contains(e.target))closeTz();});
+      document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!panel.hidden){closeTz();tzb.focus();}});
+      /* guests (up to 5, by email) */
+      function renderGuests(){chips.innerHTML='';gc.textContent=st.guests.length+'/'+MAX_GUESTS;
+        st.guests.forEach(function(g,i){var c=el('span','lt-cal_chip'),x=el('button','lt-cal_chip-x','×');x.setAttribute('aria-label','Remove '+g);c.appendChild(el('span',null,g));c.appendChild(x);x.addEventListener('click',function(){st.guests.splice(i,1);renderGuests();});chips.appendChild(c);});
+        gadd.hidden=st.guests.length>=MAX_GUESTS||!grow.hidden;}
+      function addGuest(){var v=gin.value.trim();if(!v)return;if(!gin.checkValidity()){gin.reportValidity();return;}if(st.guests.indexOf(v)<0&&st.guests.length<MAX_GUESTS)st.guests.push(v);gin.value='';grow.hidden=true;renderGuests();}
+      gadd.addEventListener('click',function(){grow.hidden=false;gadd.hidden=true;gin.focus();});
+      gok.addEventListener('click',addGuest);
+      gin.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();addGuest();}});
+      /* booking */
+      function fail(cf,text){st.busy=false;status.textContent=text;if(cf){cf.disabled=false;cf.textContent='Confirm';}}
+      function book(s,cf){
+        if(st.busy)return;st.busy=true;cf.disabled=true;cf.textContent='Booking…';
+        var notes=['Phone: '+val('Phone'),'Company: '+val('Company'),'Website: '+val('Website'),'Budget: '+val('Budget'),'How they heard about us: '+val('Source'),'',val('Notes')].join('\n');
+        var parts=link.split('/');
+        fetch(API+'/bookings',{method:'POST',headers:{'Content-Type':'application/json','cal-api-version':'2024-08-13'},body:JSON.stringify({start:new Date(s.start).toISOString(),eventTypeSlug:parts[1],username:parts[0],attendee:{name:val('Name'),email:val('Email'),timeZone:st.tz,language:'en'},guests:st.guests,bookingFieldsResponses:{notes:notes}})})
+        .then(function(r){return r.json().then(function(j){return {ok:r.ok,j:j};});})
+        .then(function(res){
+          if(res.ok&&res.j&&res.j.status==='success'){done(res.j.data||{},s);return;}
+          var msg=((res.j&&res.j.error&&res.j.error.message)||'').toLowerCase();
+          if(/available|taken|already|conflict/.test(msg)){fail(null,'That time was just taken. Please pick another one.');st.data={};load();}
+          else fail(cf,'Something went wrong while booking. Please try again, or email hello@nues.agency.');
+        }).catch(function(){fail(cf,'Something went wrong while booking. Please try again, or email hello@nues.agency.');});
+      }
+      function done(b,s){
+        var startIso=b.start||s.start,endIso=b.end||null,f=new Intl.DateTimeFormat('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric',timeZone:st.tz});
+        var when=f.format(new Date(startIso))+' · '+fmtTime(startIso)+(endIso?' – '+fmtTime(endIso):'')+' ('+st.tz.replace(/_/g,' ')+')';
+        box.innerHTML='';var d=el('div','lt-cal_done');
+        d.appendChild(el('div','lt-cal_done-icon','✓'));d.appendChild(el('div','lt-cal_done-title','You’re booked'));
+        d.appendChild(el('div','lt-cal_done-when',when));d.appendChild(el('p','lt-cal_done-text','A calendar invitation has been sent to '+val('Email')+'.'));
+        box.appendChild(d);
+        w.querySelectorAll('[data-lt-step]').forEach(function(x){x.classList.add('is-done');x.classList.remove('is-active');});
+      }
+      setTz(st.tz);renderGuests();renderGrid();renderSlots();load();
+    }
+
     function open(){
       if(w.classList.contains('is-open'))return;
       w.classList.add('is-open');
       w.querySelectorAll('[data-lt-step]').forEach(function(s){var two=s.getAttribute('data-lt-step')==='2';s.classList.toggle('is-active',two);s.classList.toggle('is-done',!two);});
-      var link=(w.getAttribute('data-cal-link')||'').trim(),box=w.querySelector('[data-lt-cal]'),empty=w.querySelector('[data-lt-cal-empty]');
-      if(!link||!box)return;
-      if(empty)empty.style.display='none';
-      var notes=['Phone: '+val('Phone'),'Company: '+val('Company'),'Website: '+val('Website'),'Budget: '+val('Budget'),'How they heard about us: '+val('Source'),'',val('Notes')].join('\n');
-      loadCal();
-      var ns='ltcal'+i;if(!box.id)box.id='lt-cal-'+i;
-      window.Cal('init',ns,{origin:CAL});
-      window.Cal.ns[ns]('inline',{elementOrSelector:'#'+box.id,calLink:link,config:{name:val('Name'),email:val('Email'),notes:notes,layout:'month_view',theme:'light'}});
-      window.Cal.ns[ns]('ui',{hideEventTypeDetails:true,layout:'month_view'});
+      var top=w.getBoundingClientRect().top+window.scrollY-110;if(window.scrollY>top)window.scrollTo({top:top,behavior:'smooth'});
+      var box=w.querySelector('[data-lt-cal]');
+      if(box&&link)calendar(box);
     }
     var done=w.querySelector('.w-form-done');
     if(done&&window.MutationObserver){new MutationObserver(function(){if(getComputedStyle(done).display!=='none')open();}).observe(done,{attributes:true,attributeFilter:['style','class']});}
