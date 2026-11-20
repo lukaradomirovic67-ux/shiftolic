@@ -28,15 +28,15 @@ Ovo je jedini aktuelni spisak. Namerno ostavljene stvari su u `notes/nereseno.md
 - **5 projekata bez studije** (Biotech, Harper, Hypersonix, Intaker, LaSalle): izbaciti iz sitemap-a ili napisati studije. *20.11.: opcija (a), ručni sitemap pripremljen (`webflow-assets/seo/sitemap-manual.xml`), ubacuje se na dan lansiranja (MANUAL_TASKS tačka 3).*
 - **iClosed kartica na Home:** varijanta A ili B. *20.11.: rešeno drugačije, umesto kartice je nova CTA sekcija sa dugmetom ka Let's talk (Figma 9098:24).*
 - **Domen:** www kao glavni. *20.11.: još nije na redu (tvoja odluka).*
-- **Izgled:**
-  - jedna reč sama u poslednjem redu naslova na telefonu;
-  - prelom u CTA podnaslovu;
-  - „Design & Development“ u dva reda;
-  - tekst preko lica na kartici „Webflow natives“;
-  - tamnija siva za sporedni tekst (kontrast).
+- ~~**Izgled**~~ *Provereno 20.11.: svih 5 je već rešeno, stavke su greškom ostale na spisku.*
+  - ~~jedna reč sama u poslednjem redu naslova na telefonu~~: urađeno 17.11. (`text-wrap: balance`); 20.11. na telefonu na 15 stranica nema nijednog takvog naslova.
+  - ~~prelom u CTA podnaslovu~~: urađeno 17.11. (crta na kraju prvog reda).
+  - ~~„Design & Development“ u dva reda~~: odluka 17.11., ostaje.
+  - ~~tekst preko lica na kartici „Webflow natives“~~: odluka 17.11., ostaje.
+  - ~~tamnija siva za sporedni tekst (kontrast)~~: odluka 14.11., ne dira se.
 - ~~**Case timovi:** Daris i Pavle nisu ni na jednoj case stranici; Growth i SEO & AEO su bez osobe.~~ *Provereno 20.11.: tim je izmenio timove, Daris je na TrakPro, Veyor i Sustain, Pavle na Sustain, Shiftolic i Ballerine (3–4 osobe po case-u).*
 - ~~**Flow Conf post:** objaviti ga ili ide 301 na /blog.~~ *20.11.: ostaje u draftu (tvoja odluka); stara adresa ide 301 na /blog na dan lansiranja (MANUAL_TASKS 5).*
-- **Prazna CMS kolekcija „Case team“:** obrisati (vi).
+- ~~**Prazna CMS kolekcija „Case team“:** obrisati (vi).~~ *Provereno 20.11.: kolekcija više ne postoji (tim ju je obrisao).*
 
 ## Tim (sadržaj)
 - ~~Draft izmene Shiftolic, Veyor i TrakPro (od 17.11.) treba objaviti.~~ *Provereno 20.11.: objavljene su (17.11. u 20:45).*
