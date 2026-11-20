@@ -1,0 +1,78 @@
+<!-- Let's talk: copy of the hero section with a native booking form (step 1) and a Cal.com calendar (step 2).
+     Inserted after the original section (which keeps iClosed) so both can be compared. The H1 is an H2 in the copy
+     (same classes), so the page keeps one H1. The testimonial slider is added separately as a native Webflow slider. -->
+<section class="lt-hero">
+  <img class="lt-hero_bg" src="https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ad25418247a513499caf911_lt-hero-bg.avif" alt="" loading="lazy">
+  <div class="lt-hero_glow"><div class="lt-hero_beam"></div></div>
+  <div class="lt-hero_lines"></div>
+  <div class="lt-hero_fade"></div>
+  <div class="padding-global is-wide">
+    <div class="container-large">
+      <div class="lt-hero_inner">
+        <div class="lt-hero_content">
+          <div data-reveal="" class="hero_pill is-blue">
+            <img class="hero_pill-icon" src="https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ad22d1bfbfcdf71afeade98_about-v2-pill-icon.avif" alt="" loading="lazy">
+            <div class="hero_pill-text">Book a 30-minute call</div>
+          </div>
+          <div class="lt-hero_text">
+            <h2 data-reveal="" class="heading-style-h1 text-color-white">The first 30 minutes<br><span class="text-gradient is-blue">are on us.</span></h2>
+            <p data-reveal="" class="hero_subtitle is-medium">Pick a time. We'll spend half an hour on your project, what you're trying to solve, and whether we're a fit.</p>
+          </div>
+          <div data-reveal="" class="lt-quote"></div>
+        </div>
+        <div data-reveal="" class="lt-booking">
+          <div class="lt-form" data-lt-form="" data-cal-link="">
+            <div class="lt-form_steps">
+              <div class="lt-form_step is-active" data-lt-step="1"><div class="lt-form_step-dot"></div><div class="lt-form_step-text">Fill out the form</div></div>
+              <div class="lt-form_step" data-lt-step="2"><div class="lt-form_step-dot"></div><div class="lt-form_step-text">Book your event</div></div>
+            </div>
+            <div class="lt-form_body">
+              <div class="lt-form_panel is-details">
+                <div class="lt-form_header">
+                  <div class="lt-form_title">Meet with Nues</div>
+                  <p class="lt-form_text">Book a 30-minute consulting call with our experts to discuss your Webflow project.</p>
+                  <p class="lt-form_note">Please check if your timezone is set correctly when booking a time slot.</p>
+                </div>
+                <form class="lt-form_form" name="Book a call" data-name="Book a call" method="get">
+                  <div class="lt-form_field"><label class="lt-form_label" for="lt-email">Email<span class="lt-form_req"> *</span></label><input class="lt-form_input" type="email" name="Email" data-name="Email" id="lt-email" autocomplete="email" maxlength="256" required></div>
+                  <div class="lt-form_field"><label class="lt-form_label" for="lt-name">Name<span class="lt-form_req"> *</span></label><input class="lt-form_input" type="text" name="Name" data-name="Name" id="lt-name" autocomplete="name" maxlength="256" required></div>
+                  <div class="lt-form_field"><label class="lt-form_label" for="lt-phone">Phone Number<span class="lt-form_req"> *</span></label><input class="lt-form_input" type="tel" name="Phone" data-name="Phone" id="lt-phone" autocomplete="tel" maxlength="40" required></div>
+                  <div class="lt-form_field"><label class="lt-form_label" for="lt-company">Company Name<span class="lt-form_req"> *</span></label><input class="lt-form_input" type="text" name="Company" data-name="Company" id="lt-company" autocomplete="organization" maxlength="256" required></div>
+                  <div class="lt-form_field"><label class="lt-form_label" for="lt-website">Website URL<span class="lt-form_req"> *</span></label><input class="lt-form_input" type="text" name="Website" data-name="Website" id="lt-website" autocomplete="url" inputmode="url" maxlength="256" required></div>
+                  <fieldset class="lt-form_group">
+                    <legend class="lt-form_label">Budget<span class="lt-form_req"> *</span></legend>
+                    <div class="lt-form_options">
+                      <label class="w-radio lt-form_option"><input class="w-radio-input lt-form_radio" type="radio" name="Budget" id="lt-budget-1" value="$5k - $10k" data-name="Budget" required><span class="w-form-label lt-form_option-text">$5k - $10k</span></label>
+                      <label class="w-radio lt-form_option"><input class="w-radio-input lt-form_radio" type="radio" name="Budget" id="lt-budget-2" value="$10k - $15k" data-name="Budget" required><span class="w-form-label lt-form_option-text">$10k - $15k</span></label>
+                      <label class="w-radio lt-form_option"><input class="w-radio-input lt-form_radio" type="radio" name="Budget" id="lt-budget-3" value="$15k - $25k" data-name="Budget" required><span class="w-form-label lt-form_option-text">$15k - $25k</span></label>
+                      <label class="w-radio lt-form_option"><input class="w-radio-input lt-form_radio" type="radio" name="Budget" id="lt-budget-4" value="$25k+" data-name="Budget" required><span class="w-form-label lt-form_option-text">$25k+</span></label>
+                      <label class="w-radio lt-form_option"><input class="w-radio-input lt-form_radio" type="radio" name="Budget" id="lt-budget-5" value="Not sure yet" data-name="Budget" required><span class="w-form-label lt-form_option-text">Not sure yet</span></label>
+                    </div>
+                  </fieldset>
+                  <div class="lt-form_field"><label class="lt-form_label" for="lt-notes">Please share anything that will help prepare for our meeting.<span class="lt-form_req"> *</span></label><textarea class="lt-form_input is-area" name="Notes" data-name="Notes" id="lt-notes" maxlength="3000" required></textarea></div>
+                  <fieldset class="lt-form_group">
+                    <legend class="lt-form_label">How did you hear about us?<span class="lt-form_req"> *</span></legend>
+                    <div class="lt-form_options">
+                      <label class="w-radio lt-form_option"><input class="w-radio-input lt-form_radio" type="radio" name="Source" id="lt-source-1" value="Organic Search" data-name="Source" required><span class="w-form-label lt-form_option-text">Organic Search</span></label>
+                      <label class="w-radio lt-form_option"><input class="w-radio-input lt-form_radio" type="radio" name="Source" id="lt-source-2" value="AI Search" data-name="Source" required><span class="w-form-label lt-form_option-text">AI Search</span></label>
+                      <label class="w-radio lt-form_option"><input class="w-radio-input lt-form_radio" type="radio" name="Source" id="lt-source-3" value="Referral" data-name="Source" required><span class="w-form-label lt-form_option-text">Referral</span></label>
+                      <label class="w-radio lt-form_option"><input class="w-radio-input lt-form_radio" type="radio" name="Source" id="lt-source-4" value="Webflow" data-name="Source" required><span class="w-form-label lt-form_option-text">Webflow</span></label>
+                      <label class="w-radio lt-form_option"><input class="w-radio-input lt-form_radio" type="radio" name="Source" id="lt-source-5" value="Social Media" data-name="Source" required><span class="w-form-label lt-form_option-text">Social Media</span></label>
+                      <label class="w-radio lt-form_option"><input class="w-radio-input lt-form_radio" type="radio" name="Source" id="lt-source-6" value="Other" data-name="Source" required><span class="w-form-label lt-form_option-text">Other</span></label>
+                    </div>
+                  </fieldset>
+                  <input class="lt-form_submit" type="submit" value="Continue" data-wait="Please wait...">
+                </form>
+                <p class="lt-form_legal">By entering your information, you agree to our <a class="lt-form_legal-link" href="/privacy-policy">Privacy Policy</a>.</p>
+              </div>
+              <div class="lt-form_panel is-calendar">
+                <div class="lt-form_cal" data-lt-cal=""></div>
+                <div class="lt-form_cal-empty" data-lt-cal-empty="">The Cal.com calendar appears here once the account is connected.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

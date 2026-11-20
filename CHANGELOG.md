@@ -3,6 +3,26 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 20.11.2026: Let's talk, kopija sekcije sa novom formom umesto iClosed-a (test, objavljeno na staging)
+Tvoje „kopiraj ovu sekciju i u sekciji ispod napravi to kako si zamislio“. Originalna sekcija sa iClosed-om nije dirana. Kopija pre izmene: `backup/page-code/2026-11-20-lets-talk-form/` (head i footer kod stranice, objavljeni HTML sekcije).
+
+| Gde | Šta |
+|---|---|
+| Let's talk (`6aba6bc07d6279b4b56176f8`), ispod originalne sekcije | nova sekcija `lt-hero` (`71fe9368-…-5d2d5f621ca6`): ista leva strana (oznaka, naslov, podnaslov, slider sa 2 citata), desno nova kartica `lt-form` |
+| Naslov u kopiji | H2 sa istim klasama (`heading-style-h1`), da stranica ostane sa jednim H1 |
+| Korak 1 | Webflow forma „Book a call“ sa istih 8 obaveznih polja kao iClosed: Email, Name, Phone Number, Company Name, Website URL, Budget (5 opcija), „Please share anything…“, „How did you hear about us?“ (6 opcija). Kao kod iClosed-a, prvo se vide samo Email i Name; ostala polja se otvore kad su oba popunjena. Prijave idu u Webflow → Forms. |
+| Telefon | intl-tel-input 25.3.1 (MIT, jsDelivr): zastava i pozivni broj, zemlja po jeziku pregledača (npr. sr-RS → +381); šalje se ceo broj |
+| Korak 2 | posle uspešnog slanja: oznaka koraka prelazi na „Book your event“, a umesto forme se prikazuje Cal.com kalendar sa upisanim imenom, emailom i odgovorima u napomeni. Dok link nije upisan u `data-cal-link`, stoji polje „The Cal.com calendar appears here once the account is connected.“ |
+| Nove klase (sve sa nativnim svojstvima) | `lt-form`, `lt-form_steps`, `lt-form_step` (+`is-active`), `lt-form_step-dot`, `lt-form_step-text`, `lt-form_body`, `lt-form_panel` (+`is-details`, `is-calendar`), `lt-form_header`, `lt-form_title`, `lt-form_text`, `lt-form_note`, `lt-form_form-block`, `lt-form_form` (+`is-short`), `lt-form_field`, `lt-form_label` (+`is-legend`), `lt-form_req`, `lt-form_input` (+`is-area`; focus i placeholder nativno), `lt-form_group`, `lt-form_options`, `lt-form_option` (::before/::after sakriveni nativno), `lt-form_radio`, `lt-form_option-text`, `lt-form_submit` (hover nativno), `lt-form_legal`, `lt-form_legal-link`, `lt-form_cal`, `lt-form_cal-empty`, combo `lt-form.is-open` |
+| Let's talk head kod | dodato na kraj: CSS biblioteke za telefon, stanja koraka, boja radio dugmadi, sakrivanje polja dok se ne popune Email i Name. Postojeći kod nije menjan. |
+| Let's talk footer kod | dodato na kraj: biblioteka za telefon i skripta za korake i Cal.com. iClosed skripta za originalnu sekciju ostaje. |
+
+- Provereno na stagingu (1440, 820, 390): oba bloka postoje, jedan H1, slider sa 2 slajda, nema širenja u stranu ni JS grešaka; korak 1 prvo prikazuje 3 elementa, posle unosa emaila i imena svih 9; prelazak na korak 2 proveren simulacijom uspeha (prava prijava nije poslata, da ne bi otišao email timu).
+- Nije provereno: pravo slanje forme sa Turnstile-om i Cal.com kalendar (nema naloga, a app.cal.com mi je blokiran). Kod za Cal.com je standardni ugrađeni kalendar; proverava se kad link stigne.
+- Alat je dvaput odbio dve sporedne izmene, pa su stale po pravilu: `for` na oznakama polja (oznake nisu vezane za polja) i tekst poruka posle slanja (ostale su Webflow-ove: „Thank you! Your submission has been received!“ / „Oops! Something went wrong…“). Mogu ručno u Designer-u.
+- Novi tekst (copy), za odobrenje: „By entering your information, you agree to our Privacy Policy.“ i privremeni tekst u koraku 2. Ostali tekstovi su preuzeti iz iClosed-a.
+- Snimci: `notes/lets-talk-nova-forma-korak1-2026-11-20.png`, `notes/lets-talk-nova-forma-sva-polja-2026-11-20.png`, `notes/lets-talk-nova-forma-telefon-2026-11-20.png`.
+
 ## 20.11.2026: Flow Conf post ostaje u draftu (odluka, ništa nije menjano u Webflow-u)
 Tvoje „neka ostane u draftu“. Draft status posta nije diran. Pravilo 301 `/blog/from-guests-to-sponsors-notes-from-flow-conf-2026` → `/blog` u MANUAL_TASKS 5 više nije uslovno; ako tim kasnije objavi post, to pravilo se briše (slug je isti). Ažurirani i `notes/301-mapa-2026-11-17.md` i spisak.
 
