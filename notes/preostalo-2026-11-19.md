@@ -1,6 +1,6 @@
 # Šta je ostalo (19.11.2026)
 
-Ovo je jedini aktuelni spisak. `preostalo-2026-11-17.md` i stariji su istorija.
+Ovo je jedini aktuelni spisak. Namerno ostavljene stvari su u `notes/nereseno.md`. `preostalo-2026-11-17.md` i stariji su istorija.
 
 ## Mogu odmah, na „da“
 1. **llms.txt:** nova verzija je spremna (`notes/llms-txt-predlog-2026-11-18.txt`). *Preskočeno 19.11. na tvoj zahtev.*
@@ -23,7 +23,7 @@ Ovo je jedini aktuelni spisak. `preostalo-2026-11-17.md` i stariji su istorija.
   - 30 dana podrške naspram nedelju dana;
   - greška u „How we compare“.
   - *20.11.: kalkulator preporuke („$4,000 / $40,000“), „Change orders $0“ i red „What you pay“ u „How we compare“ ostaju kako jesu, tvoja odluka („nemoj to dirati“).*
-- **FAQ:** 30 odgovora (moj nacrt) i 4 pitanja čekaju potvrdu. Posle toga ide FAQPage schema.
+- **FAQ:** 30 odgovora (moj nacrt) i 4 pitanja čekaju potvrdu. Posle toga ide FAQPage schema. *20.11.: ostaje kako jeste, upisano u `notes/nereseno.md`.*
 - **5 projekata bez studije** (Biotech, Harper, Hypersonix, Intaker, LaSalle): izbaciti iz sitemap-a ili napisati studije.
 - **iClosed kartica na Home:** varijanta A ili B.
 - **Domen:** www kao glavni.
