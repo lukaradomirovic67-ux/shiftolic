@@ -3,6 +3,20 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 20.11.2026: Let's talk, naš kalendar umesto iClosed-a, preko Cal.com API-ja (test sekcija, objavljeno na staging)
+Tvoje „možemo li preko nekog koda da napravimo i naš custom kalendar“ i test Cal.com nalog. Kopija koda pre izmene: `backup/page-code/2026-11-20-lets-talk-form/lets-talk-head-before-3.html`, `lets-talk-footer-before-3.html`. Originalna sekcija sa iClosed-om nije dirana.
+
+- **Kako radi:** forma (korak 1) se šalje kao Webflow forma „Book a call“, pa se prikazuje naš kalendar. Slobodni termini se čitaju sa `api.cal.com/v2/slots`, a termin se zakazuje sa `api.cal.com/v2/bookings`. Za javni događaj ključ nije potreban, a Cal.com dozvoljava pozive sa bilo kog sajta (provereno 20.11.). Cal.com i dalje šalje potvrde, pravi termin u kalendaru i nudi otkazivanje i pomeranje termina.
+- **Događaj:** `data-cal-link="luka-radomirovic-0rujrx/30min"` na `.lt-form` (test nalog; za klijenta se menja samo ovaj atribut).
+- **Kalendar:** mesec sa stvarnim slobodnim danima (prvi slobodan dan izabran), termini za dan, 12h/24h, vremenska zona kao dropdown sa pretragom, do 5 gostiju po emailu, klik na termin otvara Confirm pored njega, posle potvrde „You're booked“ sa datumom, vremenom i zonom. Zaključani kalendar u koraku 1 sada označava stvarne slobodne dane.
+- **Napomena u terminu:** telefon, kompanija, sajt, budžet, „How did you hear“ i poruka iz forme.
+- **Stilovi:** 46 novih klasa `lt-cal*` (sa 6 combo klasa i 6 hover stanja) i `lt-form_preview-day.is-available`, sve nativno u Webflow-u; elemente crta skripta. Obrisan privremeni element `lt-form_cal-empty`.
+- **Kod stranice:** footer ponovo napisan (17 648 znakova; skripta forme + kalendar, bez Cal.com embed-a), head dopunjen sa 5 pravila. Upisano preko agenta i provereno da je identično fajlovima u repou.
+- **Mreža okruženja:** dozvoljeni `api.cal.com`, `app.cal.com`, `cal.com` (za test sa moje strane).
+- **Provereno:** lokalno sa stvarnim terminima i na stagingu (1440 i 390): slobodni dani, termini, 24h, pretraga zone sa preračunom termina, gost, sledeći mesec, Confirm i Thank you; JS grešaka nema. Zakazivanje je u testu presretnuto (nije poslato u Cal.com), jer Cal.com odbija nepostojeći email gosta, a tvoj email ne koristim bez dozvole. Pravo zakazivanje treba probati jednom ručno.
+- **Novi tekstovi (za odobrenje):** „You're booked“, „A calendar invitation has been sent to …“, „Pick a day“, „No available times this month. Try the next month.“, „That time was just taken. Please pick another one.“ i poruke o grešci.
+- Snimci: `notes/kalendar-1-forma-2026-11-20.png`, `notes/kalendar-2-termin-confirm-2026-11-20.png`, `notes/kalendar-3-vremenska-zona-2026-11-20.png`, `notes/kalendar-4-thank-you-telefon-2026-11-20.png`, `notes/kalendar-telefon-2026-11-20.png`.
+
 ## 20.11.2026: Let's talk, nova forma prati iClosed korake (test sekcija, objavljeno na staging)
 Tvoje „ajde update-uj“ posle skice toka (https://claude.ai/artifact/188kMfwhLtBWjuosWLMk2y). Kopija koda pre izmene: `backup/page-code/2026-11-20-lets-talk-form/lets-talk-head-before-2.html`, `lets-talk-footer-before-2.html`. Originalna sekcija sa iClosed-om nije dirana.
 
