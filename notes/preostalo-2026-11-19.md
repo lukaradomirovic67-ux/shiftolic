@@ -1,6 +1,6 @@
 # Šta je ostalo (19.11.2026)
 
-Ovo je jedini aktuelni spisak. Namerno ostavljene stvari su u `notes/nereseno.md`. `preostalo-2026-11-17.md` i stariji su istorija.
+Ovo je jedini aktuelni spisak. **20.11.: ostali su samo koraci za dan lansiranja; plan je u dokumentu „Nues sajt: plan za dan lansiranja“ (https://claude.ai/artifact/V4tEXQmhwvypfyfAmCFABV).** Namerno ostavljene stvari su u `notes/nereseno.md`. `preostalo-2026-11-17.md` i stariji su istorija.
 
 ## Mogu odmah, na „da“
 1. **llms.txt:** nova verzija je spremna (`notes/llms-txt-predlog-2026-11-18.txt`). *Preskočeno 19.11. na tvoj zahtev.*
