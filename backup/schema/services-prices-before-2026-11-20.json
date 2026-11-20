@@ -1,0 +1,153 @@
+{
+ "date": "2026-11-20",
+ "note": "JSON-LD before removing price offers (owner: remove prices from the site completely).",
+ "pages": {
+  "6aba6bc07d6279b4b5617701 /services/design-development": {
+   "@context": "https://schema.org",
+   "@type": "WebPage",
+   "description": "Strategy, design, development, SEO, and launch for your new Webflow site. One team, one timeline, from blank canvas to live website.",
+   "inLanguage": "en",
+   "mainEntity": {
+    "@type": "Service",
+    "areaServed": "Worldwide",
+    "description": "Strategy, design, development, SEO, and launch for your new Webflow site. One team, one timeline, from blank canvas to live website.",
+    "hasOfferCatalog": {
+     "@type": "OfferCatalog",
+     "itemListElement": [
+      {
+       "@type": "Offer",
+       "itemOffered": {
+        "@type": "Service",
+        "description": "Project goals, market & competitor research, site structure & sitemap, content planning, user journey mapping",
+        "name": "Discovery & Strategy"
+       }
+      },
+      {
+       "@type": "Offer",
+       "itemOffered": {
+        "@type": "Service",
+        "description": "Visual direction, typography, high-fidelity UI, responsive layouts, style guide, micro-interactions, scroll animations, custom illustrations",
+        "name": "Design & Motion"
+       }
+      },
+      {
+       "@type": "Offer",
+       "itemOffered": {
+        "@type": "Service",
+        "description": "Pixel-perfect Webflow build, CMS architecture, custom integrations, cross-browser testing, quality assurance",
+        "name": "Webflow Development"
+       }
+      },
+      {
+       "@type": "Offer",
+       "itemOffered": {
+        "@type": "Service",
+        "description": "Technical SEO, schema implementation, Core Web Vitals optimization, redirect mapping for migrations, launch coordination",
+        "name": "SEO & Launch"
+       }
+      },
+      {
+       "@type": "Offer",
+       "itemOffered": {
+        "@type": "Service",
+        "description": "Performance monitoring, iterative updates, optimization recommendations, optional move to the Growth retainer",
+        "name": "Beyond Launch"
+       }
+      }
+     ],
+     "name": "Design & Development Services"
+    },
+    "name": "Design & Development - Webflow Design and Development Agency",
+    "offers": {
+     "@type": "Offer",
+     "description": "Design & Development starts at $8,000 and scales with project scope",
+     "price": "8000",
+     "priceCurrency": "USD",
+     "priceSpecification": {
+      "@type": "PriceSpecification",
+      "minPrice": "8000",
+      "priceCurrency": "USD"
+     }
+    },
+    "provider": {
+     "@type": "Organization",
+     "name": "NUES"
+    },
+    "serviceType": "Webflow Website Design and Development"
+   },
+   "name": "Design & Development - Webflow Design and Development Agency",
+   "url": "/services/design-development"
+  },
+  "6aba6bc07d6279b4b5617702 /services/webflow-development": {
+   "@context": "https://schema.org",
+   "@type": "WebPage",
+   "description": "Pixel-perfect Webflow development from your Figma design. Scalable components, CMS architecture, and clean handoffs. 4-8 week delivery. Starting at $5,000.",
+   "inLanguage": "en",
+   "mainEntity": {
+    "@type": "Service",
+    "areaServed": "Worldwide",
+    "description": "Webflow development that respects every detail of your design — components built to scale, pages structured for marketing teams, performance baked in from the start.",
+    "hasOfferCatalog": {
+     "@type": "OfferCatalog",
+     "itemListElement": [
+      {
+       "@type": "Offer",
+       "itemOffered": {
+        "@type": "Service",
+        "description": "Figma file review, component mapping, build plan, timeline, and pre-build alignment",
+        "name": "Design handover & planning"
+       }
+      },
+      {
+       "@type": "Offer",
+       "itemOffered": {
+        "@type": "Service",
+        "description": "Reusable components, Webflow Variables, style guide, standardized patterns, and component documentation",
+        "name": "Component library build"
+       }
+      },
+      {
+       "@type": "Offer",
+       "itemOffered": {
+        "@type": "Service",
+        "description": "Pixel-perfect implementation, responsive layouts, interactions & motion, CMS architecture, and edge case handling",
+        "name": "Webflow development"
+       }
+      },
+      {
+       "@type": "Offer",
+       "itemOffered": {
+        "@type": "Service",
+        "description": "Custom integrations, CRM & analytics setup, cross-browser testing, device testing, and manual QA",
+        "name": "Integrations & QA"
+       }
+      },
+      {
+       "@type": "Offer",
+       "itemOffered": {
+        "@type": "Service",
+        "description": "Launch coordination, CMS training, documentation, post-launch monitoring, and optional move to the Growth retainer",
+        "name": "Launch & handoff"
+       }
+      }
+     ],
+     "name": "Webflow Development Service Process"
+    },
+    "name": "Webflow Development - Webflow Development Service",
+    "offers": {
+     "@type": "Offer",
+     "description": "Starting price for the Webflow Development service",
+     "price": "5000",
+     "priceCurrency": "USD"
+    },
+    "provider": {
+     "@type": "Organization",
+     "name": "NUES"
+    },
+    "serviceType": "Webflow Development"
+   },
+   "name": "Webflow Development - Webflow Development Service",
+   "url": "/services/webflow-development"
+  }
+ }
+}

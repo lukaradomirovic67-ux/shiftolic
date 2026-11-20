@@ -3,6 +3,23 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 20.11.2026: cene uklonjene sa sajta (objavljeno na staging)
+Tvoje „što se tiče cena ukloni ih skroz sa sajta“. Isti spisak kao pri sakrivanju 17.11. (`notes/cene-2026-11-17.md`); od tada se nisu pojavile nove cene. Kopije: `backup/elements/prices-hidden-2026-11-20.json`, `backup/schema/services-prices-before-2026-11-20.json`.
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Home, „Four ways“, kartica Design & Development | From $8k / Starting price | element ima isključen Visibility |
+| Services, statistika na 4 taba | From $8k, From $5k, From $2k, $3,000 / Per month | isključen Visibility |
+| Services, tabela „Side by side“, red „Starting at“ (naziv + 4 ćelije) | $8,000, $5,000, $2,000 / month, $3,000 / month | isključen Visibility |
+| Pricing, 4 kartice paketa, „Investment from“ | $8,000, $20,000, [$X,XXX]/month ×2 | isključen Visibility |
+| Pricing, klizač u sekciji preporuke | from $8k, from $20k | isključen Visibility |
+| Design & Development, JSON-LD | `offers` 8000 USD | bez `offers` |
+| Webflow Development, JSON-LD | `offers` 5000 USD; opis se završavao sa „Starting at $5,000.“ | bez `offers` i bez te rečenice |
+
+- Element sa isključenim Visibility ne ide u objavljeni HTML, a u Designer-u ostaje, pa se cene vraćaju jednim klikom.
+- Posle objave: nijedna cena usluga na 20 stranica (15 statičnih + 5 case), ni u tekstu ni u schema-i. Tabela na Services i kartice na Pricing izgledaju uredno, bez praznih mesta: `notes/services-tabela-bez-cena-2026-11-20.png`, `notes/pricing-kartica-bez-cene-2026-11-20.png`. JS grešaka nema.
+- Ostalo kao i 17.11. (nisu cene usluga): „Change orders $0“ na Pricing, kalkulator preporuke na Pricing ($4,000 / $40,000 / $40k / $50k+), besplatan uvodni poziv u schema-i na Let's talk (`price: 0`), cene tuđih alata u blogu.
+
 ## 20.11.2026: slike za deljenje (og:image) više nisu AVIF (objavljeno na staging)
 Tvoje „da“ na predlog da se 7 slika zameni WebP verzijama. Kopija polja pre izmene: `backup/cms-items/share-image-before-2026-11-20.json`. WebP fajlovi: `webflow-assets/og/webp-2026-11-20/`.
 
