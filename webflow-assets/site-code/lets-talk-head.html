@@ -22,4 +22,10 @@
 .lt-form_cal iframe{width:100%;border:0}
 /* like iClosed: Email and Name first, the other questions appear once both are filled in */
 .lt-form_form.is-short>:nth-child(n+3):not(.lt-form_submit){display:none}
+/* step 1 like iClosed: a locked calendar under the form until Email and Name are filled; the first step gets a check once sent */
+.lt-form.is-expanded .lt-form_preview{display:none}
+.lt-form_preview-cal{pointer-events:none;user-select:none;-webkit-user-select:none}
+.lt-form_label.is-hidden{margin:-1px;padding:0;clip:rect(0 0 0 0);clip-path:inset(50%)}
+.lt-form_step.is-done .lt-form_step-dot{display:none}
+.lt-form_step.is-done:before{content:"\2713";font-size:13px;line-height:1}
 </style>

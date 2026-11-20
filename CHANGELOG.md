@@ -3,6 +3,19 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 20.11.2026: Let's talk, nova forma prati iClosed korake (test sekcija, objavljeno na staging)
+Tvoje „ajde update-uj“ posle skice toka (https://claude.ai/artifact/188kMfwhLtBWjuosWLMk2y). Kopija koda pre izmene: `backup/page-code/2026-11-20-lets-talk-form/lets-talk-head-before-2.html`, `lets-talk-footer-before-2.html`. Originalna sekcija sa iClosed-om nije dirana.
+
+| Korak | Pre | Posle |
+|---|---|---|
+| 1 | Email i Name sa nazivom iznad polja; ispod forme ništa | naziv u samom polju („Email *“, „Name *“; vidljivi nazivi sakriveni, ostaju za čitače ekrana); ispod rečenice o pristanku bled, zaključan kalendar tekućeg meseca sa porukom „Please fill out the form before choosing your time slot.“ |
+| 2 | ostala polja se otvore posle Email i Name | isto, i zaključani kalendar nestaje |
+| 3 | oznaka „Fill out the form“ samo postane siva | dobija kvačicu ✓, aktivno je „Book your event“ |
+
+- Novi elementi: `lt-form_preview` (`98de35f8-…-b98f522e28ca`) sa `lt-form_preview-cal` i `lt-form_preview-tip`. Nove klase sa nativnim svojstvima: `lt-form_preview`, `lt-form_preview-cal`, `lt-form_preview-head`, `lt-form_preview-arrows`, `lt-form_preview-arrow`, `lt-form_preview-grid`, `lt-form_preview-dow`, `lt-form_preview-day`, `lt-form_preview-tip`, combo `lt-form_label.is-hidden`, `lt-form.is-expanded`, `lt-form_step.is-done`.
+- Mesec u zaključanom kalendaru crta skripta (tekući mesec, nedelja prva kao kod iClosed-a). Slobodni dani nisu označeni dok se ne poveže Cal.com, da ne bih izmišljao termine.
+- Provereno (1440 i 390): na početku kalendar vidljiv i naziv u poljima; posle unosa emaila i imena kalendar nestaje i otvaraju se ostala polja; posle (simuliranog) slanja prvi korak ima ✓; JS grešaka nema. Snimci: `notes/lets-talk-nova-forma-v2-pocetak-2026-11-20.png`, `…-v2-koraci-…`, `…-v2-telefon-…`.
+
 ## 20.11.2026: Let's talk, kopija sekcije sa novom formom umesto iClosed-a (test, objavljeno na staging)
 Tvoje „kopiraj ovu sekciju i u sekciji ispod napravi to kako si zamislio“. Originalna sekcija sa iClosed-om nije dirana. Kopija pre izmene: `backup/page-code/2026-11-20-lets-talk-form/` (head i footer kod stranice, objavljeni HTML sekcije).
 

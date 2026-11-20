@@ -16,10 +16,18 @@
     var form=w.querySelector('form');if(!form)return;
     form.querySelectorAll('input,textarea').forEach(function(el){if(/^example text$/i.test(el.getAttribute('placeholder')||''))el.removeAttribute('placeholder');});
     var em=form.querySelector('[name="Email"]'),nm=form.querySelector('[name="Name"]');
+    if(em)em.setAttribute('placeholder','Email *');if(nm)nm.setAttribute('placeholder','Name *');
+    var pc=w.querySelector('[data-lt-preview-cal]');
+    if(pc){var now=new Date(),y=now.getFullYear(),m=now.getMonth(),first=new Date(y,m,1).getDay(),days=new Date(y,m+1,0).getDate();
+      var html='<div class="lt-form_preview-head"><span>'+now.toLocaleString('en-US',{month:'long'})+' '+y+'</span><span class="lt-form_preview-arrows"><span class="lt-form_preview-arrow">&#8249;</span><span class="lt-form_preview-arrow">&#8250;</span></span></div><div class="lt-form_preview-grid">';
+      ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].forEach(function(d){html+='<span class="lt-form_preview-dow">'+d+'</span>';});
+      for(var k=0;k<first;k++)html+='<span></span>';
+      for(var d=1;d<=days;d++)html+='<span class="lt-form_preview-day">'+d+'</span>';
+      pc.innerHTML=html+'</div>';}
     if(em&&nm){
       form.classList.add('is-short');
       var ready=function(){return !!nm.value.trim()&&!!em.value.trim()&&em.checkValidity();};
-      var reveal=function(){if(ready())form.classList.remove('is-short');};
+      var reveal=function(){if(ready()){form.classList.remove('is-short');w.classList.add('is-expanded');}};
       em.addEventListener('input',reveal);nm.addEventListener('input',reveal);em.addEventListener('change',reveal);nm.addEventListener('change',reveal);
       var go=form.querySelector('[type="submit"]');if(go)go.addEventListener('click',reveal,true);
     }
@@ -32,7 +40,7 @@
     function open(){
       if(w.classList.contains('is-open'))return;
       w.classList.add('is-open');
-      w.querySelectorAll('[data-lt-step]').forEach(function(s){s.classList.toggle('is-active',s.getAttribute('data-lt-step')==='2');});
+      w.querySelectorAll('[data-lt-step]').forEach(function(s){var two=s.getAttribute('data-lt-step')==='2';s.classList.toggle('is-active',two);s.classList.toggle('is-done',!two);});
       var link=(w.getAttribute('data-cal-link')||'').trim(),box=w.querySelector('[data-lt-cal]'),empty=w.querySelector('[data-lt-cal-empty]');
       if(!link||!box)return;
       if(empty)empty.style.display='none';
