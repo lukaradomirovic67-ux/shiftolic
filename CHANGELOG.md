@@ -3,6 +3,13 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 20.11.2026: obrisana 3 stara videa za Our Work slider (Assets)
+Tvoje „možemo li ove koje ne koristimo da obrišemo“. Pre brisanja: nijedna stavka u Our Works ne koristi stare linkove (proverenih svih 11), a originali su sačuvani u `backup/assets/slider-video-old-2026-11-20/` (md5: sustain eff6590b…, shiftolic ec96dc04…, ballerine dda94ccf…).
+- Obrisani asset-i: `6af646c4deb177f9145906ae` sustain-slider.mp4, `6af646caa0271d7cf124d95c` shiftolic-slider.mp4, `6af646d045263033b2f2e934` ballerine-slider.mp4.
+- TrakPro video (`6af646bf70e562225ced8c49`) i 3 nova `*-slider-smooth.mp4` ostaju.
+- Provereno posle brisanja (/our-work, 1440 i 390): sva 4 videa u slideru se puštaju, JS grešaka nema.
+- Pomoćna draft stranica „Slider videos“ (`6af6466b9f4f3eaa0bb1fa80`) nije menjana; njena 3 Background Video elementa sa starim videima sada su prazna. Stranica se ne objavljuje.
+
 ## 20.11.2026: Our Work slider, izravnati videi za Sustain, Shiftolic i Ballerine (objavljeno na staging)
 Ti si otpremio 3 fajla kroz draft stranicu „Slider videos“; fajlovi na Webflow CDN-u su bajt po bajt isti kao `webflow-assets/video/slider-smooth-2026-11-19/` (md5 se poklapa za sva tri). Kopija pre izmene: `backup/cms-items/our-works-slider-video-before-2026-11-20.json`.
 
