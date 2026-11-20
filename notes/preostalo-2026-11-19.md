@@ -12,6 +12,7 @@ Ovo je jedini aktuelni spisak. Namerno ostavljene stvari su u `notes/nereseno.md
 7. **Geist kao font sa našeg servera:** umesto Google WebFont loader-a. *Napomena 20.11.: ovo si 13.11. odlučio da ne radimo (MANUAL_TASKS #8); traži ručni upload fonta u Webflow podešavanjima.*
 
 ## Čeka da otpremiš
+- **Stara pozadinska slika Home CTA** (`home-cta-bg.avif`) se više ne koristi: brisanje iz Assets na tvoje „da“.
 - **3 izravnata videa za Our Work slider** (Sustain, Shiftolic, Ballerine): u Webflow Assets, pa ih ja upisujem u CMS (`webflow-assets/video/slider-smooth-2026-11-19/`).
 
 ## Odluke (ti ili Aleksandar)
@@ -33,7 +34,7 @@ Ovo je jedini aktuelni spisak. Namerno ostavljene stvari su u `notes/nereseno.md
   - „Design & Development“ u dva reda;
   - tekst preko lica na kartici „Webflow natives“;
   - tamnija siva za sporedni tekst (kontrast).
-- **Case timovi:** Daris i Pavle nisu ni na jednoj case stranici; Growth i SEO & AEO su bez osobe.
+- ~~**Case timovi:** Daris i Pavle nisu ni na jednoj case stranici; Growth i SEO & AEO su bez osobe.~~ *Provereno 20.11.: tim je izmenio timove, Daris je na TrakPro, Veyor i Sustain, Pavle na Sustain, Shiftolic i Ballerine (3–4 osobe po case-u).*
 - **Flow Conf post:** objaviti ga ili ide 301 na /blog.
 - **Prazna CMS kolekcija „Case team“:** obrisati (vi).
 
