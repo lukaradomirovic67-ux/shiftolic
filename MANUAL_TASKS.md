@@ -26,7 +26,7 @@ Putanje u meniju proverite u trenutnom Webflow interfejsu. Nazivi se ponekad men
    | /services/nues-seo | /services/seo-aeo |
    | /integrations | /webflow-integrations ako je ta stranica objavljena pri lansiranju, inače /resources |
    | /blog/nues-is-officialy-certified-webflow-partner | /about (post ne postoji u novom CMS-u) |
-   | /blog/from-guests-to-sponsors-notes-from-flow-conf-2026 | /blog, ali samo ako post ostane u draftu (u novom CMS-u postoji kao draft, isti slug; ako se objavi, redirect ne treba) |
+   | /blog/from-guests-to-sponsors-notes-from-flow-conf-2026 | /blog (odluka 20.11.: post ostaje u draftu; ako ga tim kasnije objavi, ovaj redirect se briše, jer je slug isti) |
 
    Provereno 17.11.2026: sitemap starog sajta (www.nues.agency/sitemap.xml) ima 40 adresa. Njih 34 postoje na novom sajtu
    sa istom putanjom (Home, About, Let's talk, Our work i 5 case studija, Blog i 20 postova, Resources, Privacy, Terms)

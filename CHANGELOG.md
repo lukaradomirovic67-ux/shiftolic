@@ -3,6 +3,9 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 20.11.2026: Flow Conf post ostaje u draftu (odluka, ništa nije menjano u Webflow-u)
+Tvoje „neka ostane u draftu“. Draft status posta nije diran. Pravilo 301 `/blog/from-guests-to-sponsors-notes-from-flow-conf-2026` → `/blog` u MANUAL_TASKS 5 više nije uslovno; ako tim kasnije objavi post, to pravilo se briše (slug je isti). Ažurirani i `notes/301-mapa-2026-11-17.md` i spisak.
+
 ## 20.11.2026: obrisani stara CTA grafika i stari hero video (Assets)
 Tvoje „obriši staru verziju CTA, i obriši stare video snimke koje ne koristimo“. Kopije svih fajlova: `backup/assets/unused-2026-11-20/`.
 

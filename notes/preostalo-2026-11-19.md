@@ -35,7 +35,7 @@ Ovo je jedini aktuelni spisak. Namerno ostavljene stvari su u `notes/nereseno.md
   - tekst preko lica na kartici „Webflow natives“;
   - tamnija siva za sporedni tekst (kontrast).
 - ~~**Case timovi:** Daris i Pavle nisu ni na jednoj case stranici; Growth i SEO & AEO su bez osobe.~~ *Provereno 20.11.: tim je izmenio timove, Daris je na TrakPro, Veyor i Sustain, Pavle na Sustain, Shiftolic i Ballerine (3–4 osobe po case-u).*
-- **Flow Conf post:** objaviti ga ili ide 301 na /blog.
+- ~~**Flow Conf post:** objaviti ga ili ide 301 na /blog.~~ *20.11.: ostaje u draftu (tvoja odluka); stara adresa ide 301 na /blog na dan lansiranja (MANUAL_TASKS 5).*
 - **Prazna CMS kolekcija „Case team“:** obrisati (vi).
 
 ## Tim (sadržaj)
