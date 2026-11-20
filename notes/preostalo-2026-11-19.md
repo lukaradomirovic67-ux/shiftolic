@@ -15,7 +15,7 @@ Ovo je jedini aktuelni spisak. `preostalo-2026-11-17.md` i stariji su istorija.
 - **3 izravnata videa za Our Work slider** (Sustain, Shiftolic, Ballerine): u Webflow Assets, pa ih ja upisujem u CMS (`webflow-assets/video/slider-smooth-2026-11-19/`).
 
 ## Odluke (ti ili Aleksandar)
-- **Dupli GA4:** koji ostaje. Preporuka: Webflow integracija, a kod iz Head da se obriše.
+- **Dupli GA4:** koji ostaje. Preporuka: Webflow integracija, a kod iz Head da se obriše. *20.11.: preskočeno, tvoja odluka; kod u Head ostaje.*
 - **Cookie banner (Finsweet ili CookieYes) i Consent Mode:** sada se prati bez pristanka.
 - **Cene:**
   - „[$X,XXX]“ 2 puta na Pricing;
