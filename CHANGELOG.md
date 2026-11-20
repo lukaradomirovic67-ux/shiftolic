@@ -3,6 +3,13 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 20.11.2026: Home CTA, dugme bez pomeranja za mišem (objavljeno na staging)
+Tvoje „ne sviđa mi se pomeranje button-a na hover, neka na button-u ostane hover kao i na svim ostalim buttonima“. Kopija pre izmene: `backup/page-code/2026-11-20-home-cta/home-head-before-2.html`, `home-footer-before-2.html`.
+- Home head: uklonjen CSS koji je pomerao `home-cta_actions` (translate za mišem).
+- Home footer: uklonjen deo skripte koji je pratio miš na dugmetu.
+- Ostaje: naginjanje N ka mišu i osvetljen N dok je miš na dugmetu (ili dok je dugme u fokusu); dugme ima isti „Shift“ hover kao ostala dugmad.
+- Provereno posle objave: kod na stranici je identičan fajlovima u repou; pri prelasku mišem preko dugmeta ono se ne pomera (0 px), N se osvetli i nagne, JS grešaka nema.
+
 ## 20.11.2026: Home, nova CTA sekcija (Figma 9098:24) umesto iClosed kartice (objavljeno na staging)
 Tvoj fajl `nues-mid-cta-section.html` i Figma 9098:24: „sekcija će ipak izgledati ovako, samo button da ima koji vodi na contact page“. Kopija pre izmene: `backup/page-code/2026-11-20-home-cta/` (stablo elemenata, objavljeni HTML sekcije, Home head i footer kod).
 
