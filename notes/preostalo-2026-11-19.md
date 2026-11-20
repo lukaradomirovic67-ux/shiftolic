@@ -9,7 +9,7 @@ Ovo je jedini aktuelni spisak. `preostalo-2026-11-17.md` i stariji su istorija.
 4. **Podnaslov ispod H1 na 4 servisne stranice:** iz Figme Copy page, svaka stranica ima svoj. *Urađeno 19.11., objavljeno.*
 5. **Alt tekst za 46 slika u blog tekstovima (21 post):** ja pišem, tim odobrava. *19.11.: predlozi su napisani i na stranici za pregled (https://claude.ai/artifact/BG3BpjGKmLqLW43tMnPT7t), spisak sa adresama slika je u `notes/blog-alt-predlozi-2026-11-19.json`. Urađeno 19.11.: sve odobreno, upisano u CMS i objavljeno.*
 6. **og:image je AVIF na 7 stranica** (LinkedIn ga ne prikazuje): predlog je novo CMS polje „Share image“, koje treba odobriti. *Urađeno 20.11. drugačije: novo polje ne bi pomoglo (Webflow i JPG servira kao AVIF), pa je 7 slika zamenjeno WebP verzijama; posle lansiranja proveriti u LinkedIn Post Inspector-u.*
-7. **Geist kao font sa našeg servera:** umesto Google WebFont loader-a.
+7. **Geist kao font sa našeg servera:** umesto Google WebFont loader-a. *Napomena 20.11.: ovo si 13.11. odlučio da ne radimo (MANUAL_TASKS #8); traži ručni upload fonta u Webflow podešavanjima.*
 
 ## Čeka da otpremiš
 - **3 izravnata videa za Our Work slider** (Sustain, Shiftolic, Ballerine): u Webflow Assets, pa ih ja upisujem u CMS (`webflow-assets/video/slider-smooth-2026-11-19/`).
@@ -37,7 +37,7 @@ Ovo je jedini aktuelni spisak. `preostalo-2026-11-17.md` i stariji su istorija.
 - **Prazna CMS kolekcija „Case team“:** obrisati (vi).
 
 ## Tim (sadržaj)
-- Draft izmene Shiftolic, Veyor i TrakPro (od 17.11.) treba objaviti, ako još nisu.
+- ~~Draft izmene Shiftolic, Veyor i TrakPro (od 17.11.) treba objaviti.~~ *Provereno 20.11.: objavljene su (17.11. u 20:45).*
 - Stat 1 broj za Intaker, Harper, LaSalle, Biotech i Hypersonix (opciono).
 - Bolji logo fajlovi za LaSalle, Sustain i Hypersonix; OG slike od dizajnera; vodiči za integracije.
 
