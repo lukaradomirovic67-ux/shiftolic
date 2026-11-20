@@ -1,0 +1,104 @@
+{
+ "date": "2026-11-20",
+ "note": "Share-image source fields before replacing AVIF/PNG with WebP versions of the same images.",
+ "items": [
+  {
+   "collection": "Our Works 6aba6bc07d6279b4b561771c",
+   "id": "6aba6bc07d6279b4b561798e",
+   "slug": "trak-pro",
+   "isDraft": false,
+   "lastUpdated": "2026-11-17T20:25:15.744Z",
+   "lastPublished": "2026-11-17T20:45:33.954Z",
+   "field": "main-image",
+   "value": {
+    "fileId": "6aba6bc07d6279b4b561797e",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b561797e_1.avif",
+    "alt": null
+   }
+  },
+  {
+   "collection": "Our Works 6aba6bc07d6279b4b561771c",
+   "id": "6aba6bc07d6279b4b561798d",
+   "slug": "veyor-digital",
+   "isDraft": false,
+   "lastUpdated": "2026-11-17T20:25:33.861Z",
+   "lastPublished": "2026-11-17T20:45:33.954Z",
+   "field": "main-image",
+   "value": {
+    "fileId": "6aba6bc07d6279b4b561789d",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b561789d_case-studie-veyor-main.avif",
+    "alt": null
+   }
+  },
+  {
+   "collection": "Our Works 6aba6bc07d6279b4b561771c",
+   "id": "6aba6bc07d6279b4b561798c",
+   "slug": "sustain-commercial-solar",
+   "isDraft": false,
+   "lastUpdated": "2026-11-17T20:36:51.768Z",
+   "lastPublished": "2026-11-17T20:45:33.954Z",
+   "field": "main-image",
+   "value": {
+    "fileId": "6aba6bc07d6279b4b5617879",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b5617879_Slide%2016_9%20-%201.avif",
+    "alt": null
+   }
+  },
+  {
+   "collection": "Our Works 6aba6bc07d6279b4b561771c",
+   "id": "6aba6bc07d6279b4b561798b",
+   "slug": "shiftolic",
+   "isDraft": false,
+   "lastUpdated": "2026-11-17T20:36:00.249Z",
+   "lastPublished": "2026-11-17T20:45:33.954Z",
+   "field": "main-image",
+   "value": {
+    "fileId": "6aba6bc07d6279b4b56177bb",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b56177bb_Frame%2047283.avif",
+    "alt": null
+   }
+  },
+  {
+   "collection": "Our Works 6aba6bc07d6279b4b561771c",
+   "id": "6aba6bc07d6279b4b5617989",
+   "slug": "ballerine",
+   "isDraft": false,
+   "lastUpdated": "2026-11-17T20:45:24.562Z",
+   "lastPublished": "2026-11-17T20:45:33.954Z",
+   "field": "main-image",
+   "value": {
+    "fileId": "6aba6bc07d6279b4b5617741",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b5617741_Frame%2047505.avif",
+    "alt": null
+   }
+  },
+  {
+   "collection": "Blogs 6aba6bc07d6279b4b5617769",
+   "id": "6aba6bc07d6279b4b56179a7",
+   "slug": "sanity-vs-webflow-cms-which-one-your-team-actually-needs",
+   "isDraft": false,
+   "lastUpdated": "2026-11-19T22:30:14.030Z",
+   "lastPublished": "2026-11-19T22:32:32.951Z",
+   "field": "thumbnail-image",
+   "value": {
+    "fileId": "6aba6bc07d6279b4b5617984",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b5617984_Untitled%20(1).png",
+    "alt": null
+   }
+  },
+  {
+   "collection": "Blogs 6aba6bc07d6279b4b5617769",
+   "id": "6aba6bc07d6279b4b56179a6",
+   "slug": "source-by-webflow-what-it-is-and-what-it-means-for-teams-on-webflow",
+   "isDraft": false,
+   "lastUpdated": "2026-11-19T22:28:01.040Z",
+   "lastPublished": "2026-11-19T22:32:32.951Z",
+   "field": "thumbnail-image",
+   "value": {
+    "fileId": "6aba6bc07d6279b4b5617987",
+    "url": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6aba6bc07d6279b4b5617987_Untitled%20(3).png",
+    "alt": null
+   }
+  }
+ ]
+}
