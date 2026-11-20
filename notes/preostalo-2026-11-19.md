@@ -24,7 +24,7 @@ Ovo je jedini aktuelni spisak. Namerno ostavljene stvari su u `notes/nereseno.md
   - greška u „How we compare“.
   - *20.11.: kalkulator preporuke („$4,000 / $40,000“), „Change orders $0“ i red „What you pay“ u „How we compare“ ostaju kako jesu, tvoja odluka („nemoj to dirati“).*
 - **FAQ:** 30 odgovora (moj nacrt) i 4 pitanja čekaju potvrdu. Posle toga ide FAQPage schema. *20.11.: ostaje kako jeste, upisano u `notes/nereseno.md`.*
-- **5 projekata bez studije** (Biotech, Harper, Hypersonix, Intaker, LaSalle): izbaciti iz sitemap-a ili napisati studije.
+- **5 projekata bez studije** (Biotech, Harper, Hypersonix, Intaker, LaSalle): izbaciti iz sitemap-a ili napisati studije. *20.11.: opcija (a), ručni sitemap pripremljen (`webflow-assets/seo/sitemap-manual.xml`), ubacuje se na dan lansiranja (MANUAL_TASKS tačka 3).*
 - **iClosed kartica na Home:** varijanta A ili B.
 - **Domen:** www kao glavni.
 - **Izgled:**

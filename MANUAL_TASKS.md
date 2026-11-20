@@ -8,7 +8,12 @@ Putanje u meniju proverite u trenutnom Webflow interfejsu. Nazivi se ponekad men
 1. **Plaćeni site plan.** Bez njega nema custom domena, sitemap-a ni uklanjanja „Made in Webflow“ bedža.
 2. **Site settings → SEO → Global canonical tag URL**: upisati izabrani domen (QUESTIONS 7). Tek tada svaka stranica dobija
    self-referencing canonical. Sada nijedna stranica nema canonical.
-3. **Site settings → SEO → Sitemap → Auto-generate sitemap**: uključiti.
+3. **Site settings → SEO → Sitemap**: tvoja odluka 20.11. (opcija a): ručni sitemap bez 5 case stranica bez studije (Biotech, Harper, Hypersonix, Intaker, LaSalle).
+   - **Auto-generate sitemap**: isključiti.
+   - U polje za sopstveni sitemap nalepiti ceo sadržaj fajla `webflow-assets/seo/sitemap-manual.xml` (41 adresa: 15 stranica, 5 case studija, 21 blog post), pa Save i Publish.
+   - Fajl koristi `https://www.nues.agency`, kao i sitemap starog sajta. Ako glavni domen bude bez www, javi mi da zamenim.
+   - **Održavanje:** svaki novi blog post ili case studija mora ručno da se doda u sitemap (javi mi i ja dopišem red).
+   - **Prvo probati bolje rešenje:** na plaćenom planu Webflow možda dozvoljava isključivanje pojedinačnih CMS stavki iz sitemap-a (20.11. na sadašnjem planu: „Site plan doesn't support sitemap indexing controls“). Ako proradi, ostaje Auto-generate uključen, a ja isključim samo tih 5 stavki. Javi mi kad pređete na plaćeni plan, pa probam.
 4. **Site settings → SEO → Indexing**: na webflow.io subdomenu ostaviti zabranu indeksiranja (sada `Disallow: /`, ispravno).
    Za produkciju: robots.txt koji dozvoljava indeksiranje i navodi sitemap.
 5. **Site settings → Publishing → 301 redirects**, dodati:

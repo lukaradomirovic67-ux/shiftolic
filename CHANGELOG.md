@@ -3,6 +3,12 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 20.11.2026: ručni sitemap bez 5 case stranica bez studije (pripremljeno za lansiranje, ništa nije menjano u Webflow-u)
+Tvoja odluka: opcija (a). Fajl: `webflow-assets/seo/sitemap-manual.xml`; koraci: MANUAL_TASKS, „Pri lansiranju“, tačka 3.
+- Kontrola sitemap-a po CMS stavci (bolje rešenje, automatski sitemap ostaje) na sadašnjem planu ne radi: API vraća 403 „Site plan doesn't support sitemap indexing controls“. Probati ponovo na plaćenom planu.
+- U fajlu je 41 adresa: 15 stranica, 5 case studija (Ballerine, Shiftolic, Sustain, TrakPro, Veyor) i 21 blog post. Proveren je svaki: odgovara 200 i nema noindex. Izostavljeni: 5 case stranica bez studije (sve imaju noindex), 404, Password, draft stranice (Style Guide, Slider videos, Webflow Integrations) i draft post o Flow Conf. Šabloni Hero Cards i Jobs ne prave javne stranice (404 / prazna kolekcija).
+- Domen u fajlu: `https://www.nues.agency` (kao sitemap starog sajta). Na stagingu sitemap ne postoji (404), pa se ovo vidi tek na pravom domenu.
+
 ## 20.11.2026: cene uklonjene sa sajta (objavljeno na staging)
 Tvoje „što se tiče cena ukloni ih skroz sa sajta“. Isti spisak kao pri sakrivanju 17.11. (`notes/cene-2026-11-17.md`); od tada se nisu pojavile nove cene. Kopije: `backup/elements/prices-hidden-2026-11-20.json`, `backup/schema/services-prices-before-2026-11-20.json`.
 
