@@ -238,14 +238,20 @@
 })();
 </script>
 <script>
-/* Home CTA (Figma 8814:30): the iClosed booking widget, the same one as on Let's talk (native .iclosed-widget in the section).
-   Its script loads only when the section comes near the screen, so the top of the page stays fast. */
+/* Home CTA (Figma 9098:24): the glass N leans a little toward the mouse while it is over the section; hovering or focusing the button
+   lights the N up (.is-lit on the section) and the button follows the mouse by a few pixels. Mouse only, and not with reduced motion. */
 (function(){
-  var w=document.querySelector('.section_home-cta .iclosed-widget');if(!w)return;
-  var done=false;
-  function load(){if(done)return;done=true;if(document.querySelector('script[src*="app.iclosed.io/assets/widget.js"]'))return;var s=document.createElement('script');s.src='https://app.iclosed.io/assets/widget.js';s.async=true;document.body.appendChild(s);}
-  if(!('IntersectionObserver' in window)){load();return;}
-  var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){io.disconnect();load();}},{rootMargin:'800px 0px'});
-  io.observe(w);
+  var s=document.querySelector('.section_home-cta');if(!s)return;
+  var n=s.querySelector('.home-cta_mark'),a=s.querySelector('.home-cta_actions'),b=a&&a.querySelector('.button');
+  var move=!window.matchMedia('(prefers-reduced-motion: reduce)').matches&&window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if(n&&move){
+    s.addEventListener('mousemove',function(e){var r=s.getBoundingClientRect();n.style.setProperty('--cta-ry',((e.clientX-r.left)/r.width-.5)*10+'deg');n.style.setProperty('--cta-rx',-((e.clientY-r.top)/r.height-.5)*8+'deg');});
+    s.addEventListener('mouseleave',function(){n.style.setProperty('--cta-ry','0deg');n.style.setProperty('--cta-rx','0deg');});
+  }
+  if(!b)return;
+  function on(){s.classList.add('is-lit');}
+  function off(){s.classList.remove('is-lit');a.style.setProperty('--cta-mx','0px');a.style.setProperty('--cta-my','0px');}
+  b.addEventListener('mouseenter',on);b.addEventListener('mouseleave',off);b.addEventListener('focus',on);b.addEventListener('blur',off);
+  if(move)b.addEventListener('mousemove',function(e){var r=b.getBoundingClientRect();a.style.setProperty('--cta-mx',((e.clientX-r.left)/r.width-.5)*8+'px');a.style.setProperty('--cta-my',((e.clientY-r.top)/r.height-.5)*6+'px');});
 })();
 </script>

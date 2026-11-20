@@ -3,6 +3,22 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 20.11.2026: Home, nova CTA sekcija (Figma 9098:24) umesto iClosed kartice (objavljeno na staging)
+Tvoj fajl `nues-mid-cta-section.html` i Figma 9098:24: „sekcija će ipak izgledati ovako, samo button da ima koji vodi na contact page“. Kopija pre izmene: `backup/page-code/2026-11-20-home-cta/` (stablo elemenata, objavljeni HTML sekcije, Home head i footer kod).
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Home › section_home-cta, pozadina | slika `home-cta_bg` (asset `6afb8acb…_home-cta-bg.avif`) | tamnoplava sekcija: `home-cta_backdrop` sa `home-cta_halo` (dva radijalna sjaja), `home-cta_beam` (snop svetla) i `home-cta_mark` (stakleni N, SVG u Embed-u, odsečen donjom ivicom) |
+| desna kolona | `home-cta_booking` sa iClosed widgetom | uklonjena |
+| ispod naslova | ništa | `home-cta_actions` › dugme `button` „Book a free intro call“ (stranica Let's talk, `/lets-talk`), isti „Shift“ hover kao ostala dugmad |
+| home-cta_component | poravnanje gore, bez min. visine | desktop: min. visina 350px i centrirano po visini (sekcija 550px, kao Figma); tablet: 220px mesta ispod teksta za N |
+| Home footer kod | učitavanje iClosed skripte za ovu sekciju | N se blago naginje ka mišu; hover ili fokus na dugmetu ga osvetli (`.is-lit`) i ubrza odsjaj; dugme prati miš nekoliko piksela |
+| Home head kod | CSS za iClosed kolonu (992–1279px) | položaj N uz ivicu kontejnera, odsjaj preko stakla na 7 s, `.is-lit`, smanjen pokret; N se na 992–1279px smanjuje sa ekranom |
+
+- Nove klase (sve sa nativnim svojstvima): `home-cta_backdrop`, `home-cta_halo`, `home-cta_beam`, `home-cta_mark`, `home-cta_actions`, combo `section_home-cta.is-lit`. Tekstovi (zvezdice, 5.0 sa linkom na Clutch, „Free 30-Minute Intro“, naslov) nisu menjani.
+- Provera posle objave (1440, 1100, 820, 390): na 1440 sekcija je 550px, naslov počinje na 50px, dugme 252×60 na 348px od vrha (Figma 252×62 na ~352). N nigde ne prelazi preko teksta ni dugmeta, stranica nije šira od ekrana, JS grešaka nema, dugme vodi na `/lets-talk`. Snimci: `notes/home-cta-figma-vs-staging-2026-11-20.png`, `notes/home-cta-tablet-telefon-2026-11-20.png`.
+- Home više ne učitava iClosed skriptu. Slika `home-cta-bg.avif` je ostala u Assets (ne koristi se); briše se samo na tvoje „da“.
+
 ## 20.11.2026: ručni sitemap bez 5 case stranica bez studije (pripremljeno za lansiranje, ništa nije menjano u Webflow-u)
 Tvoja odluka: opcija (a). Fajl: `webflow-assets/seo/sitemap-manual.xml`; koraci: MANUAL_TASKS, „Pri lansiranju“, tačka 3.
 - Kontrola sitemap-a po CMS stavci (bolje rešenje, automatski sitemap ostaje) na sadašnjem planu ne radi: API vraća 403 „Site plan doesn't support sitemap indexing controls“. Probati ponovo na plaćenom planu.

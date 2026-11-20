@@ -29,10 +29,8 @@
   .home-ways_card-title { font-size: 2.5rem; }
   .home-projects_info { width: 21.25rem; }
   .home-projects_tag { flex: none; white-space: nowrap; }
-  /* CTA (Figma 8814:30): the columns sit closer and the heading takes the room left next to the 478px booking card
-     (screen - 100px side padding - card - 50px gap; the heading is about 10.4 times its font size wide), so it keeps its two lines */
-  .home-cta_component { grid-column-gap: 3.125rem; column-gap: 3.125rem; }
-  .home-cta_content .heading-style-h2 { font-size: min(3.625rem, calc((100vw - 640px) / 10.4)); }
+  /* CTA (Figma 9098:24): the glass N scales with the screen so it stays clear of the heading */
+  .home-cta_mark { width: 36vw; height: 36vw; bottom: -9vw; }
 }
 /* 1441px and up (larger screens, like flowninja.com): the text stays in the centred container while the card columns reach
    out to 50px from the screen's right edge and grow with the screen. At 1440 both give exactly the design (right 0, 515px). */
@@ -117,6 +115,23 @@
 @keyframes hero-bg-light{0%{transform:translateY(51.8519%)}60%,100%{transform:translateY(-120.3704%)}}
 .home-hero_bg.is-off .home-hero_bg-band,.home-hero_bg.is-off .home-hero_bg-light{animation-play-state:paused}
 @media (prefers-reduced-motion:reduce){.home-hero_bg-band{display:none}}
+</style>
+<style>
+/* Home CTA (Figma 9098:24): navy section with a big glass N on the right, cropped by the bottom edge, and a soft beam of light above it.
+   Layout, sizes and colours are native classes; this only adds what Webflow cannot set: the N's right edge follows the content
+   container (20px from the screen edge at 1440, never more than 60px past it), the 3D lean toward the mouse, the light sweep across
+   the glass every 7 seconds and the lit state while the button is hovered (.is-lit, set by the Home footer script). */
+.home-cta_mark{right:max(-3.75rem,calc((100% - 83.75rem) / 2 - 1.875rem));transform:perspective(1200px) rotateY(var(--cta-ry,0deg)) rotateX(var(--cta-rx,0deg));transition:transform .9s cubic-bezier(.33,1,.68,1),filter .6s cubic-bezier(.33,1,.68,1)}
+.home-cta_mark svg{display:block;width:100%;height:100%;overflow:visible}
+.home-cta_beam{right:calc(max(-3.75rem,calc((100% - 83.75rem) / 2 - 1.875rem)) + 7.5rem);transition:opacity .6s cubic-bezier(.33,1,.68,1)}
+.home-cta_sweep{animation:home-cta-sweep 7s cubic-bezier(.76,0,.24,1) infinite}
+@keyframes home-cta-sweep{0%{transform:translate(-75px,-75px)}55%,100%{transform:translate(75px,75px)}}
+.section_home-cta.is-lit .home-cta_mark{filter:brightness(1.35) saturate(1.15)}
+.section_home-cta.is-lit .home-cta_beam{opacity:1}
+.section_home-cta.is-lit .home-cta_sweep{animation-duration:2.4s}
+.home-cta_actions{translate:var(--cta-mx,0px) var(--cta-my,0px);transition:translate .5s cubic-bezier(.33,1,.68,1)}
+@media (max-width:991px){.home-cta_mark{right:-5.625rem}.home-cta_beam{right:1.875rem}}
+@media (prefers-reduced-motion:reduce){.home-cta_sweep{animation:none;transform:translate(-75px,-75px)}.home-cta_mark,.home-cta_actions{transform:none!important;translate:none!important}}
 </style>
 <script>
 document.addEventListener('DOMContentLoaded',function(){var bg=document.querySelector('.home-hero_bg');if(!bg||!('IntersectionObserver' in window))return;new IntersectionObserver(function(e){bg.classList.toggle('is-off',!e[0].isIntersecting);}).observe(bg);});

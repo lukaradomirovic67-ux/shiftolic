@@ -1,0 +1,33 @@
+{
+ "date": "2026-11-20",
+ "page": "Home 6aba6bc07d6279b4b56176f1",
+ "note": "section_home-cta before the redesign (Figma 9098:24). Removed: home-cta_bg image (asset 6afb8acb1ba525d9d1a53a4c, asset kept), home-cta_booking with the iClosed widget (data-url https://app.iclosed.io/e/nues/discovery-call). Published markup: section-home-cta-published-before.html.",
+ "elements": {
+  "section": "2efb8692-4d39-b0df-0a08-0189f1922e97",
+  "bg_image": "ef9a8374-226d-27e5-2b12-bcef446ab834",
+  "component": "2efb8692-4d39-b0df-0a08-0189f1922e94",
+  "content": "2efb8692-4d39-b0df-0a08-0189f1922e8e",
+  "heading": "2efb8692-4d39-b0df-0a08-0189f1922e85",
+  "booking": "10383eff-ca71-06d0-60be-12aabe5ff924",
+  "iclosed_widget": "fcc24c20-a13f-814b-a63d-3c75f7316345"
+ },
+ "styles_before": {
+  "home-cta_component": {
+   "main": {
+    "position": "relative",
+    "z-index": "1",
+    "display": "flex",
+    "padding-right": "0rem",
+    "padding-left": "0rem",
+    "justify-content": "space-between",
+    "align-items": "flex-start",
+    "grid-column-gap": "6.25rem",
+    "grid-row-gap": "3.125rem"
+   },
+   "medium": {
+    "flex-direction": "column",
+    "align-items": "stretch"
+   }
+  }
+ }
+}
