@@ -3,6 +3,28 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 21.11.2026: Let's talk forma u koracima, kartica stalne visine (objavljeno na staging)
+Tvoje „ajde odradi ovo što si mi predložio“ (predlog sa slike `notes/forma-sada-vs-predlog-2026-11-21.png`). Rezervna kopija pre izmene: `backup/page-code/2026-11-21-lets-talk-wizard/` (head i footer kod, objavljeni HTML sekcije, vrednosti stilova).
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Visina kartice (desktop) | 813 → 1406 → 984 → 327 px po koracima | 813 px u svim koracima (`lt-form` height 813px; laptop 1024 i telefon 390 isto, bez skrolovanja unutar kartice) |
+| Zaglavlje kartice | „Fill out the form · Book your event“ (`lt-form_steps`, obrisano) | traka sa 4 dela + „Contact / About you / Your project / Book your event“ i „Step 1 of 4“ (`lt-form_progress`, `-bar`, `-seg` + `is-done`, `-label`, `-name`, `-count`) |
+| Polja forme | sva u jednoj listi, ostala se pojavljuju posle Email + Name | 3 grupe (`lt-form_stage` + `is-active`, `data-lt-stage` 1–3): Email, Name / Phone, Company, Website / Budget, How did you hear about us, Notes (Notes premešten na kraj) |
+| Dugmad | jedno „Continue“ (slanje) | „Continue“ u koracima 1–2 (`lt-form_submit` + `is-next`, `data-lt-next`), pravo slanje „Continue to calendar“ samo u koraku 3 (`lt-form_submit` + `is-final`), „← Back“ u koracima 2–3 (`lt-form_back`) |
+| Budget i izvor | radio lista | dugmići u redu (`lt-form_options` red sa prelomom, `lt-form_option` kao pill, izabran je taman) |
+| Notes | visina 120 px | 96 px |
+| Kalendar | zona, pa „Add guests (Optional) 0/5“, termini u jednoj koloni, Confirm pored termina | zona i „+ Guests“ u jednom redu (`lt-cal_row`), termini u 3 kolone sa skrolom unutar kartice, izabran termin označen (`lt-cal_slot` + `is-selected`), „Confirm 10:30 AM“ dole preko cele širine |
+| Thank you | kartica 327 px | ista visina, tekst centriran (tekst nepromenjen) |
+
+- Zašto posebno dugme „Continue“: forma ima Webflow zaštitu od spama (Cloudflare Turnstile) i dok ona ne prođe, pravo dugme za slanje je zaključano. Ovako zaštita radi u pozadini dok posetilac popunjava korake 1–2.
+- Enter u polju vodi na sledeći korak; prazna obavezna polja zaustavljaju prelaz uz poruku pregledača.
+- Novi tekstovi na sajtu (čekaju tvoje odobrenje, copy nije finalan): „Contact“, „About you“, „Your project“, „Step 1 of 4“, „Continue to calendar“, „← Back“, „+ Guests“, „Guest email“, „Confirm 10:30 AM“, „Done“, „Pick a day“.
+- U Designer-u se vidi samo grupa 1; grupe 2 i 3 se uređuju uključivanjem `is-active` na njima.
+- Kod: `webflow-assets/site-code/lets-talk-head.html` i `lets-talk-footer.html` (isti su kao na stranici, provereno na objavljenoj stranici). iClosed skripta je i dalje u footeru (čeka tvoju potvrdu).
+- Ostali su neiskorišćeni stilovi ove forme: `lt-form_steps`, `lt-form_step`, `lt-form_step-dot`, `lt-form_step-text`, `lt-form_form.is-short`, `lt-form.is-expanded`, `lt-form_cal-empty`, `lt-cal_pick`, `lt-cal_guests-head`, `lt-cal_count`. Nisam ih brisao.
+- Provereno (1440, 1024, 390; slanje forme i zakazivanje presretnuti, ništa nije poslato ni zakazano): svi koraci, Back, prazna polja, termini, gosti, zona, potvrda, JS grešaka nema. Snimci: `notes/lets-talk-forma-koraci-desktop-2026-11-21.png`, `notes/lets-talk-forma-koraci-phone-2026-11-21.png`.
+
 ## 21.11.2026: Let's talk forma, uporedni prikaz „sada vs predlog“ (bez izmena na sajtu)
 Tvoje „uradi mi kako je dizajn sad, a kakav je ako uradiš ove promene“.
 

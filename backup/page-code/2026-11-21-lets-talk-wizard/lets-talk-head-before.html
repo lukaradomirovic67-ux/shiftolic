@@ -1,0 +1,36 @@
+<!-- Nues: code moved here from page embeds. Edit here, not in embeds. -->
+<style>
+.lt-booking .iclosed-widget{width:100%;min-height:620px}
+@media (min-width:992px){.lt-hero .heading-style-h1{font-size:min(80px,5.56vw);white-space:nowrap}}
+@media (min-width:992px) and (max-width:1279px){.lt-hero_inner{grid-column-gap:56px;column-gap:56px}.lt-hero .heading-style-h1{font-size:4.9vw}.lt-hero_content{grid-row-gap:40px;row-gap:40px}.lt-booking{min-width:380px}}
+/* Hero light (lt-hero_glow): on screens wider than 1440px the content is centred, so the light follows it */
+@media (min-width:1441px){.lt-hero_glow{left:calc(50% - 1720px)}}
+</style>
+<!-- Booking form (lt-form, test copy of the hero): states the footer script switches, radio colour, phone field -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.min.css">
+<style>
+.lt-form.is-open .lt-form_panel.is-details{display:none}
+.lt-form.is-open .lt-form_panel.is-calendar{display:block}
+.lt-form_step.is-active .lt-form_step-dot{background-color:#0d1928}
+.lt-form_input:focus{outline:0}
+.lt-form_input.is-area{resize:vertical}
+.lt-form_radio{accent-color:#0d1928}
+.lt-form .iti{display:block;width:100%}
+.lt-form .iti__country-container{padding:1px}
+.lt-form .iti__selected-country{border-radius:11px 0 0 11px}
+.lt-form .w-form-done,.lt-form .w-form-fail{margin-top:16px;padding:16px;border-radius:12px;font-size:15px;line-height:1.4}
+/* like iClosed: Email and Name first, the other questions appear once both are filled in */
+.lt-form_form.is-short>:nth-child(n+3):not(.lt-form_submit){display:none}
+/* step 1 like iClosed: a locked calendar under the form until Email and Name are filled; the first step gets a check once sent */
+.lt-form.is-expanded .lt-form_preview{display:none}
+.lt-form_preview-cal{pointer-events:none;user-select:none;-webkit-user-select:none}
+.lt-form_label.is-hidden{margin:-1px;padding:0;clip:rect(0 0 0 0);clip-path:inset(50%)}
+.lt-form_step.is-done .lt-form_step-dot{display:none}
+.lt-form_step.is-done:before{content:"\2713";font-size:13px;line-height:1}
+/* our calendar (lt-cal, drawn by the footer script; its classes are styled natively in Webflow) */
+.lt-cal [hidden]{display:none!important}
+.lt-cal_status:empty{display:none}
+.lt-cal_day.is-today:after{content:"";position:absolute;left:50%;bottom:4px;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:currentColor}
+.lt-cal button:disabled{cursor:default}
+.lt-cal button:focus-visible,.lt-cal input:focus-visible{outline:2px solid #0d1928;outline-offset:2px}
+</style>
