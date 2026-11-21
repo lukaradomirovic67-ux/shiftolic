@@ -3,6 +3,19 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 21.11.2026: Let's talk forma, lead tabela povezana (proba na tvom nalogu, objavljeno na staging)
+| Gde | Pre | Posle |
+|---|---|---|
+| `.lt-form` (`71fe9368-…-2d2d5f621ca1`), atribut `data-lead-url` | nije postojao | `https://script.google.com/macros/s/AKfycbyfoKxH…/exec` (tvoja tabela „Nues Leads (test)“ na luka@nues.agency) |
+| Footer kod, slanje u tabelu | svaka promena odmah šalje zahtev (12 po prolazu, paralelno) | jedan zahtev u isto vreme, u redu čeka samo najnovije stanje; kad se stranica sakrije ili zatvori, najnovije stanje ide odmah (beacon); svaki zahtev nosi vreme slanja (`ts`) |
+| Apps Script (`webflow-assets/lead-capture/leads-apps-script.gs`) | v1 | v2: red se nalazi preko TextFinder-a, zahtev stariji od poslednjeg upisanog se zanemaruje (nova kolona „Sent at (ms)“). **Treba da ga zameniš u Apps Script-u** (MANUAL_TASKS.md) |
+
+- Zašto: Apps Script upisuje oko 2 s po zahtevu i obrađuje jedan po jedan. Sa 12 paralelnih zahteva prvi probni red je ostao na koraku 2.
+- Provereno na objavljenom stagingu, bez presretanja mreže (Playwright presretanje blokira keepalive zahteve i davalo je lažnu grešku): 5 zahteva redom (koraci 1, 2, 3, 3, 5), red „Test (Claude, staging v4)“ u tabeli ima sve: korak 5, Booked: Yes, termin, email, telefon, firmu, sajt, budžet, izvor, napomenu, zonu, stranicu, UTM. Webflow forma nije poslata (uspeh simuliran), termin nije zakazan (Cal.com odgovor simuliran u stranici).
+- U tabeli je 8 probnih redova (Lead ID `claude-…` i redovi sa imenom „Test (Claude, …)“). Možeš ih obrisati.
+- Okruženje ovog rada: dozvoljeni hostovi `script.google.com` i `script.googleusercontent.com` (da bih mogao da proverim tabelu iz test pregledača).
+- Rezervne kopije: `backup/page-code/2026-11-21-lets-talk-wizard/lets-talk-footer-leads-v1.html`, `leads-apps-script-v1.gs`.
+
 ## 21.11.2026: Let's talk forma, čuvanje onoga što posetilac ukuca (proba, kod objavljen na staging, još neaktivan)
 Darkovo pitanje „kad neko krene da popunjava podatke … ko god šta ukuca ostaje“ i tvoje „ajde da napravimo probno … na mom“ nalogu.
 

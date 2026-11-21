@@ -12,6 +12,8 @@ Na luka@nues.agency nalogu, jednom (oko 5 minuta). Ceo kod je u `webflow-assets/
 4. Authorize access: izabrati nalog, Advanced → Go to … (unsafe) → Allow. Upozorenje stoji jer je skripta tvoja, a nije objavljena aplikacija.
 5. Kopirati „Web app URL“ (završava se na /exec) i poslati ga Claude-u. On ga upisuje u `data-lead-url` na `.lt-form` i objavljuje staging.
 - Ako u koraku 3 nema opcije „Anyone“, Google Workspace podešavanje firme to ne dozvoljava. Tada treba lični Gmail nalog ili da admin dozvoli.
+- Urađeno 21.11.: tabela i deploy („Anyone“), link upisan u formu na stagingu.
+- **Zameniti skriptu verzijom v2** (`leads-apps-script.gs`): Apps Script → obrisati sve, nalepiti novi kod, Save → Deploy → Manage deployments → olovka → Version: New version → Deploy. Link ostaje isti.
 - Pre pravog lansiranja: rečenica u Privacy Policy da se podaci iz forme čuvaju i pre slanja (šalje se na odobrenje).
 
 ## Pri lansiranju (domen se sada NE povezuje)

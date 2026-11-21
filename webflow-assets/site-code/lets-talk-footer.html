@@ -86,12 +86,12 @@
     /* Leads: one id per visitor (kept for the browser tab), the row is updated after every change, step and booking */
     var leadUrl=(w.getAttribute('data-lead-url')||'').trim(),lead=null;
     if(/^https:\/\//.test(leadUrl)){
-      lead={id:'',step:1,booked:false,bookingTime:'',guests:'',tz:browserTz,last:''};
+      lead={id:'',step:1,booked:false,bookingTime:'',guests:'',tz:browserTz,last:'',pending:null,busy:false};
       try{lead.id=sessionStorage.getItem('ltLeadId')||'';}catch(e){}
       if(!/^[A-Za-z0-9-]{8,64}$/.test(lead.id)){lead.id=(window.crypto&&crypto.randomUUID)?crypto.randomUUID():Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,12);try{sessionStorage.setItem('ltLeadId',lead.id);}catch(e){}}
       form.addEventListener('change',function(){saveLead();});
-      window.addEventListener('pagehide',function(){saveLead();});
-      document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden')saveLead();});
+      window.addEventListener('pagehide',flushLead);
+      document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden')flushLead();});
     }
     function utm(){var q,o=[];try{q=new URLSearchParams(location.search);}catch(e){return '';}['utm_source','utm_medium','utm_campaign','utm_term','utm_content'].forEach(function(k){if(q.get(k))o.push(k.slice(4)+'='+q.get(k));});return o.join(' ');}
     function saveLead(){
@@ -99,7 +99,19 @@
       var ph=val('Phone');if(iti&&ph){try{ph=iti.getNumber()||ph;}catch(e){}}
       var d={id:lead.id,step:lead.step,booked:lead.booked,bookingTime:lead.bookingTime,email:val('Email'),name:val('Name'),phone:ph,company:val('Company'),website:val('Website'),budget:val('Budget'),source:val('Source'),notes:val('Notes'),guests:lead.guests,tz:lead.tz,page:location.origin+location.pathname,referrer:document.referrer,utm:utm()};
       if(!d.email&&!d.name&&!d.phone&&!d.company&&!d.website&&!d.notes)return;
-      var body=JSON.stringify(d);if(body===lead.last)return;lead.last=body;
+      var same=JSON.stringify(d);if(same===lead.last)return;lead.last=same;
+      d.ts=Date.now();lead.pending=JSON.stringify(d);pumpLead();
+    }
+    /* one request at a time (the sheet takes a few seconds per save); only the newest state waits in line */
+    function pumpLead(){
+      if(lead.busy||!lead.pending||!window.fetch)return;
+      var body=lead.pending;lead.pending=null;lead.busy=true;
+      fetch(leadUrl,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'text/plain;charset=UTF-8'},body:body}).catch(function(){}).then(function(){lead.busy=false;pumpLead();});
+    }
+    /* leaving or hiding the page: the newest state goes out at once, by beacon (the sheet ignores an older one that arrives later) */
+    function flushLead(){
+      if(!lead)return;saveLead();if(!lead.pending)return;
+      var body=lead.pending;lead.pending=null;
       try{if(navigator.sendBeacon&&navigator.sendBeacon(leadUrl,new Blob([body],{type:'text/plain;charset=UTF-8'})))return;}catch(e){}
       try{fetch(leadUrl,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'text/plain;charset=UTF-8'},body:body});}catch(e){}
     }

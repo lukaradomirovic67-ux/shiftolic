@@ -11,6 +11,7 @@
  * 4. Copy the Web app URL (ends in /exec) and send it to the developer. It goes in the data-lead-url attribute
  *    of .lt-form on the Let's talk page.
  * After changing this code: Deploy > Manage deployments > edit (pencil) > Version: New version > Deploy (same URL).
+ * v2 (21.11.2026): finds the row with TextFinder, ignores a request older than the last one saved (Sent at column).
  */
 var SHEET_NAME = 'Leads';
 var COLUMNS = [
@@ -18,7 +19,7 @@ var COLUMNS = [
   ['booked', 'Booked'], ['bookingTime', 'Booking time'],
   ['email', 'Email'], ['name', 'Name'], ['phone', 'Phone'], ['company', 'Company'], ['website', 'Website'],
   ['budget', 'Budget'], ['source', 'How they heard about us'], ['notes', 'Notes'], ['guests', 'Guests'],
-  ['tz', 'Time zone'], ['page', 'Page'], ['referrer', 'Referrer'], ['utm', 'UTM']
+  ['tz', 'Time zone'], ['page', 'Page'], ['referrer', 'Referrer'], ['utm', 'UTM'], ['ts', 'Sent at (ms)']
 ];
 var STEP_NAMES = { 1: '1 Contact', 2: '2 About you', 3: '3 Your project', 4: '4 Calendar', 5: '5 Booked' };
 
@@ -31,11 +32,11 @@ function doPost(e) {
     var d = JSON.parse(raw);
     if (!d || typeof d.id !== 'string' || !/^[A-Za-z0-9-]{8,64}$/.test(d.id)) return reply_('bad id');
     var sh = sheet_();
-    var lastRow = sh.getLastRow();
-    var ids = lastRow > 1 ? sh.getRange(2, 1, lastRow - 1, 1).getValues().map(function (r) { return String(r[0]); }) : [];
-    var at = ids.indexOf(d.id);
-    var rowNum = at > -1 ? at + 2 : lastRow + 1;
-    var old = at > -1 ? sh.getRange(rowNum, 1, 1, COLUMNS.length).getValues()[0] : [];
+    var found = sh.getLastRow() > 1 ? sh.getRange(2, 1, sh.getLastRow() - 1, 1).createTextFinder(d.id).matchEntireCell(true).findNext() : null;
+    var rowNum = found ? found.getRow() : sh.getLastRow() + 1;
+    var old = found ? sh.getRange(rowNum, 1, 1, COLUMNS.length).getValues()[0] : [];
+    var ts = Number(d.ts) || 0, oldTs = Number(old[COLUMNS.length - 1]) || 0;
+    if (ts && oldTs && ts < oldTs) return reply_('old');  /* a request that arrives after a newer one is ignored */
     var now = new Date();
     var row = COLUMNS.map(function (c, i) {
       var key = c[0], prev = old[i];
@@ -44,6 +45,7 @@ function doPost(e) {
       if (key === 'last') return now;
       if (key === 'step') { var s = Math.max(stepNum_(prev), parseInt(d.step, 10) || 0); return STEP_NAMES[s] || ''; }
       if (key === 'booked') return (d.booked === true || prev === 'Yes') ? 'Yes' : 'No';
+      if (key === 'ts') return Math.max(ts, oldTs) || '';
       var v = clean_(d[key]);
       if (v !== '') return v;
       return typeof prev === 'string' ? safe_(prev) : (prev === undefined ? '' : prev);
@@ -63,7 +65,7 @@ function doGet() { return reply_('Nues leads endpoint is running.'); }
 function sheet_() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sh = ss.getSheetByName(SHEET_NAME) || ss.insertSheet(SHEET_NAME);
-  if (sh.getLastRow() === 0) {
+  if (sh.getLastRow() === 0 || sh.getLastColumn() < COLUMNS.length) {
     sh.getRange(1, 1, 1, COLUMNS.length).setValues([COLUMNS.map(function (c) { return c[1]; })]).setFontWeight('bold');
     sh.setFrozenRows(1);
   }
