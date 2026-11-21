@@ -3,6 +3,17 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 21.11.2026: Let's talk, sakrivena stara sekcija sa iClosed-om, ostaje nova forma sa našim kalendarom (objavljeno na staging)
+Tvoje „sakrij gornju sekciju, a donju ostavi i publishuj na staging“.
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Let's talk, originalna sekcija `lt-hero` (`07dca240-…-f9c3fa418061`, iClosed) | vidljiva | Visibility isključeno (ne objavljuje se; element i dalje postoji u Designer-u, vraća se uključivanjem) |
+| Nova sekcija (`71fe9368-…-5d2d5f621ca6`), naslov „The first 30 minutes / are on us.“ | H2 (da stranica ne bi imala dva H1) | H1, iste klase i isti izgled, jer je H1 originalne sekcije sada sakriven |
+
+- Kod stranice nije menjan: iClosed skripta se i dalje učitava u footeru, ali bez iClosed bloka na stranici ne radi ništa. Uklanja se kad potvrdiš da stara sekcija ide zauvek.
+- Provereno (1440 i 390): jedna sekcija, nema iClosed bloka, jedan H1, zaključani kalendar sa 6 slobodnih dana, bez širenja u stranu i bez JS grešaka.
+
 ## 21.11.2026: Let's talk, prvo pravo zakazivanje kroz naš kalendar (test, ništa nije menjano u Webflow-u)
 Tvoje „ajde probaj mail luka@nues.agency, da se samo na taj nalog šalje“. Forma na stagingu popunjena sa luka@nues.agency, bez gostiju; Webflow slanje forme je simulirano (da obaveštenje o prijavi ne ode timu), a zakazivanje u Cal.com je pravo.
 - Termin: ponedeljak 23.11.2026, 16:30–17:00 (Europe/Belgrade), događaj „30min“ na test Cal.com nalogu. Cal.com odgovor: 201, status „accepted“, uid `4cFPmFHep7NUbYLWWtGDdP`.
