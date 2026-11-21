@@ -3,6 +3,12 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 21.11.2026: Let's talk, prvo pravo zakazivanje kroz naš kalendar (test, ništa nije menjano u Webflow-u)
+Tvoje „ajde probaj mail luka@nues.agency, da se samo na taj nalog šalje“. Forma na stagingu popunjena sa luka@nues.agency, bez gostiju; Webflow slanje forme je simulirano (da obaveštenje o prijavi ne ode timu), a zakazivanje u Cal.com je pravo.
+- Termin: ponedeljak 23.11.2026, 16:30–17:00 (Europe/Belgrade), događaj „30min“ na test Cal.com nalogu. Cal.com odgovor: 201, status „accepted“, uid `4cFPmFHep7NUbYLWWtGDdP`.
+- Na stranici se pojavilo „You're booked“ sa tačnim datumom i vremenom; JS grešaka nema. Snimak: `notes/kalendar-pravo-zakazivanje-2026-11-21.png`.
+- Termin nije otkazan; otkazuje se na tvoje „da“ (iz Cal.com-a, iz emaila ili preko API-ja).
+
 ## 20.11.2026: Let's talk, naš kalendar umesto iClosed-a, preko Cal.com API-ja (test sekcija, objavljeno na staging)
 Tvoje „možemo li preko nekog koda da napravimo i naš custom kalendar“ i test Cal.com nalog. Kopija koda pre izmene: `backup/page-code/2026-11-20-lets-talk-form/lets-talk-head-before-3.html`, `lets-talk-footer-before-3.html`. Originalna sekcija sa iClosed-om nije dirana.
 
