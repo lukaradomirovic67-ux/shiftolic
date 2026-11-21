@@ -3,6 +3,25 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 21.11.2026: Lead tabela čitljivija, Apps Script v3 (čeka da ga zameniš u Apps Script-u)
+Tvoje „napravi da bude malo čitljivije“. Na sajtu se ništa ne menja (forma šalje iste podatke).
+
+| Šta | Pre (v1/v2) | Posle (v3) |
+|---|---|---|
+| Redosled kolona | Lead ID, First seen, Last update, Step reached, Booked, Booking time, Email, Name, … | Last activity, Step reached, Name, Email, Phone, Company, Website, Budget, How they heard about us, Notes, Meeting, Guests, Time zone, Came from, UTM, pa sakrivene: First seen, Page, Lead ID, Sent at (ms) |
+| Datum | samo datum | datum i vreme (dd.mm.yyyy hh:mm) |
+| Redosled redova | novi red na dnu | novi posetilac na vrhu; meni sortira sve po poslednjoj aktivnosti |
+| Boje | – | zeleno = zakazao, žuto = poslao formu a nije zakazao, crveno = stao u formi (napomena na zaglavlju „Step reached“) |
+| Zaglavlje | podebljano | tamno, zamrznuto, sa filterom |
+| Kolona „Booked“ | Yes/No | uklonjena: „5 Booked“ u „Step reached“ kaže isto |
+| Termin | „Monday, November 23, 2026 · 9:30 AM – 10:00 AM (Europe/Belgrade)“ | „Mon 23 Nov 2026, 9:30 AM – 10:00 AM (Europe/Belgrade)“ |
+| Ostalo | – | Notes se prelama u više redova, ostale kolone u jednom; prazan „Sheet1“ se briše, „Leads“ je prvi list; meni **Nues → Tidy up the Leads sheet** |
+
+- Kolone se nalaze po nazivu zaglavlja: naziv se menja samo u skripti (`COLUMNS`), ne u tabeli.
+- Prvi unos posle nove verzije sam prebacuje postojeće redove u novi raspored (ili meni Nues).
+- Provereno na tabeli u memoriji sa rasporedom kao u tvojoj: stari redovi prebačeni, najnoviji na vrhu, „=formula test“ i telefoni ostaju tekst, kasni stariji zahtev se zanemaruje.
+- Rezervna kopija v2: `backup/page-code/2026-11-21-lets-talk-wizard/leads-apps-script-v2.gs`.
+
 ## 21.11.2026: Let's talk forma, lead tabela povezana (proba na tvom nalogu, objavljeno na staging)
 | Gde | Pre | Posle |
 |---|---|---|
