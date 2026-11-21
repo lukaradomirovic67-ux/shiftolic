@@ -3,6 +3,20 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 21.11.2026: Let's talk forma, čuvanje onoga što posetilac ukuca (proba, kod objavljen na staging, još neaktivan)
+Darkovo pitanje „kad neko krene da popunjava podatke … ko god šta ukuca ostaje“ i tvoje „ajde da napravimo probno … na mom“ nalogu.
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Let's talk, footer kod | podaci se čuvaju tek kad se klikne „Continue to calendar“ (Webflow Forms) i kad se zakaže (Cal.com) | ako `.lt-form` ima `data-lead-url`, sve što se ukuca šalje se u Google tabelu: posle svake promene polja, na svakom koraku, kad posetilac sakrije ili zatvori stranicu, kad se otvori kalendar i kad zakaže |
+| Nova skripta za tabelu | – | `webflow-assets/lead-capture/leads-apps-script.gs` (Google Apps Script, web app) |
+
+- Jedan red po posetiocu (ID ostaje isti i posle osvežavanja u istom tabu). Red se dopunjuje, a ništa već upisano se ne briše. Kolone: Lead ID, First seen, Last update, Step reached, Booked, Booking time, Email, Name, Phone, Company, Website, Budget, How they heard about us, Notes, Guests, Time zone, Page, Referrer, UTM.
+- Tekst posetioca se upisuje kao tekst (vrednost koja počinje sa = + - ili @ ne može da postane formula).
+- **Još ne radi na stagingu:** `data-lead-url` nije upisan dok ne pošalješ adresu tabele (koraci u MANUAL_TASKS.md).
+- Provereno: skripta na probnoj tabeli u memoriji (dopuna reda, korak ne ide unazad, telefon i formule kao tekst). Kod stranice proveren u mom pregledaču sa lažnom adresom tabele: 12 slanja za ceo prolaz, isti ID, podaci iz koraka 2 sačuvani i bez klika na „Continue“, JS grešaka nema. Objavljeni footer je isti kao fajl u repou.
+- Rezervna kopija prethodnog footera: `backup/page-code/2026-11-21-lets-talk-wizard/lets-talk-footer-before-leads.html`.
+
 ## 21.11.2026: Let's talk forma u koracima, kartica stalne visine (objavljeno na staging)
 Tvoje „ajde odradi ovo što si mi predložio“ (predlog sa slike `notes/forma-sada-vs-predlog-2026-11-21.png`). Rezervna kopija pre izmene: `backup/page-code/2026-11-21-lets-talk-wizard/` (head i footer kod, objavljeni HTML sekcije, vrednosti stilova).
 

@@ -6,7 +6,9 @@
      spam check (Turnstile) can finish while the visitor fills in the first steps. After a successful submit step 4 shows our own
      calendar. Free times come from the Cal.com API and the booking is created there too (no key needed for a public
      event). The event goes in the data-cal-link attribute of .lt-form as "username/event-slug".
-     Phone field: intl-tel-input 25.3.1 (MIT) adds the country flag and dial code; the full number is sent. -->
+     Phone field: intl-tel-input 25.3.1 (MIT) adds the country flag and dial code; the full number is sent.
+     Leads (test): when .lt-form has a data-lead-url (a Google Apps Script web app), what the visitor types is also
+     saved there step by step, and when they leave the page, one row per visitor (webflow-assets/lead-capture). -->
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInput.min.js"></script>
 <script>
 (function(){
@@ -58,7 +60,7 @@
       cur=n;
       stages.forEach(function(s){s.classList.toggle('is-active',+s.getAttribute('data-lt-stage')===n);});
       w.classList.toggle('is-later',n>1);w.classList.toggle('is-last',n===stages.length);
-      progress(n);
+      progress(n);if(lead){lead.step=Math.max(lead.step,n);saveLead();}
       if(focus){keepInView();var f=stages[n-1].querySelector('input,textarea');if(f){try{f.focus({preventScroll:true});}catch(e){f.focus();}}}
     }
     function stageValid(n){
@@ -80,6 +82,27 @@
       try{iti=window.intlTelInput(tel,{initialCountry:country(),separateDialCode:true,countrySearch:true,dropdownContainer:document.body,loadUtils:function(){return import('https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/utils.js');}});}catch(e){iti=null;}
     }
     form.addEventListener('submit',function(){if(iti){try{var full=iti.getNumber();if(full)tel.value=full;}catch(e){}}},true);
+
+    /* Leads: one id per visitor (kept for the browser tab), the row is updated after every change, step and booking */
+    var leadUrl=(w.getAttribute('data-lead-url')||'').trim(),lead=null;
+    if(/^https:\/\//.test(leadUrl)){
+      lead={id:'',step:1,booked:false,bookingTime:'',guests:'',tz:browserTz,last:''};
+      try{lead.id=sessionStorage.getItem('ltLeadId')||'';}catch(e){}
+      if(!/^[A-Za-z0-9-]{8,64}$/.test(lead.id)){lead.id=(window.crypto&&crypto.randomUUID)?crypto.randomUUID():Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,12);try{sessionStorage.setItem('ltLeadId',lead.id);}catch(e){}}
+      form.addEventListener('change',function(){saveLead();});
+      window.addEventListener('pagehide',function(){saveLead();});
+      document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden')saveLead();});
+    }
+    function utm(){var q,o=[];try{q=new URLSearchParams(location.search);}catch(e){return '';}['utm_source','utm_medium','utm_campaign','utm_term','utm_content'].forEach(function(k){if(q.get(k))o.push(k.slice(4)+'='+q.get(k));});return o.join(' ');}
+    function saveLead(){
+      if(!lead)return;
+      var ph=val('Phone');if(iti&&ph){try{ph=iti.getNumber()||ph;}catch(e){}}
+      var d={id:lead.id,step:lead.step,booked:lead.booked,bookingTime:lead.bookingTime,email:val('Email'),name:val('Name'),phone:ph,company:val('Company'),website:val('Website'),budget:val('Budget'),source:val('Source'),notes:val('Notes'),guests:lead.guests,tz:lead.tz,page:location.origin+location.pathname,referrer:document.referrer,utm:utm()};
+      if(!d.email&&!d.name&&!d.phone&&!d.company&&!d.website&&!d.notes)return;
+      var body=JSON.stringify(d);if(body===lead.last)return;lead.last=body;
+      try{if(navigator.sendBeacon&&navigator.sendBeacon(leadUrl,new Blob([body],{type:'text/plain;charset=UTF-8'})))return;}catch(e){}
+      try{fetch(leadUrl,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'text/plain;charset=UTF-8'},body:body});}catch(e){}
+    }
 
     /* Step 4: our calendar (free days, time zone with search, guests, times, Confirm, thank you) */
     function calendar(box){
@@ -108,7 +131,7 @@
       box.appendChild(root);
 
       function tzLabel(z){var tm='';try{tm=new Intl.DateTimeFormat('en-US',{hour:'numeric',minute:'2-digit',timeZone:z}).format(new Date());}catch(e){}return {name:z.replace(/_/g,' '),time:tm};}
-      function setTz(z){st.tz=z;var l=tzLabel(z);tzl.textContent=l.name+' ('+l.time+')';tzb.setAttribute('aria-label','Time zone: '+l.name);}
+      function setTz(z){st.tz=z;if(lead)lead.tz=z;var l=tzLabel(z);tzl.textContent=l.name+' ('+l.time+')';tzb.setAttribute('aria-label','Time zone: '+l.name);}
       function fmtTime(iso){return new Intl.DateTimeFormat('en-US',{hour:'numeric',minute:'2-digit',hour12:st.h12,timeZone:st.tz}).format(new Date(iso));}
       function dayTitle(k){var p=k.split('-'),dd=new Date(Date.UTC(+p[0],+p[1]-1,+p[2]));return dd.toLocaleString('en-US',{weekday:'short',timeZone:'UTC'})+' '+(+p[2]);}
       function renderConfirm(){if(st.busy)return;cf.disabled=!st.slot;cf.textContent=st.slot?'Confirm '+fmtTime(st.slot.start):'Confirm';}
@@ -177,7 +200,7 @@
       /* guests (up to 5, by email): "+ Guests" opens the email field, added guests show as chips */
       function renderGuests(){chips.innerHTML='';
         st.guests.forEach(function(g,i){var c=el('span','lt-cal_chip'),x=el('button','lt-cal_chip-x','×');x.setAttribute('aria-label','Remove '+g);c.appendChild(el('span',null,g));c.appendChild(x);x.addEventListener('click',function(){st.guests.splice(i,1);renderGuests();});chips.appendChild(c);});
-        chips.hidden=!st.guests.length;gw.hidden=chips.hidden&&grow.hidden;
+        chips.hidden=!st.guests.length;gw.hidden=chips.hidden&&grow.hidden;if(lead)lead.guests=st.guests.join(', ');
         gadd.textContent=st.guests.length?'+ Guests ('+st.guests.length+')':'+ Guests';gadd.disabled=st.guests.length>=MAX_GUESTS&&grow.hidden;gadd.setAttribute('aria-expanded',grow.hidden?'false':'true');}
       function addGuest(){var v=gin.value.trim();if(!v)return;if(!gin.checkValidity()){gin.reportValidity();return;}if(st.guests.indexOf(v)<0&&st.guests.length<MAX_GUESTS)st.guests.push(v);gin.value='';grow.hidden=true;renderGuests();}
       gadd.addEventListener('click',function(){grow.hidden=!grow.hidden||st.guests.length>=MAX_GUESTS;renderGuests();if(!grow.hidden)gin.focus();});
@@ -207,6 +230,7 @@
         d.appendChild(el('div','lt-cal_done-when',when));d.appendChild(el('p','lt-cal_done-text','A calendar invitation has been sent to '+val('Email')+'.'));
         box.appendChild(d);
         progress(STEPS.length,'Done');
+        if(lead){lead.step=5;lead.booked=true;lead.bookingTime=when;saveLead();}
       }
       setTz(st.tz);renderGuests();renderGrid();renderSlots();load();
     }
@@ -214,7 +238,7 @@
     function open(){
       if(w.classList.contains('is-open'))return;
       w.classList.add('is-open');w.classList.remove('is-later','is-last');
-      progress(STEPS.length);keepInView();
+      progress(STEPS.length);keepInView();if(lead){lead.step=4;saveLead();}
       var box=w.querySelector('[data-lt-cal]');
       if(box&&link)calendar(box);
     }

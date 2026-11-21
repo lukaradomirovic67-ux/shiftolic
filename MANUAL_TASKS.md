@@ -4,6 +4,16 @@ Ažurirano: 10.11.2026 (faza 0). Webflow API na ovom planu ne može: 301 preusme
 greška `not_enterprise_plan_site`), sitemap kontrole po stranici (403) i podešavanja sajta (global canonical, auto sitemap).
 Putanje u meniju proverite u trenutnom Webflow interfejsu. Nazivi se ponekad menjaju.
 
+## Lead tabela za Let's talk formu (proba, 21.11.2026)
+Na luka@nues.agency nalogu, jednom (oko 5 minuta). Ceo kod je u `webflow-assets/lead-capture/leads-apps-script.gs`.
+1. Otvoriti novu Google tabelu (sheets.new), nazvati je „Nues Leads (test)“.
+2. Extensions → Apps Script. Obrisati sve, nalepiti kod iz fajla, Save.
+3. Deploy → New deployment → tip „Web app“. Execute as: Me. Who has access: Anyone. Deploy.
+4. Authorize access: izabrati nalog, Advanced → Go to … (unsafe) → Allow. Upozorenje stoji jer je skripta tvoja, a nije objavljena aplikacija.
+5. Kopirati „Web app URL“ (završava se na /exec) i poslati ga Claude-u. On ga upisuje u `data-lead-url` na `.lt-form` i objavljuje staging.
+- Ako u koraku 3 nema opcije „Anyone“, Google Workspace podešavanje firme to ne dozvoljava. Tada treba lični Gmail nalog ili da admin dozvoli.
+- Pre pravog lansiranja: rečenica u Privacy Policy da se podaci iz forme čuvaju i pre slanja (šalje se na odobrenje).
+
 ## Pri lansiranju (domen se sada NE povezuje)
 1. **Plaćeni site plan.** Bez njega nema custom domena, sitemap-a ni uklanjanja „Made in Webflow“ bedža.
 2. **Site settings → SEO → Global canonical tag URL**: upisati izabrani domen (QUESTIONS 7). Tek tada svaka stranica dobija
