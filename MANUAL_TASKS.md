@@ -13,6 +13,7 @@ Na luka@nues.agency nalogu, jednom (oko 5 minuta). Ceo kod je u `webflow-assets/
 5. Kopirati „Web app URL“ (završava se na /exec) i poslati ga Claude-u. On ga upisuje u `data-lead-url` na `.lt-form` i objavljuje staging.
 - Ako u koraku 3 nema opcije „Anyone“, Google Workspace podešavanje firme to ne dozvoljava. Tada treba lični Gmail nalog ili da admin dozvoli.
 - Urađeno 21.11.: tabela i deploy („Anyone“), link upisan u formu na stagingu.
+- **Slack obaveštenja (proba, privatni kanal #leads-test, samo Luka):** na api.slack.com/apps → Create New App → From scratch („Nues Leads“, workspace Nues) → Incoming Webhooks → On → Add New Webhook to Workspace → #leads-test → Allow → kopirati Webhook URL. U Apps Script → Project Settings → Script Properties dodati `SLACK_WEBHOOK_URL` = taj URL (ne slati ga nikome). Za brzu probu i `ABANDON_MINUTES` = 2. Nalepiti skriptu v4, Save, Deploy → Manage deployments → New version, pa u tabeli **Nues → Turn on Slack alerts**.
 - **Zameniti skriptu verzijom v3** (`leads-apps-script.gs`, uključuje i v2): Apps Script → obrisati sve, nalepiti novi kod, Save → Deploy → Manage deployments → olovka → Version: New version → Deploy. Link ostaje isti.
 - Posle toga osvežiti tabelu: u meniju se pojavi **Nues → Tidy up the Leads sheet** (prvi put Google može ponovo tražiti dozvolu). Tabela se sredi i sama pri sledećem unosu iz forme.
 - Pre pravog lansiranja: rečenica u Privacy Policy da se podaci iz forme čuvaju i pre slanja (šalje se na odobrenje).

@@ -3,6 +3,22 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 21.11.2026: Lead tabela, Slack obaveštenja (Apps Script v4, proba, čeka webhook)
+Tvoje „napravio sam kanal i hoću da samo za sad imam ja pristup … da bude u nekoj testnoj fazi“. Kanal #leads-test je privatan, jedini član si ti.
+
+| Šta | Pre (v3) | Posle (v4) |
+|---|---|---|
+| Slack | – | provera na 10 minuta: ko je ostavio email ili telefon i nije zakazao 30 min posle poslednje aktivnosti dobija jednu poruku „Did not book“, svako zakazivanje jednu poruku „Booked a call“ |
+| Kolone | 19 | + sakrivena „Slack sent“ (šta je i kad poslato; „before Slack“ za redove koji su postojali pre uključivanja) |
+| Meni Nues | Tidy up the Leads sheet | + Turn on Slack alerts, Send a Slack test message, Turn off Slack alerts |
+| Podešavanja | – | na vrhu skripte: `ABANDON_MINUTES = 30`, `NOTIFY_BOOKED = true`; Script property `ABANDON_MINUTES` (npr. 2) za brzu probu |
+
+- Webhook URL se čuva samo u Script Properties (`SLACK_WEBHOOK_URL`), ne u kodu, repou ni na sajtu.
+- Tekst posetioca se u poruci escape-uje (`&`, `<`, `>`), pa ne može da postane link ni @channel.
+- Poruka: status, ime · email · telefon, firma, sajt, budžet, izvor, napomena (do 500 znakova), link na red u tabeli.
+- Provereno na tabeli u memoriji i lažnom Slack-u: uključivanje (stari red „before Slack“, okidač na 10 min, poruka u kanal), odmah posle unosa nema poruke, posle 40 min tačno jedna „Did not book“, ponovna provera bez duplikata, posle zakazivanja „Booked a call“ sa skraćenim terminom, stari red koji kasnije zakaže ne dobija poruku.
+- Rezervna kopija v3: `backup/page-code/2026-11-21-lets-talk-wizard/leads-apps-script-v3.gs`.
+
 ## 21.11.2026: Lead tabela čitljivija, Apps Script v3 (čeka da ga zameniš u Apps Script-u)
 Tvoje „napravi da bude malo čitljivije“. Na sajtu se ništa ne menja (forma šalje iste podatke).
 

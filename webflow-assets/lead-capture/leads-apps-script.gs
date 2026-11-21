@@ -18,7 +18,20 @@
  * v2 (21.11.2026): finds the row with TextFinder, ignores a request older than the last one saved (Sent at column).
  * v3 (21.11.2026): readable layout (order, widths, date and time, colours, newest on top, technical columns hidden),
  *                  "Booked" dropped (Step reached "5 Booked" says it), shorter meeting text.
+ * v4 (21.11.2026): Slack alerts (test phase, private channel). Every 10 minutes the sheet is checked: a visitor who left an
+ *                  email or phone and did not book within ABANDON_MINUTES gets one "Did not book" message, a booking
+ *                  gets one "Booked" message. Rows that were in the sheet before the alerts were turned on get none.
+ *
+ * Slack setup (once):
+ * 1. Slack: api.slack.com/apps > Create New App > From scratch > name "Nues Leads", your workspace.
+ *    Incoming Webhooks > On > Add New Webhook to Workspace > pick the channel > Allow > copy the Webhook URL.
+ * 2. Apps Script: Project Settings (gear) > Script Properties > Add script property:
+ *    SLACK_WEBHOOK_URL = the Webhook URL. Keep it only there: anyone with the URL can post to the channel.
+ *    Optional: ABANDON_MINUTES = 2 for a quick test (without it: 30).
+ * 3. In the sheet: Nues > Turn on Slack alerts (Google asks for permission once). A message arrives in the channel.
  */
+var ABANDON_MINUTES = 30;   /* "Did not book" goes out this long after the visitor's last activity */
+var NOTIFY_BOOKED = true;   /* false = no message for bookings (Cal.com already emails the team) */
 var SHEET_NAME = 'Leads';
 /* key (as the page sends it), header, width in px, hidden */
 var COLUMNS = [
@@ -26,7 +39,8 @@ var COLUMNS = [
   ['phone', 'Phone', 135], ['company', 'Company', 140], ['website', 'Website', 160], ['budget', 'Budget', 110],
   ['source', 'How they heard about us', 120], ['notes', 'Notes', 280], ['bookingTime', 'Meeting', 270],
   ['guests', 'Guests', 170], ['tz', 'Time zone', 130], ['referrer', 'Came from', 220], ['utm', 'UTM', 150],
-  ['first', 'First seen', 120, true], ['page', 'Page', 200, true], ['id', 'Lead ID', 130, true], ['ts', 'Sent at (ms)', 110, true]
+  ['first', 'First seen', 120, true], ['page', 'Page', 200, true], ['id', 'Lead ID', 130, true], ['ts', 'Sent at (ms)', 110, true],
+  ['notified', 'Slack sent', 150, true]
 ];
 /* headers of earlier versions, so their rows move into this layout */
 var OLD_HEADERS = { 'Last update': 'last', 'Booking time': 'bookingTime', 'Referrer': 'referrer', 'Booked': '' };
@@ -56,6 +70,7 @@ function doPost(e) {
       if (key === 'first') return prev || now;
       if (key === 'last') return now;
       if (key === 'ts') return Math.max(ts, oldTs) || '';
+      if (key === 'notified') return prev === undefined ? '' : prev;  /* only the Slack check writes this */
       if (key === 'step') { var s = Math.max(stepNum_(prev), parseInt(d.step, 10) || 0); return STEP_NAMES[s] || ''; }
       var v = clean_(key === 'bookingTime' ? meeting_(d[key]) : d[key]);
       if (v !== '') return v;
@@ -75,7 +90,9 @@ function doGet() { return reply_('Nues leads endpoint is running.'); }
 
 /* Menu in the sheet */
 function onOpen() {
-  SpreadsheetApp.getUi().createMenu('Nues').addItem('Tidy up the Leads sheet', 'tidyLeads').addToUi();
+  SpreadsheetApp.getUi().createMenu('Nues').addItem('Tidy up the Leads sheet', 'tidyLeads').addSeparator()
+    .addItem('Turn on Slack alerts', 'turnOnSlack').addItem('Send a Slack test message', 'testSlack')
+    .addItem('Turn off Slack alerts', 'turnOffSlack').addToUi();
 }
 function tidyLeads() {
   var lock = LockService.getScriptLock();
@@ -171,3 +188,78 @@ function clean_(v) {
   return safe_(String(v).replace(/\s+$/, '').slice(0, 3000));
 }
 function reply_(t) { return ContentService.createTextOutput(t); }
+
+/* ---------- Slack alerts ---------- */
+function slackUrl_() { return PropertiesService.getScriptProperties().getProperty('SLACK_WEBHOOK_URL') || ''; }
+function abandonMinutes_() { var v = parseInt(PropertiesService.getScriptProperties().getProperty('ABANDON_MINUTES'), 10); return v > 0 ? v : ABANDON_MINUTES; }
+
+/* Runs every 10 minutes (the trigger is made by turnOnSlack). */
+function checkLeads() {
+  var url = slackUrl_(); if (!url) return;
+  var lock = LockService.getScriptLock(); if (!lock.tryLock(10000)) return;
+  try {
+    var sh = sheet_(); if (!layoutOk_(sh)) tidy_(sh);
+    var last = sh.getLastRow(); if (last < 2) return;
+    var vals = sh.getRange(2, 1, last - 1, COLUMNS.length).getValues(), now = Date.now(), wait = abandonMinutes_();
+    var nc = colIndex_('notified') + 1;
+    for (var r = 0; r < vals.length; r++) {
+      var o = {}; COLUMNS.forEach(function (c, i) { o[c[0]] = vals[r][i]; });
+      var note = String(o.notified || ''), step = stepNum_(o.step), idle = (now - time_(o.last)) / 60000, kind = '';
+      if (note.indexOf('before Slack') > -1) continue;
+      if (step >= 5) { if (NOTIFY_BOOKED && note.indexOf('booked') < 0) kind = 'booked'; }
+      else if (!note && (o.email || o.phone) && idle >= wait) kind = 'abandoned';
+      if (!kind) continue;
+      if (post_(url, message_(kind, o, idle, sh, r + 2))) {
+        sh.getRange(r + 2, nc).setValue((note ? note + '; ' : '') + kind + ' ' + Utilities.formatDate(new Date(), Session.getScriptTimeZone(), 'dd.MM. HH:mm'));
+      }
+    }
+  } finally { lock.releaseLock(); }
+}
+function turnOnSlack() {
+  var ui = SpreadsheetApp.getUi(), url = slackUrl_();
+  if (!url) { ui.alert('Add the Slack webhook first: Extensions > Apps Script > Project Settings > Script properties > SLACK_WEBHOOK_URL.'); return; }
+  var lock = LockService.getScriptLock(); lock.waitLock(30000);
+  try {
+    var sh = sheet_(); if (!layoutOk_(sh)) tidy_(sh);
+    var last = sh.getLastRow(), nc = colIndex_('notified') + 1;
+    if (last > 1) {  /* rows that were here before Slack get no message */
+      var notes = sh.getRange(2, nc, last - 1, 1).getValues().map(function (v) { return [v[0] || 'before Slack']; });
+      sh.getRange(2, nc, last - 1, 1).setValues(notes);
+    }
+  } finally { lock.releaseLock(); }
+  stopTriggers_();
+  ScriptApp.newTrigger('checkLeads').timeBased().everyMinutes(10).create();
+  var ok = post_(url, '✅ Nues leads: Slack alerts are on (test). "Did not book" goes out ' + abandonMinutes_() + ' min after a visitor\'s last activity' + (NOTIFY_BOOKED ? ', and every booking gets a message.' : '.'));
+  ui.alert(ok ? 'Slack alerts are on. A message was sent to the channel.' : 'The check is on, but Slack did not accept the message. Check SLACK_WEBHOOK_URL.');
+}
+function turnOffSlack() { stopTriggers_(); SpreadsheetApp.getUi().alert('Slack alerts are off.'); }
+function testSlack() {
+  var url = slackUrl_(), ui = SpreadsheetApp.getUi();
+  if (!url) { ui.alert('SLACK_WEBHOOK_URL is not set.'); return; }
+  var sample = { name: 'Test Person', email: 'test@example.com', phone: '+381 60 000 0000', company: 'Acme', website: 'example.com', budget: '$10k - $15k', source: 'Referral', notes: 'This is a test message from the Leads sheet.', step: '3 Your project', last: new Date() };
+  ui.alert(post_(url, message_('abandoned', sample, 35, sheet_(), 2)) ? 'Sent.' : 'Slack did not accept the message. Check SLACK_WEBHOOK_URL.');
+}
+function stopTriggers_() { ScriptApp.getProjectTriggers().forEach(function (t) { if (t.getHandlerFunction() === 'checkLeads') ScriptApp.deleteTrigger(t); }); }
+function post_(url, text) {
+  try {
+    var res = UrlFetchApp.fetch(url, { method: 'post', contentType: 'application/json', payload: JSON.stringify({ text: text }), muteHttpExceptions: true });
+    return res.getResponseCode() === 200;
+  } catch (err) { return false; }
+}
+/* visitor text is escaped, so it cannot turn into links or @channel mentions in Slack */
+function slackEsc_(v) { return String(v === undefined || v === null ? '' : v).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+function message_(kind, o, idle, sh, rowNum) {
+  var link = sh.getParent().getUrl() + '#gid=' + sh.getSheetId() + '&range=A' + rowNum;
+  var who = [o.name, o.email, o.phone].filter(function (x) { return x; }).map(slackEsc_).join(' · ');
+  var biz = [['Company', o.company], ['Website', o.website], ['Budget', o.budget], ['Heard about us', o.source]]
+    .filter(function (x) { return x[1]; }).map(function (x) { return x[0] + ': ' + slackEsc_(x[1]); }).join(' · ');
+  var head = kind === 'booked'
+    ? '🟢 *Booked a call*' + (o.bookingTime ? ' · ' + slackEsc_(o.bookingTime) : '')
+    : '🟡 *Did not book* · stopped at *' + slackEsc_(o.step) + '* · ' + ago_(idle);
+  var lines = [head, who || '(no name)'];
+  if (biz) lines.push(biz);
+  if (o.notes) lines.push('Notes: ' + slackEsc_(String(o.notes).slice(0, 500)));
+  lines.push('<' + link + '|Open in the sheet>');
+  return lines.join('\n');
+}
+function ago_(min) { min = Math.round(min); return min < 90 ? min + ' min ago' : Math.round(min / 60) + ' h ago'; }
