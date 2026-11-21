@@ -3,6 +3,20 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 21.11.2026: Let's talk, slider sa 3 citata iz sekcije „Verified reviews“ (objavljeno na staging)
+Tvoje „ovaj slider na contact stranici popuni sa neka tri testimonialsa iz ove sekcije“. Izvor: sekcija `#reviews` na Home (ista je na About i servisnim stranicama), tekst proveren na stagingu 21.11.
+
+| Slajd | Pre | Posle |
+|---|---|---|
+| 1 | „We are thrilled with the work Nues did…“, Or Moshkovitz, Marketing Director at Ballerine, sa fotografijom | „If you’re looking for a team to build your B2B Saas website fast and right I would definitely recommend Nues.“ · **Founder**, Shiftolic · Workforce |
+| 2 | „Three competitors asked us who built our site…“, Or Moshkovitz, sa fotografijom | „When I need something, the team responds quickly, and that is what’s the most important.“ · **Marketing Director**, Ballerine · Fintech |
+| 3 | (nije postojao) | „The honest feedback stung for about a day. Then the new site outperformed the old one in every metric we track.“ · **Head of Growth**, Harper · Insurance |
+
+- Menjan je samo slider u novoj (vidljivoj) sekciji; sakrivena originalna sekcija i dalje ima stara dva slajda.
+- Tekst citata je isti kao u izvoru; spoljni navodnici („ “) su izostavljeni, kao i do sada u ovom slideru. Pošto citati u izvoru nemaju ime ni fotografiju osobe, slajdovi su bez fotografije: uloga podebljano, firma i oblast sivo (iste klase `lt-quote_name` / `lt-quote_role`).
+- Treći slajd je pravi Webflow slajd: napravljen privremeni slider, njegov slajd premešten u ovaj, privremeni slider obrisan.
+- Provereno (1440 i 390): 3 slajda, 3 tačke, strelica „sledeći“ ide 1 → 2 → 3 → 1, JS grešaka nema. Snimak: `notes/lets-talk-slider-citati-2026-11-21.png`.
+
 ## 21.11.2026: Let's talk, sakrivena stara sekcija sa iClosed-om, ostaje nova forma sa našim kalendarom (objavljeno na staging)
 Tvoje „sakrij gornju sekciju, a donju ostavi i publishuj na staging“.
 
