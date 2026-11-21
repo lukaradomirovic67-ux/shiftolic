@@ -4,6 +4,8 @@ Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro 
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
 ## 21.11.2026: Lead tabela, Slack obaveštenja (Apps Script v4, proba, čeka webhook)
+**Odloženo (21.11.):** tvoje „ako treba admin onda preskačemo za sad slanje na Slack“. U tabeli i dalje radi v3; v4 ostaje u repou za kasnije.
+
 Tvoje „napravio sam kanal i hoću da samo za sad imam ja pristup … da bude u nekoj testnoj fazi“. Kanal #leads-test je privatan, jedini član si ti.
 
 | Šta | Pre (v3) | Posle (v4) |
