@@ -3,6 +3,15 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 21.11.2026: Let's talk forma, uporedni prikaz „sada vs predlog“ (bez izmena na sajtu)
+Tvoje „uradi mi kako je dizajn sad, a kakav je ako uradiš ove promene“.
+
+- **Sada** (snimljeno na stagingu, desktop 1440): visina kartice po koracima 813 → 1406 → 984 → 327 px (početak, posle Email + Name, kalendar, thank you).
+- **Predlog**: ista stranica, predlog primenjen samo u mom lokalnom pregledaču (CSS i JS ubačeni u Playwright, ništa nije objavljeno ni sačuvano u Webflow-u). Kartica je u svih 5 koraka 813 px: Kontakt → Firma → Projekat → Termin → Thank you.
+- Zakazivanje je u testu presretnuto lokalno (`POST /v2/bookings` vraća lažan odgovor), pa pravi termin nije napravljen.
+- Novi tekstovi u predlogu („Step 1 of 4“, „Contact“, „About you“, „Your project“, „Continue to calendar“, „← Back“, „+ Guests“, „Confirm 10:30 AM“) čekaju tvoje odobrenje.
+- Slika: `notes/forma-sada-vs-predlog-2026-11-21.png`.
+
 ## 21.11.2026: Let's talk, slider sa 3 citata iz sekcije „Verified reviews“ (objavljeno na staging)
 Tvoje „ovaj slider na contact stranici popuni sa neka tri testimonialsa iz ove sekcije“. Izvor: sekcija `#reviews` na Home (ista je na About i servisnim stranicama), tekst proveren na stagingu 21.11.
 
