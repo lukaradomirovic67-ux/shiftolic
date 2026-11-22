@@ -3,6 +3,18 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 22.11.2026: Ceo sajt, GA4 se učitava jednom i Minify (objavljeno na staging)
+Tvoje „ajmo redom“ posle analize audita i odgovori: GA4 „Da, ukloni“, Minify „Uključiću ja sada“, Aeonik WOFF2 „Ne znam, preskoči“, Google fontovi kao sopstveni „Kasnije“. Rezervna kopija: `backup/ga-once-2026-11-22/` (site head i footer kod sa sajta pre izmene).
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Site settings, custom code (head) | `<script async src="https://www.googletagmanager.com/gtag/js?id=G-NNTMD9FV5D">` + `gtag("config","G-NNTMD9FV5D")`, a isti GA4 učitava i Webflow integracija | ta dva reda uklonjena; GA4 učitava samo Webflow integracija (Site settings → Apps & Integrations), isti nalog |
+| Site settings → Publishing → Advanced (ti, ručno) | Minify HTML uključen, CSS i JS isključeni | Minify CSS i JS uključeni: CSS sajta je sada `.min.css`, 491 KB umesto 603 KB (pre kompresije) |
+
+- Provereno na objavljenom stagingu: na Home, Services, Let's talk, blog postu i Ballerine-u head kod je identičan `webflow-assets/site-code/site-head.min.html`, `googletagmanager.com/gtag/js` se više ne učitava, ostaje jedna kopija GA4 i jedan `config`; GA šalje zahtev (`google-analytics.com/g/s/collect`). Na svih 42 naše stranice nema JS grešaka posle izmene i Minify-ja.
+- Za tebe: u GA4 → Reports → Realtime proveri da poseta stagingu stiže (jednom po otvaranju stranice).
+- Asynchronously load JS i Per page CSS su ostali isključeni: mogu da pokvare naše skripte i stilove koje kod dodaje tek u pregledaču. Probaćemo ih posebno, uz poređenje svih stranica.
+
 ## 22.11.2026: Services, „Not sure what you need?“ i hero kao komponente sa properties (objavljeno na staging)
 Tvoje „i ovo napravi kao komponentu“ (Ask Nues) i „i ovo zbog menjanja teksta treba da bude napravi komponentu“ (hero „Four ways in / one crew behind them“). Rezervna kopija: `backup/services-components-2026-11-22/` (objavljeni HTML i kod stranice pre izmene).
 

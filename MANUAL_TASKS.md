@@ -18,6 +18,11 @@ Na luka@nues.agency nalogu, jednom (oko 5 minuta). Ceo kod je u `webflow-assets/
 - Posle toga osvežiti tabelu: u meniju se pojavi **Nues → Tidy up the Leads sheet** (prvi put Google može ponovo tražiti dozvolu). Tabela se sredi i sama pri sledećem unosu iz forme.
 - Pre pravog lansiranja: rečenica u Privacy Policy da se podaci iz forme čuvaju i pre slanja (šalje se na odobrenje).
 
+
+## Performanse, odloženo (22.11.2026)
+- **Aeonik u WOFF2:** sada je OTF (3 težine po ~60 KB na svakoj stranici). Pre konverzije proveriti licencu za Aeonik (CoType) da li dozvoljava WOFF2 za web. Kad je potvrđeno, Claude konvertuje i menja fajlove na istim font zapisima (isti izgled).
+- **Geist i Instrument Serif kao sopstveni fontovi** (OFL, besplatni): Claude postavlja WOFF2 fajlove sa istim imenima, ti u Site settings → Fonts brišeš Google verzije; nestaju `webfont.js` i dva Google domena koji blokiraju prvi prikaz. Tvoje „Kasnije“.
+- **Per page CSS i Asynchronously load JS** (Site settings → Publishing → Advanced): probati posebno, uz poređenje svih stranica pre i posle.
 ## Pri lansiranju (domen se sada NE povezuje)
 1. **Plaćeni site plan.** Bez njega nema custom domena, sitemap-a ni uklanjanja „Made in Webflow“ bedža.
 2. **Site settings → SEO → Global canonical tag URL**: upisati izabrani domen (QUESTIONS 7). Tek tada svaka stranica dobija
