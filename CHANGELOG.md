@@ -3,6 +3,21 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 22.11.2026: Services, sekcija „Four services“ kao Webflow Tabs (objavljeno na staging)
+Tvoje „napravi ovo kao webflow tabove“. Rezervna kopija: `backup/services-tabs-2026-11-22/` (objavljeni HTML i kod stranice pre izmene, i iz repozitorijuma i sa Webflow-a).
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Services, `services-tabs_stage` | 4 pozadine, `services-tabs_inner` > padding > container > `services-tabs_panels` > 4 panela (paneli 2–4 sa combo `is-off`), `services-tabs_menu` sa 4 Link Block-a | 4 pozadine i Webflow Tabs (`services-tabs_tabs`): Tabs Content = `services-tabs_inner`, 4 Tab Pane-a (`services-tabs_pane`), svaki sa svojim padding > container > panel; Tabs Menu = `services-tabs_menu`, 4 Tab Link-a (`services-tabs_tab`) sa istim sadržajem |
+| Nove klase | | `services-tabs_tabs` (flex kolona, position static, da meni ostane pozicioniran prema stage-u), `services-tabs_pane` (širina 100%) |
+| `services-tabs_menu` | | boja #fff i 18px (15px na telefonu). Client-First globalni stil `.w-tab-link{color:inherit;font-size:inherit}` poništava boju i veličinu Tab Link-a, pa ih link sada nasleđuje od menija (globalni stil nije diran). |
+| Kod stranice (head) | `.services-tabs_panels{display:grid}`, `is-off` override | Tabs Content slaže 4 pane-a u istu ćeliju mreže (`align-self:stretch`, kao stari paneli), prelazi ostaju isti |
+| Kod stranice (footer) | klik i tastatura na svakom tabu | isti tok (scroll na desktopu, autoplay na tabletu i telefonu); klik i tasteri se hvataju na meniju pre Webflow-ovog tab handlera (on bi dodao svoj fade), skripta pali `w--current` i `w--tab-active`, ARIA ide na Tab Pane |
+
+- U Designeru: klik na tab (ili izbor Tab Pane-a u Navigatoru) pokazuje taj servis za uređivanje, umesto starog `is-off` sakrivanja.
+- Klase `services-tabs_panels` i combo `is-off` više nisu na stranici; stilovi nisu brisani.
+- Provereno na objavljenom stagingu naspram backup-a: screenshot cele sekcije isti piksel po piksel na 1440×900 (sva 4 koraka skrola), 820×1180 i 390×844 (tab 1 i tab 3). Pozicije i veličine tabova, pill-a, naslova, lista i dugmadi iste na 1440, 1024 i 390; klik na tab (skrol do koraka na desktopu), strelice i Home na tastaturi, autoplay i reduced motion rade; Webflow-ov fade se ne uključuje, URL se ne menja; tekst, slike i atributi cele stranice isti; JS grešaka nema.
+
 ## 22.11.2026: Sekcije koje se ponavljaju postaju komponente sa properties (objavljeno na staging)
 Tvoje „za svaku sekciju koja se pojavljuje dva ili više puta na sajtu da napraviš component-u, i da svaki content unutar nje može da se menja preko properties … i slike“. Rezervna kopija objavljenog HTML-a svih 15 stranica pre izmena: `backup/components-2026-11-22/`.
 

@@ -40,10 +40,10 @@
    (from below going forward, from above going back) while the old one leaves the other way */
 [data-services-tabs]{--svs-from:28px;--svs-to:-20px;--svt-from:105%;--svt-to:-105%}
 [data-services-tabs].is-back{--svs-from:-28px;--svs-to:20px;--svt-from:-105%;--svt-to:105%}
-[data-services-tabs].is-ready .services-tabs_panels{display:grid}
-/* panels 2 to 4 carry the is-off combo in the Designer (display none, so the canvas shows one service at a time); live, the transitions take over */
-[data-services-tabs].is-ready .services-tabs_panel.is-off{display:flex}
-[data-services-tabs].is-ready .services-tabs_panel{grid-area:1/1;visibility:hidden;pointer-events:none}
+/* native Webflow Tabs: Tab Content (services-tabs_inner) stacks the four Tab Panes in one grid cell; Webflow would show only the active pane, live all four stay in the cell and the transitions decide what is seen */
+[data-services-tabs].is-ready .services-tabs_inner{display:grid;grid-template-columns:100%}
+[data-services-tabs].is-ready .services-tabs_pane{display:block;grid-area:1/1;align-self:stretch;pointer-events:none}
+[data-services-tabs].is-ready .services-tabs_panel{visibility:hidden;pointer-events:none}
 [data-services-tabs].is-ready .services-tabs_panel.is-current{visibility:visible;pointer-events:auto}
 [data-services-tabs].is-ready .services-tabs_panel.is-leaving{visibility:visible}
 [data-services-tabs].is-ready .services-tabs_panel>*{opacity:0;transform:translate3d(0,var(--svs-from),0);filter:blur(6px);transition:none}
@@ -74,7 +74,7 @@
 /* desktop scroll mode: the stage pins for four screens; sizes follow the screen height so a service always fits */
 .services-tabs_scroll.is-scroll{height:400vh}
 .services-tabs_scroll.is-scroll [data-services-tabs]{position:sticky;top:0;height:100vh;min-height:0}
-[data-services-tabs].is-scroll .services-tabs_inner{display:flex;flex:1;align-items:center;padding-top:clamp(72px,10vh,100px);padding-bottom:clamp(116px,17vh,160px)}
+[data-services-tabs].is-scroll .services-tabs_inner{display:grid;flex:1;align-items:center;align-content:center;padding-top:clamp(72px,10vh,100px);padding-bottom:clamp(116px,17vh,160px)}
 [data-services-tabs].is-scroll .services-tabs_inner>*{width:100%}
 [data-services-tabs].is-scroll .services-tabs_panel{row-gap:clamp(16px,3.2vh,50px)}
 [data-services-tabs].is-scroll .services-tabs_title{font-size:clamp(40px,6.6vh,80px)}
