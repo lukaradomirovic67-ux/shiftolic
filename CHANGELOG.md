@@ -3,6 +3,21 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 22.11.2026: Sekcije koje se ponavljaju postaju komponente sa properties (objavljeno na staging, u toku)
+Tvoje „za svaku sekciju koja se pojavljuje dva ili više puta na sajtu da napraviš component-u, i da svaki content unutar nje može da se menja preko properties … i slike“. Rezervna kopija objavljenog HTML-a svih 15 stranica pre izmena: `backup/components-2026-11-22/`.
+
+| Komponenta (grupa Sections) | Gde | Properties |
+|---|---|---|
+| About Timeline `9a2e9b0d-…` | About | Heading + po godini (2023–2026): godina, naslov, tekst, veličina tima, oznaka, fotografija, alt. Ista fotografija godine je na grafikonu, u balončiću i na telefonu (32 vezana elementa). |
+| Trusted `6f85bd4f-…` | Home, Services, Design & Development, Webflow Development, Growth, SEO & AEO (6 instanci) | Header: Heading, Link text, Link. Video: Video image + alt, Video logo + alt, Video stat, Video stat label, Video URL (Vimeo link za dugme play, `data-video-src`). Varijante Default / Launch / Build / Plus / SEO. Slot „Case cards“. |
+
+- Trusted ima CMS listu (Our Works kartice), a Webflow ne dozvoljava CMS listu unutar komponente („Components can't hold a live CMS binding“). Zato lista ostaje na stranici, u slotu „Case cards“ komponente, sa istim podešavanjima (Show in hero section, sort Number in section).
+- `<section class="section_trusted is-…">` ostaje na stranici sa svojom klasom teme, jer site kod veže hover boje za nju (`.section_trusted.is-plus …` za strelicu i kartice) i jer `is-seo` daje SEO promenljive karticama u slotu. Komponenta je sve unutar sekcije.
+- Boje teme unutar komponente su varijante (stare combo klase `is-launch/is-build/is-plus/is-seo` na strelici, overlay-u i oznaci videa preslikane 1:1 u stilove varijanti). Services koristi Default, jer je njegov `is-build` na oznaci iste boje kao osnovna (#0d1928).
+- Slot dodaje jedan `<div>` oko liste, pa se mreža kartica na desktopu skupila (450 → 174 px). Nova klasa `trusted_list` (height 100%) na CMS listi to vraća.
+- Home link ostaje veza na stranicu Our Work (page link), ostale stranice `/our-work#ow-work` kao pre.
+- Provereno na objavljenom stagingu, svih 6 stranica, 1440 i 390 px: tekst, slike i alt isti kao u backup-u; pozicije i veličine sekcije, videa, mreže i kartica iste; boje strelice, overlay-a i oznake iste; hover kartica i strelice isti; play otvara isti Vimeo video; JS grešaka nema.
+
 ## 22.11.2026: Let's talk, zemlja za telefon po IP adresi (objavljeno na staging)
 Aleksandru je u Srbiji forma nudila +44, jer je zemlja birana po jeziku pregledača (en-GB → GB). Tvoje „može li preko geolocation … ako može odradi“.
 
