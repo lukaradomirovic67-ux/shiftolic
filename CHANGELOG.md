@@ -3,6 +3,18 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 22.11.2026: Let's talk, zemlja za telefon po IP adresi (objavljeno na staging)
+Aleksandru je u Srbiji forma nudila +44, jer je zemlja birana po jeziku pregledača (en-GB → GB). Tvoje „može li preko geolocation … ako može odradi“.
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Let's talk footer, polje Phone | zemlja iz jezika pregledača (`navigator.languages`) | prvo jezik (odmah), pa zemlja po IP adresi sa `/cdn-cgi/trace` na našem domenu (Cloudflare, preko kog Webflow servira sajt, vraća `loc=RS`); menja se samo ako posetilac još nije otvorio polje ni otkucao broj |
+
+- Bez spoljnog servisa i bez pitanja „dozvoli lokaciju“: Cloudflare već vidi IP kao CDN sajta, pa nema novog primaoca podataka ni izmene Privacy Policy. Radi i na stagingu i na www.nues.agency (provereno).
+- Ako Cloudflare ne odgovori ili vrati nepoznatu zemlju (`XX`, Tor `T1`), ostaje izbor po jeziku. Posetilac i dalje može ručno da promeni zemlju.
+- Provereno na objavljenom stagingu: pregledač en-GB + Cloudflare RS → +381; sr-RS + DE → +49; Cloudflare ne radi → +44 (jezik); posetilac otvorio polje pre odgovora → ne menja se. JS grešaka nema.
+- Rezervna kopija: `backup/page-code/2026-11-21-lets-talk-wizard/lets-talk-footer-before-geo.html`.
+
 ## 22.11.2026: Privacy Policy, Cal.com umesto iClosed (objavljeno na staging)
 Tvoje „izmeni ovo u privacy policy da više ne koristimo iClosed već Cal.com“. Rezervna kopija: `backup/page-text/privacy-policy-before-2026-11-22.md`.
 
