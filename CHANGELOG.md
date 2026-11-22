@@ -3,6 +3,19 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 22.11.2026: Privacy Policy, Cal.com umesto iClosed (objavljeno na staging)
+Tvoje „izmeni ovo u privacy policy da više ne koristimo iClosed već Cal.com“. Rezervna kopija: `backup/page-text/privacy-policy-before-2026-11-22.md`.
+
+| Gde (Privacy policy, `6aba6bc07d6279b4b5617704`) | Pre | Posle |
+|---|---|---|
+| Cookies, stavka liste | „Cookies from embedded services, such as our video player (Vimeo) and booking calendar (iClosed), set when you watch a video or book a call“ | „Cookies from embedded services, such as our video player (Vimeo), set when you watch a video“ |
+| Deljenje podataka, stavka liste | „With service providers that help operate the website (hosting, analytics, etc.)“ | „With service providers that help operate the website (hosting, analytics, call scheduling through Cal.com, etc.)“ |
+
+- Zašto Cal.com nije u rečenici o kolačićima: naš kalendar nije Cal.com embed, nego poziva Cal.com API iz pregledača bez kolačića (zahtev ka drugom domenu bez `credentials`, pa pregledač ne čuva `__cf_bm` koji API vraća). Zato je Cal.com naveden kao pružalac usluge zakazivanja.
+- Webflow ne menja tekst stavke liste preko API-ja („This element doesn't support text“), pa su ubačene nove stavke (`<li>`, bez klase, kao i ostale) i obrisane stare.
+- Provereno na objavljenoj stranici: „iClosed“ se više ne pojavljuje, obe nove stavke su tu.
+- Ostaje (na odobrenje): rečenica da se podaci iz Let's talk forme čuvaju u Google tabeli i pre slanja.
+
 ## 21.11.2026: Lead tabela, Slack obaveštenja (Apps Script v4, proba, čeka webhook)
 **Odloženo (21.11.):** tvoje „ako treba admin onda preskačemo za sad slanje na Slack“. U tabeli i dalje radi v3; v4 ostaje u repou za kasnije.
 
