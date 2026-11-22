@@ -3,6 +3,19 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 22.11.2026: Services, „Not sure what you need?“ i hero kao komponente sa properties (objavljeno na staging)
+Tvoje „i ovo napravi kao komponentu“ (Ask Nues) i „i ovo zbog menjanja teksta treba da bude napravi komponentu“ (hero „Four ways in / one crew behind them“). Rezervna kopija: `backup/services-components-2026-11-22/` (objavljeni HTML i kod stranice pre izmene).
+
+| Komponenta (grupa Services) | Gde | Properties |
+|---|---|---|
+| Services Ask `c3cd7a89-…` | Services | Header: Heading, Lead. Prompt: Prompt start („We need“), Assistant name („Nues“), Thinking label, Avatar. Answer: Answer without JavaScript (tekst za pretraživače i bez JS-a), Suggestions intro („Not quite it? Try“). Po servisu (4): Question, Answer (`[s]` = čip servisa, `{od\|do\|prefiks\|sufiks}` = broj koji broji), Service name, Explore text, Explore link (page link kao pre), Icon, Suggestion |
+| Services Overview Hero `20eff2a1-…` | Services | Pill: Pill text, Pill link (link na sekciju #tour kao pre), Pill icon. Heading (prvi red H1), Heading highlight (drugi red, gradijent). Buttons: Button text + link (#tour), Second button text + link (Our Work, page link). Po servisu (4): Service text (rečenica ispod naslova dok je ugao upaljen; prva je i podnaslov pre skripte), Drawing (lit), Drawing (dim) |
+
+- Ask: boje servisa (`data-ink`, `data-tint`) i ključ servisa (`data-service`) ostaju fiksni u komponenti, jer ih koriste CSS i skripta; sve ostalo je property.
+- Ask, kod stranice (footer): „We need“, „Nues“ i „Thinking“ su bili upisani u skriptu; sada ih skripta čita iz komponente (tekst trake, ime i novi atribut `data-thinking`), uz iste vrednosti kao rezervu.
+- Hero: H1 je ostao `Four ways in<br><span class="text-gradient is-launch">…</span>`; tekst oba reda i tekst dugmeta su u `<span>` bez klase (Webflow Span i tekst pored ikonice ne mogu da se vežu za property), kao u Service Hero komponenti. Podnaslov i prva rečenica ugla su isti property, pa ostaju usklađeni.
+- Provereno na objavljenom stagingu naspram backup-a: screenshot hero-a i Ask sekcije isti piksel po piksel na 1440×900, 820×1180 i 390×844; tekst, slike, linkovi, atributi i klase cele stranice isti (jedino novo je `data-thinking="Thinking"`); hero rotira rečenice istim redom, Ask kuca „We need a new website.“, pokazuje „Thinking“ pa „Nues“, odgovor i link „Explore Design & Development“ (/services/design-development), klik na predlog „Nobody finds us on Google.“ prebacuje na SEO & AEO sa istom ikonicom; JS grešaka nema.
+
 ## 22.11.2026: Services, sekcija „Four services“ kao Webflow Tabs (objavljeno na staging)
 Tvoje „napravi ovo kao webflow tabove“. Rezervna kopija: `backup/services-tabs-2026-11-22/` (objavljeni HTML i kod stranice pre izmene, i iz repozitorijuma i sa Webflow-a).
 

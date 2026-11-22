@@ -180,8 +180,9 @@
 
     /* Not sure what you need? (Ask Nues): a visitor's need types itself into the prompt bar, Nues thinks, then the answer streams in word by word,
        the service as a chip and the one number that matters counting up. The four services take turns until a suggestion is tapped.
-       Content lives in the Designer on the four Explore links: data-ask (the question), data-answer ([s] = the service chip, {from|to|prefix|suffix} = the number),
-       data-name, data-ink, data-tint. The "Try" sentences are the suggestion links; the chip icons are the hidden images in services-ask_icons. */
+       Content is the Services Ask component's properties: on the four Explore links data-ask (the question), data-answer ([s] = the service chip,
+       {from|to|prefix|suffix} = the number), data-name (plus data-ink, data-tint); the "Try" sentences are the suggestion links; the chip icons are the
+       hidden images in services-ask_icons; the prompt start ("We need"), the assistant name ("Nues") and data-thinking ("Thinking") are read from the bar. */
     (function(){
       var root = document.querySelector('[data-services-ask]');
       if (!root) { return; }
@@ -192,6 +193,9 @@
       var sgs = [].slice.call(root.querySelectorAll('.services-ask_suggestion[data-service]'));
       if (!bar || !q || !tx || !who || !fu || !exs.length) { return; }
       var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var startText = q.textContent.trim() || 'We need';
+      var whoName = st ? (st.textContent.trim() || 'Nues') : 'Nues';
+      var thinking = st ? (st.getAttribute('data-thinking') || 'Thinking') : 'Thinking';
       var icons = {};
       [].forEach.call(root.querySelectorAll('.services-ask_icon[data-service]'), function(im){ icons[im.getAttribute('data-service')] = im; });
       var D = exs.map(function(a){
@@ -291,13 +295,13 @@
           later(function(){ if (send) { send.classList.add('is-hit'); } }, t);
           later(function(){ if (send) { send.classList.remove('is-hit'); } bar.classList.remove('is-focus', 'is-ready'); typed(d.ask); }, t + 160);
           t += 380;
-          later(function(){ who.classList.add('is-on'); if (st) { st.classList.add('is-thinking'); st.textContent = 'Thinking'; } }, t);
+          later(function(){ who.classList.add('is-on'); if (st) { st.classList.add('is-thinking'); st.textContent = thinking; } }, t);
           t += 900;
         } else {
           typed(d.ask);
         }
         later(function(){
-          if (st) { st.classList.remove('is-thinking'); st.textContent = 'Nues'; }
+          if (st) { st.classList.remove('is-thinking'); st.textContent = whoName; }
           who.classList.add('is-on');
           tx.appendChild(build(d));
           var dot = el('span', 'services-ask_dot');
@@ -325,7 +329,7 @@
 
       /* before the first round: the empty prompt bar */
       tx.textContent = '';
-      typed(''); q.appendChild(document.createTextNode('We need')); q.appendChild(caret());
+      typed(''); q.appendChild(document.createTextNode(startText)); q.appendChild(caret());
       root.classList.add('is-ready');
       var resume = function(){
         if (!started) { ask(0); return; }
