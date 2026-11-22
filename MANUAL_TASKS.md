@@ -48,6 +48,9 @@ Na luka@nues.agency nalogu, jednom (oko 5 minuta). Ceo kod je u `webflow-assets/
    nisu u sitemap-u starog sajta, ali ostaju u tabeli za svaki slučaj. Ceo spisak sa statusima:
    `notes/301-mapa-2026-11-17.md`.
 6. **Google Search Console**: verifikacija domena (DNS TXT), slanje sitemap-a. **Bing Webmaster Tools**: uvoz iz GSC-a.
+   - Provereno 22.11.: GSC je već povezan za stari sajt. Ni stari (www.nues.agency) ni novi sajt nemaju `google-site-verification` meta tag, pa je verifikacija preko DNS-a (Domain property) ili preko GA taga. Oba ostaju posle prelaska. Proveriti u GSC → Settings → Ownership verification.
+   - Posle prelaska u istom GSC property-ju: poslati novi sitemap, pratiti Pages/Indexing i 301 iz `notes/301-mapa-2026-11-17.md`. Glavna adresa ostaje www.nues.agency (nues.agency → 301 → www, kao sada).
+   - GA4: novi sajt već ima isti GA4 kao stari (`G-NNTMD9FV5D`, isti način učitavanja, dva puta), pa istorija ide dalje bez prebacivanja. Posete sa stagingu (webflow.io) takođe idu u isti GA4: u izveštajima filtrirati po Hostname = www.nues.agency.
 
 ## Sada (van SEO faza)
 7. **[ODLOŽENO 12.11.: integracije su u draftu dok se ne napišu]** **Uključiti stranice pojedinačnih integracija** (`/integrations/<slug>`). Šablon „Integrations Template“ postoji i nije draft,
