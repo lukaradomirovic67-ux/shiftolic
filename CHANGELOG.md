@@ -3,6 +3,19 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 22.11.2026: Our Work, hero se vidi odmah, pruge bez razvlačenja slike (objavljeno na staging)
+Korak 1 iz plana po auditu. Tvoj izbor za hero: „Naš reveal kao na Home-u“. Rezervna kopija: `backup/our-work-perf-2026-11-22/` (objavljeni HTML i ceo zapis IX3 interakcije „Our Work hero load“).
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Our Work, hero (pill, H1, podnaslov, bedževi, slajder) | IX3 „Our Work hero load“ (izranjanje 0,9–1,4 s); Webflow ih krije (`visibility:hidden`) dok se `webflow.js` ne učita | atribut `data-reveal` kao na Home hero-u: isti efekat (fade + izranjanje), ali počinje čim stigne HTML; IX3 interakcija uklonjena |
+| Our Work, pruge iza hero-a (`ow-hero_stripes`) | `<img>` 8×2058 px razvučen na celu širinu (`object-fit: fill`) | div iste klase sa istom slikom kao pozadinom (`background-size: 100% 100%`), `aria-hidden` |
+
+- Uzrok sporog LCP-a: hero je bio sakriven dok se ne učita i pokrene `webflow.js` (na usporenom telefonu ~7 s). Ostale stranice koriste naš reveal, koji ne čeka `webflow.js`.
+- Izmereno na objavljenom stagingu, telefon 412 px, mreža ~1,6 Mbps i procesor 4× sporiji (kao Lighthouse): naslov se pojavljuje posle 2,0 s (bilo 7,1 s), slika slajdera posle 3,6 s (bilo 7,5 s).
+- Izgled posle animacije isti: pozicije pill-a, H1, slajdera i pruga iste na 1440 i 390 px, screenshot hero-a se razlikuje samo u trepćućem kursoru i kadru videa u slajderu. Razvučenih slika više nema (Best practices „image-aspect-ratio“). JS grešaka nema.
+- Ostale IX3 animacije na Our Work (case, mreža, naslovi, brojevi) su ispod prvog ekrana i nisu menjane.
+
 ## 22.11.2026: Ceo sajt, GA4 se učitava jednom i Minify (objavljeno na staging)
 Tvoje „ajmo redom“ posle analize audita i odgovori: GA4 „Da, ukloni“, Minify „Uključiću ja sada“, Aeonik WOFF2 „Ne znam, preskoči“, Google fontovi kao sopstveni „Kasnije“. Rezervna kopija: `backup/ga-once-2026-11-22/` (site head i footer kod sa sajta pre izmene).
 
