@@ -3,7 +3,7 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
-## 22.11.2026: Sekcije koje se ponavljaju postaju komponente sa properties (objavljeno na staging, u toku)
+## 22.11.2026: Sekcije koje se ponavljaju postaju komponente sa properties (objavljeno na staging)
 Tvoje „za svaku sekciju koja se pojavljuje dva ili više puta na sajtu da napraviš component-u, i da svaki content unutar nje može da se menja preko properties … i slike“. Rezervna kopija objavljenog HTML-a svih 15 stranica pre izmena: `backup/components-2026-11-22/`.
 
 | Komponenta (grupa Sections) | Gde | Properties |
@@ -17,6 +17,13 @@ Tvoje „za svaku sekciju koja se pojavljuje dva ili više puta na sajtu da napr
 | Service Cases `34b22d05-…` (postojala, varijante ostaju) | 4 servisne | Heading; po projektu (2): Cover, Screen + alt (ista slika u tri okvira), Tag, Thumb a–d, Gallery name/domain/pages (popup galerija), Case link, Logo + alt, Text, Text muted, Stat, Stat label |
 | Service Numbers `b93b6b62-…` (postojala, varijante ostaju) | 5 stranica | Heading, Value 1–4, Label 1–4 |
 
+| Service Hero `4e3b548d-…` (grupa Services) | Design & Development, Webflow Development, Growth, SEO & AEO | Pill text, Pill link, Pill icon, Heading (prvi red H1), Heading highlight (reči u gradijentu), Subheading, Button text + link, Second button text + link, Shape 1–3. Varijante Default / Launch / Build / Plus / SEO. |
+
+- Service Hero: boje teme su bile combo klase (`svc-hero is-build`, `svc-hero_pill is-plus`, `svc-btn is-seo`, `text-gradient is-launch`, `svc-hero_content is-wide`). Combo klasa ne može da se menja po varijanti, pa elementi u komponenti imaju osnovne klase, a vrednosti combo klasa su preslikane 1:1 u stilove varijanti. Launch ima i širi sadržaj (62.5rem, kao `is-wide` na Design & Development).
+- Gradijent reči u H1: spoljni `<span class="text-gradient">` je ostao, jer site skripta za telefon po njemu čuva prelom reda ispred tih reči. Unutra je novi `<span class="svc-hero_highlight">` (nova klasa, ista svojstva kao `text-gradient is-launch`) koji svaka varijanta boji svojim gradijentom.
+- Animacija oblika („Services hero shapes rise“) cilja klasu `svc-hero_shape`, pa radi i u komponenti.
+- Provereno na objavljenom stagingu, 4 stranice, 1440 i 390 px: pozicije i veličine sekcije, sadržaja, pill-a, H1, podnaslova, dugmadi i oblika iste; boja pozadine, pill-a, dugmeta i gradijent isti; prelom reda u H1 na telefonu isti; linkovi isti (page linkovi na Let's talk i Our Work).
+- Nisu pretvorene, uz razlog: „Full-service web transformation“ (na svakoj servisnoj stranici druga struktura i sadržaj, Design & Development ima tabove, SEO ima 3D scenu); Privacy i Terms (isti okvir, ali telo je jedan Rich Text sa potpuno drugim tekstom, a Webflow API Rich Text property puni samo običnim tekstom, bez naslova i lista); 404 (jedna stranica). Navbar, Footer, CTA, Service FAQ i Global Styles su već bili komponente.
 - Gde je tekst bio „običan tekst + span“ (citat u Video Testimonials, tekst projekta u Service Cases), prvi deo je u novom `<span>` bez klase, a istaknuti deo u `<span>` unutar postojećeg (Webflow Span se ne veže za property). Razmaci su sačuvani (provereno u HTML-u).
 - Provereno na objavljenom stagingu, svih 15 stranica, ceo `<main>` naspram backup-a: tekst (bez ubačenih razmaka, pa bi se video i izgubljen razmak), slike i alt, atributi (href, target, rel, aria, data) i klase isti. Jedine nove stvari su `data-video-src`, klasa `trusted_list` i Webflow-ove `w-variant-…` klase. JS grešaka nema ni na jednoj stranici; tab 3 u Reviews prikazuje Harper (Head of Growth); galerija projekta se otvara (ballerine.com); oba videa otvaraju isti Vimeo kao pre (…052 Intaker, …053 Ballerine).
 - Trusted ima CMS listu (Our Works kartice), a Webflow ne dozvoljava CMS listu unutar komponente („Components can't hold a live CMS binding“). Zato lista ostaje na stranici, u slotu „Case cards“ komponente, sa istim podešavanjima (Show in hero section, sort Number in section).
