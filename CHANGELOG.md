@@ -3,6 +3,23 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 23.11.2026: 5 case stranica bez case-a: noindex direktno u HTML-u, novo CMS polje „SEO robots“ (objavljeno na staging)
+Tvoje „ajde uradi drugo ovo“ (predlog 2 uz audit case stranica). Rezerva: `backup/seo-robots-2026-11-23/` (šema i stavke Our Works, head kod šablona, objavljeni HTML svih 10 case stranica).
+
+**Zašto:** stranice Biotech, LaSalle, Hypersonix, Harper i Intaker nemaju case. Od 12.11. noindex im dodaje skripta, koja ih i preusmerava na sajt klijenta. Google pokreće skripte i to vidi. Alati koji ih ne pokreću (Ahrefs, Semrush, Screaming Frog) videli su 5 praznih stranica bez naslova i H1, koje se mogu indeksirati.
+
+| Gde | Pre | Posle |
+|---|---|---|
+| CMS Our Works (`6aba6bc07d6279b4b561771c`) | nema polja | novo polje **SEO robots** (`seo-robots`, običan tekst, nije obavezno), sa uputstvom u polju |
+| Our Works, 5 stavki bez case-a (Biotech, LaSalle, Hypersonix, Harper, Intaker) | — | `noindex, follow` |
+| Our Works, 6 stavki sa case-om (TrakPro, Veyor, Sustain, Shiftolic, Ballerine, Pythagora u draftu) | — | `index, follow` |
+| Our Works Template (`6aba6bc07d6279b4b56176ff`), page head, na vrhu | nema | `<meta name="robots" content="{SEO robots}">`. Skripta za preusmerenje i ostatak head koda su isti |
+
+- Promenjeno je samo novo polje. Ostala polja i status stavki su isti (Pythagora ostaje draft).
+- Provereno na stagingu, svih 10 stranica, HTML naspram rezerve. Jedine razlike su novi meta tag sa komentarom i `dateModified` u schemi, jer Webflow beleži izmenu stavke. U pregledaču: 5 pravih case stranica ima „index, follow“ i svoj H1, bez JS grešaka; 5 praznih i dalje odmah šalje na sajt klijenta.
+- **Za tim:** kad se napiše case za neki od ovih 5 projekata, uz Case title treba i „SEO robots“ promeniti u `index, follow`. Bez toga stranica ostaje noindex, iako preusmerenje prestane. Isto piše u uputstvu polja u CMS-u.
+- U PageSpeed auditu ovih 5 adresa i dalje pokazuje sajt klijenta (PageSpeed prati preusmerenje). Treba ih izostaviti iz audita.
+
 ## 23.11.2026: Let's talk, brže učitavanje: iClosed uklonjen, telefon polje se učitava kasnije (objavljeno na staging)
 Tvoje odluke: iClosed „Ukloni skriptu i sakrivenu sekciju“, telefon „Da, učitaj kasnije“. Rezerva (objavljeni HTML, stari head i footer kod stranice): `backup/lets-talk-perf-2026-11-23/`. Kod: `webflow-assets/site-code/lets-talk-head.html` i `lets-talk-footer.html` (custom code stranice Let's talk 6aba6bc07d6279b4b56176f8).
 
