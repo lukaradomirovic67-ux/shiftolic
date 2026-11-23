@@ -30,7 +30,7 @@ Tvoja odluka: „neka ostane tako pa ćemo to menjati“.
 - Kad se potvrde: FAQPage schema na tih 6 stranica (ja).
 
 ## Preskočeno 20.11.2026 (tvoja odluka)
-- **Dupli GA4**: GA4 se učitava dva puta (kod u Head + Webflow integracija), pa se posete verovatno broje dvaput. Kod u Head ostaje.
+- ~~**Dupli GA4**~~: rešeno 22.11. (tvoje „Da, ukloni“). GA4 se učitava jednom, preko Webflow integracije; kod u Head je uklonjen.
 - **Cookie banner i Consent Mode**: GA4 i Google fontovi se učitavaju pre pristanka (firma u EU). Nema bannera.
 - **Pricing, tabela „How we compare“**: u koloni Nues, red „What you pay“, piše „A team shared across clients“ (tekst iz kolone za agenciju). Ostaje, uz kalkulator preporuke i „Change orders $0“ („nemoj to dirati“).
 - **Geist sa našeg servera**: ne radi se (odluka od 13.11., potvrđeno 20.11.).
