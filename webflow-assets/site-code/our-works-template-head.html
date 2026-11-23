@@ -76,6 +76,8 @@ location.replace(/^https?:\/\//i.test(u)?u:'/our-work');})();</script>
 .cs-hero .w-dyn-bind-empty,.cs-body .w-dyn-bind-empty,.cs-next .w-dyn-bind-empty{display:none!important}
 .cs-hero_title-wrap:has(h1.is-v2:not(.w-dyn-bind-empty)) h1.is-legacy{display:none}
 .cs-hero h1 .cs-hl{display:table;margin-left:auto;margin-right:auto}
+/* Hero title: on load it only slides up, without the fade (with the fade Chrome counted the title as LCP about 1 s later) */
+.reveal-on .cs-hero_title-wrap:is([data-reveal],[data-reveal-early]):not(.is-revealed){opacity:1}
 .cs-stat:has(.cs-stat_value.w-dyn-bind-empty){display:none}
 /* Stats: Stat 3 filled = Stat 1, Stat 2, Stat 3 (is-v2 row). Stat 3 empty = Stat 1, Stat 2, Industry (is-legacy row). */
 .cs-stats:has(.cs-stat.is-v2:nth-child(3 of .is-v2) .cs-stat_value:not(.w-dyn-bind-empty)) .cs-stat.is-legacy{display:none}

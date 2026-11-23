@@ -3,6 +3,31 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 23.11.2026: Case stranice, naslov u hero-u samo uklizava, četkica ispod citata kao pozadina (objavljeno na staging)
+Tvoji izbori: naslov „Samo klizanje, bez fade-a“, četkica „Da, kao pozadina“. Rezerva: `backup/case-hero-top-2026-11-23/` (head kod šablona pre izmene, `quote-brush-before.json`).
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Our Works Template, page head (stil „code moved here“) | naslov u hero-u (`cs-hero_title-wrap`, `data-reveal`) se pojavljuje iz providnog i klizne gore, 1 s | jedno CSS pravilo: naslov je odmah vidljiv i i dalje klizne gore (isti pokret i trajanje) |
+| Our Works Template, citat: element četkice | `<img class="cs-quote_brush">` (1350×91, prikazana 824×20, razvučena) | `<div class="cs-quote_brush" aria-hidden="true">`, ista slika kao pozadina |
+| Stil `cs-quote_brush` (native) | pozicija i veličina | isto, plus `background-image` (isti fajl, `cs-quote-brush.avif`, 3 KB), `background-size: 100% 100%`, `no-repeat` (kao pruge na Our Work 22.11.) |
+
+- Provereno na objavljenom stagingu:
+  - četkica: pre (stari objavljeni HTML) i posle su piksel po piksel isti na 1440, 1350, 1000 i 412 px. Na 768 px prosečna razlika je 0,009 od 255. Nijedna slika na 5 case stranica više nije razvučena (Best practices „image-aspect-ratio“);
+  - naslov: providnost je sve vreme 1, a pomeranje ide od 24 px do 0 (klizanje radi);
+  - head kod na stranici je isti kao `webflow-assets/site-code/our-works-template-head.html`.
+- **LCP na telefonu** (medijana 3 učitavanja):
+
+| Stranica | Ujutru | Posle slike u hero-u | Sada |
+|---|---|---|---|
+| TrakPro | 3,1 s | 3,2 s | **1,9 s** |
+| Sustain | 3,3 s | 3,3 s | **2,0 s** |
+| Veyor | ~3,4 s | 3,5 s | **1,9 s** |
+| Ballerine | 6,2–6,8 s | 3,2 s | 3,0 s (snimak u hero-u) |
+| Shiftolic | 5,9 s | 3,5 s | 3,0 s (snimak u hero-u) |
+
+- Na Ballerine-u i Shiftolic-u LCP je srednji snimak. On stiže za 1,7 s, ali i on ulazi fade-in animacijom (`cs-shots`, `data-reveal-stagger`), pa ga Chrome računa tek oko 3,0 s. Test sa snimcima koji samo uklizavaju: 1,8–2,0 s. Pitanje u četu.
+
 ## 23.11.2026: Case stranice, tim: ime linka se poklapa sa vidljivim tekstom (objavljeno na staging)
 Sa liste („label-content-name-mismatch“ u auditu pristupačnosti). Izgled isti.
 
