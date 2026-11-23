@@ -3,6 +3,36 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 23.11.2026: Case stranice, lakša slika u hero-u, novo CMS polje „Hero screen top“ (objavljeno na staging)
+Tvoje „Odobravam“ za polje. Rezerva: `backup/case-hero-top-2026-11-23/` (objavljeni HTML 5 case stranica, Our Works šema i stavke, veze slika u šablonu pre izmene).
+
+**Zašto:** srednji snimak u hero-u case stranice bio je ceo snimak sajta klijenta (Full page screenshot, 1200 px široko i do 11.020 px visoko, 242–555 KB), a vidi se samo njegov vrh (najviše oko 1200×1030 px slike, na svim širinama ekrana). Na telefonu je to bio LCP.
+
+| Gde | Pre | Posle |
+|---|---|---|
+| CMS Our Works | nema polja | novo polje **Hero screen top** (`hero-screen-top`, Image, nije obavezno), sa uputstvom |
+| 5 napisanih case-ova (Ballerine, Shiftolic, TrakPro, Sustain, Veyor) | — | vrh postojećeg snimka, 1200×1200 WebP (q85), 57–129 KB; isti alt kao Full page screenshot. Fajlovi: `webflow-assets/perf/hero-top/` |
+| Our Works Template, srednja slika u hero-u (`b48592ac-…`) | Full page screenshot, `loading="lazy"` | Hero screen top, `loading="eager"`, `fetchpriority="high"` |
+| Our Works Template, rezervna srednja slika (`4ddd6c0b-…`, `is-legacy`) | Cover image | Full page screenshot (prikazuje se samo kad je Hero screen top prazan, kao do sada) |
+
+- Webflow je slike preuzeo sa GitHub-a i čuva ih na svom CDN-u. Fajl na CDN-u je bajt po bajt isti kao u repou. jsDelivr je odbio jedan fajl („Package size exceeded… 50 MB“), pa je za svih 5 korišćen GitHub raw link.
+- Promenjeno je samo novo polje. Ostala polja i status stavki su isti. Na home, Our Work, Resources i karticama „sledeći projekti“ i dalje se koristi Full page screenshot (tamo se snimak skroluje).
+- Provereno na objavljenom stagingu:
+  - u HTML-u 5 case stranica promenjene su samo dve slike u hero-u;
+  - ceo snimak se više ne preuzima u hero-u;
+  - izgled je poređen pre i posle na 1440, 1000, 768 i 412 px (2×). Prosečna razlika je 0,2–1,9 od 255, samo na ivicama slova, od ponovne kompresije; golim okom je isto;
+  - nema JS grešaka.
+- **LCP na telefonu** (spora veza, procesor 4× sporiji, medijana 3 učitavanja):
+
+| Stranica | Pre | Posle |
+|---|---|---|
+| Ballerine | 6,2–6,8 s (slika) | 3,2 s |
+| Shiftolic | 5,9 s (slika) | 3,5 s |
+| TrakPro, Sustain, Veyor | 3,1–3,5 s (naslov) | 3,2–3,5 s (naslov) |
+
+- Ranija procena od ~2,2 s bila je previše optimistična: u tom testu slika je dolazila lokalno, bez mreže.
+- **Šta još drži LCP na ~3 s:** naslov u hero-u ulazi fade-in animacijom na okviru oko njega (`cs-hero_title-wrap`, `data-reveal`). Chrome naslov računa tek pred kraj animacije. Test bez animacije: 1,8–1,9 s. Animacija pomerena na sam naslov: 2,2–3,3 s, nepouzdano, pa nije objavljeno. Odluka o animaciji je na tebi (pitanje u četu).
+
 ## 23.11.2026: Services i 4 servisne stranice, merenje brzine i crteži u hero-u bez čekanja (objavljeno na staging)
 Tvoje „ajmo redom“. Rezerva: `backup/services-perf-2026-11-23/` (objavljeni HTML Services i Design & Development, Services footer kod, merenje pre izmene).
 
