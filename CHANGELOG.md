@@ -3,6 +3,17 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 23.11.2026: Provera da li su linkovi opisni, svih 41 stranica (objavljeno na staging)
+Tvoje „na svakom page-u proveri jesu li svi linkovi descriptive“. Alat: `webflow-assets/site-code/tools/links-audit.js` (svaki `<a href>`: vidljivi tekst, ime za čitače ekrana, adresa); spisak: `backup/home-images-2026-11-23/links-before.json` (3088 linkova).
+
+- **Lighthouse („Links do not have descriptive text“):** 0 linkova sa generičkim tekstom („Learn more“, „Read more“, „Click here“, „More“, „Here“…) na svih 41 stranici.
+- **Linkovi bez imena za čitače ekrana:** 0. Linkovi samo sa ikonicom ili slikom (društvene mreže, logo, Clutch, AI dugmad i deljenje na blogu, hero kartice, kartice projekata) imaju ime iz `aria-label` ili alt-a slike.
+- **Popravljeno (izgled isti):** u Trusted karticama logo je postojao dva puta (običan i za hover), pa je čitač ekrana čitao „TrakPro TrakPro Perfect 100 SEO score“. Hover logo je sada `aria-hidden`, ime linka je „TrakPro Perfect 100 SEO score“. Stranice: Home, Services i 4 servisne stranice.
+- **Tvoja odluka „ostavi kako jeste“ (vidljivi tekst se ne menja):**
+  - blog, kutija sa autorom (21 post): „More details here“ → About#team;
+  - Services, tabela za poređenje: 4× „Explore Service“ ka 4 različite stranice;
+  - blog „Three Webflow features from 2026…“: dva linka „AI-powered SEO and AEO tools“ ka dva različita posta (uvod i naslov sekcije).
+
 ## 23.11.2026: Alt tekst na svim slikama (objavljeno na staging)
 Tvoje „pre svega svim slikama na sajtu dodaj alt textove“. Spisak pre izmene: `backup/home-images-2026-11-23/alt-inventory-before.json`; alat koji broji slike bez alt-a u HTML-u (kao tvoj audit): `webflow-assets/site-code/tools/alt-inventory.py`.
 
