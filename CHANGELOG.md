@@ -3,10 +3,10 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
-## 23.11.2026: Alt tekst na svim slikama, prvi deo (objavljeno na staging, u toku)
+## 23.11.2026: Alt tekst na svim slikama (objavljeno na staging)
 Tvoje „pre svega svim slikama na sajtu dodaj alt textove“. Spisak pre izmene: `backup/home-images-2026-11-23/alt-inventory-before.json`; alat koji broji slike bez alt-a u HTML-u (kao tvoj audit): `webflow-assets/site-code/tools/alt-inventory.py`.
 
-- **Stanje:** na 41 stranici bilo je 733 slike bez alt-a (144 različite slike, jer se navbar, footer i komponente ponavljaju). Sada ih je 99.
+- **Rezultat:** na 41 stranici bilo je 733 slike bez alt-a (144 različite slike, jer se navbar, footer i komponente ponavljaju). Sada je **0 od 2526** (npr. Home 0 od 106, bilo 51). Spisak posle: `backup/home-images-2026-11-23/alt-inventory-after.json`.
 - **Pravilo:** slike koje nose sadržaj (logo, fotografije tima, snimci sajtova, naslovne slike) imaju opisni alt. Dekorativne slike (pozadine, oblici, ikonice pored teksta, vodeni žigovi, duplirani snimci) takođe imaju alt, ali i `aria-hidden="true"`, da ih čitači ekrana preskoče, kako preporučuje WCAG.
 
 | Gde | Šta je dodato |
@@ -21,11 +21,15 @@ Tvoje „pre svega svim slikama na sajtu dodaj alt textove“. Spisak pre izmene
 | CMS Our Works (10 stavki) | prazni alt-ovi na pozadinama kartica, naslovnim slikama, pozadinama tabova, logotipima i snimcima, npr. „Ballerine project card background“, „TrakPro website preview“ |
 | CMS Blogs (2 posta) | „Sanity vs Webflow CMS article cover“, „Source by Webflow article cover“ |
 | Site head (galerija projekata) | sličica u galeriji: prazan alt → „Screen thumbnail“ + `aria-hidden` (dugme već ima svoj naziv) |
+| About | hero pozadina i pill (dekorativni); 3 manje fotografije u Timeline-u vezane za postojeće „photo alt“ properties |
+| Careers, Let's talk, Pricing | hero pozadine, pill ikonice, piramida, oblici i bar-kod (dekorativni); logo na računu „Nues“ |
+| Resources, Blog, šablon blog posta | hero pozadine (dekorativne), kartice članaka i projekata (alt iz CMS-a), stare kartice sa placeholder slikama |
+| Šablon case stranica, bočni snimci | alt vezan za ime projekta (na 4 case stranice ta polja su prazna i slika se ne prikazuje, ali je alt sada tu) |
+| Navbar, kartica „Latest from Insights“ | „Latest Insights article cover“. Slika nije višak: skripta u footer kodu sajta u nju upisuje naslovnu sliku najnovijeg posta, pa nije obrisana |
 
 - Dve CMS slike (Biotech logo, LaSalle snimak) Webflow je pri upisu alt-a sačuvao kao nov fajl; sadržaj je bajt po bajt isti.
 - Hero Cards nisu menjani u CMS-u: API traži i URL slike, a ponovni uvoz bi im oduzeo manje verzije (srcset). Zato je alt na elementu vezan za ime klijenta.
-- **Ostaje (čeka da Designer bude ponovo povezan):** About (hero pozadina, pill, Timeline fotografije), Careers, Let's talk, Pricing, Resources, blog (pozadina hero-a), prazni bočni snimci na 4 case stranice, jedna lista na /blog.
-- **Za tebe:** navbar kartica „Latest from Insights“ ima element slike bez fajla (prazan `src`). Alt na njemu bi prikazao ikonicu pokvarene slike, pa ga nisam dirao. Treba odlučiti: dodati sliku ili obrisati element.
+- Provereno na objavljenom stagingu: axe na 11 stranica ne prijavljuje ništa novo (samo ranije poznati kontrast i imena linkova tima); JS grešaka nema.
 
 ## 23.11.2026: Home i servisne stranice, manje slike za isti izgled (objavljeno na staging)
 Korak 2 iz plana po auditu (Home). Rezervna kopija: `backup/home-images-2026-11-23/` (objavljeni Home HTML, site head pre izmene, Our Works stavke).
