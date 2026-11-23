@@ -2,6 +2,9 @@
 
 Stvari koje su namerno ostavljene kakve jesu, da se reše kasnije. Novije na vrhu.
 
+## Case hero: snimci ostaju sa fade-in animacijom (23.11.2026)
+Tvoja odluka: „Ostavi fade“. Na Ballerine-u i Shiftolic-u LCP je srednji snimak, koji Chrome računa tek na kraju fade-a: ~3,0 s na telefonu. Bez fade-a bi bilo 1,8–2,0 s. Naslov u hero-u je od 23.11. bez fade-a (samo klizanje), po tvom izboru.
+
 ## GA4 ostaje u Webflow integraciji, učitava se sa stranicom (23.11.2026)
 Tvoja odluka: „Ostavi kako jeste“ (pitanje: GA4 tek posle prve interakcije posetioca).
 
