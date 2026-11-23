@@ -2,6 +2,12 @@
 
 Stvari koje su namerno ostavljene kakve jesu, da se reše kasnije. Novije na vrhu.
 
+## GA4 ostaje u Webflow integraciji, učitava se sa stranicom (23.11.2026)
+Tvoja odluka: „Ostavi kako jeste“ (pitanje: GA4 tek posle prve interakcije posetioca).
+
+- GA4 pravi 50–60% blokiranja na telefonu (Design & Development 640 → 250 ms bez GA4, Services 670 → 330 ms), pa ograničava PageSpeed skor na svim stranicama.
+- Ostaje jer broji sve posete, i one bez ijedne interakcije. Google rangira po merenjima pravih posetilaca (LCP, INP, CLS), ne po lab skoru.
+
 ## FAQ odgovori su i dalje nacrt (20.11.2026)
 Tvoja odluka: „neka ostane tako pa ćemo to menjati“.
 
