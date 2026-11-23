@@ -1,0 +1,6 @@
+About page 6aba6bc07d6279b4b56176f9, HtmlEmbed 5b8a03fa-fb42-5a80-dd09-fd8d58aa91d0 (class about-map_svg).
+Only change: inside <image href="..."> the PNG address
+  https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6ad22d959226961e8826084e_about-raw-19.png
+becomes the lossless WebP (asset 6b04b64d8703fbb9b8204f50, pixel-identical)
+  https://cdn.prod.website-files.com/6aba6bc07d6279b4b561771f/6b04b64d8703fbb9b8204f50_about-raw-19.webp
+The full embed code before the change is in about-published-before.html (inside .about-map_svg).

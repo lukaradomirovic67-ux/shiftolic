@@ -3,6 +3,22 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 23.11.2026: About, mapa sveta kao WebP umesto PNG (objavljeno na staging)
+Tvoje „uradi sledeća dva“ (OK za zamenu fajla). Rezerva: `backup/about-map-2026-11-23/` (originalni PNG, objavljeni About pre izmene, opis izmene).
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Assets | — | novi fajl `about-raw-19.webp` (`6b04b64d8703fbb9b8204f50`), WebP bez gubitka, 102 KB. Isti fajl je u `webflow-assets/perf/about/` |
+| About (`6aba6bc07d6279b4b56176f9`), HtmlEmbed mape (`about-map_svg`, `5b8a03fa-…`) | `<image href>` → `about-raw-19.png` (243 KB) | `<image href>` → `about-raw-19.webp` (102 KB); ostatak koda isti |
+
+- Stari PNG ostaje u Assets. Nije obrisan.
+- WebP bez gubitka ima iste piksele kao PNG (provereno pre slanja). Fajl na Webflow CDN-u je bajt po bajt isti kao u repou. Webflow je kod imena dodao još jedan „.webp“, pa je ime ispravljeno.
+- Provereno na objavljenom stagingu:
+  - u HTML-u About promenjena je samo adresa slike;
+  - mapa pre i posle je piksel po piksel ista na 1440, 768 i 412 px (2×);
+  - nema JS grešaka;
+  - stranica skida 141 KB manje.
+
 ## 23.11.2026: Privacy Policy i Terms of Service, schema (objavljeno na staging)
 Tvoje „uradi sledeća dva“. Rezerva: `backup/schema/legal-pages-before-2026-11-23.json` (obe stranice bez schema-e) i objavljeni HTML pre izmene u `backup/schema/`.
 
