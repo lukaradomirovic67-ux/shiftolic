@@ -3,6 +3,18 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 23.11.2026: Privacy Policy i Terms of Service, schema (objavljeno na staging)
+Tvoje „uradi sledeća dva“. Rezerva: `backup/schema/legal-pages-before-2026-11-23.json` (obe stranice bez schema-e) i objavljeni HTML pre izmene u `backup/schema/`.
+
+| Stranica | Pre | Posle |
+|---|---|---|
+| Privacy policy (`6aba6bc07d6279b4b5617704`), polje Schema markup | prazno | WebPage: name „Privacy Policy“, description = meta opis stranice, url `/privacy-policy`, inLanguage en, about Organization „Nues“ |
+| Terms of service (`6aba6bc07d6279b4b5617703`), polje Schema markup | prazno | WebPage: name „Terms of Service“, description = meta opis, url `/terms-of-service`, inLanguage en, about Organization „Nues“ |
+
+- Isti obrazac kao Careers i Pricing (13.11.). Sve vrednosti su već na stranici (naslov i meta opis). Ništa nije izmišljeno.
+- Provereno na objavljenom stagingu: na obe stranice je tačno jedan JSON-LD blok, ispravan JSON. U HTML-u se promenio samo taj blok.
+- `dateModified` namerno nije dodat. Na stranicama piše „Last updated: Oct 19, 2026“, a Privacy je posle toga menjan (Cookies sekcija, Cal.com 22.11.). Schema bi tako ponovila zastareo datum. Ako želiš novi datum u tekstu, javi pa ga dodam i u schema-u.
+
 ## 23.11.2026: Careers i About, tim: ime linka se poklapa sa vidljivim tekstom; Careers izmeren (objavljeno na staging)
 Rezerva: `backup/services-perf-2026-11-23/careers-published-before.html`.
 
