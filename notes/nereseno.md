@@ -2,6 +2,21 @@
 
 Stvari koje su namerno ostavljene kakve jesu, da se reše kasnije. Novije na vrhu.
 
+## U TOKU (23.11.2026, prekinuto na tvoje „stopiraj ujutru nastavljamo“): lakše slike u blog tekstovima
+- Nalaz: u 22 posta ima 48 slika u tekstu, ukupno 101,9 MB (26 slika preko 2 MB, sve 2880 px), a prikazuju se najviše 840 px. Nove verzije: WebP 1680 px (ili originalna širina ako je manja), kvalitet 90, ukupno 3,4 MB, golim okom iste (proveren najgori slučaj uvećan). Fajlovi: `webflow-assets/perf/blog-body/` (commit b1d70ee), spisak: `conversion.json`.
+- Urađeno u CMS-u (Blogs, polje Content, samo adrese slika, tekst isti): 19 od 22 posta. Webflow je slike sam prebacio na svoj CDN (proveren bajt po bajt na prvom postu).
+- **Nije objavljeno.** Izmene stoje u CMS-u kao neobjavljene, staging i dalje prikazuje stare slike.
+- Ostala 3 posta:
+  - `6aba6bc07d6279b4b5617999` webflow-vs-squarespace-in-2026-when-each-one-makes-sense
+  - `6aba6bc07d6279b4b5617995` webflow-vs-wordpress-for-b2b-saas-in-2026-whats-changed-and-when-each-one-wins
+  - `6aba6bc07d6279b4b5617997` best-15-webflow-apps-for-marketing-teams-in-2026
+- Ujutru: ta 3 posta (sadržaj spreman u `backup/blog-body-images-2026-11-23/updates.json`), pa provera svih 22 skriptom (tekst isti, sve slike na Webflow CDN-u, vraćaju 200), pa objava i provera na stagingu.
+- Rezerva pre izmene: `backup/blog-body-images-2026-11-23/blogs-before.json` (svih 23 posta, sveže pročitano u 23:05).
+
+## Čeka tvoju odluku: Pricing, podnaslov u hero-u bez fade-a
+- LCP na telefonu: sada 3,24–3,34 s (podnaslov se pojavljuje fade-om, Chrome ga računa pri kraju fade-a). Kad samo klizi (kao naslov na case stranicama): 1,87–2,06 s (5 od 5 merenja). Izmena bi bila jedna CSS linija u head kodu Pricing stranice.
+- Ostalo na Pricing, Home i šablonu posta: axe bez novih grešaka (samo kontrast, ostaje po odluci od 14.11.); Home LCP 1,4 s; blog post 2,1–2,7 s.
+
 ## Posle konačnog copy-ja i lansiranja (23.11.2026)
 Tvoja odluka: „to sve posle copy-ja i launcha može, ove tri tačke“.
 
