@@ -656,7 +656,7 @@ document.addEventListener('DOMContentLoaded', function () {
       stage.appendChild(el); els.push(el);
       var b = document.createElement('button');
       b.type = 'button'; b.className = 'pg_thumb'; b.setAttribute('aria-label', 'Show ' + (s.page || 'screen ' + (j + 1)));
-      b.innerHTML = '<img src="' + s.thumb + '" alt="">';
+      b.innerHTML = '<img src="' + s.thumb + '" alt="Screen thumbnail" aria-hidden="true">'; // the button has its own label
       b.addEventListener('click', function () { go(j); });
       dots.appendChild(b);
     });
