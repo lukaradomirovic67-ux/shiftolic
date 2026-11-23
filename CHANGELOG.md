@@ -3,6 +3,18 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 23.11.2026: Case stranice, tim: ime linka se poklapa sa vidljivim tekstom (objavljeno na staging)
+Sa liste („label-content-name-mismatch“ u auditu pristupačnosti). Izgled isti.
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Our Works Template, slika člana tima (`cs-team_photo`, `6423debd-…`) | bez atributa; alt = ime člana | `aria-hidden="true"` (alt ostaje) |
+
+- Zašto: kartica je link sa imenom „Ime, uloga, on LinkedIn“. Provera poredi to ime sa tekstom u kartici, a u tekst ulazi i alt fotografije, pa se ime javljalo dva puta („Ime Ime Uloga“) i nije se poklapalo. Fotografija sada ne ulazi u ime linka. Ime je već napisano tekstom ispod nje.
+- Provereno na objavljenom stagingu (axe, isto što koristi Lighthouse, 412 i 1350 px): „label-content-name-mismatch“ je 0 na svih 5 case stranica (bilo je 3–4 po stranici).
+- Ostaje prijava za kontrast sive uloge člana tima (#9ea0a3, 2,5:1). To je prigušeni tekst iz dizajna, tvoja odluka od 14.11.
+- Uzgred viđeno: Webflow je u ovoj objavi sam promenio `sizes` na 3 slike u footer-u (CTA pozadina, Beograd, „N“) na „100vw“. Ja ih nisam dirao; prikaz je isti.
+
 ## 23.11.2026: Case stranice, lakša slika u hero-u, novo CMS polje „Hero screen top“ (objavljeno na staging)
 Tvoje „Odobravam“ za polje. Rezerva: `backup/case-hero-top-2026-11-23/` (objavljeni HTML 5 case stranica, Our Works šema i stavke, veze slika u šablonu pre izmene).
 
