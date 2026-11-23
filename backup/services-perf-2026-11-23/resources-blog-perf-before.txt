@@ -1,0 +1,14 @@
+
+=== /resources  load 13142 ms  FCP 2504  LCP 2504 (H1.heading-style-h1.text-color-white)  long tasks 6, blocking time ~486 ms
+  total KB 2462 | by type: Image 1776, Script 389, Font 164, Stylesheet 84, Document 49
+  by host: cdn.prod.website-files.com 2135, nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io 237, fonts.gstatic.com 45, d3e54v103j8qbb.cloudfront.net 37, ajax.googleapis.com 6, fonts.googleapis.com 2
+  biggest: 520KB Image 6af6691ec581cc6d569fa824_veyor-home-full-v2-1 | 301KB Image 6af66943c046d8a6b4d8b157_intaker-home-full-v2 | 251KB Image 6af6691dc581cc6d569fa7f0_shiftolic-home-full- | 243KB Image 6af6691dc581cc6d569fa7f9_trakpro-home-full-v2 | 193KB Image 6af6691dc581cc6d569fa7e7_harper-home-full-hq- | 188KB Script O1Vy3bc6tuxzZV_BjiIaYt2vAew | 154KB Image 6af6691dc581cc6d569fa7fe_hypersonix-home-full
+  render-blocking in head: cdn.prod.website-files.com/nues-v2-0b5daf042c4fc951d8bc2555a97d416. | ajax.googleapis.com/webfont.js | fonts.googleapis.com/css?family=Geist:100,200,300,400,500,600
+  failed requests: 3 net::ERR_TUNNEL_CONNECTION_FAILED,net::ERR_ABORTED
+
+=== /blog  load 5188 ms  FCP 2280  LCP 3464 (IMG.image-cover 6b0069d25a250edf045eec3d_sanity-vs-webflow-share.w)  long tasks 4, blocking time ~356 ms
+  total KB 1100 | by type: Script 422, Image 379, Font 164, Stylesheet 84, Document 50
+  by host: cdn.prod.website-files.com 739, nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io 239, fonts.gstatic.com 45, d3e54v103j8qbb.cloudfront.net 37, cdn.jsdelivr.net 33, ajax.googleapis.com 6, fonts.googleapis.com 2
+  biggest: 188KB Script O1Vy3bc6tuxzZV_BjiIaYt2vAew | 102KB Script webflow.schunk.dfc938043398845f.js | 83KB Stylesheet nues-v2-0b5daf042c4fc951d8bc2555a97d416.webfl | 61KB Font 6aba6bc07d6279b4b561777b_aeonik-medium.otf | 59KB Font 6aba6bc07d6279b4b5617778_aeonik-regular.otf | 50KB Document blog | 32KB Image 6aba6bc07d6279b4b5617954_conf-p-800.avif
+  render-blocking in head: cdn.prod.website-files.com/nues-v2-0b5daf042c4fc951d8bc2555a97d416. | ajax.googleapis.com/webfont.js | fonts.googleapis.com/css?family=Geist:100,200,300,400,500,600
+  failed requests: 3 net::ERR_TUNNEL_CONNECTION_FAILED,net::ERR_ABORTED

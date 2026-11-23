@@ -3,6 +3,19 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 23.11.2026: Blog, istaknuta kartica se učitava odmah; Resources izmeren (objavljeno na staging)
+Tvoje „ajmo redom“. Rezerva: `backup/services-perf-2026-11-23/blog-published-before.html`, merenje pre: `resources-blog-perf-before.txt`.
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Blog (`6aba6bc07d6279b4b5617705`), slika istaknute kartice (`image-cover` u `ins-featured_card`, `55a33da7-…`) | `loading="lazy"` | `loading="eager"` (atribut, kao 18.11.) |
+
+- Zašto: na telefonu je LCP slika prve istaknute kartice (3,5 s). 18.11. „eager“ je na Blogu bio sporiji, jer je tekst tada čekao skripte. To je u međuvremenu rešeno (naslovi bez čekanja), pa je merenje ponovljeno: A/B 3 + 3 je pokazao dobitak.
+- Važi za sve 3 istaknute kartice (CMS lista): 30 KB, 30 KB i jednu sa srcset-om.
+- Provereno na objavljenom stagingu: u HTML-u su promenjene samo te 3 slike. **LCP na telefonu 3,5 → 2,1 s** (medijana 3 učitavanja). Izgled isti.
+- Ostaje: kartica i dalje ulazi fade-in animacijom (`ins-featured`, `data-reveal`). Bez fade-a bi bilo još ~0,3–0,6 s brže, ali to je izgled i nije menjano.
+- **Resources:** LCP je naslov, 2,5 s, dobro. Stranica skida 1,8 MB slika: kartice na vrhu prikazuju vrh celih snimaka sajtova (250×150) iz polja Full page screenshot, a ti snimci nemaju manje verzije. Rešava se ručnim zadatkom u `MANUAL_TASKS.md` (snimci ponovo kroz Webflow interfejs). Skripta za `sizes` tada za ove kartice bira verziju od 500 px, otprilike 1,2 MB manje na telefonu. Ništa nije menjano.
+
 ## 23.11.2026: Case stranice, naslov u hero-u samo uklizava, četkica ispod citata kao pozadina (objavljeno na staging)
 Tvoji izbori: naslov „Samo klizanje, bez fade-a“, četkica „Da, kao pozadina“. Rezerva: `backup/case-hero-top-2026-11-23/` (head kod šablona pre izmene, `quote-brush-before.json`).
 
