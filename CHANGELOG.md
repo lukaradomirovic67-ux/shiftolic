@@ -3,6 +3,17 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 23.11.2026: 301 mapa i ručni sitemap posle objave Flow Conf posta (ništa nije menjano u Webflow-u)
+Tvoje „mislim da je publish ovo za conf, a ovo za partner tek treba da prebacimo“. Provereno:
+
+| Adresa | Staging | Stari sajt | Odluka |
+|---|---|---|---|
+| /blog/from-guests-to-sponsors-notes-from-flow-conf-2026 | 200 (objavljen) | 200 | ne treba redirect; dodat u `webflow-assets/seo/sitemap-manual.xml` (sada 42 adrese) |
+| /blog/nues-is-officialy-certified-webflow-partner | 404 | 200 („Nues is officialy Certified Webflow Partner“) | prebacuje se u Blogs CMS sa istim slug-om; zato ne treba redirect, a posle prebacivanja ide u ručni sitemap |
+
+- Za ručni unos ostaje 6 preusmeravanja (`MANUAL_TASKS.md`, `notes/301-mapa-2026-11-17.md` i dokument za lansiranje su ispravljeni). Preko API-ja nije moguće: Webflow traži Enterprise plan („not_enterprise_plan_site“).
+- Dokument „Nues: dan lansiranja, šta je ostalo“ (Google Docs) je ažuriran istog dana: novi status, 6 novih stavki za kasnije, odeljak 7 za tim (polja „SEO robots“ i „Hero screen top“), 301 tabela sa 6 redova i stavka za prebacivanje partner posta.
+
 ## 23.11.2026: About, mapa sveta kao WebP umesto PNG (objavljeno na staging)
 Tvoje „uradi sledeća dva“ (OK za zamenu fajla). Rezerva: `backup/about-map-2026-11-23/` (originalni PNG, objavljeni About pre izmene, opis izmene).
 

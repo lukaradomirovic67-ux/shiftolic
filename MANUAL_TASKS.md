@@ -33,7 +33,7 @@ Na luka@nues.agency nalogu, jednom (oko 5 minuta). Ceo kod je u `webflow-assets/
    self-referencing canonical. Sada nijedna stranica nema canonical.
 3. **Site settings → SEO → Sitemap**: tvoja odluka 20.11. (opcija a): ručni sitemap bez 5 case stranica bez studije (Biotech, Harper, Hypersonix, Intaker, LaSalle).
    - **Auto-generate sitemap**: isključiti.
-   - U polje za sopstveni sitemap nalepiti ceo sadržaj fajla `webflow-assets/seo/sitemap-manual.xml` (41 adresa: 15 stranica, 5 case studija, 21 blog post), pa Save i Publish.
+   - U polje za sopstveni sitemap nalepiti ceo sadržaj fajla `webflow-assets/seo/sitemap-manual.xml` (42 adrese: 15 stranica, 5 case studija, 22 blog posta), pa Save i Publish.
    - Fajl koristi `https://www.nues.agency`, kao i sitemap starog sajta. Ako glavni domen bude bez www, javi mi da zamenim.
    - **Održavanje:** svaki novi blog post ili case studija mora ručno da se doda u sitemap (javi mi i ja dopišem red).
    - **Prvo probati bolje rešenje:** na plaćenom planu Webflow možda dozvoljava isključivanje pojedinačnih CMS stavki iz sitemap-a (20.11. na sadašnjem planu: „Site plan doesn't support sitemap indexing controls“). Ako proradi, ostaje Auto-generate uključen, a ja isključim samo tih 5 stavki. Javi mi kad pređete na plaćeni plan, pa probam.
@@ -48,8 +48,8 @@ Na luka@nues.agency nalogu, jednom (oko 5 minuta). Ceo kod je u `webflow-assets/
    | /services/nues-plus | /services/growth |
    | /services/nues-seo | /services/seo-aeo |
    | /integrations | /webflow-integrations ako je ta stranica objavljena pri lansiranju, inače /resources |
-   | /blog/nues-is-officialy-certified-webflow-partner | /about (post ne postoji u novom CMS-u) |
-   | /blog/from-guests-to-sponsors-notes-from-flow-conf-2026 | /blog (odluka 20.11.: post ostaje u draftu; ako ga tim kasnije objavi, ovaj redirect se briše, jer je slug isti) |
+
+   Izmena 23.11.2026: Flow Conf post je objavljen na novom sajtu (staging 200), pa za njega ne treba redirect, a u ručnom sitemap-u je sada 42 adrese. Post „Nues is officially certified Webflow partner“ (/blog/nues-is-officialy-certified-webflow-partner) se prebacuje u Blogs CMS sa istim slug-om, pa ni za njega ne treba redirect. Posle prebacivanja ga dodati u ručni sitemap.
 
    Provereno 17.11.2026: sitemap starog sajta (www.nues.agency/sitemap.xml) ima 40 adresa. Njih 34 postoje na novom sajtu
    sa istom putanjom (Home, About, Let's talk, Our work i 5 case studija, Blog i 20 postova, Resources, Privacy, Terms)
