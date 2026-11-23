@@ -1,0 +1,35 @@
+
+=== /services  load 6959 ms  FCP 2388  LCP 3144 (IMG.svc-hero_corner-img.is-lit 6ae0e5845aae00920b1aeae7_services-hero-corner-tl.s)  long tasks 8, blocking time ~950 ms
+  total KB 905 | by type: Script 396, Font 225, Image 128, Stylesheet 84, Document 72
+  by host: cdn.prod.website-files.com 548, nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io 260, fonts.gstatic.com 45, d3e54v103j8qbb.cloudfront.net 37, ajax.googleapis.com 14, fonts.googleapis.com 2
+  biggest: 188KB Script O1Vy3bc6tuxzZV_BjiIaYt2vAew | 102KB Script webflow.schunk.dfc938043398845f.js | 83KB Stylesheet nues-v2-0b5daf042c4fc951d8bc2555a97d416.webfl | 72KB Document services | 61KB Font 6aba6bc07d6279b4b5617775_aeonik-semibold.otf | 61KB Font 6aba6bc07d6279b4b561777b_aeonik-medium.otf | 59KB Font 6aba6bc07d6279b4b5617778_aeonik-regular.otf
+  render-blocking in head: cdn.prod.website-files.com/nues-v2-0b5daf042c4fc951d8bc2555a97d416. | ajax.googleapis.com/webfont.js | fonts.googleapis.com/css?family=Geist:100,200,300,400,500,600
+  failed requests: 3 net::ERR_TUNNEL_CONNECTION_FAILED,net::ERR_ABORTED
+
+=== /services/design-development  load 6309 ms  FCP 2096  LCP 2360 (H1.heading-style-h1.text-color-white)  long tasks 9, blocking time ~726 ms
+  total KB 880 | by type: Script 396, Font 225, Image 118, Stylesheet 84, Document 57
+  by host: cdn.prod.website-files.com 538, nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io 246, fonts.gstatic.com 45, d3e54v103j8qbb.cloudfront.net 37, ajax.googleapis.com 14, fonts.googleapis.com 2
+  biggest: 188KB Script O1Vy3bc6tuxzZV_BjiIaYt2vAew | 102KB Script webflow.schunk.dfc938043398845f.js | 83KB Stylesheet nues-v2-0b5daf042c4fc951d8bc2555a97d416.webfl | 61KB Font 6aba6bc07d6279b4b5617775_aeonik-semibold.otf | 61KB Font 6aba6bc07d6279b4b561777b_aeonik-medium.otf | 59KB Font 6aba6bc07d6279b4b5617778_aeonik-regular.otf | 57KB Document design-development
+  render-blocking in head: cdn.prod.website-files.com/nues-v2-0b5daf042c4fc951d8bc2555a97d416. | ajax.googleapis.com/webfont.js | fonts.googleapis.com/css?family=Geist:100,200,300,400,500,600
+  failed requests: 4 net::ERR_TUNNEL_CONNECTION_FAILED,net::ERR_ABORTED
+
+=== /services/webflow-development  load 5907 ms  FCP 1868  LCP 2100 (H1.heading-style-h1.text-color-white)  long tasks 7, blocking time ~633 ms
+  total KB 873 | by type: Script 388, Font 226, Image 118, Stylesheet 84, Document 57
+  by host: cdn.prod.website-files.com 538, nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io 246, fonts.gstatic.com 45, d3e54v103j8qbb.cloudfront.net 37, ajax.googleapis.com 6, fonts.googleapis.com 2
+  biggest: 188KB Script O1Vy3bc6tuxzZV_BjiIaYt2vAew | 102KB Script webflow.schunk.dfc938043398845f.js | 83KB Stylesheet nues-v2-0b5daf042c4fc951d8bc2555a97d416.webfl | 61KB Font 6aba6bc07d6279b4b5617775_aeonik-semibold.otf | 61KB Font 6aba6bc07d6279b4b561777b_aeonik-medium.otf | 59KB Font 6aba6bc07d6279b4b5617778_aeonik-regular.otf | 57KB Document webflow-development
+  render-blocking in head: cdn.prod.website-files.com/nues-v2-0b5daf042c4fc951d8bc2555a97d416. | ajax.googleapis.com/webfont.js | fonts.googleapis.com/css?family=Geist:100,200,300,400,500,600
+  failed requests: 4 net::ERR_TUNNEL_CONNECTION_FAILED,net::ERR_ABORTED
+
+=== /services/growth  load 5954 ms  FCP 2080  LCP 2352 (H1.heading-style-h1.text-color-white)  long tasks 8, blocking time ~595 ms
+  total KB 873 | by type: Script 388, Font 226, Image 118, Stylesheet 84, Document 58
+  by host: cdn.prod.website-files.com 538, nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io 246, fonts.gstatic.com 45, d3e54v103j8qbb.cloudfront.net 37, ajax.googleapis.com 6, fonts.googleapis.com 2
+  biggest: 188KB Script O1Vy3bc6tuxzZV_BjiIaYt2vAew | 102KB Script webflow.schunk.dfc938043398845f.js | 83KB Stylesheet nues-v2-0b5daf042c4fc951d8bc2555a97d416.webfl | 61KB Font 6aba6bc07d6279b4b5617775_aeonik-semibold.otf | 61KB Font 6aba6bc07d6279b4b561777b_aeonik-medium.otf | 59KB Font 6aba6bc07d6279b4b5617778_aeonik-regular.otf | 58KB Document growth
+  render-blocking in head: cdn.prod.website-files.com/nues-v2-0b5daf042c4fc951d8bc2555a97d416. | ajax.googleapis.com/webfont.js | fonts.googleapis.com/css?family=Geist:100,200,300,400,500,600
+  failed requests: 4 net::ERR_TUNNEL_CONNECTION_FAILED,net::ERR_ABORTED
+
+=== /services/seo-aeo  load 6044 ms  FCP 2028  LCP 2392 (H1.heading-style-h1.text-color-white)  long tasks 6, blocking time ~497 ms
+  total KB 874 | by type: Script 388, Font 226, Image 118, Stylesheet 84, Document 58
+  by host: cdn.prod.website-files.com 538, nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io 246, fonts.gstatic.com 45, d3e54v103j8qbb.cloudfront.net 37, ajax.googleapis.com 6, fonts.googleapis.com 2
+  biggest: 188KB Script O1Vy3bc6tuxzZV_BjiIaYt2vAew | 102KB Script webflow.schunk.dfc938043398845f.js | 83KB Stylesheet nues-v2-0b5daf042c4fc951d8bc2555a97d416.webfl | 61KB Font 6aba6bc07d6279b4b5617775_aeonik-semibold.otf | 61KB Font 6aba6bc07d6279b4b561777b_aeonik-medium.otf | 59KB Font 6aba6bc07d6279b4b5617778_aeonik-regular.otf | 58KB Document seo-aeo
+  render-blocking in head: cdn.prod.website-files.com/nues-v2-0b5daf042c4fc951d8bc2555a97d416. | ajax.googleapis.com/webfont.js | fonts.googleapis.com/css?family=Geist:100,200,300,400,500,600
+  failed requests: 4 net::ERR_TUNNEL_CONNECTION_FAILED,net::ERR_ABORTED

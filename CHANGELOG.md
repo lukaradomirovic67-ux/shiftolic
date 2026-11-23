@@ -3,6 +3,27 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 23.11.2026: Services i 4 servisne stranice, merenje brzine i crteži u hero-u bez čekanja (objavljeno na staging)
+Tvoje „ajmo redom“. Rezerva: `backup/services-perf-2026-11-23/` (objavljeni HTML Services i Design & Development, Services footer kod, merenje pre izmene).
+
+**Šta usporava ove stranice** (telefon, spora veza, procesor 4× sporiji, kao Lighthouse; vreme blokiranja = koliko dugo stranica ne reaguje):
+
+| Stranica | Blokiranje | Od toga GA4 | Ostalo |
+|---|---|---|---|
+| Design & Development (isto i ostale 3) | ~640 ms | ~390 ms | Webflow-ov kod (webflow.js, jQuery), čitanje HTML-a (~240 KB, 1558 elemenata) |
+| Services | ~670 ms | ~340 ms | isto, plus naš kod za hero, tabelu, Ask Nues i turu (~0,2 s) |
+
+- Slike su na ovim stranicama već sređene (23.11.), pa se pri učitavanju skida samo 118–128 KB slika. LCP je naslov, za ~2,1 s. Pomeranje sadržaja (CLS) je 0,004–0,008, što je dobro.
+- GA4 dolazi iz Webflow integracije, pa njegov trenutak učitavanja ne možemo da menjamo bez tvoje odluke (pitanje u četu).
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Komponenta Services Overview Hero (`20eff2a1-…`), 8 crteža u uglovima (`svc-hero_corner-img`, ~2 KB ukupno) | `loading="lazy"` | `loading="eager"` (atribut, kao 18.11. na Our Work) |
+
+- Zašto: na telefonu je crtež gore levo ponekad bio poslednji LCP element (2,4–3,1 s), jer se učitavao tek kad ga pregledač „vidi“. PageSpeed posebno kažnjava LCP sliku koja je lazy. A/B, 5 + 5 učitavanja naizmenično: medijana LCP ista (naslov, ~2,07 s), ali crtež više nikad nije poslednji LCP. Stigne za ~1,5 s umesto ~2,4 s.
+- Provereno na objavljenom stagingu: u HTML-u Services stranice promenjeno je samo tih 8 slika.
+- **Probano i nije objavljeno:** deljenje našeg Services koda na manje korake (hero odmah, ostale sekcije posle). A/B 3 + 3: blokiranje 670 → 662 ms, unutar šuma. Kod ostaje kakav je bio.
+
 ## 23.11.2026: 5 case stranica bez case-a: noindex direktno u HTML-u, novo CMS polje „SEO robots“ (objavljeno na staging)
 Tvoje „ajde uradi drugo ovo“ (predlog 2 uz audit case stranica). Rezerva: `backup/seo-robots-2026-11-23/` (šema i stavke Our Works, head kod šablona, objavljeni HTML svih 10 case stranica).
 
