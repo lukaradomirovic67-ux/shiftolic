@@ -3,6 +3,25 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 23.11.2026: Blog, post „Nues is officialy Certified Webflow Partner“ prebačen sa starog sajta kao draft (nije objavljen)
+Tvoje „ajde uradi ove tri tačke“ (prva tačka). Rezerva: `backup/partner-post-2026-11-23/` (Blogs šema i svi item-i pre izmene, HTML posta sa starog sajta, originalna share slika PNG).
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Blogs (`6aba6bc07d6279b4b5617769`) | posta nema; /blog/nues-is-officialy-certified-webflow-partner na stagingu 404 | novi item `6b04c3054f7d242dfc40c598`, **draft** |
+
+Polja, sve preuzeto sa starog posta:
+- Name: „Nues is officialy Certified Webflow Partner“, slug `nues-is-officialy-certified-webflow-partner`. Greška „officialy“ je u originalnom naslovu i u adresi, ostavljena je da adresa ostane ista i da ne treba redirect.
+- Meta title, meta description, short description i TL;DR: isti tekst kao na starom sajtu.
+- Datum 30.09.2026 i read time 5, kao na starom sajtu.
+- Author Danilo Stikovic, category Webflow (kao kategorija na starom sajtu).
+- Content: 5 h2, 5 h3 i 16 pasusa, isti tekst slovo po slovo (provereno skriptom). Prazan pasus sa kraja originala je izbačen.
+- Thumbnail: share slika sa starog posta, isti kadar, kao WebP 37 KB umesto PNG 1,7 MB (`webflow-assets/perf/blog/nues-webflow-certified-partner-share.webp`). Alt „Nues Webflow Certified Partner article cover“, kao kod ostalih postova.
+- FAQ prazno, nijedan „featured“ prekidač nije uključen.
+
+- Nije objavljeno. Kad tim pregleda i objavi item, dodati adresu u `webflow-assets/seo/sitemap-manual.xml` (biće 43 adrese).
+- Ostali item-i u Blogs nisu dirani.
+
 ## 23.11.2026: 301 mapa i ručni sitemap posle objave Flow Conf posta (ništa nije menjano u Webflow-u)
 Tvoje „mislim da je publish ovo za conf, a ovo za partner tek treba da prebacimo“. Provereno:
 

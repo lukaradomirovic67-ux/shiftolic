@@ -49,7 +49,8 @@ Na luka@nues.agency nalogu, jednom (oko 5 minuta). Ceo kod je u `webflow-assets/
    | /services/nues-seo | /services/seo-aeo |
    | /integrations | /webflow-integrations ako je ta stranica objavljena pri lansiranju, inače /resources |
 
-   Izmena 23.11.2026: Flow Conf post je objavljen na novom sajtu (staging 200), pa za njega ne treba redirect, a u ručnom sitemap-u je sada 42 adrese. Post „Nues is officially certified Webflow partner“ (/blog/nues-is-officialy-certified-webflow-partner) se prebacuje u Blogs CMS sa istim slug-om, pa ni za njega ne treba redirect. Posle prebacivanja ga dodati u ručni sitemap.
+   Izmena 23.11.2026: Flow Conf post je objavljen na novom sajtu (staging 200), pa za njega ne treba redirect, a u ručnom sitemap-u je sada 42 adrese. Post „Nues is officially certified Webflow partner“ (/blog/nues-is-officialy-certified-webflow-partner) je 23.11. prebačen u Blogs CMS sa istim slug-om, kao **draft** (item `6b04c3054f7d242dfc40c598`), pa ni za njega ne treba redirect.
+   Ostaje: neko iz tima pregleda draft u CMS-u i objavi ga (Publish na item-u), pa ga posle objave dodati u ručni sitemap (biće 43 adrese).
 
    Provereno 17.11.2026: sitemap starog sajta (www.nues.agency/sitemap.xml) ima 40 adresa. Njih 34 postoje na novom sajtu
    sa istom putanjom (Home, About, Let's talk, Our work i 5 case studija, Blog i 20 postova, Resources, Privacy, Terms)
