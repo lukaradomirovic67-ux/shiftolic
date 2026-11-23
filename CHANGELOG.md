@@ -3,6 +3,9 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 23.11.2026: Let's talk, kontrast prigušenog teksta ostaje (odluka, ništa nije menjano)
+Predlog: 4 teksta na Let's talk („Step 1 of 4“, napomena o vremenskoj zoni, rečenica o Privacy Policy, uloga ispod citata) malo manje prozirni, kontrast 3,4–4,0 → 4,6. Pregled: `notes/lets-talk-kontrast-pre-posle-2026-11-23.png`. Tvoja odluka: „to je tako u dizajnu ne bih to menjao“, isto kao 14.11. za prigušeni tekst na celom sajtu. Lighthouse pristupačnost na Let's talk ostaje 96 zbog kontrasta.
+
 ## 23.11.2026: Provera da li su linkovi opisni, svih 41 stranica (objavljeno na staging)
 Tvoje „na svakom page-u proveri jesu li svi linkovi descriptive“. Alat: `webflow-assets/site-code/tools/links-audit.js` (svaki `<a href>`: vidljivi tekst, ime za čitače ekrana, adresa); spisak: `backup/home-images-2026-11-23/links-before.json` (3088 linkova).
 
