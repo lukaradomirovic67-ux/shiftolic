@@ -850,3 +850,38 @@ document.addEventListener('DOMContentLoaded', function () {
   els.forEach(function (el) { io.observe(el); });
 });
 </script>
+
+<!-- Nues: image sizes (23.11.2026). Webflow does not let us set the sizes attribute (it is reserved), and for images in
+     components and CMS lists it writes "100vw" or the file's own width, so phones and desktops download a much bigger
+     file than the image is shown at. This sets sizes to the width the image really has on the page (measured at 1920,
+     1440, 991, 767 and 412 px) before the lazy images start loading. The look stays the same: the file the browser picks
+     is still at least as wide as the image on screen times the screen density. If one of these layouts changes, update
+     its widths here. Only lazy images with srcset are touched. -->
+<script>
+(function () {
+  var map = {
+    // Home hero cards: about 18% of the screen on desktop, 33% up to tablet
+    'hero-cards_shot': '(max-width: 991px) 33vw, 18vw',
+    // Trusted section video card: 350px on desktop, 90% of the screen up to tablet
+    'trusted_video-image': '(max-width: 991px) 90vw, 350px',
+    // Project screens (Home "Every project", service pages "Service Cases"): the three screens of a project use the
+    // same file, so they all get the width of the biggest (middle) one and the browser downloads it once
+    'home-projects_screen-image': '(max-width: 479px) 66vw, (max-width: 991px) 60vw, 526px',
+    // Resources hero cards
+    'res-hero_card-img': '(max-width: 767px) 190px, 250px'
+  };
+  var sel = Object.keys(map).map(function (k) { return 'img.' + k + '[srcset][loading=lazy]'; }).join(',');
+  function fix(img) {
+    for (var k in map) if (img.classList.contains(k)) { img.sizes = map[k]; return; }
+  }
+  function scan(root) { if (root.querySelectorAll) root.querySelectorAll(sel).forEach(fix); }
+  // catch each image as the page is being read, before it is laid out and loaded
+  var mo = new MutationObserver(function (list) {
+    list.forEach(function (m) {
+      m.addedNodes.forEach(function (n) { if (n.nodeType === 1) { if (n.matches(sel)) fix(n); else scan(n); } });
+    });
+  });
+  mo.observe(document.documentElement, { childList: true, subtree: true });
+  document.addEventListener('DOMContentLoaded', function () { mo.disconnect(); scan(document); });
+})();
+</script>

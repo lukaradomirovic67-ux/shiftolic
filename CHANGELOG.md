@@ -3,6 +3,25 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 23.11.2026: Home i servisne stranice, manje slike za isti izgled (objavljeno na staging)
+Korak 2 iz plana po auditu (Home). Rezervna kopija: `backup/home-images-2026-11-23/` (objavljeni Home HTML, site head pre izmene, Our Works stavke).
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Site settings, custom code (head) | Webflow piše `sizes="100vw"` ili širinu fajla za slike u komponentama i CMS listama, pa pregledač skida fajl za ceo ekran | nova mala skripta (810 znakova, na kraju head-a) pre učitavanja postavlja `sizes` na stvarnu širinu slike: hero kartice na Home-u, slika u Trusted sekciji, snimci projekata (Home i Service Cases), kartice na Resources |
+
+- Zašto skripta, a ne Webflow podešavanje: `sizes` je u Webflow-u zaključan atribut („reserved attribute name“, probano dva puta, kroz atribute i kroz podešavanja elementa). Skripta dira samo lazy slike koje već imaju srcset.
+- Izgled isti: na 1920, 1440, 991, 767 i 412 px izabrani fajl je uvek bar onoliko širok koliko slika zauzima na ekranu puta gustina ekrana (proveravano na objavljenom stagingu, 0 premalih). JS grešaka nema.
+- Izmereno na objavljenom stagingu, sve slike na stranici:
+
+| Stranica | Desktop 1350 px | Telefon 412 px |
+|---|---|---|
+| Home | 2100 → 1659 KB | 1436 → 1299 KB |
+| Growth (isto i ostale 3 servisne) | 1251 → 803 KB | 699 → 492 KB |
+| Resources | 2558 → 2450 KB | 2397 → 2372 KB |
+
+- Ostaje: snimci sajtova iz Our Works (na Home-u 702 KB i na telefonu) nemaju manje verzije, jer su u CMS ušli preko API-ja; Webflow ih pravi samo za slike ubačene kroz interfejs. Pokušaj da CMS polje dobije postojeći asset sa verzijama nije uspeo (Webflow zadrži isti fajl; Ballerine stavka je samo ponovo sačuvana, sadržaj isti). Ručni zadatak je u `MANUAL_TASKS.md`; posle zamene skripta odmah bira manju verziju.
+
 ## 22.11.2026: Our Work, hero se vidi odmah, pruge bez razvlačenja slike (objavljeno na staging)
 Korak 1 iz plana po auditu. Tvoj izbor za hero: „Naš reveal kao na Home-u“. Rezervna kopija: `backup/our-work-perf-2026-11-22/` (objavljeni HTML i ceo zapis IX3 interakcije „Our Work hero load“).
 
