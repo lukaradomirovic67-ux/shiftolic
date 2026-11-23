@@ -3,6 +3,14 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 23.11.2026: Let's talk, brže učitavanje: iClosed uklonjen, telefon polje se učitava kasnije (objavljeno na staging)
+Tvoje odluke: iClosed „Ukloni skriptu i sakrivenu sekciju“, telefon „Da, učitaj kasnije“. Rezerva (objavljeni HTML, stari head i footer kod stranice): `backup/lets-talk-perf-2026-11-23/`. Kod: `webflow-assets/site-code/lets-talk-head.html` i `lets-talk-footer.html` (custom code stranice Let's talk 6aba6bc07d6279b4b56176f8).
+
+- **iClosed:** `widget.js` (app.iclosed.io) se učitavao svakom posetiocu, a forma ga više ne koristi (kalendar je naš, preko Cal.com). Skripta je uklonjena iz footer koda, CSS pravilo `.lt-booking .iclosed-widget` iz head koda. Sakrivena iClosed sekcija (07dca240-…) u Designer-u više ne postoji, pa tu nije bilo šta da se briše.
+- **Telefon polje (intl-tel-input 25.3.1):** njegov CSS i skripta su se učitavali sa stranicom. Sada se učitavaju tek kad posetilac dodirne, klikne ili kuca u formi, ili kad otvori korak 2 (polje za telefon je u koraku 2). Polje se pokreće tek kad su i CSS i skripta stigli. Bez toga je na brzoj vezi broj ponekad stajao odmaknut od „+1“ (razmak 132px umesto 66px). Taj slučaj je pronađen i ispravljen pre završetka.
+- **Isto kao pre:** izgled kartice (piksel-identično na 390 i 1440 px), zastavica i pozivni broj, država po IP-u, pun broj („+1641-234-567“) pri slanju, redosled stilova (CSS biblioteke je i dalje pre naših stilova forme). Nema JS grešaka. Webflow više ne šalje `Link: preload` zaglavlje za CSS telefona.
+- **Merenje** (telefon, spora veza i 4× sporiji procesor, 3 merenja): pre FCP ~2,5 s, LCP 2,8–3,9 s, vreme blokiranja ~620 ms; posle FCP 2,2–2,5 s, LCP 3,1–3,5 s, vreme blokiranja ~420 ms (jednom 626 ms). Sa stranicom se više ne učitava ništa sa cdn.jsdelivr.net ni app.iclosed.io. Najveći preostali teret je GA4, koji ostaje.
+
 ## 23.11.2026: Let's talk, kontrast prigušenog teksta ostaje (odluka, ništa nije menjano)
 Predlog: 4 teksta na Let's talk („Step 1 of 4“, napomena o vremenskoj zoni, rečenica o Privacy Policy, uloga ispod citata) malo manje prozirni, kontrast 3,4–4,0 → 4,6. Pregled: `notes/lets-talk-kontrast-pre-posle-2026-11-23.png`. Tvoja odluka: „to je tako u dizajnu ne bih to menjao“, isto kao 14.11. za prigušeni tekst na celom sajtu. Lighthouse pristupačnost na Let's talk ostaje 96 zbog kontrasta.
 

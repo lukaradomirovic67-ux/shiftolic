@@ -1,13 +1,12 @@
 <!-- Nues: code moved here from page embeds. Edit here, not in embeds. -->
 <style>
-.lt-booking .iclosed-widget{width:100%;min-height:620px}
 @media (min-width:992px){.lt-hero .heading-style-h1{font-size:min(80px,5.56vw);white-space:nowrap}}
 @media (min-width:992px) and (max-width:1279px){.lt-hero_inner{grid-column-gap:56px;column-gap:56px}.lt-hero .heading-style-h1{font-size:4.9vw}.lt-hero_content{grid-row-gap:40px;row-gap:40px}.lt-booking{min-width:380px}}
 /* Hero light (lt-hero_glow): on screens wider than 1440px the content is centred, so the light follows it */
 @media (min-width:1441px){.lt-hero_glow{left:calc(50% - 1720px)}}
 </style>
-<!-- Booking form (lt-form): fixed-height card in steps (Contact, About you, Your project, Book your event); states the footer script switches, answer chips, phone field -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.min.css">
+<!-- Booking form (lt-form): fixed-height card in steps (Contact, About you, Your project, Book your event); states the footer script switches, answer chips, phone field (its intl-tel-input CSS is added by the footer script
+     when the visitor starts on the form, right before the style block below) -->
 <style>
 .lt-form.is-open .lt-form_panel.is-details{display:none}
 .lt-form.is-open .lt-form_panel.is-calendar{display:flex}
@@ -28,7 +27,7 @@
 .lt-form .iti__country-container{padding:1px}
 .lt-form .iti__selected-country{border-radius:11px 0 0 11px}
 .lt-form .w-form-done,.lt-form .w-form-fail{margin-top:16px;padding:16px;border-radius:12px;font-size:15px;line-height:1.4}
-/* step 1 like iClosed: a locked calendar under the form */
+/* step 1: a locked calendar preview under the form */
 .lt-form_preview-cal{pointer-events:none;user-select:none;-webkit-user-select:none}
 .lt-form_label.is-hidden{margin:-1px;padding:0;clip:rect(0 0 0 0);clip-path:inset(50%)}
 /* our calendar (lt-cal, drawn by the footer script; its classes are styled natively in Webflow) */
