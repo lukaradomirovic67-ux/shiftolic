@@ -3,6 +3,20 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 23.11.2026: Careers i About, tim: ime linka se poklapa sa vidljivim tekstom; Careers izmeren (objavljeno na staging)
+Rezerva: `backup/services-perf-2026-11-23/careers-published-before.html`.
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Komponenta Team (`08a1843e-…`, Careers i About), 7 fotografija (`team_photo`) | bez atributa; alt = ime | `aria-hidden="true"` (alt ostaje) |
+
+- Isti uzrok kao na case stranicama: alt fotografije je ulazio u tekst linka, pa se ime nije poklapalo sa `aria-label` („Ime, uloga, on LinkedIn“).
+- Provereno na objavljenom stagingu:
+  - u HTML-u Careers promenjene su samo te slike;
+  - axe na Careers (412 i 1350 px): 0 grešaka (bilo je 7 „label-content-name-mismatch“ na telefonu);
+  - na About ostaje samo prigušeni tekst (kontrast, tvoja odluka od 14.11.).
+- **Careers brzina:** LCP na telefonu ~4,4 s, a to je jedna od fotografija u hero-u (8 fotografija, na telefonu se vide 4, ~40 KB svaka). Probano „eager“ na te 4: LCP 5,2–6,5 s (gore), jer slike otimaju mrežu fontovima i tekstu. Nije objavljeno. `sizes` za ove slike već bira verziju od 500 px na telefonu, pa tu nema dobitka.
+
 ## 23.11.2026: Blog, istaknuta kartica se učitava odmah; Resources izmeren (objavljeno na staging)
 Tvoje „ajmo redom“. Rezerva: `backup/services-perf-2026-11-23/blog-published-before.html`, merenje pre: `resources-blog-perf-before.txt`.
 
