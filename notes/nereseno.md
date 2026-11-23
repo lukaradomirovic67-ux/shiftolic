@@ -2,6 +2,13 @@
 
 Stvari koje su namerno ostavljene kakve jesu, da se reše kasnije. Novije na vrhu.
 
+## Posle konačnog copy-ja i lansiranja (23.11.2026)
+Tvoja odluka: „to sve posle copy-ja i launcha može, ove tri tačke“.
+
+1. **llms.txt:** predlog je u `notes/llms-txt-predlog-2026-11-18.txt`. Postavlja se posle konačnog copy-ja.
+2. **FAQPage schema na 6 stranica** (Services, 4 servisne, Pricing): čeka da tim potvrdi 4 FAQ odgovora (vidi niže, „FAQ odgovori su i dalje nacrt“).
+3. **Datum „Last updated“ na Privacy i Terms:** na stranicama piše Oct 19, 2026, a Privacy je posle toga menjan (Cookies sekcija, Cal.com 22.11.). Novi datum ide u tekst i u schema (`dateModified`) pri lansiranju.
+
 ## Case hero: snimci ostaju sa fade-in animacijom (23.11.2026)
 Tvoja odluka: „Ostavi fade“. Na Ballerine-u i Shiftolic-u LCP je srednji snimak, koji Chrome računa tek na kraju fade-a: ~3,0 s na telefonu. Bez fade-a bi bilo 1,8–2,0 s. Naslov u hero-u je od 23.11. bez fade-a (samo klizanje), po tvom izboru.
 
