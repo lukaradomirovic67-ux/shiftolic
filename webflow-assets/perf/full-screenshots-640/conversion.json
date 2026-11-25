@@ -1,0 +1,92 @@
+{
+ "ballerine-home-full-640.webp": {
+  "size": [
+   640,
+   5325
+  ],
+  "bytes": 182920,
+  "md5": "0144d5952a483c21385935d03af91e67",
+  "source": "ballerine-home-full-1200.webp"
+ },
+ "biotech-home-full-hq-640.webp": {
+  "size": [
+   640,
+   3169
+  ],
+  "bytes": 183766,
+  "md5": "89d0954d43c42bd85cc1866c09c79550",
+  "source": "biotech-home-full-hq-1200.webp"
+ },
+ "harper-home-full-hq-640.webp": {
+  "size": [
+   640,
+   2756
+  ],
+  "bytes": 75848,
+  "md5": "92a501fed655e4f5325d2a583a8a81de",
+  "source": "harper-home-full-hq-1200.webp"
+ },
+ "hypersonix-home-full-hq-640.webp": {
+  "size": [
+   640,
+   1799
+  ],
+  "bytes": 60704,
+  "md5": "b88038e8d112af342f92bc6b06e9b3bb",
+  "source": "hypersonix-home-full-hq-1200.webp"
+ },
+ "intaker-home-full-v2-640.webp": {
+  "size": [
+   640,
+   4464
+  ],
+  "bytes": 130910,
+  "md5": "1714aea47fb72e497a32027dae8336ba",
+  "source": "intaker-home-full-v2-1200.webp"
+ },
+ "lasalle-home-full-hq-640.webp": {
+  "size": [
+   640,
+   4347
+  ],
+  "bytes": 224942,
+  "md5": "42e47ba3bcb398708685487df7bd6a42",
+  "source": "lasalle-home-full-hq-1200.webp"
+ },
+ "shiftolic-home-full-v2-640.webp": {
+  "size": [
+   640,
+   3891
+  ],
+  "bytes": 103700,
+  "md5": "a90a5ee73f7b6c2b155c1faf15145f3f",
+  "source": "shiftolic-home-full-v2-1200.webp"
+ },
+ "sustain-home-full-hq-640.webp": {
+  "size": [
+   640,
+   5877
+  ],
+  "bytes": 220008,
+  "md5": "80c2c8b04ec7fc1f66ee2533d9b78383",
+  "source": "sustain-home-full-hq-1200.webp"
+ },
+ "trakpro-home-full-v2-640.webp": {
+  "size": [
+   640,
+   3409
+  ],
+  "bytes": 100992,
+  "md5": "52f709ab4f9c83af5b3af3ce07de356b",
+  "source": "trakpro-home-full-v2-1200.webp"
+ },
+ "veyor-home-full-v2-640.webp": {
+  "size": [
+   640,
+   5058
+  ],
+  "bytes": 255348,
+  "md5": "bf6fe1ebdf661c094abf91dfb711a0ab",
+  "source": "veyor-home-full-v2-1200.avif"
+ }
+}
