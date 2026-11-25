@@ -1,0 +1,800 @@
+[
+ {
+  "view": "desktop",
+  "path": "/",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/about",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/services",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/services/design-development",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/services/webflow-development",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/services/seo-aeo",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/services/growth",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/pricing",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/our-work",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/resources",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/blog",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/careers",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/lets-talk",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": [
+   ".lt-form_actions > a.lt-form_submit \"continue\" -> #"
+  ]
+ },
+ {
+  "view": "desktop",
+  "path": "/privacy-policy",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/terms-of-service",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/our-work/ballerine",
+  "status": 200,
+  "robots": [
+   "index, follow"
+  ],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/our-work/shiftolic",
+  "status": 200,
+  "robots": [
+   "index, follow"
+  ],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/our-work/sustain-commercial-solar",
+  "status": 200,
+  "robots": [
+   "index, follow"
+  ],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/our-work/trak-pro",
+  "status": 200,
+  "robots": [
+   "index, follow"
+  ],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/our-work/veyor-digital",
+  "status": 200,
+  "robots": [
+   "index, follow"
+  ],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/blog/aeo-for-marketing-teams-what-you-can-do-without-a-developer",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/blog/aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/blog/b2b-saas-seo-in-2026-a-strategy-guide-for-marketing-leaders",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/blog/best-15-webflow-apps-for-marketing-teams-in-2026",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/blog/from-guests-to-sponsors-notes-from-flow-conf-2026",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/blog/how-to-delete-a-cms-collection-page-in-webflow-without-breaking-your-site",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/blog/how-to-improve-your-website-conversion-rate-in-2026",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/blog/is-webflow-good-for-ecommerce-an-honest-answer-for-2026",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/blog/saas-content-marketing-in-2026-a-strategy-guide",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/blog/sanity-vs-webflow-cms-which-one-your-team-actually-needs",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/blog/source-by-webflow-what-it-is-and-what-it-means-for-teams-on-webflow",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/blog/the-signs-your-current-webflow-site-is-holding-your-business-back",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/blog/the-website-redesign-process-a-step-by-step-guide",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/blog/three-webflow-features-from-2026-worth-paying-attention-to-and-one-to-skip",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/blog/webflow-for-b2b-lead-generation-how-to-turn-your-site-into-a-pipeline-engine",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/blog/webflow-forms-in-2026-how-to-turn-them-into-a-lead-engine",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/blog/webflow-templates-how-to-choose-one-and-when-to-go-custom",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/blog/webflow-vs-framer-in-2026-which-one-is-right-for-your-site",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/blog/webflow-vs-squarespace-in-2026-when-each-one-makes-sense",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/blog/webflow-vs-wix-in-2026-which-one-is-right-for-your-site",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/blog/webflow-vs-wordpress-for-b2b-saas-in-2026-whats-changed-and-when-each-one-wins",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "desktop",
+  "path": "/404",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/about",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/services",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/services/design-development",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/services/webflow-development",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/services/seo-aeo",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/services/growth",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/pricing",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/our-work",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/resources",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/blog",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/careers",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/lets-talk",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": [
+   ".lt-form_actions > a.lt-form_submit \"continue\" -> #"
+  ]
+ },
+ {
+  "view": "phone",
+  "path": "/privacy-policy",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/terms-of-service",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/our-work/ballerine",
+  "status": 200,
+  "robots": [
+   "index, follow"
+  ],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/our-work/shiftolic",
+  "status": 200,
+  "robots": [
+   "index, follow"
+  ],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/our-work/sustain-commercial-solar",
+  "status": 200,
+  "robots": [
+   "index, follow"
+  ],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/our-work/trak-pro",
+  "status": 200,
+  "robots": [
+   "index, follow"
+  ],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/our-work/veyor-digital",
+  "status": 200,
+  "robots": [
+   "index, follow"
+  ],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/blog/aeo-for-marketing-teams-what-you-can-do-without-a-developer",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/blog/aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/blog/b2b-saas-seo-in-2026-a-strategy-guide-for-marketing-leaders",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/blog/best-15-webflow-apps-for-marketing-teams-in-2026",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/blog/from-guests-to-sponsors-notes-from-flow-conf-2026",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/blog/how-to-delete-a-cms-collection-page-in-webflow-without-breaking-your-site",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/blog/how-to-improve-your-website-conversion-rate-in-2026",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/blog/is-webflow-good-for-ecommerce-an-honest-answer-for-2026",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/blog/saas-content-marketing-in-2026-a-strategy-guide",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/blog/sanity-vs-webflow-cms-which-one-your-team-actually-needs",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/blog/source-by-webflow-what-it-is-and-what-it-means-for-teams-on-webflow",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/blog/the-signs-your-current-webflow-site-is-holding-your-business-back",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/blog/the-website-redesign-process-a-step-by-step-guide",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/blog/three-webflow-features-from-2026-worth-paying-attention-to-and-one-to-skip",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/blog/webflow-for-b2b-lead-generation-how-to-turn-your-site-into-a-pipeline-engine",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/blog/webflow-forms-in-2026-how-to-turn-them-into-a-lead-engine",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/blog/webflow-templates-how-to-choose-one-and-when-to-go-custom",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/blog/webflow-vs-framer-in-2026-which-one-is-right-for-your-site",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/blog/webflow-vs-squarespace-in-2026-when-each-one-makes-sense",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/blog/webflow-vs-wix-in-2026-which-one-is-right-for-your-site",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/blog/webflow-vs-wordpress-for-b2b-saas-in-2026-whats-changed-and-when-each-one-wins",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ },
+ {
+  "view": "phone",
+  "path": "/404",
+  "status": 200,
+  "robots": [],
+  "failing": [],
+  "placeholders": 0,
+  "generic": []
+ }
+]

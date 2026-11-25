@@ -3,6 +3,18 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 25.11.2026: meni na telefonu, „Links are not crawlable“ (objavljeno na staging)
+Tvoje „ako primetiš još negde ove greške izmeni ih“ (audit Our Work: „Use descriptive link text“ / „Links are not crawlable“ i „Enable indexing“). Rezerva: `backup/a11y-nav-role-2026-11-25/` (skripta 1.0.0, spisak skripti sajta, objavljeni Our Work pre izmene, sken pre i posle).
+
+**1. „Links are not crawlable“: oznake „Services“ i „Resources“ u meniju, na telefonu, na svih 43 stranice.**
+- Uzrok je naša skripta `nuesA11yFixes` od 17.11. Na telefonu dodir na oznaku otvara padajući meni, pa je skripta oznaci skidala `href` (da ne bude link unutar dugmeta, axe „nested-interactive“). Lighthouse takav `<a>` bez `href`, a sa osluškivačima klika, broji kao pokvaren link.
+- Izmena: na telefonu oznaka dobija i `role="none"` (nije link, samo tekst unutar dugmeta), na desktopu se uklanja. Ništa drugo nije menjano. Registrovana skripta `nuesa11yfixes` 1.0.0 → **1.0.1** (footer, sve stranice), izvor `webflow-assets/site-code/a11y-fixes.js`, objavljeno `a11y-fixes.min.js` (1605 znakova).
+- Ponašanje isto: dodir na „Services“ na telefonu otvara meni, na desktopu hover otvara meni, a klik vodi na /services. Promena širine prozora (800 → 1350 → 800 px) prebacuje ispravno.
+- Provereno na objavljenom stagingu, sve 43 stranice, desktop i telefon: linkova koje Lighthouse označava 0 (bilo 2 po stranici na telefonu). axe isti kao pre (jedina stavka je oznaka „Made in Webflow“, postoji samo na besplatnom stagingu). Bez JS grešaka. Objavljeni Our Work isti kao pre, osim adrese skripte.
+- Naslov „Use descriptive link text“ u tvom alatu je pogrešno uparen sa ovom proverom. Generičkog teksta linka („click here“, „learn more“, „read more“…) i dalje nema nigde. Jedini sličan je „Continue“ u formi na Let's talk, ali vodi na `#` (ista stranica), pa ga Lighthouse ne broji.
+
+**2. „Page is blocked from indexing“: nije menjano, ispravno je.** Staging (webflow.io) ima `robots.txt` sa `Disallow: /`, zato što je u Site settings uključeno „Disable Webflow subdomain indexing“. Na pravom domenu toga neće biti. Nijedna stranica nema `noindex` (sken 43 stranice). robots.txt za produkciju je i dalje u MANUAL_TASKS za lansiranje.
+
 ## 25.11.2026: Geist i Instrument Serif sa Webflow servera umesto Google Fonts (objavljeno na staging; na telefonu sporije zbog GA4, čeka tvoju odluku)
 Tvoje „Da, sada“. Rezerva: `backup/fonts-2026-11-25/` (objavljeni Home sa webfont.js, Google CSS).
 - Pre: Webflow je na svakoj stranici učitavao `webfont.js` (ajax.googleapis.com), pa CSS sa fonts.googleapis.com, pa fajlove sa fonts.gstatic.com. Skripta je blokirala prvi prikaz.
