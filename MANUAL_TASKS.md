@@ -19,9 +19,16 @@ Na luka@nues.agency nalogu, jednom (oko 5 minuta). Ceo kod je u `webflow-assets/
 - Pre pravog lansiranja: rečenica u Privacy Policy da se podaci iz forme čuvaju i pre slanja (šalje se na odobrenje).
 
 
+## Fontovi sa našeg servera (25.11.2026, tvoje „Da, sada“), tvoj korak
+Geist i Instrument Serif sam dodao kao Custom fonts (isti fajlovi koje šalje Google). Ostaje jedan klik kod tebe:
+1. Webflow → Site settings sajta „Copy of Nues“ → **Fonts**.
+2. U delu **Google Fonts** obriši **Geist** i **Instrument Serif** (ikonica kante). Ako Webflow upozori da se font koristi u stilovima, potvrdi: isto ime sada ima Custom font, pa stilovi ostaju isti.
+3. U delu **Custom fonts** ništa ne diraj (tu su novi Geist i Instrument Serif). Save.
+4. Javi mi „fontovi gotovi“. Ja objavljujem staging i proveravam: da nema webfont.js ni Google domena, da su slova ista piksel po piksel, i merim brzinu.
+
 ## Performanse, odloženo (22.11.2026)
 - **Aeonik u WOFF2:** sada je OTF (3 težine po ~60 KB na svakoj stranici). Pre konverzije proveriti licencu za Aeonik (CoType) da li dozvoljava WOFF2 za web. Kad je potvrđeno, Claude konvertuje i menja fajlove na istim font zapisima (isti izgled).
-- **Geist i Instrument Serif kao sopstveni fontovi** (OFL, besplatni): Claude postavlja WOFF2 fajlove sa istim imenima, ti u Site settings → Fonts brišeš Google verzije; nestaju `webfont.js` i dva Google domena koji blokiraju prvi prikaz. Tvoje „Kasnije“.
+- ~~Geist i Instrument Serif kao sopstveni fontovi~~: u toku od 25.11. (vidi gore).
 - **Per page CSS i Asynchronously load JS** (Site settings → Publishing → Advanced): probati posebno, uz poređenje svih stranica pre i posle.
 - **Snimci sajtova u Our Works ponovo kroz Webflow (23.11.2026), najveća ušteda za Home na telefonu.** Webflow pravi manje verzije slike (500, 800, 1080 px) samo kad se slika ubaci kroz Webflow interfejs. Ovi snimci su ušli preko API-ja, pa svaki uređaj, i telefon, skida pun fajl (Ballerine 451 KB, Shiftolic 251 KB na Home-u). Kako: sačuvaj fajl sa linka ispod, pa u Webflow-u CMS → Our Works → stavka → polje **Full page screenshot** → zameni sliku tim fajlom (Upload), Save, i reci mi da objavim i proverim. Ako Webflow prepozna isti fajl i ne napravi verzije, napraviću ti kopije sa sitnom razlikom u kodiranju (isti izgled).
   - Prioritet (Home): Ballerine `https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af66906e51f9446481530f7_ballerine-home-full-1200.webp`, Shiftolic `https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af6691dc581cc6d569fa7f0_shiftolic-home-full-v2-1200.webp`

@@ -3,6 +3,20 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 25.11.2026: Geist i Instrument Serif kao Custom fonts (dodato, čeka tvoje brisanje Google verzija, nije objavljeno)
+Tvoje „Da, sada“. Rezerva: `backup/fonts-2026-11-25/` (objavljeni Home sa webfont.js, Google CSS).
+- Sada: Webflow na svakoj stranici učitava `webfont.js` (ajax.googleapis.com), pa CSS sa fonts.googleapis.com, pa fajlove sa fonts.gstatic.com. Skripta blokira prvi prikaz.
+- Gde se koriste (provereno na 43 stranice, 1440 i 390 px): **Geist** u navigaciji, naslovima i oznakama Trusted sekcije, brojkama na karticama projekata, delovima Home-a i H2 na Privacy/Terms; težine 400, 500, 600; samo osnovna latinica. **Instrument Serif** je vezan za nekoliko klasa (`.italic-heading`, `.u-serif-italic`…), ali se trenutno ne prikazuje nigde.
+- Dodato u Site settings → Custom fonts (API):
+  | Font | Fajl | Veličina | ID |
+  |---|---|---|---|
+  | Geist, promenljiv 100–900, swap | `Geist-Variable-latin.woff2` | 29,4 KB | `6b07355cada87acb2da8e901` |
+  | Instrument Serif 400, swap | `InstrumentSerif-Regular-latin.woff2` | 21,0 KB | `6b07357110e63abf0153fe47` |
+- Fajlovi su tačno oni koje Google šalje Windows/Linux pregledačima (latin), bajt po bajt; u repou `webflow-assets/perf/fonts/` sa OFL licencama. Mac, iOS i Android ignorišu „hinting“ u tom fajlu, pa i kod njih slova ostaju ista.
+- Proba pre izmene (Google blokiran, naš fajl ubačen; Home, Services, Design & Development, Privacy, Pricing, About): 339 od 340 elemenata u Geist fontu piksel po piksel isto, na 1440 i 390 px. Jedina razlika je oznaka preko videa u Trusted sekciji, najviše 1 nivo od 255 (pozadina).
+- Ograničenje: fajl pokriva latinicu (kao Google „latin“ deo). Slova kao š, ć, č u tekstu koji je u Geist fontu prikazala bi se rezervnim fontom; trenutno takvog teksta nema.
+- Ostaje: ti brišeš Google verzije (MANUAL_TASKS), ja objavljujem i proveravam.
+
 ## 25.11.2026: lakše slike u blog tekstovima i Pricing podnaslov bez fade-a (objavljeno na staging)
 Tvoje „ajde da popravimo performanse malo“; Pricing: tvoje „Da, samo klizanje“.
 
