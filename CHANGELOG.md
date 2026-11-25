@@ -3,6 +3,20 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 25.11.2026: prvi ekran bez fade-a na LCP elementu, 13 stranica (objavljeno na staging)
+Tvoje „Na svim tim stranicama“. Rezerva: `backup/lcp-slide-only-2026-11-25/` (site head pre izmene, prozirnost elemenata u prvom frejmu pre/posle).
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Site settings → Custom code → Head (`site-head.min.html`, čitljivo `site-head.html`) | LCP element prvog ekrana ulazi iz providnog i klizne gore | isto klizanje, bez prelaza iz providnog; jedno CSS pravilo dodato u postojeći `<style>` za reveal |
+
+- Elementi: Our Work slajder i H1, About H1, H1 na Services i 4 servisne stranice (ista komponenta), Let's talk H1, Blog prva (featured) kartica, blog post hero slika i naslov, Privacy/Terms naslov i tekst. Pravilo: `.reveal-on :is(.ow-slider,.ow-hero_text h1,.about-hero_text h1,.svc-hero_text h1,.lt-hero_text h1,.ins-featured,.bp-hero_head,.bp-hero_media,.legal-content_wrapper,.header65_component .max-width-large):is([data-reveal],[data-reveal-early]):not(.is-revealed){opacity:1}`.
+- Nisu menjani: Home, Pricing (već od ranije), Resources, Careers, case stranice (naslov već od 23.11., hero slike zadržavaju fade po tvojoj odluci), ostali elementi na ovim stranicama (pill, podnaslov, dugmad i dalje imaju fade).
+- Zašto: Chrome ne računa element koji kreće iz potpuno providnog dok se ponovo ne iscrta, često tek kad stigne Aeonik font, pa je LCP na telefonu kasnio 1–3 s.
+- Izmereno uživo posle objave (telefon 1,6 Mb/s, CPU 4×, 2 merenja), LCP: Our Work 2,0 s (bilo 5,0), About 1,8 (3,0), SEO/AEO 1,6–2,3 (2,9), Let's talk 2,4–2,6 (2,6–2,7), Blog 1,4–1,5 (2,7), blog post 1,9–2,0 (3,3), Privacy 2,1 (3,0), Terms 2,1–2,4 (3,0). Svuda je LCP sada jednak prvom prikazu (FCP).
+- Izgled posle animacije: 0 piksela razlike na svih 13 stranica, na 1440 i 390 px (Home i Resources se razlikuju samo zbog animacija koje se vrte, tamo pravilo ništa ne pogađa). U prvom frejmu ciljni element ima prozirnost 1 umesto 0.
+- Objavljeni head je znak po znak isti kao `site-head.min.html` (provereno na 10 stranica). JS greške: 0 na 43 stranice, desktop i telefon.
+
 ## 25.11.2026: Our Work audit (run 47), hero video se preuzima posle učitavanja stranice (objavljeno na staging)
 Tvoje „pogledaj ove greške isto na our work main page-u, ako možeš ispravi i pogledaj da li ih ima i na ostalim stranicama“. Rezerva: `backup/our-work-video-2026-11-25/` (footer kod stranice i objavljeni HTML pre izmene, sken slika svih stranica na telefonu, sken fade/LCP).
 Napomena: audit run 47 je pokrenut pre objave fontova (još prikazuje `webfont.js` i fonts.gstatic.com); te dve stavke su rešene istog dana.

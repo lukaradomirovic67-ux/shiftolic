@@ -1,0 +1,68 @@
+1440 / now first-frame null
+1440 / new first-frame null
+1440 /about now first-frame 0 heading-style-h1
+1440 /about new first-frame 1 heading-style-h1
+1440 /services now first-frame 0 heading-style-h1
+1440 /services new first-frame 1 heading-style-h1
+1440 /services/design-development now first-frame 0 heading-style-h1
+1440 /services/design-development new first-frame 1 heading-style-h1
+1440 /services/webflow-development now first-frame 0 heading-style-h1
+1440 /services/webflow-development new first-frame 1 heading-style-h1
+1440 /services/seo-aeo now first-frame 0 heading-style-h1
+1440 /services/seo-aeo new first-frame 1 heading-style-h1
+1440 /services/growth now first-frame 0 heading-style-h1
+1440 /services/growth new first-frame 1 heading-style-h1
+1440 /pricing now first-frame null
+1440 /pricing new first-frame null
+1440 /our-work now first-frame 0 heading-style-h1
+1440 /our-work new first-frame 1 heading-style-h1
+1440 /resources now first-frame null
+1440 /resources new first-frame null
+1440 /blog now first-frame 0 ins-featured
+1440 /blog new first-frame 1 ins-featured
+1440 /careers now first-frame null
+1440 /careers new first-frame null
+1440 /lets-talk now first-frame 0 heading-style-h1
+1440 /lets-talk new first-frame 1 heading-style-h1
+1440 /privacy-policy now first-frame 0 max-width-large
+1440 /privacy-policy new first-frame 1 max-width-large
+1440 /terms-of-service now first-frame 0 max-width-large
+1440 /terms-of-service new first-frame 1 max-width-large
+1440 /our-work/ballerine now first-frame null
+1440 /our-work/ballerine new first-frame null
+1440 /blog/webflow-vs-wix-in-2026-which-one-is-right-for-your-site now first-frame 0 bp-hero_head
+1440 /blog/webflow-vs-wix-in-2026-which-one-is-right-for-your-site new first-frame 1 bp-hero_head
+390 / now first-frame null
+390 / new first-frame null
+390 /about now first-frame 0 heading-style-h1
+390 /about new first-frame 1 heading-style-h1
+390 /services now first-frame 0 heading-style-h1
+390 /services new first-frame 1 heading-style-h1
+390 /services/design-development now first-frame 0 heading-style-h1
+390 /services/design-development new first-frame 1 heading-style-h1
+390 /services/webflow-development now first-frame 0 heading-style-h1
+390 /services/webflow-development new first-frame 1 heading-style-h1
+390 /services/seo-aeo now first-frame 0 heading-style-h1
+390 /services/seo-aeo new first-frame 1 heading-style-h1
+390 /services/growth now first-frame 0 heading-style-h1
+390 /services/growth new first-frame 1 heading-style-h1
+390 /pricing now first-frame null
+390 /pricing new first-frame null
+390 /our-work now first-frame 0 heading-style-h1
+390 /our-work new first-frame 1 heading-style-h1
+390 /resources now first-frame null
+390 /resources new first-frame null
+390 /blog now first-frame 0 ins-featured
+390 /blog new first-frame 1 ins-featured
+390 /careers now first-frame null
+390 /careers new first-frame null
+390 /lets-talk now first-frame 0 heading-style-h1
+390 /lets-talk new first-frame 1 heading-style-h1
+390 /privacy-policy now first-frame 0 max-width-large
+390 /privacy-policy new first-frame 1 max-width-large
+390 /terms-of-service now first-frame 0 max-width-large
+390 /terms-of-service new first-frame 1 max-width-large
+390 /our-work/ballerine now first-frame null
+390 /our-work/ballerine new first-frame null
+390 /blog/webflow-vs-wix-in-2026-which-one-is-right-for-your-site now first-frame 0 bp-hero_head
+390 /blog/webflow-vs-wix-in-2026-which-one-is-right-for-your-site new first-frame 1 bp-hero_head
