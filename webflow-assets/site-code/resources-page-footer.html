@@ -111,6 +111,15 @@ document.addEventListener('DOMContentLoaded', function () {
     if(n) el.textContent=n; });
   var rows=[].slice.call(hero.querySelectorAll('[data-res-row]')), pool={insight:[],'case':[],integration:[]};
   rows.forEach(function(r){ [].forEach.call(r.querySelectorAll('[data-res-card]'),function(c){ var t=c.getAttribute('data-res-card'); if(pool[t]) pool[t].push(c); }); });
+  /* Copies of a card for the loop. An image hidden at this screen size (the phone or the desktop version of a screenshot) gets its
+     address only once the copy is on the page: a copy made off the page downloads every image at once, hidden or lazy. */
+  function cl(c){ var hid=[].filter.call(c.querySelectorAll('img[src]'),function(i){ return getComputedStyle(i).display==='none'; });
+    hid.forEach(function(i){ i.setAttribute('data-res-src',i.getAttribute('src')); i.removeAttribute('src'); });
+    var x=c.cloneNode(true); x.setAttribute('aria-hidden','true');
+    hid.forEach(function(i){ i.setAttribute('src',i.getAttribute('data-res-src')); i.removeAttribute('data-res-src'); });
+    return x; }
+  function put(track,x){ track.appendChild(x);
+    [].forEach.call(x.querySelectorAll('img[data-res-src]'),function(i){ i.setAttribute('src',i.getAttribute('data-res-src')); i.removeAttribute('data-res-src'); }); }
   rows.forEach(function(row,ri){
     var q={}, left=0, seq=[], k=0, pat=ri%2?['case','integration','insight']:T;
     T.forEach(function(t){ q[t]=pool[t].filter(function(c,i){ return i%rows.length===ri; }); left+=q[t].length; });
@@ -122,9 +131,9 @@ document.addEventListener('DOMContentLoaded', function () {
     row.appendChild(track); row.classList.add('is-running');
     /* one set must be wider than the screen; then the set is doubled so the loop has no seam */
     var base=seq.slice(), n=0;
-    while(track.scrollWidth<innerWidth*1.15&&n++<6) base.forEach(function(c){ var x=c.cloneNode(true); x.setAttribute('aria-hidden','true'); track.appendChild(x); });
+    while(track.scrollWidth<innerWidth*1.15&&n++<6) base.forEach(function(c){ put(track,cl(c)); });
     var w=track.scrollWidth;
-    [].slice.call(track.children).forEach(function(c){ var x=c.cloneNode(true); x.setAttribute('aria-hidden','true'); track.appendChild(x); });
+    [].slice.call(track.children).forEach(function(c){ put(track,cl(c)); });
     track.style.setProperty('--res-dur',Math.max(20,Math.round(w/38))+'s');
   });
   var stats=[].slice.call(hero.querySelectorAll('[data-res-type]')), types=stats.map(function(s){ return s.getAttribute('data-res-type'); }),

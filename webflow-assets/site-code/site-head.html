@@ -890,3 +890,10 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('DOMContentLoaded', function () { mo.disconnect(); scan(document); });
 })();
 </script>
+<!-- Nues: phone screenshots (Our Works field „Full page screenshot (mobile)“, 640px). Home Every project, Our Work and Resources
+     cards hold both images; the phone one (combo class is-mobile, display:none in the Designer) replaces the big one below 768px,
+     but only when the item has it (an empty CMS image gets w-dyn-bind-empty). Without :has support the big one stays, as before.
+     Hidden lazy images are not downloaded. 25.11.2026, your „Da, odobravam polje“. -->
+<style>
+@media (max-width:767px){:is(.work-card_window,.home-projects_screen-frame,.res-hero_card):has(>.is-mobile:not(.w-dyn-bind-empty))>:is(.work-card_shot,.home-projects_screen-image,.res-hero_card-img):not(.is-mobile){display:none}:is(.work-card_window,.home-projects_screen-frame,.res-hero_card):has(>.is-mobile:not(.w-dyn-bind-empty))>.is-mobile{display:block}}
+</style>

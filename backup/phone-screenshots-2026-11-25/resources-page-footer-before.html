@@ -1,0 +1,166 @@
+<style>
+.resources-main-featured-divider_line {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.2);  /* prigusena crna, 20% */
+}
+
+.resources-main-featured-divider_line::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 1);    /* puna crna, 100% */
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.4s ease-in-out;
+}
+
+.resources-main-featured-divider_line.is-filled::before {
+  transform: scaleX(1);
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const cards = document.querySelectorAll('.resources-main-featured-right_card');
+  const lines = document.querySelectorAll('.resources-main-featured-divider_line');
+
+  cards.forEach(function (card, i) {
+    const topLine = lines[i];
+    const bottomLine = lines[i + 1];
+
+    card.addEventListener('mouseenter', function () {
+      if (topLine) topLine.classList.add('is-filled');
+      if (bottomLine) bottomLine.classList.add('is-filled');
+    });
+
+    card.addEventListener('mouseleave', function () {
+      if (topLine) topLine.classList.remove('is-filled');
+      if (bottomLine) bottomLine.classList.remove('is-filled');
+    });
+  });
+});
+</script>
+<script>
+/* Integrations with Webflow: the tiles orbit the Webflow core and the selected tool shows on the left.
+   It moves to the next tool every 3.6s; pointing at, tapping or tabbing to a tile takes over. Each tile carries its own
+   data (data-int-name, -color, -category, -time, -text, -logo), so a tile is added or changed in the Designer only. */
+(function(){
+  var root=document.querySelector('[data-integrations]'); if(!root) return;
+  var orb=root.querySelector('.integrations_orbit'), info=root.querySelector('.integrations_info'), fx=root.querySelector('.integrations_fx'),
+      logo=root.querySelector('.integrations_logo'), nds=[].slice.call(orb.querySelectorAll('.integrations_tile')); if(!nds.length) return;
+  var F={}; [].forEach.call(root.querySelectorAll('[data-int-field]'),function(e){ F[e.getAttribute('data-int-field')]=e; });
+  var NS='http://www.w3.org/2000/svg', svg=document.createElementNS(NS,'svg'), gid='int-lg-'+Math.random().toString(36).slice(2,7);
+  svg.setAttribute('class','integrations_lines'); svg.setAttribute('aria-hidden','true');
+  svg.innerHTML='<defs><linearGradient id="'+gid+'" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#146EF5"/><stop offset="1" stop-color="#146EF5"/></linearGradient></defs><line stroke="url(#'+gid+')"/>';
+  orb.insertBefore(svg,nds[0]);
+  var lg=svg.querySelector('linearGradient'), lg2=lg.lastChild, ln=svg.querySelector('line');
+  var still=matchMedia('(prefers-reduced-motion: reduce)').matches, cur=-1, user=false, vis=false, leave=0, cyc=0, tm=0, raf=0,
+      angle=0, speed=1, target=1, last=0;
+  /* inner ring 6 tiles, outer ring 9; radius as a share of the orbit (the native left/top of each tile is the same layout at angle 0) */
+  var P=nds.map(function(n,i){ var inner=i<6; return {r:inner?.28:.47, a:(inner?i/6:(i-6)/9+.055)*Math.PI*2, dir:inner?1:-.7}; });
+  nds.forEach(function(n){ n.style.left='0'; n.style.top='0'; });
+  orb.classList.add('is-ready');
+  function place(){ var W=orb.clientWidth, s=nds[0].offsetWidth, h=orb.classList.contains('is-hold');
+    nds.forEach(function(n,i){ var p=P[i], a=p.a+angle*p.dir, x=W/2+Math.cos(a)*p.r*W-s/2, y=W/2+Math.sin(a)*p.r*W-s/2;
+      n.style.transform='translate('+x.toFixed(1)+'px,'+y.toFixed(1)+'px) scale('+(h&&i===cur?1.18:1)+')'; });
+    if(cur>-1){ var q=P[cur], b=q.a+angle*q.dir, x2=W/2+Math.cos(b)*q.r*W, y2=W/2+Math.sin(b)*q.r*W;
+      svg.setAttribute('viewBox','0 0 '+W+' '+W);
+      [ln,lg].forEach(function(e){ e.setAttribute('x1',W/2); e.setAttribute('y1',W/2); e.setAttribute('x2',x2.toFixed(1)); e.setAttribute('y2',y2.toFixed(1)); }); } }
+  /* the orbit glides, and eases to a stop while someone points at a tool; it only runs while the section is on screen */
+  function loop(t){ raf=0; if(!vis) return; var dt=last?Math.min(50,t-last):16; last=t; speed+=(target-speed)*.06; if(!still) angle+=speed*dt*.00006; place(); raf=requestAnimationFrame(loop); }
+  function run(){ if(!raf){ last=0; raf=requestAnimationFrame(loop); } }
+  function d(n,k){ return n.getAttribute('data-int-'+k)||''; }
+  function fill(n){ var name=d(n,'name');
+    if(logo){ logo.removeAttribute('srcset'); logo.removeAttribute('sizes'); logo.src=d(n,'logo'); logo.alt=name; }
+    if(F.title) F.title.textContent='Webflow + '+name; if(F.text) F.text.textContent=d(n,'text');
+    if(F.category) F.category.textContent=d(n,'category'); if(F.time) F.time.textContent=d(n,'time'); }
+  function show(i,now){ if(i===cur) return; cur=i; var n=nds[i], c=d(n,'color')||'#146EF5';
+    orb.classList.add('is-hold'); nds.forEach(function(m,j){ m.classList.toggle('is-active',j===i); });
+    lg2.setAttribute('stop-color',c); svg.classList.add('is-on'); root.style.setProperty('--int-c',c);
+    clearTimeout(tm);
+    if(now){ fill(n); } else { fx.classList.add('is-out'); tm=setTimeout(function(){ fill(n); fx.classList.remove('is-out'); },180); }
+    if(F.bar){ F.bar.style.animation='none'; void F.bar.offsetWidth; F.bar.style.animation=''; }
+    if(!raf) place(); }
+  function cycle(){ clearTimeout(cyc); if(user||!vis) return; info.classList.add('is-auto'); cyc=setTimeout(function(){ show((cur+1)%nds.length); cycle(); },3600); }
+  function take(i){ clearTimeout(leave); clearTimeout(cyc); user=true; target=0; info.classList.remove('is-auto'); show(i); }
+  function free(ms){ clearTimeout(leave); leave=setTimeout(function(){ user=false; target=1; cycle(); },ms); }
+  nds.forEach(function(n,i){
+    n.addEventListener('pointerenter',function(e){ if(e.pointerType==='mouse') take(i); });
+    n.addEventListener('pointerleave',function(e){ if(e.pointerType==='mouse') free(500); });
+    n.addEventListener('pointerup',function(e){ if(e.pointerType!=='mouse'){ take(i); free(5000); } });
+    n.addEventListener('focus',function(){ if(n.matches(':focus-visible')) take(i); });
+    n.addEventListener('blur',function(){ if(user) free(500); });
+    n.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); take(i); } });
+  });
+  show(Math.max(0,nds.findIndex(function(n){ return d(n,'name')===(F.title?F.title.textContent.replace(/^Webflow \+ /,''):''); })),true);
+  addEventListener('resize',function(){ if(!raf) place(); });
+  if('IntersectionObserver' in window){ new IntersectionObserver(function(es){ vis=es[0].isIntersecting; if(vis){ run(); cycle(); } else clearTimeout(cyc); },{rootMargin:'100px 0px'}).observe(orb); }
+  else { vis=true; run(); cycle(); }
+})();
+</script>
+<script>
+/* Resources hero: counts come from the hidden collection lists and the orbit tiles (case studies count only the items with a
+   Case title, i.e. a written case study); the stats light one kind of card every
+   3.2s (hover or focus takes over); both rows get insights, case studies and integrations in turn and glide in a loop. */
+(function(){
+  var hero=document.querySelector('[data-res-hero]'); if(!hero) return;
+  var still=matchMedia('(prefers-reduced-motion: reduce)').matches, T=['insight','case','integration'];
+  [].forEach.call(hero.querySelectorAll('[data-res-count]'),function(el){ var t=el.getAttribute('data-res-count'), n=0, src;
+    if(t==='integration') n=document.querySelectorAll('[data-integrations] .integrations_tile').length;
+    else if((src=hero.querySelector('[data-res-count-src="'+t+'"]'))) n=[].filter.call(src.querySelectorAll('.w-dyn-item'),function(i){ var w=i.getAttribute('data-res-written'); return t!=='case'||(w!==null&&w.trim()!==''); }).length;
+    if(n) el.textContent=n; });
+  var rows=[].slice.call(hero.querySelectorAll('[data-res-row]')), pool={insight:[],'case':[],integration:[]};
+  rows.forEach(function(r){ [].forEach.call(r.querySelectorAll('[data-res-card]'),function(c){ var t=c.getAttribute('data-res-card'); if(pool[t]) pool[t].push(c); }); });
+  rows.forEach(function(row,ri){
+    var q={}, left=0, seq=[], k=0, pat=ri%2?['case','integration','insight']:T;
+    T.forEach(function(t){ q[t]=pool[t].filter(function(c,i){ return i%rows.length===ri; }); left+=q[t].length; });
+    if(!left) return;
+    while(left){ var t=pat[k++%3]; if(q[t].length){ seq.push(q[t].shift()); left--; } }
+    var track=document.createElement('div'); track.className='res-hero_track';
+    seq.forEach(function(c){ track.appendChild(c); });
+    while(row.firstChild) row.removeChild(row.firstChild);
+    row.appendChild(track); row.classList.add('is-running');
+    /* one set must be wider than the screen; then the set is doubled so the loop has no seam */
+    var base=seq.slice(), n=0;
+    while(track.scrollWidth<innerWidth*1.15&&n++<6) base.forEach(function(c){ var x=c.cloneNode(true); x.setAttribute('aria-hidden','true'); track.appendChild(x); });
+    var w=track.scrollWidth;
+    [].slice.call(track.children).forEach(function(c){ var x=c.cloneNode(true); x.setAttribute('aria-hidden','true'); track.appendChild(x); });
+    track.style.setProperty('--res-dur',Math.max(20,Math.round(w/38))+'s');
+  });
+  var stats=[].slice.call(hero.querySelectorAll('[data-res-type]')), types=stats.map(function(s){ return s.getAttribute('data-res-type'); }),
+      cur=Math.max(0,types.indexOf(hero.getAttribute('data-res-active'))), timer=0, held=false, vis=true;
+  function set(i){ cur=i; hero.setAttribute('data-res-active',types[i]); stats.forEach(function(s,j){ s.classList.toggle('is-active',j===i); }); }
+  function loop(){ clearTimeout(timer); if(held||still||!vis||stats.length<2) return; timer=setTimeout(function(){ set((cur+1)%stats.length); loop(); },3200); }
+  stats.forEach(function(s,i){
+    s.addEventListener('mouseenter',function(){ held=true; clearTimeout(timer); set(i); });
+    s.addEventListener('mouseleave',function(){ held=false; loop(); });
+    s.addEventListener('focus',function(){ held=true; clearTimeout(timer); set(i); });
+    s.addEventListener('blur',function(){ held=false; loop(); });
+  });
+  set(cur);
+  if('IntersectionObserver' in window) new IntersectionObserver(function(es){ vis=es[0].isIntersecting; hero.classList.toggle('is-off',!vis); if(vis) loop(); else clearTimeout(timer); }).observe(hero);
+  else loop();
+})();
+/* Case studies with the numbers: the rows and the previews are two lists of the same projects, matched by position.
+   The active row shows its result and its site on the right; it moves on every 5s, hover or focus takes over. */
+(function(){
+  var root=document.querySelector('[data-res-cases]'); if(!root) return;
+  var rows=[].slice.call(root.querySelectorAll('.res-case')), prev=[].slice.call(root.querySelectorAll('.res-cases_preview .w-dyn-item'));
+  if(!rows.length) return;
+  var DUR=5000, cur=0, timer=0, held=false, vis=false, still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  root.style.setProperty('--res-case-dur',DUR/1000+'s');
+  function show(i){ cur=i; rows.forEach(function(r,j){ r.classList.toggle('is-active',j===i); }); prev.forEach(function(p,j){ p.classList.toggle('is-active',j===i); });
+    var bar=rows[i].querySelector('.res-case_bar'); if(bar){ bar.style.animation='none'; void bar.offsetWidth; bar.style.animation=''; } }
+  function loop(){ clearTimeout(timer); var on=!held&&vis&&!still&&rows.length>1; root.classList.toggle('is-auto',on); if(on) timer=setTimeout(function(){ show((cur+1)%rows.length); loop(); },DUR); }
+  function take(i){ held=true; clearTimeout(timer); root.classList.remove('is-auto'); show(i); }
+  rows.forEach(function(r,i){
+    r.addEventListener('mouseenter',function(){ take(i); });
+    r.addEventListener('mouseleave',function(){ held=false; loop(); });
+    r.addEventListener('focus',function(){ take(i); });
+    r.addEventListener('blur',function(){ held=false; loop(); });
+  });
+  root.classList.add('is-ready'); show(0);
+  if('IntersectionObserver' in window) new IntersectionObserver(function(es){ vis=es[0].isIntersecting; loop(); },{threshold:.25}).observe(root);
+  else { vis=true; loop(); }
+})();
+</script>

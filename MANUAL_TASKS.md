@@ -22,6 +22,9 @@ Na luka@nues.agency nalogu, jednom (oko 5 minuta). Ceo kod je u `webflow-assets/
 ## ~~Fontovi sa našeg servera (25.11.2026, tvoje „Da, sada“), tvoj korak~~ urađeno 25.11.
 Google verzije obrisane, staging objavljen i proveren. Na telefonu je sporije zbog GA4 (ne zbog fontova), detalji i brojke u CHANGELOG-u 25.11. Čeka tvoju odluku.
 
+## Novi projekat u Our Works: screenshot i za telefon (25.11.2026)
+Uz „Full page screenshot“ (1200 px) popuni i **Full page screenshot (mobile)**: ista slika, 640 px širine, WebP oko 75% kvaliteta (oko 150 KB). Bez nje sajt radi, ali telefon preuzima veliku sliku. Shiftolic je u draftu: kad ga objavite, njegova mala slika ide uživo sama.
+
 ## Performanse, odloženo (22.11.2026)
 - **Aeonik u WOFF2:** sada je OTF (3 težine po ~60 KB na svakoj stranici). Pre konverzije proveriti licencu za Aeonik (CoType) da li dozvoljava WOFF2 za web. Kad je potvrđeno, Claude konvertuje i menja fajlove na istim font zapisima (isti izgled).
 - ~~Geist i Instrument Serif kao sopstveni fontovi~~: u toku od 25.11. (vidi gore).

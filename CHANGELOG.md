@@ -3,6 +3,24 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 25.11.2026: screenshotovi klijenata za telefon, novo CMS polje (objavljeno na staging)
+Tvoje „Da, odobravam polje“. Rezerva: `backup/phone-screenshots-2026-11-25/` (Our Works stavke i grupe polja pre i posle, objavljeni Home/Our Work/Resources pre izmene, site head i Resources footer pre izmene).
+
+| Gde | Pre | Posle |
+|---|---|---|
+| CMS Our Works | nema polja | **Full page screenshot (mobile)** (`full-page-screenshot-mobile`, Image, nije obavezno), uputstvo „Same screenshot, 640px wide WebP (about 150 KB). Shown on phones only; leave empty to use the big one.“, u grupi „2 · Logos and images (designer)“ odmah ispod Full page screenshot |
+| 10 stavki (Ballerine, Biotech, Harper, Hypersonix, Intaker, LaSalle, Shiftolic, Sustain, TrakPro, Veyor) | — | 640 px WebP (q75) napravljen od trenutne slike od 1200 px (provereno bajt po bajt da je to slika sa sajta), isti alt; ukupno 3,7 MB → 1,5 MB. Fajlovi: `webflow-assets/perf/full-screenshots-640/`. Webflow ih je prebacio na svoj CDN. Ostala polja i draft status nisu dirani |
+| Designer: Our Work kartice, Resources kartice (hero traka i lista case studija), Home Every project (srednji, levi i desni ekran) | jedna slika (Full page screenshot) | ista slika + odmah iza nje slika iz novog polja sa combo klasom `is-mobile` (`display:none` u Designeru), alt iz Name (bočni ekrani: alt „inherit“ i `aria-hidden` kao original) |
+| Site head (`site-head.min.html`) | — | jedno pravilo: ispod 768 px mala slika zamenjuje veliku, ali samo kad stavka ima malu (prazno polje dobija `w-dyn-bind-empty`, pa ostaje velika) |
+| Resources footer kod (`resources-page-footer.html`) | kopije kartica za beskonačnu traku pravljene van stranice, pa su preuzimale sve slike, i skrivene | kopija dobija adresu skrivene slike tek kad je na stranici, pa je lazy loading preskače |
+
+- Izmereno uživo (telefon 412 px), screenshotovi posle skrolovanja cele stranice: Our Work 3.445 → 1.407 KB, Resources 2.725 → 1.042 KB, Home 702 → 430 KB. Desktop i tablet na Home i Our Work isti kao pre; Resources desktop 2.725 → 2.113 KB (ispravka kopija).
+- Procena viška slika na telefonu po Lighthouse pravilu (bez skrolovanja): Home 684 → 404 KB, Our Work 1.619 → 592 KB, Resources 2.003 → 851 KB.
+- Izgled: desktop i tablet piksel po piksel isti na svim karticama (jedina razlika je kartica koja je u trenutku snimka bila zatamnjena zbog smenjivanja kategorija na Resources). Na telefonu ista slika iz manjeg izvora, razlika samo u oštrini (prosečno 1,5–3 nivoa od 255).
+- Shiftolic je kod tima u draftu, pa njegova mala slika nije objavljena: na telefonu ostaje velika (rezerva radi). Kad tim objavi stavku, mala kreće sama.
+- Objavljeni site head i Resources footer znak po znak isti kao u repou. JS greške: 0 na 43 stranice, desktop i telefon.
+- Nije pokriveno: kartice „sledeći projekat“ na case stranicama (Our Works Template) koriste isto polje. Isti obrazac, ako želiš.
+
 ## 25.11.2026: prvi ekran bez fade-a na LCP elementu, 13 stranica (objavljeno na staging)
 Tvoje „Na svim tim stranicama“. Rezerva: `backup/lcp-slide-only-2026-11-25/` (site head pre izmene, prozirnost elemenata u prvom frejmu pre/posle).
 
