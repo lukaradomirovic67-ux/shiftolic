@@ -3,6 +3,23 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 25.11.2026: lakše slike u blog tekstovima i Pricing podnaslov bez fade-a (objavljeno na staging)
+Tvoje „ajde da popravimo performanse malo“; Pricing: tvoje „Da, samo klizanje“.
+
+**1. Slike u tekstu blog postova** (Blogs `6aba6bc07d6279b4b5617769`, polje Content, 22 objavljena posta, 48 slika). Rezerva: `backup/blog-body-images-2026-11-23/` (`blogs-before.json` pre izmene, `blogs-after-cms.json` posle).
+- Pre: PNG/JPG/WebP od 2880 px, ukupno 101,9 MB (26 slika preko 2 MB), a prikazuju se najviše 840 px (telefon 371 px). Nijedna nema manje verzije.
+- Posle: iste slike kao WebP 1680 px (2× širina prikaza; slike uže od toga zadržale su svoju širinu), kvalitet 90, ukupno 3,5 MB. Fajlovi: `webflow-assets/perf/blog-body/`, spisak sa veličinama `conversion.json`. Webflow ih je sam prebacio na svoj CDN.
+- Menjane su samo adrese slika. Provereno skriptom: tekst svih 22 posta je isti znak po znak, ostala polja i draft status nisu dirani, svih 48 slika vraća 200 i bajt po bajt je isto kao u repou. Izgled: najgori slučaj uvećan, bez vidljive razlike.
+- Rezultat (učitano do kraja posta): AEO for marketing teams 7,7 MB → 0,10 MB, AEO tools 7,5 → 0,12, AEO vs SEO 4,2 → 0,15, The signs… 8,9 → 0,53.
+- Partner post (draft) nije diran.
+
+**2. Pricing (`6ad2500978181edbb22ab367`), head kod stranice.** Rezerva: `backup/pricing-subtitle-2026-11-25/` (objavljeni HTML i head kod pre izmene). Ceo kod: `webflow-assets/site-code/pricing-page-head.html`.
+- Dodata jedna linija na kraj postojećeg `<style>`: `.reveal-on .hero_subtitle.is-medium:is([data-reveal],[data-reveal-early]):not(.is-revealed){opacity:1}`.
+- Podnaslov u hero-u i dalje klizi naviše, samo bez prelaza iz providnog (kao naslov na case stranicama od 23.11.). Ostatak koda isti, provereno na objavljenoj stranici.
+- LCP na telefonu (150 ms, 1,6 Mb/s, procesor 4×): 3,24–3,34 s → 1,84–2,15 s (5 od 5 merenja).
+
+- Ovom objavom su na staging otišle i izmene tima iz Designera od 25.11. (npr. Video Testimonials: naslov „Don’t take our word for it. Take theirs.“, ime „Joseph Ruotolo“). Nisu moje.
+
 ## 23.11.2026: Blog, post „Nues is officialy Certified Webflow Partner“ prebačen sa starog sajta kao draft (nije objavljen)
 Tvoje „ajde uradi ove tri tačke“ (prva tačka). Rezerva: `backup/partner-post-2026-11-23/` (Blogs šema i svi item-i pre izmene, HTML posta sa starog sajta, originalna share slika PNG).
 
