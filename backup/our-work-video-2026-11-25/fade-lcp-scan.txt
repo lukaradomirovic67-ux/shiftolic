@@ -1,0 +1,14 @@
+/                                        FCP 2360 | LCP now 2360 IMG.home-hero_bg-image | slide-only LCP 1840 IMG.home-hero_bg-image | gap 520
+/about                                   FCP 1728 | LCP now 3008 H1.heading-style-h1 (in reveal) | slide-only LCP 1708 H1.heading-style-h1 | gap 1300
+/services                                FCP 1652 | LCP now 3296 IMG.svc-hero_corner-img | slide-only LCP 3252 IMG.svc-hero_corner-img | gap 44
+/services/design-development             FCP 1704 | LCP now 2964 H1.heading-style-h1 (in reveal) | slide-only LCP 1824 H1.heading-style-h1 | gap 1140
+/services/seo-aeo                        FCP 1812 | LCP now 2908 H1.heading-style-h1 (in reveal) | slide-only LCP 1700 H1.heading-style-h1 | gap 1208
+/pricing                                 FCP 2148 | LCP now 2148 P.hero_subtitle (in reveal) | slide-only LCP 2136 H1.heading-style-h1 | gap 12
+/resources                               FCP 2104 | LCP now 2104 H1.heading-style-h1 | slide-only LCP 2164 H1.heading-style-h1 | gap -60
+/blog                                    FCP 3524 | LCP now 4560 IMG.image-cover (in reveal) | slide-only LCP 1392 IMG.image-cover | gap 3168
+/careers                                 FCP 2768 | LCP now 4248 IMG.careers-hero_card-img | slide-only LCP 4120 IMG.careers-hero_card-img | gap 128
+/lets-talk                               FCP 2632 | LCP now 2956 H1.heading-style-h1 (in reveal) | slide-only LCP 2276 H1.heading-style-h1 | gap 680
+/our-work/ballerine                      FCP 2720 | LCP now 4260 IMG.cs-shot_img (in reveal) | slide-only LCP 2376 IMG.cs-shot_img | gap 1884
+/our-work/trak-pro                       FCP 3004 | LCP now 3004 H1.heading-style-h1 (in reveal) | slide-only LCP 2204 H1.heading-style-h1 | gap 800
+/blog/aeo-vs-seo-in-2026-whats-the-diffe FCP 3956 | LCP now 5444 IMG.image-cover (in reveal) | slide-only LCP 1812 IMG.image-cover | gap 3632
+/privacy-policy                          FCP 2516 | LCP now 3368 LI. (in reveal) | slide-only LCP 2152 LI. | gap 1216

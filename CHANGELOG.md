@@ -3,6 +3,28 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 25.11.2026: Our Work audit (run 47), hero video se preuzima posle učitavanja stranice (objavljeno na staging)
+Tvoje „pogledaj ove greške isto na our work main page-u, ako možeš ispravi i pogledaj da li ih ima i na ostalim stranicama“. Rezerva: `backup/our-work-video-2026-11-25/` (footer kod stranice i objavljeni HTML pre izmene, sken slika svih stranica na telefonu, sken fade/LCP).
+Napomena: audit run 47 je pokrenut pre objave fontova (još prikazuje `webfont.js` i fonts.gstatic.com); te dve stavke su rešene istog dana.
+
+**Urađeno: hero video na Our Work** (stranica `6aba6bc07d6279b4b56176fe`, footer kod, izvor `webflow-assets/site-code/our-work-page-footer.html`)
+- Pre: TrakPro video u slajderu (2,2 MB, 2140×1280, 60 fps) počinje da se preuzima čim se skripta pokrene (~0,6–1 s), i na telefonu, pre LCP-a. To je najveći fajl na stranici (od ukupno 4,97 MB na telefonu).
+- Posle: video kreće tek posle `load` događaja stranice. Do tada slajd prikazuje Cover sliku (ista slika je i poster videa), pa izgled ostaje isti. Čekanje od 4 s za „spor video“ počinje tek kad video krene, a `play()` se ne zove bez izvora.
+- Provereno na objavljenom stagingu (telefon i desktop): video se traži odmah posle `load` (967 ms naspram 961 ms), pušta se ceo, prvi slajd traje koliko video (~14 s), pa ide sledeći. Bez JS grešaka. Objavljeni kod je isti kao u repou.
+
+**Stavke iz audita koje ne diram ili ne mogu:**
+- „Use efficient cache lifetimes“: CMS slike Webflow CDN šalje sa `max-age=84600` (1 dan); to se ne podešava u Webflow-u.
+- „Render-blocking“: CSS sajta (83 KB kompresovano) mora da blokira prikaz; Minify HTML/CSS/JS je već uključen (provereno). `webfont.js` više ne postoji.
+- „Reduce unused CSS“ (74 KB): ceo CSS sajta je jedan fajl; čišćenje nekorišćenih stilova je tvoje pravilo da ne diramo.
+- „Reduce unused JavaScript“: GA4 (čeka tvoju odluku), Webflow jezgro, Cloudflare Turnstile. Turnstile Webflow dodaje jer je filter projekata Webflow forma (za Finsweet filter).
+- „Forced reflow“: ukupno ~20 ms na usporenom telefonu, najviše GSAP/Webflow; nije vredno izmene.
+- „Image elements do not have explicit width and height“: CLS je 0,003–0,008 na svim stranicama; nema pomeranja koje bi ovo popravilo.
+
+**Nađeno, čeka tvoju odluku:**
+1. Fade na LCP elementu. Gde glavni naslov ili slika ulazi iz potpuno providnog, Chrome ga računa tek pri sledećem iscrtavanju (često kad stigne Aeonik font). Our Work slajder: LCP 5,0 s → 1,9 s sa „samo klizanjem“ (A/B, 3+3 merenja, telefon 1,6 Mb/s, CPU 4×). Ista pojava (jedno merenje po stranici): Blog lista 4,6 → 1,4 s, blog post 5,4 → 1,8 s, About 3,0 → 1,7 s, servisne stranice ~1,2 s brže, Privacy 1,2 s, Let's talk 0,7 s. Case hero slike nisu na listi (tvoja odluka da zadrže fade).
+2. Screenshotovi sajtova klijenata (Our Works, „Full page screenshot“, 1200 px) na telefonu: Webflow za njih ne pravi manje verzije (za slike koje nisu ubačene ručno kroz Editor i za vrlo visoke slike). Višak na telefonu: Our Work ~1,6 MB, Resources ~2,0 MB, Home ~0,7 MB. Verzija od 640 px je ~40% veličine (svih 10: 3,7 MB → 1,5 MB). Za to treba novo CMS polje.
+- Ostale stranice: višak slika 10–150 KB po stranici (avatari autora, share slike, case galerije), bez većeg uticaja.
+
 ## 25.11.2026: meni na telefonu, „Links are not crawlable“ (objavljeno na staging)
 Tvoje „ako primetiš još negde ove greške izmeni ih“ (audit Our Work: „Use descriptive link text“ / „Links are not crawlable“ i „Enable indexing“). Rezerva: `backup/a11y-nav-role-2026-11-25/` (skripta 1.0.0, spisak skripti sajta, objavljeni Our Work pre izmene, sken pre i posle).
 

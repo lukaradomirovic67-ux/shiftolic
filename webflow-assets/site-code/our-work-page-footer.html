@@ -95,8 +95,12 @@
       return st;
     });
     function drop(st) { st.bad = true; st.el.classList.remove('is-on'); try { st.el.pause(); } catch (e) {} }
+    /* Videos start downloading only after the page's load event, so the first video does not compete with the page's own files
+       (on a phone it was 2.2 MB from the first second). Until then the slide shows its Cover image, which is also the video poster. */
+    var pageLoaded = document.readyState === 'complete';
     function load(i) {
       var st = vids[i];
+      if (!pageLoaded) return;
       if (st && !st.bad && !st.el.getAttribute('src')) { st.el.preload = 'auto'; st.el.src = st.el.getAttribute('data-src'); }
     }
     function render() {
@@ -136,7 +140,7 @@
       if (st && !st.bad) {
         var v = st.el;
         if (run) {
-          if (v.paused && !v.ended && !st.pending) {
+          if (v.paused && !v.ended && !st.pending && v.getAttribute('src')) {
             st.pending = true;
             var pr = v.play();
             if (pr && pr.then) pr.then(function () { st.pending = false; }, function () { st.pending = false; drop(st); });
@@ -149,7 +153,7 @@
           fill(idx, (Math.min(v.currentTime / v.duration, 1) * 100) + '%');
           if (v.currentTime >= v.duration / 2) loadNext();
           if (!v.loop && (v.ended || v.currentTime >= v.duration - 0.05)) go(idx + 1);
-        } else if (run && (wait += dt) > WAIT) {
+        } else if (run && v.getAttribute('src') && (wait += dt) > WAIT) {
           drop(st);
         }
       } else if (run) {
@@ -171,6 +175,7 @@
     }
     slider.classList.add('is-ready');
     render();
+    if (!pageLoaded) window.addEventListener('load', function () { pageLoaded = true; load(idx); });
     if (n > 1 || vids[0]) window.requestAnimationFrame(tick);
   }
 

@@ -1,0 +1,2836 @@
+[
+ {
+  "path": "/",
+  "file": "image 4 [Vectorized].avif",
+  "cls": "home-hero_clutch-logo",
+  "kb": 2,
+  "nat": "162x90",
+  "box": "54x30",
+  "fit": "fill",
+  "wasteKb": 1,
+  "srcset": false
+ },
+ {
+  "path": "/",
+  "file": "2-p-500.avif",
+  "cls": "hero-cards_shot",
+  "kb": 13,
+  "nat": "135x135",
+  "box": "132x135",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/",
+  "file": "3-p-500.avif",
+  "cls": "hero-cards_shot",
+  "kb": 11,
+  "nat": "135x135",
+  "box": "132x135",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/",
+  "file": "6-p-500.avif",
+  "cls": "hero-cards_shot",
+  "kb": 12,
+  "nat": "135x135",
+  "box": "132x135",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/",
+  "file": "4-p-500.avif",
+  "cls": "hero-cards_shot",
+  "kb": 21,
+  "nat": "135x135",
+  "box": "132x135",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/",
+  "file": "1-p-500.avif",
+  "cls": "hero-cards_shot",
+  "kb": 11,
+  "nat": "135x135",
+  "box": "132x135",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/",
+  "file": "7-p-500.avif",
+  "cls": "hero-cards_shot",
+  "kb": 16,
+  "nat": "135x135",
+  "box": "132x135",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/",
+  "file": "5-p-500.avif",
+  "cls": "hero-cards_shot",
+  "kb": 12,
+  "nat": "135x135",
+  "box": "132x135",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/",
+  "file": "8-p-500.avif",
+  "cls": "hero-cards_shot",
+  "kb": 16,
+  "nat": "135x135",
+  "box": "132x135",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/",
+  "file": "9-p-500.avif",
+  "cls": "hero-cards_shot",
+  "kb": 24,
+  "nat": "135x135",
+  "box": "132x135",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/",
+  "file": "home-hero-bg-v3-hq-p-800.webp",
+  "cls": "home-hero_bg-image",
+  "kb": 5,
+  "nat": "412x231",
+  "box": "1870x1052",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/",
+  "file": "home-hero-bg-light-v3-hq-p-800.webp",
+  "cls": "home-hero_bg-light",
+  "kb": 31,
+  "nat": "412x231",
+  "box": "1870x1052",
+  "fit": "fill",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/",
+  "file": "trusted-video-intaker-joseph-hq-p-800.webp",
+  "cls": "trusted_video-image",
+  "kb": 36,
+  "nat": "370x658",
+  "box": "371x380",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/",
+  "file": "intakerLogotypewhite.avif",
+  "cls": "trusted_video-logo",
+  "kb": 4,
+  "nat": "428x93",
+  "box": "86x19",
+  "fit": "fill",
+  "wasteKb": 3,
+  "srcset": false
+ },
+ {
+  "path": "/",
+  "file": "ballerine-card-bg-v2.webp",
+  "cls": "home-projects_image",
+  "kb": 8,
+  "nat": "1100x690",
+  "box": "369x230",
+  "fit": "cover",
+  "wasteKb": 5,
+  "srcset": false
+ },
+ {
+  "path": "/",
+  "file": "ballerine-home-full-1200.webp",
+  "cls": "home-projects_screen-image",
+  "kb": 451,
+  "nat": "1200x9984",
+  "box": "147x179",
+  "fit": "cover",
+  "wasteKb": 430,
+  "srcset": false
+ },
+ {
+  "path": "/",
+  "file": "shiftolic-card-bg-v2.webp",
+  "cls": "home-projects_image",
+  "kb": 7,
+  "nat": "1100x688",
+  "box": "369x230",
+  "fit": "cover",
+  "wasteKb": 5,
+  "srcset": false
+ },
+ {
+  "path": "/",
+  "file": "shiftolic-home-full-v2-1200.webp",
+  "cls": "home-projects_screen-image",
+  "kb": 251,
+  "nat": "1200x7296",
+  "box": "147x179",
+  "fit": "cover",
+  "wasteKb": 240,
+  "srcset": false
+ },
+ {
+  "path": "/",
+  "total": 1829
+ },
+ {
+  "path": "/about",
+  "file": "about-hero-bg-hq-p-800.webp",
+  "cls": "image-cover",
+  "kb": 4,
+  "nat": "412x263",
+  "box": "412x823",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/about",
+  "file": "about-v2-pill-icon.avif",
+  "cls": "hero_pill-icon",
+  "kb": 3,
+  "nat": "601x600",
+  "box": "16x16",
+  "fit": "cover",
+  "wasteKb": 3,
+  "srcset": false
+ },
+ {
+  "path": "/about",
+  "file": "about-story-sofa-hq-p-800.webp",
+  "cls": "image-cover",
+  "kb": 30,
+  "nat": "412x274",
+  "box": "349x320",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/about",
+  "file": "about-story-lounge-hq-p-800.webp",
+  "cls": "image-cover",
+  "kb": 36,
+  "nat": "412x274",
+  "box": "349x280",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/about",
+  "file": "about-team-danilo-stikovic-p-800.webp",
+  "cls": "team_photo",
+  "kb": 37,
+  "nat": "412x505",
+  "box": "371x380",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/about",
+  "file": "about-team-darko-milosevic-p-800.webp",
+  "cls": "team_photo",
+  "kb": 30,
+  "nat": "412x505",
+  "box": "371x380",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/about",
+  "file": "about-team-aleksandar-dumic-p-800.webp",
+  "cls": "team_photo",
+  "kb": 30,
+  "nat": "412x505",
+  "box": "371x380",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/about",
+  "file": "about-team-pavle-stikovic-p-800.webp",
+  "cls": "team_photo",
+  "kb": 48,
+  "nat": "412x505",
+  "box": "371x380",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/about",
+  "file": "about-team-luka-radomirovic-p-800.webp",
+  "cls": "team_photo",
+  "kb": 29,
+  "nat": "412x505",
+  "box": "371x380",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/about",
+  "total": 1109
+ },
+ {
+  "path": "/services",
+  "file": "about-v2-pill-icon.avif",
+  "cls": "hero_pill-icon",
+  "kb": 3,
+  "nat": "601x600",
+  "box": "16x16",
+  "fit": "cover",
+  "wasteKb": 3,
+  "srcset": false
+ },
+ {
+  "path": "/services",
+  "file": "trusted-video-intaker-joseph-hq-p-800.webp",
+  "cls": "trusted_video-image",
+  "kb": 36,
+  "nat": "370x658",
+  "box": "371x380",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/services",
+  "file": "intakerLogotypewhite.avif",
+  "cls": "trusted_video-logo",
+  "kb": 4,
+  "nat": "428x93",
+  "box": "86x19",
+  "fit": "fill",
+  "wasteKb": 3,
+  "srcset": false
+ },
+ {
+  "path": "/services",
+  "total": 878
+ },
+ {
+  "path": "/services/design-development",
+  "file": "about-v2-pill-icon.avif",
+  "cls": "hero_pill-icon",
+  "kb": 3,
+  "nat": "601x600",
+  "box": "16x16",
+  "fit": "cover",
+  "wasteKb": 3,
+  "srcset": false
+ },
+ {
+  "path": "/services/design-development",
+  "file": "trusted-video-intaker-joseph-hq-p-800.webp",
+  "cls": "trusted_video-image",
+  "kb": 36,
+  "nat": "370x658",
+  "box": "371x380",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/services/design-development",
+  "file": "intakerLogotypewhite.avif",
+  "cls": "trusted_video-logo",
+  "kb": 4,
+  "nat": "428x93",
+  "box": "86x19",
+  "fit": "fill",
+  "wasteKb": 3,
+  "srcset": false
+ },
+ {
+  "path": "/services/design-development",
+  "file": "svc-case-ballerine-bg-p-800.webp",
+  "cls": "home-projects_image",
+  "kb": 4,
+  "nat": "412x258",
+  "box": "369x258",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/services/design-development",
+  "file": "svc-case-ballerine-home-full-1200-p-500.webp",
+  "cls": "home-projects_screen-image",
+  "kb": 139,
+  "nat": "271x2262",
+  "box": "165x201",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/services/design-development",
+  "file": "ballerine 1white.avif",
+  "cls": "svc-case_logo-img",
+  "kb": 4,
+  "nat": "428x101",
+  "box": "89x21",
+  "fit": "fill",
+  "wasteKb": 4,
+  "srcset": false
+ },
+ {
+  "path": "/services/design-development",
+  "file": "svc-case-shiftolic-bg-p-800.webp",
+  "cls": "home-projects_image",
+  "kb": 4,
+  "nat": "412x257",
+  "box": "369x258",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/services/design-development",
+  "file": "svc-case-shiftolic-home-full-1200-p-500.webp",
+  "cls": "home-projects_screen-image",
+  "kb": 76,
+  "nat": "271x2061",
+  "box": "165x201",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/services/design-development",
+  "total": 1128
+ },
+ {
+  "path": "/services/webflow-development",
+  "file": "about-v2-pill-icon.avif",
+  "cls": "hero_pill-icon",
+  "kb": 3,
+  "nat": "601x600",
+  "box": "16x16",
+  "fit": "cover",
+  "wasteKb": 3,
+  "srcset": false
+ },
+ {
+  "path": "/services/webflow-development",
+  "file": "trusted-video-intaker-joseph-hq-p-800.webp",
+  "cls": "trusted_video-image",
+  "kb": 36,
+  "nat": "370x658",
+  "box": "371x380",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/services/webflow-development",
+  "file": "intakerLogotypewhite.avif",
+  "cls": "trusted_video-logo",
+  "kb": 4,
+  "nat": "428x93",
+  "box": "86x19",
+  "fit": "fill",
+  "wasteKb": 3,
+  "srcset": false
+ },
+ {
+  "path": "/services/webflow-development",
+  "file": "svc-case-ballerine-bg-p-800.webp",
+  "cls": "home-projects_image",
+  "kb": 4,
+  "nat": "412x258",
+  "box": "369x258",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/services/webflow-development",
+  "file": "svc-case-ballerine-home-full-1200-p-500.webp",
+  "cls": "home-projects_screen-image",
+  "kb": 139,
+  "nat": "271x2262",
+  "box": "165x201",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/services/webflow-development",
+  "file": "ballerine 1white.avif",
+  "cls": "svc-case_logo-img",
+  "kb": 4,
+  "nat": "428x101",
+  "box": "89x21",
+  "fit": "fill",
+  "wasteKb": 4,
+  "srcset": false
+ },
+ {
+  "path": "/services/webflow-development",
+  "file": "svc-case-shiftolic-bg-p-800.webp",
+  "cls": "home-projects_image",
+  "kb": 4,
+  "nat": "412x257",
+  "box": "369x258",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/services/webflow-development",
+  "file": "svc-case-shiftolic-home-full-1200-p-500.webp",
+  "cls": "home-projects_screen-image",
+  "kb": 76,
+  "nat": "271x2061",
+  "box": "165x201",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/services/webflow-development",
+  "total": 1128
+ },
+ {
+  "path": "/services/seo-aeo",
+  "file": "about-v2-pill-icon.avif",
+  "cls": "hero_pill-icon",
+  "kb": 3,
+  "nat": "601x600",
+  "box": "16x16",
+  "fit": "cover",
+  "wasteKb": 3,
+  "srcset": false
+ },
+ {
+  "path": "/services/seo-aeo",
+  "file": "trusted-video-intaker-joseph-hq-p-800.webp",
+  "cls": "trusted_video-image",
+  "kb": 36,
+  "nat": "370x658",
+  "box": "371x380",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/services/seo-aeo",
+  "file": "intakerLogotypewhite.avif",
+  "cls": "trusted_video-logo",
+  "kb": 4,
+  "nat": "428x93",
+  "box": "86x19",
+  "fit": "fill",
+  "wasteKb": 3,
+  "srcset": false
+ },
+ {
+  "path": "/services/seo-aeo",
+  "file": "svc-case-ballerine-bg-p-800.webp",
+  "cls": "home-projects_image",
+  "kb": 4,
+  "nat": "412x258",
+  "box": "369x258",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/services/seo-aeo",
+  "file": "svc-case-ballerine-home-full-1200-p-500.webp",
+  "cls": "home-projects_screen-image",
+  "kb": 139,
+  "nat": "271x2262",
+  "box": "165x201",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/services/seo-aeo",
+  "file": "ballerine 1white.avif",
+  "cls": "svc-case_logo-img",
+  "kb": 4,
+  "nat": "428x101",
+  "box": "89x21",
+  "fit": "fill",
+  "wasteKb": 4,
+  "srcset": false
+ },
+ {
+  "path": "/services/seo-aeo",
+  "file": "svc-case-shiftolic-bg-p-800.webp",
+  "cls": "home-projects_image",
+  "kb": 4,
+  "nat": "412x257",
+  "box": "369x258",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/services/seo-aeo",
+  "file": "svc-case-shiftolic-home-full-1200-p-500.webp",
+  "cls": "home-projects_screen-image",
+  "kb": 76,
+  "nat": "271x2061",
+  "box": "165x201",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/services/seo-aeo",
+  "total": 1129
+ },
+ {
+  "path": "/services/growth",
+  "file": "about-v2-pill-icon.avif",
+  "cls": "hero_pill-icon",
+  "kb": 3,
+  "nat": "601x600",
+  "box": "16x16",
+  "fit": "cover",
+  "wasteKb": 3,
+  "srcset": false
+ },
+ {
+  "path": "/services/growth",
+  "file": "trusted-video-intaker-joseph-hq-p-800.webp",
+  "cls": "trusted_video-image",
+  "kb": 36,
+  "nat": "370x658",
+  "box": "371x380",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/services/growth",
+  "file": "intakerLogotypewhite.avif",
+  "cls": "trusted_video-logo",
+  "kb": 4,
+  "nat": "428x93",
+  "box": "86x19",
+  "fit": "fill",
+  "wasteKb": 3,
+  "srcset": false
+ },
+ {
+  "path": "/services/growth",
+  "file": "svc-case-ballerine-bg-p-800.webp",
+  "cls": "home-projects_image",
+  "kb": 4,
+  "nat": "412x258",
+  "box": "369x258",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/services/growth",
+  "file": "svc-case-ballerine-home-full-1200-p-500.webp",
+  "cls": "home-projects_screen-image",
+  "kb": 139,
+  "nat": "271x2262",
+  "box": "165x201",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/services/growth",
+  "file": "ballerine 1white.avif",
+  "cls": "svc-case_logo-img",
+  "kb": 4,
+  "nat": "428x101",
+  "box": "89x21",
+  "fit": "fill",
+  "wasteKb": 4,
+  "srcset": false
+ },
+ {
+  "path": "/services/growth",
+  "file": "svc-case-shiftolic-bg-p-800.webp",
+  "cls": "home-projects_image",
+  "kb": 4,
+  "nat": "412x257",
+  "box": "369x258",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/services/growth",
+  "file": "svc-case-shiftolic-home-full-1200-p-500.webp",
+  "cls": "home-projects_screen-image",
+  "kb": 76,
+  "nat": "271x2061",
+  "box": "165x201",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/services/growth",
+  "total": 1128
+ },
+ {
+  "path": "/pricing",
+  "file": "about-v2-pill-icon.avif",
+  "cls": "hero_pill-icon",
+  "kb": 3,
+  "nat": "601x600",
+  "box": "16x16",
+  "fit": "cover",
+  "wasteKb": 3,
+  "srcset": false
+ },
+ {
+  "path": "/pricing",
+  "total": 701
+ },
+ {
+  "path": "/our-work",
+  "file": "about-v2-pill-icon.avif",
+  "cls": "hero_pill-icon",
+  "kb": 3,
+  "nat": "601x600",
+  "box": "16x16",
+  "fit": "cover",
+  "wasteKb": 3,
+  "srcset": false
+ },
+ {
+  "path": "/our-work",
+  "file": "image 4 [Vectorized].avif",
+  "cls": "ow-badges_clutch-img",
+  "kb": 2,
+  "nat": "162x90",
+  "box": "61x34",
+  "fit": "fill",
+  "wasteKb": 1,
+  "srcset": false
+ },
+ {
+  "path": "/our-work",
+  "file": "trak-pro-share.webp",
+  "cls": "ow-hs_img",
+  "kb": 56,
+  "nat": "1080x1350",
+  "box": "349x207",
+  "fit": "cover",
+  "wasteKb": 38,
+  "srcset": false
+ },
+ {
+  "path": "/our-work",
+  "file": "sustain-commercial-solar-share.webp",
+  "cls": "ow-hs_img",
+  "kb": 61,
+  "nat": "1720x968",
+  "box": "349x207",
+  "fit": "cover",
+  "wasteKb": 52,
+  "srcset": false
+ },
+ {
+  "path": "/our-work",
+  "file": "shiftolic-share.webp",
+  "cls": "ow-hs_img",
+  "kb": 37,
+  "nat": "1600x800",
+  "box": "349x207",
+  "fit": "cover",
+  "wasteKb": 29,
+  "srcset": false
+ },
+ {
+  "path": "/our-work",
+  "file": "ballerine-share.webp",
+  "cls": "ow-hs_img",
+  "kb": 48,
+  "nat": "1600x1200",
+  "box": "349x207",
+  "fit": "cover",
+  "wasteKb": 41,
+  "srcset": false
+ },
+ {
+  "path": "/our-work",
+  "file": "ow-tabs-bg-ballerine.webp",
+  "cls": "ow-cs_bg",
+  "kb": 27,
+  "nat": "2400x1600",
+  "box": "369x326",
+  "fit": "cover",
+  "wasteKb": 23,
+  "srcset": false
+ },
+ {
+  "path": "/our-work",
+  "file": "ow-tabs-after-ballerine.webp",
+  "cls": "ow-cs_after",
+  "kb": 36,
+  "nat": "1080x617",
+  "box": "327x245",
+  "fit": "cover",
+  "wasteKb": 19,
+  "srcset": false
+ },
+ {
+  "path": "/our-work",
+  "file": "ow-tabs-before-ballerine.webp",
+  "cls": "ow-cs_before-img",
+  "kb": 97,
+  "nat": "2400x1371",
+  "box": "327x245",
+  "fit": "cover",
+  "wasteKb": 87,
+  "srcset": false
+ },
+ {
+  "path": "/our-work",
+  "file": "intaker-card-bg-v2.webp",
+  "cls": "work-card_bg",
+  "kb": 6,
+  "nat": "1100x688",
+  "box": "349x218",
+  "fit": "cover",
+  "wasteKb": 4,
+  "srcset": false
+ },
+ {
+  "path": "/our-work",
+  "file": "intaker-home-full-v2-1200.webp",
+  "cls": "work-card_shot",
+  "kb": 301,
+  "nat": "1200x8370",
+  "box": "261x1820",
+  "fit": "fill",
+  "wasteKb": 257,
+  "srcset": false
+ },
+ {
+  "path": "/our-work",
+  "file": "ballerine-card-bg-v2.webp",
+  "cls": "work-card_bg",
+  "kb": 8,
+  "nat": "1100x690",
+  "box": "349x218",
+  "fit": "cover",
+  "wasteKb": 6,
+  "srcset": false
+ },
+ {
+  "path": "/our-work",
+  "file": "ballerine-home-full-1200.webp",
+  "cls": "work-card_shot",
+  "kb": 451,
+  "nat": "1200x9984",
+  "box": "261x2171",
+  "fit": "fill",
+  "wasteKb": 386,
+  "srcset": false
+ },
+ {
+  "path": "/our-work",
+  "file": "shiftolic-card-bg-v2.webp",
+  "cls": "work-card_bg",
+  "kb": 7,
+  "nat": "1100x688",
+  "box": "349x218",
+  "fit": "cover",
+  "wasteKb": 5,
+  "srcset": false
+ },
+ {
+  "path": "/our-work",
+  "file": "shiftolic-home-full-v2-1200.webp",
+  "cls": "work-card_shot",
+  "kb": 251,
+  "nat": "1200x7296",
+  "box": "261x1587",
+  "fit": "fill",
+  "wasteKb": 215,
+  "srcset": false
+ },
+ {
+  "path": "/our-work",
+  "file": "veyor-card-bg-v2.webp",
+  "cls": "work-card_bg",
+  "kb": 8,
+  "nat": "1100x690",
+  "box": "349x218",
+  "fit": "cover",
+  "wasteKb": 5,
+  "srcset": false
+ },
+ {
+  "path": "/our-work",
+  "file": "veyor-home-full-v2-1200.avif",
+  "cls": "work-card_shot",
+  "kb": 520,
+  "nat": "1200x9484",
+  "box": "261x2062",
+  "fit": "fill",
+  "wasteKb": 444,
+  "srcset": false
+ },
+ {
+  "path": "/our-work",
+  "file": "harper-card-bg-v2.webp",
+  "cls": "work-card_bg",
+  "kb": 6,
+  "nat": "1100x690",
+  "box": "349x218",
+  "fit": "cover",
+  "wasteKb": 4,
+  "srcset": false
+ },
+ {
+  "path": "/our-work",
+  "total": 4969
+ },
+ {
+  "path": "/resources",
+  "file": "insights-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x194",
+  "box": "412x778",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/resources",
+  "file": "about-v2-pill-icon.avif",
+  "cls": "hero_pill-icon",
+  "kb": 3,
+  "nat": "601x600",
+  "box": "16x16",
+  "fit": "cover",
+  "wasteKb": 3,
+  "srcset": false
+ },
+ {
+  "path": "/resources",
+  "file": "sanity-vs-webflow-share.webp",
+  "cls": "res-hero_card-img",
+  "kb": 31,
+  "nat": "1920x1080",
+  "box": "190x114",
+  "fit": "cover",
+  "wasteKb": 30,
+  "srcset": false
+ },
+ {
+  "path": "/resources",
+  "file": "veyor-home-full-v2-1200.avif",
+  "cls": "res-hero_card-img",
+  "kb": 520,
+  "nat": "1200x9484",
+  "box": "190x114",
+  "fit": "cover",
+  "wasteKb": 480,
+  "srcset": false
+ },
+ {
+  "path": "/resources",
+  "file": "b2b-p-500.webp",
+  "cls": "res-hero_card-img",
+  "kb": 8,
+  "nat": "190x106",
+  "box": "190x114",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/resources",
+  "file": "trakpro-home-full-v2-1200.webp",
+  "cls": "res-hero_card-img",
+  "kb": 243,
+  "nat": "1200x6392",
+  "box": "190x114",
+  "fit": "cover",
+  "wasteKb": 224,
+  "srcset": false
+ },
+ {
+  "path": "/resources",
+  "file": "aeo-p-500.webp",
+  "cls": "res-hero_card-img",
+  "kb": 8,
+  "nat": "190x106",
+  "box": "190x114",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/resources",
+  "file": "harper-home-full-hq-1200.webp",
+  "cls": "res-hero_card-img",
+  "kb": 193,
+  "nat": "1200x5167",
+  "box": "190x114",
+  "fit": "cover",
+  "wasteKb": 178,
+  "srcset": false
+ },
+ {
+  "path": "/resources",
+  "file": "shiftolic-home-full-v2-1200.webp",
+  "cls": "res-hero_card-img",
+  "kb": 251,
+  "nat": "1200x7296",
+  "box": "190x114",
+  "fit": "cover",
+  "wasteKb": 232,
+  "srcset": false
+ },
+ {
+  "path": "/resources",
+  "file": "source-by-webflow-share.webp",
+  "cls": "res-hero_card-img",
+  "kb": 31,
+  "nat": "1920x1080",
+  "box": "190x114",
+  "fit": "cover",
+  "wasteKb": 30,
+  "srcset": false
+ },
+ {
+  "path": "/resources",
+  "file": "intaker-home-full-v2-1200.webp",
+  "cls": "res-hero_card-img",
+  "kb": 301,
+  "nat": "1200x8370",
+  "box": "190x114",
+  "fit": "cover",
+  "wasteKb": 278,
+  "srcset": false
+ },
+ {
+  "path": "/resources",
+  "file": "fghjk-p-500.webp",
+  "cls": "res-hero_card-img",
+  "kb": 8,
+  "nat": "190x106",
+  "box": "190x114",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/resources",
+  "file": "hypersonix-home-full-hq-1200.webp",
+  "cls": "res-hero_card-img",
+  "kb": 154,
+  "nat": "1200x3374",
+  "box": "190x114",
+  "fit": "cover",
+  "wasteKb": 142,
+  "srcset": false
+ },
+ {
+  "path": "/resources",
+  "file": "gfds-p-500.webp",
+  "cls": "res-hero_card-img",
+  "kb": 6,
+  "nat": "190x106",
+  "box": "190x114",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/resources",
+  "file": "Untitled-p-800.webp",
+  "cls": "res-post_img",
+  "kb": 8,
+  "nat": "412x231",
+  "box": "371x220",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/resources",
+  "file": "veyor-card-bg-v2.webp",
+  "cls": "work-card_bg",
+  "kb": 8,
+  "nat": "1100x690",
+  "box": "349x218",
+  "fit": "cover",
+  "wasteKb": 5,
+  "srcset": false
+ },
+ {
+  "path": "/resources",
+  "file": "shiftolic-card-bg-v2.webp",
+  "cls": "work-card_bg",
+  "kb": 7,
+  "nat": "1100x688",
+  "box": "349x218",
+  "fit": "cover",
+  "wasteKb": 5,
+  "srcset": false
+ },
+ {
+  "path": "/resources",
+  "file": "trakpro-card-bg-v2.webp",
+  "cls": "work-card_bg",
+  "kb": 6,
+  "nat": "1100x690",
+  "box": "349x218",
+  "fit": "cover",
+  "wasteKb": 4,
+  "srcset": false
+ },
+ {
+  "path": "/resources",
+  "file": "ballerine-card-bg-v2.webp",
+  "cls": "work-card_bg",
+  "kb": 8,
+  "nat": "1100x690",
+  "box": "349x218",
+  "fit": "cover",
+  "wasteKb": 6,
+  "srcset": false
+ },
+ {
+  "path": "/resources",
+  "file": "ballerine-home-full-1200.webp",
+  "cls": "work-card_shot",
+  "kb": 451,
+  "nat": "1200x9984",
+  "box": "261x2171",
+  "fit": "fill",
+  "wasteKb": 386,
+  "srcset": false
+ },
+ {
+  "path": "/resources",
+  "file": "footer-cta-bg-3247w-p-800.webp",
+  "cls": "cta-v2_bg",
+  "kb": 24,
+  "nat": "412x355",
+  "box": "412x486",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/resources",
+  "total": 2955
+ },
+ {
+  "path": "/blog",
+  "file": "source-by-webflow-share.webp",
+  "cls": "navbar-resources_card-img",
+  "kb": 31,
+  "nat": "1920x1080",
+  "box": "0x0",
+  "fit": "cover",
+  "wasteKb": 31,
+  "srcset": false
+ },
+ {
+  "path": "/blog",
+  "file": "insights-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x194",
+  "box": "412x975",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog",
+  "file": "sanity-vs-webflow-share.webp",
+  "cls": "image-cover",
+  "kb": 31,
+  "nat": "1920x1080",
+  "box": "369x538",
+  "fit": "cover",
+  "wasteKb": 8,
+  "srcset": false
+ },
+ {
+  "path": "/blog",
+  "file": "aleksandar-p-800.avif",
+  "cls": "blog-author_img",
+  "kb": 17,
+  "nat": "412x412",
+  "box": "40x40",
+  "fit": "cover",
+  "wasteKb": 17,
+  "srcset": true
+ },
+ {
+  "path": "/blog",
+  "file": "Untitled-p-800.webp",
+  "cls": "image-cover",
+  "kb": 8,
+  "nat": "412x231",
+  "box": "369x538",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog",
+  "file": "danilo-p-800.avif",
+  "cls": "blog-author_img",
+  "kb": 17,
+  "nat": "412x412",
+  "box": "40x40",
+  "fit": "cover",
+  "wasteKb": 16,
+  "srcset": true
+ },
+ {
+  "path": "/blog",
+  "file": "ecom-p-800.webp",
+  "cls": "image-cover",
+  "kb": 13,
+  "nat": "412x231",
+  "box": "371x220",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog",
+  "file": "daris-p-800.avif",
+  "cls": "blog-author_img",
+  "kb": 18,
+  "nat": "412x412",
+  "box": "40x40",
+  "fit": "cover",
+  "wasteKb": 17,
+  "srcset": true
+ },
+ {
+  "path": "/blog",
+  "file": "gfds-p-800.webp",
+  "cls": "image-cover",
+  "kb": 11,
+  "nat": "412x231",
+  "box": "371x220",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog",
+  "file": "cms-p-800.webp",
+  "cls": "image-cover",
+  "kb": 11,
+  "nat": "412x231",
+  "box": "371x220",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog",
+  "file": "4321-p-800.webp",
+  "cls": "image-cover",
+  "kb": 8,
+  "nat": "412x231",
+  "box": "371x220",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog",
+  "file": "lkfk-p-800.webp",
+  "cls": "image-cover",
+  "kb": 16,
+  "nat": "412x231",
+  "box": "371x220",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog",
+  "file": "redesign-p-800.webp",
+  "cls": "image-cover",
+  "kb": 14,
+  "nat": "412x231",
+  "box": "371x220",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog",
+  "file": "fghjk-p-800.webp",
+  "cls": "image-cover",
+  "kb": 15,
+  "nat": "412x231",
+  "box": "371x220",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog",
+  "file": "321-p-800.webp",
+  "cls": "image-cover",
+  "kb": 9,
+  "nat": "412x231",
+  "box": "0x0",
+  "fit": "cover",
+  "wasteKb": 9,
+  "srcset": true
+ },
+ {
+  "path": "/blog",
+  "file": "Untitled-p-800.webp",
+  "cls": "image-cover",
+  "kb": 11,
+  "nat": "412x231",
+  "box": "0x0",
+  "fit": "cover",
+  "wasteKb": 11,
+  "srcset": true
+ },
+ {
+  "path": "/blog",
+  "file": "1234-p-800.webp",
+  "cls": "image-cover",
+  "kb": 13,
+  "nat": "412x231",
+  "box": "0x0",
+  "fit": "cover",
+  "wasteKb": 13,
+  "srcset": true
+ },
+ {
+  "path": "/blog",
+  "file": "b2b-p-800.webp",
+  "cls": "image-cover",
+  "kb": 16,
+  "nat": "412x231",
+  "box": "0x0",
+  "fit": "cover",
+  "wasteKb": 16,
+  "srcset": true
+ },
+ {
+  "path": "/blog",
+  "file": "framer-p-800.webp",
+  "cls": "image-cover",
+  "kb": 6,
+  "nat": "412x231",
+  "box": "0x0",
+  "fit": "cover",
+  "wasteKb": 6,
+  "srcset": true
+ },
+ {
+  "path": "/blog",
+  "file": "image%203-p-800.webp",
+  "cls": "image-cover",
+  "kb": 10,
+  "nat": "412x231",
+  "box": "0x0",
+  "fit": "cover",
+  "wasteKb": 10,
+  "srcset": true
+ },
+ {
+  "path": "/blog",
+  "file": "the-signs-your-webflow-p-800.webp",
+  "cls": "image-cover",
+  "kb": 11,
+  "nat": "412x231",
+  "box": "0x0",
+  "fit": "cover",
+  "wasteKb": 11,
+  "srcset": true
+ },
+ {
+  "path": "/blog",
+  "file": "asdftyui-p-800.webp",
+  "cls": "image-cover",
+  "kb": 16,
+  "nat": "412x231",
+  "box": "0x0",
+  "fit": "cover",
+  "wasteKb": 16,
+  "srcset": true
+ },
+ {
+  "path": "/blog",
+  "file": "best-15-webflow-3x-p-800.webp",
+  "cls": "image-cover",
+  "kb": 11,
+  "nat": "412x231",
+  "box": "0x0",
+  "fit": "cover",
+  "wasteKb": 11,
+  "srcset": true
+ },
+ {
+  "path": "/blog",
+  "file": "top-webflow-features-2026-3x-p-800.webp",
+  "cls": "image-cover",
+  "kb": 10,
+  "nat": "412x231",
+  "box": "0x0",
+  "fit": "cover",
+  "wasteKb": 10,
+  "srcset": true
+ },
+ {
+  "path": "/blog",
+  "file": "aeo-p-800.webp",
+  "cls": "image-cover",
+  "kb": 14,
+  "nat": "412x231",
+  "box": "0x0",
+  "fit": "cover",
+  "wasteKb": 14,
+  "srcset": true
+ },
+ {
+  "path": "/blog",
+  "file": "conf-p-800.avif",
+  "cls": "image-cover",
+  "kb": 32,
+  "nat": "412x231",
+  "box": "0x0",
+  "fit": "cover",
+  "wasteKb": 32,
+  "srcset": true
+ },
+ {
+  "path": "/blog",
+  "total": 1046
+ },
+ {
+  "path": "/careers",
+  "file": "careers-hero-photo-1.webp",
+  "cls": "careers-hero_card-img",
+  "kb": 42,
+  "nat": "411x511",
+  "box": "174x209",
+  "fit": "cover",
+  "wasteKb": 19,
+  "srcset": true
+ },
+ {
+  "path": "/careers",
+  "file": "careers-hero-photo-2.webp",
+  "cls": "careers-hero_card-img",
+  "kb": 41,
+  "nat": "411x511",
+  "box": "174x209",
+  "fit": "cover",
+  "wasteKb": 19,
+  "srcset": true
+ },
+ {
+  "path": "/careers",
+  "file": "careers-hero-photo-3.webp",
+  "cls": "careers-hero_card-img",
+  "kb": 40,
+  "nat": "412x323",
+  "box": "164x130",
+  "fit": "cover",
+  "wasteKb": 20,
+  "srcset": true
+ },
+ {
+  "path": "/careers",
+  "file": "careers-hero-photo-4.webp",
+  "cls": "careers-hero_card-img",
+  "kb": 29,
+  "nat": "412x412",
+  "box": "163x163",
+  "fit": "cover",
+  "wasteKb": 15,
+  "srcset": true
+ },
+ {
+  "path": "/careers",
+  "file": "about-v2-pill-icon.avif",
+  "cls": "hero_pill-icon",
+  "kb": 3,
+  "nat": "601x600",
+  "box": "16x16",
+  "fit": "cover",
+  "wasteKb": 3,
+  "srcset": false
+ },
+ {
+  "path": "/careers",
+  "file": "careers-benefits-pyramid-p-800.webp",
+  "cls": "careers-benefits_pyramid",
+  "kb": 8,
+  "nat": "412x390",
+  "box": "334x316",
+  "fit": "fill",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/careers",
+  "total": 832
+ },
+ {
+  "path": "/lets-talk",
+  "file": "about-v2-pill-icon.avif",
+  "cls": "hero_pill-icon",
+  "kb": 3,
+  "nat": "601x600",
+  "box": "16x16",
+  "fit": "cover",
+  "wasteKb": 3,
+  "srcset": false
+ },
+ {
+  "path": "/lets-talk",
+  "file": "footer-v2-social-1.avif",
+  "cls": "footer-v2_social-icon",
+  "kb": 4,
+  "nat": "512x512",
+  "box": "16x16",
+  "fit": "contain",
+  "wasteKb": 3,
+  "srcset": false
+ },
+ {
+  "path": "/lets-talk",
+  "file": "footer-v2-social-2.avif",
+  "cls": "footer-v2_social-icon",
+  "kb": 8,
+  "nat": "512x512",
+  "box": "16x16",
+  "fit": "contain",
+  "wasteKb": 8,
+  "srcset": false
+ },
+ {
+  "path": "/lets-talk",
+  "file": "footer-office-belgrade-a-p-800.avif",
+  "cls": "image-cover",
+  "kb": 44,
+  "nat": "412x309",
+  "box": "327x168",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/lets-talk",
+  "file": "footer-v2-office-raw-4.avif",
+  "cls": "image-cover",
+  "kb": 16,
+  "nat": "516x387",
+  "box": "327x168",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": false
+ },
+ {
+  "path": "/lets-talk",
+  "file": "footer-v2-n-watermark-p-800.avif",
+  "cls": "footer-v2_n",
+  "kb": 7,
+  "nat": "412x412",
+  "box": "300x300",
+  "fit": "fill",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/lets-talk",
+  "total": 737
+ },
+ {
+  "path": "/privacy-policy",
+  "file": "footer-v2-social-1.avif",
+  "cls": "footer-v2_social-icon",
+  "kb": 4,
+  "nat": "512x512",
+  "box": "16x16",
+  "fit": "contain",
+  "wasteKb": 3,
+  "srcset": false
+ },
+ {
+  "path": "/privacy-policy",
+  "file": "footer-v2-social-2.avif",
+  "cls": "footer-v2_social-icon",
+  "kb": 8,
+  "nat": "512x512",
+  "box": "16x16",
+  "fit": "contain",
+  "wasteKb": 8,
+  "srcset": false
+ },
+ {
+  "path": "/privacy-policy",
+  "total": 673
+ },
+ {
+  "path": "/terms-of-service",
+  "total": 662
+ },
+ {
+  "path": "/our-work/ballerine",
+  "file": "cs-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 3,
+  "nat": "412x319",
+  "box": "412x923",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/our-work/ballerine",
+  "file": "ballerine-hero-top.webp",
+  "cls": "cs-shot_img",
+  "kb": 57,
+  "nat": "1200x1200",
+  "box": "349x260",
+  "fit": "cover",
+  "wasteKb": 42,
+  "srcset": false
+ },
+ {
+  "path": "/our-work/ballerine",
+  "file": "cs-gallery-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x232",
+  "box": "371x1589",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/our-work/ballerine",
+  "file": "case-gallery-ballerine-1.avif",
+  "cls": "image-cover",
+  "kb": 29,
+  "nat": "1041x1560",
+  "box": "339x508",
+  "fit": "cover",
+  "wasteKb": 20,
+  "srcset": false
+ },
+ {
+  "path": "/our-work/ballerine",
+  "file": "case-gallery-ballerine-2.avif",
+  "cls": "image-cover",
+  "kb": 42,
+  "nat": "1041x1560",
+  "box": "339x508",
+  "fit": "cover",
+  "wasteKb": 28,
+  "srcset": false
+ },
+ {
+  "path": "/our-work/ballerine",
+  "file": "case-gallery-ballerine-3.avif",
+  "cls": "image-cover",
+  "kb": 32,
+  "nat": "1041x1560",
+  "box": "339x508",
+  "fit": "cover",
+  "wasteKb": 22,
+  "srcset": false
+ },
+ {
+  "path": "/our-work/ballerine",
+  "total": 876
+ },
+ {
+  "path": "/our-work/shiftolic",
+  "file": "cs-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 3,
+  "nat": "412x319",
+  "box": "412x900",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/our-work/shiftolic",
+  "file": "shiftolic-hero-top.webp",
+  "cls": "cs-shot_img",
+  "kb": 70,
+  "nat": "1200x1200",
+  "box": "349x260",
+  "fit": "cover",
+  "wasteKb": 52,
+  "srcset": false
+ },
+ {
+  "path": "/our-work/shiftolic",
+  "file": "cs-gallery-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x232",
+  "box": "371x1589",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/our-work/shiftolic",
+  "file": "case-gallery-shiftolic-1.avif",
+  "cls": "image-cover",
+  "kb": 28,
+  "nat": "1041x1560",
+  "box": "339x508",
+  "fit": "cover",
+  "wasteKb": 19,
+  "srcset": false
+ },
+ {
+  "path": "/our-work/shiftolic",
+  "file": "case-gallery-shiftolic-2.avif",
+  "cls": "image-cover",
+  "kb": 35,
+  "nat": "1041x1560",
+  "box": "339x508",
+  "fit": "cover",
+  "wasteKb": 23,
+  "srcset": false
+ },
+ {
+  "path": "/our-work/shiftolic",
+  "file": "case-gallery-shiftolic-3.avif",
+  "cls": "image-cover",
+  "kb": 27,
+  "nat": "1041x1560",
+  "box": "339x508",
+  "fit": "cover",
+  "wasteKb": 18,
+  "srcset": false
+ },
+ {
+  "path": "/our-work/shiftolic",
+  "total": 821
+ },
+ {
+  "path": "/our-work/sustain-commercial-solar",
+  "file": "cs-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 3,
+  "nat": "412x319",
+  "box": "412x977",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/our-work/sustain-commercial-solar",
+  "file": "sustain-hero-top.webp",
+  "cls": "cs-shot_img",
+  "kb": 87,
+  "nat": "1200x1200",
+  "box": "349x260",
+  "fit": "cover",
+  "wasteKb": 64,
+  "srcset": false
+ },
+ {
+  "path": "/our-work/sustain-commercial-solar",
+  "file": "cs-gallery-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x232",
+  "box": "371x1589",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/our-work/sustain-commercial-solar",
+  "file": "case-gallery-sustain-1.avif",
+  "cls": "image-cover",
+  "kb": 49,
+  "nat": "1041x1560",
+  "box": "339x508",
+  "fit": "cover",
+  "wasteKb": 33,
+  "srcset": false
+ },
+ {
+  "path": "/our-work/sustain-commercial-solar",
+  "file": "case-gallery-sustain-2.avif",
+  "cls": "image-cover",
+  "kb": 56,
+  "nat": "1041x1560",
+  "box": "339x508",
+  "fit": "cover",
+  "wasteKb": 38,
+  "srcset": false
+ },
+ {
+  "path": "/our-work/sustain-commercial-solar",
+  "file": "case-gallery-sustain-3.avif",
+  "cls": "image-cover",
+  "kb": 34,
+  "nat": "1041x1560",
+  "box": "339x508",
+  "fit": "cover",
+  "wasteKb": 23,
+  "srcset": false
+ },
+ {
+  "path": "/our-work/sustain-commercial-solar",
+  "total": 885
+ },
+ {
+  "path": "/our-work/trak-pro",
+  "file": "cs-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 3,
+  "nat": "412x319",
+  "box": "412x938",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/our-work/trak-pro",
+  "file": "trakpro-hero-top.webp",
+  "cls": "cs-shot_img",
+  "kb": 59,
+  "nat": "1200x1200",
+  "box": "349x260",
+  "fit": "cover",
+  "wasteKb": 44,
+  "srcset": false
+ },
+ {
+  "path": "/our-work/trak-pro",
+  "file": "cs-gallery-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x232",
+  "box": "371x1589",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/our-work/trak-pro",
+  "file": "case-gallery-trakpro-1.avif",
+  "cls": "image-cover",
+  "kb": 48,
+  "nat": "1041x1560",
+  "box": "339x508",
+  "fit": "cover",
+  "wasteKb": 32,
+  "srcset": false
+ },
+ {
+  "path": "/our-work/trak-pro",
+  "file": "case-gallery-trakpro-2.avif",
+  "cls": "image-cover",
+  "kb": 47,
+  "nat": "1041x1560",
+  "box": "339x508",
+  "fit": "cover",
+  "wasteKb": 32,
+  "srcset": false
+ },
+ {
+  "path": "/our-work/trak-pro",
+  "file": "case-gallery-trakpro-3.avif",
+  "cls": "image-cover",
+  "kb": 34,
+  "nat": "1041x1560",
+  "box": "339x508",
+  "fit": "cover",
+  "wasteKb": 23,
+  "srcset": false
+ },
+ {
+  "path": "/our-work/trak-pro",
+  "total": 846
+ },
+ {
+  "path": "/our-work/veyor-digital",
+  "file": "cs-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 3,
+  "nat": "412x319",
+  "box": "412x999",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/our-work/veyor-digital",
+  "file": "veyor-hero-top.webp",
+  "cls": "cs-shot_img",
+  "kb": 127,
+  "nat": "1200x1200",
+  "box": "349x260",
+  "fit": "cover",
+  "wasteKb": 94,
+  "srcset": false
+ },
+ {
+  "path": "/our-work/veyor-digital",
+  "file": "cs-gallery-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x232",
+  "box": "371x1589",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/our-work/veyor-digital",
+  "file": "case-gallery-veyor-1.avif",
+  "cls": "image-cover",
+  "kb": 31,
+  "nat": "1041x1560",
+  "box": "339x508",
+  "fit": "cover",
+  "wasteKb": 21,
+  "srcset": false
+ },
+ {
+  "path": "/our-work/veyor-digital",
+  "total": 818
+ },
+ {
+  "path": "/blog/aeo-for-marketing-teams-what-you-can-do-without-a-developer",
+  "file": "insights-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x194",
+  "box": "412x616",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/aeo-for-marketing-teams-what-you-can-do-without-a-developer",
+  "file": "daris-p-800.avif",
+  "cls": "bp-hero_avatar",
+  "kb": 18,
+  "nat": "412x412",
+  "box": "48x48",
+  "fit": "cover",
+  "wasteKb": 17,
+  "srcset": true
+ },
+ {
+  "path": "/blog/aeo-for-marketing-teams-what-you-can-do-without-a-developer",
+  "file": "asdftyui-p-800.webp",
+  "cls": "image-cover",
+  "kb": 16,
+  "nat": "412x231",
+  "box": "369x219",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/aeo-for-marketing-teams-what-you-can-do-without-a-developer",
+  "file": "aeo-for-marketing-teams-what-you-can-do-laptop-1680.webp",
+  "cls": "",
+  "kb": 46,
+  "nat": "1680x945",
+  "box": "371x209",
+  "fit": "fill",
+  "wasteKb": 39,
+  "srcset": false
+ },
+ {
+  "path": "/blog/aeo-for-marketing-teams-what-you-can-do-without-a-developer",
+  "total": 743
+ },
+ {
+  "path": "/blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search",
+  "file": "insights-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x194",
+  "box": "412x683",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search",
+  "file": "aleksandar-p-800.avif",
+  "cls": "bp-hero_avatar",
+  "kb": 17,
+  "nat": "412x412",
+  "box": "48x48",
+  "fit": "cover",
+  "wasteKb": 16,
+  "srcset": true
+ },
+ {
+  "path": "/blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search",
+  "file": "fghjk-p-800.webp",
+  "cls": "image-cover",
+  "kb": 15,
+  "nat": "412x231",
+  "box": "369x219",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search",
+  "total": 696
+ },
+ {
+  "path": "/blog/aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters",
+  "file": "insights-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x194",
+  "box": "412x644",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters",
+  "file": "aleksandar-p-800.avif",
+  "cls": "bp-hero_avatar",
+  "kb": 17,
+  "nat": "412x412",
+  "box": "48x48",
+  "fit": "cover",
+  "wasteKb": 16,
+  "srcset": true
+ },
+ {
+  "path": "/blog/aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters",
+  "file": "aeo-p-800.webp",
+  "cls": "image-cover",
+  "kb": 14,
+  "nat": "412x231",
+  "box": "369x219",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters",
+  "total": 696
+ },
+ {
+  "path": "/blog/b2b-saas-seo-in-2026-a-strategy-guide-for-marketing-leaders",
+  "file": "insights-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x194",
+  "box": "412x616",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/b2b-saas-seo-in-2026-a-strategy-guide-for-marketing-leaders",
+  "file": "daris-p-800.avif",
+  "cls": "bp-hero_avatar",
+  "kb": 18,
+  "nat": "412x412",
+  "box": "48x48",
+  "fit": "cover",
+  "wasteKb": 17,
+  "srcset": true
+ },
+ {
+  "path": "/blog/b2b-saas-seo-in-2026-a-strategy-guide-for-marketing-leaders",
+  "file": "b2b-p-800.webp",
+  "cls": "image-cover",
+  "kb": 16,
+  "nat": "412x231",
+  "box": "369x219",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/b2b-saas-seo-in-2026-a-strategy-guide-for-marketing-leaders",
+  "total": 698
+ },
+ {
+  "path": "/blog/best-15-webflow-apps-for-marketing-teams-in-2026",
+  "file": "insights-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x194",
+  "box": "412x616",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/best-15-webflow-apps-for-marketing-teams-in-2026",
+  "file": "daris-p-800.avif",
+  "cls": "bp-hero_avatar",
+  "kb": 18,
+  "nat": "412x412",
+  "box": "48x48",
+  "fit": "cover",
+  "wasteKb": 17,
+  "srcset": true
+ },
+ {
+  "path": "/blog/best-15-webflow-apps-for-marketing-teams-in-2026",
+  "file": "best-15-webflow-3x-p-800.webp",
+  "cls": "image-cover",
+  "kb": 11,
+  "nat": "412x231",
+  "box": "369x219",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/best-15-webflow-apps-for-marketing-teams-in-2026",
+  "total": 695
+ },
+ {
+  "path": "/blog/from-guests-to-sponsors-notes-from-flow-conf-2026",
+  "file": "insights-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x194",
+  "box": "412x644",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/from-guests-to-sponsors-notes-from-flow-conf-2026",
+  "file": "danilo-p-800.avif",
+  "cls": "bp-hero_avatar",
+  "kb": 17,
+  "nat": "412x412",
+  "box": "48x48",
+  "fit": "cover",
+  "wasteKb": 16,
+  "srcset": true
+ },
+ {
+  "path": "/blog/from-guests-to-sponsors-notes-from-flow-conf-2026",
+  "file": "conf-p-800.avif",
+  "cls": "image-cover",
+  "kb": 32,
+  "nat": "412x231",
+  "box": "369x219",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/from-guests-to-sponsors-notes-from-flow-conf-2026",
+  "file": "from-guests-to-sponsors-notes-from-flow-sti-960.webp",
+  "cls": "",
+  "kb": 150,
+  "nat": "960x1300",
+  "box": "371x502",
+  "fit": "fill",
+  "wasteKb": 82,
+  "srcset": false
+ },
+ {
+  "path": "/blog/from-guests-to-sponsors-notes-from-flow-conf-2026",
+  "total": 859
+ },
+ {
+  "path": "/blog/how-to-delete-a-cms-collection-page-in-webflow-without-breaking-your-site",
+  "file": "insights-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x194",
+  "box": "412x683",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/how-to-delete-a-cms-collection-page-in-webflow-without-breaking-your-site",
+  "file": "aleksandar-p-800.avif",
+  "cls": "bp-hero_avatar",
+  "kb": 17,
+  "nat": "412x412",
+  "box": "48x48",
+  "fit": "cover",
+  "wasteKb": 16,
+  "srcset": true
+ },
+ {
+  "path": "/blog/how-to-delete-a-cms-collection-page-in-webflow-without-breaking-your-site",
+  "file": "cms-p-800.webp",
+  "cls": "image-cover",
+  "kb": 11,
+  "nat": "412x231",
+  "box": "369x219",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/how-to-delete-a-cms-collection-page-in-webflow-without-breaking-your-site",
+  "total": 689
+ },
+ {
+  "path": "/blog/how-to-improve-your-website-conversion-rate-in-2026",
+  "file": "insights-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x194",
+  "box": "412x644",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/how-to-improve-your-website-conversion-rate-in-2026",
+  "file": "danilo-p-800.avif",
+  "cls": "bp-hero_avatar",
+  "kb": 17,
+  "nat": "412x412",
+  "box": "48x48",
+  "fit": "cover",
+  "wasteKb": 16,
+  "srcset": true
+ },
+ {
+  "path": "/blog/how-to-improve-your-website-conversion-rate-in-2026",
+  "file": "gfds-p-800.webp",
+  "cls": "image-cover",
+  "kb": 11,
+  "nat": "412x231",
+  "box": "369x219",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/how-to-improve-your-website-conversion-rate-in-2026",
+  "total": 692
+ },
+ {
+  "path": "/blog/is-webflow-good-for-ecommerce-an-honest-answer-for-2026",
+  "file": "insights-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x194",
+  "box": "412x654",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/is-webflow-good-for-ecommerce-an-honest-answer-for-2026",
+  "file": "daris-p-800.avif",
+  "cls": "bp-hero_avatar",
+  "kb": 18,
+  "nat": "412x412",
+  "box": "48x48",
+  "fit": "cover",
+  "wasteKb": 17,
+  "srcset": true
+ },
+ {
+  "path": "/blog/is-webflow-good-for-ecommerce-an-honest-answer-for-2026",
+  "file": "ecom-p-800.webp",
+  "cls": "image-cover",
+  "kb": 13,
+  "nat": "412x231",
+  "box": "369x219",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/is-webflow-good-for-ecommerce-an-honest-answer-for-2026",
+  "total": 694
+ },
+ {
+  "path": "/blog/saas-content-marketing-in-2026-a-strategy-guide",
+  "file": "insights-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x194",
+  "box": "412x616",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/saas-content-marketing-in-2026-a-strategy-guide",
+  "file": "daris-p-800.avif",
+  "cls": "bp-hero_avatar",
+  "kb": 18,
+  "nat": "412x412",
+  "box": "48x48",
+  "fit": "cover",
+  "wasteKb": 17,
+  "srcset": true
+ },
+ {
+  "path": "/blog/saas-content-marketing-in-2026-a-strategy-guide",
+  "file": "lkfk-p-800.webp",
+  "cls": "image-cover",
+  "kb": 16,
+  "nat": "412x231",
+  "box": "369x219",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/saas-content-marketing-in-2026-a-strategy-guide",
+  "total": 698
+ },
+ {
+  "path": "/blog/sanity-vs-webflow-cms-which-one-your-team-actually-needs",
+  "file": "insights-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x194",
+  "box": "412x644",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/sanity-vs-webflow-cms-which-one-your-team-actually-needs",
+  "file": "aleksandar-p-800.avif",
+  "cls": "bp-hero_avatar",
+  "kb": 17,
+  "nat": "412x412",
+  "box": "48x48",
+  "fit": "cover",
+  "wasteKb": 16,
+  "srcset": true
+ },
+ {
+  "path": "/blog/sanity-vs-webflow-cms-which-one-your-team-actually-needs",
+  "file": "sanity-vs-webflow-share.webp",
+  "cls": "image-cover",
+  "kb": 31,
+  "nat": "1920x1080",
+  "box": "369x219",
+  "fit": "cover",
+  "wasteKb": 28,
+  "srcset": false
+ },
+ {
+  "path": "/blog/sanity-vs-webflow-cms-which-one-your-team-actually-needs",
+  "total": 709
+ },
+ {
+  "path": "/blog/source-by-webflow-what-it-is-and-what-it-means-for-teams-on-webflow",
+  "file": "insights-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x194",
+  "box": "412x683",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/source-by-webflow-what-it-is-and-what-it-means-for-teams-on-webflow",
+  "file": "aleksandar-p-800.avif",
+  "cls": "bp-hero_avatar",
+  "kb": 17,
+  "nat": "412x412",
+  "box": "48x48",
+  "fit": "cover",
+  "wasteKb": 16,
+  "srcset": true
+ },
+ {
+  "path": "/blog/source-by-webflow-what-it-is-and-what-it-means-for-teams-on-webflow",
+  "file": "source-by-webflow-share.webp",
+  "cls": "image-cover",
+  "kb": 31,
+  "nat": "1920x1080",
+  "box": "369x219",
+  "fit": "cover",
+  "wasteKb": 27,
+  "srcset": false
+ },
+ {
+  "path": "/blog/source-by-webflow-what-it-is-and-what-it-means-for-teams-on-webflow",
+  "file": "source-by-webflow-what-it-is-and-what-it-untitled-4-960.webp",
+  "cls": "",
+  "kb": 55,
+  "nat": "960x540",
+  "box": "371x209",
+  "fit": "fill",
+  "wasteKb": 30,
+  "srcset": false
+ },
+ {
+  "path": "/blog/source-by-webflow-what-it-is-and-what-it-means-for-teams-on-webflow",
+  "total": 764
+ },
+ {
+  "path": "/blog/the-signs-your-current-webflow-site-is-holding-your-business-back",
+  "file": "insights-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x194",
+  "box": "412x616",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/the-signs-your-current-webflow-site-is-holding-your-business-back",
+  "file": "daris-p-800.avif",
+  "cls": "bp-hero_avatar",
+  "kb": 18,
+  "nat": "412x412",
+  "box": "48x48",
+  "fit": "cover",
+  "wasteKb": 17,
+  "srcset": true
+ },
+ {
+  "path": "/blog/the-signs-your-current-webflow-site-is-holding-your-business-back",
+  "file": "the-signs-your-webflow-p-800.webp",
+  "cls": "image-cover",
+  "kb": 11,
+  "nat": "412x231",
+  "box": "369x219",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/the-signs-your-current-webflow-site-is-holding-your-business-back",
+  "file": "the-signs-your-current-webflow-site-is-h-sleep-1680.webp",
+  "cls": "",
+  "kb": 72,
+  "nat": "1680x945",
+  "box": "371x209",
+  "fit": "fill",
+  "wasteKb": 61,
+  "srcset": false
+ },
+ {
+  "path": "/blog/the-signs-your-current-webflow-site-is-holding-your-business-back",
+  "file": "the-signs-your-current-webflow-site-is-h-cal-compressed-1680",
+  "cls": "",
+  "kb": 63,
+  "nat": "1680x945",
+  "box": "371x209",
+  "fit": "fill",
+  "wasteKb": 54,
+  "srcset": false
+ },
+ {
+  "path": "/blog/the-signs-your-current-webflow-site-is-holding-your-business-back",
+  "total": 824
+ },
+ {
+  "path": "/blog/the-website-redesign-process-a-step-by-step-guide",
+  "file": "insights-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x194",
+  "box": "412x616",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/the-website-redesign-process-a-step-by-step-guide",
+  "file": "daris-p-800.avif",
+  "cls": "bp-hero_avatar",
+  "kb": 18,
+  "nat": "412x412",
+  "box": "48x48",
+  "fit": "cover",
+  "wasteKb": 17,
+  "srcset": true
+ },
+ {
+  "path": "/blog/the-website-redesign-process-a-step-by-step-guide",
+  "file": "redesign-p-800.webp",
+  "cls": "image-cover",
+  "kb": 14,
+  "nat": "412x231",
+  "box": "369x219",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/the-website-redesign-process-a-step-by-step-guide",
+  "total": 692
+ },
+ {
+  "path": "/blog/three-webflow-features-from-2026-worth-paying-attention-to-and-one-to-skip",
+  "file": "insights-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x194",
+  "box": "412x683",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/three-webflow-features-from-2026-worth-paying-attention-to-and-one-to-skip",
+  "file": "aleksandar-p-800.avif",
+  "cls": "bp-hero_avatar",
+  "kb": 17,
+  "nat": "412x412",
+  "box": "48x48",
+  "fit": "cover",
+  "wasteKb": 16,
+  "srcset": true
+ },
+ {
+  "path": "/blog/three-webflow-features-from-2026-worth-paying-attention-to-and-one-to-skip",
+  "file": "top-webflow-features-2026-3x-p-800.webp",
+  "cls": "image-cover",
+  "kb": 10,
+  "nat": "412x231",
+  "box": "369x219",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/three-webflow-features-from-2026-worth-paying-attention-to-and-one-to-skip",
+  "file": "three-webflow-features-from-2026-worth-p-claude-screenshot-2",
+  "cls": "",
+  "kb": 44,
+  "nat": "1680x1120",
+  "box": "371x247",
+  "fit": "fill",
+  "wasteKb": 37,
+  "srcset": false
+ },
+ {
+  "path": "/blog/three-webflow-features-from-2026-worth-paying-attention-to-and-one-to-skip",
+  "total": 731
+ },
+ {
+  "path": "/blog/webflow-for-b2b-lead-generation-how-to-turn-your-site-into-a-pipeline-engine",
+  "file": "insights-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x194",
+  "box": "412x654",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/webflow-for-b2b-lead-generation-how-to-turn-your-site-into-a-pipeline-engine",
+  "file": "daris-p-800.avif",
+  "cls": "bp-hero_avatar",
+  "kb": 18,
+  "nat": "412x412",
+  "box": "48x48",
+  "fit": "cover",
+  "wasteKb": 17,
+  "srcset": true
+ },
+ {
+  "path": "/blog/webflow-for-b2b-lead-generation-how-to-turn-your-site-into-a-pipeline-engine",
+  "file": "image%203-p-800.webp",
+  "cls": "image-cover",
+  "kb": 10,
+  "nat": "412x231",
+  "box": "369x219",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/webflow-for-b2b-lead-generation-how-to-turn-your-site-into-a-pipeline-engine",
+  "total": 690
+ },
+ {
+  "path": "/blog/webflow-forms-in-2026-how-to-turn-them-into-a-lead-engine",
+  "file": "insights-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x194",
+  "box": "412x654",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/webflow-forms-in-2026-how-to-turn-them-into-a-lead-engine",
+  "file": "daris-p-800.avif",
+  "cls": "bp-hero_avatar",
+  "kb": 18,
+  "nat": "412x412",
+  "box": "48x48",
+  "fit": "cover",
+  "wasteKb": 17,
+  "srcset": true
+ },
+ {
+  "path": "/blog/webflow-forms-in-2026-how-to-turn-them-into-a-lead-engine",
+  "file": "Untitled-p-800.webp",
+  "cls": "image-cover",
+  "kb": 11,
+  "nat": "412x231",
+  "box": "369x219",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/webflow-forms-in-2026-how-to-turn-them-into-a-lead-engine",
+  "total": 694
+ },
+ {
+  "path": "/blog/webflow-templates-how-to-choose-one-and-when-to-go-custom",
+  "file": "insights-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x194",
+  "box": "412x654",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/webflow-templates-how-to-choose-one-and-when-to-go-custom",
+  "file": "daris-p-800.avif",
+  "cls": "bp-hero_avatar",
+  "kb": 18,
+  "nat": "412x412",
+  "box": "48x48",
+  "fit": "cover",
+  "wasteKb": 17,
+  "srcset": true
+ },
+ {
+  "path": "/blog/webflow-templates-how-to-choose-one-and-when-to-go-custom",
+  "file": "1234-p-800.webp",
+  "cls": "image-cover",
+  "kb": 13,
+  "nat": "412x231",
+  "box": "369x219",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/webflow-templates-how-to-choose-one-and-when-to-go-custom",
+  "total": 692
+ },
+ {
+  "path": "/blog/webflow-vs-framer-in-2026-which-one-is-right-for-your-site",
+  "file": "insights-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x194",
+  "box": "412x644",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/webflow-vs-framer-in-2026-which-one-is-right-for-your-site",
+  "file": "aleksandar-p-800.avif",
+  "cls": "bp-hero_avatar",
+  "kb": 17,
+  "nat": "412x412",
+  "box": "48x48",
+  "fit": "cover",
+  "wasteKb": 16,
+  "srcset": true
+ },
+ {
+  "path": "/blog/webflow-vs-framer-in-2026-which-one-is-right-for-your-site",
+  "file": "framer-p-800.webp",
+  "cls": "image-cover",
+  "kb": 6,
+  "nat": "412x231",
+  "box": "369x219",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/webflow-vs-framer-in-2026-which-one-is-right-for-your-site",
+  "total": 687
+ },
+ {
+  "path": "/blog/webflow-vs-squarespace-in-2026-when-each-one-makes-sense",
+  "file": "insights-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x194",
+  "box": "412x683",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/webflow-vs-squarespace-in-2026-when-each-one-makes-sense",
+  "file": "aleksandar-p-800.avif",
+  "cls": "bp-hero_avatar",
+  "kb": 17,
+  "nat": "412x412",
+  "box": "48x48",
+  "fit": "cover",
+  "wasteKb": 16,
+  "srcset": true
+ },
+ {
+  "path": "/blog/webflow-vs-squarespace-in-2026-when-each-one-makes-sense",
+  "file": "321-p-800.webp",
+  "cls": "image-cover",
+  "kb": 9,
+  "nat": "412x231",
+  "box": "369x219",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/webflow-vs-squarespace-in-2026-when-each-one-makes-sense",
+  "total": 690
+ },
+ {
+  "path": "/blog/webflow-vs-wix-in-2026-which-one-is-right-for-your-site",
+  "file": "insights-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x194",
+  "box": "412x644",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/webflow-vs-wix-in-2026-which-one-is-right-for-your-site",
+  "file": "aleksandar-p-800.avif",
+  "cls": "bp-hero_avatar",
+  "kb": 17,
+  "nat": "412x412",
+  "box": "48x48",
+  "fit": "cover",
+  "wasteKb": 16,
+  "srcset": true
+ },
+ {
+  "path": "/blog/webflow-vs-wix-in-2026-which-one-is-right-for-your-site",
+  "file": "4321-p-800.webp",
+  "cls": "image-cover",
+  "kb": 8,
+  "nat": "412x231",
+  "box": "369x219",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/webflow-vs-wix-in-2026-which-one-is-right-for-your-site",
+  "total": 690
+ },
+ {
+  "path": "/blog/webflow-vs-wordpress-for-b2b-saas-in-2026-whats-changed-and-when-each-one-wins",
+  "file": "insights-hero-bg-p-800.avif",
+  "cls": "image-cover",
+  "kb": 2,
+  "nat": "412x194",
+  "box": "412x721",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/webflow-vs-wordpress-for-b2b-saas-in-2026-whats-changed-and-when-each-one-wins",
+  "file": "danilo-p-800.avif",
+  "cls": "bp-hero_avatar",
+  "kb": 17,
+  "nat": "412x412",
+  "box": "48x48",
+  "fit": "cover",
+  "wasteKb": 16,
+  "srcset": true
+ },
+ {
+  "path": "/blog/webflow-vs-wordpress-for-b2b-saas-in-2026-whats-changed-and-when-each-one-wins",
+  "file": "Untitled-p-800.webp",
+  "cls": "image-cover",
+  "kb": 8,
+  "nat": "412x231",
+  "box": "369x219",
+  "fit": "cover",
+  "wasteKb": 0,
+  "srcset": true
+ },
+ {
+  "path": "/blog/webflow-vs-wordpress-for-b2b-saas-in-2026-whats-changed-and-when-each-one-wins",
+  "total": 692
+ },
+ {
+  "path": "/404",
+  "total": 633
+ }
+]
