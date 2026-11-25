@@ -3,9 +3,9 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
-## 25.11.2026: Geist i Instrument Serif kao Custom fonts (dodato, čeka tvoje brisanje Google verzija, nije objavljeno)
+## 25.11.2026: Geist i Instrument Serif sa Webflow servera umesto Google Fonts (objavljeno na staging; na telefonu sporije zbog GA4, čeka tvoju odluku)
 Tvoje „Da, sada“. Rezerva: `backup/fonts-2026-11-25/` (objavljeni Home sa webfont.js, Google CSS).
-- Sada: Webflow na svakoj stranici učitava `webfont.js` (ajax.googleapis.com), pa CSS sa fonts.googleapis.com, pa fajlove sa fonts.gstatic.com. Skripta blokira prvi prikaz.
+- Pre: Webflow je na svakoj stranici učitavao `webfont.js` (ajax.googleapis.com), pa CSS sa fonts.googleapis.com, pa fajlove sa fonts.gstatic.com. Skripta je blokirala prvi prikaz.
 - Gde se koriste (provereno na 43 stranice, 1440 i 390 px): **Geist** u navigaciji, naslovima i oznakama Trusted sekcije, brojkama na karticama projekata, delovima Home-a i H2 na Privacy/Terms; težine 400, 500, 600; samo osnovna latinica. **Instrument Serif** je vezan za nekoliko klasa (`.italic-heading`, `.u-serif-italic`…), ali se trenutno ne prikazuje nigde.
 - Dodato u Site settings → Custom fonts (API):
   | Font | Fajl | Veličina | ID |
@@ -15,7 +15,18 @@ Tvoje „Da, sada“. Rezerva: `backup/fonts-2026-11-25/` (objavljeni Home sa we
 - Fajlovi su tačno oni koje Google šalje Windows/Linux pregledačima (latin), bajt po bajt; u repou `webflow-assets/perf/fonts/` sa OFL licencama. Mac, iOS i Android ignorišu „hinting“ u tom fajlu, pa i kod njih slova ostaju ista.
 - Proba pre izmene (Google blokiran, naš fajl ubačen; Home, Services, Design & Development, Privacy, Pricing, About): 339 od 340 elemenata u Geist fontu piksel po piksel isto, na 1440 i 390 px. Jedina razlika je oznaka preko videa u Trusted sekciji, najviše 1 nivo od 255 (pozadina).
 - Ograničenje: fajl pokriva latinicu (kao Google „latin“ deo). Slova kao š, ć, č u tekstu koji je u Geist fontu prikazala bi se rezervnim fontom; trenutno takvog teksta nema.
-- Ostaje: ti brišeš Google verzije (MANUAL_TASKS), ja objavljujem i proveravam.
+- Ti si obrisao Google verzije u Site settings, staging objavljen 25.11. u 19:26.
+- Provereno na objavljenom stagingu: nema više `webfont.js` ni zahteva ka ajax.googleapis.com, fonts.googleapis.com i fonts.gstatic.com. Fontovi stižu sa `webflow-files-prod.global.ssl.fastly.net` (Webflow), CORS u redu, keš godinu dana. Piksel po piksel: 339 od 340 elemenata isto kao sa Google fontovima (ista razlika kao u probi).
+- **Brzina na telefonu je lošija, i to ne zbog fontova.** Stari `webfont.js` je blokirao glavu stranice, pa je Chrome slučajno odlagao GA4 (188 KB), Webflow skripte, jQuery i GSAP. Sada sve to kreće odmah i otima propusni opseg i procesor CSS-u. Telefon, 150 ms, 1,6 Mb/s, procesor 4×, medijana od 3, u ms:
+  | Stranica | FCP Google → naš | FCP naš, bez GA4 | LCP Google → naš | LCP naš, bez GA4 |
+  |---|---|---|---|---|
+  | Home | 1228 → 1780 | 1268 | 1228 → 1780 | 1268 |
+  | Design & Development | 1312 → 1696 | 1076 | 2092 → 2920 | 2252 |
+  | About | 1156 → 1572 | 1076 | 2048 → 2816 | 2336 |
+  | Privacy | 1800 → 2172 | | 2816 → 3004 | |
+  Na bržoj vezi (4G, 9 Mb/s) FCP je isti, LCP i dalje sporiji: D&D 1016–1160 → 1592–1740, About 1048–1100 → 1496–1620, Services 1044 → 1780.
+- „Bez GA4“ je samo merenje (GA4 blokiran u testu), na sajtu ništa nije menjano. Pokazuje da je GA4 skoro ceo uzrok: FCP je tada bolji nego sa Google fontovima, LCP 50–300 ms sporiji.
+- Lab merenje, Lighthouse/PageSpeed nisam mogao da pokrenem iz svog okruženja. Odluka je tvoja (Google fontovi nazad, GA4 kasnije, ili prvo PageSpeed).
 
 ## 25.11.2026: lakše slike u blog tekstovima i Pricing podnaslov bez fade-a (objavljeno na staging)
 Tvoje „ajde da popravimo performanse malo“; Pricing: tvoje „Da, samo klizanje“.

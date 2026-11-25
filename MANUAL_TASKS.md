@@ -19,12 +19,8 @@ Na luka@nues.agency nalogu, jednom (oko 5 minuta). Ceo kod je u `webflow-assets/
 - Pre pravog lansiranja: rečenica u Privacy Policy da se podaci iz forme čuvaju i pre slanja (šalje se na odobrenje).
 
 
-## Fontovi sa našeg servera (25.11.2026, tvoje „Da, sada“), tvoj korak
-Geist i Instrument Serif sam dodao kao Custom fonts (isti fajlovi koje šalje Google). Ostaje jedan klik kod tebe:
-1. Webflow → Site settings sajta „Copy of Nues“ → **Fonts**.
-2. U delu **Google Fonts** obriši **Geist** i **Instrument Serif** (ikonica kante). Ako Webflow upozori da se font koristi u stilovima, potvrdi: isto ime sada ima Custom font, pa stilovi ostaju isti.
-3. U delu **Custom fonts** ništa ne diraj (tu su novi Geist i Instrument Serif). Save.
-4. Javi mi „fontovi gotovi“. Ja objavljujem staging i proveravam: da nema webfont.js ni Google domena, da su slova ista piksel po piksel, i merim brzinu.
+## ~~Fontovi sa našeg servera (25.11.2026, tvoje „Da, sada“), tvoj korak~~ urađeno 25.11.
+Google verzije obrisane, staging objavljen i proveren. Na telefonu je sporije zbog GA4 (ne zbog fontova), detalji i brojke u CHANGELOG-u 25.11. Čeka tvoju odluku.
 
 ## Performanse, odloženo (22.11.2026)
 - **Aeonik u WOFF2:** sada je OTF (3 težine po ~60 KB na svakoj stranici). Pre konverzije proveriti licencu za Aeonik (CoType) da li dozvoljava WOFF2 za web. Kad je potvrđeno, Claude konvertuje i menja fajlove na istim font zapisima (isti izgled).
