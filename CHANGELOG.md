@@ -3,6 +3,20 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 26.11.2026: PageSpeed tačka 1, visok prioritet za glavnu sliku prvog ekrana (objavljeno na staging)
+Tvoje „ajmo jedan po jedan“. Bez promene izgleda. Rezerva: `backup/psi-step4-priority-2026-11-26/` (objavljeni HTML 9 stranica pre izmene).
+
+| Gde | Element | Pre | Posle |
+|---|---|---|---|
+| Komponenta Service Hero (4 servisne stranice), tri oblika | `4e3b548d-…a368/a369/a36a` | `loading="eager"` | + `fetchpriority="high"` |
+| Pricing, oblik koji se prvi vidi (`pr-hero_shape is-launch`) | `c6af993a-794b-a62a-a6aa-1051007d377e` | `loading="lazy"` | `loading="eager"`, `fetchpriority="high"` |
+| Blog, slika istaknutog posta | `55a33da7-a268-88b9-ad93-f9326bbbaee6` | `loading="eager"` | + `fetchpriority="high"` |
+| Blog Posts Template, slika posta u hero-u | `31ee2357-9389-f355-ab43-14a3d34a7bd8` | `loading="eager"` | + `fetchpriority="high"` |
+| Our Work, slika slajdera | `aaf6dcfd-553c-0510-17b2-2701c9e139f3` | `loading="eager"` | + `fetchpriority="high"` |
+
+- U objavljenom HTML-u se, u odnosu na backup, promenio samo taj atribut (9 stranica).
+- PageSpeed (29 stranica × 3 merenja, prosek): upozorenje „fetchpriority=high should be applied“ više ne postoji ni na jednom od 174 merenja. Pricing telefon 93 → 98 (LCP 2,5 → 1,8 s), Blog 80 → 85 (LCP 4,9 → 4,3 s). Servisne stranice, Our Work i blog postovi u okviru kolebanja merenja (telefon 88 → 88). Pad na desktopu kod servisnih i Our Work dolazi od TBT-a (vreme JavaScript-a), na koji ovi atributi ne utiču, dakle od opterećenja PageSpeed servera. Tabela: `reports/psi-2026-11-26/step4-priority/average-3x-circles.md`.
+
 ## 26.11.2026: PageSpeed korak 3, slike ispod prvog ekrana čekaju, Careers hero kreće ranije (objavljeno na staging)
 Tvoje „kreni sve napravi samo da ne menja copy i izgled sekcije“. Copy i izgled sekcija nisu menjani. Rezerva: `backup/psi-step3-2026-11-26/` (site head, Careers head i footer pre izmene, objavljeni HTML 10 stranica pre izmene).
 
