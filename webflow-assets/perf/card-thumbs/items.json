@@ -1,0 +1,102 @@
+[
+ {
+  "id": "6adbbe39ef50e14dcb9e70b3",
+  "name": "Biotech Innovations",
+  "slug": "biotech-innovations",
+  "desktop": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af6691dc581cc6d569fa7ed_biotech-home-full-hq-1200.webp",
+  "mobile": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6b0752c4bef21f683512cc69_biotech-home-full-hq-640.webp",
+  "alt": "Biotech Innovations home page",
+  "alt_m": "Biotech Innovations home page",
+  "draft": false
+ },
+ {
+  "id": "6adbbe39ef50e14dcb9e70b1",
+  "name": "LaSalle Agri",
+  "slug": "lasalle-agri",
+  "desktop": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6b04930f961101b72398cf8f_6af745d7ccc5ab40a4283096_lasalle-home-full-hq-1200.webp",
+  "mobile": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6b0752c4bef21f683512cc7e_lasalle-home-full-hq-640.webp",
+  "alt": "LaSalle Agri home page",
+  "alt_m": "LaSalle Agri home page",
+  "draft": false
+ },
+ {
+  "id": "6ace66976b237ad91feb51a0",
+  "name": "Hypersonix",
+  "slug": "hypersonix",
+  "desktop": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af6691dc581cc6d569fa7fe_hypersonix-home-full-hq-1200.webp",
+  "mobile": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6b0752c4bef21f683512cc6c_hypersonix-home-full-hq-640.webp",
+  "alt": "Hypersonix home page",
+  "alt_m": "Hypersonix home page",
+  "draft": false
+ },
+ {
+  "id": "6ace6668eefb4c00ebea1f2f",
+  "name": "Harper",
+  "slug": "harper",
+  "desktop": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af6691dc581cc6d569fa7e7_harper-home-full-hq-1200.webp",
+  "mobile": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6b0752c4bef21f683512cc6f_harper-home-full-hq-640.webp",
+  "alt": "Harper home page",
+  "alt_m": "Harper home page",
+  "draft": false
+ },
+ {
+  "id": "6ace660facdd65a7260ff9f7",
+  "name": "Intaker",
+  "slug": "intaker",
+  "desktop": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af66943c046d8a6b4d8b157_intaker-home-full-v2-1200.webp",
+  "mobile": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6b0752c4bef21f683512cc72_intaker-home-full-v2-640.webp",
+  "alt": "Intaker home page",
+  "alt_m": "Intaker home page",
+  "draft": false
+ },
+ {
+  "id": "6aba6bc07d6279b4b561798e",
+  "name": "TrakPro",
+  "slug": "trak-pro",
+  "desktop": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af6691dc581cc6d569fa7f9_trakpro-home-full-v2-1200.webp",
+  "mobile": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6b0752c4bef21f683512cc75_trakpro-home-full-v2-640.webp",
+  "alt": "TrakPro home page",
+  "alt_m": "TrakPro home page",
+  "draft": false
+ },
+ {
+  "id": "6aba6bc07d6279b4b561798d",
+  "name": "Veyor Digital",
+  "slug": "veyor-digital",
+  "desktop": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af6691ec581cc6d569fa824_veyor-home-full-v2-1200.avif",
+  "mobile": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6b0752c4bef21f683512cc81_veyor-home-full-v2-640.webp",
+  "alt": "Veyor Digital home page",
+  "alt_m": "Veyor Digital home page",
+  "draft": false
+ },
+ {
+  "id": "6aba6bc07d6279b4b561798c",
+  "name": "Sustain Commercial Solar",
+  "slug": "sustain-commercial-solar",
+  "desktop": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af6691dc581cc6d569fa7ea_sustain-home-full-hq-1200.webp",
+  "mobile": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6b0752c4bef21f683512cc84_sustain-home-full-hq-640.webp",
+  "alt": "Sustain Commercial Solar home page",
+  "alt_m": "Sustain Commercial Solar home page",
+  "draft": false
+ },
+ {
+  "id": "6aba6bc07d6279b4b561798b",
+  "name": "Shiftolic",
+  "slug": "shiftolic",
+  "desktop": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af6691dc581cc6d569fa7f0_shiftolic-home-full-v2-1200.webp",
+  "mobile": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6b0752c4bef21f683512cc78_shiftolic-home-full-v2-640.webp",
+  "alt": "Shiftolic home page",
+  "alt_m": "Shiftolic home page",
+  "draft": false
+ },
+ {
+  "id": "6aba6bc07d6279b4b5617989",
+  "name": "Ballerine",
+  "slug": "ballerine",
+  "desktop": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6af66906e51f9446481530f7_ballerine-home-full-1200.webp",
+  "mobile": "https://cdn.prod.website-files.com/6aba6bc07d6279b4b5617719/6b0752c4bef21f683512cc7b_ballerine-home-full-640.webp",
+  "alt": "Ballerine home page",
+  "alt_m": "Ballerine home page",
+  "draft": false
+ }
+]

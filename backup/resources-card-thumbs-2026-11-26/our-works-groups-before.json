@@ -1,0 +1,1269 @@
+{
+ "collectionId": "6aba6bc07d6279b4b561771c",
+ "displayName": "Our Works",
+ "singularName": "Our Work",
+ "slug": "our-work",
+ "isEcommerceCollection": false,
+ "collectionFields": [
+  {
+   "id": "b8d2368898ca0fec416a574820f928c7",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "meta-title",
+   "displayName": "Meta title",
+   "helpText": "Title in Google and when the case page is shared, up to 60 characters. Fill for every project with a case study.",
+   "validations": {
+    "singleLine": true
+   }
+  },
+  {
+   "id": "863d5aedf0e3f5220ef618d21ee4c32b",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "meta-description",
+   "displayName": "Meta description",
+   "helpText": "Description in Google and when the page is shared, up to 155 characters. Fill for every project with a case study.",
+   "validations": {
+    "singleLine": true
+   }
+  },
+  {
+   "id": "0e684febf8320a86329aff7541d58407",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "heading",
+   "displayName": "Case title",
+   "helpText": "Case page headline, one sentence. Filled = the project has a case study: Trusted and Home hero cards open /our-work/<slug> and get the info icon.",
+   "validations": {
+    "singleLine": true
+   }
+  },
+  {
+   "id": "45cf295d3653ada119a8eee805b169d3",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "main-image",
+   "displayName": "Cover image",
+   "helpText": "Top of the client's homepage, landscape, about 1600x1000. Our Work slider picture, case page image and the preview when the page is shared.",
+   "validations": null
+  },
+  {
+   "id": "3100589e984b84627c004d18d7f531ba",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "metric-value-1",
+   "displayName": "Stat 1 value",
+   "helpText": "Main result, short, e.g. 16x, 80+, 2 weeks. Our Work grid, slider and tabs, Home Every project, Resources and next-project cards, first number in the case page hero.",
+   "validations": {
+    "singleLine": true
+   }
+  },
+  {
+   "id": "480af3a824d294c627c45722cdcd4022",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "metric-label-1",
+   "displayName": "Stat 1 label",
+   "helpText": "What Stat 1 means, 2 to 4 words, e.g. Engagement time growth.",
+   "validations": {
+    "singleLine": true
+   }
+  },
+  {
+   "id": "107c680d8cbad136ca24e388b9d4d1e8",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "metric-value-2",
+   "displayName": "Stat 2 value",
+   "helpText": "Second number in the case page hero, e.g. 30+.",
+   "validations": {
+    "singleLine": true
+   }
+  },
+  {
+   "id": "e74e57e4bff13c5e281c886fda02b224",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "metric-label-2",
+   "displayName": "Stat 2 label",
+   "helpText": "What Stat 2 means, e.g. Pages launched.",
+   "validations": {
+    "singleLine": true
+   }
+  },
+  {
+   "id": "83effb11f7986051d03f502f68cad91c",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "industry-2",
+   "displayName": "Industry",
+   "helpText": "Short industry tag, 1 to 3 words, e.g. Legal tech, Fintech, Agriculture. Shown on every card and in the case page hero.",
+   "validations": {
+    "singleLine": true
+   }
+  },
+  {
+   "id": "9151236bded5924b352750742ec8d5ae",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Link",
+   "slug": "website-link",
+   "displayName": "Website link",
+   "helpText": "Full address of the client's live site, e.g. https://www.ballerine.com. 'Visit website' button on the case page; Trusted cards without a case study open it. Its domain (without https:// and www.) shows in the Our Work slider and under the Every project gallery.",
+   "validations": null
+  },
+  {
+   "id": "c7cc47e1a933928bdd3e84e1c9d33351",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "MultiReference",
+   "slug": "services-delivered",
+   "displayName": "Services used",
+   "helpText": "Case page sidebar 'Services used': pick the services we did for this project. Each row opens that service's page.",
+   "validations": {
+    "collectionId": "6aba6bc07d6279b4b5617740"
+   }
+  },
+  {
+   "id": "6cc339d9880daf6fdcf0139a09e49c4e",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "RichText",
+   "slug": "the-background",
+   "displayName": "The Background",
+   "helpText": "Case page: who the client is and where they started. 1 to 2 paragraphs.",
+   "validations": null
+  },
+  {
+   "id": "31bc14339c6b5187f39f3568e85af04d",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "RichText",
+   "slug": "the-challenge",
+   "displayName": "The Challenge",
+   "helpText": "Case page: what had to be solved. 1 to 2 paragraphs.",
+   "validations": null
+  },
+  {
+   "id": "9b351f293f94634e7cd5bcff67d5b1b4",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "RichText",
+   "slug": "the-solution",
+   "displayName": "The Solution",
+   "helpText": "Case page: what we built. Subheadings and lists are fine.",
+   "validations": null
+  },
+  {
+   "id": "16b124e5e2164f6889d0f0e42442a7f4",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "RichText",
+   "slug": "the-result",
+   "displayName": "The Result",
+   "helpText": "Case page: the outcome. 1 to 2 paragraphs.",
+   "validations": null
+  },
+  {
+   "id": "e4ffea757605daabf75486ba63f50b48",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "RichText",
+   "slug": "the-achievement",
+   "displayName": "The Achievement",
+   "helpText": "Case page: key results as a bulleted list.",
+   "validations": null
+  },
+  {
+   "id": "319fac4cbb2d28c53d9bac32da9f1ef9",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "second-featuerd-image",
+   "displayName": "Gallery middle",
+   "helpText": "Case page gallery, middle card: collage of page screens. Portrait 2:3, 1041x1560 WebP, from the Figma card Frame 47796.",
+   "validations": null
+  },
+  {
+   "id": "67986fbfd6145504f7a75f80c17c9c0f",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "third-featuerd-image",
+   "displayName": "Gallery right",
+   "helpText": "Case page gallery, right card: phone mockup. Portrait 2:3, 1041x1560 WebP, from the Figma card Frame 47797.",
+   "validations": null
+  },
+  {
+   "id": "84fc07b33b2fbf841472928abc565023",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "logo-with-hover",
+   "displayName": "Logo white",
+   "helpText": "White logo, SVG with a transparent background, made by the designer. The one logo used everywhere: Trusted cards (shown grey before hover), Home Every project, Our Work grid and tabs, Resources cards and the case page.",
+   "validations": null
+  },
+  {
+   "id": "892e560879fa33f94c813ba77de237ea",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "short-card-text",
+   "displayName": "Card text",
+   "helpText": "One short result line on the Trusted card, about 30 characters, e.g. 3x organic traffic.",
+   "validations": {
+    "singleLine": true
+   }
+  },
+  {
+   "id": "4383f07836916c4f163694451ac1cffa",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Number",
+   "slug": "number-in-section",
+   "displayName": "Order",
+   "helpText": "Position in the Trusted strip and Resources, lowest first: 1, 2, 3... Use each number once. The Our Work grid uses Our Work order.",
+   "validations": {
+    "format": "integer",
+    "precision": 1,
+    "allowNegative": false
+   }
+  },
+  {
+   "id": "603381ea6d3536bae60e6457fc5e2ebc",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Switch",
+   "slug": "show-in-hero-section",
+   "displayName": "Show in Trusted",
+   "helpText": "On = logo card in the Trusted strip (Home and service pages). Needs Logo white, Card text, Order (the grey logo before hover is made from Logo white). With Case title the card opens the case page, else Website link.",
+   "validations": null
+  },
+  {
+   "id": "22ccc0e90283aad6fe0c412f6e2153ec",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Switch",
+   "slug": "show-in-every-project-section",
+   "displayName": "Show in Every project",
+   "helpText": "On = slide in the Home 'Every project' slider (sorted by Name). Needs Logo white, Card background, Every project screens and page names, Full page screenshot, Stat 1 and Story label.",
+   "validations": null
+  },
+  {
+   "id": "a9225c522b4ce6d358c271128a49038f",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "MultiImage",
+   "slug": "other-images-every-project-section",
+   "displayName": "Every project screens",
+   "helpText": "Screenshots of the client's pages in order (first = Home), about 2400px wide. Shown on the slide and in the gallery popup.",
+   "validations": null
+  },
+  {
+   "id": "790eb1156215cfa146e9d06e929d2230",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "fade-in-text",
+   "displayName": "Story label",
+   "helpText": "One sentence about the project. Put | where the grey part starts, e.g. How nues rebuilt compliance | into a site the marketing team runs alone. Before | is white on Home Every project and dark in the Our Work tabs, after | is grey. Without |: Home all white, Our Work tabs first third dark.",
+   "validations": {
+    "singleLine": true
+   }
+  },
+  {
+   "id": "7a2034a75b882748d5dff5db169df7d5",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "hero-title-highlight",
+   "displayName": "Case title highlight",
+   "helpText": "Optional. Last words of Case title shown in the mint gradient, e.g. now runs on its own. Must match the end of Case title exactly.",
+   "validations": null
+  },
+  {
+   "id": "b2f6eff4dec18ed3bd01191eddde11bc",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "hero-stat-3-value",
+   "displayName": "Stat 3 value",
+   "helpText": "Optional third number in the case page hero, e.g. 0.9s. Empty = Industry is shown in its place.",
+   "validations": null
+  },
+  {
+   "id": "9276abaa36c0d49ca4af723e51fbd7c2",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "hero-stat-3-label",
+   "displayName": "Stat 3 label",
+   "helpText": "What Stat 3 means, e.g. Page load on mobile.",
+   "validations": null
+  },
+  {
+   "id": "6a13b46a2e5784ca062a9f99e29335af",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "hero-screen-center",
+   "displayName": "Full page screenshot",
+   "helpText": "Whole homepage as one tall image, 1200px wide WebP (quality about 75), ideally under 600 KB. It is never shown wider than about 600px, so a bigger file only slows phones down. Cards, Resources, Every project and case page hero. Empty = card shows 'Launching soon'.",
+   "validations": null
+  },
+  {
+   "id": "bd3ded8e2539d179de50f3394cc9931f",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "hero-screen-left",
+   "displayName": "Case screen left",
+   "helpText": "Optional. Inner page screenshot, about 900px wide, for the left frame of the case page hero. The three frames take turns in the middle.",
+   "validations": null
+  },
+  {
+   "id": "4f96e5592132e6e8b72695c93255978d",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "hero-screen-right",
+   "displayName": "Case screen right",
+   "helpText": "Optional. Inner page screenshot, about 900px wide, for the right frame of the case page hero.",
+   "validations": null
+  },
+  {
+   "id": "452a7124b09d7efecabb294736123e17",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "quote",
+   "displayName": "Quote",
+   "helpText": "Optional. Client quote without quotation marks. Empty = no quote block on the case page.",
+   "validations": null
+  },
+  {
+   "id": "7f80a4965cb6add8843340fcd4101e2d",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "quote-author",
+   "displayName": "Quote author",
+   "helpText": "Full name of the person quoted, e.g. Or Moshkovitz. The handwritten signature under the quote is made from it (Or M.).",
+   "validations": null
+  },
+  {
+   "id": "6f16dd53ace3eaaba40eb6182c29e7a7",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "quote-author-role",
+   "displayName": "Quote role",
+   "helpText": "Role and company, e.g. CMO, Ballerine.",
+   "validations": null
+  },
+  {
+   "id": "65b55b54ee94935f950b77463e240baa",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "client-icon",
+   "displayName": "Client icon",
+   "helpText": "Optional. Square client symbol, at least 128x128, shown above the quote.",
+   "validations": null
+  },
+  {
+   "id": "9988bd66365fab9e61a63cd4794c1690",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Switch",
+   "slug": "ow-hero-slider",
+   "displayName": "Show in Our Work slider",
+   "helpText": "On = slide in the browser slider at the top of Our Work. Needs Cover image, Logo color, Industry, Stat 1 and Website link (the address bar shows it without https:// and www.).",
+   "validations": null
+  },
+  {
+   "id": "3d042685c02f205c2b15cd61b1ed5bcb",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Switch",
+   "slug": "ow-case-tabs",
+   "displayName": "Show in Our Work tabs",
+   "helpText": "On = tab in 'What they had. What we shipped.' on Our Work (sorted by Name). Needs Logo white, Tabs background, Before and After screenshot, Website link (address bar), Story label and Stat 1.",
+   "validations": null
+  },
+  {
+   "id": "b2e107788291696b334374cee0838d90",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "case-before-image",
+   "displayName": "Before screenshot",
+   "helpText": "Old site, top of the homepage, cut from the top to 1.75:1 (e.g. 2400x1371 WebP). Left side of the before/after slider in the Our Work tabs.",
+   "validations": null
+  },
+  {
+   "id": "2929c72142d22d2fefd1654daac9df64",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "case-after-image",
+   "displayName": "After screenshot",
+   "helpText": "New site, same view and the same 1.75:1 shape as Before screenshot, cut from the top. Right side of the before/after slider.",
+   "validations": null
+  },
+  {
+   "id": "60f25d2f19f62a9ad9d11335aa235286",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Option",
+   "slug": "work-category",
+   "displayName": "Filter category",
+   "helpText": "Which filter tab on the Our Work page shows this project. Pick one.",
+   "validations": {
+    "options": [
+     {
+      "name": "SaaS",
+      "id": "5267bee9ab756cf7834fce16707acf01"
+     },
+     {
+      "name": "AI",
+      "id": "ade3eabf3fc55ea3544802b43b1b8e94"
+     },
+     {
+      "name": "Healthcare",
+      "id": "260dd3e0ae4c43c7f04500bf84bd06a4"
+     },
+     {
+      "name": "Commerce",
+      "id": "24c8430ad0632097f053aa94cf908ef3"
+     },
+     {
+      "name": "Industrial",
+      "id": "f797c19bdb4bad28884b5ced85431180"
+     }
+    ]
+   }
+  },
+  {
+   "id": "d6c87eee6aba71c3e4dfb024e46e9a1a",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "logo-with-color",
+   "displayName": "Logo color",
+   "helpText": "Logo in the client's brand colours, SVG with a transparent background. Shown in the Our Work slider (light background).",
+   "validations": null
+  },
+  {
+   "id": "aa9387a51edc1a79cd4041e859315788",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "gallery-page-names",
+   "displayName": "Every project page names",
+   "helpText": "Names of the screens above, same order, comma separated, e.g. Home, Platform, Pricing. Captions in the gallery popup.",
+   "validations": null
+  },
+  {
+   "id": "6f3d08dd5a4606e8e43b8f6d1e056d5b",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "card-background",
+   "displayName": "Card background",
+   "helpText": "16:10, 1600x1000: client colours with their big soft mark. Background of the Our Work grid, Resources and next-project cards and the Home Every project slide. Without it the project is not in the Our Work grid.",
+   "validations": null
+  },
+  {
+   "id": "bf08b49af769121c764a6cc85a5b2d4c",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Link",
+   "slug": "slider-video-2",
+   "displayName": "Slider video",
+   "helpText": "Optional. Direct link to a short muted MP4/WebM loop (2140x1280, under 5 MB), not a YouTube/Vimeo page. Plays over Cover image; empty = Cover image for 6 s.",
+   "validations": null
+  },
+  {
+   "id": "8cbc2760cd47c44219357a84d16f1cd3",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "MultiReference",
+   "slug": "team",
+   "displayName": "Team",
+   "helpText": "Case page 'The team behind this project': pick everyone who worked on it, in the order to show. Each card opens that person's LinkedIn.",
+   "validations": {
+    "collectionId": "6aba6bc07d6279b4b561778a"
+   }
+  },
+  {
+   "id": "03f3ffe2a129c08b3b728a39223eb964",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "gallery-left",
+   "displayName": "Gallery left",
+   "helpText": "Case page gallery, left card: laptop mockup. Portrait 2:3, 1041x1560 WebP, exported by the designer from the Figma card Frame 47795.",
+   "validations": null
+  },
+  {
+   "id": "eba7db6cda4daaaa23d978913ba0d218",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "tabs-background",
+   "displayName": "Tabs background",
+   "helpText": "Background behind the before/after window in the Our Work tabs: client colours with soft light stripes, landscape 3:2 from the designer (2400x1600 WebP).",
+   "validations": null
+  },
+  {
+   "id": "f43a283f086548b8e0869b3dbdce58ea",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Number",
+   "slug": "our-work-order",
+   "displayName": "Our Work order",
+   "helpText": "Position in the Our Work grid only, lowest first: 1, 2, 3... Use each number once. The Trusted strip and Resources keep using Order.",
+   "validations": {
+    "format": "integer",
+    "allowNegative": true,
+    "precision": 1
+   }
+  },
+  {
+   "id": "6effe13698eb6b37f18777109e18f0e6",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "seo-robots",
+   "displayName": "SEO robots",
+   "helpText": "Goes into the page <head> as the robots meta tag. Case written (Case title filled): index, follow. No case yet: noindex, follow. Change it together with Case title.",
+   "validations": null
+  },
+  {
+   "id": "64cb6b7cce968d2a96440e120e7ca86d",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "hero-screen-top",
+   "displayName": "Hero screen top",
+   "helpText": "Case page hero, middle frame: top 1200x1200 px of the Full page screenshot, WebP. Empty = the Full page screenshot is used.",
+   "validations": null
+  },
+  {
+   "id": "96e41a4783a526c90f33db8dfc4b5f6c",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "full-page-screenshot-mobile",
+   "displayName": "Full page screenshot (mobile)",
+   "helpText": "Same screenshot, 640px wide WebP (about 150 KB). Shown on phones only; leave empty to use the big one.",
+   "validations": null
+  },
+  {
+   "id": "73c9a891db16b886278fd5a3d015d259",
+   "isEditable": true,
+   "isRequired": true,
+   "type": "PlainText",
+   "slug": "name",
+   "displayName": "Name",
+   "helpText": "Client name, e.g. Ballerine. Shown as the project name and used as image alt text everywhere.",
+   "validations": {
+    "maxLength": 256
+   }
+  },
+  {
+   "id": "656e4ffd4b2c473d428b23e55cf54fa3",
+   "isEditable": true,
+   "isRequired": true,
+   "type": "PlainText",
+   "slug": "slug",
+   "displayName": "Slug",
+   "helpText": "Case page address /our-work/<slug>, e.g. ballerine. Lowercase, no spaces. Do not change it once the page is live.",
+   "validations": {
+    "maxLength": 256,
+    "pattern": {},
+    "messages": {
+     "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+     "maxLength": "Must be less than 256 characters"
+    }
+   }
+  }
+ ],
+ "groupableCollectionFields": [
+  {
+   "id": "b8d2368898ca0fec416a574820f928c7",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "meta-title",
+   "displayName": "Meta title",
+   "helpText": "Title in Google and when the case page is shared, up to 60 characters. Fill for every project with a case study.",
+   "validations": {
+    "singleLine": true
+   }
+  },
+  {
+   "id": "863d5aedf0e3f5220ef618d21ee4c32b",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "meta-description",
+   "displayName": "Meta description",
+   "helpText": "Description in Google and when the page is shared, up to 155 characters. Fill for every project with a case study.",
+   "validations": {
+    "singleLine": true
+   }
+  },
+  {
+   "id": "0e684febf8320a86329aff7541d58407",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "heading",
+   "displayName": "Case title",
+   "helpText": "Case page headline, one sentence. Filled = the project has a case study: Trusted and Home hero cards open /our-work/<slug> and get the info icon.",
+   "validations": {
+    "singleLine": true
+   }
+  },
+  {
+   "id": "45cf295d3653ada119a8eee805b169d3",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "main-image",
+   "displayName": "Cover image",
+   "helpText": "Top of the client's homepage, landscape, about 1600x1000. Our Work slider picture, case page image and the preview when the page is shared.",
+   "validations": null
+  },
+  {
+   "id": "3100589e984b84627c004d18d7f531ba",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "metric-value-1",
+   "displayName": "Stat 1 value",
+   "helpText": "Main result, short, e.g. 16x, 80+, 2 weeks. Our Work grid, slider and tabs, Home Every project, Resources and next-project cards, first number in the case page hero.",
+   "validations": {
+    "singleLine": true
+   }
+  },
+  {
+   "id": "480af3a824d294c627c45722cdcd4022",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "metric-label-1",
+   "displayName": "Stat 1 label",
+   "helpText": "What Stat 1 means, 2 to 4 words, e.g. Engagement time growth.",
+   "validations": {
+    "singleLine": true
+   }
+  },
+  {
+   "id": "107c680d8cbad136ca24e388b9d4d1e8",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "metric-value-2",
+   "displayName": "Stat 2 value",
+   "helpText": "Second number in the case page hero, e.g. 30+.",
+   "validations": {
+    "singleLine": true
+   }
+  },
+  {
+   "id": "e74e57e4bff13c5e281c886fda02b224",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "metric-label-2",
+   "displayName": "Stat 2 label",
+   "helpText": "What Stat 2 means, e.g. Pages launched.",
+   "validations": {
+    "singleLine": true
+   }
+  },
+  {
+   "id": "83effb11f7986051d03f502f68cad91c",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "industry-2",
+   "displayName": "Industry",
+   "helpText": "Short industry tag, 1 to 3 words, e.g. Legal tech, Fintech, Agriculture. Shown on every card and in the case page hero.",
+   "validations": {
+    "singleLine": true
+   }
+  },
+  {
+   "id": "9151236bded5924b352750742ec8d5ae",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Link",
+   "slug": "website-link",
+   "displayName": "Website link",
+   "helpText": "Full address of the client's live site, e.g. https://www.ballerine.com. 'Visit website' button on the case page; Trusted cards without a case study open it. Its domain (without https:// and www.) shows in the Our Work slider and under the Every project gallery.",
+   "validations": null
+  },
+  {
+   "id": "c7cc47e1a933928bdd3e84e1c9d33351",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "MultiReference",
+   "slug": "services-delivered",
+   "displayName": "Services used",
+   "helpText": "Case page sidebar 'Services used': pick the services we did for this project. Each row opens that service's page.",
+   "validations": {
+    "collectionId": "6aba6bc07d6279b4b5617740"
+   }
+  },
+  {
+   "id": "6cc339d9880daf6fdcf0139a09e49c4e",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "RichText",
+   "slug": "the-background",
+   "displayName": "The Background",
+   "helpText": "Case page: who the client is and where they started. 1 to 2 paragraphs.",
+   "validations": null
+  },
+  {
+   "id": "31bc14339c6b5187f39f3568e85af04d",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "RichText",
+   "slug": "the-challenge",
+   "displayName": "The Challenge",
+   "helpText": "Case page: what had to be solved. 1 to 2 paragraphs.",
+   "validations": null
+  },
+  {
+   "id": "9b351f293f94634e7cd5bcff67d5b1b4",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "RichText",
+   "slug": "the-solution",
+   "displayName": "The Solution",
+   "helpText": "Case page: what we built. Subheadings and lists are fine.",
+   "validations": null
+  },
+  {
+   "id": "16b124e5e2164f6889d0f0e42442a7f4",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "RichText",
+   "slug": "the-result",
+   "displayName": "The Result",
+   "helpText": "Case page: the outcome. 1 to 2 paragraphs.",
+   "validations": null
+  },
+  {
+   "id": "e4ffea757605daabf75486ba63f50b48",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "RichText",
+   "slug": "the-achievement",
+   "displayName": "The Achievement",
+   "helpText": "Case page: key results as a bulleted list.",
+   "validations": null
+  },
+  {
+   "id": "319fac4cbb2d28c53d9bac32da9f1ef9",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "second-featuerd-image",
+   "displayName": "Gallery middle",
+   "helpText": "Case page gallery, middle card: collage of page screens. Portrait 2:3, 1041x1560 WebP, from the Figma card Frame 47796.",
+   "validations": null
+  },
+  {
+   "id": "67986fbfd6145504f7a75f80c17c9c0f",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "third-featuerd-image",
+   "displayName": "Gallery right",
+   "helpText": "Case page gallery, right card: phone mockup. Portrait 2:3, 1041x1560 WebP, from the Figma card Frame 47797.",
+   "validations": null
+  },
+  {
+   "id": "84fc07b33b2fbf841472928abc565023",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "logo-with-hover",
+   "displayName": "Logo white",
+   "helpText": "White logo, SVG with a transparent background, made by the designer. The one logo used everywhere: Trusted cards (shown grey before hover), Home Every project, Our Work grid and tabs, Resources cards and the case page.",
+   "validations": null
+  },
+  {
+   "id": "892e560879fa33f94c813ba77de237ea",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "short-card-text",
+   "displayName": "Card text",
+   "helpText": "One short result line on the Trusted card, about 30 characters, e.g. 3x organic traffic.",
+   "validations": {
+    "singleLine": true
+   }
+  },
+  {
+   "id": "4383f07836916c4f163694451ac1cffa",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Number",
+   "slug": "number-in-section",
+   "displayName": "Order",
+   "helpText": "Position in the Trusted strip and Resources, lowest first: 1, 2, 3... Use each number once. The Our Work grid uses Our Work order.",
+   "validations": {
+    "format": "integer",
+    "precision": 1,
+    "allowNegative": false
+   }
+  },
+  {
+   "id": "603381ea6d3536bae60e6457fc5e2ebc",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Switch",
+   "slug": "show-in-hero-section",
+   "displayName": "Show in Trusted",
+   "helpText": "On = logo card in the Trusted strip (Home and service pages). Needs Logo white, Card text, Order (the grey logo before hover is made from Logo white). With Case title the card opens the case page, else Website link.",
+   "validations": null
+  },
+  {
+   "id": "22ccc0e90283aad6fe0c412f6e2153ec",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Switch",
+   "slug": "show-in-every-project-section",
+   "displayName": "Show in Every project",
+   "helpText": "On = slide in the Home 'Every project' slider (sorted by Name). Needs Logo white, Card background, Every project screens and page names, Full page screenshot, Stat 1 and Story label.",
+   "validations": null
+  },
+  {
+   "id": "a9225c522b4ce6d358c271128a49038f",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "MultiImage",
+   "slug": "other-images-every-project-section",
+   "displayName": "Every project screens",
+   "helpText": "Screenshots of the client's pages in order (first = Home), about 2400px wide. Shown on the slide and in the gallery popup.",
+   "validations": null
+  },
+  {
+   "id": "790eb1156215cfa146e9d06e929d2230",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "fade-in-text",
+   "displayName": "Story label",
+   "helpText": "One sentence about the project. Put | where the grey part starts, e.g. How nues rebuilt compliance | into a site the marketing team runs alone. Before | is white on Home Every project and dark in the Our Work tabs, after | is grey. Without |: Home all white, Our Work tabs first third dark.",
+   "validations": {
+    "singleLine": true
+   }
+  },
+  {
+   "id": "7a2034a75b882748d5dff5db169df7d5",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "hero-title-highlight",
+   "displayName": "Case title highlight",
+   "helpText": "Optional. Last words of Case title shown in the mint gradient, e.g. now runs on its own. Must match the end of Case title exactly.",
+   "validations": null
+  },
+  {
+   "id": "b2f6eff4dec18ed3bd01191eddde11bc",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "hero-stat-3-value",
+   "displayName": "Stat 3 value",
+   "helpText": "Optional third number in the case page hero, e.g. 0.9s. Empty = Industry is shown in its place.",
+   "validations": null
+  },
+  {
+   "id": "9276abaa36c0d49ca4af723e51fbd7c2",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "hero-stat-3-label",
+   "displayName": "Stat 3 label",
+   "helpText": "What Stat 3 means, e.g. Page load on mobile.",
+   "validations": null
+  },
+  {
+   "id": "6a13b46a2e5784ca062a9f99e29335af",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "hero-screen-center",
+   "displayName": "Full page screenshot",
+   "helpText": "Whole homepage as one tall image, 1200px wide WebP (quality about 75), ideally under 600 KB. It is never shown wider than about 600px, so a bigger file only slows phones down. Cards, Resources, Every project and case page hero. Empty = card shows 'Launching soon'.",
+   "validations": null
+  },
+  {
+   "id": "bd3ded8e2539d179de50f3394cc9931f",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "hero-screen-left",
+   "displayName": "Case screen left",
+   "helpText": "Optional. Inner page screenshot, about 900px wide, for the left frame of the case page hero. The three frames take turns in the middle.",
+   "validations": null
+  },
+  {
+   "id": "4f96e5592132e6e8b72695c93255978d",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "hero-screen-right",
+   "displayName": "Case screen right",
+   "helpText": "Optional. Inner page screenshot, about 900px wide, for the right frame of the case page hero.",
+   "validations": null
+  },
+  {
+   "id": "452a7124b09d7efecabb294736123e17",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "quote",
+   "displayName": "Quote",
+   "helpText": "Optional. Client quote without quotation marks. Empty = no quote block on the case page.",
+   "validations": null
+  },
+  {
+   "id": "7f80a4965cb6add8843340fcd4101e2d",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "quote-author",
+   "displayName": "Quote author",
+   "helpText": "Full name of the person quoted, e.g. Or Moshkovitz. The handwritten signature under the quote is made from it (Or M.).",
+   "validations": null
+  },
+  {
+   "id": "6f16dd53ace3eaaba40eb6182c29e7a7",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "quote-author-role",
+   "displayName": "Quote role",
+   "helpText": "Role and company, e.g. CMO, Ballerine.",
+   "validations": null
+  },
+  {
+   "id": "65b55b54ee94935f950b77463e240baa",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "client-icon",
+   "displayName": "Client icon",
+   "helpText": "Optional. Square client symbol, at least 128x128, shown above the quote.",
+   "validations": null
+  },
+  {
+   "id": "9988bd66365fab9e61a63cd4794c1690",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Switch",
+   "slug": "ow-hero-slider",
+   "displayName": "Show in Our Work slider",
+   "helpText": "On = slide in the browser slider at the top of Our Work. Needs Cover image, Logo color, Industry, Stat 1 and Website link (the address bar shows it without https:// and www.).",
+   "validations": null
+  },
+  {
+   "id": "3d042685c02f205c2b15cd61b1ed5bcb",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Switch",
+   "slug": "ow-case-tabs",
+   "displayName": "Show in Our Work tabs",
+   "helpText": "On = tab in 'What they had. What we shipped.' on Our Work (sorted by Name). Needs Logo white, Tabs background, Before and After screenshot, Website link (address bar), Story label and Stat 1.",
+   "validations": null
+  },
+  {
+   "id": "b2e107788291696b334374cee0838d90",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "case-before-image",
+   "displayName": "Before screenshot",
+   "helpText": "Old site, top of the homepage, cut from the top to 1.75:1 (e.g. 2400x1371 WebP). Left side of the before/after slider in the Our Work tabs.",
+   "validations": null
+  },
+  {
+   "id": "2929c72142d22d2fefd1654daac9df64",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "case-after-image",
+   "displayName": "After screenshot",
+   "helpText": "New site, same view and the same 1.75:1 shape as Before screenshot, cut from the top. Right side of the before/after slider.",
+   "validations": null
+  },
+  {
+   "id": "60f25d2f19f62a9ad9d11335aa235286",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Option",
+   "slug": "work-category",
+   "displayName": "Filter category",
+   "helpText": "Which filter tab on the Our Work page shows this project. Pick one.",
+   "validations": {
+    "options": [
+     {
+      "name": "SaaS",
+      "id": "5267bee9ab756cf7834fce16707acf01"
+     },
+     {
+      "name": "AI",
+      "id": "ade3eabf3fc55ea3544802b43b1b8e94"
+     },
+     {
+      "name": "Healthcare",
+      "id": "260dd3e0ae4c43c7f04500bf84bd06a4"
+     },
+     {
+      "name": "Commerce",
+      "id": "24c8430ad0632097f053aa94cf908ef3"
+     },
+     {
+      "name": "Industrial",
+      "id": "f797c19bdb4bad28884b5ced85431180"
+     }
+    ]
+   }
+  },
+  {
+   "id": "d6c87eee6aba71c3e4dfb024e46e9a1a",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "logo-with-color",
+   "displayName": "Logo color",
+   "helpText": "Logo in the client's brand colours, SVG with a transparent background. Shown in the Our Work slider (light background).",
+   "validations": null
+  },
+  {
+   "id": "aa9387a51edc1a79cd4041e859315788",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "gallery-page-names",
+   "displayName": "Every project page names",
+   "helpText": "Names of the screens above, same order, comma separated, e.g. Home, Platform, Pricing. Captions in the gallery popup.",
+   "validations": null
+  },
+  {
+   "id": "6f3d08dd5a4606e8e43b8f6d1e056d5b",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "card-background",
+   "displayName": "Card background",
+   "helpText": "16:10, 1600x1000: client colours with their big soft mark. Background of the Our Work grid, Resources and next-project cards and the Home Every project slide. Without it the project is not in the Our Work grid.",
+   "validations": null
+  },
+  {
+   "id": "bf08b49af769121c764a6cc85a5b2d4c",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Link",
+   "slug": "slider-video-2",
+   "displayName": "Slider video",
+   "helpText": "Optional. Direct link to a short muted MP4/WebM loop (2140x1280, under 5 MB), not a YouTube/Vimeo page. Plays over Cover image; empty = Cover image for 6 s.",
+   "validations": null
+  },
+  {
+   "id": "8cbc2760cd47c44219357a84d16f1cd3",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "MultiReference",
+   "slug": "team",
+   "displayName": "Team",
+   "helpText": "Case page 'The team behind this project': pick everyone who worked on it, in the order to show. Each card opens that person's LinkedIn.",
+   "validations": {
+    "collectionId": "6aba6bc07d6279b4b561778a"
+   }
+  },
+  {
+   "id": "03f3ffe2a129c08b3b728a39223eb964",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "gallery-left",
+   "displayName": "Gallery left",
+   "helpText": "Case page gallery, left card: laptop mockup. Portrait 2:3, 1041x1560 WebP, exported by the designer from the Figma card Frame 47795.",
+   "validations": null
+  },
+  {
+   "id": "eba7db6cda4daaaa23d978913ba0d218",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "tabs-background",
+   "displayName": "Tabs background",
+   "helpText": "Background behind the before/after window in the Our Work tabs: client colours with soft light stripes, landscape 3:2 from the designer (2400x1600 WebP).",
+   "validations": null
+  },
+  {
+   "id": "f43a283f086548b8e0869b3dbdce58ea",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Number",
+   "slug": "our-work-order",
+   "displayName": "Our Work order",
+   "helpText": "Position in the Our Work grid only, lowest first: 1, 2, 3... Use each number once. The Trusted strip and Resources keep using Order.",
+   "validations": {
+    "format": "integer",
+    "allowNegative": true,
+    "precision": 1
+   }
+  },
+  {
+   "id": "6effe13698eb6b37f18777109e18f0e6",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "PlainText",
+   "slug": "seo-robots",
+   "displayName": "SEO robots",
+   "helpText": "Goes into the page <head> as the robots meta tag. Case written (Case title filled): index, follow. No case yet: noindex, follow. Change it together with Case title.",
+   "validations": null
+  },
+  {
+   "id": "64cb6b7cce968d2a96440e120e7ca86d",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "hero-screen-top",
+   "displayName": "Hero screen top",
+   "helpText": "Case page hero, middle frame: top 1200x1200 px of the Full page screenshot, WebP. Empty = the Full page screenshot is used.",
+   "validations": null
+  },
+  {
+   "id": "96e41a4783a526c90f33db8dfc4b5f6c",
+   "isEditable": true,
+   "isRequired": false,
+   "type": "Image",
+   "slug": "full-page-screenshot-mobile",
+   "displayName": "Full page screenshot (mobile)",
+   "helpText": "Same screenshot, 640px wide WebP (about 150 KB). Shown on phones only; leave empty to use the big one.",
+   "validations": null
+  }
+ ],
+ "collectionFieldGroups": [
+  {
+   "displayName": "1 · Basics",
+   "fieldIds": [
+    "83effb11f7986051d03f502f68cad91c",
+    "60f25d2f19f62a9ad9d11335aa235286",
+    "9151236bded5924b352750742ec8d5ae",
+    "4383f07836916c4f163694451ac1cffa",
+    "f43a283f086548b8e0869b3dbdce58ea",
+    "3100589e984b84627c004d18d7f531ba",
+    "480af3a824d294c627c45722cdcd4022"
+   ],
+   "description": "Fill for every project."
+  },
+  {
+   "displayName": "2 · Logos and images (designer)",
+   "fieldIds": [
+    "84fc07b33b2fbf841472928abc565023",
+    "d6c87eee6aba71c3e4dfb024e46e9a1a",
+    "6f3d08dd5a4606e8e43b8f6d1e056d5b",
+    "6a13b46a2e5784ca062a9f99e29335af",
+    "96e41a4783a526c90f33db8dfc4b5f6c",
+    "45cf295d3653ada119a8eee805b169d3"
+   ],
+   "description": "Prepared by the designer for every project. Size and format are in each field."
+  },
+  {
+   "displayName": "3 · Trusted strip",
+   "fieldIds": [
+    "603381ea6d3536bae60e6457fc5e2ebc",
+    "892e560879fa33f94c813ba77de237ea"
+   ],
+   "description": "Logo cards on Home and the service pages."
+  },
+  {
+   "displayName": "4 · Our Work slider",
+   "fieldIds": [
+    "9988bd66365fab9e61a63cd4794c1690",
+    "bf08b49af769121c764a6cc85a5b2d4c"
+   ],
+   "description": "Browser slider at the top of the Our Work page."
+  },
+  {
+   "displayName": "5 · Our Work tabs",
+   "fieldIds": [
+    "3d042685c02f205c2b15cd61b1ed5bcb",
+    "eba7db6cda4daaaa23d978913ba0d218",
+    "b2e107788291696b334374cee0838d90",
+    "2929c72142d22d2fefd1654daac9df64",
+    "790eb1156215cfa146e9d06e929d2230"
+   ],
+   "description": "'What they had. What we shipped.' on Our Work. Story label is also used by Home Every project."
+  },
+  {
+   "displayName": "6 · Home Every project",
+   "fieldIds": [
+    "22ccc0e90283aad6fe0c412f6e2153ec",
+    "a9225c522b4ce6d358c271128a49038f",
+    "aa9387a51edc1a79cd4041e859315788"
+   ],
+   "description": "Slider on Home. Also uses Logo white, Card background, Stat 1 and Story label."
+  },
+  {
+   "displayName": "7 · Case study page",
+   "fieldIds": [
+    "0e684febf8320a86329aff7541d58407",
+    "7a2034a75b882748d5dff5db169df7d5",
+    "107c680d8cbad136ca24e388b9d4d1e8",
+    "e74e57e4bff13c5e281c886fda02b224",
+    "b2f6eff4dec18ed3bd01191eddde11bc",
+    "9276abaa36c0d49ca4af723e51fbd7c2",
+    "bd3ded8e2539d179de50f3394cc9931f",
+    "4f96e5592132e6e8b72695c93255978d",
+    "6cc339d9880daf6fdcf0139a09e49c4e",
+    "31bc14339c6b5187f39f3568e85af04d",
+    "9b351f293f94634e7cd5bcff67d5b1b4",
+    "16b124e5e2164f6889d0f0e42442a7f4",
+    "e4ffea757605daabf75486ba63f50b48",
+    "03f3ffe2a129c08b3b728a39223eb964",
+    "319fac4cbb2d28c53d9bac32da9f1ef9",
+    "67986fbfd6145504f7a75f80c17c9c0f",
+    "452a7124b09d7efecabb294736123e17",
+    "7f80a4965cb6add8843340fcd4101e2d",
+    "6f16dd53ace3eaaba40eb6182c29e7a7",
+    "65b55b54ee94935f950b77463e240baa",
+    "c7cc47e1a933928bdd3e84e1c9d33351",
+    "8cbc2760cd47c44219357a84d16f1cd3"
+   ],
+   "description": "Only when there is a written case study (/our-work/<slug>). Empty fields hide their block."
+  },
+  {
+   "displayName": "8 · SEO",
+   "fieldIds": [
+    "b8d2368898ca0fec416a574820f928c7",
+    "863d5aedf0e3f5220ef618d21ee4c32b"
+   ],
+   "description": "Google results and sharing of the case page."
+  }
+ ]
+}
