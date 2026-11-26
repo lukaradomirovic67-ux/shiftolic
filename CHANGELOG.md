@@ -3,6 +3,23 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 26.11.2026: cene vraćene, tačno kao pre 20.11. (objavljeno na staging)
+Tvoje „sada treba da ih vratimo“ i odgovor „Vrati tačno stare“. Spisak za tebe: dokument „Cene na sajtu: gde su vraćene“ (https://claude.ai/artifact/QNxhVMYMcgUeZzFur6TSEB). Rezerva: `backup/prices-restore-2026-11-26/` (objavljeni HTML 4 stranice i schema pre vraćanja).
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Services (`6ae0e4a4872d8069c67b0475`), statistika na 4 taba (`7e971f3c-…144f0`, `…1452b`, `…14564`, `…1459d`) | Visibility isključen | uključen: From $8k, From $5k, From $2k, $3,000 / Per month |
+| Services, tabela „Side by side“, red „Starting at“ (`74d71a38-…86705`, `…8671f`, `…86741`, `…86765`, `…86787`) | Visibility isključen | uključen: $8,000, $5,000, $2,000 / month, $3,000 / month |
+| Pricing (`6ad2500978181edbb22ab367`), „Investment from“ na 4 kartice (`ad197fa8-…cf087`, `…cf0b9`, `…cf0e9`, `84dc2a39-…a537`) | Visibility isključen | uključen: $8,000, $20,000, [$X,XXX]/month ×2 |
+| Pricing, klizač preporuke (`1a3ca450-…d9f`, `…da4`) | Visibility isključen | uključen: from $8k, from $20k |
+| Design & Development, JSON-LD | bez `offers` | `offers` 8000 USD (iz `backup/schema/services-prices-before-2026-11-20.json`) |
+| Webflow Development, JSON-LD | bez `offers` | `offers` 5000 USD; opis opet završava sa „Starting at $5,000.“ |
+
+- Tekst, stil i raspored elemenata nisu menjani. Schema je ista kao pre 20.11.; razlika prema današnjoj je samo `offers` i ta rečenica.
+- Home nije menjan: tim je 25.11. upisao nove cene u „Four ways“ (From $10k, From $6k, From $2k/mo, From $2k/mo), a stari element sa „From $8k“ više ne postoji. Sajt sada za istu uslugu prikazuje različite cene (npr. Design & Development $10k na Home, $8k na Services i Pricing); pitao sam pre izmene, tvoj izbor je bio „tačno stare“.
+- Provereno posle objave: svi iznosi u dolarima na 43 stranice, pre i posle (`prices-scan-*.json`); promenjene su samo ove 4 stranice. Desktop 1440 i telefon 390: raspored uredan (`notes/cene-vracene-2026-11-26/`). JS grešaka nema.
+- Nije dirano (nisu cene naših usluga): „Change orders $0“ i kalkulator preporuke na Pricing, budžeti u formi na Let's talk, besplatan poziv u schema-i na Let's talk, cene tuđih alata u blogu.
+
 ## 26.11.2026: PageSpeed tačka 2, Resources: manje rada pre prvog prikaza (objavljeno na staging)
 Tvoje „da kreni“. Bez promene izgleda i copy-ja. Rezerva: `backup/psi-step5-resources-2026-11-26/` (site head i Resources footer pre izmene).
 
