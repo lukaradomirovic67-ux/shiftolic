@@ -3,6 +3,19 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 26.11.2026: PageSpeed tačka 3, dve male skripte direktno u site footer (objavljeno na staging)
+Tvoje „kreni“. Bez promene izgleda i copy-ja. Rezerva: `backup/psi-item3-inline-scripts-2026-11-26/` (site footer pre izmene, obe skripte kako su bile na CDN-u, spisak primenjenih skripti, objavljeni Home pre izmene).
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Registrovane site skripte (Site settings → Custom code) | NuesCmsDerived 1.0.0 i nuesA11yFixes 1.0.1 primenjene u footeru: dva posebna fajla (`<script src>`, 1,1 KB i 1,6 KB) na svakoj stranici, posle sveg ostalog koda | nijedna primenjena. Obe ostaju registrovane (nisu obrisane), mogu se ponovo primeniti |
+| Site footer (`site-footer.min.html`, čitljivo `site-footer.html`) | 32.171 znak | isti + na kraju kod te dve skripte, znak po znak isti kao na CDN-u (35.178 znakova) |
+
+- Lokalno, stari i novi footer na istoj stranici (6 stranica, desktop i telefon): skripte daju isto (navbar atributi, galerija na Home, domen u galeriji, adresa u Our Work slajderu, potpis citata na case stranici), tastatura na navbaru radi isto, 0 JS grešaka, zahtevi ka dve skripte 2 → 0.
+- Stara trka u nuesA11yFixes, postoji i pre i posle: na desktopu link Services/Resources u navbaru ponekad ostane bez `aria-controls`, kad skripta krene pre Webflow-ovog dropdown-a. Po 8 učitavanja: About pre 3/8, posle 0/8; Veyor case pre 0/8, posle 1/8; Home 0/8 i pre i posle. Nije popravljano, nije deo ove tačke.
+- Objavljeni site footer je znak po znak isti kao `site-footer.min.html` (7 stranica), nema više `<script src>` ka te dve skripte. Prvo slanje je izgubilo jedan razmak koji se ne prelama (skripta za CTA podnaslov, ispred crte); tako je na staging-u bilo oko 4 minuta, ispravljeno i ponovo objavljeno. JS greške: 0 na 86 učitavanja (43 stranice, desktop i telefon).
+- PageSpeed, 6 stranica × 3 posebna merenja (krugovi 4 minuta razmaknuti): zahtevi ka te dve skripte 96 (u 48 merenja tačke 2) → 0, a „Use efficient cache lifetimes“ ih više ne navodi. Skor telefon: Resources 83 → 90 (TBT 149 → 77 ms), Our Work 75 → 81 (TBT 244 → 57 ms), Home 78 → 84, Careers 74 → 76, Blog 85 → 84, Design & Development 96 → 74 (dva od tri merenja su ona kad PageSpeed server kasni sa prvim prikazom; treće 87). Dva mala fajla na kraju stranice ne mogu da objasne ovolike razlike: to je kolebanje merenja, a sigurna dobit su 2 zahteva manje po stranici. Desktop 94–99. Tabela: `reports/psi-2026-11-26/step6-inline-scripts/average-3x-circles.md`.
+
 ## 26.11.2026: cene vraćene, tačno kao pre 20.11. (objavljeno na staging)
 Tvoje „sada treba da ih vratimo“ i odgovor „Vrati tačno stare“. Spisak za tebe: dokument „Cene na sajtu: gde su vraćene“ (https://claude.ai/artifact/QNxhVMYMcgUeZzFur6TSEB). Rezerva: `backup/prices-restore-2026-11-26/` (objavljeni HTML 4 stranice i schema pre vraćanja).
 
