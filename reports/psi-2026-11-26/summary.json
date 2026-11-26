@@ -1,0 +1,1010 @@
+{
+ "/": {
+  "mobile": {
+   "performance": 84,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 4.358003038497895,
+   "tbt": 79.00000000000045,
+   "cls": 0.002731603363737979,
+   "fcp": 1.0670030384978941,
+   "si": 3.2917033480336553
+  },
+  "desktop": {
+   "performance": 95,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 1.49200421227482,
+   "tbt": 31,
+   "cls": 0.0005932556550606268,
+   "fcp": 0.2880015445599898,
+   "si": 1.0447382674321046
+  }
+ },
+ "/about": {
+  "mobile": {
+   "performance": 100,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 1.2170025052516134,
+   "tbt": 38.5,
+   "cls": 0,
+   "fcp": 1.2170025052516134,
+   "si": 2.3273681372493065
+  },
+  "desktop": {
+   "performance": 98,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 1.1320027552564438,
+   "tbt": 21,
+   "cls": 0.0004606231214090205,
+   "fcp": 0.2950027552564437,
+   "si": 0.7515927066119295
+  }
+ },
+ "/services": {
+  "mobile": {
+   "performance": 98,
+   "accessibility": 96,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 1.067002271206023,
+   "tbt": 151,
+   "cls": 0.0035752270694568745,
+   "fcp": 1.067002271206023,
+   "si": 2.234633458572995
+  },
+  "desktop": {
+   "performance": 99,
+   "accessibility": 96,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 0.2930035944132868,
+   "tbt": 91,
+   "cls": 0.002600524408737226,
+   "fcp": 0.2930035944132868,
+   "si": 0.8754752255739267
+  }
+ },
+ "/services/design-development": {
+  "mobile": {
+   "performance": 72,
+   "accessibility": 96,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 6.302010213585231,
+   "tbt": 217.5,
+   "cls": 0.006085714992271112,
+   "fcp": 1.0910102135852313,
+   "si": 4.054027249833713
+  },
+  "desktop": {
+   "performance": 96,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 1.3530037213860104,
+   "tbt": 18,
+   "cls": 0.0025336245494440818,
+   "fcp": 0.3080037213860105,
+   "si": 0.8628792573645883
+  }
+ },
+ "/services/webflow-development": {
+  "mobile": {
+   "performance": 73,
+   "accessibility": 96,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 6.400005520273932,
+   "tbt": 218.5,
+   "cls": 0.0033447480356414826,
+   "fcp": 1.0700055202739316,
+   "si": 3.333062688809808
+  },
+  "desktop": {
+   "performance": 96,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 1.3585038836577026,
+   "tbt": 49,
+   "cls": 0.00045838828645641675,
+   "fcp": 0.29400388365770247,
+   "si": 0.9396852787268237
+  }
+ },
+ "/services/seo-aeo": {
+  "mobile": {
+   "performance": 77,
+   "accessibility": 96,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 6.364002204161149,
+   "tbt": 51,
+   "cls": 0.003761730722075132,
+   "fcp": 1.0660022041611488,
+   "si": 2.6637050504458064
+  },
+  "desktop": {
+   "performance": 91,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 1.4750070430914783,
+   "tbt": 154,
+   "cls": 0.0019989367242208293,
+   "fcp": 0.29500704309147835,
+   "si": 1.137152624593178
+  }
+ },
+ "/services/growth": {
+  "mobile": {
+   "performance": 77,
+   "accessibility": 96,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 6.358011671008117,
+   "tbt": 39,
+   "cls": 0.003378027223064233,
+   "fcp": 1.073011671008117,
+   "si": 2.6318348420965907
+  },
+  "desktop": {
+   "performance": 96,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 1.3865038650399621,
+   "tbt": 57,
+   "cls": 0.0019082732579673448,
+   "fcp": 0.2960038650399621,
+   "si": 0.7925984738458625
+  }
+ },
+ "/pricing": {
+  "mobile": {
+   "performance": 90,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 2.7670027654624127,
+   "tbt": 152.5,
+   "cls": 0.00524373520091848,
+   "fcp": 2.7670027654624127,
+   "si": 2.7670027654624127
+  },
+  "desktop": {
+   "performance": 94,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 1.207003898334421,
+   "tbt": 145.0070170019577,
+   "cls": 0.0025596130956911088,
+   "fcp": 0.7070038983344209,
+   "si": 0.905717260972264
+  }
+ },
+ "/our-work": {
+  "mobile": {
+   "performance": 76,
+   "accessibility": 96,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 5.856002871093527,
+   "tbt": 60.5,
+   "cls": 0.015098458483850191,
+   "fcp": 1.0680028710935272,
+   "si": 4.1047551554542965
+  },
+  "desktop": {
+   "performance": 93,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 1.3150026472809697,
+   "tbt": 147.9999999999999,
+   "cls": 0.0005351582097802084,
+   "fcp": 0.29300264728096975,
+   "si": 1.009344839009841
+  }
+ },
+ "/resources": {
+  "mobile": {
+   "performance": 79,
+   "accessibility": 96,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 5.106001429137749,
+   "tbt": 32,
+   "cls": 0.000886525391347656,
+   "fcp": 2.019003960817473,
+   "si": 2.2086936002894446
+  },
+  "desktop": {
+   "performance": 84,
+   "accessibility": 96,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 0.7040130493307396,
+   "tbt": 350.9960701094677,
+   "cls": 0.0015570682400644904,
+   "fcp": 0.7040130493307396,
+   "si": 1.0257059460249356
+  }
+ },
+ "/blog": {
+  "mobile": {
+   "performance": 84,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 4.39001150979245,
+   "tbt": 110,
+   "cls": 0.002731603363737979,
+   "fcp": 1.0580115097924503,
+   "si": 1.8933683890517146
+  },
+  "desktop": {
+   "performance": 92,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 1.2120036959687464,
+   "tbt": 187,
+   "cls": 0.0005927005277887461,
+   "fcp": 0.2890036959687462,
+   "si": 0.8325380225826695
+  }
+ },
+ "/careers": {
+  "mobile": {
+   "performance": 73,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 6.0245662128150705,
+   "tbt": 116,
+   "cls": 0.002731603363737979,
+   "fcp": 2.767002286302822,
+   "si": 2.812671627446382
+  },
+  "desktop": {
+   "performance": 91,
+   "accessibility": 96,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 1.4870062200888596,
+   "tbt": 156.99999999999977,
+   "cls": 0.0005927005277887461,
+   "fcp": 0.5790092219256081,
+   "si": 1.1628110582549185
+  }
+ },
+ "/lets-talk": {
+  "mobile": {
+   "performance": 69,
+   "accessibility": 96,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 15.063065298128619,
+   "tbt": 127,
+   "cls": 0.002731603363737979,
+   "fcp": 2.7705027108861584,
+   "si": 2.7705027108861584
+  },
+  "desktop": {
+   "performance": 99,
+   "accessibility": 96,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 0.7220635121673131,
+   "tbt": 44,
+   "cls": 0.0005927005277887461,
+   "fcp": 0.7220635121673131,
+   "si": 0.8287653336849449
+  }
+ },
+ "/privacy-policy": {
+  "mobile": {
+   "performance": 93,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 2.6280037552424536,
+   "tbt": 19,
+   "cls": 0.002731603363737979,
+   "fcp": 2.6280037552424536,
+   "si": 2.6280037552424536
+  },
+  "desktop": {
+   "performance": 94,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 0.6700134610685264,
+   "tbt": 189.5,
+   "cls": 0.0011764144851806387,
+   "fcp": 0.6700134610685264,
+   "si": 0.6955297938278296
+  }
+ },
+ "/terms-of-service": {
+  "mobile": {
+   "performance": 93,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 2.595003681550464,
+   "tbt": 31.5,
+   "cls": 0.0030686813975273836,
+   "fcp": 2.595003681550464,
+   "si": 2.595003681550464
+  },
+  "desktop": {
+   "performance": 100,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 0.6770040053488362,
+   "tbt": 4,
+   "cls": 0.0005927005277887461,
+   "fcp": 0.6770040053488362,
+   "si": 0.6770040053488362
+  }
+ },
+ "/our-work/ballerine": {
+  "mobile": {
+   "performance": 76,
+   "accessibility": 96,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 5.89050879956259,
+   "tbt": 154.5,
+   "cls": 0.004283216641632344,
+   "fcp": 1.0800063728738853,
+   "si": 2.9503964764092636
+  },
+  "desktop": {
+   "performance": 98,
+   "accessibility": 96,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 0.29000189728090664,
+   "tbt": 118,
+   "cls": 0.02733971586064276,
+   "fcp": 0.29000189728090664,
+   "si": 0.927188933413366
+  }
+ },
+ "/our-work/shiftolic": {
+  "mobile": {
+   "performance": 99,
+   "accessibility": 96,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 1.058002320815005,
+   "tbt": 22.5,
+   "cls": 0.0036075969527478774,
+   "fcp": 1.058002320815005,
+   "si": 3.001842409161778
+  },
+  "desktop": {
+   "performance": 100,
+   "accessibility": 96,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 0.288002739373262,
+   "tbt": 16.5,
+   "cls": 0.0025616759643023322,
+   "fcp": 0.288002739373262,
+   "si": 0.7917886403867779
+  }
+ },
+ "/our-work/sustain-commercial-solar": {
+  "mobile": {
+   "performance": 100,
+   "accessibility": 96,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 1.0600036453079826,
+   "tbt": 27,
+   "cls": 0.0047137139167157255,
+   "fcp": 1.0600036453079826,
+   "si": 2.9322421289717333
+  },
+  "desktop": {
+   "performance": 100,
+   "accessibility": 96,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 0.29900621691167284,
+   "tbt": 0,
+   "cls": 0.0038740687814628077,
+   "fcp": 0.29900621691167284,
+   "si": 0.687936333507709
+  }
+ },
+ "/our-work/trak-pro": {
+  "mobile": {
+   "performance": 98,
+   "accessibility": 96,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 1.0610029168055528,
+   "tbt": 130.5,
+   "cls": 0.002731603363737979,
+   "fcp": 1.0610029168055528,
+   "si": 2.960941786557839
+  },
+  "desktop": {
+   "performance": 100,
+   "accessibility": 96,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 0.2950015369285033,
+   "tbt": 0,
+   "cls": 0.0037602852809496138,
+   "fcp": 0.2950015369285033,
+   "si": 0.7376742437284909
+  }
+ },
+ "/our-work/veyor-digital": {
+  "mobile": {
+   "performance": 95,
+   "accessibility": 96,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 1.062002942520416,
+   "tbt": 267,
+   "cls": 0.036197783134085774,
+   "fcp": 1.062002942520416,
+   "si": 1.9389541986830394
+  },
+  "desktop": {
+   "performance": 90,
+   "accessibility": 96,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 0.2900145237139802,
+   "tbt": 259.5,
+   "cls": 0.0026307758978064417,
+   "fcp": 0.2900145237139802,
+   "si": 0.9281662125015032
+  }
+ },
+ "/blog/aeo-for-marketing-teams-what-you-can-do-without-a-developer": {
+  "mobile": {
+   "performance": 89,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 3.788003519540035,
+   "tbt": 57.5,
+   "cls": 0.002731603363737979,
+   "fcp": 1.0610035195400347,
+   "si": 2.006126101954386
+  },
+  "desktop": {
+   "performance": 99,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 0.2910076262570201,
+   "tbt": 97,
+   "cls": 0.0005927005277887461,
+   "fcp": 0.2910076262570201,
+   "si": 0.7196664425702505
+  }
+ },
+ "/blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search": {
+  "mobile": {
+   "performance": 89,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 3.777001624791147,
+   "tbt": 22,
+   "cls": 0.01990547215571352,
+   "fcp": 1.063001624791147,
+   "si": 1.8268634589305812
+  },
+  "desktop": {
+   "performance": 98,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 1.0760016247805249,
+   "tbt": 27,
+   "cls": 0.0005982464283081483,
+   "fcp": 0.2900016247805249,
+   "si": 0.6532748557778095
+  }
+ },
+ "/blog/aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters": {
+  "mobile": {
+   "performance": 94,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 2.864001071759513,
+   "tbt": 141.5,
+   "cls": 0.002731603363737979,
+   "fcp": 1.0680010717595128,
+   "si": 1.689016137597227
+  },
+  "desktop": {
+   "performance": 98,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 0.29200054568499595,
+   "tbt": 134,
+   "cls": 0.0005927005277887461,
+   "fcp": 0.29200054568499595,
+   "si": 0.7764023500064143
+  }
+ },
+ "/blog/b2b-saas-seo-in-2026-a-strategy-guide-for-marketing-leaders": {
+  "mobile": {
+   "performance": 91,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 3.4890060423642555,
+   "tbt": 66,
+   "cls": 0.002731603363737979,
+   "fcp": 1.0630060423642553,
+   "si": 2.011477327041116
+  },
+  "desktop": {
+   "performance": 98,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 1.0750015939497126,
+   "tbt": 11,
+   "cls": 0.0005927005277887461,
+   "fcp": 0.2920015939497124,
+   "si": 0.6156360922927524
+  }
+ },
+ "/blog/best-15-webflow-apps-for-marketing-teams-in-2026": {
+  "mobile": {
+   "performance": 95,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 2.858004614519727,
+   "tbt": 38.5,
+   "cls": 0.006609766448485755,
+   "fcp": 1.070004614519727,
+   "si": 1.8216526787675722
+  },
+  "desktop": {
+   "performance": 98,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 1.1090033932681842,
+   "tbt": 59.5,
+   "cls": 0.0005927005277887461,
+   "fcp": 0.28900339326818425,
+   "si": 0.6783311549879432
+  }
+ },
+ "/blog/from-guests-to-sponsors-notes-from-flow-conf-2026": {
+  "mobile": {
+   "performance": 74,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 5.4930033854422895,
+   "tbt": 245,
+   "cls": 0,
+   "fcp": 1.131003385442288,
+   "si": 3.466751233460877
+  },
+  "desktop": {
+   "performance": 95,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 1.1830296015602735,
+   "tbt": 128,
+   "cls": 0.0005927005277887461,
+   "fcp": 0.29,
+   "si": 0.8478653714149375
+  }
+ },
+ "/blog/how-to-delete-a-cms-collection-page-in-webflow-without-breaking-your-site": {
+  "mobile": {
+   "performance": 89,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 3.791502597056941,
+   "tbt": 60,
+   "cls": 0.002731603363737979,
+   "fcp": 1.0930025970569412,
+   "si": 1.654111353440102
+  },
+  "desktop": {
+   "performance": 99,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 0.31700401813715123,
+   "tbt": 107.5,
+   "cls": 0.0005927005277887461,
+   "fcp": 0.31700401813715123,
+   "si": 0.7152845458936018
+  }
+ },
+ "/blog/how-to-improve-your-website-conversion-rate-in-2026": {
+  "mobile": {
+   "performance": 76,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 5.332501598848475,
+   "tbt": 200.5,
+   "cls": 0,
+   "fcp": 1.110001598848477,
+   "si": 3.2712453641059107
+  },
+  "desktop": {
+   "performance": 94,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 1.1030058270496241,
+   "tbt": 164.49965723237506,
+   "cls": 0.0005927005277887461,
+   "fcp": 0.29,
+   "si": 0.678795976657965
+  }
+ },
+ "/blog/is-webflow-good-for-ecommerce-an-honest-answer-for-2026": {
+  "mobile": {
+   "performance": 77,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 5.303501752179635,
+   "tbt": 163,
+   "cls": 0.01881757240572898,
+   "fcp": 1.1020017521796348,
+   "si": 3.4368594945484157
+  },
+  "desktop": {
+   "performance": 98,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 1.0590017517492312,
+   "tbt": 17,
+   "cls": 0.0005927005277887461,
+   "fcp": 0.289001751749231,
+   "si": 0.6172642045325288
+  }
+ },
+ "/blog/saas-content-marketing-in-2026-a-strategy-guide": {
+  "mobile": {
+   "performance": 95,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 2.8570040516147186,
+   "tbt": 81.5,
+   "cls": 0.002731603363737979,
+   "fcp": 1.0640040516147184,
+   "si": 1.6218171379098398
+  },
+  "desktop": {
+   "performance": 99,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 0.8470021820143472,
+   "tbt": 41,
+   "cls": 0.0005927005277887461,
+   "fcp": 0.29600165136726847,
+   "si": 0.5726431638267712
+  }
+ },
+ "/blog/sanity-vs-webflow-cms-which-one-your-team-actually-needs": {
+  "mobile": {
+   "performance": 78,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 5.516005180290065,
+   "tbt": 96,
+   "cls": 0,
+   "fcp": 1.1030051802900651,
+   "si": 3.712279009091857
+  },
+  "desktop": {
+   "performance": 100,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 0.28900242361401784,
+   "tbt": 24,
+   "cls": 0.0005927005277887461,
+   "fcp": 0.28900242361401784,
+   "si": 0.5536066112794735
+  }
+ },
+ "/blog/source-by-webflow-what-it-is-and-what-it-means-for-teams-on-webflow": {
+  "mobile": {
+   "performance": 88,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 3.796038694049359,
+   "tbt": 136,
+   "cls": 0.002731603363737979,
+   "fcp": 1.060004713254687,
+   "si": 1.8831948504642793
+  },
+  "desktop": {
+   "performance": 100,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 0.28550712720418925,
+   "tbt": 74.5,
+   "cls": 0.0005927005277887461,
+   "fcp": 0.28550712720418925,
+   "si": 0.6057593177947749
+  }
+ },
+ "/blog/the-signs-your-current-webflow-site-is-holding-your-business-back": {
+  "mobile": {
+   "performance": 89,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 3.779001852447026,
+   "tbt": 18,
+   "cls": 0.002731603363737979,
+   "fcp": 1.0610018524470262,
+   "si": 1.8469381827706197
+  },
+  "desktop": {
+   "performance": 100,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 0.2960026942484129,
+   "tbt": 76.5,
+   "cls": 0.0005927005277887461,
+   "fcp": 0.2960026942484129,
+   "si": 0.6275955624166273
+  }
+ },
+ "/blog/the-website-redesign-process-a-step-by-step-guide": {
+  "mobile": {
+   "performance": 89,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 3.8060025343675705,
+   "tbt": 54,
+   "cls": 0.002587834765646506,
+   "fcp": 1.0850025343675702,
+   "si": 1.9815515149642988
+  },
+  "desktop": {
+   "performance": 95,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 1.0855040500918691,
+   "tbt": 154.5,
+   "cls": 0.02036665130366865,
+   "fcp": 0.2900040500918692,
+   "si": 0.7372109494115117
+  }
+ },
+ "/blog/three-webflow-features-from-2026-worth-paying-attention-to-and-one-to-skip": {
+  "mobile": {
+   "performance": 94,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 2.859000575401466,
+   "tbt": 158,
+   "cls": 0.002731603363737979,
+   "fcp": 1.061000575401466,
+   "si": 1.8229609617259284
+  },
+  "desktop": {
+   "performance": 100,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 0.3020011601610076,
+   "tbt": 0,
+   "cls": 0.0005927005277887461,
+   "fcp": 0.3020011601610076,
+   "si": 0.6950497220164481
+  }
+ },
+ "/blog/webflow-for-b2b-lead-generation-how-to-turn-your-site-into-a-pipeline-engine": {
+  "mobile": {
+   "performance": 80,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 5.063000431763547,
+   "tbt": 34,
+   "cls": 0,
+   "fcp": 1.0915004317635473,
+   "si": 3.4906941040633406
+  },
+  "desktop": {
+   "performance": 100,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 0.3350044445371674,
+   "tbt": 74,
+   "cls": 0.0005927005277887461,
+   "fcp": 0.3350044445371674,
+   "si": 0.6717533881050257
+  }
+ },
+ "/blog/webflow-forms-in-2026-how-to-turn-them-into-a-lead-engine": {
+  "mobile": {
+   "performance": 88,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 3.807002270156084,
+   "tbt": 70.5,
+   "cls": 0.02154917576946696,
+   "fcp": 1.0810022701560835,
+   "si": 1.774288027789499
+  },
+  "desktop": {
+   "performance": 100,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 0.3110022124424232,
+   "tbt": 39.5,
+   "cls": 0.0005927005277887461,
+   "fcp": 0.3110022124424232,
+   "si": 0.6034957002021343
+  }
+ },
+ "/blog/webflow-templates-how-to-choose-one-and-when-to-go-custom": {
+  "mobile": {
+   "performance": 77,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 5.33150107290919,
+   "tbt": 169,
+   "cls": 0,
+   "fcp": 1.15000107290919,
+   "si": 3.558186685560314
+  },
+  "desktop": {
+   "performance": 100,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 0.30200240586770616,
+   "tbt": 0,
+   "cls": 0.0005927005277887461,
+   "fcp": 0.30200240586770616,
+   "si": 0.625683191279966
+  }
+ },
+ "/blog/webflow-vs-framer-in-2026-which-one-is-right-for-your-site": {
+  "mobile": {
+   "performance": 88,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 3.7970102964046446,
+   "tbt": 80.5,
+   "cls": 0.002731603363737979,
+   "fcp": 1.0970043877207998,
+   "si": 1.7260443678796122
+  },
+  "desktop": {
+   "performance": 99,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 1.0325022978645246,
+   "tbt": 20,
+   "cls": 0.02036665130366865,
+   "fcp": 0.2890022978645247,
+   "si": 0.6588826851360297
+  }
+ },
+ "/blog/webflow-vs-squarespace-in-2026-when-each-one-makes-sense": {
+  "mobile": {
+   "performance": 97,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 2.5570022232929897,
+   "tbt": 22,
+   "cls": 0.002731603363737979,
+   "fcp": 1.0650022232929894,
+   "si": 1.5707997769751347
+  },
+  "desktop": {
+   "performance": 98,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 1.0470015804176096,
+   "tbt": 15,
+   "cls": 0.0005982464283081483,
+   "fcp": 0.29200158041760954,
+   "si": 0.7065623565110305
+  }
+ },
+ "/blog/webflow-vs-wix-in-2026-which-one-is-right-for-your-site": {
+  "mobile": {
+   "performance": 88,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 3.7885170562291313,
+   "tbt": 101,
+   "cls": 0,
+   "fcp": 1.0600170562291316,
+   "si": 1.6853011194521026
+  },
+  "desktop": {
+   "performance": 98,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 1.0500021726411428,
+   "tbt": 38.5,
+   "cls": 0.0005982464283081483,
+   "fcp": 0.2950021726411429,
+   "si": 0.6495104602295697
+  }
+ },
+ "/blog/webflow-vs-wordpress-for-b2b-saas-in-2026-whats-changed-and-when-each-one-wins": {
+  "mobile": {
+   "performance": 88,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 3.792000370791673,
+   "tbt": 88,
+   "cls": 0.017751653627346948,
+   "fcp": 1.0620003707916732,
+   "si": 1.6045458838271862
+  },
+  "desktop": {
+   "performance": 96,
+   "accessibility": 100,
+   "best-practices": 100,
+   "seo": 66,
+   "lcp": 0.287502310193791,
+   "tbt": 156,
+   "cls": 0.0005927005277887461,
+   "fcp": 0.287502310193791,
+   "si": 0.7214811913682274
+  }
+ }
+}
