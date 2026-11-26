@@ -3,6 +3,19 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 26.11.2026: PageSpeed korak 1, slike u prvom ekranu se učitavaju odmah (objavljeno na staging)
+Tvoje „ajmo korak po korak da poboljšavamo stvari do savršenstva“, korak bez promene izgleda. Rezerva: `backup/lcp-eager-2026-11-26/` (objavljeni HTML 5 stranica pre izmene).
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Komponenta Service Hero `4e3b548d-…`, tri oblika `svc-hero_shape` (`…a368`, `…a369`, `…a36a`), na Design & Development, Webflow Development, SEO & AEO, Growth | `loading="lazy"` | atribut `loading="eager"` |
+| Resources, pozadina hero-a `3b7368f8-1ae8-b32b-6b13-3c75ec8da3d0` (`insights-hero-bg.avif`) | `loading="lazy"` | atributi `loading="eager"` i `fetchpriority="high"` |
+
+- U objavljenom HTML-u se, u odnosu na backup, promenio samo taj atribut (provereno na svih 5 stranica).
+- PageSpeed posle objave (telefon): Resources 79 → 84, LCP 5,1 → 4,4 s, FCP 2,0 → 1,1 s; desktop 84 → 98. Brojke su u `reports/psi-2026-11-26/step1/`.
+- Servisne stranice: LCP ostaje 6,2–6,4 s, a oblici sada stižu za 0,13 s. Usporava ih animacija „Services hero shapes rise“ (fade + izranjanje), koja oblike krije dok se ne učita `webflow.js`. To je korak 2, koji si odobrio.
+- Skorovi servisnih stranica variraju od merenja do merenja (TBT 13–326 ms), pa razlika u skoru tu nije od ove izmene.
+
 ## 25.11.2026: screenshotovi klijenata za telefon, novo CMS polje (objavljeno na staging)
 Tvoje „Da, odobravam polje“. Rezerva: `backup/phone-screenshots-2026-11-25/` (Our Works stavke i grupe polja pre i posle, objavljeni Home/Our Work/Resources pre izmene, site head i Resources footer pre izmene).
 
