@@ -1,0 +1,370 @@
+{
+ "resources--mobile": [
+  {
+   "fetchTime": "2026-11-26T22:01:18.461Z",
+   "perf": 84,
+   "lcp_ms": 4399,
+   "tbt_ms": 126,
+   "observed_fcp_ms": 284
+  },
+  {
+   "fetchTime": "2026-11-26T22:02:09.842Z",
+   "perf": 94,
+   "lcp_ms": 3011,
+   "tbt_ms": 19,
+   "observed_fcp_ms": 244
+  },
+  {
+   "fetchTime": "2026-11-26T22:02:45.050Z",
+   "perf": 72,
+   "lcp_ms": 5542,
+   "tbt_ms": 301,
+   "observed_fcp_ms": 1207
+  }
+ ],
+ "resources--desktop": [
+  {
+   "fetchTime": "2026-11-26T22:01:18.563Z",
+   "perf": 97,
+   "lcp_ms": 290,
+   "tbt_ms": 149,
+   "observed_fcp_ms": 724
+  },
+  {
+   "fetchTime": "2026-11-26T22:02:10.051Z",
+   "perf": 100,
+   "lcp_ms": 287,
+   "tbt_ms": 51,
+   "observed_fcp_ms": 297
+  },
+  {
+   "fetchTime": "2026-11-26T22:02:44.441Z",
+   "perf": 99,
+   "lcp_ms": 325,
+   "tbt_ms": 110,
+   "observed_fcp_ms": 462
+  }
+ ],
+ "home--mobile": [
+  {
+   "fetchTime": "2026-11-26T22:01:19.188Z",
+   "perf": 69,
+   "lcp_ms": 6645,
+   "tbt_ms": 262,
+   "observed_fcp_ms": 1277
+  },
+  {
+   "fetchTime": "2026-11-26T22:02:09.843Z",
+   "perf": 74,
+   "lcp_ms": 6508,
+   "tbt_ms": 39,
+   "observed_fcp_ms": 1420
+  },
+  {
+   "fetchTime": "2026-11-26T22:02:44.647Z",
+   "perf": 90,
+   "lcp_ms": 3458,
+   "tbt_ms": 75,
+   "observed_fcp_ms": 256
+  }
+ ],
+ "home--desktop": [
+  {
+   "fetchTime": "2026-11-26T22:01:18.876Z",
+   "perf": 93,
+   "lcp_ms": 1563,
+   "tbt_ms": 109,
+   "observed_fcp_ms": 527
+  },
+  {
+   "fetchTime": "2026-11-26T22:02:10.019Z",
+   "perf": 95,
+   "lcp_ms": 1498,
+   "tbt_ms": 13,
+   "observed_fcp_ms": 327
+  },
+  {
+   "fetchTime": "2026-11-26T22:02:44.761Z",
+   "perf": 94,
+   "lcp_ms": 1519,
+   "tbt_ms": 65,
+   "observed_fcp_ms": 171
+  }
+ ],
+ "our-work--mobile": [
+  {
+   "fetchTime": "2026-11-26T22:01:18.978Z",
+   "perf": 69,
+   "lcp_ms": 5761,
+   "tbt_ms": 373,
+   "observed_fcp_ms": 363
+  },
+  {
+   "fetchTime": "2026-11-26T22:09:51.353Z",
+   "perf": 86,
+   "lcp_ms": 4058,
+   "tbt_ms": 45,
+   "observed_fcp_ms": 234
+  },
+  {
+   "fetchTime": "2026-11-26T22:02:45.116Z",
+   "perf": 71,
+   "lcp_ms": 5753,
+   "tbt_ms": 314,
+   "observed_fcp_ms": 315
+  }
+ ],
+ "our-work--desktop": [
+  {
+   "fetchTime": "2026-11-26T22:01:18.189Z",
+   "perf": 100,
+   "lcp_ms": 310,
+   "tbt_ms": 21,
+   "observed_fcp_ms": 368
+  },
+  {
+   "fetchTime": "2026-11-26T22:09:51.690Z",
+   "perf": 93,
+   "lcp_ms": 290,
+   "tbt_ms": 216,
+   "observed_fcp_ms": 392
+  },
+  {
+   "fetchTime": "2026-11-26T22:02:44.067Z",
+   "perf": 100,
+   "lcp_ms": 306,
+   "tbt_ms": 13,
+   "observed_fcp_ms": 243
+  }
+ ],
+ "services--mobile": [
+  {
+   "fetchTime": "2026-11-26T22:01:18.228Z",
+   "perf": 99,
+   "lcp_ms": 1068,
+   "tbt_ms": 20,
+   "observed_fcp_ms": 1164
+  },
+  {
+   "fetchTime": "2026-11-26T22:02:10.201Z",
+   "perf": 99,
+   "lcp_ms": 1076,
+   "tbt_ms": 73,
+   "observed_fcp_ms": 372
+  },
+  {
+   "fetchTime": "2026-11-26T22:02:44.161Z",
+   "perf": 100,
+   "lcp_ms": 1068,
+   "tbt_ms": 43,
+   "observed_fcp_ms": 290
+  }
+ ],
+ "services--desktop": [
+  {
+   "fetchTime": "2026-11-26T22:01:18.333Z",
+   "perf": 98,
+   "lcp_ms": 329,
+   "tbt_ms": 101,
+   "observed_fcp_ms": 1072
+  },
+  {
+   "fetchTime": "2026-11-26T22:02:10.010Z",
+   "perf": 99,
+   "lcp_ms": 887,
+   "tbt_ms": 27,
+   "observed_fcp_ms": 170
+  },
+  {
+   "fetchTime": "2026-11-26T22:02:44.442Z",
+   "perf": 100,
+   "lcp_ms": 298,
+   "tbt_ms": 7,
+   "observed_fcp_ms": 231
+  }
+ ],
+ "services__design-development--mobile": [
+  {
+   "fetchTime": "2026-11-26T22:01:35.068Z",
+   "perf": 98,
+   "lcp_ms": 2256,
+   "tbt_ms": 95,
+   "observed_fcp_ms": 167
+  },
+  {
+   "fetchTime": "2026-11-26T22:02:10.385Z",
+   "perf": 97,
+   "lcp_ms": 2556,
+   "tbt_ms": 60,
+   "observed_fcp_ms": 187
+  },
+  {
+   "fetchTime": "2026-11-26T22:02:58.529Z",
+   "perf": 93,
+   "lcp_ms": 3156,
+   "tbt_ms": 98,
+   "observed_fcp_ms": 225
+  }
+ ],
+ "services__design-development--desktop": [
+  {
+   "fetchTime": "2026-11-26T22:01:38.170Z",
+   "perf": 96,
+   "lcp_ms": 1118,
+   "tbt_ms": 129,
+   "observed_fcp_ms": 478
+  },
+  {
+   "fetchTime": "2026-11-26T22:09:51.581Z",
+   "perf": 88,
+   "lcp_ms": 926,
+   "tbt_ms": 266,
+   "observed_fcp_ms": 804
+  },
+  {
+   "fetchTime": "2026-11-26T22:02:59.646Z",
+   "perf": 99,
+   "lcp_ms": 886,
+   "tbt_ms": 29,
+   "observed_fcp_ms": 155
+  }
+ ],
+ "services__webflow-development--mobile": [
+  {
+   "fetchTime": "2026-11-26T22:01:37.877Z",
+   "perf": 66,
+   "lcp_ms": 6311,
+   "tbt_ms": 179,
+   "observed_fcp_ms": 2311
+  },
+  {
+   "fetchTime": "2026-11-26T22:09:51.808Z",
+   "perf": 93,
+   "lcp_ms": 3157,
+   "tbt_ms": 102,
+   "observed_fcp_ms": 272
+  },
+  {
+   "fetchTime": "2026-11-26T22:03:00.153Z",
+   "perf": 86,
+   "lcp_ms": 4056,
+   "tbt_ms": 84,
+   "observed_fcp_ms": 224
+  }
+ ],
+ "services__webflow-development--desktop": [
+  {
+   "fetchTime": "2026-11-26T22:01:38.161Z",
+   "perf": 98,
+   "lcp_ms": 1042,
+   "tbt_ms": 62,
+   "observed_fcp_ms": 364
+  },
+  {
+   "fetchTime": "2026-11-26T22:09:51.359Z",
+   "perf": 99,
+   "lcp_ms": 853,
+   "tbt_ms": 35,
+   "observed_fcp_ms": 233
+  },
+  {
+   "fetchTime": "2026-11-26T22:03:00.719Z",
+   "perf": 96,
+   "lcp_ms": 1128,
+   "tbt_ms": 116,
+   "observed_fcp_ms": 390
+  }
+ ],
+ "services__seo-aeo--mobile": [
+  {
+   "fetchTime": "2026-11-26T22:01:41.992Z",
+   "perf": 87,
+   "lcp_ms": 3907,
+   "tbt_ms": 137,
+   "observed_fcp_ms": 269
+  },
+  {
+   "fetchTime": "2026-11-26T22:02:12.347Z",
+   "perf": 91,
+   "lcp_ms": 3456,
+   "tbt_ms": 58,
+   "observed_fcp_ms": 194
+  },
+  {
+   "fetchTime": "2026-11-26T22:10:16.045Z",
+   "perf": 91,
+   "lcp_ms": 3458,
+   "tbt_ms": 89,
+   "observed_fcp_ms": 280
+  }
+ ],
+ "services__seo-aeo--desktop": [
+  {
+   "fetchTime": "2026-11-26T22:01:44.077Z",
+   "perf": 99,
+   "lcp_ms": 885,
+   "tbt_ms": 1,
+   "observed_fcp_ms": 211
+  },
+  {
+   "fetchTime": "2026-11-26T22:02:24.940Z",
+   "perf": 98,
+   "lcp_ms": 1007,
+   "tbt_ms": 91,
+   "observed_fcp_ms": 157
+  },
+  {
+   "fetchTime": "2026-11-26T22:10:15.759Z",
+   "perf": 99,
+   "lcp_ms": 886,
+   "tbt_ms": 19,
+   "observed_fcp_ms": 254
+  }
+ ],
+ "services__growth--mobile": [
+  {
+   "fetchTime": "2026-11-26T22:01:46.108Z",
+   "perf": 86,
+   "lcp_ms": 3906,
+   "tbt_ms": 158,
+   "observed_fcp_ms": 289
+  },
+  {
+   "fetchTime": "2026-11-26T22:02:25.041Z",
+   "perf": 97,
+   "lcp_ms": 2557,
+   "tbt_ms": 44,
+   "observed_fcp_ms": 180
+  },
+  {
+   "fetchTime": "2026-11-26T22:03:07.495Z",
+   "perf": 87,
+   "lcp_ms": 3906,
+   "tbt_ms": 94,
+   "observed_fcp_ms": 224
+  }
+ ],
+ "services__growth--desktop": [
+  {
+   "fetchTime": "2026-11-26T22:01:49.276Z",
+   "perf": 99,
+   "lcp_ms": 887,
+   "tbt_ms": 63,
+   "observed_fcp_ms": 201
+  },
+  {
+   "fetchTime": "2026-11-26T22:02:25.522Z",
+   "perf": 99,
+   "lcp_ms": 887,
+   "tbt_ms": 14,
+   "observed_fcp_ms": 227
+  },
+  {
+   "fetchTime": "2026-11-26T22:03:08.121Z",
+   "perf": 95,
+   "lcp_ms": 1123,
+   "tbt_ms": 140,
+   "observed_fcp_ms": 403
+  }
+ ]
+}

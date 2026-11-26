@@ -1,0 +1,9 @@
+page,url,mobile_n,mobile_perf,mobile_perf_min,mobile_perf_max,mobile_lcp,mobile_fcp,mobile_tbt,mobile_cls,mobile_si,desktop_n,desktop_perf,desktop_perf_min,desktop_perf_max,desktop_lcp,desktop_fcp,desktop_tbt,desktop_cls,desktop_si,mobile_a11y,mobile_bp,mobile_seo
+Resources,https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/resources,3,83.333,72.0,94.0,4.317,1.104,148.667,0.002,2.416,3,98.667,97.0,100,0.301,0.301,103.167,0.002,0.811,96.0,100,66.0
+Home,https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/,3,77.667,69.0,90.0,5.537,1.096,125.333,0.002,4.17,3,94.0,93.0,95.0,1.526,0.293,62.333,0.001,1.013,100,100,66.0
+Our Work,https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/our-work,3,75.333,69.0,86.0,5.191,1.068,243.833,0.015,3.011,3,97.667,93.0,100,0.302,0.302,83.167,0.003,0.933,96.0,100,66.0
+Services,https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/services,3,99.333,99.0,100,1.071,1.071,45.333,0.004,2.717,3,99.0,98.0,100,0.505,0.307,45,0.002,0.898,96.0,100,66.0
+Design & Development,https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/services/design-development,3,96.0,93.0,98.0,2.656,1.063,84.167,0.005,2.505,3,94.333,88.0,99.0,0.977,0.293,141.5,0.002,0.897,96.0,100,66.0
+Webflow Development,https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/services/webflow-development,3,81.667,66.0,93.0,4.508,1.625,121.5,0.002,3.751,3,97.667,96.0,99.0,1.008,0.292,70.833,0.002,0.831,96.0,100,66.0
+SEO & AEO,https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/services/seo-aeo,3,89.667,87.0,91.0,3.607,1.069,94.667,0.003,2.508,3,98.667,98.0,99.0,0.926,0.299,37,0.001,0.745,96.0,100,66.0
+Growth,https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/services/growth,3,90.0,86.0,97.0,3.456,1.065,98.667,0.002,2.399,3,97.667,95.0,99.0,0.966,0.295,72.167,0.002,0.765,96.0,100,66.0

@@ -3,6 +3,21 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 26.11.2026: PageSpeed tačka 2, Resources: manje rada pre prvog prikaza (objavljeno na staging)
+Tvoje „da kreni“. Bez promene izgleda i copy-ja. Rezerva: `backup/psi-step5-resources-2026-11-26/` (site head i Resources footer pre izmene).
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Site head, skripta za slike ispod prvog ekrana (iz koraka 3) | da li je slika u prvom ekranu proverava merenjem položaja (`getBoundingClientRect`) u frejmu dok se stranica čita; na Resources, spor telefon, 9–107 ms | isto radi `IntersectionObserver` (pregledač sam javi kad slika uđe u ekran): 6–12 ms. Ostalo isto: slike kreću na `load` ili prvi skrol, dodir, klik, taster; one u prvom ekranu odmah |
+| Site head, ista skripta, lista slika | i `res-hero_card-img` (kartice u Resources hero-u) | bez njih: u prvom su ekranu, pa su ionako kretale odmah, a čekanje je dodavalo samo rad. Ostalih 5 klasa isto |
+
+- Resources footer: probao sam da prepravim skripte stranice (marquee kartica), dobit nije bila merljiva, pa je vraćen original. Ta izmena nije objavljena.
+- Lokalno (telefon, CPU 4×, bez keša): na Resources prva slika kartice kreće ~0,1 s ranije (521–707 → 435–609 ms), isti bajtovi pre DOMContentLoaded, 0 piksela razlike u hero-u, 0 JS grešaka. Stari i novi head naizmenično na istoj stranici, medijana TBT: Home 621 → 596 ms (9 + 9 učitavanja), Our Work 731 → 717, Webflow Development 612 → 569 (po 5); LCP isti.
+- Objavljeni site head znak po znak isti kao `site-head.min.html` (7 stranica). JS greške: 0 na 86 učitavanja (43 stranice, desktop i telefon).
+- PageSpeed telefon (3 posebna merenja, prosek): Resources 73 → 83 (TBT 294 → 149 ms, LCP 5,1 → 4,3 s), SEO & AEO 83 → 90, Design & Development 92 → 96, Growth 88 → 90, Services 99 → 99. Home 85 → 78 i Webflow Development 92 → 82: tu su dva, odnosno jedno merenje bila ona kad PageSpeed server kasni sa prvim prikazom (LCP ~6,5 s); bez njih Home 91 → 90, Webflow Development 92 → 90. Our Work 77 → 75 (TBT 106 → 244 ms; Our Work TBT na PageSpeed-u skače 45–373 ms i pre i posle, lokalni A/B ne pokazuje razliku). Desktop 94–99. Tabela: `reports/psi-2026-11-26/step5-resources/average-3x-circles.md`.
+- Šta ostaje na Resources TBT-u: GA4 (~300 ms glavne niti na sporom telefonu) i webflow.js/jQuery. Skripte same stranice su 20–60 ms. GA4 i „Asynchronously load JS“ su tvoje odluke (MANUAL_TASKS).
+- PageSpeed vraća keširanu kopiju kad se ista adresa traži ponovo u roku od oko minut: prvi put su 7 od 16 merenja bila kopije, obrisane su i izmerene ponovo. Od sad su krugovi merenja bar 4 minuta razmaknuti (`notes/psi-report-format.md`).
+
 ## 26.11.2026: PageSpeed tačka 1, visok prioritet za glavnu sliku prvog ekrana (objavljeno na staging)
 Tvoje „ajmo jedan po jedan“. Bez promene izgleda. Rezerva: `backup/psi-step4-priority-2026-11-26/` (objavljeni HTML 9 stranica pre izmene).
 

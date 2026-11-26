@@ -909,23 +909,29 @@ document.addEventListener('DOMContentLoaded', function () {
 </style>
 <!-- Nues: pictures further down the page wait for the page (26.11.2026). Chrome starts every lazy picture within about 1250 px
      of the screen as soon as the page is laid out, so on a phone the project screenshots and the before/after pictures
-     (0.5-0.9 MB on Home, Our Work and Resources) shared the connection with the first screen. These pictures now start when
+     (0.5-0.9 MB on Home, Our Work and Resources) shared the connection with the first screen. The Resources hero cards are
+     not in the list: they are on the first screen, so holding them only added work (26.11.2026). These pictures now start when
      the page has loaded, or as soon as the visitor scrolls, touches, clicks or types (not on mouse moves: Chrome sends those
      by itself while the page is drawn); the ones that are on the first screen start right away, as before. Meanwhile only the srcset holds a 1x1 placeholder: src stays, so the scripts that
      check it see the same page. The look of every section stays the same. -->
 <script>
 (function () {
-  if (!window.MutationObserver) return;
-  var sel = 'img.work-card_shot,img.home-projects_screen-image,img.ow-cs_before-img,img.ow-cs_after,img.ow-cs_bg,img.res-hero_card-img';
+  if (!window.MutationObserver || !window.IntersectionObserver) return;
+  var sel = 'img.work-card_shot,img.home-projects_screen-image,img.ow-cs_before-img,img.ow-cs_after,img.ow-cs_bg';
   var blank = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
-  var waiting = [], done = false, frame = 0;
+  var done = false;
   var wake = ['scroll', 'wheel', 'touchstart', 'pointerdown', 'keydown'];
+  // pictures that are on the first screen go back right away. An IntersectionObserver reports this after the browser's own
+  // layout, so nothing forces an extra layout while the page is read (26.11.2026; before, getBoundingClientRect in a frame
+  // callback cost ~80 ms on a slow phone on Resources).
+  var io = new IntersectionObserver(function (list) {
+    list.forEach(function (e) { if (e.isIntersecting) { io.unobserve(e.target); free(e.target); } });
+  });
   function hold(img) {
     if (done || img.hasAttribute('data-hold') || img.getAttribute('loading') !== 'lazy' || !img.getAttribute('src')) return;
     img.setAttribute('data-hold', img.getAttribute('srcset') || '');
     img.setAttribute('srcset', blank);
-    waiting.push(img);
-    if (!frame) frame = requestAnimationFrame(firstScreen);
+    io.observe(img);
   }
   function free(img) {
     var s = img.getAttribute('data-hold');
@@ -933,19 +939,9 @@ document.addEventListener('DOMContentLoaded', function () {
     img.removeAttribute('data-hold');
     if (s) img.setAttribute('srcset', s); else img.removeAttribute('srcset');
   }
-  // pictures that are on the first screen go back right away
-  function firstScreen() {
-    frame = 0;
-    var h = window.innerHeight;
-    waiting = waiting.filter(function (img) {
-      var r = img.getBoundingClientRect();
-      if (r.bottom > 0 && r.top < h) { free(img); return false; }
-      return true;
-    });
-  }
   function release() {
     if (done) return;
-    done = true; mo.disconnect(); waiting = [];
+    done = true; mo.disconnect(); io.disconnect();
     [].forEach.call(document.querySelectorAll('img[data-hold]'), free);
     wake.forEach(function (e) { window.removeEventListener(e, release, true); });
   }
@@ -958,7 +954,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
   mo.observe(document.documentElement, { childList: true, subtree: true });
-  document.addEventListener('DOMContentLoaded', function () { mo.disconnect(); });
+  // copies made by page scripts (the Resources card loop) carry the waiting state of their original: watch them too
+  document.addEventListener('DOMContentLoaded', function () {
+    mo.disconnect();
+    if (!done) [].forEach.call(document.querySelectorAll('img[data-hold]'), function (img) { io.observe(img); });
+  });
   wake.forEach(function (e) { window.addEventListener(e, release, { capture: true, passive: true }); });
   window.addEventListener('load', release);
 })();
