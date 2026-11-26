@@ -3,6 +3,9 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 26.11.2026: odluka, kontrast sitnih sivih tekstova ostaje kakav jeste
+Tvoje „to ne menjamo“ (PageSpeed tačka 4). Ništa nije menjano. Ostaju: uloga člana tima na case stranicama (`cs-team_role`, #9ea0a3 na #fbfaf7, kontrast 2,51), natpisi u formi i citatu na Let's talk (`lt-quote_role`, `lt-form_progress-count`, `lt-form_note`, `lt-form_legal`, dan i datum u kalendaru) i na Services (`services-ask_query`, `services-compare_name`, `services-compare_pill-text`). PageSpeed ih i dalje računa u Accessibility (zato je tamo 96 umesto 100).
+
 ## 26.11.2026: PageSpeed tačka 3, dve male skripte direktno u site footer (objavljeno na staging)
 Tvoje „kreni“. Bez promene izgleda i copy-ja. Rezerva: `backup/psi-item3-inline-scripts-2026-11-26/` (site footer pre izmene, obe skripte kako su bile na CDN-u, spisak primenjenih skripti, objavljeni Home pre izmene).
 
