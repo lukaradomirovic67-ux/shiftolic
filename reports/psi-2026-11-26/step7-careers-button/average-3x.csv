@@ -1,0 +1,2 @@
+page,url,mobile_n,mobile_perf,mobile_perf_min,mobile_perf_max,mobile_lcp,mobile_fcp,mobile_tbt,mobile_cls,mobile_si,desktop_n,desktop_perf,desktop_perf_min,desktop_perf_max,desktop_lcp,desktop_fcp,desktop_tbt,desktop_cls,desktop_si,mobile_a11y,mobile_bp,mobile_seo
+Careers,https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/careers,3,76.0,65.0,86.0,5.228,2.455,138.5,0.001,3.811,3,95.667,94.0,97.0,0.485,0.485,153.333,0.002,1.218,100,100,66.0

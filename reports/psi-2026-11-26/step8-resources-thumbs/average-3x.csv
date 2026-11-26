@@ -1,0 +1,2 @@
+page,url,mobile_n,mobile_perf,mobile_perf_min,mobile_perf_max,mobile_lcp,mobile_fcp,mobile_tbt,mobile_cls,mobile_si,desktop_n,desktop_perf,desktop_perf_min,desktop_perf_max,desktop_lcp,desktop_fcp,desktop_tbt,desktop_cls,desktop_si,mobile_a11y,mobile_bp,mobile_seo
+Resources,https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/resources,3,90.0,84.0,97.0,3.481,1.062,106.667,0.004,1.857,3,98.667,97.0,100,0.479,0.293,49.833,0.001,0.634,96.0,100,66.0

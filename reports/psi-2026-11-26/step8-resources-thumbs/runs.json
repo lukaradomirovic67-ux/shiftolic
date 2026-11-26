@@ -1,0 +1,54 @@
+{
+ "resources--mobile": [
+  {
+   "fetchTime": "2026-11-26T22:58:49.932Z",
+   "perf": 97,
+   "lcp_ms": 2406,
+   "tbt_ms": 67,
+   "observed_fcp_ms": 227,
+   "observed_lcp_ms": 227
+  },
+  {
+   "fetchTime": "2026-11-26T23:02:49.496Z",
+   "perf": 84,
+   "lcp_ms": 4393,
+   "tbt_ms": 112,
+   "observed_fcp_ms": 284,
+   "observed_lcp_ms": 284
+  },
+  {
+   "fetchTime": "2026-11-26T23:06:49.425Z",
+   "perf": 89,
+   "lcp_ms": 3643,
+   "tbt_ms": 140,
+   "observed_fcp_ms": 295,
+   "observed_lcp_ms": 295
+  }
+ ],
+ "resources--desktop": [
+  {
+   "fetchTime": "2026-11-26T22:58:50.027Z",
+   "perf": 100,
+   "lcp_ms": 299,
+   "tbt_ms": 8,
+   "observed_fcp_ms": 293,
+   "observed_lcp_ms": 293
+  },
+  {
+   "fetchTime": "2026-11-26T23:02:49.140Z",
+   "perf": 99,
+   "lcp_ms": 847,
+   "tbt_ms": 0,
+   "observed_fcp_ms": 196,
+   "observed_lcp_ms": 196
+  },
+  {
+   "fetchTime": "2026-11-26T23:06:49.917Z",
+   "perf": 97,
+   "lcp_ms": 290,
+   "tbt_ms": 142,
+   "observed_fcp_ms": 412,
+   "observed_lcp_ms": 412
+  }
+ ]
+}

@@ -3,6 +3,57 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 26.11.2026: prave cene iz Figme na celom sajtu (objavljeno na staging)
+Tvoje „ovde se krije prikaz stvarnih cena, update-uj kroz ceo sajt“ (Figma „Four ways“, okviri 7759:427, 8466:68, 8466:146, 8466:224) i za klizač „Samo tekst, isto mesto“. Figma je samo čitana. Rezerva: `backup/prices-figma-2026-11-26/` (objavljeni Services, Pricing, Design & Development, Webflow Development i schema pre izmene).
+
+| Gde | Pre | Posle (Figma) |
+|---|---|---|
+| Home, „Four ways“ | From $10k, $6k, $2k/mo, $2k/mo (tim, 25.11.) | isto, nije menjano (već kao Figma) |
+| Services, statistika na tabovima (`7e971f3c-…144ec`, `…14527`, `…14560`, `…14599`) | From $8k, From $5k, From $2k, $3,000 / Per month | From $10k, From $6k, From $2k/mo, $2,000 / Per month |
+| Services, tabela, red „Starting at“ (`74d71a38-…8671e`, `…86740`, `…86786`) | $8,000, $5,000, $2,000 / month, $3,000 / month | $10,000, $6,000, $2,000 / month, $2,000 / month |
+| Pricing, „Investment from“ na 4 kartice (`ad197fa8-…cf085`, `…cf0b7`, `…cf0e7`, `84dc2a39-…a533`) | $8,000, $20,000, [$X,XXX]/month ×2 | $10,000, $6,000, $2,000/month ×2 („/month“ ostao) |
+| Pricing, klizač preporuke (`1a3ca450-…d9e`, `…da3`) | from $8k, from $20k | from $10k, from $6k (isto mesto na skali, tvoj izbor) |
+| Design & Development, JSON-LD | `offers` 8000 USD | 10000 USD, „starts at $10,000“ |
+| Webflow Development, JSON-LD | `offers` 5000 USD, „Starting at $5,000.“ | 6000 USD, „Starting at $6,000.“ |
+
+- SEO & AEO na Services tabu: „From $2k“ → „From $2k/mo“, jer je u Figmi mesečna cena (oznaka „Starting price“ ostala).
+- Posle objave: svi iznosi u dolarima na 43 stranice pre i posle; promenjene su samo ove 4 stranice i nijedna stara cena nije ostala. Desktop i telefon: raspored uredan, „/month“ na mestu. JS grešaka nema.
+- Na klizaču natpisi više nisu tačno na svojoj vrednosti na skali, a Webflow ($6k) stoji desno od Design & Development ($10k): tako si izabrao.
+- Nije menjano: trajanje na Pricing karticama (3–5 i 6–8 nedelja) i na Services (Webflow Development 4–6 nedelja) iako Figma za Webflow Development kaže 2 do 4 nedelje; nisu cene. Kalkulator preporuke ($4,000 / $40,000) i budžeti u formi na Let's talk nisu cene usluga.
+
+## 26.11.2026: pun audit, drugi put danas (samo merenje, ništa nije menjano)
+Tvoje „uradi opet jedan full audit“. Sve u `reports/psi-2026-11-26/full-3x-v2/` (README, tabela, pojedinačna merenja, provera HTML-a i provera u pregledaču).
+- PageSpeed, 42 stranice × 3 posebna merenja: telefon 89 (jutros 88,5 → 88,6), desktop 98, LCP 3,5 → 3,4 s, Accessibility 98,8, Best Practices 100, SEO 66 (staging robots.txt).
+- Gore od jutros: Resources 73 → 84, Webflow Development 84 → 94, Blog 80 → 89, About 93 → 99, Pricing 93 → 98, Let's talk 89 → 94. Dole: tri blog posta i Careers, samo u merenjima kad je PageSpeed server kasnio sa prvim prikazom (14 od 126 merenja, jutros 16).
+- Pregledač (86 učitavanja): 0 JS grešaka, 0 pokvarenih slika, 0 horizontalnog skrola. HTML: 43 × 200, title i H1 u redu, bez duplikata, JSON-LD svuda ispravan, nijedan pokvaren interni link.
+- Predlozi za dalje su u README-u (avatari na Blog stranici u 1600 px, fotografije tima na About, sličice i za Our Work kartice na telefonu, zaglavlja tabela u 3 blog posta).
+
+## 26.11.2026: PageSpeed tačka 7, sličice na karticama u Resources hero-u (objavljeno na staging)
+Tvoje „uradi tačku 5 i 7“ (polje odobreno). Rezerva: `backup/resources-card-thumbs-2026-11-26/` (Our Works stavke i grupe polja pre i posle, objavljeni Resources i njegov head kod pre izmene, skripte za proveru).
+
+| Gde | Pre | Posle |
+|---|---|---|
+| CMS Our Works | nema polja | **Card thumbnail** (`card-thumbnail`, Image, nije obavezno), uputstvo „Top of the Full page screenshot, cut at 3:2 and 570px wide, WebP (about 15 KB). Shown on the small cards in the Resources hero instead of the big screenshot; leave empty to use the screenshot.“, u grupi „2 · Logos and images (designer)“ odmah ispod Full page screenshot (mobile) |
+| 10 stavki (Ballerine, Biotech, Harper, Hypersonix, Intaker, LaSalle, Shiftolic, Sustain, TrakPro, Veyor) | — | vrh postojećeg Full page screenshot-a, isečen 3:2 i 570 px širine, WebP (13–41 KB, ukupno 188 KB), alt isti kao kod screenshota. Fajlovi i skripta: `webflow-assets/perf/card-thumbs/`. Draft status i ostala polja nisu dirani |
+| Resources, kartica projekta u hero-u (`80653b90-…`) | dve slike (screenshot i telefonski screenshot) | + slika `af46ca18-d38f-0dff-bc6c-68ceb1efd8ad`, klasa `res-hero_card-thumb` (isti stilovi kao `res-hero_card-img`), slika iz Card thumbnail, alt iz Name |
+| Resources head kod (`resources-page-head.html`, sada u repou) | — | kad stavka ima Card thumbnail, screenshotovi se kriju (lazy, pa se ne preuzimaju); prazno polje dobija `w-dyn-bind-empty`, pa ostaju screenshotovi kao pre |
+
+- Predložio sam dva polja (desktop i telefon), napravljeno je jedno: telefonski screenshot je ista slika kao desktop, samo manja, pa jedna sličica od 570 px pokriva oba (3× kartica na telefonu, 2,3× na desktopu).
+- Izmereno uživo, slike u hero karticama: telefon 800 → 191 KB, desktop 1.749 → 191 KB (6 projekata ~710 / ~1.660 KB → ~101 KB). Kopije za beskonačnu traku: 18/18 učitano. Izgled: isti sadržaj, razlika samo u oštrini (sličica je malo oštrija); `notes/resources-card-thumbs-2026-11-26/`.
+- Objavljeni Resources head znak po znak isti kao u repou. JS greške: 0 na 86 učitavanja.
+- PageSpeed Resources (3 merenja): telefon 90 (isto kao pre), desktop 99; težina stranice za PageSpeed telefon 1.734 → 1.576 KB, desktop 3.017 → 2.473 KB. Ostali veliki screenshotovi na stranici su u sekciji „case studies“ niže, nije menjana.
+
+## 26.11.2026: PageSpeed tačka 5, dugme na Careers hero-u bez fade-a (objavljeno na staging)
+Tvoje „uradi tačku 5 i 7“. Rezerva: `backup/careers-button-slide-2026-11-26/` (Careers head i objavljena stranica pre izmene, A/B skripta).
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Careers head kod (`careers-page-head.html`), dugme u hero-u | do početka animacije providno (`opacity:0`), pa ulazi iz providnog i 16 px niže (`careersUp`, 1 s, .8 s kašnjenja) | vidljivo od prvog prikaza, čeka 16 px niže i diže se istom krivom i vremenom (`careersRise`), bez fade-a. Naslov, pill i fotografije nepromenjeni |
+
+- Lokalno (telefon, CPU 4×, 5 + 5 učitavanja naizmenično): LCP 2,5–3,4 s → 1,4–1,7 s, LCP element i dalje dugme; dugme vidljivo od 0,24 s umesto od 1,3–2,0 s. Hero posle animacije 0 piksela razlike (telefon i desktop), dugme na istom mestu.
+- Objavljeni Careers head znak po znak isti kao u repou.
+- PageSpeed telefon (3 merenja): izmereni LCP na PageSpeed uređaju 2,26–2,33 s → 1,31–1,36 s u sva tri merenja; simulirani skor u proseku isti, 76 (86, 65, 77), jer simulacija i dalje računa ~400 KB skripti (webflow.js, jQuery, GSAP, GA4) i 119 KB Aeonik fontova pre prikaza. To su tvoje odluke (tačke 8–10).
+
 ## 26.11.2026: odluka, kontrast sitnih sivih tekstova ostaje kakav jeste
 Tvoje „to ne menjamo“ (PageSpeed tačka 4). Ništa nije menjano. Ostaju: uloga člana tima na case stranicama (`cs-team_role`, #9ea0a3 na #fbfaf7, kontrast 2,51), natpisi u formi i citatu na Let's talk (`lt-quote_role`, `lt-form_progress-count`, `lt-form_note`, `lt-form_legal`, dan i datum u kalendaru) i na Services (`services-ask_query`, `services-compare_name`, `services-compare_pill-text`). Na stranicama gde se nalaze, PageSpeed Accessibility zbog njih ostaje ispod 100.
 

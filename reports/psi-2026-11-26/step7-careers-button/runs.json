@@ -1,0 +1,54 @@
+{
+ "careers--mobile": [
+  {
+   "fetchTime": "2026-11-26T22:51:05.770Z",
+   "perf": 86,
+   "lcp_ms": 3062,
+   "tbt_ms": 84,
+   "observed_fcp_ms": 1333,
+   "observed_lcp_ms": 1333
+  },
+  {
+   "fetchTime": "2026-11-26T22:55:06.273Z",
+   "perf": 65,
+   "lcp_ms": 6614,
+   "tbt_ms": 239,
+   "observed_fcp_ms": 1260,
+   "observed_lcp_ms": 1313
+  },
+  {
+   "fetchTime": "2026-11-26T22:59:05.479Z",
+   "perf": 77,
+   "lcp_ms": 6008,
+   "tbt_ms": 92,
+   "observed_fcp_ms": 883,
+   "observed_lcp_ms": 1359
+  }
+ ],
+ "careers--desktop": [
+  {
+   "fetchTime": "2026-11-26T22:51:06.379Z",
+   "perf": 96,
+   "lcp_ms": 576,
+   "tbt_ms": 146,
+   "observed_fcp_ms": 406,
+   "observed_lcp_ms": 406
+  },
+  {
+   "fetchTime": "2026-11-26T22:55:06.518Z",
+   "perf": 94,
+   "lcp_ms": 584,
+   "tbt_ms": 190,
+   "observed_fcp_ms": 321,
+   "observed_lcp_ms": 321
+  },
+  {
+   "fetchTime": "2026-11-26T22:59:05.447Z",
+   "perf": 97,
+   "lcp_ms": 294,
+   "tbt_ms": 124,
+   "observed_fcp_ms": 1255,
+   "observed_lcp_ms": 1255
+  }
+ ]
+}
