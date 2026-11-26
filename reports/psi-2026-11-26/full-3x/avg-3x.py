@@ -1,12 +1,13 @@
 # Average of three PageSpeed rounds (full3x-r1..r3) per page and strategy -> CSV, JSON and a Markdown table.
-# Usage: python3 -I avg-3x.py URLS.txt OUTDIR
+# Usage: python3 -I avg-3x.py URLS.txt OUTDIR [ROUND_PREFIX, default full3x]
 # Report format (agreed 26.11.2026): average-3x-circles.md, circles 🟢 90-100, 🟡 50-89, 🔴 0-49; main pages, then case pages, then blog posts.
 import json, os, sys, csv, statistics as st, urllib.parse
 
 urls = [u.strip() for u in open(sys.argv[1]) if u.strip()]
 out = sys.argv[2]; os.makedirs(out, exist_ok=True)
 here = os.path.dirname(os.path.abspath(__file__))
-ROUNDS = ['full3x-r1', 'full3x-r2', 'full3x-r3']
+PREFIX = sys.argv[3] if len(sys.argv) > 3 else 'full3x'
+ROUNDS = [f'{PREFIX}-r{i}' for i in (1, 2, 3)]
 
 def key(url):
     return urllib.parse.urlparse(url).path.strip('/').replace('/', '__') or 'home'
