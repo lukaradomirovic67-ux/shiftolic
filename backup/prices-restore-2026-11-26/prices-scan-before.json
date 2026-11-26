@@ -1,0 +1,82 @@
+{
+ "/": {
+  "text": [
+   "Launch and handover | From $10k | Starting price",
+   "Training and documentation | From $6k | Starting price",
+   "Ranking and visibility reports | From $2k/mo | Starting price",
+   "Analytics and reporting | From $2k/mo | Starting price"
+  ],
+  "jsonld": []
+ },
+ "/pricing": {
+  "text": [
+   "Change orders | $0 | Hourly tracking",
+   "You earn | $4,000 | when they sign a",
+   "when they sign a | $40,000 | project",
+   "project | $40k | Design & Development",
+   "Webflow Development | $50k+ | Make an introduction"
+  ],
+  "jsonld": []
+ },
+ "/lets-talk": {
+  "text": [
+   "* | $5k - $10k | $10k - $15k",
+   "$5k - $10k | $10k - $15k | $15k - $25k",
+   "$10k - $15k | $15k - $25k | $25k+",
+   "$15k - $25k | $25k+ | Not sure yet"
+  ],
+  "jsonld": [
+   "price=0",
+   "priceCurrency=USD"
+  ]
+ },
+ "/blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search": {
+  "text": [
+   "The biggest category of dedicated AEO tools is AI visibility tracking. These are the platforms most “AEO tools” lists are really about, so it’s worth understand",
+   "How much do AI visibility tracking tools cost? | Most work on a subscription, often starting around $99 a month and climbing from there depending on how many AI"
+  ],
+  "jsonld": []
+ },
+ "/blog/best-15-webflow-apps-for-marketing-teams-in-2026": {
+  "text": [
+   "Teams running content from a database | $99/mo | StoryChief",
+   "Sites with a growing content library | $9/mo | Semflow",
+   "programmatic SEO | , where hundreds of landing pages are generated from a single structured data source. Pricing currently starts around $99 a month, which posi",
+   "Jetboost | closes. With its no-code visual editor, you add real-time search, multi-criteria filtering, sorting, and favoriting to CMS lists in minutes, no JavaS"
+  ],
+  "jsonld": []
+ },
+ "/blog/from-guests-to-sponsors-notes-from-flow-conf-2026": {
+  "text": [
+   "But the talk that stuck with us was from Tadija Marković, Account Executive at Flow Ninja. | \"$10K, $30K, $100K. Same Website. Different Conversation.\" | The We",
+   "The contracts. The discovery process. The way scope is handled. The handoff. The post-launch relationship. The way questions are answered. The way problems get "
+  ],
+  "jsonld": []
+ },
+ "/blog/sanity-vs-webflow-cms-which-one-your-team-actually-needs": {
+  "text": [
+   "Sanity's real cost is the build, not the subscription | Sanity's pricing looks friendly on paper. There's a genuinely generous free tier, and the paid Growth pl",
+   "Is Sanity or Webflow cheaper? | Sanity's subscription looks cheaper on paper, with a generous free tier and a paid plan around $15 per seat per month. But the r"
+  ],
+  "jsonld": []
+ },
+ "/blog/webflow-vs-squarespace-in-2026-when-each-one-makes-sense": {
+  "text": [
+   "Entry pricing | From around $16/mo | From around $15/mo",
+   "From around $16/mo | From around $15/mo | Room to grow",
+   "Webflow’s paid site plans | start around $15 a month and | Squarespace’s",
+   "Squarespace’s | start around $16, so at the entry level there’s little between them. Both also offer a free trial period to test before committing, and both reg"
+  ],
+  "jsonld": []
+ },
+ "/blog/webflow-vs-wix-in-2026-which-one-is-right-for-your-site": {
+  "text": [
+   "Entry pricing | From ~$17/mo | From ~$17/mo",
+   "From ~$17/mo | From ~$17/mo | From ~$14/mo",
+   "From ~$17/mo | From ~$14/mo | When each one fits",
+   "Webflow’s paid plans | start at around $14 a month and | Wix’s",
+   "Wix’s | at around $17, so there’s little between them to start. Both also offer free tiers to test, though Wix’s free plan is more functional for a live site wh"
+  ],
+  "jsonld": []
+ }
+}
