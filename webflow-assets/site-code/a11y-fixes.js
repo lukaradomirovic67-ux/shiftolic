@@ -1,5 +1,6 @@
-/* Nues a11y fixes. Deployed as the registered site script "nuesA11yFixes" 1.0.1 (footer, all pages): the deployed copy is
-   a11y-fixes.min.js (registered inline scripts are limited to 2000 characters). Fixes axe "nested-interactive":
+/* Nues a11y fixes. Deployed copy: a11y-fixes.min.js, inline at the end of the site footer (site-footer.min.html, all pages)
+   since 26.11.2026. Before that it was the registered site script "nuesA11yFixes" 1.0.1 (still registered, no longer applied).
+   Fixes axe "nested-interactive":
    1. Navbar Services / Resources: the Webflow dropdown toggle (role=button) held the label link.
       Desktop with a mouse: the link is the only control. The toggle loses role=button, its aria attributes and its tab
       stop; the link gets aria-haspopup / aria-controls / aria-expanded (kept in sync with the toggle's w--open class).
