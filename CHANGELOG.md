@@ -3,6 +3,24 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 26.11.2026: PageSpeed korak 3, slike ispod prvog ekrana čekaju, Careers hero kreće ranije (objavljeno na staging)
+Tvoje „kreni sve napravi samo da ne menja copy i izgled sekcije“. Copy i izgled sekcija nisu menjani. Rezerva: `backup/psi-step3-2026-11-26/` (site head, Careers head i footer pre izmene, objavljeni HTML 10 stranica pre izmene).
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Site head (`site-head.min.html`, čitljivo `site-head.html`) | Chrome odmah po prvom rasporedu preuzima svaku lazy sliku do ~1.250 px ispod ekrana, pa su screenshotovi projekata i before/after slike (Home ~0,3–0,7 MB, Our Work 0,8–1,7 MB, Design & Development 0,2–0,4 MB) delili mrežu sa prvim ekranom | nova skripta: slike `work-card_shot`, `home-projects_screen-image`, `ow-cs_before-img`, `ow-cs_after`, `ow-cs_bg`, `res-hero_card-img` kreću kad se stranica učita, ili na prvi skrol, dodir, klik ili taster. One koje su već u prvom ekranu kreću odmah. Do tada samo `srcset` drži prazan piksel; `src` ostaje, pa skripte koje ga proveravaju rade isto |
+| Site head, galerija projekata (Home, servisne) | sličica u galeriji je `currentSrc` slike | isto, ali nikad prazan piksel (ako se galerija otvori pre učitavanja, uzima `src`) |
+| Site head, skripta za `sizes` (23.11.) | pri čitanju stranice pretražuje unutrašnjost svakog novog elementa | gleda samo slike (`<img>`), isti rezultat; završni prolaz na DOMContentLoaded ostaje. Manje rada pre prvog prikaza |
+| Careers head i footer (stranica `6ada16efb73db28b0b5cbad8`) | uvodna animacija hero-a (naslov po redovima, fotografije se dele) je u footeru, pa kreće tek kad se učitaju jQuery, webflow.js i GSAP | ista skripta, isti koraci i vreme, premeštena u head; kreće čim je hero pročitan. Footer: blok izbačen, ostalo isto (`careers-page-footer.html` je sada u repou) |
+| Blog Posts Template, pozadina hero-a `495f04a6-136d-a6f2-0548-5ee02bbb2b88` | `loading="eager"` | i `fetchpriority="high"` (PageSpeed: „fetchpriority=high should be applied“) |
+
+- Mousemove nije okidač: Chrome ga šalje sam dok se stranica iscrtava (kursor iznad stranice), pa bi slike krenule odmah.
+- Izmereno uživo posle objave (Playwright, bez keša), slike preuzete pre DOMContentLoaded, telefon / desktop: Home 609 → 328 KB / 1.089 → 387 KB, Our Work 1.080 → 262 KB / 1.933 → 251 KB, Design & Development 340 → 124 KB / 542 → 119 KB, Resources 1.067 → 888 KB / 2.349 → 1.898 KB (kartice u hero-u su u prvom ekranu, kreću odmah kao i ranije).
+- Izgled posle skrolovanja cele stranice: 0 piksela razlike (prag 16) u svim okvirima ovih slika na 4 stranice, telefon i desktop; sve slike učitane. Careers: krajnji izgled 0 piksela razlike na 1440, 390 i 390 sa reduced motion; na sporom telefonu animacija kreće ~0,8 s ranije (pre prvog prikaza umesto posle).
+- Objavljeni site head, Careers head i footer znak po znak isti kao u repou. JS greške: 0 na 86 učitavanja (43 stranice, desktop i telefon).
+- PageSpeed, telefon (3 merenja posle objave; „spor FCP“ = PageSpeed server je kasnio sa prvim prikazom): Design & Development 72 → 85–97 (LCP 6,3 → 2,6–3,9 s), Growth 77 → 88–98, Our Work 76 → 79–80 (jedno merenje 72, spor FCP), Home 84 → 81–85, Resources 79 → 81–83, Careers 73 → 75–76 (jedno 68, spor FCP), blog post 76 → 88–91. Desktop 94–100 osim blog posta (jednom 85). Brojke u `reports/psi-2026-11-26/step3/`.
+- Šta PageSpeed na telefonu još ne pušta dalje (nije menjano, nije moje da odlučim): GA4 skripta (188 KB na svakoj stranici, odluka o GA4 je tvoja), Aeonik u OTF (180 KB, tvoje „ostavi to meni“), webflow.js/jQuery/GSAP (Webflow ih učitava; opcija „Asynchronously load JS“ u Site settings je u MANUAL_TASKS). Na Careers telefonu LCP su fotografije koje ulaze iz providnog; to je deo animacije, nije menjano.
+
 ## 26.11.2026: PageSpeed korak 2, oblici na servisnim stranicama i podnaslov na Let's talk bez fade-a (objavljeno na staging)
 Tvoji odgovori: „Da, izranjanje bez fade-a“ i „Da, i podnaslov bez fade-a“. Rezerva: `backup/shapes-rise-2026-11-26/` (site head pre izmene, ceo zapis IX3 interakcije, objavljeni HTML 6 stranica pre izmene, izmereni pokret oblika pre i posle).
 

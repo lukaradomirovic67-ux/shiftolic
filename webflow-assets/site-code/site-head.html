@@ -584,7 +584,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var imgs = full.length ? full : (pagesList.length ? pagesList : [mid].filter(shown));
     var pages = (card.getAttribute('data-gallery-pages') || '').split(',').map(function (s) { return s.trim(); });
     return imgs.map(function (img, i) {
-      return { src: biggest(img), thumb: img.currentSrc || img.getAttribute('src'), page: pages[i] || (i ? '' : 'Home') };
+      return { src: biggest(img), thumb: img.currentSrc && img.currentSrc.indexOf('data:') ? img.currentSrc : img.getAttribute('src'), page: pages[i] || (i ? '' : 'Home') };
     });
   }
 
@@ -892,7 +892,8 @@ document.addEventListener('DOMContentLoaded', function () {
   // catch each image as the page is being read, before it is laid out and loaded
   var mo = new MutationObserver(function (list) {
     list.forEach(function (m) {
-      m.addedNodes.forEach(function (n) { if (n.nodeType === 1) { if (n.matches(sel)) fix(n); else scan(n); } });
+      // the parser adds every picture as its own node; the pass at DOMContentLoaded below catches anything added another way
+      m.addedNodes.forEach(function (n) { if (n.nodeName === 'IMG' && n.matches(sel)) fix(n); });
     });
   });
   mo.observe(document.documentElement, { childList: true, subtree: true });
@@ -906,3 +907,59 @@ document.addEventListener('DOMContentLoaded', function () {
 <style>
 @media (max-width:767px){:is(.work-card_window,.home-projects_screen-frame,.res-hero_card):has(>.is-mobile:not(.w-dyn-bind-empty))>:is(.work-card_shot,.home-projects_screen-image,.res-hero_card-img):not(.is-mobile){display:none}:is(.work-card_window,.home-projects_screen-frame,.res-hero_card):has(>.is-mobile:not(.w-dyn-bind-empty))>.is-mobile{display:block}}
 </style>
+<!-- Nues: pictures further down the page wait for the page (26.11.2026). Chrome starts every lazy picture within about 1250 px
+     of the screen as soon as the page is laid out, so on a phone the project screenshots and the before/after pictures
+     (0.5-0.9 MB on Home, Our Work and Resources) shared the connection with the first screen. These pictures now start when
+     the page has loaded, or as soon as the visitor scrolls, touches, clicks or types (not on mouse moves: Chrome sends those
+     by itself while the page is drawn); the ones that are on the first screen start right away, as before. Meanwhile only the srcset holds a 1x1 placeholder: src stays, so the scripts that
+     check it see the same page. The look of every section stays the same. -->
+<script>
+(function () {
+  if (!window.MutationObserver) return;
+  var sel = 'img.work-card_shot,img.home-projects_screen-image,img.ow-cs_before-img,img.ow-cs_after,img.ow-cs_bg,img.res-hero_card-img';
+  var blank = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+  var waiting = [], done = false, frame = 0;
+  var wake = ['scroll', 'wheel', 'touchstart', 'pointerdown', 'keydown'];
+  function hold(img) {
+    if (done || img.hasAttribute('data-hold') || img.getAttribute('loading') !== 'lazy' || !img.getAttribute('src')) return;
+    img.setAttribute('data-hold', img.getAttribute('srcset') || '');
+    img.setAttribute('srcset', blank);
+    waiting.push(img);
+    if (!frame) frame = requestAnimationFrame(firstScreen);
+  }
+  function free(img) {
+    var s = img.getAttribute('data-hold');
+    if (s === null) return;
+    img.removeAttribute('data-hold');
+    if (s) img.setAttribute('srcset', s); else img.removeAttribute('srcset');
+  }
+  // pictures that are on the first screen go back right away
+  function firstScreen() {
+    frame = 0;
+    var h = window.innerHeight;
+    waiting = waiting.filter(function (img) {
+      var r = img.getBoundingClientRect();
+      if (r.bottom > 0 && r.top < h) { free(img); return false; }
+      return true;
+    });
+  }
+  function release() {
+    if (done) return;
+    done = true; mo.disconnect(); waiting = [];
+    [].forEach.call(document.querySelectorAll('img[data-hold]'), free);
+    wake.forEach(function (e) { window.removeEventListener(e, release, true); });
+  }
+  var mo = new MutationObserver(function (list) {
+    list.forEach(function (m) {
+      [].forEach.call(m.addedNodes, function (n) {
+        // the parser adds every picture as its own node, so only pictures need a look (cheaper than searching each new element)
+        if (n.nodeName === 'IMG' && n.matches(sel)) hold(n);
+      });
+    });
+  });
+  mo.observe(document.documentElement, { childList: true, subtree: true });
+  document.addEventListener('DOMContentLoaded', function () { mo.disconnect(); });
+  wake.forEach(function (e) { window.addEventListener(e, release, { capture: true, passive: true }); });
+  window.addEventListener('load', release);
+})();
+</script>

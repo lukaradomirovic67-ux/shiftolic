@@ -1,0 +1,362 @@
+<script>
+/* Careers: jobs filter, touch states, apply email subject */
+(function(){
+  // Jobs filter: buttons compare their data-filter with each job's category
+  var wrap=document.querySelector('[data-jobs-filters]'),list=document.querySelector('[data-jobs-list]');
+  // Order: sort jobs by their CMS Order field (jobs without one go last)
+  if(list){
+    [].slice.call(list.querySelectorAll('.careers-jobs_item')).map(function(it,k){var o=parseFloat(it.getAttribute('data-order'));return {it:it,o:isNaN(o)?1e9:o,k:k};})
+      .sort(function(a,b){return a.o-b.o||a.k-b.k;}).forEach(function(x){list.appendChild(x.it);});
+  }
+  if(wrap&&list){
+    var btns=[].slice.call(wrap.querySelectorAll('[data-filter]'));
+    function apply(f){
+      btns.forEach(function(b){var on=b.getAttribute('data-filter')===f;b.classList.toggle('is-active',on);b.setAttribute('aria-pressed',on?'true':'false');});
+      [].slice.call(list.querySelectorAll('.careers-jobs_item')).forEach(function(it){
+        var c=(it.querySelector('.careers-job_category')||{}).textContent||'';
+        var show=f==='all'||c.trim().toLowerCase()===f;
+        it.classList.toggle('is-filtered',!show);
+        it.classList.remove('is-in'); if(show){void it.offsetWidth; it.classList.add('is-in');}
+      });
+    }
+    btns.forEach(function(b){
+      b.addEventListener('click',function(){apply(b.getAttribute('data-filter'));});
+      b.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();apply(b.getAttribute('data-filter'));}});
+    });
+  }
+  // Apply now: add the job title as the email subject
+  [].slice.call(document.querySelectorAll('.careers-job_card[href^="mailto:"]')).forEach(function(a){
+    if(a.href.indexOf('subject=')>-1) return;
+    var t=a.querySelector('.careers-card_title');
+    a.href+=(a.href.indexOf('?')>-1?'&':'?')+'subject='+encodeURIComponent('Application: '+(t?t.textContent.trim():'Careers'));
+  });
+  // Touch screens: value cards switch to their second illustration when centred on screen
+  if(window.matchMedia('(hover: none)').matches&&'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('is-active',e.isIntersecting);});},{rootMargin:'-40% 0px -40% 0px'});
+    [].slice.call(document.querySelectorAll('.careers-value_card')).forEach(function(c){io.observe(c);});
+  }
+})();
+</script>
+<script>
+/* Careers benefits: the three parts of one pyramid come apart in 3D (three.js, loaded only when the section gets close).
+   Without WebGL the flat pyramid image stays and the benefits light up one at a time. */
+(function(){
+  var stage=document.querySelector('[data-benefits]');
+  if(!stage) return;
+  var items=[].slice.call(stage.querySelectorAll('[data-benefit]')),
+      still=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Tier 0 is the bottom of the pyramid
+  var labels=['is-rest','is-trust','is-growth'].map(function(c){return stage.querySelector('[data-benefit].'+c);});
+  if(labels.some(function(l){return !l;})) labels=items.slice().reverse();
+
+  // Flat version: one benefit at a time while the section is on screen; hover picks one
+  var flat={i:0,timer:null,paused:false,off:false};
+  function setFlat(n){flat.i=n;items.forEach(function(it,k){it.classList.toggle('is-active',k===n);});}
+  function startFlat(){ if(flat.off||flat.timer||still) return; flat.timer=setInterval(function(){ if(!flat.paused) setFlat((flat.i+1)%items.length); },2600); }
+  function stopFlat(){ clearInterval(flat.timer); flat.timer=null; }
+  setFlat(0);
+  items.forEach(function(it,k){
+    it.addEventListener('mouseenter',function(){ if(flat.off) return; flat.paused=true; setFlat(k); });
+    it.addEventListener('mouseleave',function(){ flat.paused=false; });
+  });
+  if(!('IntersectionObserver' in window)){ startFlat(); return; }
+  new IntersectionObserver(function(e){ e[0].isIntersecting?startFlat():stopFlat(); },{threshold:.35}).observe(stage);
+
+  // 3D version: fetch three.js about a screen before the section arrives
+  var near=new IntersectionObserver(function(e){
+    if(!e[0].isIntersecting) return;
+    near.disconnect();
+    if(window.THREE) return build();
+    var s=document.createElement('script');
+    s.src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+    s.onload=build;
+    document.head.appendChild(s);
+  },{rootMargin:'800px 0px'});
+  near.observe(stage);
+
+  function build(){ try{ scene(window.THREE); }catch(err){} }
+
+  function scene(THREE){
+    var wrap=document.createElement('div'),cv=document.createElement('canvas');
+    wrap.className='careers-benefits_canvas';wrap.setAttribute('aria-hidden','true');wrap.appendChild(cv);
+    // throws when WebGL is not available, which leaves the flat version in place
+    var R=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true});
+    R.setPixelRatio(Math.min(2,window.devicePixelRatio||1));
+    var lk=document.createElementNS('http://www.w3.org/2000/svg','svg');
+    lk.setAttribute('class','careers-benefits_links');lk.setAttribute('aria-hidden','true');
+    stage.insertBefore(wrap,stage.firstChild);wrap.after(lk);
+    flat.off=true;stopFlat();
+    items.forEach(function(it){it.classList.remove('is-active');});
+    stage.classList.add('is-3d');
+
+    var S=new THREE.Scene(),C=new THREE.PerspectiveCamera(28,1,.1,100);
+    S.add(new THREE.AmbientLight(0xbfd8ff,.3));
+    var key=new THREE.DirectionalLight(0xffffff,.55);key.position.set(-4,6,5);S.add(key);
+    var rim=new THREE.DirectionalLight(0x5BD3A9,1.2);rim.position.set(5,2,-5);S.add(rim);
+    var fill=new THREE.DirectionalLight(0x7aa7ff,.3);fill.position.set(4,-2,4);S.add(fill);
+    // Sized to Figma 6825:7179: a slightly taller pyramid, so the upper parts read bigger, and a wider gap under the top
+    var H=3.45,RB=2.35,CUT=[0,1.35,2.35,H],SP=[0,.7,1.62],COL=[0x46B88F,0x5BD3A9,0xA9EED0],root=new THREE.Group();S.add(root);
+    var NAVY=new THREE.Color(0x0D1928),WHITE=new THREE.Color(0xffffff),LIGHT=new THREE.Color(0xD8FFEE);
+    function r(y){return RB*(1-y/H);}
+    function glowTex(a){var c=document.createElement('canvas');c.width=c.height=256;var x=c.getContext('2d'),g=x.createRadialGradient(128,128,0,128,128,128);
+      g.addColorStop(0,'rgba(169,238,208,'+a+')');g.addColorStop(.35,'rgba(91,211,169,'+(a*.45)+')');g.addColorStop(1,'rgba(91,211,169,0)');x.fillStyle=g;x.fillRect(0,0,256,256);return new THREE.CanvasTexture(c);}
+    var GT=glowTex(1);
+    // Three slices of one pyramid; the faces darken toward the bottom of each slice, the cut faces hold the light
+    var tiers=CUT.slice(0,3).map(function(y0,i){
+      var y1=CUT[i+1],h=y1-y0,g=i===2?new THREE.ConeGeometry(r(y0),h,4,1):new THREE.CylinderGeometry(r(y1),r(y0),h,4,1);
+      g.rotateY(Math.PI/4);
+      var pos=g.attributes.position,col=new Float32Array(pos.count*3),base=new THREE.Color(COL[i]),tmp=new THREE.Color();
+      for(var k=0;k<pos.count;k++){var t=(pos.getY(k)+h/2)/h;tmp.copy(base).lerp(NAVY,.32*(1-t)).lerp(WHITE,.04*t);col[k*3]=tmp.r;col[k*3+1]=tmp.g;col[k*3+2]=tmp.b;}
+      g.setAttribute('color',new THREE.BufferAttribute(col,3));
+      var side=new THREE.MeshStandardMaterial({vertexColors:true,roughness:.78,metalness:0,flatShading:true,emissive:COL[i],emissiveIntensity:0});
+      var capT=new THREE.MeshBasicMaterial({color:base.clone()}),capB=new THREE.MeshBasicMaterial({color:base.clone()});
+      var mesh=new THREE.Mesh(g,[side,capT,capB]),e=new THREE.LineSegments(new THREE.EdgesGeometry(g),new THREE.LineBasicMaterial({color:0xE9FBF3,transparent:true,opacity:.3}));
+      var grp=new THREE.Group();grp.add(mesh);grp.add(e);
+      grp.userData={i:i,base:y0+h/2,h:h,r:r(y0),rt:r(y1),mesh:mesh,edge:e,side:side,capT:capT,capB:capB,col:base,k:0,dim:1};root.add(grp);return grp;
+    });
+    // Light that leaks out of the top cut once the parts come apart (none between Trust and Rest)
+    var gaps=[1].map(function(i){
+      var pl=new THREE.PointLight(0x7FE8C0,0,3.2,2);S.add(pl);
+      var sp=new THREE.Mesh(new THREE.PlaneGeometry(1,1),new THREE.MeshBasicMaterial({map:GT,transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,opacity:0}));
+      sp.rotation.x=-Math.PI/2;S.add(sp);return {i:i,pl:pl,sp:sp};
+    });
+    // Soft light on the floor under the pyramid. The canvas runs past its box (see size) so this fades out before any edge.
+    var pool=new THREE.Mesh(new THREE.PlaneGeometry(8,8),new THREE.MeshBasicMaterial({map:glowTex(.32),transparent:true,depthWrite:false}));
+    pool.rotation.x=-Math.PI/2;pool.position.y=-.02;S.add(pool);
+    // A little light dust rising through the gaps
+    var PN=160,pg=new THREE.BufferGeometry(),pp=new Float32Array(PN*3),ps=[];
+    for(var q=0;q<PN;q++){var a=Math.random()*6.283,rr=Math.sqrt(Math.random())*2.2;pp[q*3]=Math.cos(a)*rr;pp[q*3+1]=Math.random()*5;pp[q*3+2]=Math.sin(a)*rr;ps.push(.15+Math.random()*.35);}
+    pg.setAttribute('position',new THREE.BufferAttribute(pp,3));
+    var dc=document.createElement('canvas');dc.width=dc.height=64;var dx=dc.getContext('2d'),dg=dx.createRadialGradient(32,32,0,32,32,32);dg.addColorStop(0,'rgba(220,255,240,1)');dg.addColorStop(1,'rgba(169,238,208,0)');dx.fillStyle=dg;dx.fillRect(0,0,64,64);
+    var dust=new THREE.Points(pg,new THREE.PointsMaterial({size:.07,map:new THREE.CanvasTexture(dc),transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,opacity:0}));S.add(dust);
+
+    var W=0,Hh=0,CW=0,ol=0,ot=0,mobile=false;
+    function size(){
+      W=wrap.clientWidth;CW=cv.clientWidth;Hh=cv.clientHeight;ol=cv.offsetLeft;ot=cv.getBoundingClientRect().top-wrap.getBoundingClientRect().top;mobile=window.innerWidth<=991;
+      // The camera frames the box; the extra canvas above it (room for the lifted top part), below it (more floor) and out to the
+      // screen edges on phones only shows more of the same scene. Desktop uses a narrower lens so the pyramid fills the box as in Figma.
+      C.fov=mobile?28:25;
+      R.setSize(CW,Hh,false);C.setViewOffset(W,wrap.clientHeight,ol,ot,CW,Hh);
+      if(mobile){labels.forEach(function(l){l.style.transform='';});lk.innerHTML='';}
+    }
+    size();window.addEventListener('resize',size);
+
+    var split=0,splitT=0,rot=-.5,vel=0,focus=-1,hover=-1,t=0,DUR=3800,live=false,inView=false,visible=false,running=false,last=performance.now(),
+        ray=new THREE.Raycaster(),mp=new THREE.Vector2(),hold=false,drag=false,dx0=0,moved=0,cx=0,cy=0,tcx=0,tcy=0,v=new THREE.Vector3();
+    function setFocus(i){focus=i;t=0;labels.forEach(function(l,k){l.classList.toggle('is-active',k===i);});}
+    function ease(x){return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;}
+    function back(x){var c1=1.5,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2);}
+    function proj(x,y,z){v.set(x,y,z).project(C);return [(v.x+1)/2*CW+ol,(1-v.y)/2*Hh+ot];}
+    // Each benefit sits beside its part with a dashed line to the edge; Trust on the left, Rest and Growth on the right
+    function place(){
+      if(mobile) return;
+      var s='';
+      tiers.forEach(function(g,i){
+        var u=g.userData,y=g.position.y,side=i===1?-1:1,c=proj(0,y,0),edge=proj(side*(u.r+u.rt)/2*1.02,y,0),lx=edge[0]+side*80,l=labels[i];
+        var lw=l.offsetWidth,lh=l.offsetHeight,x=side>0?lx+16:lx-16-lw;
+        x=Math.max(0,Math.min(W-lw,x));
+        l.style.transform='translate('+x.toFixed(1)+'px,'+(c[1]-lh/2).toFixed(1)+'px)';
+        var a=Math.max(0,Math.min(1,(split-.55)/.45)),on=focus===i;
+        s+='<line x1="'+edge[0].toFixed(1)+'" y1="'+c[1].toFixed(1)+'" x2="'+(edge[0]+(lx-edge[0])*a).toFixed(1)+'" y2="'+c[1].toFixed(1)+'" style="opacity:'+(a*(on?1:.45))+'"/>';
+        s+='<circle cx="'+edge[0].toFixed(1)+'" cy="'+c[1].toFixed(1)+'" r="'+(on?4:3)+'" style="opacity:'+a+'"/>';
+      });
+      lk.innerHTML=s;
+    }
+    function frame(n){
+      var dt=Math.min(50,n-last)/1000,tt=n/1000;last=n;
+      if(inView&&splitT<1)splitT=Math.min(1,splitT+dt/1.8);
+      split=still?(inView?1:0):back(ease(splitT));
+      stage.classList.toggle('is-split',split>.6);
+      // Turns on its own, can be dragged and let go
+      if(!drag){vel+=((still?0:.2)-vel)*Math.min(1,dt*1.5);rot+=vel*dt;}
+      root.rotation.y=rot;
+      cx+=(tcx-cx)*Math.min(1,dt*3);cy+=(tcy-cy)*Math.min(1,dt*3);
+      C.position.set(cx*.8,(mobile?3.2:3.0)-cy*.5,mobile?12.5:13.2);C.lookAt(0,mobile?2.55:2.36,0);
+      var act=hover>=0?hover:focus;
+      tiers.forEach(function(g,i){
+        var u=g.userData,on=act===i;
+        u.k+=((on?1:0)-u.k)*Math.min(1,dt*6);
+        var bob=still?0:Math.sin(tt*1.1+i*1.7)*.035*split;
+        g.position.y=u.base+split*SP[i]+u.k*(.14+u.h*.06)+bob;
+        // The part in focus turns square to the viewer and holds there while the rest keeps turning
+        var tw=split*(i-1)*.6,Q=Math.PI/2;
+        if(on&&u.w0==null)u.w0=Math.PI/4+Math.round((rot+tw-Math.PI/4)/Q)*Q;
+        if(!on&&u.k<.01)u.w0=null;
+        g.rotation.y=u.w0==null?tw:tw+(u.w0-rot-tw)*ease(Math.min(1,u.k));
+        var sc=1+u.k*.12;g.scale.set(sc,sc,sc);
+        u.side.emissiveIntensity=u.k*.04;
+        var dm=act>=0&&split>.6&&!on?.68:.95;u.dim+=(dm-u.dim)*Math.min(1,dt*5);u.side.color.setScalar(u.dim);
+        // The cut faces light up as the parts open; the very bottom stays dark
+        var glow=Math.max(0,Math.min(1,split));
+        u.capT.color.copy(u.col).lerp(LIGHT,glow*(i<2?.9:0)).multiplyScalar(.55+.45*u.dim);
+        u.capB.color.copy(u.col).lerp(LIGHT,i>0?glow*.75:0).multiplyScalar(i>0?(.55+.45*u.dim):.35);
+        u.edge.material.opacity=.14+u.k*.55;
+      });
+      gaps.forEach(function(gp){
+        var i=gp.i,a=tiers[i],b=tiers[i+1],y=(a.position.y+a.userData.h/2+b.position.y-b.userData.h/2)/2,o=Math.max(0,Math.min(1,split));
+        gp.pl.position.set(0,y,0);gp.pl.intensity=o*.7*(1+.15*Math.sin(tt*2+i));
+        var s=a.userData.rt*2.1*(.6+.4*o);gp.sp.position.set(0,y,0);gp.sp.scale.set(s,s,1);gp.sp.material.opacity=o*.45;
+      });
+      var pa=pg.attributes.position.array;
+      for(var q=0;q<PN;q++){pa[q*3+1]+=ps[q]*dt*(still?0:1);if(pa[q*3+1]>5.2)pa[q*3+1]=0;}
+      pg.attributes.position.needsUpdate=true;dust.material.opacity=Math.max(0,Math.min(1,split))*.7;dust.rotation.y=-tt*.05;
+      if(live&&!still&&!hold&&hover<0&&!drag){t+=dt*1000;if(t>=DUR)setFocus((focus+1)%3);}
+      R.render(S,C);place();
+    }
+    // Only draw while the section is on screen
+    function loop(n){ if(!visible){running=false;return;} frame(n); requestAnimationFrame(loop); }
+    new IntersectionObserver(function(e){
+      visible=e[0].isIntersecting;
+      if(visible&&!running){running=true;last=performance.now();requestAnimationFrame(loop);}
+    }).observe(stage);
+    new IntersectionObserver(function(e,o){
+      if(!e[0].isIntersecting) return;
+      inView=true;o.disconnect();
+      setTimeout(function(){setFocus(0);live=true;},1900);
+    },{threshold:.35}).observe(stage);
+
+    function pick(e){
+      var b=cv.getBoundingClientRect();mp.set((e.clientX-b.left)/b.width*2-1,-(e.clientY-b.top)/b.height*2+1);
+      ray.setFromCamera(mp,C);var h=ray.intersectObjects(tiers.map(function(g){return g.userData.mesh;}));
+      return h.length?h[0].object.parent.userData.i:-1;
+    }
+    wrap.addEventListener('pointerdown',function(e){drag=true;dx0=e.clientX;moved=0;wrap.setPointerCapture(e.pointerId);wrap.style.cursor='grabbing';});
+    wrap.addEventListener('pointermove',function(e){
+      var b=wrap.getBoundingClientRect();tcx=Math.max(-.5,Math.min(.5,(e.clientX-b.left)/b.width-.5));tcy=Math.max(-.5,Math.min(.5,(e.clientY-b.top)/b.height-.5));
+      if(drag){var d=e.clientX-dx0;dx0=e.clientX;moved+=Math.abs(d);rot+=d*.008;vel=d*.5;return;}
+      if(e.pointerType==='touch') return;
+      hover=pick(e);wrap.style.cursor=hover>=0?'pointer':'grab';if(hover>=0&&hover!==focus)setFocus(hover);
+    });
+    wrap.addEventListener('pointerup',function(e){
+      if(!drag) return;
+      drag=false;wrap.style.cursor='grab';vel=Math.max(-3,Math.min(3,vel));
+      if(moved<4){var i=pick(e);setFocus(i>=0?i:(focus+1)%3);}
+    });
+    // A scroll that starts on the canvas (touch) ends the drag without picking a part
+    wrap.addEventListener('pointercancel',function(){drag=false;wrap.style.cursor='grab';});
+    wrap.addEventListener('pointerleave',function(){hover=-1;tcx=0;tcy=0;});
+    labels.forEach(function(l,i){
+      l.addEventListener('pointerenter',function(e){if(e.pointerType!=='touch'){hold=true;setFocus(i);}});
+      l.addEventListener('pointerleave',function(){hold=false;});
+      l.addEventListener('click',function(){setFocus(i);});
+    });
+  }
+})();
+</script>
+<script>
+/* Careers hero: a field of small Nues marks (nues-careers-hero-animation.html). At rest they are all but invisible; they only light
+   up around the cursor, in the slow wave rising from the floor and in the ripple a click sends. Grid, strength and the soft oval
+   kept clear around the headline follow that file. */
+(function(){
+  var hero=document.querySelector('.section_careers-hero'), box=hero&&hero.querySelector('.careers-hero_field');
+  if(!box||!window.requestAnimationFrame) return;
+  var cv=document.createElement('canvas'); cv.setAttribute('aria-hidden','true'); box.appendChild(cv);
+  var cx=cv.getContext('2d'); if(!cx) return;
+  var lamp=hero.querySelector('.careers-hero_lamp'),
+      touch=window.matchMedia('(hover: none)').matches, still=window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+      base=touch?.03:.012, waveK=touch?.22:.07, NL=new Path2D('M0 0L66.7 66.7H46A13 13 0 0 0 33 79.7V100H9A9 9 0 0 1 0 91Z'), NR=new Path2D('M66.7 0H91A9 9 0 0 1 100 9V100L66.7 66.7Z'),
+      W=0,H=0,D=1,G=69,S=20,tiles=[],rips=[],px=-9999,py=-9999,qx=-9999,qy=-9999,torch=0,t0=performance.now(),on=false,raf=0;
+  function size(){
+    D=Math.min(window.devicePixelRatio||1,2); W=box.clientWidth; H=box.clientHeight; cv.width=Math.round(W*D); cv.height=Math.round(H*D);
+    G=W<800?44:62; S=W<800?12:16; tiles=[];
+    var cols=Math.ceil(W/G)+1, rows=Math.ceil(H/G)+1, ox=(W-(cols-1)*G)/2, oy=(H-(rows-1)*G)/2+G*.25;
+    for(var j=0;j<rows;j++) for(var i=0;i<cols;i++){
+      // clear around the headline, fuller towards the edges; calm under the nav
+      var x=ox+i*G, y=oy+j*G, dx=(x-W*.5)/(W*.3), dy=(y-H*.52)/(H*.24),
+          m=Math.min(1,Math.max(0,(Math.sqrt(dx*dx+dy*dy)-.72)/.7));
+      if(y<90) m*=.4;
+      tiles.push({x:x,y:y,m:m,ph:(i*7+j*13)%17/17,v:0});
+    }
+  }
+  function draw(now){
+    raf=0;
+    var t=still?0:(now-t0)/1000;
+    if(still){ qx=px; qy=py; torch=px>-999?1:0; } else { qx+=(px-qx)*.12; qy+=(py-qy)*.12; }
+    cx.setTransform(D,0,0,D,0,0); cx.clearRect(0,0,W,H);
+    if(!still) torch+=((px>-999?1:0)-torch)*.06;
+    rips=rips.filter(function(r){return t-r.t<1.6;});
+    if(lamp){ lamp.style.transform='translate('+qx.toFixed(1)+'px,'+qy.toFixed(1)+'px)'; lamp.style.opacity=torch.toFixed(3); }
+    var R=(t*190)%(Math.hypot(W,H)*.75+600)-300, cxw=W/2, cyw=H*1.05;
+    for(var k=0;k<tiles.length;k++){
+      var p=tiles[k]; if(p.m<=.001) continue;
+      var dw=Math.hypot(p.x-cxw,p.y-cyw)-R, wave=Math.exp(-(dw*dw)/(2*90*90));
+      var dc=Math.hypot(p.x-qx,p.y-qy), hov=Math.exp(-(dc*dc)/(2*150*150))*torch;
+      var tw=.5+.5*Math.sin(t*.8+p.ph*6.28);
+      var intro=0; if(t<3.2){ var di=Math.hypot(p.x-cxw,p.y-cyw)-t*560; intro=Math.exp(-(di*di)/(2*110*110))*.5*(1-t/3.2); }
+      var rip=0; for(var q=0;q<rips.length;q++){ var rp=rips[q], age=t-rp.t, dr=Math.hypot(p.x-rp.x,p.y-rp.y)-age*620; rip+=Math.exp(-(dr*dr)/(2*55*55))*.75*Math.max(0,1-age/1.5); }
+      var target=Math.min(1,base+tw*base*.6+wave*waveK+hov*.95+intro+rip);
+      p.v+=(target-p.v)*(target>p.v?.22:.035);
+      var a=p.v*p.m, sc=S*(1+p.v*.35)/100;
+      cx.save(); cx.translate(p.x,p.y); cx.scale(sc,sc); cx.translate(-50,-50);
+      cx.fillStyle='rgba(169,238,208,'+a.toFixed(3)+')'; cx.fill(NL);
+      cx.fillStyle='rgba(223,255,239,'+(a*.82).toFixed(3)+')'; cx.fill(NR);
+      cx.restore();
+    }
+    if(on&&!still) raf=requestAnimationFrame(draw);
+  }
+  function kick(){ if(!raf) raf=requestAnimationFrame(draw); }
+  size();
+  var rt=0; window.addEventListener('resize',function(){ clearTimeout(rt); rt=setTimeout(function(){ size(); kick(); },120); });
+  hero.addEventListener('pointermove',function(e){ if(e.pointerType==='touch') return; var r=hero.getBoundingClientRect(); px=e.clientX-r.left; py=e.clientY-r.top; if(qx<-999){qx=px;qy=py;} if(still) kick(); });
+  hero.addEventListener('pointerleave',function(){ px=-9999; py=-9999; if(still) kick(); });
+  hero.addEventListener('pointerdown',function(e){ if(still||(e.target.closest&&e.target.closest('a,button'))) return; var r=hero.getBoundingClientRect(); rips.push({x:e.clientX-r.left,y:e.clientY-r.top,t:(performance.now()-t0)/1000}); });
+  // only draw while the hero is on screen
+  if('IntersectionObserver' in window){ new IntersectionObserver(function(e){ on=e[0].isIntersecting; if(on) kick(); },{rootMargin:'100px 0px'}).observe(hero); } else { on=true; kick(); }
+  if(still){ on=true; kick(); }
+})();
+</script>
+<script>
+/* Careers hero intro (nues-careers-hero-animation.html): the headline rises in line by line, the photos deal out from behind it
+   and settle on the board, and on desktop they drift a little with the cursor. CSS for each step is in the page head. */
+(function(){
+  var hero=document.querySelector('.section_careers-hero');
+  if(!hero) return;
+  var cards=[].slice.call(hero.querySelectorAll('.careers-hero_card')),
+      still=!!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  // Headline: one masked line per <br>, so each line can rise into view (screen readers still read one heading)
+  var h=hero.querySelector('h1');
+  if(h&&!h.querySelector('.careers-hero_line')){
+    var lines=[[]];
+    [].slice.call(h.childNodes).forEach(function(n){ if(n.nodeName==='BR'){ h.removeChild(n); lines.push([]); } else { lines[lines.length-1].push(n); } });
+    lines.forEach(function(ns){
+      if(!ns.some(function(n){ return n.nodeType===1||(n.textContent||'').trim(); })) return;
+      var l=document.createElement('span'),t=document.createElement('span');
+      l.className='careers-hero_line'; t.className='careers-hero_line-text';
+      ns.forEach(function(n){ t.appendChild(n); }); l.appendChild(t); h.appendChild(l);
+    });
+    // keep a space between the lines in the heading's text (search snippets, screen readers)
+    var ts=h.querySelectorAll('.careers-hero_line-text');
+    for(var k=0;k<ts.length-1;k++) ts[k].appendChild(document.createTextNode(' '));
+  }
+  hero.classList.add('is-split');
+  if(still){ hero.classList.add('is-in','is-settled'); return; }
+  // Photos: remember each one's tilt and how far it sits from the deal point (centre, a little below the middle)
+  var hb=hero.getBoundingClientRect(),ox=hb.left+hb.width/2,oy=hb.top+hb.height*.55;
+  cards.forEach(function(c,i){
+    var m=(getComputedStyle(c).transform||'').match(/matrix\(([^)]+)\)/),r=0,b=c.getBoundingClientRect();
+    if(m){ var p=m[1].split(','); r=Math.atan2(parseFloat(p[1]),parseFloat(p[0]))*180/Math.PI; }
+    c.style.setProperty('--r',r.toFixed(2)+'deg');
+    c.style.setProperty('--i',i);
+    if(b.width){ c.style.setProperty('--fx',Math.round(ox-(b.left+b.width/2))+'px'); c.style.setProperty('--fy',Math.round(oy-(b.top+b.height/2))+'px'); }
+  });
+  hero.classList.add('is-pre');
+  void hero.offsetWidth;
+  requestAnimationFrame(function(){ setTimeout(function(){
+    hero.classList.remove('is-pre'); hero.classList.add('is-in','is-dealing');
+    setTimeout(function(){ hero.classList.remove('is-dealing'); hero.classList.add('is-settled'); },500+cards.length*70+1400);
+  },80); });
+  // Desktop: ease --mx / --my toward the cursor (-1..1); the CSS moves each photo by its depth
+  var fine=window.matchMedia('(min-width: 992px) and (hover: hover)'),tx=0,ty=0,x=0,y=0,raf=0;
+  function loop(){
+    raf=0; x+=(tx-x)*.08; y+=(ty-y)*.08;
+    hero.style.setProperty('--mx',x.toFixed(3)); hero.style.setProperty('--my',y.toFixed(3));
+    if(Math.abs(tx-x)>.002||Math.abs(ty-y)>.002) raf=requestAnimationFrame(loop);
+  }
+  hero.addEventListener('pointermove',function(e){
+    if(e.pointerType!=='mouse'||!fine.matches) return;
+    var r=hero.getBoundingClientRect(); tx=(e.clientX-r.left)/r.width*2-1; ty=(e.clientY-r.top)/r.height*2-1;
+    if(!raf) raf=requestAnimationFrame(loop);
+  });
+  hero.addEventListener('pointerleave',function(){ tx=0; ty=0; if(!raf) raf=requestAnimationFrame(loop); });
+})();
+</script>

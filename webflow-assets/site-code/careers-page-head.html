@@ -1,4 +1,76 @@
 <script>setTimeout(function(){var h=document.querySelector('.section_careers-hero');if(h&&!h.classList.contains('is-in')){h.classList.add('is-split','is-in','is-settled');}},4000);</script>
+<script>
+/* Careers hero intro (nues-careers-hero-animation.html), moved here from the page footer on 26.11.2026 so it starts as soon as
+   the hero has been read: the footer scripts only run after jQuery, webflow.js and GSAP have loaded, so on phones the headline
+   and the button waited 2-4 s. Same steps and timing as before: the headline rises in line by line, the photos deal out from
+   behind it and settle on the board, and on desktop they drift a little with the cursor. CSS for each step is below. */
+(function(){
+  var started=false;
+  function intro(hero){
+    var cards=[].slice.call(hero.querySelectorAll('.careers-hero_card')),
+        still=!!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    // Headline: one masked line per <br>, so each line can rise into view (screen readers still read one heading)
+    var h=hero.querySelector('h1');
+    if(h&&!h.querySelector('.careers-hero_line')){
+      var lines=[[]];
+      [].slice.call(h.childNodes).forEach(function(n){ if(n.nodeName==='BR'){ h.removeChild(n); lines.push([]); } else { lines[lines.length-1].push(n); } });
+      lines.forEach(function(ns){
+        if(!ns.some(function(n){ return n.nodeType===1||(n.textContent||'').trim(); })) return;
+        var l=document.createElement('span'),t=document.createElement('span');
+        l.className='careers-hero_line'; t.className='careers-hero_line-text';
+        ns.forEach(function(n){ t.appendChild(n); }); l.appendChild(t); h.appendChild(l);
+      });
+      // keep a space between the lines in the heading's text (search snippets, screen readers)
+      var ts=h.querySelectorAll('.careers-hero_line-text');
+      for(var k=0;k<ts.length-1;k++) ts[k].appendChild(document.createTextNode(' '));
+    }
+    hero.classList.add('is-split');
+    if(still){ hero.classList.add('is-in','is-settled'); return; }
+    // Photos: remember each one's tilt and how far it sits from the deal point (centre, a little below the middle)
+    var hb=hero.getBoundingClientRect(),ox=hb.left+hb.width/2,oy=hb.top+hb.height*.55;
+    cards.forEach(function(c,i){
+      var m=(getComputedStyle(c).transform||'').match(/matrix\(([^)]+)\)/),r=0,b=c.getBoundingClientRect();
+      if(m){ var p=m[1].split(','); r=Math.atan2(parseFloat(p[1]),parseFloat(p[0]))*180/Math.PI; }
+      c.style.setProperty('--r',r.toFixed(2)+'deg');
+      c.style.setProperty('--i',i);
+      if(b.width){ c.style.setProperty('--fx',Math.round(ox-(b.left+b.width/2))+'px'); c.style.setProperty('--fy',Math.round(oy-(b.top+b.height/2))+'px'); }
+    });
+    hero.classList.add('is-pre');
+    void hero.offsetWidth;
+    requestAnimationFrame(function(){ setTimeout(function(){
+      hero.classList.remove('is-pre'); hero.classList.add('is-in','is-dealing');
+      setTimeout(function(){ hero.classList.remove('is-dealing'); hero.classList.add('is-settled'); },500+cards.length*70+1400);
+    },80); });
+    // Desktop: ease --mx / --my toward the cursor (-1..1); the CSS moves each photo by its depth
+    var fine=window.matchMedia('(min-width: 992px) and (hover: hover)'),tx=0,ty=0,x=0,y=0,raf=0;
+    function loop(){
+      raf=0; x+=(tx-x)*.08; y+=(ty-y)*.08;
+      hero.style.setProperty('--mx',x.toFixed(3)); hero.style.setProperty('--my',y.toFixed(3));
+      if(Math.abs(tx-x)>.002||Math.abs(ty-y)>.002) raf=requestAnimationFrame(loop);
+    }
+    hero.addEventListener('pointermove',function(e){
+      if(e.pointerType!=='mouse'||!fine.matches) return;
+      var r=hero.getBoundingClientRect(); tx=(e.clientX-r.left)/r.width*2-1; ty=(e.clientY-r.top)/r.height*2-1;
+      if(!raf) raf=requestAnimationFrame(loop);
+    });
+    hero.addEventListener('pointerleave',function(){ tx=0; ty=0; if(!raf) raf=requestAnimationFrame(loop); });
+  }
+  // the hero has been read completely once anything after it exists
+  function closed(el){ for(var n=el;n&&n!==document.documentElement;n=n.parentNode){ if(n.nextSibling) return true; } return false; }
+  function check(){
+    if(started) return;
+    var hero=document.querySelector('.section_careers-hero');
+    if(hero&&closed(hero)){ started=true; if(mo) mo.disconnect(); intro(hero); }
+  }
+  var mo=window.MutationObserver?new MutationObserver(check):null;
+  if(mo) mo.observe(document.documentElement,{childList:true,subtree:true});
+  document.addEventListener('DOMContentLoaded',function(){
+    if(started) return;
+    var hero=document.querySelector('.section_careers-hero');
+    started=true; if(mo) mo.disconnect(); if(hero) intro(hero);
+  });
+})();
+</script>
 <style>
 /* Careers: what Webflow classes can't express. Classes live in the Style Manager (careers-*). */
 /* Envelope (closed until hover): the back has a flat top; the flap lies over the pocket, closed. On hover / keyboard focus the flap
@@ -83,7 +155,7 @@
 @media (max-width:767px){.careers-jobs_list:has(>.careers-jobs_empty){margin-top:min(3rem,7.47%)}}
 @media (max-width:479px){.careers-jobs_list:has(>.careers-jobs_empty){margin-top:10.7%}}
 .careers-section_component:has(.careers-jobs_empty) .careers-jobs_filters,.careers-section_component:has(.careers-jobs_empty) .careers-jobs_more-text{display:none}
-/* Hero intro (nues-careers-hero-animation.html). The footer script splits the heading into lines, then the photos deal out from
+/* Hero intro (nues-careers-hero-animation.html). The script at the top splits the heading into lines, then the photos deal out from
    behind the headline (is-pre -> is-in) and settle on the board (is-settled). While entrance animations are on (html.reveal-on),
    the photos and copy wait hidden until the script starts them. */
 .reveal-on .section_careers-hero:not(.is-in) .careers-hero_card,.reveal-on .section_careers-hero:not(.is-in) .hero_pill,.reveal-on .section_careers-hero:not(.is-in) .careers-hero_content>.cta-v2_button{opacity:0}
