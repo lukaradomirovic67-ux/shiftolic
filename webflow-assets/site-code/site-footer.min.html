@@ -28,3 +28,21 @@
 <script>
 (function(){function run(){document.querySelectorAll('h1 br,h2 br,h3 br,[class*="heading-style-h"] br').forEach(function(br){var nx=br.nextSibling;while(nx&&nx.nodeType===3&&!nx.nodeValue.trim())nx=nx.nextSibling;if(nx&&nx.nodeType===1&&nx.classList.contains('text-gradient')){br.setAttribute('data-keep','');return;}var p=br.previousSibling,n=br.nextSibling;if((p&&p.nodeType===3&&/\s$/.test(p.nodeValue))||(n&&n.nodeType===3&&/^\s/.test(n.nodeValue)))return;br.parentNode.insertBefore(document.createTextNode(' '),br);});document.querySelectorAll('.cta-v2_subtitle br').forEach(function(br){var n=br.nextSibling,m=n&&n.nodeType===3&&/^\s*([—–])\s*/.exec(n.nodeValue);if(m){n.nodeValue=n.nodeValue.slice(m[0].length);br.parentNode.insertBefore(document.createTextNode(' '+m[1]),br);}});document.documentElement.classList.add('nues-hb');}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();})();
 </script>
+<!-- Former registered site scripts NuesCmsDerived 1.0.0 and nuesA11yFixes 1.0.1 (applied in the footer), inline here since 26.11.2026: two fewer requests per page. Readable: nues-cms-derived.js and a11y-fixes.js in the repo. -->
+<script>/* Nues: values that come from other Our Works fields (fields removed 7.11.).
+   Website domain = Website link without https://, www. and the end slash:
+   Home Every project gallery caption (data-gallery-domain) and the Our Work slider address bar (.ow-browser_host).
+   Quote signature = first name + initial of Quote author ("Or Moshkovitz" -> "Or M.") on the case page. */
+(function () {
+  function host(u) { return (u || '').trim().replace(/^https?:\/\/(www\.)?/, '').replace(/\/+$/, ''); }
+  function run() {
+    document.querySelectorAll('[data-gallery-domain]').forEach(function (e) { e.setAttribute('data-gallery-domain', host(e.getAttribute('data-gallery-domain'))); });
+    document.querySelectorAll('.ow-browser_host').forEach(function (e) { e.textContent = host(e.textContent); });
+    document.querySelectorAll('.cs-quote_sig').forEach(function (e) {
+      var w = e.textContent.trim().split(/\s+/);
+      if (w[0]) e.textContent = w.length > 1 ? w[0] + ' ' + w[w.length - 1].charAt(0) + '.' : w[0];
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
+})();</script>
+<script>(function(){var D=matchMedia('(min-width: 992px) and (hover: hover)'),R=['aria-haspopup','aria-controls','aria-expanded'],g=(e,k)=>e.getAttribute(k),s=(e,k,v)=>{if(g(e,k)!==v)e.setAttribute(k,v);},x=(e,k)=>e.removeAttribute(k);function N(){document.querySelectorAll('.navbar2_dropdwn-toggle.w-dropdown-toggle').forEach((t)=>{var a=t.querySelector('.navbar2_toggle-link');if(!a)return;t._c=t._c||g(t,'aria-controls');function P(){var o=t.classList.contains('w--open')?'true':'false';if(D.matches){x(t,'role');s(t,'tabindex','-1');R.forEach((k)=>x(t,k));x(a,'role');if(!a.hasAttribute('href')&&a.dataset.nh)s(a,'href',a.dataset.nh);x(a,'tabindex');s(a,'aria-haspopup','menu');if(t._c)s(a,'aria-controls',t._c);s(a,'aria-expanded',o);}else{s(t,'role','button');s(t,'tabindex','0');s(t,'aria-haspopup','menu');if(t._c)s(t,'aria-controls',t._c);s(t,'aria-expanded',o);R.forEach((k)=>x(a,k));if(a.hasAttribute('href')){a.dataset.nh=g(a,'href');x(a,'href');}s(a,'role','none');x(a,'tabindex');}}P();if(!t._a){t._a=1;new MutationObserver(P).observe(t,{attributes:true,attributeFilter:['role','tabindex','class'].concat(R)});t.addEventListener('focus',()=>{if(D.matches)a.focus({preventScroll:true});});}});}function G(){document.querySelectorAll('[data-project-gallery] .home-projects_screen-frame[role="button"]').forEach((f)=>['role','tabindex','aria-label'].forEach((k)=>x(f,k)));}function U(){N();G();}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>setTimeout(U,0));else setTimeout(U,0);addEventListener('load',U);if(D.addEventListener)D.addEventListener('change',U);})();</script>
