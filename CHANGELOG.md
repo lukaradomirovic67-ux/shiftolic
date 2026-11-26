@@ -3,6 +3,21 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 26.11.2026: PageSpeed korak 2, oblici na servisnim stranicama i podnaslov na Let's talk bez fade-a (objavljeno na staging)
+Tvoji odgovori: „Da, izranjanje bez fade-a“ i „Da, i podnaslov bez fade-a“. Rezerva: `backup/shapes-rise-2026-11-26/` (site head pre izmene, ceo zapis IX3 interakcije, objavljeni HTML 6 stranica pre izmene, izmereni pokret oblika pre i posle).
+
+| Gde | Pre | Posle |
+|---|---|---|
+| IX3 interakcija „Services hero shapes rise“ (`i-ac849a09`, stranice Design & Development, Webflow Development, SEO & AEO, Growth, Services) | na učitavanju stranice oblici `svc-hero_shape` prelaze iz providnog i izranjaju (26% visine, 1,6 s, expo-out, 0,15 s pa 0,14 s razmak); Webflow ih krije (`visibility:hidden`) dok se `webflow.js` ne pokrene | uklonjena |
+| Site head (`site-head.min.html`, čitljivo `site-head.html`) | — | isti pokret u CSS-u: `translate` 26% → 0, 1,6 s, `cubic-bezier(.16,1,.3,1)` (expo-out), kašnjenja 0,15 / 0,29 / 0,43 s, bez fade-a; kod reduced motion bez animacije (kao IX3 „skip to end“) |
+| Site head, pravilo za LCP bez fade-a | Let's talk: samo H1 | Let's talk: H1 i podnaslov (`.lt-hero_text .hero_subtitle`) |
+
+- Izmereno pre/posle (desktop 1440, bez usporavanja): oblici su bili sakriveni do 1,1 s, pa su se pojavljivali iz providnog. Sada su vidljivi od prvog prikaza (0,22 s) i počinju da izranjaju posle 0,15 s. Kriva i trajanje isti (expo-out 1,6 s), samo bez fade-a.
+- Izgled posle animacije: 0 piksela razlike (prag 16) na 4 servisne stranice i na Let's talk, na 1440 i 390 px. Na Services razlika je samo na ivici gornjeg desnog ugaonog oblika, koji se sam pomera. Na toj stranici nema oblika, a interakcija je tu imala samo skrivanje bez cilja.
+- Objavljeni site head je znak po znak isti kao `site-head.min.html` (6 stranica). Webflow-ovo skrivanje oblika više ne postoji ni na jednoj stranici. JS grešaka nema (12 učitavanja).
+- PageSpeed posle objave, telefon: Design & Development 72 → 94 (LCP 6,3 → 3,0 s), SEO & AEO 77 → 93 (6,4 → 3,2 s), Growth 77 → 93 (6,4 → 3,2 s), Webflow Development 73 → 88–93 (6,4 → 3,2–3,9 s; prva dva merenja su bila 68, kad je PageSpeed server kasnio sa prvim prikazom), Let's talk 69 → 91 (LCP 15,1 → 2,8 s). Desktop: servisne 96–100, Let's talk 99. Brojke su u `reports/psi-2026-11-26/step2/`.
+- LCP je sada jednak prvom prikazu (FCP) na svih 5 stranica.
+
 ## 26.11.2026: PageSpeed korak 1, slike u prvom ekranu se učitavaju odmah (objavljeno na staging)
 Tvoje „ajmo korak po korak da poboljšavamo stvari do savršenstva“, korak bez promene izgleda. Rezerva: `backup/lcp-eager-2026-11-26/` (objavljeni HTML 5 stranica pre izmene).
 
