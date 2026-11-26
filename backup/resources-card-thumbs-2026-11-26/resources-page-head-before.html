@@ -1,0 +1,73 @@
+<style>
+/* Integrations with Webflow (nues-integrations-section): layout and default state are native classes; this adds the runtime states.
+   --int-c is the selected tool's colour (set by the script from the tile's data-int-color). */
+[data-integrations]{--int-c:#635BFF}
+.integrations_fx{transition:opacity .25s,transform .45s cubic-bezier(.22,1,.36,1)}
+.integrations_fx.is-out{opacity:0;transform:translateY(8px)}
+.integrations_bar,.integrations_dot{background-color:var(--int-c);transition:background-color .3s}
+.integrations_info.is-auto .integrations_bar{animation:intProg 3.6s linear forwards}
+@keyframes intProg{to{transform:scaleX(1)}}
+.integrations_orbit.is-ready .integrations_tile{will-change:transform}
+.integrations_tile{transition:filter .35s,box-shadow .35s}
+.integrations_tile::before{content:"";position:absolute;inset:-14%;border-radius:28%}
+.integrations_tile-icon{transition:transform .45s cubic-bezier(.22,1,.36,1)}
+.integrations_orbit.is-hold .integrations_tile{filter:grayscale(1) contrast(.4) brightness(1.45)}
+.integrations_orbit.is-hold .integrations_tile.is-active{filter:none;z-index:4;box-shadow:0 0 0 1.5px var(--int-c),0 18px 30px -16px rgba(16,25,39,.4)}
+.integrations_tile.is-active .integrations_tile-icon{transform:scale(1.12)}
+.integrations_tile:focus-visible{outline:2px solid #146ef5;outline-offset:4px}
+.integrations_lines{position:absolute;left:0;top:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.integrations_lines line{stroke-width:2;stroke-linecap:round;opacity:0;transition:opacity .25s}
+.integrations_lines.is-on line{opacity:1}
+.integrations_core::before{content:"";position:absolute;inset:-7%;border-radius:50%;background:#fff;box-shadow:0 0 0 1px rgba(16,25,39,.1),0 24px 50px -24px rgba(20,60,160,.45)}
+.integrations_core::after{content:"";position:absolute;inset:-7%;border-radius:50%;box-shadow:0 0 0 1px rgba(20,110,245,.3);animation:intPing 3s cubic-bezier(.2,.6,.3,1) infinite}
+@keyframes intPing{from{transform:scale(1);opacity:1}to{transform:scale(1.45);opacity:0}}
+.integrations_disc{background-image:radial-gradient(80% 80% at 30% 22%,#5a93ff 0%,#146ef5 55%,#0d55d6 100%);box-shadow:inset 0 2px 0 rgba(255,255,255,.25),inset 0 -6px 14px rgba(0,30,110,.35)}
+@media (prefers-reduced-motion:reduce){.integrations_fx,.integrations_tile,.integrations_tile-icon,.integrations_lines line{transition:none}.integrations_core::after,.integrations_info.is-auto .integrations_bar{animation:none}}
+</style>
+<style>
+/* Work card thumbnail (nues-work-grid): Card background + the site (Hero screen center) as a window rising from the bottom edge.
+   Hover opens the window to the full preview and scrolls the homepage. No screenshot = 'Launching soon'. No Card background = old Main Image card. */
+.work-card_media{container-type:inline-size}
+.work-card_window{border-radius:1.95cqw 1.95cqw 0 0;box-shadow:0 0 0 1px rgba(16,25,39,.06),0 2.4cqw 6cqw -2cqw rgba(16,25,39,.28);transition:left .75s cubic-bezier(.22,1,.36,1),right .75s cubic-bezier(.22,1,.36,1),top .75s cubic-bezier(.22,1,.36,1),bottom .75s cubic-bezier(.22,1,.36,1),border-radius .75s cubic-bezier(.22,1,.36,1)}
+.work-card_shot{transition:transform 4s cubic-bezier(.45,0,.55,1)}
+@media (hover:hover){.work-card_component:hover .work-card_window{left:0;right:0;top:0;bottom:0;border-radius:0}
+.work-card_component:hover .work-card_shot{transform:translateY(calc(-100% + 62.5cqw));transition-delay:.35s}}
+.work-card_bg.w-dyn-bind-empty,.work-card_window:has(.work-card_shot.w-dyn-bind-empty),.work-card_media:has(.work-card_shot:not(.w-dyn-bind-empty)) .work-card_soon,
+.work-card_media:has(.work-card_bg.w-dyn-bind-empty) :is(.work-card_window,.work-card_soon),.work-card_media:has(.work-card_bg:not(.w-dyn-bind-empty)) .work-card_img{display:none}
+@media (prefers-reduced-motion:reduce){.work-card_window,.work-card_shot{transition:none}.work-card_component:hover .work-card_shot{transform:none}}
+</style>
+<style>
+/* Resources (Figma 7670:106). Layout and default states are native classes (visible in the Designer); this block only adds runtime states.
+   Hero: the stats light one kind of card (insights, case studies, integrations); the two card rows glide in a loop. */
+.res-hero_stat,.res-hero_stat-dot{transition:opacity .35s ease}
+.res-hero_stat.is-active,.res-hero_stat:focus-visible{opacity:1}
+.res-hero_stat.is-active .res-hero_stat-dot{opacity:1}
+.res-hero_stat:focus-visible{outline:2px solid #5bd3a9;outline-offset:6px;border-radius:8px}
+.res-hero_card{transition:opacity .45s ease}
+[data-res-active="insight"] .res-hero_card:not([data-res-card="insight"]),[data-res-active="case"] .res-hero_card:not([data-res-card="case"]),[data-res-active="integration"] .res-hero_card:not([data-res-card="integration"]){opacity:.4}
+.res-hero_row.is-running{justify-content:flex-start}
+.res-hero_track{display:flex;flex:none;width:max-content;animation:resMarq var(--res-dur,70s) linear infinite}
+.res-hero_track>*{margin-right:25px}
+.res-hero_row.is-reverse .res-hero_track{animation-direction:reverse}
+.res-hero.is-off .res-hero_track{animation-play-state:paused}
+@keyframes resMarq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (max-width:767px){.res-hero_track>*{margin-right:16px}}
+/* Notes, news and updates */
+.res-post_img{transition:transform .6s ease}
+.res-post_title{transition:opacity .25s ease}
+@media (hover:hover){.res-post:hover .res-post_img{transform:scale(1.04)}.res-post:hover .res-post_title{opacity:.75}}
+.res-post:focus-visible{outline:2px solid #146ef5;outline-offset:4px;border-radius:12px}
+/* Case studies with the numbers: the active row shows its result and its site on the right, with a full white line above
+   (.res-case_bar) and below (::after, over the next row's border) it; it moves on every 5s */
+.res-cases.is-ready .res-case_brand{opacity:.4;transition:opacity .35s ease}
+.res-cases.is-ready .res-case_stat{opacity:0;transform:translateY(6px);transition:opacity .35s ease,transform .45s cubic-bezier(.22,1,.36,1)}
+.res-cases.is-ready .res-case.is-active .res-case_brand{opacity:1}
+.res-cases.is-ready .res-case.is-active .res-case_stat{opacity:1;transform:none}
+.res-cases.is-ready .res-case_bar{transform:scaleX(1);opacity:0;transition:opacity .35s ease}
+.res-case::after{content:"";position:absolute;left:0;right:0;bottom:-1px;z-index:1;height:1px;background-color:#fff;opacity:0;pointer-events:none;transition:opacity .35s ease}
+.res-cases.is-ready .res-case.is-active .res-case_bar,.res-cases.is-ready .res-case.is-active::after{opacity:1}
+.res-cases.is-ready .res-cases_preview .w-dyn-item{position:absolute;left:0;top:0;width:100%;opacity:0;visibility:hidden;transition:opacity .5s ease,visibility 0s linear .5s}
+.res-cases.is-ready .res-cases_preview .w-dyn-item.is-active{position:relative;opacity:1;visibility:visible;transition:opacity .5s ease}
+.res-case:focus-visible{outline:2px solid #5bd3a9;outline-offset:4px}
+@media (prefers-reduced-motion:reduce){.res-hero_track{animation:none}.res-case_bar,.res-case::after,.res-post_img,.res-hero_card{transition:none!important}}
+</style>
