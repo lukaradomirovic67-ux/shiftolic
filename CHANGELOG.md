@@ -13,11 +13,13 @@ Tvoje „ali ja želim da je svaki performance zelen, ajde redom da krenemo“. 
 | 1 | Komponenta Service Hero (`4e3b548d-…`), 4 servisne stranice | 3 dekorativna oblika iza naslova više nisu slike (`<img>` SVG fajlovi), nego isti oblici nacrtani u stranici (inline `<svg><path>`), sa istom klasom `svc-hero_shape` i animacijom. Novi propovi: Shape 1–3 path i Shape 1–3 colour (tekst), umesto Image propova Shape 1–3 (uklonjeni). Vrednosti su prepisane iz postojećih SVG fajlova. | D&D 69 / 90 → 99, Webflow Development 79 / 92 → 100, SEO & AEO 86 / 91 → 99, Growth 87 / 88 → 100 |
 | 2 | Careers, head kod stranice | Dugme „See open roles“: natpis se umota („Shift“) čim se dugme pročita, a ne tek na kraju učitavanja. Ranije je Chrome posle ~0,5 s zabeležio umotan natpis kao nov, veći element (6 s u PageSpeed-u). Isti HTML i isti izgled. | 77 / 76 → 99 |
 | 2 | Resources, head kod stranice | Pozadina hero sekcije na telefonu: ista slika (1080 px, 1,6 KB) upisana u kod kao `data:` adresa, bez posebnog zahteva. Glavni element postaje naslov. | 86 / 85 → 99 |
+| 4 | Our Works Template (studije slučaja), head kod | Screenshotovi u hero delu ulaze klizanjem bez fade-a (tvoje „Da, samo klizanje“ za Ballerine; pravilo je u šablonu, pa važi za sve studije, ali se vidi samo gde ima screenshotova). Ranije je srednji screenshot počinjao providan i Chrome ga je zabeležio tek posle ~1,6 s. | Ballerine: meri se |
 | 3 | Home, head kod stranice | Probano isto za pozadinu (letvice) na telefonu, 6,6 KB. **Vraćeno:** slika je dovoljno „bogata“ da je Chrome i dalje računa kao glavni element, a bez sopstvenog zahteva PageSpeed u njeno vreme ubraja sve što se do tada učitalo (prvi krug: 80, LCP 5,3 s). Head kod Home-a je vraćen na prethodnu verziju (`backup/bg-data-uri-2026-11-27/home-head-before.html`). | 90 → 80 (1 krug) → vraćeno |
 
 - Izgled: oblici na servisnim stranicama piksel po piksel isti na 768 i 1440 px; na telefonu razlika samo na ivicama oblika (najviše 1 px, crtanje vektora umesto slike). Careers: dugme i stranica identični. Resources i Home: pozadina razlika najviše 13–15 od 255 nivoa (1080 px verzija umesto 800 px), golim okom ista.
 - Desktop: svuda 97–100.
-- Rezerve: `backup/svc-hero-inline-shapes-2026-11-27/`, `backup/careers-button-early-shift-2026-11-27/`, `backup/bg-data-uri-2026-11-27/`.
+- Rezerve: `backup/svc-hero-inline-shapes-2026-11-27/`, `backup/careers-button-early-shift-2026-11-27/`, `backup/bg-data-uri-2026-11-27/`, `backup/case-shots-slide-only-2026-11-27/`.
+- Tvoje odluke 27.11.: font Aeonik ostaje kakav jeste (OTF), „Asynchronously load JS“ ne sada, Ballerine samo klizanje.
 - Objave su ponele i izmene tima iz Designer-a.
 
 ## 27.11.2026: pun audit posle današnjih izmena (samo merenje, ništa nije menjano)
