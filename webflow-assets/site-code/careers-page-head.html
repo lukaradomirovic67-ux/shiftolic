@@ -6,7 +6,29 @@
    behind it and settle on the board, and on desktop they drift a little with the cursor. CSS for each step is below. */
 (function(){
   var started=false;
+  /* Hero button (27.11.2026): wrap its label the same way the site footer's "Shift" script does (that script skips buttons
+     with data-shift), as soon as the button has been read. Wrapped at DOMContentLoaded, the label repainted as a new element
+     about half a second later and PageSpeed on phones took that late paint as the page's main content. Same markup, same look. */
+  function shiftBtns(){
+    [].forEach.call(document.querySelectorAll('.section_careers-hero .cta-v2_button:not([data-shift])'),function(b){
+      if(!closed(b)) return;
+      var label=[],old=[];
+      [].slice.call(b.childNodes).forEach(function(n){
+        if(n.nodeType===3){ if(n.nodeValue.trim()) label.push(n); }
+        else if(n.nodeType===1){ (/^[\s→↗➝➔›»>]*$/.test(n.textContent||'')?old:label).push(n); }
+      });
+      if(!label.length) return;
+      var t=document.createElement('span'); t.className='btn-shift_text';
+      b.insertBefore(t,label[0]); label.forEach(function(n){ t.appendChild(n); });
+      old.forEach(function(n){ n.setAttribute('data-shift-old',''); });
+      var ic=document.createElement('span'); ic.className='btn-shift_icon'; ic.setAttribute('aria-hidden','true');
+      ic.innerHTML='<svg viewBox="0 0 14 14" fill="none"><path d="M2 7H12M12 7L7.5 2.5M12 7L7.5 11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      b.appendChild(ic); b.setAttribute('data-shift','');
+      b.style.setProperty('--shift-pad',getComputedStyle(b).paddingRight);
+    });
+  }
   function intro(hero){
+    shiftBtns();
     var cards=[].slice.call(hero.querySelectorAll('.careers-hero_card')),
         still=!!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);
     // Headline: one masked line per <br>, so each line can rise into view (screen readers still read one heading)
@@ -59,6 +81,7 @@
   function closed(el){ for(var n=el;n&&n!==document.documentElement;n=n.parentNode){ if(n.nextSibling) return true; } return false; }
   function check(){
     if(started) return;
+    shiftBtns();
     var hero=document.querySelector('.section_careers-hero');
     if(hero&&closed(hero)){ started=true; if(mo) mo.disconnect(); intro(hero); }
   }
