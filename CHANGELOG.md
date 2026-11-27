@@ -3,6 +3,19 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 27.11.2026: nova slika na Ballerine video preporuci (Or Moshkovitz, bez slušalica) (objavljeno na staging)
+Tvoje „ovu sliku treba da ubacimo umesto ove trenutne sa slušalicama, na svim stranicama“ (Drive, `ornew.png`). Rezerva: `backup/ballerine-video-image-2026-11-27/` (stara slika, ID-jevi, snimci kartice posle).
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Komponenta Video Testimonials (`4a0378cd-155a-719b-757a-dd63b0859178`), prop „Video image 2“, podrazumevana vrednost | asset `6aea1a31f0f7af3e33e22e71` (`video-thumb-ballerine-or-hq.webp`, 1672×941, 210 KB, sa slušalicama) | asset `6b0a005b5b621e9e853d4b48` (`video-thumb-ballerine-or-2026-11-27.webp`, 1448×905, 62 KB) |
+
+- Slika: original sa Drive-a (`webflow-assets/video/ornew-original-from-drive.png`), isečen na 16:10 (bez 40 px gore, bez dela dole), WebP q84. Alt tekst nije menjan.
+- Primenjeno na svih 7 stranica sa tom karticom: Home, Our Work, Pricing, Design & Development, Webflow Development, SEO & AEO, Growth. Posle objave stara slika nije ni na jednoj od 43 stranice.
+- Desktop učitava punu sliku (1440 px), telefon manju verziju (800 px). JS grešaka nema.
+- Objava je ponela i izmene tima iz Designer-a od 27.11. koje još nisu bile objavljene.
+- Vraćanje: prop „Video image 2“ nazad na `6aea1a31f0f7af3e33e22e71`, pa objava.
+
 ## 26.11.2026: prave cene iz Figme na celom sajtu (objavljeno na staging)
 Tvoje „ovde se krije prikaz stvarnih cena, update-uj kroz ceo sajt“ (Figma „Four ways“, okviri 7759:427, 8466:68, 8466:146, 8466:224) i za klizač „Samo tekst, isto mesto“. Figma je samo čitana. Rezerva: `backup/prices-figma-2026-11-26/` (objavljeni Services, Pricing, Design & Development, Webflow Development i schema pre izmene).
 
