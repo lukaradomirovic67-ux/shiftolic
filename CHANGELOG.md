@@ -3,6 +3,12 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 27.11.2026: pun audit posle današnjih izmena (samo merenje, ništa nije menjano)
+Tvoje „posle opet opali audit“. Sve u `reports/psi-2026-11-27/full-3x/` (README, tabela, pojedinačna merenja, provera sporih merenja, HTML i pregledač).
+- PageSpeed, 42 stranice × 3 posebna merenja (252, svako sa svojim fetchTime): telefon 86 (juče 89), LCP 3,8 s (juče 3,4 s), desktop 98 (isto), Accessibility 98,8, Best Practices 100, SEO 66 (staging robots.txt).
+- Pad na telefonu je od PageSpeed servera: danas je kasnio sa prvim prikazom u 39 od 126 merenja (juče 14). Bez tih merenja telefon je 90,0 (juče 90,1), a LCP 3,28 s (juče 3,25 s). Stranice učitavaju iste fajlove kao juče.
+- Pregledač (86 učitavanja): 0 JS grešaka, 0 pokvarenih slika, 0 horizontalnog skrola. HTML: 43 × 200, title i H1 u redu, bez duplikata, nijedna slika sa praznim ili bez alt-a (provera praznog alt-a je nova u alatu).
+
 ## 27.11.2026: alt tekst na 2 slike u Flow Conf postu, naslov i opis za 5 projekata bez studije (objavljeno na staging)
 Tvoje „uradi 1 i 2“. Rezerva: `backup/alt-and-redirect-meta-2026-11-27/` (CMS polja pre izmene i objavljeni HTML pre i posle).
 

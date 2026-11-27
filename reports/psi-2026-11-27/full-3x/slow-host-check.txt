@@ -1,0 +1,21 @@
+===== mobile: slow runs today 39/126, yesterday 14/126
+all runs           perf yesterday 88.6 today 86.1 | LCP yesterday 3.40 s today 3.76 s
+without slow runs  perf yesterday 90.1 today 90.0 | LCP yesterday 3.25 s today 3.28 s
+per page, without slow runs (yesterday -> today, runs used):
+  about                                          98.7 ->  89.0  (3/2 runs)
+  blog__webflow-vs-framer-in-2026-which-one-is-  91.7 ->  83.5  (3/2 runs)
+  services__webflow-development                  93.7 ->  88.0  (3/1 runs)
+  blog__the-website-redesign-process-a-step-by-  90.7 ->  85.3  (3/3 runs)
+  blog__webflow-templates-how-to-choose-one-and  93.0 ->  88.0  (2/1 runs)
+  blog__aeo-for-marketing-teams-what-you-can-do  94.0 ->  89.3  (2/3 runs)
+  blog                                           89.0 ->  85.0  (3/2 runs)
+  blog__b2b-saas-seo-in-2026-a-strategy-guide-f  92.3 ->  88.3  (3/3 runs)
+  blog__webflow-forms-in-2026-how-to-turn-them-  92.0 ->  88.0  (1/1 runs)
+  blog__webflow-for-b2b-lead-generation-how-to-  91.0 ->  95.0  (3/2 runs)
+  our-work                                       73.7 ->  78.0  (3/1 runs)
+  our-work__veyor-digital                        94.5 ->  99.3  (2/3 runs)
+  blog__source-by-webflow-what-it-is-and-what-i  84.7 ->  90.0  (3/1 runs)
+  home                                           88.3 ->  97.0  (3/1 runs)
+===== desktop: slow runs today 5/126, yesterday 1/126
+all runs           perf yesterday 97.7 today 98.0 | LCP yesterday 0.74 s today 0.71 s
+without slow runs  perf yesterday 97.7 today 98.1 | LCP yesterday 0.74 s today 0.70 s
