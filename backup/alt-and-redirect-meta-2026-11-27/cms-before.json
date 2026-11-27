@@ -1,0 +1,26 @@
+{
+  "note": "CMS state before the change, 27.11.2026. Blog content field is in blog-content-before.html (raw rich text from the API).",
+  "blogs": {
+    "collection_id": "6aba6bc07d6279b4b5617769",
+    "item_id": "6aba6bc07d6279b4b5617992",
+    "name": "From Guests to Sponsors: Notes from Flow Conf 2026",
+    "slug": "from-guests-to-sponsors-notes-from-flow-conf-2026",
+    "lastPublished": "2026-11-25T19:02:49.143Z",
+    "lastUpdated": "2026-11-23T23:08:45.742Z",
+    "isDraft": false,
+    "images_with_empty_alt": [
+      "6b04c77d838e02a4d1cc019b_from-guests-to-sponsors-notes-from-flow-sti-960.webp",
+      "6b04c77d838e02a4d1cc0198_from-guests-to-sponsors-notes-from-flow-frame-47545-1680.webp"
+    ]
+  },
+  "our_works": {
+    "collection_id": "6aba6bc07d6279b4b561771c",
+    "items": [
+      {"id": "6adbbe39ef50e14dcb9e70b3", "name": "Biotech Innovations", "slug": "biotech-innovations", "meta-title": null, "meta-description": null, "seo-robots": "noindex, follow", "lastUpdated": "2026-11-26T22:55:49.292Z", "lastPublished": "2026-11-26T22:57:28.893Z"},
+      {"id": "6adbbe39ef50e14dcb9e70b1", "name": "LaSalle Agri", "slug": "lasalle-agri", "meta-title": null, "meta-description": null, "seo-robots": "noindex, follow", "lastUpdated": "2026-11-26T22:55:49.273Z", "lastPublished": "2026-11-26T22:57:28.893Z"},
+      {"id": "6ace66976b237ad91feb51a0", "name": "Hypersonix", "slug": "hypersonix", "meta-title": null, "meta-description": null, "seo-robots": "noindex, follow", "lastUpdated": "2026-11-26T22:55:49.246Z", "lastPublished": "2026-11-26T22:57:28.893Z"},
+      {"id": "6ace6668eefb4c00ebea1f2f", "name": "Harper", "slug": "harper", "meta-title": null, "meta-description": null, "seo-robots": "noindex, follow", "lastUpdated": "2026-11-26T22:55:49.291Z", "lastPublished": "2026-11-26T22:57:28.893Z"},
+      {"id": "6ace660facdd65a7260ff9f7", "name": "Intaker", "slug": "intaker", "meta-title": null, "meta-description": null, "seo-robots": "noindex, follow", "lastUpdated": "2026-11-26T22:55:49.299Z", "lastPublished": "2026-11-26T22:57:28.893Z"}
+    ]
+  }
+}

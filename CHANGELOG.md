@@ -3,6 +3,21 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 27.11.2026: alt tekst na 2 slike u Flow Conf postu, naslov i opis za 5 projekata bez studije (objavljeno na staging)
+Tvoje „uradi 1 i 2“. Rezerva: `backup/alt-and-redirect-meta-2026-11-27/` (CMS polja pre izmene i objavljeni HTML pre i posle).
+
+| Gde | Pre | Posle |
+|---|---|---|
+| Blogs, „From Guests to Sponsors: Notes from Flow Conf 2026“ (`6aba6bc07d6279b4b5617992`), polje Content, slika `…flow-sti-960.webp` | `alt=""` | „Webflow notebooks, sticker sheets and a laptop covered in stickers on a tiled table“ |
+| isto, slika `…flow-frame-47545-1680.webp` | `alt=""` | „Speaker with a microphone on stage, a slide on the screen beside him and the audience in the foreground“ |
+| Our Works, Biotech Innovations, LaSalle Agri, Hypersonix, Harper, Intaker: Meta title | prazno (stranica bez `<title>`) | „Biotech Innovations \| Nues“, „LaSalle Agri \| Nues“, „Hypersonix \| Nues“, „Harper \| Nues“, „Intaker \| Nues“ |
+| isto: Meta description | prazno | „<ime>, a client website by Nues.“ |
+
+- Posle objave: u tekstu posta promenjena su samo ta dva alt atributa (poređenje objavljenog HTML-a pre i posle). Na stranici posta nema više slika sa praznim alt-om.
+- 5 stranica projekata sada ima `<title>`, description i og:title. I dalje su `noindex, follow` i i dalje šalju na sajt klijenta (provereno u pregledaču za svih 5).
+- MANUAL_TASKS 5: dodata tabela 301 za tih 5 adresa (na sajt klijenta, iz polja Website link), sa napomenom da se na plaćenom planu prvo proveri da li Webflow to prihvata za adresu koja postoji.
+- Objava je ponela i sve izmene tima koje su do tada bile u Designer-u i CMS-u.
+
 ## 27.11.2026: nova slika na Ballerine video preporuci (Or Moshkovitz, bez slušalica) (objavljeno na staging)
 Tvoje „ovu sliku treba da ubacimo umesto ove trenutne sa slušalicama, na svim stranicama“ (Drive, `ornew.png`). Rezerva: `backup/ballerine-video-image-2026-11-27/` (stara slika, ID-jevi, snimci kartice posle).
 

@@ -55,6 +55,19 @@ Uz „Full page screenshot“ (1200 px) popuni i **Full page screenshot (mobile)
    | /services/nues-seo | /services/seo-aeo |
    | /integrations | /webflow-integrations ako je ta stranica objavljena pri lansiranju, inače /resources |
 
+   **Dodato 27.11.2026, 5 projekata bez studije** (tvoje „uradi 1 i 2“). Sada ih na sajt klijenta šalje skripta u head kodu Our Works Template-a (stranica je noindex, a od 27.11. ima naslov „Harper | Nues“ i opis „Harper, a client website by Nues.“). Pravi 301 je bolji, jer ga prepoznaju i Google i alati za proveru sajta:
+   | Stara adresa | Nova adresa |
+   |---|---|
+   | /our-work/biotech-innovations | https://www.biotechinnovationsag.com/ |
+   | /our-work/harper | https://harperinsure.com/ |
+   | /our-work/hypersonix | https://hypersonix.com.au/ |
+   | /our-work/intaker | https://intaker.com/ |
+   | /our-work/lasalle-agri | https://www.lasalleagri.com/ |
+
+   - Adrese su iz polja Website link u CMS-u (27.11.). Ako se link u CMS-u promeni, promeniti i ovde.
+   - Ove stranice postoje u CMS-u (kartice ih koriste), pa na plaćenom planu prvo proveriti da li Webflow prihvata 301 za adresu koja postoji i za adresu na drugom domenu. Ako ne prihvata, ostaje skripta (radi i sada). Javi mi i ja proverim posle objave.
+   - Kad projekat dobije napisanu studiju (Case title), njegov red se briše odavde.
+
    Izmena 23.11.2026: Flow Conf post je objavljen na novom sajtu (staging 200), pa za njega ne treba redirect, a u ručnom sitemap-u je sada 42 adrese. Post „Nues is officially certified Webflow partner“ (/blog/nues-is-officialy-certified-webflow-partner) je 23.11. prebačen u Blogs CMS sa istim slug-om, kao **draft** (item `6b04c3054f7d242dfc40c598`), pa ni za njega ne treba redirect.
    Ostaje: neko iz tima pregleda draft u CMS-u i objavi ga (Publish na item-u), pa ga posle objave dodati u ručni sitemap (biće 43 adrese).
 
