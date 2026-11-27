@@ -1,0 +1,1276 @@
+{
+ "pages": {
+  "/": {
+   "status": 200,
+   "title": "Webflow agency that designs, builds and grows sites | Nues",
+   "desc": "Webflow agency designing and building sites for fast-growing teams. Custom Webflow development, scalable CMS and performance from the first line of code.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 1,
+    "bad": 0,
+    "types": [
+     "Organization",
+     "WebSite"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/about": {
+   "status": 200,
+   "title": "About Nues | The Webflow team building it | Nues",
+   "desc": "A Webflow agency built by people who've been at it since 2021. Get to know the team, the work, and the story that brought Nues to where it is today.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 1,
+    "bad": 0,
+    "types": [
+     "AboutPage"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/services": {
+   "status": 200,
+   "title": "Webflow services: design, development, SEO and growth | Nues",
+   "desc": "Four ways in, one senior crew behind them. Webflow design and development, Webflow builds from your designs, SEO and AEO, and ongoing growth.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 1,
+    "bad": 0,
+    "types": [
+     "WebPage"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/services/design-development": {
+   "status": 200,
+   "title": "Webflow design and development agency | Nues",
+   "desc": "Strategy, design, development, SEO, and launch for your new Webflow site. One team, one timeline, from blank canvas to live website.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 1,
+    "bad": 0,
+    "types": [
+     "WebPage"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/services/webflow-development": {
+   "status": 200,
+   "title": "Webflow development agency for your existing design | Nues",
+   "desc": "You bring the design, we bring it to life in Webflow. Pixel-perfect builds, scalable CMS, and performance dialed in from the first line of code.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 1,
+    "bad": 0,
+    "types": [
+     "WebPage"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/services/seo-aeo": {
+   "status": 200,
+   "title": "Webflow SEO and AEO agency | Nues",
+   "desc": "Technical SEO, content and AI answer optimisation for Webflow sites. We audit, structure and grow your rankings and AI citations, month after month.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 1,
+    "bad": 0,
+    "types": [
+     "WebPage"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/services/growth": {
+   "status": 200,
+   "title": "Ongoing Webflow team for your site | Nues",
+   "desc": "Webflow maintenance and ongoing growth. New pages, optimizations, integrations, and proactive recommendations on a retainer where hours never expire.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 1,
+    "bad": 0,
+    "types": [
+     "WebPage"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/pricing": {
+   "status": 200,
+   "title": "Webflow pricing, one price agreed up front | Nues",
+   "desc": "Launch fast, build the whole thing, or keep a senior crew on it every month. Pick where you are, and you get a fixed number after the first call.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 1,
+    "bad": 0,
+    "types": [
+     "WebPage"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/our-work": {
+   "status": 200,
+   "title": "Webflow agency portfolio | Case studies | Nues",
+   "desc": "Webflow projects across SaaS, healthcare, AI. See the work, the case studies, and the websites we've shipped for teams across the globe.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 1,
+    "bad": 0,
+    "types": [
+     "CollectionPage"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/resources": {
+   "status": 200,
+   "title": "Resources: insights, case studies and integrations | Nues",
+   "desc": "Insights, case studies and Webflow integration guides from Nues in one place. Learn from the Webflow projects we have designed, built and shipped.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 1,
+    "bad": 0,
+    "types": [
+     "CollectionPage"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/blog": {
+   "status": 200,
+   "title": "Industry insights on Webflow, SEO and AEO | Nues",
+   "desc": "Practical notes on Webflow, SEO, AEO and conversion from the Nues team: guides, comparisons and how-tos written from real client builds.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 1,
+    "bad": 0,
+    "types": [
+     "Blog"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/careers": {
+   "status": 200,
+   "title": "Careers at Nues | Join our Webflow team",
+   "desc": "Join a senior Webflow team that ships every week. Remote-first, flexible hours and real weekends. See open roles at Nues or send an open application.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 1,
+    "bad": 0,
+    "types": [
+     "WebPage"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/lets-talk": {
+   "status": 200,
+   "title": "Contact Nues | Schedule a Free Strategy Call",
+   "desc": "Schedule a free strategy call to see how we can help turn your website from cost centre to growth engine. Book a 30-minute demo today.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 1,
+    "bad": 0,
+    "types": [
+     "ContactPage"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/privacy-policy": {
+   "status": 200,
+   "title": "Privacy Policy | Nues",
+   "desc": "Learn how Nues collects, uses, and protects your personal information. Review our privacy practices, data security measures, and your rights.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 1,
+    "bad": 0,
+    "types": [
+     "WebPage"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/terms-of-service": {
+   "status": 200,
+   "title": "Terms of Service | Nues",
+   "desc": "Read the Nues Terms of Service for web design and Webflow development: project terms, payment policies and client responsibilities.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 1,
+    "bad": 0,
+    "types": [
+     "WebPage"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/our-work/ballerine": {
+   "status": 200,
+   "title": "Scaling Ballerine's web presence | Case study | Nues",
+   "desc": "A 30+ page Webflow build for Ballerine, an AI-powered merchant risk platform. Reusable components, scalable CMS, and 16x increase in engagement time.",
+   "h1": 1,
+   "canonical": null,
+   "robots": "index, follow",
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 2,
+    "bad": 0,
+    "types": [
+     "Article",
+     "BreadcrumbList"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/our-work/shiftolic": {
+   "status": 200,
+   "title": "Shiftolic's web presence in 2 weeks | Case study | Nues",
+   "desc": "Shiftolic's website designed and built from scratch in two weeks: visual identity, Webflow development and scalable CMS for a US healthcare marketplace.",
+   "h1": 1,
+   "canonical": null,
+   "robots": "index, follow",
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 2,
+    "bad": 0,
+    "types": [
+     "Article",
+     "BreadcrumbList"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/our-work/sustain-commercial-solar": {
+   "status": 200,
+   "title": "Scaling Sustain Commercial Solar's site | Case study | Nues",
+   "desc": "Webflow development for Sustain Commercial Solar, a UK commercial solar leader. 80+ pages, scalable CMS, and a component library designed to keep growing.",
+   "h1": 1,
+   "canonical": null,
+   "robots": "index, follow",
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 2,
+    "bad": 0,
+    "types": [
+     "Article",
+     "BreadcrumbList"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/our-work/trak-pro": {
+   "status": 200,
+   "title": "TrakPro's site across UK and Ireland | Case Study | Nues",
+   "desc": "Designing and building TrakPro's construction payment site across two markets, UK and Ireland, each in its own legal terminology, with a perfect SEO score",
+   "h1": 1,
+   "canonical": null,
+   "robots": "index, follow",
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 2,
+    "bad": 0,
+    "types": [
+     "Article",
+     "BreadcrumbList"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/our-work/veyor-digital": {
+   "status": 200,
+   "title": "Rebuilding Veyor across 5 markets | Case Study | Nues",
+   "desc": "How Nues rebuilt Veyor from the ground up across five markets in one month, migrating 1,000+ CMS items with zero loss of SEO or rankings.",
+   "h1": 1,
+   "canonical": null,
+   "robots": "index, follow",
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 2,
+    "bad": 0,
+    "types": [
+     "Article",
+     "BreadcrumbList"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/blog/aeo-for-marketing-teams-what-you-can-do-without-a-developer": {
+   "status": 200,
+   "title": "AEO for marketing teams, no developer needed | Nues",
+   "desc": "How marketing teams can do answer engine optimization in Webflow without a developer. A practical AEO guide to getting cited by AI.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 2,
+    "bad": 0,
+    "types": [
+     "BlogPosting",
+     "BreadcrumbList"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search": {
+   "status": 200,
+   "title": "AEO tools in 2026: what you actually need | Nues",
+   "desc": "AEO needs different tools than SEO, but fewer than you think. What each category does, and where to start without overspending.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 2,
+    "bad": 0,
+    "types": [
+     "BlogPosting",
+     "BreadcrumbList"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/blog/aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters": {
+   "status": 200,
+   "title": "AEO vs SEO in 2026: what's the difference? | Nues",
+   "desc": "SEO gets you found, AEO gets you quoted. What each one is, how they differ, why you need both, and how to do it on Webflow.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 2,
+    "bad": 0,
+    "types": [
+     "BlogPosting",
+     "BreadcrumbList"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/blog/b2b-saas-seo-in-2026-a-strategy-guide-for-marketing-leaders": {
+   "status": 200,
+   "title": "B2B SaaS SEO in 2026: a strategy guide | Nues",
+   "desc": "A B2B SaaS SEO strategy built for pipeline, not vanity traffic: target buyer intent, build clusters, win AI search, and measure revenue.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 2,
+    "bad": 0,
+    "types": [
+     "BlogPosting",
+     "BreadcrumbList"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/blog/best-15-webflow-apps-for-marketing-teams-in-2026": {
+   "status": 200,
+   "title": "Best 15 Webflow apps for marketing teams (2026) | Nues",
+   "desc": "The 15 best Webflow apps marketing teams actually use in 2026, grouped by job, with a starter stack by team size. No fluff.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 2,
+    "bad": 0,
+    "types": [
+     "BlogPosting",
+     "BreadcrumbList"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/blog/from-guests-to-sponsors-notes-from-flow-conf-2026": {
+   "status": 200,
+   "title": "Notes from Flow Conf 2026 | Nues",
+   "desc": "What we took away from Flow Conf 2026: where Webflow, agency growth, and AI-driven search are heading. Notes from the Nues team.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 2,
+    "bad": 0,
+    "types": [
+     "BlogPosting",
+     "BreadcrumbList"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/blog/how-to-delete-a-cms-collection-page-in-webflow-without-breaking-your-site": {
+   "status": 200,
+   "title": "How to delete a CMS collection page in Webflow | Nues",
+   "desc": "How to delete a Webflow CMS collection page without breaking your site or SEO: back up, remove connections, set redirects, and when to unpublish instead.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 2,
+    "bad": 0,
+    "types": [
+     "BlogPosting",
+     "BreadcrumbList"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/blog/how-to-improve-your-website-conversion-rate-in-2026": {
+   "status": 200,
+   "title": "How to improve your website conversion rate in 2026 | Nues",
+   "desc": "Most sites have a conversion problem, not a traffic problem. How to improve conversion through speed, clarity, forms, trust and mobile, before testing.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 2,
+    "bad": 0,
+    "types": [
+     "BlogPosting",
+     "BreadcrumbList"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/blog/is-webflow-good-for-ecommerce-an-honest-answer-for-2026": {
+   "status": 200,
+   "title": "Is Webflow good for ecommerce? An honest 2026 answer | Nues",
+   "desc": "Is Webflow good for ecommerce? Yes, for the right kind of store. The honest limits, who it fits, who should look elsewhere, and the hybrid option.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 2,
+    "bad": 0,
+    "types": [
+     "BlogPosting",
+     "BreadcrumbList"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/blog/saas-content-marketing-in-2026-a-strategy-guide": {
+   "status": 200,
+   "title": "SaaS content marketing in 2026: a strategy guide | Nues",
+   "desc": "A SaaS content marketing strategy built for revenue, not output: start with your ICP, map content to the funnel, build clusters, and measure pipeline.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 2,
+    "bad": 0,
+    "types": [
+     "BlogPosting",
+     "BreadcrumbList"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/blog/sanity-vs-webflow-cms-which-one-your-team-actually-needs": {
+   "status": 200,
+   "title": "Sanity vs Webflow CMS: which one your team needs | Nues",
+   "desc": "Sanity vs Webflow CMS, compared honestly. Which one fits your team depends on one thing: where your content actually needs to go. Here's how to choose.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 2,
+    "bad": 0,
+    "types": [
+     "BlogPosting",
+     "BreadcrumbList"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/blog/source-by-webflow-what-it-is-and-what-it-means-for-teams-on-webflow": {
+   "status": 200,
+   "title": "Source by Webflow: what it means for Webflow teams | Nues",
+   "desc": "What is Source by Webflow? A new platform where marketing teams and AI agents build on code together, still in preview. Here's what it means for you.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 2,
+    "bad": 0,
+    "types": [
+     "BlogPosting",
+     "BreadcrumbList"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/blog/the-signs-your-current-webflow-site-is-holding-your-business-back": {
+   "status": 200,
+   "title": "When to redesign your website: 6 signs to watch | Nues",
+   "desc": "Six signs it's time to redesign your website, and what each one is costing your marketing team. A practical guide for B2B leaders.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 2,
+    "bad": 0,
+    "types": [
+     "BlogPosting",
+     "BreadcrumbList"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/blog/the-website-redesign-process-a-step-by-step-guide": {
+   "status": 200,
+   "title": "Website redesign process: a step-by-step guide | Nues",
+   "desc": "A clear, step-by-step website redesign process: how to plan, structure, and run a redesign without losing SEO, time, or your mind.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 2,
+    "bad": 0,
+    "types": [
+     "BlogPosting",
+     "BreadcrumbList"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/blog/three-webflow-features-from-2026-worth-paying-attention-to-and-one-to-skip": {
+   "status": 200,
+   "title": "3 Webflow features worth attention in 2026 | Nues",
+   "desc": "A practical look at three Webflow features from 2026 worth using, and one to skip. Written for marketing teams, from real builds.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 2,
+    "bad": 0,
+    "types": [
+     "BlogPosting",
+     "BreadcrumbList"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/blog/webflow-for-b2b-lead-generation-how-to-turn-your-site-into-a-pipeline-engine": {
+   "status": 200,
+   "title": "Webflow for lead generation: build a pipeline | Nues",
+   "desc": "How to use Webflow for B2B lead generation: fast landing pages, gated content, forms that convert and CRM integration that turns your site into a pipeline.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 2,
+    "bad": 0,
+    "types": [
+     "BlogPosting",
+     "BreadcrumbList"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/blog/webflow-forms-in-2026-how-to-turn-them-into-a-lead-engine": {
+   "status": 200,
+   "title": "Webflow forms in 2026: turn them into a lead engine | Nues",
+   "desc": "What Webflow's native forms do well, where they hit limits, when to go third-party, and how to design forms that convert and reach your CRM.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 2,
+    "bad": 0,
+    "types": [
+     "BlogPosting",
+     "BreadcrumbList"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/blog/webflow-templates-how-to-choose-one-and-when-to-go-custom": {
+   "status": 200,
+   "title": "Webflow templates: how to choose one | Nues",
+   "desc": "How to choose a Webflow template that fits: what to check in the CMS, design, and structure, and when to go custom instead.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 2,
+    "bad": 0,
+    "types": [
+     "BlogPosting",
+     "BreadcrumbList"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/blog/webflow-vs-framer-in-2026-which-one-is-right-for-your-site": {
+   "status": 200,
+   "title": "Webflow vs Framer in 2026: which is right? | Nues",
+   "desc": "Webflow vs Framer in 2026: Framer for speed and design, Webflow for content and e-commerce. An honest guide to choosing.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 2,
+    "bad": 0,
+    "types": [
+     "BlogPosting",
+     "BreadcrumbList"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/blog/webflow-vs-squarespace-in-2026-when-each-one-makes-sense": {
+   "status": 200,
+   "title": "Webflow vs Squarespace in 2026: when each makes sense | Nues",
+   "desc": "An honest 2026 comparison of Webflow and Squarespace: where each wins, and how to choose based on where your business is.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 2,
+    "bad": 0,
+    "types": [
+     "BlogPosting",
+     "BreadcrumbList"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/blog/webflow-vs-wix-in-2026-which-one-is-right-for-your-site": {
+   "status": 200,
+   "title": "Webflow vs Wix in 2026: which is right for you | Nues",
+   "desc": "An honest 2026 comparison of Webflow vs Wix, including Wix Studio: where each platform wins and how to choose the right one for your website.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 2,
+    "bad": 0,
+    "types": [
+     "BlogPosting",
+     "BreadcrumbList"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/blog/webflow-vs-wordpress-for-b2b-saas-in-2026-whats-changed-and-when-each-one-wins": {
+   "status": 200,
+   "title": "Webflow vs WordPress for B2B SaaS (2026) | Nues",
+   "desc": "An honest 2026 comparison of Webflow and WordPress for B2B SaaS: where each wins, what changed, and how to decide. No hype.",
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": true,
+    "image": true
+   },
+   "jsonld": {
+    "blocks": 2,
+    "bad": 0,
+    "types": [
+     "BlogPosting",
+     "BreadcrumbList"
+    ]
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  },
+  "/404": {
+   "status": 200,
+   "title": "Not Found",
+   "desc": null,
+   "h1": 1,
+   "canonical": null,
+   "robots": null,
+   "og": {
+    "title": true,
+    "description": false,
+    "image": false
+   },
+   "jsonld": {
+    "blocks": 0,
+    "bad": 0,
+    "types": []
+   },
+   "img_no_alt": 0,
+   "img_empty_alt": []
+  }
+ },
+ "broken_internal": {
+  "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/'+(r.currentSrc||r.getAttribute(": [
+   404,
+   [
+    "/",
+    "/404",
+    "/about",
+    "/blog",
+    "/blog/aeo-for-marketing-teams-what-you-can-do-without-a-developer"
+   ]
+  ],
+  "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/'+c.src+'": [
+   404,
+   [
+    "/",
+    "/404",
+    "/about",
+    "/blog",
+    "/blog/aeo-for-marketing-teams-what-you-can-do-without-a-developer"
+   ]
+  ],
+  "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/'+c.thumb+'": [
+   404,
+   [
+    "/",
+    "/404",
+    "/about",
+    "/blog",
+    "/blog/aeo-for-marketing-teams-what-you-can-do-without-a-developer"
+   ]
+  ]
+ },
+ "broken_external": {
+  "https://cdn.prod.website-files.com/plugins/Basic/assets/placeholder.60f9b1840c.svg": [
+   403,
+   [
+    "/resources"
+   ]
+  ]
+ },
+ "unreachable_external": {
+  "https://clutch.co/profile/nues": [
+   "/",
+   "/about",
+   "/blog"
+  ],
+  "https://webflow.com/@nues": [
+   "/",
+   "/about",
+   "/blog"
+  ],
+  "https://www.biotechinnovationsag.com/": [
+   "/"
+  ],
+  "https://www.lasalleagri.com/": [
+   "/"
+  ],
+  "https://harperinsure.com/": [
+   "/"
+  ],
+  "https://intaker.com/": [
+   "/"
+  ],
+  "https://www.linkedin.com/company/nues-agency/": [
+   "/",
+   "/about",
+   "/blog"
+  ],
+  "https://www.instagram.com/nues.agency?igsh=MW5wa240dXBsOWl6cQ%3D%3D": [
+   "/",
+   "/about",
+   "/blog"
+  ],
+  "https://www.linkedin.com/in/danilostikovic/": [
+   "/about",
+   "/blog/from-guests-to-sponsors-notes-from-flow-conf-2026",
+   "/blog/how-to-improve-your-website-conversion-rate-in-2026"
+  ],
+  "https://www.linkedin.com/in/darko-milosevicc/": [
+   "/about",
+   "/careers",
+   "/our-work/ballerine"
+  ],
+  "https://www.linkedin.com/in/aleksandar-dumic-603080318/": [
+   "/about",
+   "/blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search",
+   "/blog/aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters"
+  ],
+  "https://www.linkedin.com/in/pavle-stikovic-1466682a3/": [
+   "/about",
+   "/careers",
+   "/our-work/ballerine"
+  ],
+  "https://www.linkedin.com/in/luka-radomirovic-7015b1372/": [
+   "/about",
+   "/careers",
+   "/our-work/shiftolic"
+  ],
+  "https://www.linkedin.com/in/nikolicmihajlo/": [
+   "/about",
+   "/careers",
+   "/our-work/shiftolic"
+  ],
+  "https://www.linkedin.com/in/daris-henja%C5%A1-153754407/": [
+   "/about",
+   "/blog/aeo-for-marketing-teams-what-you-can-do-without-a-developer",
+   "/blog/b2b-saas-seo-in-2026-a-strategy-guide-for-marketing-leaders"
+  ],
+  "https://ballerine.com/": [
+   "/our-work/ballerine"
+  ],
+  "https://www.shiftolic.com/": [
+   "/our-work/shiftolic"
+  ],
+  "https://www.sustaincommercialsolar.com/": [
+   "/our-work/sustain-commercial-solar"
+  ],
+  "https://trak-pro.com/": [
+   "/our-work/trak-pro"
+  ],
+  "https://www.veyordigital.com/": [
+   "/our-work/veyor-digital"
+  ],
+  "https://chatgpt.com/": [
+   "/blog/aeo-for-marketing-teams-what-you-can-do-without-a-developer",
+   "/blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search",
+   "/blog/aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters"
+  ],
+  "https://grok.com/": [
+   "/blog/aeo-for-marketing-teams-what-you-can-do-without-a-developer",
+   "/blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search",
+   "/blog/aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters"
+  ],
+  "https://www.perplexity.ai/": [
+   "/blog/aeo-for-marketing-teams-what-you-can-do-without-a-developer",
+   "/blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search",
+   "/blog/aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters"
+  ],
+  "https://www.google.com/search?udm=50": [
+   "/blog/aeo-for-marketing-teams-what-you-can-do-without-a-developer",
+   "/blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search",
+   "/blog/aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters"
+  ],
+  "https://www.linkedin.com/": [
+   "/blog/aeo-for-marketing-teams-what-you-can-do-without-a-developer",
+   "/blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search",
+   "/blog/aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters"
+  ],
+  "https://x.com/": [
+   "/blog/aeo-for-marketing-teams-what-you-can-do-without-a-developer",
+   "/blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search",
+   "/blog/aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters"
+  ],
+  "https://www.instagram.com/": [
+   "/blog/aeo-for-marketing-teams-what-you-can-do-without-a-developer",
+   "/blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search",
+   "/blog/aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters"
+  ],
+  "https://search.google.com/search-console/about": [
+   "/blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search",
+   "/blog/b2b-saas-seo-in-2026-a-strategy-guide-for-marketing-leaders"
+  ],
+  "https://schema.org/": [
+   "/blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search",
+   "/blog/aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters",
+   "/blog/b2b-saas-seo-in-2026-a-strategy-guide-for-marketing-leaders"
+  ],
+  "https://search.google.com/test/rich-results": [
+   "/blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search"
+  ],
+  "https://webflow.com/cms": [
+   "/blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search",
+   "/blog/aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters",
+   "/blog/is-webflow-good-for-ecommerce-an-honest-answer-for-2026"
+  ],
+  "https://webflow.com/apps": [
+   "/blog/best-15-webflow-apps-for-marketing-teams-in-2026",
+   "/blog/webflow-forms-in-2026-how-to-turn-them-into-a-lead-engine"
+  ],
+  "https://webflow.com/apps/detail/whalesync": [
+   "/blog/best-15-webflow-apps-for-marketing-teams-in-2026"
+  ],
+  "https://webflow.com/apps/detail/storychief": [
+   "/blog/best-15-webflow-apps-for-marketing-teams-in-2026"
+  ],
+  "https://webflow.com/apps/detail/powerimporter": [
+   "/blog/best-15-webflow-apps-for-marketing-teams-in-2026"
+  ],
+  "https://www.jasper.ai/": [
+   "/blog/best-15-webflow-apps-for-marketing-teams-in-2026"
+  ],
+  "https://webflow.com/apps/detail/jetboost": [
+   "/blog/best-15-webflow-apps-for-marketing-teams-in-2026",
+   "/blog/webflow-for-b2b-lead-generation-how-to-turn-your-site-into-a-pipeline-engine"
+  ],
+  "https://webflow.com/apps/detail/semflow": [
+   "/blog/best-15-webflow-apps-for-marketing-teams-in-2026"
+  ],
+  "https://webflow.com/apps/detail/nocodelytics": [
+   "/blog/best-15-webflow-apps-for-marketing-teams-in-2026",
+   "/blog/webflow-for-b2b-lead-generation-how-to-turn-your-site-into-a-pipeline-engine"
+  ],
+  "https://clarity.microsoft.com/": [
+   "/blog/best-15-webflow-apps-for-marketing-teams-in-2026",
+   "/blog/webflow-for-b2b-lead-generation-how-to-turn-your-site-into-a-pipeline-engine"
+  ],
+  "https://webflow.com/apps/detail/zapier": [
+   "/blog/best-15-webflow-apps-for-marketing-teams-in-2026",
+   "/blog/webflow-for-b2b-lead-generation-how-to-turn-your-site-into-a-pipeline-engine"
+  ],
+  "https://webflow.com/apps/detail/make": [
+   "/blog/best-15-webflow-apps-for-marketing-teams-in-2026",
+   "/blog/webflow-for-b2b-lead-generation-how-to-turn-your-site-into-a-pipeline-engine"
+  ],
+  "https://webflow.com/apps/detail/hubspot": [
+   "/blog/best-15-webflow-apps-for-marketing-teams-in-2026",
+   "/blog/webflow-for-b2b-lead-generation-how-to-turn-your-site-into-a-pipeline-engine"
+  ],
+  "https://webflow.com/apps/detail/typeform": [
+   "/blog/best-15-webflow-apps-for-marketing-teams-in-2026",
+   "/blog/webflow-for-b2b-lead-generation-how-to-turn-your-site-into-a-pipeline-engine"
+  ],
+  "https://webflow.com/apps/detail/outseta": [
+   "/blog/best-15-webflow-apps-for-marketing-teams-in-2026"
+  ],
+  "https://webflow.com/apps/detail/weglot": [
+   "/blog/best-15-webflow-apps-for-marketing-teams-in-2026"
+  ],
+  "https://webflow.com/localization": [
+   "/blog/best-15-webflow-apps-for-marketing-teams-in-2026"
+  ],
+  "https://webflow.com/apps/detail/elfsight": [
+   "/blog/best-15-webflow-apps-for-marketing-teams-in-2026"
+  ],
+  "https://analytics.google.com/": [
+   "/blog/how-to-improve-your-website-conversion-rate-in-2026"
+  ],
+  "https://pagespeed.web.dev/": [
+   "/blog/how-to-improve-your-website-conversion-rate-in-2026",
+   "/blog/webflow-templates-how-to-choose-one-and-when-to-go-custom"
+  ],
+  "https://webflow.com/hosting": [
+   "/blog/webflow-for-b2b-lead-generation-how-to-turn-your-site-into-a-pipeline-engine"
+  ],
+  "https://help.webflow.com/hc/en-us/articles/33961356181907-Forms": [
+   "/blog/webflow-for-b2b-lead-generation-how-to-turn-your-site-into-a-pipeline-engine"
+  ],
+  "https://help.webflow.com/hc/en-us/articles/33961347548563-How-do-I-add-forms-in-Webflow": [
+   "/blog/webflow-forms-in-2026-how-to-turn-them-into-a-lead-engine"
+  ],
+  "https://webflow.com/templates": [
+   "/blog/webflow-templates-how-to-choose-one-and-when-to-go-custom"
+  ],
+  "https://www.framer.com/updates/": [
+   "/blog/webflow-vs-framer-in-2026-which-one-is-right-for-your-site"
+  ],
+  "https://webflow.com/ecommerce": [
+   "/blog/webflow-vs-framer-in-2026-which-one-is-right-for-your-site",
+   "/blog/webflow-vs-squarespace-in-2026-when-each-one-makes-sense"
+  ],
+  "https://webflow.com/updates/ai-seo-aeo": [
+   "/blog/webflow-vs-framer-in-2026-which-one-is-right-for-your-site",
+   "/blog/webflow-vs-wordpress-for-b2b-saas-in-2026-whats-changed-and-when-each-one-wins"
+  ],
+  "https://www.framer.com/pricing/": [
+   "/blog/webflow-vs-framer-in-2026-which-one-is-right-for-your-site"
+  ],
+  "https://webflow.com/pricing": [
+   "/blog/webflow-vs-framer-in-2026-which-one-is-right-for-your-site",
+   "/blog/webflow-vs-squarespace-in-2026-when-each-one-makes-sense",
+   "/blog/webflow-vs-wix-in-2026-which-one-is-right-for-your-site"
+  ],
+  "https://www.squarespace.com/ecommerce-website": [
+   "/blog/webflow-vs-squarespace-in-2026-when-each-one-makes-sense"
+  ],
+  "https://www.squarespace.com/pricing": [
+   "/blog/webflow-vs-squarespace-in-2026-when-each-one-makes-sense"
+  ],
+  "https://www.wix.com/plans": [
+   "/blog/webflow-vs-wix-in-2026-which-one-is-right-for-your-site"
+  ],
+  "https://w3techs.com/technologies/details/cm-wordpress": [
+   "/blog/webflow-vs-wordpress-for-b2b-saas-in-2026-whats-changed-and-when-each-one-wins"
+  ],
+  "https://help.webflow.com/hc/en-us/articles/43232037920275-Real-time-collaboration": [
+   "/blog/webflow-vs-wordpress-for-b2b-saas-in-2026-whats-changed-and-when-each-one-wins"
+  ],
+  "https://webflow.com/integrations/anthropic-claude": [
+   "/blog/webflow-vs-wordpress-for-b2b-saas-in-2026-whats-changed-and-when-each-one-wins"
+  ],
+  "https://www.happiworks.io/blogs/beyond-the-bloat-why-b2b-startups-are-migrating-from-wordpress-to-webflow": [
+   "/blog/webflow-vs-wordpress-for-b2b-saas-in-2026-whats-changed-and-when-each-one-wins"
+  ],
+  "https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js": [
+   "/404"
+  ]
+ },
+ "dup_titles": {},
+ "dup_descs": {},
+ "checked_urls": 455
+}
