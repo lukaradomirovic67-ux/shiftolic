@@ -1,0 +1,142 @@
+{
+ "resources--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:08:11.106Z",
+   "perf": 100,
+   "a11y": 96,
+   "bp": 100,
+   "seo": 66,
+   "lcp_ms": 1073,
+   "tbt_ms": 82,
+   "observed_fcp_ms": 298,
+   "lcp_element": "bal > div.container-large > div.res-hero_content > h1.heading-style-h1"
+  },
+  {
+   "fetchTime": "2026-11-27T23:12:11.472Z",
+   "perf": 98,
+   "a11y": 96,
+   "bp": 100,
+   "seo": 66,
+   "lcp_ms": 1093,
+   "tbt_ms": 70,
+   "observed_fcp_ms": 1323,
+   "lcp_element": "bal > div.container-large > div.res-hero_content > h1.heading-style-h1"
+  },
+  {
+   "fetchTime": "2026-11-27T23:16:11.945Z",
+   "perf": 100,
+   "a11y": 96,
+   "bp": 100,
+   "seo": 66,
+   "lcp_ms": 1068,
+   "tbt_ms": 24,
+   "observed_fcp_ms": 240,
+   "lcp_element": "bal > div.container-large > div.res-hero_content > h1.heading-style-h1"
+  }
+ ],
+ "resources--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:08:11.285Z",
+   "perf": 99,
+   "a11y": 96,
+   "bp": 100,
+   "seo": 66,
+   "lcp_ms": 979,
+   "tbt_ms": 23,
+   "observed_fcp_ms": 221,
+   "lcp_element": "bal > div.container-large > div.res-hero_content > h1.heading-style-h1"
+  },
+  {
+   "fetchTime": "2026-11-27T23:12:12.315Z",
+   "perf": 97,
+   "a11y": 96,
+   "bp": 100,
+   "seo": 66,
+   "lcp_ms": 290,
+   "tbt_ms": 155,
+   "observed_fcp_ms": 453,
+   "lcp_element": "bal > div.container-large > div.res-hero_content > h1.heading-style-h1"
+  },
+  {
+   "fetchTime": "2026-11-27T23:16:12.016Z",
+   "perf": 100,
+   "a11y": 96,
+   "bp": 100,
+   "seo": 66,
+   "lcp_ms": 294,
+   "tbt_ms": 13,
+   "observed_fcp_ms": 236,
+   "lcp_element": "bal > div.container-large > div.res-hero_content > h1.heading-style-h1"
+  }
+ ],
+ "careers--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:08:10.876Z",
+   "perf": 100,
+   "a11y": 100,
+   "bp": 100,
+   "seo": 66,
+   "lcp_ms": 1217,
+   "tbt_ms": 16,
+   "observed_fcp_ms": 217,
+   "lcp_element": "rge > div.careers-hero_content > a.cta-v2_button > span.btn-shift_text"
+  },
+  {
+   "fetchTime": "2026-11-27T23:12:11.836Z",
+   "perf": 97,
+   "a11y": 100,
+   "bp": 100,
+   "seo": 66,
+   "lcp_ms": 2142,
+   "tbt_ms": 41,
+   "observed_fcp_ms": 239,
+   "lcp_element": "rge > div.careers-hero_content > a.cta-v2_button > span.btn-shift_text"
+  },
+  {
+   "fetchTime": "2026-11-27T23:16:12.144Z",
+   "perf": 100,
+   "a11y": 100,
+   "bp": 100,
+   "seo": 66,
+   "lcp_ms": 1219,
+   "tbt_ms": 50,
+   "observed_fcp_ms": 226,
+   "lcp_element": "rge > div.careers-hero_content > a.cta-v2_button > span.btn-shift_text"
+  }
+ ],
+ "careers--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:08:11.292Z",
+   "perf": 100,
+   "a11y": 96,
+   "bp": 100,
+   "seo": 66,
+   "lcp_ms": 573,
+   "tbt_ms": 39,
+   "observed_fcp_ms": 341,
+   "lcp_element": "eading-style-h1 > span.careers-hero_line > span.careers-hero_line-text"
+  },
+  {
+   "fetchTime": "2026-11-27T23:12:12.497Z",
+   "perf": 95,
+   "a11y": 96,
+   "bp": 100,
+   "seo": 66,
+   "lcp_ms": 294,
+   "tbt_ms": 168,
+   "observed_fcp_ms": 458,
+   "lcp_element": "eading-style-h1 > span.careers-hero_line > span.careers-hero_line-text"
+  },
+  {
+   "fetchTime": "2026-11-27T23:16:12.452Z",
+   "perf": 100,
+   "a11y": 96,
+   "bp": 100,
+   "seo": 66,
+   "lcp_ms": 573,
+   "tbt_ms": 44,
+   "observed_fcp_ms": 239,
+   "lcp_element": "eading-style-h1 > span.careers-hero_line > span.careers-hero_line-text"
+  }
+ ]
+}

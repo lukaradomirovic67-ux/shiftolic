@@ -3,6 +3,23 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 27.11.2026: zeleni PageSpeed, korak po korak (objavljeno na staging)
+Tvoje „ali ja želim da je svaki performance zelen, ajde redom da krenemo“. Merenja: 3 posebna kruga, bar 4 minuta razmaka, svako sa svojim fetchTime. Rezultati u `reports/green-2026-11-27/`.
+
+**Zašto su stranice bile žute na telefonu:** na svakoj stranici ispod 90 glavni element na vrhu (LCP) bila je slika: pozadina, dekorativni oblik ili screenshot. PageSpeed za sliku na vrhu računa 2,5 do 3,8 s, jer u to vreme ubraja i fontove. Kad je glavni element naslov ili tekst, računa oko 1,1 s. Zato Pricing, Services i case stranice imaju 97 do 100.
+
+| Korak | Gde | Šta | Telefon pre → posle (prosek 3 kruga) |
+|---|---|---|---|
+| 1 | Komponenta Service Hero (`4e3b548d-…`), 4 servisne stranice | 3 dekorativna oblika iza naslova više nisu slike (`<img>` SVG fajlovi), nego isti oblici nacrtani u stranici (inline `<svg><path>`), sa istom klasom `svc-hero_shape` i animacijom. Novi propovi: Shape 1–3 path i Shape 1–3 colour (tekst), umesto Image propova Shape 1–3 (uklonjeni). Vrednosti su prepisane iz postojećih SVG fajlova. | D&D 69 → 99, Webflow Development 79 → 100, SEO & AEO 86 → 99, Growth 87 → 100 |
+| 2 | Careers, head kod stranice | Dugme „See open roles“: natpis se umota („Shift“) čim se dugme pročita, a ne tek na kraju učitavanja. Ranije je Chrome posle ~0,5 s zabeležio umotan natpis kao nov, veći element (6 s u PageSpeed-u). Isti HTML i isti izgled. | 77 → 99 |
+| 2 | Resources, head kod stranice | Pozadina hero sekcije na telefonu: ista slika (1080 px, 1,6 KB) upisana u kod kao `data:` adresa, bez posebnog zahteva. Glavni element postaje naslov. | 86 → 99 |
+| 3 | Home, head kod stranice | Isto za pozadinu (letvice) na telefonu, 6,6 KB. Svetla traka preko nje je nepromenjena. | meri se |
+
+- Izgled: oblici na servisnim stranicama piksel po piksel isti na 768 i 1440 px; na telefonu razlika samo na ivicama oblika (najviše 1 px, crtanje vektora umesto slike). Careers: dugme i stranica identični. Resources i Home: pozadina razlika najviše 13–15 od 255 nivoa (1080 px verzija umesto 800 px), golim okom ista.
+- Desktop: svuda 97–100.
+- Rezerve: `backup/svc-hero-inline-shapes-2026-11-27/`, `backup/careers-button-early-shift-2026-11-27/`, `backup/bg-data-uri-2026-11-27/`.
+- Objave su ponele i izmene tima iz Designer-a.
+
 ## 27.11.2026: pun audit posle današnjih izmena (samo merenje, ništa nije menjano)
 Tvoje „posle opet opali audit“. Sve u `reports/psi-2026-11-27/full-3x/` (README, tabela, pojedinačna merenja, provera sporih merenja, HTML i pregledač).
 - PageSpeed, 42 stranice × 3 posebna merenja (252, svako sa svojim fetchTime): telefon 86 (juče 89), LCP 3,8 s (juče 3,4 s), desktop 98 (isto), Accessibility 98,8, Best Practices 100, SEO 66 (staging robots.txt).
