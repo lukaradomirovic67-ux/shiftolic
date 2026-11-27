@@ -1,0 +1,1068 @@
+[
+ {
+  "vn": "phone",
+  "path": "/",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": [
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+  ]
+ },
+ {
+  "vn": "phone",
+  "path": "/about",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/services",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/services/design-development",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/services/webflow-development",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/services/seo-aeo",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/services/growth",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/pricing",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/our-work",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": [
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+  ]
+ },
+ {
+  "vn": "phone",
+  "path": "/resources",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/blog",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/careers",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": [
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+  ]
+ },
+ {
+  "vn": "phone",
+  "path": "/lets-talk",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [],
+  "cons": [
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+  ]
+ },
+ {
+  "vn": "phone",
+  "path": "/privacy-policy",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/terms-of-service",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/our-work/ballerine",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/our-work/shiftolic",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/our-work/sustain-commercial-solar",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/our-work/trak-pro",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/our-work/veyor-digital",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/blog/aeo-for-marketing-teams-what-you-can-do-without-a-developer",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/blog/aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED",
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za204zd925 net::ERR_ABORTED"
+  ],
+  "cons": [
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+  ]
+ },
+ {
+  "vn": "phone",
+  "path": "/blog/b2b-saas-seo-in-2026-a-strategy-guide-for-marketing-leaders",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/blog/best-15-webflow-apps-for-marketing-teams-in-2026",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/blog/from-guests-to-sponsors-notes-from-flow-conf-2026",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/blog/how-to-delete-a-cms-collection-page-in-webflow-without-breaking-your-site",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/blog/how-to-improve-your-website-conversion-rate-in-2026",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/blog/is-webflow-good-for-ecommerce-an-honest-answer-for-2026",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/blog/saas-content-marketing-in-2026-a-strategy-guide",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/blog/sanity-vs-webflow-cms-which-one-your-team-actually-needs",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/blog/source-by-webflow-what-it-is-and-what-it-means-for-teams-on-webflow",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED",
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za204zd925 net::ERR_ABORTED"
+  ],
+  "cons": [
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+  ]
+ },
+ {
+  "vn": "phone",
+  "path": "/blog/the-signs-your-current-webflow-site-is-holding-your-business-back",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/blog/the-website-redesign-process-a-step-by-step-guide",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/blog/three-webflow-features-from-2026-worth-paying-attention-to-and-one-to-skip",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/blog/webflow-for-b2b-lead-generation-how-to-turn-your-site-into-a-pipeline-engine",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/blog/webflow-forms-in-2026-how-to-turn-them-into-a-lead-engine",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/blog/webflow-templates-how-to-choose-one-and-when-to-go-custom",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/blog/webflow-vs-framer-in-2026-which-one-is-right-for-your-site",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/blog/webflow-vs-squarespace-in-2026-when-each-one-makes-sense",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/blog/webflow-vs-wix-in-2026-which-one-is-right-for-your-site",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED",
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za204zd925 net::ERR_ABORTED"
+  ],
+  "cons": [
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+  ]
+ },
+ {
+  "vn": "phone",
+  "path": "/blog/webflow-vs-wordpress-for-b2b-saas-in-2026-whats-changed-and-when-each-one-wins",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bi0h2v9253540488za20czd925 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "phone",
+  "path": "/404",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": [
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+  ]
+ },
+ {
+  "vn": "desktop",
+  "path": "/",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": [
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+  ]
+ },
+ {
+  "vn": "desktop",
+  "path": "/about",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/services",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/services/design-development",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/services/webflow-development",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/services/seo-aeo",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/services/growth",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/pricing",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/our-work",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": [
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+  ]
+ },
+ {
+  "vn": "desktop",
+  "path": "/resources",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/blog",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/careers",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": [
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+  ]
+ },
+ {
+  "vn": "desktop",
+  "path": "/lets-talk",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [],
+  "cons": [
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+  ]
+ },
+ {
+  "vn": "desktop",
+  "path": "/privacy-policy",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/terms-of-service",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/our-work/ballerine",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/our-work/shiftolic",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/our-work/sustain-commercial-solar",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/our-work/trak-pro",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/our-work/veyor-digital",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/blog/aeo-for-marketing-teams-what-you-can-do-without-a-developer",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/blog/aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED",
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za204zd92535 net::ERR_ABORTED"
+  ],
+  "cons": [
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+  ]
+ },
+ {
+  "vn": "desktop",
+  "path": "/blog/b2b-saas-seo-in-2026-a-strategy-guide-for-marketing-leaders",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/blog/best-15-webflow-apps-for-marketing-teams-in-2026",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/blog/from-guests-to-sponsors-notes-from-flow-conf-2026",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/blog/how-to-delete-a-cms-collection-page-in-webflow-without-breaking-your-site",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/blog/how-to-improve-your-website-conversion-rate-in-2026",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/blog/is-webflow-good-for-ecommerce-an-honest-answer-for-2026",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/blog/saas-content-marketing-in-2026-a-strategy-guide",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/blog/sanity-vs-webflow-cms-which-one-your-team-actually-needs",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/blog/source-by-webflow-what-it-is-and-what-it-means-for-teams-on-webflow",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/blog/the-signs-your-current-webflow-site-is-holding-your-business-back",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za204zd92535 net::ERR_ABORTED",
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": [
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+  ]
+ },
+ {
+  "vn": "desktop",
+  "path": "/blog/the-website-redesign-process-a-step-by-step-guide",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/blog/three-webflow-features-from-2026-worth-paying-attention-to-and-one-to-skip",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/blog/webflow-for-b2b-lead-generation-how-to-turn-your-site-into-a-pipeline-engine",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/blog/webflow-forms-in-2026-how-to-turn-them-into-a-lead-engine",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/blog/webflow-templates-how-to-choose-one-and-when-to-go-custom",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/blog/webflow-vs-framer-in-2026-which-one-is-right-for-your-site",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/blog/webflow-vs-squarespace-in-2026-when-each-one-makes-sense",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/blog/webflow-vs-wix-in-2026-which-one-is-right-for-your-site",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": []
+ },
+ {
+  "vn": "desktop",
+  "path": "/blog/webflow-vs-wordpress-for-b2b-saas-in-2026-whats-changed-and-when-each-one-wins",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED",
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za204zd92535 net::ERR_ABORTED"
+  ],
+  "cons": [
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+  ]
+ },
+ {
+  "vn": "desktop",
+  "path": "/404",
+  "over": 0,
+  "wide": [],
+  "broken": [],
+  "errs": [],
+  "failed": [
+   "FAIL c?v=2&tid=G-NNTMD9FV5D&gtm=45g92e6bh1v9253540488za20czd92535 net::ERR_ABORTED"
+  ],
+  "cons": [
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+  ]
+ }
+]

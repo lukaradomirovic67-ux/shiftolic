@@ -1,0 +1,32 @@
+===== mobile: failing checks (pages of 42)
+ 42 performance    unused-javascript                      Reduce unused JavaScript | total ~5910 KB | e.g. careers Est savings of 164 KiB; our-work Est savings of 161 KiB; blog__best-15-webflow-apps-f Est savings of 140 KiB
+ 42 performance    unused-css-rules                       Reduce unused CSS | total ~3179 KB | e.g. services__growth Est savings of 73 KiB; resources Est savings of 77 KiB; blog__aeo-for-marketing-team Est savings of 76 KiB
+ 42 performance    network-dependency-tree-insight        Network dependency tree | e.g. about ; blog ; blog__aeo-for-marketing-team 
+ 42 performance    render-blocking-insight                Render-blocking requests | e.g. privacy-policy Est savings of 2,440 ms; lets-talk Est savings of 2,130 ms; terms-of-service Est savings of 1,330 ms
+ 42 performance    unsized-images                         Image elements do not have explicit `width` and `height` | e.g. about ; blog ; blog__aeo-for-marketing-team 
+ 42 best-practices valid-source-maps                      Missing source maps for large first-party JavaScript | e.g. about ; blog ; blog__aeo-for-marketing-team 
+ 42 seo            is-crawlable                           Page is blocked from indexing | e.g. about ; blog ; blog__aeo-for-marketing-team 
+ 41 performance    cache-insight                          Use efficient cache lifetimes | e.g. our-work Est savings of 440 KiB; blog Est savings of 63 KiB; blog__from-guests-to-sponsor Est savings of 81 KiB
+ 38 performance    image-delivery-insight                 Improve image delivery | e.g. our-work Est savings of 591 KiB; careers Est savings of 117 KiB; blog__source-by-webflow-what Est savings of 92 KiB
+ 13 accessibility  color-contrast                         Background and foreground colors do not have a sufficient contrast rat | e.g. lets-talk ; our-work ; our-work__ballerine 
+  6 performance    forced-reflow-insight                  Forced reflow | e.g. blog__saas-content-marketing ; home ; our-work 
+  3 accessibility  td-has-header                          `<td>` elements in a large `<table>` do not have table headers. | e.g. blog__aeo-vs-seo-in-2026-wha ; blog__b2b-saas-seo-in-2026-a ; blog__is-webflow-good-for-ec 
+  1 performance    mainthread-work-breakdown              Minimize main-thread work | e.g. our-work 2.2 s
+  1 performance    total-byte-weight                      Avoid enormous network payloads | e.g. our-work Total size was 4,129 KiB
+  1 performance    unminified-javascript                  Minify JavaScript | total ~2 KB | e.g. services Est savings of 2 KiB
+===== desktop: failing checks (pages of 42)
+ 42 performance    unused-css-rules                       Reduce unused CSS | total ~3219 KB | e.g. blog Est savings of 78 KiB; blog__webflow-for-b2b-lead-g Est savings of 77 KiB; blog__from-guests-to-sponsor Est savings of 77 KiB
+ 42 performance    unsized-images                         Image elements do not have explicit `width` and `height` | e.g. about ; blog ; blog__aeo-for-marketing-team 
+ 42 performance    network-dependency-tree-insight        Network dependency tree | e.g. about ; blog ; blog__aeo-for-marketing-team 
+ 42 best-practices valid-source-maps                      Missing source maps for large first-party JavaScript | e.g. about ; blog ; blog__aeo-for-marketing-team 
+ 42 performance    render-blocking-insight                Render-blocking requests | e.g. lets-talk Est savings of 440 ms; terms-of-service Est savings of 440 ms; blog__aeo-for-marketing-team Est savings of 280 ms
+ 42 seo            is-crawlable                           Page is blocked from indexing | e.g. about ; blog ; blog__aeo-for-marketing-team 
+ 42 performance    unused-javascript                      Reduce unused JavaScript | total ~5907 KB | e.g. blog__webflow-vs-wix-in-2026 Est savings of 140 KiB; pricing Est savings of 140 KiB; blog Est savings of 140 KiB
+ 40 performance    cache-insight                          Use efficient cache lifetimes | e.g. our-work Est savings of 785 KiB; blog Est savings of 130 KiB; blog__best-15-webflow-apps-f Est savings of 21 KiB
+ 38 performance    image-delivery-insight                 Improve image delivery | e.g. careers Est savings of 277 KiB; blog Est savings of 448 KiB; blog__aeo-vs-seo-in-2026-wha Est savings of 42 KiB
+ 12 performance    forced-reflow-insight                  Forced reflow | e.g. about ; blog__b2b-saas-seo-in-2026-a ; blog__best-15-webflow-apps-f 
+  9 accessibility  color-contrast                         Background and foreground colors do not have a sufficient contrast rat | e.g. careers ; lets-talk ; our-work__ballerine 
+  3 accessibility  td-has-header                          `<td>` elements in a large `<table>` do not have table headers. | e.g. blog__aeo-vs-seo-in-2026-wha ; blog__b2b-saas-seo-in-2026-a ; blog__is-webflow-good-for-ec 
+  1 performance    lcp-breakdown-insight                  LCP breakdown | e.g. home 
+  1 performance    total-byte-weight                      Avoid enormous network payloads | e.g. our-work Total size was 5,014 KiB
+  1 performance    unminified-javascript                  Minify JavaScript | total ~2 KB | e.g. services Est savings of 2 KiB
