@@ -1,0 +1,422 @@
+{
+ "about--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/about",
+  "fails": []
+ },
+ "about--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/about",
+  "fails": []
+ },
+ "blog--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog",
+  "fails": []
+ },
+ "blog--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog",
+  "fails": []
+ },
+ "blog__aeo-for-marketing-teams-what-you-can-do-without-a-developer--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/aeo-for-marketing-teams-what-you-can-do-without-a-developer",
+  "fails": []
+ },
+ "blog__aeo-for-marketing-teams-what-you-can-do-without-a-developer--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/aeo-for-marketing-teams-what-you-can-do-without-a-developer",
+  "fails": []
+ },
+ "blog__aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search",
+  "fails": []
+ },
+ "blog__aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search",
+  "fails": []
+ },
+ "blog__aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters",
+  "fails": []
+ },
+ "blog__aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters",
+  "fails": []
+ },
+ "blog__b2b-saas-seo-in-2026-a-strategy-guide-for-marketing-leaders--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/b2b-saas-seo-in-2026-a-strategy-guide-for-marketing-leaders",
+  "fails": []
+ },
+ "blog__b2b-saas-seo-in-2026-a-strategy-guide-for-marketing-leaders--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/b2b-saas-seo-in-2026-a-strategy-guide-for-marketing-leaders",
+  "fails": []
+ },
+ "blog__best-15-webflow-apps-for-marketing-teams-in-2026--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/best-15-webflow-apps-for-marketing-teams-in-2026",
+  "fails": []
+ },
+ "blog__best-15-webflow-apps-for-marketing-teams-in-2026--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/best-15-webflow-apps-for-marketing-teams-in-2026",
+  "fails": []
+ },
+ "blog__from-guests-to-sponsors-notes-from-flow-conf-2026--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/from-guests-to-sponsors-notes-from-flow-conf-2026",
+  "fails": []
+ },
+ "blog__from-guests-to-sponsors-notes-from-flow-conf-2026--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/from-guests-to-sponsors-notes-from-flow-conf-2026",
+  "fails": []
+ },
+ "blog__how-to-delete-a-cms-collection-page-in-webflow-without-breaking-your-site--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/how-to-delete-a-cms-collection-page-in-webflow-without-breaking-your-site",
+  "fails": []
+ },
+ "blog__how-to-delete-a-cms-collection-page-in-webflow-without-breaking-your-site--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/how-to-delete-a-cms-collection-page-in-webflow-without-breaking-your-site",
+  "fails": []
+ },
+ "blog__how-to-improve-your-website-conversion-rate-in-2026--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/how-to-improve-your-website-conversion-rate-in-2026",
+  "fails": []
+ },
+ "blog__how-to-improve-your-website-conversion-rate-in-2026--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/how-to-improve-your-website-conversion-rate-in-2026",
+  "fails": []
+ },
+ "blog__is-webflow-good-for-ecommerce-an-honest-answer-for-2026--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/is-webflow-good-for-ecommerce-an-honest-answer-for-2026",
+  "fails": []
+ },
+ "blog__is-webflow-good-for-ecommerce-an-honest-answer-for-2026--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/is-webflow-good-for-ecommerce-an-honest-answer-for-2026",
+  "fails": []
+ },
+ "blog__saas-content-marketing-in-2026-a-strategy-guide--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/saas-content-marketing-in-2026-a-strategy-guide",
+  "fails": []
+ },
+ "blog__saas-content-marketing-in-2026-a-strategy-guide--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/saas-content-marketing-in-2026-a-strategy-guide",
+  "fails": []
+ },
+ "blog__sanity-vs-webflow-cms-which-one-your-team-actually-needs--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/sanity-vs-webflow-cms-which-one-your-team-actually-needs",
+  "fails": []
+ },
+ "blog__sanity-vs-webflow-cms-which-one-your-team-actually-needs--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/sanity-vs-webflow-cms-which-one-your-team-actually-needs",
+  "fails": []
+ },
+ "blog__source-by-webflow-what-it-is-and-what-it-means-for-teams-on-webflow--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/source-by-webflow-what-it-is-and-what-it-means-for-teams-on-webflow",
+  "fails": []
+ },
+ "blog__source-by-webflow-what-it-is-and-what-it-means-for-teams-on-webflow--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/source-by-webflow-what-it-is-and-what-it-means-for-teams-on-webflow",
+  "fails": []
+ },
+ "blog__the-signs-your-current-webflow-site-is-holding-your-business-back--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/the-signs-your-current-webflow-site-is-holding-your-business-back",
+  "fails": []
+ },
+ "blog__the-signs-your-current-webflow-site-is-holding-your-business-back--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/the-signs-your-current-webflow-site-is-holding-your-business-back",
+  "fails": []
+ },
+ "blog__the-website-redesign-process-a-step-by-step-guide--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/the-website-redesign-process-a-step-by-step-guide",
+  "fails": []
+ },
+ "blog__the-website-redesign-process-a-step-by-step-guide--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/the-website-redesign-process-a-step-by-step-guide",
+  "fails": []
+ },
+ "blog__three-webflow-features-from-2026-worth-paying-attention-to-and-one-to-skip--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/three-webflow-features-from-2026-worth-paying-attention-to-and-one-to-skip",
+  "fails": []
+ },
+ "blog__three-webflow-features-from-2026-worth-paying-attention-to-and-one-to-skip--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/three-webflow-features-from-2026-worth-paying-attention-to-and-one-to-skip",
+  "fails": []
+ },
+ "blog__webflow-for-b2b-lead-generation-how-to-turn-your-site-into-a-pipeline-engine--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/webflow-for-b2b-lead-generation-how-to-turn-your-site-into-a-pipeline-engine",
+  "fails": []
+ },
+ "blog__webflow-for-b2b-lead-generation-how-to-turn-your-site-into-a-pipeline-engine--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/webflow-for-b2b-lead-generation-how-to-turn-your-site-into-a-pipeline-engine",
+  "fails": []
+ },
+ "blog__webflow-forms-in-2026-how-to-turn-them-into-a-lead-engine--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/webflow-forms-in-2026-how-to-turn-them-into-a-lead-engine",
+  "fails": []
+ },
+ "blog__webflow-forms-in-2026-how-to-turn-them-into-a-lead-engine--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/webflow-forms-in-2026-how-to-turn-them-into-a-lead-engine",
+  "fails": []
+ },
+ "blog__webflow-templates-how-to-choose-one-and-when-to-go-custom--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/webflow-templates-how-to-choose-one-and-when-to-go-custom",
+  "fails": []
+ },
+ "blog__webflow-templates-how-to-choose-one-and-when-to-go-custom--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/webflow-templates-how-to-choose-one-and-when-to-go-custom",
+  "fails": []
+ },
+ "blog__webflow-vs-framer-in-2026-which-one-is-right-for-your-site--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/webflow-vs-framer-in-2026-which-one-is-right-for-your-site",
+  "fails": []
+ },
+ "blog__webflow-vs-framer-in-2026-which-one-is-right-for-your-site--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/webflow-vs-framer-in-2026-which-one-is-right-for-your-site",
+  "fails": []
+ },
+ "blog__webflow-vs-squarespace-in-2026-when-each-one-makes-sense--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/webflow-vs-squarespace-in-2026-when-each-one-makes-sense",
+  "fails": []
+ },
+ "blog__webflow-vs-squarespace-in-2026-when-each-one-makes-sense--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/webflow-vs-squarespace-in-2026-when-each-one-makes-sense",
+  "fails": []
+ },
+ "blog__webflow-vs-wix-in-2026-which-one-is-right-for-your-site--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/webflow-vs-wix-in-2026-which-one-is-right-for-your-site",
+  "fails": []
+ },
+ "blog__webflow-vs-wix-in-2026-which-one-is-right-for-your-site--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/webflow-vs-wix-in-2026-which-one-is-right-for-your-site",
+  "fails": []
+ },
+ "blog__webflow-vs-wordpress-for-b2b-saas-in-2026-whats-changed-and-when-each-one-wins--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/webflow-vs-wordpress-for-b2b-saas-in-2026-whats-changed-and-when-each-one-wins",
+  "fails": []
+ },
+ "blog__webflow-vs-wordpress-for-b2b-saas-in-2026-whats-changed-and-when-each-one-wins--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/blog/webflow-vs-wordpress-for-b2b-saas-in-2026-whats-changed-and-when-each-one-wins",
+  "fails": []
+ },
+ "careers--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/careers",
+  "fails": []
+ },
+ "careers--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/careers",
+  "fails": []
+ },
+ "home--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/",
+  "fails": []
+ },
+ "home--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/",
+  "fails": []
+ },
+ "lets-talk--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/lets-talk",
+  "fails": []
+ },
+ "lets-talk--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/lets-talk",
+  "fails": []
+ },
+ "our-work--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/our-work",
+  "fails": []
+ },
+ "our-work--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/our-work",
+  "fails": []
+ },
+ "our-work__ballerine--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/our-work/ballerine",
+  "fails": []
+ },
+ "our-work__ballerine--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/our-work/ballerine",
+  "fails": []
+ },
+ "our-work__shiftolic--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/our-work/shiftolic",
+  "fails": []
+ },
+ "our-work__shiftolic--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/our-work/shiftolic",
+  "fails": []
+ },
+ "our-work__sustain-commercial-solar--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/our-work/sustain-commercial-solar",
+  "fails": []
+ },
+ "our-work__sustain-commercial-solar--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/our-work/sustain-commercial-solar",
+  "fails": []
+ },
+ "our-work__trak-pro--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/our-work/trak-pro",
+  "fails": []
+ },
+ "our-work__trak-pro--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/our-work/trak-pro",
+  "fails": []
+ },
+ "our-work__veyor-digital--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/our-work/veyor-digital",
+  "fails": []
+ },
+ "our-work__veyor-digital--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/our-work/veyor-digital",
+  "fails": []
+ },
+ "pricing--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/pricing",
+  "fails": []
+ },
+ "pricing--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/pricing",
+  "fails": []
+ },
+ "privacy-policy--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/privacy-policy",
+  "fails": []
+ },
+ "privacy-policy--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/privacy-policy",
+  "fails": []
+ },
+ "resources--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/resources",
+  "fails": []
+ },
+ "resources--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/resources",
+  "fails": []
+ },
+ "services--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/services",
+  "fails": []
+ },
+ "services--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/services",
+  "fails": []
+ },
+ "services__design-development--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/services/design-development",
+  "fails": []
+ },
+ "services__design-development--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/services/design-development",
+  "fails": []
+ },
+ "services__growth--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/services/growth",
+  "fails": []
+ },
+ "services__growth--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/services/growth",
+  "fails": []
+ },
+ "services__seo-aeo--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/services/seo-aeo",
+  "fails": []
+ },
+ "services__seo-aeo--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/services/seo-aeo",
+  "fails": []
+ },
+ "services__webflow-development--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/services/webflow-development",
+  "fails": []
+ },
+ "services__webflow-development--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/services/webflow-development",
+  "fails": []
+ },
+ "terms-of-service--desktop": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/terms-of-service",
+  "fails": []
+ },
+ "terms-of-service--mobile": {
+  "score": 100,
+  "final_url": "https://nues-v2-0b5daf042c4fc951d8bc2555a97d416.webflow.io/terms-of-service",
+  "fails": []
+ }
+}
