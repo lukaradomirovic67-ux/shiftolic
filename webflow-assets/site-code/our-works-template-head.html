@@ -205,8 +205,9 @@ location.replace(/^https?:\/\//i.test(u)?u:'/our-work');})();</script>
 @media (prefers-reduced-motion:reduce){.cs-aside_inner,.cs-aside_inner.is-away,.cs-used_row,.cs-used_arrow,.cs-used_icon,.cs-used_svg *,.cs-toc_link,.cs-team_photo,.cs-team_linkedin{transition:none}}
 </style>
 <style>
-/* Case hero screenshots (27.11.2026, your „Da, samo klizanje“ for Ballerine): they still rise in one after another, but without
-   the fade, like the other hero elements in the site head. Starting at opacity 0 kept the middle screenshot from counting until it
-   was painted again about 1.6 s later, and on phones PageSpeed took that late paint as the page's main content. */
-.reveal-on .cs-hero .cs-shots:is([data-reveal-stagger],[data-reveal-early-stagger]):not(.is-revealed)>*{opacity:1}
+/* Case hero screenshots (27.11.2026, your „Da, samo klizanje“ for Ballerine): when the hero has three screenshots that take turns
+   (side screenshots filled, now only Ballerine), they still rise in one after another, but without the fade. Starting at opacity 0,
+   the turning screenshots were painted again about 1.6 s later and on phones PageSpeed took that late paint as the page's main
+   content. A case with one screenshot keeps the fade: there the screenshot is never counted and the title stays the main content. */
+.reveal-on .cs-hero .cs-shots:has(.cs-shot.is-side .cs-shot_img:not(.w-dyn-bind-empty)):is([data-reveal-stagger],[data-reveal-early-stagger]):not(.is-revealed)>*{opacity:1}
 </style>

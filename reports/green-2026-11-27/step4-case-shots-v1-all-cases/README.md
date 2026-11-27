@@ -1,0 +1,1 @@
+Prva verzija pravila (za sve studije): Ballerine 93/92/83 (prosek 89), ali Shiftolic 79/77/85 (prosek 80, ranije 98-99), jer mu je screenshot postao glavni element. Pravilo je posle suzeno na studije sa tri screenshota (samo Ballerine).
