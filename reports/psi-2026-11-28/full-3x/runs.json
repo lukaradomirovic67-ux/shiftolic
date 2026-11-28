@@ -1,0 +1,2186 @@
+{
+ "about--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:57:41.766Z",
+   "perf": 97,
+   "lcp_ms": 1137,
+   "tbt_ms": 74,
+   "observed_fcp_ms": 503,
+   "observed_lcp_ms": 503
+  },
+  {
+   "fetchTime": "2026-11-28T00:01:41.777Z",
+   "perf": 100,
+   "lcp_ms": 320,
+   "tbt_ms": 30,
+   "observed_fcp_ms": 262,
+   "observed_lcp_ms": 262
+  },
+  {
+   "fetchTime": "2026-11-28T00:05:41.710Z",
+   "perf": 100,
+   "lcp_ms": 295,
+   "tbt_ms": 80,
+   "observed_fcp_ms": 397,
+   "observed_lcp_ms": 397
+  }
+ ],
+ "about--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:57:41.458Z",
+   "perf": 99,
+   "lcp_ms": 1215,
+   "tbt_ms": 66,
+   "observed_fcp_ms": 735,
+   "observed_lcp_ms": 735
+  },
+  {
+   "fetchTime": "2026-11-28T00:01:42.060Z",
+   "perf": 84,
+   "lcp_ms": 2631,
+   "tbt_ms": 238,
+   "observed_fcp_ms": 2246,
+   "observed_lcp_ms": 2246
+  },
+  {
+   "fetchTime": "2026-11-28T00:05:41.215Z",
+   "perf": 100,
+   "lcp_ms": 1270,
+   "tbt_ms": 32,
+   "observed_fcp_ms": 513,
+   "observed_lcp_ms": 513
+  }
+ ],
+ "blog--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:58:23.390Z",
+   "perf": 92,
+   "lcp_ms": 1239,
+   "tbt_ms": 173,
+   "observed_fcp_ms": 559,
+   "observed_lcp_ms": 559
+  },
+  {
+   "fetchTime": "2026-11-28T00:02:23.590Z",
+   "perf": 99,
+   "lcp_ms": 890,
+   "tbt_ms": 56,
+   "observed_fcp_ms": 246,
+   "observed_lcp_ms": 246
+  },
+  {
+   "fetchTime": "2026-11-28T00:06:28.667Z",
+   "perf": 95,
+   "lcp_ms": 1202,
+   "tbt_ms": 140,
+   "observed_fcp_ms": 474,
+   "observed_lcp_ms": 474
+  }
+ ],
+ "blog--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:58:21.029Z",
+   "perf": 83,
+   "lcp_ms": 4377,
+   "tbt_ms": 148,
+   "observed_fcp_ms": 1173,
+   "observed_lcp_ms": 1173
+  },
+  {
+   "fetchTime": "2026-11-28T00:02:20.333Z",
+   "perf": 81,
+   "lcp_ms": 4956,
+   "tbt_ms": 77,
+   "observed_fcp_ms": 435,
+   "observed_lcp_ms": 435
+  },
+  {
+   "fetchTime": "2026-11-28T00:06:28.554Z",
+   "perf": 85,
+   "lcp_ms": 4242,
+   "tbt_ms": 87,
+   "observed_fcp_ms": 281,
+   "observed_lcp_ms": 281
+  }
+ ],
+ "blog__aeo-for-marketing-teams-what-you-can-do-without-a-developer--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:59:03.751Z",
+   "perf": 92,
+   "lcp_ms": 292,
+   "tbt_ms": 236,
+   "observed_fcp_ms": 472,
+   "observed_lcp_ms": 472
+  },
+  {
+   "fetchTime": "2026-11-28T00:03:04.776Z",
+   "perf": 98,
+   "lcp_ms": 1048,
+   "tbt_ms": 0,
+   "observed_fcp_ms": 235,
+   "observed_lcp_ms": 319
+  },
+  {
+   "fetchTime": "2026-11-28T00:07:16.660Z",
+   "perf": 100,
+   "lcp_ms": 290,
+   "tbt_ms": 52,
+   "observed_fcp_ms": 293,
+   "observed_lcp_ms": 293
+  }
+ ],
+ "blog__aeo-for-marketing-teams-what-you-can-do-without-a-developer--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:59:02.652Z",
+   "perf": 89,
+   "lcp_ms": 3158,
+   "tbt_ms": 230,
+   "observed_fcp_ms": 1269,
+   "observed_lcp_ms": 1269
+  },
+  {
+   "fetchTime": "2026-11-28T00:03:03.894Z",
+   "perf": 89,
+   "lcp_ms": 3158,
+   "tbt_ms": 254,
+   "observed_fcp_ms": 313,
+   "observed_lcp_ms": 313
+  },
+  {
+   "fetchTime": "2026-11-28T00:07:11.635Z",
+   "perf": 93,
+   "lcp_ms": 3157,
+   "tbt_ms": 106,
+   "observed_fcp_ms": 287,
+   "observed_lcp_ms": 287
+  }
+ ],
+ "blog__aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:59:07.621Z",
+   "perf": 98,
+   "lcp_ms": 291,
+   "tbt_ms": 135,
+   "observed_fcp_ms": 511,
+   "observed_lcp_ms": 511
+  },
+  {
+   "fetchTime": "2026-11-28T00:03:07.143Z",
+   "perf": 99,
+   "lcp_ms": 1030,
+   "tbt_ms": 0,
+   "observed_fcp_ms": 151,
+   "observed_lcp_ms": 237
+  },
+  {
+   "fetchTime": "2026-11-28T00:07:19.750Z",
+   "perf": 95,
+   "lcp_ms": 294,
+   "tbt_ms": 188,
+   "observed_fcp_ms": 428,
+   "observed_lcp_ms": 428
+  }
+ ],
+ "blog__aeo-tools-in-2026-what-you-actually-need-to-optimize-for-ai-search--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:59:05.229Z",
+   "perf": 92,
+   "lcp_ms": 3158,
+   "tbt_ms": 120,
+   "observed_fcp_ms": 1095,
+   "observed_lcp_ms": 1095
+  },
+  {
+   "fetchTime": "2026-11-28T00:03:07.421Z",
+   "perf": 92,
+   "lcp_ms": 3157,
+   "tbt_ms": 160,
+   "observed_fcp_ms": 272,
+   "observed_lcp_ms": 272
+  },
+  {
+   "fetchTime": "2026-11-28T00:07:17.041Z",
+   "perf": 89,
+   "lcp_ms": 3785,
+   "tbt_ms": 52,
+   "observed_fcp_ms": 275,
+   "observed_lcp_ms": 275
+  }
+ ],
+ "blog__aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:59:08.411Z",
+   "perf": 100,
+   "lcp_ms": 291,
+   "tbt_ms": 55,
+   "observed_fcp_ms": 303,
+   "observed_lcp_ms": 303
+  },
+  {
+   "fetchTime": "2026-11-28T00:03:15.781Z",
+   "perf": 100,
+   "lcp_ms": 294,
+   "tbt_ms": 60,
+   "observed_fcp_ms": 369,
+   "observed_lcp_ms": 369
+  },
+  {
+   "fetchTime": "2026-11-28T00:07:23.257Z",
+   "perf": 100,
+   "lcp_ms": 289,
+   "tbt_ms": 50,
+   "observed_fcp_ms": 324,
+   "observed_lcp_ms": 324
+  }
+ ],
+ "blog__aeo-vs-seo-in-2026-whats-the-difference-and-why-it-matters--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:59:07.427Z",
+   "perf": 93,
+   "lcp_ms": 3159,
+   "tbt_ms": 110,
+   "observed_fcp_ms": 992,
+   "observed_lcp_ms": 992
+  },
+  {
+   "fetchTime": "2026-11-28T00:03:09.528Z",
+   "perf": 77,
+   "lcp_ms": 5301,
+   "tbt_ms": 176,
+   "observed_fcp_ms": 1325,
+   "observed_lcp_ms": 1325
+  },
+  {
+   "fetchTime": "2026-11-28T00:07:22.306Z",
+   "perf": 61,
+   "lcp_ms": 3860,
+   "tbt_ms": 1621,
+   "observed_fcp_ms": 1163,
+   "observed_lcp_ms": 1163
+  }
+ ],
+ "blog__b2b-saas-seo-in-2026-a-strategy-guide-for-marketing-leaders--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:59:18.956Z",
+   "perf": 100,
+   "lcp_ms": 292,
+   "tbt_ms": 0,
+   "observed_fcp_ms": 385,
+   "observed_lcp_ms": 385
+  },
+  {
+   "fetchTime": "2026-11-28T00:03:19.144Z",
+   "perf": 94,
+   "lcp_ms": 290,
+   "tbt_ms": 201,
+   "observed_fcp_ms": 571,
+   "observed_lcp_ms": 571
+  },
+  {
+   "fetchTime": "2026-11-28T00:07:30.888Z",
+   "perf": 95,
+   "lcp_ms": 291,
+   "tbt_ms": 184,
+   "observed_fcp_ms": 595,
+   "observed_lcp_ms": 595
+  }
+ ],
+ "blog__b2b-saas-seo-in-2026-a-strategy-guide-for-marketing-leaders--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:59:11.875Z",
+   "perf": 88,
+   "lcp_ms": 3782,
+   "tbt_ms": 15,
+   "observed_fcp_ms": 1007,
+   "observed_lcp_ms": 1007
+  },
+  {
+   "fetchTime": "2026-11-28T00:03:18.361Z",
+   "perf": 87,
+   "lcp_ms": 3796,
+   "tbt_ms": 142,
+   "observed_fcp_ms": 329,
+   "observed_lcp_ms": 329
+  },
+  {
+   "fetchTime": "2026-11-28T00:07:30.502Z",
+   "perf": 92,
+   "lcp_ms": 3159,
+   "tbt_ms": 156,
+   "observed_fcp_ms": 277,
+   "observed_lcp_ms": 277
+  }
+ ],
+ "blog__best-15-webflow-apps-for-marketing-teams-in-2026--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:59:26.450Z",
+   "perf": 94,
+   "lcp_ms": 931,
+   "tbt_ms": 178,
+   "observed_fcp_ms": 583,
+   "observed_lcp_ms": 583
+  },
+  {
+   "fetchTime": "2026-11-28T00:03:22.130Z",
+   "perf": 98,
+   "lcp_ms": 1044,
+   "tbt_ms": 88,
+   "observed_fcp_ms": 371,
+   "observed_lcp_ms": 371
+  },
+  {
+   "fetchTime": "2026-11-28T00:07:31.421Z",
+   "perf": 97,
+   "lcp_ms": 1143,
+   "tbt_ms": 87,
+   "observed_fcp_ms": 382,
+   "observed_lcp_ms": 382
+  }
+ ],
+ "blog__best-15-webflow-apps-for-marketing-teams-in-2026--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:59:24.840Z",
+   "perf": 87,
+   "lcp_ms": 3947,
+   "tbt_ms": 94,
+   "observed_fcp_ms": 864,
+   "observed_lcp_ms": 864
+  },
+  {
+   "fetchTime": "2026-11-28T00:03:20.354Z",
+   "perf": 86,
+   "lcp_ms": 3939,
+   "tbt_ms": 159,
+   "observed_fcp_ms": 319,
+   "observed_lcp_ms": 319
+  },
+  {
+   "fetchTime": "2026-11-28T00:07:30.404Z",
+   "perf": 88,
+   "lcp_ms": 3935,
+   "tbt_ms": 19,
+   "observed_fcp_ms": 181,
+   "observed_lcp_ms": 251
+  }
+ ],
+ "blog__from-guests-to-sponsors-notes-from-flow-conf-2026--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:59:25.898Z",
+   "perf": 98,
+   "lcp_ms": 1117,
+   "tbt_ms": 17,
+   "observed_fcp_ms": 1030,
+   "observed_lcp_ms": 1030
+  },
+  {
+   "fetchTime": "2026-11-28T00:03:29.869Z",
+   "perf": 91,
+   "lcp_ms": 1147,
+   "tbt_ms": 202,
+   "observed_fcp_ms": 525,
+   "observed_lcp_ms": 525
+  },
+  {
+   "fetchTime": "2026-11-28T00:07:40.428Z",
+   "perf": 98,
+   "lcp_ms": 1154,
+   "tbt_ms": 0,
+   "observed_fcp_ms": 366,
+   "observed_lcp_ms": 427
+  }
+ ],
+ "blog__from-guests-to-sponsors-notes-from-flow-conf-2026--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:59:26.077Z",
+   "perf": 88,
+   "lcp_ms": 3790,
+   "tbt_ms": 84,
+   "observed_fcp_ms": 876,
+   "observed_lcp_ms": 876
+  },
+  {
+   "fetchTime": "2026-11-28T00:03:26.839Z",
+   "perf": 88,
+   "lcp_ms": 3934,
+   "tbt_ms": 49,
+   "observed_fcp_ms": 296,
+   "observed_lcp_ms": 296
+  },
+  {
+   "fetchTime": "2026-11-28T00:07:32.437Z",
+   "perf": 89,
+   "lcp_ms": 3777,
+   "tbt_ms": 15,
+   "observed_fcp_ms": 239,
+   "observed_lcp_ms": 239
+  }
+ ],
+ "blog__how-to-delete-a-cms-collection-page-in-webflow-without-breaking-your-site--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:59:27.539Z",
+   "perf": 100,
+   "lcp_ms": 290,
+   "tbt_ms": 16,
+   "observed_fcp_ms": 300,
+   "observed_lcp_ms": 300
+  },
+  {
+   "fetchTime": "2026-11-28T00:03:33.697Z",
+   "perf": 99,
+   "lcp_ms": 335,
+   "tbt_ms": 86,
+   "observed_fcp_ms": 447,
+   "observed_lcp_ms": 447
+  },
+  {
+   "fetchTime": "2026-11-28T00:07:44.881Z",
+   "perf": 98,
+   "lcp_ms": 1099,
+   "tbt_ms": 33,
+   "observed_fcp_ms": 265,
+   "observed_lcp_ms": 458
+  }
+ ],
+ "blog__how-to-delete-a-cms-collection-page-in-webflow-without-breaking-your-site--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:59:26.278Z",
+   "perf": 88,
+   "lcp_ms": 3780,
+   "tbt_ms": 55,
+   "observed_fcp_ms": 993,
+   "observed_lcp_ms": 993
+  },
+  {
+   "fetchTime": "2026-11-28T00:03:30.005Z",
+   "perf": 65,
+   "lcp_ms": 5408,
+   "tbt_ms": 325,
+   "observed_fcp_ms": 2246,
+   "observed_lcp_ms": 2246
+  },
+  {
+   "fetchTime": "2026-11-28T00:07:41.836Z",
+   "perf": 92,
+   "lcp_ms": 3156,
+   "tbt_ms": 154,
+   "observed_fcp_ms": 256,
+   "observed_lcp_ms": 256
+  }
+ ],
+ "blog__how-to-improve-your-website-conversion-rate-in-2026--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:59:32.775Z",
+   "perf": 97,
+   "lcp_ms": 1134,
+   "tbt_ms": 102,
+   "observed_fcp_ms": 633,
+   "observed_lcp_ms": 633
+  },
+  {
+   "fetchTime": "2026-11-28T00:03:37.196Z",
+   "perf": 95,
+   "lcp_ms": 1103,
+   "tbt_ms": 139,
+   "observed_fcp_ms": 443,
+   "observed_lcp_ms": 443
+  },
+  {
+   "fetchTime": "2026-11-28T00:07:48.037Z",
+   "perf": 97,
+   "lcp_ms": 1091,
+   "tbt_ms": 113,
+   "observed_fcp_ms": 405,
+   "observed_lcp_ms": 405
+  }
+ ],
+ "blog__how-to-improve-your-website-conversion-rate-in-2026--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:59:29.185Z",
+   "perf": 92,
+   "lcp_ms": 3159,
+   "tbt_ms": 146,
+   "observed_fcp_ms": 1011,
+   "observed_lcp_ms": 1011
+  },
+  {
+   "fetchTime": "2026-11-28T00:03:36.120Z",
+   "perf": 88,
+   "lcp_ms": 3157,
+   "tbt_ms": 270,
+   "observed_fcp_ms": 386,
+   "observed_lcp_ms": 386
+  },
+  {
+   "fetchTime": "2026-11-28T00:07:47.382Z",
+   "perf": 77,
+   "lcp_ms": 5322,
+   "tbt_ms": 172,
+   "observed_fcp_ms": 1327,
+   "observed_lcp_ms": 1364
+  }
+ ],
+ "blog__is-webflow-good-for-ecommerce-an-honest-answer-for-2026--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:59:40.927Z",
+   "perf": 98,
+   "lcp_ms": 1031,
+   "tbt_ms": 29,
+   "observed_fcp_ms": 1108,
+   "observed_lcp_ms": 1108
+  },
+  {
+   "fetchTime": "2026-11-28T00:03:40.873Z",
+   "perf": 82,
+   "lcp_ms": 968,
+   "tbt_ms": 369,
+   "observed_fcp_ms": 735,
+   "observed_lcp_ms": 735
+  },
+  {
+   "fetchTime": "2026-11-28T00:07:51.877Z",
+   "perf": 98,
+   "lcp_ms": 1053,
+   "tbt_ms": 14,
+   "observed_fcp_ms": 258,
+   "observed_lcp_ms": 363
+  }
+ ],
+ "blog__is-webflow-good-for-ecommerce-an-honest-answer-for-2026--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:59:40.703Z",
+   "perf": 81,
+   "lcp_ms": 3158,
+   "tbt_ms": 442,
+   "observed_fcp_ms": 1401,
+   "observed_lcp_ms": 1401
+  },
+  {
+   "fetchTime": "2026-11-28T00:03:39.003Z",
+   "perf": 88,
+   "lcp_ms": 3937,
+   "tbt_ms": 23,
+   "observed_fcp_ms": 280,
+   "observed_lcp_ms": 280
+  },
+  {
+   "fetchTime": "2026-11-28T00:07:49.987Z",
+   "perf": 89,
+   "lcp_ms": 3793,
+   "tbt_ms": 35,
+   "observed_fcp_ms": 256,
+   "observed_lcp_ms": 256
+  }
+ ],
+ "blog__saas-content-marketing-in-2026-a-strategy-guide--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:59:43.581Z",
+   "perf": 97,
+   "lcp_ms": 1149,
+   "tbt_ms": 68,
+   "observed_fcp_ms": 462,
+   "observed_lcp_ms": 462
+  },
+  {
+   "fetchTime": "2026-11-28T00:03:50.408Z",
+   "perf": 99,
+   "lcp_ms": 927,
+   "tbt_ms": 13,
+   "observed_fcp_ms": 190,
+   "observed_lcp_ms": 296
+  },
+  {
+   "fetchTime": "2026-11-28T00:07:53.955Z",
+   "perf": 97,
+   "lcp_ms": 1143,
+   "tbt_ms": 70,
+   "observed_fcp_ms": 355,
+   "observed_lcp_ms": 355
+  }
+ ],
+ "blog__saas-content-marketing-in-2026-a-strategy-guide--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:59:42.182Z",
+   "perf": 92,
+   "lcp_ms": 3157,
+   "tbt_ms": 102,
+   "observed_fcp_ms": 957,
+   "observed_lcp_ms": 957
+  },
+  {
+   "fetchTime": "2026-11-28T00:03:44.313Z",
+   "perf": 97,
+   "lcp_ms": 2559,
+   "tbt_ms": 63,
+   "observed_fcp_ms": 188,
+   "observed_lcp_ms": 188
+  },
+  {
+   "fetchTime": "2026-11-28T00:07:53.492Z",
+   "perf": 93,
+   "lcp_ms": 3159,
+   "tbt_ms": 95,
+   "observed_fcp_ms": 253,
+   "observed_lcp_ms": 253
+  }
+ ],
+ "blog__sanity-vs-webflow-cms-which-one-your-team-actually-needs--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:59:49.017Z",
+   "perf": 100,
+   "lcp_ms": 290,
+   "tbt_ms": 78,
+   "observed_fcp_ms": 469,
+   "observed_lcp_ms": 469
+  },
+  {
+   "fetchTime": "2026-11-28T00:03:54.754Z",
+   "perf": 99,
+   "lcp_ms": 290,
+   "tbt_ms": 118,
+   "observed_fcp_ms": 352,
+   "observed_lcp_ms": 352
+  },
+  {
+   "fetchTime": "2026-11-28T00:08:00.946Z",
+   "perf": 100,
+   "lcp_ms": 289,
+   "tbt_ms": 12,
+   "observed_fcp_ms": 272,
+   "observed_lcp_ms": 272
+  }
+ ],
+ "blog__sanity-vs-webflow-cms-which-one-your-team-actually-needs--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:59:44.680Z",
+   "perf": 88,
+   "lcp_ms": 3807,
+   "tbt_ms": 97,
+   "observed_fcp_ms": 1042,
+   "observed_lcp_ms": 1042
+  },
+  {
+   "fetchTime": "2026-11-28T00:03:51.481Z",
+   "perf": 89,
+   "lcp_ms": 3792,
+   "tbt_ms": 54,
+   "observed_fcp_ms": 294,
+   "observed_lcp_ms": 294
+  },
+  {
+   "fetchTime": "2026-11-28T00:07:58.321Z",
+   "perf": 78,
+   "lcp_ms": 5620,
+   "tbt_ms": 12,
+   "observed_fcp_ms": 1334,
+   "observed_lcp_ms": 1334
+  }
+ ],
+ "blog__source-by-webflow-what-it-is-and-what-it-means-for-teams-on-webflow--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:59:51.120Z",
+   "perf": 100,
+   "lcp_ms": 314,
+   "tbt_ms": 72,
+   "observed_fcp_ms": 451,
+   "observed_lcp_ms": 451
+  },
+  {
+   "fetchTime": "2026-11-28T00:03:59.018Z",
+   "perf": 94,
+   "lcp_ms": 294,
+   "tbt_ms": 198,
+   "observed_fcp_ms": 601,
+   "observed_lcp_ms": 601
+  },
+  {
+   "fetchTime": "2026-11-28T00:08:08.103Z",
+   "perf": 93,
+   "lcp_ms": 291,
+   "tbt_ms": 214,
+   "observed_fcp_ms": 441,
+   "observed_lcp_ms": 441
+  }
+ ],
+ "blog__source-by-webflow-what-it-is-and-what-it-means-for-teams-on-webflow--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:59:49.832Z",
+   "perf": 88,
+   "lcp_ms": 3787,
+   "tbt_ms": 52,
+   "observed_fcp_ms": 1014,
+   "observed_lcp_ms": 1014
+  },
+  {
+   "fetchTime": "2026-11-28T00:03:56.461Z",
+   "perf": 91,
+   "lcp_ms": 3156,
+   "tbt_ms": 164,
+   "observed_fcp_ms": 291,
+   "observed_lcp_ms": 291
+  },
+  {
+   "fetchTime": "2026-11-28T00:08:06.913Z",
+   "perf": 87,
+   "lcp_ms": 3795,
+   "tbt_ms": 156,
+   "observed_fcp_ms": 333,
+   "observed_lcp_ms": 333
+  }
+ ],
+ "blog__the-signs-your-current-webflow-site-is-holding-your-business-back--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:59:59.330Z",
+   "perf": 94,
+   "lcp_ms": 290,
+   "tbt_ms": 192,
+   "observed_fcp_ms": 559,
+   "observed_lcp_ms": 559
+  },
+  {
+   "fetchTime": "2026-11-28T00:04:03.199Z",
+   "perf": 100,
+   "lcp_ms": 289,
+   "tbt_ms": 52,
+   "observed_fcp_ms": 322,
+   "observed_lcp_ms": 322
+  },
+  {
+   "fetchTime": "2026-11-28T00:08:09.516Z",
+   "perf": 90,
+   "lcp_ms": 287,
+   "tbt_ms": 262,
+   "observed_fcp_ms": 610,
+   "observed_lcp_ms": 610
+  }
+ ],
+ "blog__the-signs-your-current-webflow-site-is-holding-your-business-back--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:59:57.104Z",
+   "perf": 88,
+   "lcp_ms": 2570,
+   "tbt_ms": 269,
+   "observed_fcp_ms": 2638,
+   "observed_lcp_ms": 2638
+  },
+  {
+   "fetchTime": "2026-11-28T00:04:00.457Z",
+   "perf": 88,
+   "lcp_ms": 3795,
+   "tbt_ms": 116,
+   "observed_fcp_ms": 302,
+   "observed_lcp_ms": 302
+  },
+  {
+   "fetchTime": "2026-11-28T00:08:07.043Z",
+   "perf": 89,
+   "lcp_ms": 3780,
+   "tbt_ms": 43,
+   "observed_fcp_ms": 229,
+   "observed_lcp_ms": 229
+  }
+ ],
+ "blog__the-website-redesign-process-a-step-by-step-guide--desktop": [
+  {
+   "fetchTime": "2026-11-28T00:00:03.498Z",
+   "perf": 98,
+   "lcp_ms": 1051,
+   "tbt_ms": 6,
+   "observed_fcp_ms": 266,
+   "observed_lcp_ms": 266
+  },
+  {
+   "fetchTime": "2026-11-28T00:04:08.875Z",
+   "perf": 98,
+   "lcp_ms": 1098,
+   "tbt_ms": 29,
+   "observed_fcp_ms": 155,
+   "observed_lcp_ms": 264
+  },
+  {
+   "fetchTime": "2026-11-28T00:08:12.169Z",
+   "perf": 96,
+   "lcp_ms": 1103,
+   "tbt_ms": 55,
+   "observed_fcp_ms": 1922,
+   "observed_lcp_ms": 1922
+  }
+ ],
+ "blog__the-website-redesign-process-a-step-by-step-guide--mobile": [
+  {
+   "fetchTime": "2026-11-28T00:00:01.782Z",
+   "perf": 87,
+   "lcp_ms": 3806,
+   "tbt_ms": 134,
+   "observed_fcp_ms": 1159,
+   "observed_lcp_ms": 1159
+  },
+  {
+   "fetchTime": "2026-11-28T00:04:04.398Z",
+   "perf": 88,
+   "lcp_ms": 3782,
+   "tbt_ms": 95,
+   "observed_fcp_ms": 293,
+   "observed_lcp_ms": 293
+  },
+  {
+   "fetchTime": "2026-11-28T00:08:11.355Z",
+   "perf": 88,
+   "lcp_ms": 3793,
+   "tbt_ms": 70,
+   "observed_fcp_ms": 275,
+   "observed_lcp_ms": 275
+  }
+ ],
+ "blog__three-webflow-features-from-2026-worth-paying-attention-to-and-one-to-skip--desktop": [
+  {
+   "fetchTime": "2026-11-28T00:00:05.789Z",
+   "perf": 99,
+   "lcp_ms": 291,
+   "tbt_ms": 95,
+   "observed_fcp_ms": 516,
+   "observed_lcp_ms": 516
+  },
+  {
+   "fetchTime": "2026-11-28T00:04:15.459Z",
+   "perf": 97,
+   "lcp_ms": 292,
+   "tbt_ms": 154,
+   "observed_fcp_ms": 444,
+   "observed_lcp_ms": 444
+  },
+  {
+   "fetchTime": "2026-11-28T00:08:14.415Z",
+   "perf": 100,
+   "lcp_ms": 299,
+   "tbt_ms": 44,
+   "observed_fcp_ms": 244,
+   "observed_lcp_ms": 244
+  }
+ ],
+ "blog__three-webflow-features-from-2026-worth-paying-attention-to-and-one-to-skip--mobile": [
+  {
+   "fetchTime": "2026-11-28T00:00:04.517Z",
+   "perf": 90,
+   "lcp_ms": 3476,
+   "tbt_ms": 15,
+   "observed_fcp_ms": 951,
+   "observed_lcp_ms": 951
+  },
+  {
+   "fetchTime": "2026-11-28T00:04:14.770Z",
+   "perf": 90,
+   "lcp_ms": 3008,
+   "tbt_ms": 238,
+   "observed_fcp_ms": 330,
+   "observed_lcp_ms": 330
+  },
+  {
+   "fetchTime": "2026-11-28T00:08:12.869Z",
+   "perf": 92,
+   "lcp_ms": 3164,
+   "tbt_ms": 20,
+   "observed_fcp_ms": 1114,
+   "observed_lcp_ms": 1114
+  }
+ ],
+ "blog__webflow-for-b2b-lead-generation-how-to-turn-your-site-into-a-pipeline-engine--desktop": [
+  {
+   "fetchTime": "2026-11-28T00:00:06.709Z",
+   "perf": 99,
+   "lcp_ms": 291,
+   "tbt_ms": 84,
+   "observed_fcp_ms": 931,
+   "observed_lcp_ms": 931
+  },
+  {
+   "fetchTime": "2026-11-28T00:04:20.124Z",
+   "perf": 100,
+   "lcp_ms": 293,
+   "tbt_ms": 34,
+   "observed_fcp_ms": 360,
+   "observed_lcp_ms": 360
+  },
+  {
+   "fetchTime": "2026-11-28T00:08:27.365Z",
+   "perf": 87,
+   "lcp_ms": 292,
+   "tbt_ms": 308,
+   "observed_fcp_ms": 712,
+   "observed_lcp_ms": 712
+  }
+ ],
+ "blog__webflow-for-b2b-lead-generation-how-to-turn-your-site-into-a-pipeline-engine--mobile": [
+  {
+   "fetchTime": "2026-11-28T00:00:06.410Z",
+   "perf": 91,
+   "lcp_ms": 3157,
+   "tbt_ms": 148,
+   "observed_fcp_ms": 1196,
+   "observed_lcp_ms": 1196
+  },
+  {
+   "fetchTime": "2026-11-28T00:04:16.438Z",
+   "perf": 85,
+   "lcp_ms": 3799,
+   "tbt_ms": 206,
+   "observed_fcp_ms": 358,
+   "observed_lcp_ms": 358
+  },
+  {
+   "fetchTime": "2026-11-28T00:08:21.720Z",
+   "perf": 94,
+   "lcp_ms": 3008,
+   "tbt_ms": 80,
+   "observed_fcp_ms": 258,
+   "observed_lcp_ms": 258
+  }
+ ],
+ "blog__webflow-forms-in-2026-how-to-turn-them-into-a-lead-engine--desktop": [
+  {
+   "fetchTime": "2026-11-28T00:00:20.172Z",
+   "perf": 99,
+   "lcp_ms": 290,
+   "tbt_ms": 100,
+   "observed_fcp_ms": 445,
+   "observed_lcp_ms": 445
+  },
+  {
+   "fetchTime": "2026-11-28T00:04:21.065Z",
+   "perf": 98,
+   "lcp_ms": 291,
+   "tbt_ms": 134,
+   "observed_fcp_ms": 434,
+   "observed_lcp_ms": 434
+  },
+  {
+   "fetchTime": "2026-11-28T00:08:30.385Z",
+   "perf": 98,
+   "lcp_ms": 326,
+   "tbt_ms": 134,
+   "observed_fcp_ms": 398,
+   "observed_lcp_ms": 398
+  }
+ ],
+ "blog__webflow-forms-in-2026-how-to-turn-them-into-a-lead-engine--mobile": [
+  {
+   "fetchTime": "2026-11-28T00:00:17.121Z",
+   "perf": 88,
+   "lcp_ms": 3793,
+   "tbt_ms": 60,
+   "observed_fcp_ms": 1042,
+   "observed_lcp_ms": 1042
+  },
+  {
+   "fetchTime": "2026-11-28T00:04:21.120Z",
+   "perf": 75,
+   "lcp_ms": 5429,
+   "tbt_ms": 228,
+   "observed_fcp_ms": 1260,
+   "observed_lcp_ms": 1260
+  },
+  {
+   "fetchTime": "2026-11-28T00:08:28.528Z",
+   "perf": 89,
+   "lcp_ms": 3787,
+   "tbt_ms": 50,
+   "observed_fcp_ms": 229,
+   "observed_lcp_ms": 229
+  }
+ ],
+ "blog__webflow-templates-how-to-choose-one-and-when-to-go-custom--desktop": [
+  {
+   "fetchTime": "2026-11-28T00:00:20.078Z",
+   "perf": 99,
+   "lcp_ms": 292,
+   "tbt_ms": 16,
+   "observed_fcp_ms": 1592,
+   "observed_lcp_ms": 1592
+  },
+  {
+   "fetchTime": "2026-11-28T00:04:24.485Z",
+   "perf": 98,
+   "lcp_ms": 1076,
+   "tbt_ms": 42,
+   "observed_fcp_ms": 178,
+   "observed_lcp_ms": 288
+  },
+  {
+   "fetchTime": "2026-11-28T00:08:32.100Z",
+   "perf": 99,
+   "lcp_ms": 1044,
+   "tbt_ms": 12,
+   "observed_fcp_ms": 168,
+   "observed_lcp_ms": 257
+  }
+ ],
+ "blog__webflow-templates-how-to-choose-one-and-when-to-go-custom--mobile": [
+  {
+   "fetchTime": "2026-11-28T00:00:19.812Z",
+   "perf": 91,
+   "lcp_ms": 3174,
+   "tbt_ms": 36,
+   "observed_fcp_ms": 1714,
+   "observed_lcp_ms": 1714
+  },
+  {
+   "fetchTime": "2026-11-28T00:04:20.740Z",
+   "perf": 88,
+   "lcp_ms": 3789,
+   "tbt_ms": 113,
+   "observed_fcp_ms": 281,
+   "observed_lcp_ms": 281
+  },
+  {
+   "fetchTime": "2026-11-28T00:08:31.975Z",
+   "perf": 67,
+   "lcp_ms": 5495,
+   "tbt_ms": 267,
+   "observed_fcp_ms": 2241,
+   "observed_lcp_ms": 2241
+  }
+ ],
+ "blog__webflow-vs-framer-in-2026-which-one-is-right-for-your-site--desktop": [
+  {
+   "fetchTime": "2026-11-28T00:00:21.875Z",
+   "perf": 98,
+   "lcp_ms": 1015,
+   "tbt_ms": 86,
+   "observed_fcp_ms": 349,
+   "observed_lcp_ms": 349
+  },
+  {
+   "fetchTime": "2026-11-28T00:04:36.349Z",
+   "perf": 98,
+   "lcp_ms": 1046,
+   "tbt_ms": 28,
+   "observed_fcp_ms": 292,
+   "observed_lcp_ms": 292
+  },
+  {
+   "fetchTime": "2026-11-28T00:08:36.302Z",
+   "perf": 98,
+   "lcp_ms": 1062,
+   "tbt_ms": 52,
+   "observed_fcp_ms": 162,
+   "observed_lcp_ms": 288
+  }
+ ],
+ "blog__webflow-vs-framer-in-2026-which-one-is-right-for-your-site--mobile": [
+  {
+   "fetchTime": "2026-11-28T00:00:21.027Z",
+   "perf": 95,
+   "lcp_ms": 2858,
+   "tbt_ms": 37,
+   "observed_fcp_ms": 946,
+   "observed_lcp_ms": 946
+  },
+  {
+   "fetchTime": "2026-11-28T00:04:36.337Z",
+   "perf": 79,
+   "lcp_ms": 5272,
+   "tbt_ms": 99,
+   "observed_fcp_ms": 1342,
+   "observed_lcp_ms": 1342
+  },
+  {
+   "fetchTime": "2026-11-28T00:08:32.387Z",
+   "perf": 97,
+   "lcp_ms": 2557,
+   "tbt_ms": 18,
+   "observed_fcp_ms": 190,
+   "observed_lcp_ms": 190
+  }
+ ],
+ "blog__webflow-vs-squarespace-in-2026-when-each-one-makes-sense--desktop": [
+  {
+   "fetchTime": "2026-11-28T00:00:27.423Z",
+   "perf": 95,
+   "lcp_ms": 292,
+   "tbt_ms": 190,
+   "observed_fcp_ms": 541,
+   "observed_lcp_ms": 541
+  },
+  {
+   "fetchTime": "2026-11-28T00:04:37.026Z",
+   "perf": 100,
+   "lcp_ms": 297,
+   "tbt_ms": 4,
+   "observed_fcp_ms": 246,
+   "observed_lcp_ms": 246
+  },
+  {
+   "fetchTime": "2026-11-28T00:08:45.552Z",
+   "perf": 100,
+   "lcp_ms": 329,
+   "tbt_ms": 82,
+   "observed_fcp_ms": 418,
+   "observed_lcp_ms": 418
+  }
+ ],
+ "blog__webflow-vs-squarespace-in-2026-when-each-one-makes-sense--mobile": [
+  {
+   "fetchTime": "2026-11-28T00:00:25.384Z",
+   "perf": 88,
+   "lcp_ms": 3787,
+   "tbt_ms": 50,
+   "observed_fcp_ms": 1468,
+   "observed_lcp_ms": 1468
+  },
+  {
+   "fetchTime": "2026-11-28T00:04:37.895Z",
+   "perf": 77,
+   "lcp_ms": 5305,
+   "tbt_ms": 178,
+   "observed_fcp_ms": 1253,
+   "observed_lcp_ms": 1297
+  },
+  {
+   "fetchTime": "2026-11-28T00:08:38.500Z",
+   "perf": 91,
+   "lcp_ms": 3158,
+   "tbt_ms": 199,
+   "observed_fcp_ms": 300,
+   "observed_lcp_ms": 300
+  }
+ ],
+ "blog__webflow-vs-wix-in-2026-which-one-is-right-for-your-site--desktop": [
+  {
+   "fetchTime": "2026-11-28T00:00:36.093Z",
+   "perf": 90,
+   "lcp_ms": 1019,
+   "tbt_ms": 234,
+   "observed_fcp_ms": 730,
+   "observed_lcp_ms": 730
+  },
+  {
+   "fetchTime": "2026-11-28T00:04:40.818Z",
+   "perf": 98,
+   "lcp_ms": 1076,
+   "tbt_ms": 2,
+   "observed_fcp_ms": 163,
+   "observed_lcp_ms": 259
+  },
+  {
+   "fetchTime": "2026-11-28T00:08:47.310Z",
+   "perf": 100,
+   "lcp_ms": 770,
+   "tbt_ms": 28,
+   "observed_fcp_ms": 258,
+   "observed_lcp_ms": 258
+  }
+ ],
+ "blog__webflow-vs-wix-in-2026-which-one-is-right-for-your-site--mobile": [
+  {
+   "fetchTime": "2026-11-28T00:00:35.642Z",
+   "perf": 89,
+   "lcp_ms": 3159,
+   "tbt_ms": 222,
+   "observed_fcp_ms": 1055,
+   "observed_lcp_ms": 1055
+  },
+  {
+   "fetchTime": "2026-11-28T00:04:37.544Z",
+   "perf": 89,
+   "lcp_ms": 3786,
+   "tbt_ms": 58,
+   "observed_fcp_ms": 292,
+   "observed_lcp_ms": 292
+  },
+  {
+   "fetchTime": "2026-11-28T00:08:46.145Z",
+   "perf": 87,
+   "lcp_ms": 3795,
+   "tbt_ms": 130,
+   "observed_fcp_ms": 264,
+   "observed_lcp_ms": 264
+  }
+ ],
+ "blog__webflow-vs-wordpress-for-b2b-saas-in-2026-whats-changed-and-when-each-one-wins--desktop": [
+  {
+   "fetchTime": "2026-11-28T00:00:38.046Z",
+   "perf": 97,
+   "lcp_ms": 1183,
+   "tbt_ms": 0,
+   "observed_fcp_ms": 384,
+   "observed_lcp_ms": 473
+  },
+  {
+   "fetchTime": "2026-11-28T00:04:43.229Z",
+   "perf": 99,
+   "lcp_ms": 290,
+   "tbt_ms": 90,
+   "observed_fcp_ms": 340,
+   "observed_lcp_ms": 340
+  },
+  {
+   "fetchTime": "2026-11-28T00:08:53.592Z",
+   "perf": 98,
+   "lcp_ms": 1094,
+   "tbt_ms": 61,
+   "observed_fcp_ms": 176,
+   "observed_lcp_ms": 329
+  }
+ ],
+ "blog__webflow-vs-wordpress-for-b2b-saas-in-2026-whats-changed-and-when-each-one-wins--mobile": [
+  {
+   "fetchTime": "2026-11-28T00:00:37.083Z",
+   "perf": 87,
+   "lcp_ms": 3929,
+   "tbt_ms": 34,
+   "observed_fcp_ms": 1058,
+   "observed_lcp_ms": 1058
+  },
+  {
+   "fetchTime": "2026-11-28T00:04:42.219Z",
+   "perf": 92,
+   "lcp_ms": 3308,
+   "tbt_ms": 62,
+   "observed_fcp_ms": 349,
+   "observed_lcp_ms": 349
+  },
+  {
+   "fetchTime": "2026-11-28T00:08:51.103Z",
+   "perf": 79,
+   "lcp_ms": 5423,
+   "tbt_ms": 58,
+   "observed_fcp_ms": 1297,
+   "observed_lcp_ms": 1297
+  }
+ ],
+ "careers--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:58:30.874Z",
+   "perf": 99,
+   "lcp_ms": 598,
+   "tbt_ms": 64,
+   "observed_fcp_ms": 244,
+   "observed_lcp_ms": 244
+  },
+  {
+   "fetchTime": "2026-11-28T00:02:27.576Z",
+   "perf": 100,
+   "lcp_ms": 565,
+   "tbt_ms": 22,
+   "observed_fcp_ms": 239,
+   "observed_lcp_ms": 239
+  },
+  {
+   "fetchTime": "2026-11-28T00:06:29.778Z",
+   "perf": 100,
+   "lcp_ms": 562,
+   "tbt_ms": 14,
+   "observed_fcp_ms": 277,
+   "observed_lcp_ms": 277
+  }
+ ],
+ "careers--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:58:25.271Z",
+   "perf": 100,
+   "lcp_ms": 1213,
+   "tbt_ms": 18,
+   "observed_fcp_ms": 785,
+   "observed_lcp_ms": 785
+  },
+  {
+   "fetchTime": "2026-11-28T00:02:24.793Z",
+   "perf": 100,
+   "lcp_ms": 1210,
+   "tbt_ms": 46,
+   "observed_fcp_ms": 170,
+   "observed_lcp_ms": 170
+  },
+  {
+   "fetchTime": "2026-11-28T00:06:28.970Z",
+   "perf": 99,
+   "lcp_ms": 1212,
+   "tbt_ms": 100,
+   "observed_fcp_ms": 211,
+   "observed_lcp_ms": 211
+  }
+ ],
+ "home--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:57:41.419Z",
+   "perf": 95,
+   "lcp_ms": 1479,
+   "tbt_ms": 34,
+   "observed_fcp_ms": 248,
+   "observed_lcp_ms": 1837
+  },
+  {
+   "fetchTime": "2026-11-28T00:01:42.193Z",
+   "perf": 93,
+   "lcp_ms": 1562,
+   "tbt_ms": 104,
+   "observed_fcp_ms": 393,
+   "observed_lcp_ms": 2260
+  },
+  {
+   "fetchTime": "2026-11-28T00:05:41.654Z",
+   "perf": 95,
+   "lcp_ms": 1516,
+   "tbt_ms": 58,
+   "observed_fcp_ms": 404,
+   "observed_lcp_ms": 1950
+  }
+ ],
+ "home--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:57:41.498Z",
+   "perf": 85,
+   "lcp_ms": 4207,
+   "tbt_ms": 68,
+   "observed_fcp_ms": 353,
+   "observed_lcp_ms": 353
+  },
+  {
+   "fetchTime": "2026-11-28T00:01:41.776Z",
+   "perf": 86,
+   "lcp_ms": 4057,
+   "tbt_ms": 80,
+   "observed_fcp_ms": 236,
+   "observed_lcp_ms": 236
+  },
+  {
+   "fetchTime": "2026-11-28T00:05:41.403Z",
+   "perf": 91,
+   "lcp_ms": 3309,
+   "tbt_ms": 113,
+   "observed_fcp_ms": 236,
+   "observed_lcp_ms": 236
+  }
+ ],
+ "lets-talk--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:58:35.430Z",
+   "perf": 99,
+   "lcp_ms": 713,
+   "tbt_ms": 86,
+   "observed_fcp_ms": 345,
+   "observed_lcp_ms": 345
+  },
+  {
+   "fetchTime": "2026-11-28T00:02:34.182Z",
+   "perf": 99,
+   "lcp_ms": 708,
+   "tbt_ms": 9,
+   "observed_fcp_ms": 227,
+   "observed_lcp_ms": 227
+  },
+  {
+   "fetchTime": "2026-11-28T00:06:44.610Z",
+   "perf": 98,
+   "lcp_ms": 960,
+   "tbt_ms": 74,
+   "observed_fcp_ms": 265,
+   "observed_lcp_ms": 265
+  }
+ ],
+ "lets-talk--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:58:33.367Z",
+   "perf": 97,
+   "lcp_ms": 1999,
+   "tbt_ms": 64,
+   "observed_fcp_ms": 499,
+   "observed_lcp_ms": 499
+  },
+  {
+   "fetchTime": "2026-11-28T00:02:33.418Z",
+   "perf": 91,
+   "lcp_ms": 2753,
+   "tbt_ms": 81,
+   "observed_fcp_ms": 203,
+   "observed_lcp_ms": 203
+  },
+  {
+   "fetchTime": "2026-11-28T00:06:40.456Z",
+   "perf": 89,
+   "lcp_ms": 2749,
+   "tbt_ms": 180,
+   "observed_fcp_ms": 297,
+   "observed_lcp_ms": 297
+  }
+ ],
+ "our-work--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:58:16.201Z",
+   "perf": 93,
+   "lcp_ms": 328,
+   "tbt_ms": 207,
+   "observed_fcp_ms": 501,
+   "observed_lcp_ms": 501
+  },
+  {
+   "fetchTime": "2026-11-28T00:02:16.206Z",
+   "perf": 96,
+   "lcp_ms": 302,
+   "tbt_ms": 159,
+   "observed_fcp_ms": 228,
+   "observed_lcp_ms": 228
+  },
+  {
+   "fetchTime": "2026-11-28T00:06:18.422Z",
+   "perf": 79,
+   "lcp_ms": 292,
+   "tbt_ms": 481,
+   "observed_fcp_ms": 390,
+   "observed_lcp_ms": 390
+  }
+ ],
+ "our-work--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:58:14.751Z",
+   "perf": 77,
+   "lcp_ms": 5749,
+   "tbt_ms": 55,
+   "observed_fcp_ms": 1168,
+   "observed_lcp_ms": 1168
+  },
+  {
+   "fetchTime": "2026-11-28T00:02:15.167Z",
+   "perf": 54,
+   "lcp_ms": 7578,
+   "tbt_ms": 459,
+   "observed_fcp_ms": 2343,
+   "observed_lcp_ms": 2343
+  },
+  {
+   "fetchTime": "2026-11-28T00:06:17.286Z",
+   "perf": 54,
+   "lcp_ms": 7552,
+   "tbt_ms": 475,
+   "observed_fcp_ms": 2255,
+   "observed_lcp_ms": 2255
+  }
+ ],
+ "our-work__ballerine--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:58:46.855Z",
+   "perf": 100,
+   "lcp_ms": 302,
+   "tbt_ms": 30,
+   "observed_fcp_ms": 241,
+   "observed_lcp_ms": 241
+  },
+  {
+   "fetchTime": "2026-11-28T00:02:45.124Z",
+   "perf": 100,
+   "lcp_ms": 289,
+   "tbt_ms": 76,
+   "observed_fcp_ms": 398,
+   "observed_lcp_ms": 398
+  },
+  {
+   "fetchTime": "2026-11-28T00:06:47.992Z",
+   "perf": 93,
+   "lcp_ms": 292,
+   "tbt_ms": 212,
+   "observed_fcp_ms": 399,
+   "observed_lcp_ms": 399
+  }
+ ],
+ "our-work__ballerine--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:58:44.344Z",
+   "perf": 68,
+   "lcp_ms": 5907,
+   "tbt_ms": 187,
+   "observed_fcp_ms": 2255,
+   "observed_lcp_ms": 2255
+  },
+  {
+   "fetchTime": "2026-11-28T00:02:41.342Z",
+   "perf": 81,
+   "lcp_ms": 4697,
+   "tbt_ms": 161,
+   "observed_fcp_ms": 282,
+   "observed_lcp_ms": 282
+  },
+  {
+   "fetchTime": "2026-11-28T00:06:47.856Z",
+   "perf": 69,
+   "lcp_ms": 6065,
+   "tbt_ms": 319,
+   "observed_fcp_ms": 1431,
+   "observed_lcp_ms": 1431
+  }
+ ],
+ "our-work__shiftolic--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:58:48.027Z",
+   "perf": 100,
+   "lcp_ms": 288,
+   "tbt_ms": 0,
+   "observed_fcp_ms": 221,
+   "observed_lcp_ms": 221
+  },
+  {
+   "fetchTime": "2026-11-28T00:02:48.992Z",
+   "perf": 99,
+   "lcp_ms": 290,
+   "tbt_ms": 102,
+   "observed_fcp_ms": 306,
+   "observed_lcp_ms": 306
+  },
+  {
+   "fetchTime": "2026-11-28T00:06:57.029Z",
+   "perf": 80,
+   "lcp_ms": 291,
+   "tbt_ms": 457,
+   "observed_fcp_ms": 775,
+   "observed_lcp_ms": 775
+  }
+ ],
+ "our-work__shiftolic--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:58:47.602Z",
+   "perf": 97,
+   "lcp_ms": 1060,
+   "tbt_ms": 209,
+   "observed_fcp_ms": 301,
+   "observed_lcp_ms": 301
+  },
+  {
+   "fetchTime": "2026-11-28T00:02:48.675Z",
+   "perf": 98,
+   "lcp_ms": 1100,
+   "tbt_ms": 120,
+   "observed_fcp_ms": 1329,
+   "observed_lcp_ms": 1329
+  },
+  {
+   "fetchTime": "2026-11-28T00:06:55.153Z",
+   "perf": 100,
+   "lcp_ms": 1059,
+   "tbt_ms": 22,
+   "observed_fcp_ms": 215,
+   "observed_lcp_ms": 215
+  }
+ ],
+ "our-work__sustain-commercial-solar--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:58:51.944Z",
+   "perf": 100,
+   "lcp_ms": 298,
+   "tbt_ms": 4,
+   "observed_fcp_ms": 207,
+   "observed_lcp_ms": 207
+  },
+  {
+   "fetchTime": "2026-11-28T00:02:50.026Z",
+   "perf": 98,
+   "lcp_ms": 1061,
+   "tbt_ms": 57,
+   "observed_fcp_ms": 291,
+   "observed_lcp_ms": 393
+  },
+  {
+   "fetchTime": "2026-11-28T00:06:58.037Z",
+   "perf": 100,
+   "lcp_ms": 300,
+   "tbt_ms": 0,
+   "observed_fcp_ms": 211,
+   "observed_lcp_ms": 211
+  }
+ ],
+ "our-work__sustain-commercial-solar--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:58:49.835Z",
+   "perf": 100,
+   "lcp_ms": 1061,
+   "tbt_ms": 15,
+   "observed_fcp_ms": 208,
+   "observed_lcp_ms": 208
+  },
+  {
+   "fetchTime": "2026-11-28T00:02:48.998Z",
+   "perf": 81,
+   "lcp_ms": 3310,
+   "tbt_ms": 115,
+   "observed_fcp_ms": 2291,
+   "observed_lcp_ms": 2291
+  },
+  {
+   "fetchTime": "2026-11-28T00:06:57.576Z",
+   "perf": 92,
+   "lcp_ms": 1101,
+   "tbt_ms": 298,
+   "observed_fcp_ms": 1278,
+   "observed_lcp_ms": 1278
+  }
+ ],
+ "our-work__trak-pro--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:58:55.695Z",
+   "perf": 100,
+   "lcp_ms": 295,
+   "tbt_ms": 12,
+   "observed_fcp_ms": 186,
+   "observed_lcp_ms": 186
+  },
+  {
+   "fetchTime": "2026-11-28T00:02:57.963Z",
+   "perf": 100,
+   "lcp_ms": 293,
+   "tbt_ms": 71,
+   "observed_fcp_ms": 375,
+   "observed_lcp_ms": 375
+  },
+  {
+   "fetchTime": "2026-11-28T00:07:06.511Z",
+   "perf": 99,
+   "lcp_ms": 289,
+   "tbt_ms": 92,
+   "observed_fcp_ms": 281,
+   "observed_lcp_ms": 281
+  }
+ ],
+ "our-work__trak-pro--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:58:55.162Z",
+   "perf": 100,
+   "lcp_ms": 1060,
+   "tbt_ms": 18,
+   "observed_fcp_ms": 310,
+   "observed_lcp_ms": 310
+  },
+  {
+   "fetchTime": "2026-11-28T00:02:51.594Z",
+   "perf": 99,
+   "lcp_ms": 1064,
+   "tbt_ms": 108,
+   "observed_fcp_ms": 316,
+   "observed_lcp_ms": 316
+  },
+  {
+   "fetchTime": "2026-11-28T00:06:59.779Z",
+   "perf": 82,
+   "lcp_ms": 3252,
+   "tbt_ms": 96,
+   "observed_fcp_ms": 2290,
+   "observed_lcp_ms": 2290
+  }
+ ],
+ "our-work__veyor-digital--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:59:00.068Z",
+   "perf": 96,
+   "lcp_ms": 291,
+   "tbt_ms": 164,
+   "observed_fcp_ms": 543,
+   "observed_lcp_ms": 543
+  },
+  {
+   "fetchTime": "2026-11-28T00:03:01.247Z",
+   "perf": 90,
+   "lcp_ms": 287,
+   "tbt_ms": 262,
+   "observed_fcp_ms": 427,
+   "observed_lcp_ms": 427
+  },
+  {
+   "fetchTime": "2026-11-28T00:07:10.456Z",
+   "perf": 98,
+   "lcp_ms": 290,
+   "tbt_ms": 112,
+   "observed_fcp_ms": 1144,
+   "observed_lcp_ms": 1144
+  }
+ ],
+ "our-work__veyor-digital--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:58:58.551Z",
+   "perf": 100,
+   "lcp_ms": 1061,
+   "tbt_ms": 72,
+   "observed_fcp_ms": 266,
+   "observed_lcp_ms": 266
+  },
+  {
+   "fetchTime": "2026-11-28T00:03:00.328Z",
+   "perf": 81,
+   "lcp_ms": 4262,
+   "tbt_ms": 256,
+   "observed_fcp_ms": 347,
+   "observed_lcp_ms": 347
+  },
+  {
+   "fetchTime": "2026-11-28T00:07:08.472Z",
+   "perf": 94,
+   "lcp_ms": 1130,
+   "tbt_ms": 230,
+   "observed_fcp_ms": 1244,
+   "observed_lcp_ms": 1244
+  }
+ ],
+ "pricing--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:58:11.920Z",
+   "perf": 86,
+   "lcp_ms": 1446,
+   "tbt_ms": 254,
+   "observed_fcp_ms": 413,
+   "observed_lcp_ms": 1708
+  },
+  {
+   "fetchTime": "2026-11-28T00:02:11.000Z",
+   "perf": 97,
+   "lcp_ms": 1257,
+   "tbt_ms": 9,
+   "observed_fcp_ms": 177,
+   "observed_lcp_ms": 1529
+  },
+  {
+   "fetchTime": "2026-11-28T00:06:08.322Z",
+   "perf": 97,
+   "lcp_ms": 1282,
+   "tbt_ms": 47,
+   "observed_fcp_ms": 173,
+   "observed_lcp_ms": 1673
+  }
+ ],
+ "pricing--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:58:07.671Z",
+   "perf": 98,
+   "lcp_ms": 1062,
+   "tbt_ms": 156,
+   "observed_fcp_ms": 775,
+   "observed_lcp_ms": 775
+  },
+  {
+   "fetchTime": "2026-11-28T00:02:09.827Z",
+   "perf": 98,
+   "lcp_ms": 1062,
+   "tbt_ms": 156,
+   "observed_fcp_ms": 329,
+   "observed_lcp_ms": 329
+  },
+  {
+   "fetchTime": "2026-11-28T00:06:06.176Z",
+   "perf": 100,
+   "lcp_ms": 1074,
+   "tbt_ms": 26,
+   "observed_fcp_ms": 153,
+   "observed_lcp_ms": 153
+  }
+ ],
+ "privacy-policy--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:58:38.771Z",
+   "perf": 99,
+   "lcp_ms": 619,
+   "tbt_ms": 92,
+   "observed_fcp_ms": 399,
+   "observed_lcp_ms": 399
+  },
+  {
+   "fetchTime": "2026-11-28T00:02:38.205Z",
+   "perf": 99,
+   "lcp_ms": 625,
+   "tbt_ms": 80,
+   "observed_fcp_ms": 307,
+   "observed_lcp_ms": 307
+  },
+  {
+   "fetchTime": "2026-11-28T00:06:46.158Z",
+   "perf": 100,
+   "lcp_ms": 628,
+   "tbt_ms": 35,
+   "observed_fcp_ms": 196,
+   "observed_lcp_ms": 196
+  }
+ ],
+ "privacy-policy--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:58:36.803Z",
+   "perf": 94,
+   "lcp_ms": 2454,
+   "tbt_ms": 38,
+   "observed_fcp_ms": 564,
+   "observed_lcp_ms": 564
+  },
+  {
+   "fetchTime": "2026-11-28T00:02:37.730Z",
+   "perf": 83,
+   "lcp_ms": 2799,
+   "tbt_ms": 236,
+   "observed_fcp_ms": 2228,
+   "observed_lcp_ms": 2228
+  },
+  {
+   "fetchTime": "2026-11-28T00:06:45.674Z",
+   "perf": 93,
+   "lcp_ms": 2576,
+   "tbt_ms": 53,
+   "observed_fcp_ms": 244,
+   "observed_lcp_ms": 244
+  }
+ ],
+ "resources--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:58:17.756Z",
+   "perf": 99,
+   "lcp_ms": 845,
+   "tbt_ms": 50,
+   "observed_fcp_ms": 205,
+   "observed_lcp_ms": 205
+  },
+  {
+   "fetchTime": "2026-11-28T00:02:20.477Z",
+   "perf": 98,
+   "lcp_ms": 1085,
+   "tbt_ms": 83,
+   "observed_fcp_ms": 184,
+   "observed_lcp_ms": 311
+  },
+  {
+   "fetchTime": "2026-11-28T00:06:21.876Z",
+   "perf": 87,
+   "lcp_ms": 292,
+   "tbt_ms": 311,
+   "observed_fcp_ms": 546,
+   "observed_lcp_ms": 546
+  }
+ ],
+ "resources--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:58:16.555Z",
+   "perf": 99,
+   "lcp_ms": 1062,
+   "tbt_ms": 96,
+   "observed_fcp_ms": 908,
+   "observed_lcp_ms": 908
+  },
+  {
+   "fetchTime": "2026-11-28T00:02:17.902Z",
+   "perf": 100,
+   "lcp_ms": 1070,
+   "tbt_ms": 11,
+   "observed_fcp_ms": 305,
+   "observed_lcp_ms": 305
+  },
+  {
+   "fetchTime": "2026-11-28T00:06:20.729Z",
+   "perf": 98,
+   "lcp_ms": 1061,
+   "tbt_ms": 152,
+   "observed_fcp_ms": 317,
+   "observed_lcp_ms": 317
+  }
+ ],
+ "services--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:57:42.214Z",
+   "perf": 96,
+   "lcp_ms": 306,
+   "tbt_ms": 153,
+   "observed_fcp_ms": 614,
+   "observed_lcp_ms": 614
+  },
+  {
+   "fetchTime": "2026-11-28T00:01:42.419Z",
+   "perf": 91,
+   "lcp_ms": 398,
+   "tbt_ms": 242,
+   "observed_fcp_ms": 594,
+   "observed_lcp_ms": 594
+  },
+  {
+   "fetchTime": "2026-11-28T00:05:41.634Z",
+   "perf": 99,
+   "lcp_ms": 888,
+   "tbt_ms": 54,
+   "observed_fcp_ms": 185,
+   "observed_lcp_ms": 322
+  }
+ ],
+ "services--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:57:41.419Z",
+   "perf": 99,
+   "lcp_ms": 1248,
+   "tbt_ms": 20,
+   "observed_fcp_ms": 1169,
+   "observed_lcp_ms": 1169
+  },
+  {
+   "fetchTime": "2026-11-28T00:01:41.454Z",
+   "perf": 100,
+   "lcp_ms": 1220,
+   "tbt_ms": 45,
+   "observed_fcp_ms": 205,
+   "observed_lcp_ms": 205
+  },
+  {
+   "fetchTime": "2026-11-28T00:05:42.532Z",
+   "perf": 92,
+   "lcp_ms": 1217,
+   "tbt_ms": 324,
+   "observed_fcp_ms": 394,
+   "observed_lcp_ms": 394
+  }
+ ],
+ "services__design-development--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:57:42.842Z",
+   "perf": 95,
+   "lcp_ms": 294,
+   "tbt_ms": 176,
+   "observed_fcp_ms": 572,
+   "observed_lcp_ms": 572
+  },
+  {
+   "fetchTime": "2026-11-28T00:01:42.051Z",
+   "perf": 98,
+   "lcp_ms": 927,
+   "tbt_ms": 103,
+   "observed_fcp_ms": 175,
+   "observed_lcp_ms": 297
+  },
+  {
+   "fetchTime": "2026-11-28T00:05:42.109Z",
+   "perf": 99,
+   "lcp_ms": 298,
+   "tbt_ms": 112,
+   "observed_fcp_ms": 523,
+   "observed_lcp_ms": 523
+  }
+ ],
+ "services__design-development--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:57:41.844Z",
+   "perf": 99,
+   "lcp_ms": 1068,
+   "tbt_ms": 58,
+   "observed_fcp_ms": 892,
+   "observed_lcp_ms": 892
+  },
+  {
+   "fetchTime": "2026-11-28T00:01:41.516Z",
+   "perf": 100,
+   "lcp_ms": 1085,
+   "tbt_ms": 33,
+   "observed_fcp_ms": 229,
+   "observed_lcp_ms": 229
+  },
+  {
+   "fetchTime": "2026-11-28T00:05:41.663Z",
+   "perf": 100,
+   "lcp_ms": 1063,
+   "tbt_ms": 82,
+   "observed_fcp_ms": 251,
+   "observed_lcp_ms": 251
+  }
+ ],
+ "services__growth--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:58:02.727Z",
+   "perf": 100,
+   "lcp_ms": 297,
+   "tbt_ms": 37,
+   "observed_fcp_ms": 213,
+   "observed_lcp_ms": 213
+  },
+  {
+   "fetchTime": "2026-11-28T00:02:04.554Z",
+   "perf": 100,
+   "lcp_ms": 298,
+   "tbt_ms": 35,
+   "observed_fcp_ms": 234,
+   "observed_lcp_ms": 234
+  },
+  {
+   "fetchTime": "2026-11-28T00:06:06.167Z",
+   "perf": 98,
+   "lcp_ms": 924,
+   "tbt_ms": 83,
+   "observed_fcp_ms": 185,
+   "observed_lcp_ms": 291
+  }
+ ],
+ "services__growth--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:58:01.512Z",
+   "perf": 98,
+   "lcp_ms": 1086,
+   "tbt_ms": 114,
+   "observed_fcp_ms": 889,
+   "observed_lcp_ms": 889
+  },
+  {
+   "fetchTime": "2026-11-28T00:02:04.547Z",
+   "perf": 100,
+   "lcp_ms": 1074,
+   "tbt_ms": 25,
+   "observed_fcp_ms": 182,
+   "observed_lcp_ms": 182
+  },
+  {
+   "fetchTime": "2026-11-28T00:06:06.014Z",
+   "perf": 99,
+   "lcp_ms": 1064,
+   "tbt_ms": 100,
+   "observed_fcp_ms": 263,
+   "observed_lcp_ms": 263
+  }
+ ],
+ "services__seo-aeo--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:58:00.673Z",
+   "perf": 100,
+   "lcp_ms": 300,
+   "tbt_ms": 27,
+   "observed_fcp_ms": 212,
+   "observed_lcp_ms": 212
+  },
+  {
+   "fetchTime": "2026-11-28T00:02:00.666Z",
+   "perf": 98,
+   "lcp_ms": 295,
+   "tbt_ms": 122,
+   "observed_fcp_ms": 395,
+   "observed_lcp_ms": 395
+  },
+  {
+   "fetchTime": "2026-11-28T00:06:02.718Z",
+   "perf": 100,
+   "lcp_ms": 290,
+   "tbt_ms": 39,
+   "observed_fcp_ms": 308,
+   "observed_lcp_ms": 308
+  }
+ ],
+ "services__seo-aeo--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:57:59.400Z",
+   "perf": 99,
+   "lcp_ms": 1077,
+   "tbt_ms": 13,
+   "observed_fcp_ms": 991,
+   "observed_lcp_ms": 991
+  },
+  {
+   "fetchTime": "2026-11-28T00:01:58.729Z",
+   "perf": 100,
+   "lcp_ms": 1074,
+   "tbt_ms": 20,
+   "observed_fcp_ms": 167,
+   "observed_lcp_ms": 167
+  },
+  {
+   "fetchTime": "2026-11-28T00:06:00.848Z",
+   "perf": 100,
+   "lcp_ms": 1073,
+   "tbt_ms": 46,
+   "observed_fcp_ms": 205,
+   "observed_lcp_ms": 205
+  }
+ ],
+ "services__webflow-development--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:57:58.441Z",
+   "perf": 99,
+   "lcp_ms": 296,
+   "tbt_ms": 29,
+   "observed_fcp_ms": 949,
+   "observed_lcp_ms": 949
+  },
+  {
+   "fetchTime": "2026-11-28T00:01:57.882Z",
+   "perf": 100,
+   "lcp_ms": 302,
+   "tbt_ms": 26,
+   "observed_fcp_ms": 291,
+   "observed_lcp_ms": 291
+  },
+  {
+   "fetchTime": "2026-11-28T00:06:01.695Z",
+   "perf": 95,
+   "lcp_ms": 353,
+   "tbt_ms": 182,
+   "observed_fcp_ms": 472,
+   "observed_lcp_ms": 472
+  }
+ ],
+ "services__webflow-development--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:57:57.763Z",
+   "perf": 95,
+   "lcp_ms": 1080,
+   "tbt_ms": 25,
+   "observed_fcp_ms": 2478,
+   "observed_lcp_ms": 2478
+  },
+  {
+   "fetchTime": "2026-11-28T00:01:58.107Z",
+   "perf": 99,
+   "lcp_ms": 1064,
+   "tbt_ms": 113,
+   "observed_fcp_ms": 252,
+   "observed_lcp_ms": 252
+  },
+  {
+   "fetchTime": "2026-11-28T00:05:56.922Z",
+   "perf": 98,
+   "lcp_ms": 1064,
+   "tbt_ms": 170,
+   "observed_fcp_ms": 272,
+   "observed_lcp_ms": 272
+  }
+ ],
+ "terms-of-service--desktop": [
+  {
+   "fetchTime": "2026-11-27T23:58:41.706Z",
+   "perf": 100,
+   "lcp_ms": 616,
+   "tbt_ms": 6,
+   "observed_fcp_ms": 654,
+   "observed_lcp_ms": 654
+  },
+  {
+   "fetchTime": "2026-11-28T00:02:38.513Z",
+   "perf": 99,
+   "lcp_ms": 659,
+   "tbt_ms": 73,
+   "observed_fcp_ms": 270,
+   "observed_lcp_ms": 270
+  },
+  {
+   "fetchTime": "2026-11-28T00:06:46.800Z",
+   "perf": 99,
+   "lcp_ms": 1020,
+   "tbt_ms": 47,
+   "observed_fcp_ms": 171,
+   "observed_lcp_ms": 252
+  }
+ ],
+ "terms-of-service--mobile": [
+  {
+   "fetchTime": "2026-11-27T23:58:42.188Z",
+   "perf": 93,
+   "lcp_ms": 2466,
+   "tbt_ms": 113,
+   "observed_fcp_ms": 265,
+   "observed_lcp_ms": 265
+  },
+  {
+   "fetchTime": "2026-11-28T00:02:38.120Z",
+   "perf": 93,
+   "lcp_ms": 2585,
+   "tbt_ms": 49,
+   "observed_fcp_ms": 177,
+   "observed_lcp_ms": 177
+  },
+  {
+   "fetchTime": "2026-11-28T00:06:47.494Z",
+   "perf": 86,
+   "lcp_ms": 2733,
+   "tbt_ms": 273,
+   "observed_fcp_ms": 1252,
+   "observed_lcp_ms": 1252
+  }
+ ]
+}
