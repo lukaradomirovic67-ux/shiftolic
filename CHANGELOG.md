@@ -3,6 +3,9 @@
 Svaka izmena u Webflow-u: šta, gde (stranica, kolekcija ili element ID), staro → novo, zašto.
 Stanje pre svih izmena je u `backup/` (10.11.2026).
 
+## 28.11.2026: pun audit posle zelenih koraka (samo merenje)
+Sve u `reports/psi-2026-11-28/full-3x/`. Telefon 89 (pre koraka 86), bez sporih merenja PageSpeed servera 92,4 (pre 90,0); LCP 3,8 → 3,1 s; desktop 97. Zelene na telefonu: 4 servisne stranice, Careers, Resources, Pricing, Services, About, Let's talk, Terms, Privacy, 4 studije bez Ballerine, 6 blog postova. Žute: Our Work, Ballerine, Blog, Home i 16 blog postova (slika na vrhu + Aeonik OTF; tvoja odluka da font ostaje). Pregledač: 0 JS grešaka, 0 pokvarenih slika, 0 horizontalnog skrola.
+
 ## 27.11.2026: zeleni PageSpeed, korak po korak (objavljeno na staging)
 Tvoje „ali ja želim da je svaki performance zelen, ajde redom da krenemo“. Merenja: 3 posebna kruga, bar 4 minuta razmaka, svako sa svojim fetchTime. Rezultati u `reports/green-2026-11-27/`.
 

@@ -6,6 +6,7 @@ Isti postupak kao `reports/psi-2026-11-27/full-3x/`: 42 stranice × telefon i de
 - **Telefon 89 (pre koraka 86), LCP 3,1 s (pre 3,8 s). Bez sporih merenja: 92,4 (pre 90,0), LCP 2,7 s (pre 3,3 s).** Desktop 97.
 - PageSpeed server je i ovaj put često kasnio: 49 od 126 merenja na telefonu (juče 39). Zbog toga su neke stranice u tabeli niže nego u merenjima posle svakog koraka (npr. Sustain 91, Veyor 92 sa sporim merenjima; bez njih 100 i 90–100).
 - **Zelene na telefonu (prosek 3 kruga):** Design & Development 100, SEO & AEO 100, Growth 99, Webflow Development 97, Careers 100, Resources 99, Pricing 99, Services 97, About 94, Let's talk 92, Terms 91, Privacy 90, Shiftolic 98, TrakPro 94, Veyor 92, Sustain 91, 6 blog postova 90–94.
+- Pregledač (43 stranice × telefon i desktop, 86 učitavanja): 0 JS grešaka, 0 pokvarenih slika, 0 horizontalnog skrola, 0 neuspelih zahteva ka sajtu (samo GA4 prekinut pri zatvaranju i blokade proxy-ja u mom okruženju, kao ranije).
 - **Žute:** Our Work 62 (sva 3 merenja sa sporim serverom; ranije normalna merenja ~75), Ballerine 73 (normalno merenje 81), Blog 83, Home 87, 16 blog postova 77–89.
 
 ## Zašto su ove žute
